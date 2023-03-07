@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "scikit-learn-ts"
+version = "0.1.0"
+description = ""
+authors = ["Travis Fischer <fisch0920@gmail.com>"]
+readme = "README.md"
+packages = [{include = "dora_twitter_explorer"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<=3.11.2"
+pinecone-client = "^2.2.1"
+numpy = "^1.24.2"
+nomic = "^1.0.43"
+python-dotenv = "^1.0.0"
+altair = "^4.2.2"
+vega-datasets = "^0.9.0"
+scikit-learn = "^1.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
