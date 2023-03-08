@@ -27,6 +27,7 @@
     "cheerio": "1.0.0-rc.12",
     "got": "^12.6.0",
     "indent-string": "^5.0.0",
+    "is-relative-url": "^4.0.0",
     "mkdirp": "^2.1.5",
     "p-map": "^5.5.0",
     "python-bridge": "^1.1.0"

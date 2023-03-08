@@ -131,7 +131,7 @@ export interface ${pyDocClass.name}${
 
       const dec = `async ${method.name}(opts: ${pyDocClass.name}${
         methodNamesToPascalCase[method.name]
-      }${optionsSuffix}): Promise<${method.return?.type?.type || 'any'}> {
+      }${optionsSuffix}): Promise<${method.returns?.type?.type || 'any'}> {
           if (this._isDisposed) {
             throw new Error('This ${
               pyDocClass.name

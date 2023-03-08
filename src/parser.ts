@@ -1,66 +1,157 @@
 import * as cheerio from 'cheerio'
 import got from 'got'
+import isRelativeUrl from 'is-relative-url'
 
 import * as types from './types'
 
 const methodIgnoreList = new Set(['get_params', 'set_params'])
 
-export async function getAndParseDoc(url: string): Promise<types.PyDocClass> {
+export async function fetchScikitLearnIndex({
+  indexUrl = 'https://scikit-learn.org/stable/modules/classes.html'
+}: { indexUrl?: string } = {}): Promise<string[]> {
+  const res = await got(indexUrl).text()
+  // console.log(res)
+
+  let baseUrl: string
+  try {
+    const parsedIndexUrl = new URL(indexUrl)
+    const pathnameParts = parsedIndexUrl.pathname.split('/')
+    const relativePathname = pathnameParts.slice(0, -1).join('/')
+    baseUrl = `${parsedIndexUrl.origin}${relativePathname}/`
+  } catch (err) {
+    throw new Error(`Invalid indexUrl: ${indexUrl}`)
+  }
+
+  const $ = cheerio.load(res)
+  const $api = $('#api-reference').first()
+
+  const links = $api
+    .find('a.reference.internal')
+    .map((_, a) => {
+      const title = $(a).attr('title')
+      let href = $(a).attr('href')
+      if (isRelativeUrl(href)) {
+        href = `${baseUrl}${href}`
+      }
+
+      return {
+        href,
+        title
+      }
+    })
+    .toArray()
+    .filter((a) => a.href && a.title)
+    .filter((a) => /\/generated\//.test(a.href))
+    .filter(
+      (a) =>
+        !a.title.startsWith('sklearn.datasets') &&
+        !a.title.startsWith('sklearn.base') &&
+        !a.title.startsWith('sklearn.get_config') &&
+        !a.title.startsWith('sklearn.set_config')
+    )
+  console.log(links)
+
+  const filteredUrls = links
+    .map((a) => {
+      try {
+        // validate that this is a valid URL and remove query params + hash
+        const parsedUrl = new URL(a.href)
+        return `${parsedUrl.origin}${parsedUrl.pathname}`
+      } catch (err) {
+        return
+      }
+    })
+    .filter(Boolean)
+
+  const uniqueUrls = Array.from(new Set(filteredUrls))
+
+  return uniqueUrls
+}
+
+export async function fetchAndParseScikitLearnDoc(
+  url: string
+): Promise<types.PyDocDefinition> {
   const res = await got(url).text()
   // console.log(res)
 
   const $ = cheerio.load(res)
   const $s = $('section')[0]
   const $c = $('.py.class', $s)[0]
+  const $f = $('.py.function', $s)[0]
+  const type = $c ? 'class' : 'function'
+  const $body = $c || $f
+  if (!$c && !$f) {
+    // neither a class or a function
+    return null
+  }
+
   const fullName = $('h1', $s).text().replaceAll(/¶/g, '').trim()
   const nameParts = fullName.split('.')
   const namespace = nameParts.slice(0, -1).join('.')
   const name = nameParts.slice(-1)[0]
 
-  const desc = parseDesc($, $('dd', $c))
+  const desc = parseDesc($, $('dd', $body))
 
-  const $l = $('.field-list', $c)[0]
+  const $l = $('.field-list', $body)[0]
   const $params = $('dd:nth-child(2) dt', $l)
-  const $attribs = $('dd:nth-child(4) dt', $l)
-  const $methods = $('.py.method', $c)
-
   const params = parseValues($, $params)
-  const attribs = parseValues($, $attribs)
 
-  const methods = $methods
-    .map((_, m) => {
-      const $top = $(m).find('> dt').first()
-      const id = $top.attr('id')
-      const $body = $top.next()
-      const desc = parseDesc($, $body)
-      const name = id.replace(fullName, '').replace(/^\./, '').trim()
-
-      if (methodIgnoreList.has(name)) {
-        return null
-      }
-
-      const $p = $('.field-list', $body).first()
-      const $params = $('dd:nth-child(2) dt', $p)
-      const $return = $('dd:nth-child(4) dt', $p)
-
-      return {
-        name,
-        desc,
-        params: parseValues($, $params),
-        return: parseValues($, $return)[0]
-      } as types.PyDocMethod
-    })
-    .toArray()
-    .filter(Boolean)
-
-  return {
+  const baseDefinition = {
+    type,
     namespace,
     name,
     desc,
     url,
-    params,
-    attribs,
-    methods
+    params
+  }
+
+  if (type === 'function') {
+    const $returns = $('dd:nth-child(4) dt', $l)
+    const returns = parseValues($, $returns)[0]
+
+    return {
+      ...baseDefinition,
+      type,
+      returns
+    }
+  } else {
+    const $attribs = $('dd:nth-child(4) dt', $l)
+    const attribs = parseValues($, $attribs)
+
+    const $methods = $('.py.method', $body)
+
+    const methods = $methods
+      .map((_, m) => {
+        const $top = $(m).find('> dt').first()
+        const id = $top.attr('id')
+        const $body = $top.next()
+        const desc = parseDesc($, $body)
+        const name = id.replace(fullName, '').replace(/^\./, '').trim()
+
+        if (methodIgnoreList.has(name)) {
+          return null
+        }
+
+        const $p = $('.field-list', $body).first()
+        const $params = $('dd:nth-child(2) dt', $p)
+        const $return = $('dd:nth-child(4) dt', $p)
+
+        return {
+          name,
+          desc,
+          params: parseValues($, $params),
+          returns: parseValues($, $return)[0]
+        } as types.PyDocMethod
+      })
+      .toArray()
+      .filter(Boolean)
+
+    return {
+      ...baseDefinition,
+      type,
+      attribs,
+      methods
+    }
   }
 }
 
@@ -200,6 +291,7 @@ export function parseValue(
 
   if (input in knownValues) return knownValues[input]
 
+  // examples of different string quotation types used by the HTML docs
   // ’euclidean’
   // ’barnes_hut’
   // ”auto”
