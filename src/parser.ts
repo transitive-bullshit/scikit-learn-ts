@@ -110,11 +110,15 @@ export function parseDocType(input: string) {
 
   if (p.length > 2) {
     throw new Error(`invalid text: ${input}`)
-  } else if (p.length === 2) {
-    const defaultValue = parseValue(p[1])
-    return { type: parseType(p[0]), default: defaultValue, raw: input }
   } else {
-    return { type: parseType(p[0]), raw: input }
+    const res: types.PyDocType = { type: parseType(p[0]), raw: input }
+
+    if (p.length === 2) {
+      res.default = parseValue(p[1])
+    }
+
+    res.isNDArray = /\bof shape\b/i.test(p[0]) || /ndarray/i.test(res.type)
+    return res
   }
 }
 

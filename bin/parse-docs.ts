@@ -21,7 +21,9 @@ async function main() {
   const docs = await pMap(sources, async (url) => getAndParseDoc(url), {
     concurrency: 4
   })
-  // console.log(JSON.stringify(doc, null, 2))
+
+  // console.log(JSON.stringify(docs[0], null, 2))
+  // return
 
   await pMap(
     docs,

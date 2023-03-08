@@ -127,12 +127,13 @@ export interface ${pyDocClass.name}${
 
           // set up method params
           await this._py.ex\`mp = {${method.params
-            .map((key) => {
-              if (key.type?.type.toLowerCase().includes('ndarray')) {
-                return `'${key.name}': \${opts['${key.name}'] ?? undefined}`
+            .map((param) => {
+              if (param.type.isNDArray) {
+                // TODO: remove duplicate array copy here
+                return `'${param.name}': np.array(\${opts['${param.name}'] ?? undefined}) if \${opts['${param.name}'] !== undefined} else None`
               }
 
-              return `'${key.name}': \${opts['${key.name}'] ?? undefined}`
+              return `'${param.name}': \${opts['${param.name}'] ?? undefined}`
             })
             .join(
               ', '
@@ -146,7 +147,7 @@ export interface ${pyDocClass.name}${
 
 res2 = res.tolist() if hasattr(res, 'tolist') else res\`
 
-          // convert the result from python to JS
+          // convert the result from python to node.js
           const res = await this._py\`res2\`
 
           return res
@@ -169,8 +170,6 @@ export class ${pyDocClass.name} {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
   
-  _schema = ${JSON.stringify(pyDocClass)}
-
   constructor(opts?: ${pyDocClass.name}${optionsSuffix}) {
     this.id = \`${pyDocClass.name}\${crypto.randomUUID().split('-')[0]}\`
     this.opts = opts || {}
@@ -213,7 +212,6 @@ export class ${pyDocClass.name} {
     // set up constructor params
     await this._py.ex\`cp = {${pyDocClass.params
       .map((key) => {
-        // if (key.type?.type.toLowerCase().includes('ndarray')) {
         return `'${key.name}': \${this.opts['${key.name}'] ?? undefined}`
       })
       .join(', ')}}\n\ncp2 = {k: v for k, v in cp.items() if v is not None}\`

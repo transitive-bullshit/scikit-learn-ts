@@ -11,11 +11,14 @@ export interface PyDocClass {
 export interface PyDocParam {
   name: string
   desc?: string
-  type: {
-    type: any
-    default?: any
-    raw: string
-  }
+  type: PyDocType
+}
+
+export type PyDocType = {
+  type: any
+  raw: string
+  default?: any
+  isNDArray?: boolean
 }
 
 export interface PyDocAttrib extends PyDocParam {}

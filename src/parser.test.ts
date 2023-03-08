@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { parseDocType } from './parser'
+import { parseDocType, parseType } from './parser'
 
 const fixtures = [
   {
@@ -70,6 +70,10 @@ const fixtures = [
       {
         name: 'square_distances',
         type: 'True, default=’deprecated’'
+      },
+      {
+        name: 'XTest',
+        type: '{array-like, sparse matrix} of shape (n_samples, n_features) or (n_samples, n_samples)'
       }
     ],
     attribs: [
