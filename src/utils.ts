@@ -25,3 +25,7 @@ export function pascalCase(input: string, options?: CamelCaseOptions): string {
     ...options
   })
 }
+
+export function isValidPythonIdentifier(input: string): boolean {
+  return input && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(input)
+}

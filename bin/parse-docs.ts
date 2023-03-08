@@ -24,7 +24,7 @@ async function main() {
     const name = nameParts.slice(-2)[0]
     if (name.toLowerCase() === name) {
       // TODO: likely a function
-      console.log('skipping', nameParts.slice(0, -1).join('.'))
+      // console.log('skipping', nameParts.slice(0, -1).join('.'))
       return false
     }
 
@@ -68,41 +68,52 @@ async function main() {
   console.log(`\nprocessing ${docs.length} docs...\n`)
   // console.log(JSON.stringify(docs[0], null, 2))
 
-  await pMap(
-    docs,
-    async (doc) => {
-      try {
-        if (!doc) {
-          return
+  const errors: string[] = []
+
+  const results = (
+    await pMap(
+      docs,
+      async (doc) => {
+        try {
+          if (!doc) {
+            return
+          }
+
+          if (doc.type === 'function') {
+            // TODO
+            // console.log('skipping function', `${doc.namespace}.${doc.name}`)
+            return
+          }
+
+          // console.log(JSON.stringify(doc, null, 2))
+
+          const source = await generateDefinition(doc)
+          const filePath = path.join(outDir, `${doc.name}.ts`)
+          await fs.writeFile(filePath, source, 'utf-8')
+          console.log(filePath)
+          return filePath
+        } catch (err) {
+          console.warn(
+            '\n',
+            'error generating doc',
+            doc.name,
+            doc.type,
+            err.toString(),
+            '\n'
+          )
+          errors.push(`${doc.namespace}.${doc.name}`)
+          console.log(JSON.stringify(doc, null, 2))
         }
-
-        if (doc.type === 'function') {
-          // TODO
-          console.log('skipping function', `${doc.namespace}.${doc.name}`)
-          return
-        }
-
-        // console.log(JSON.stringify(doc, null, 2))
-
-        const source = await generateDefinition(doc)
-        const filePath = path.join(outDir, `${doc.name}.ts`)
-        await fs.writeFile(filePath, source, 'utf-8')
-        console.log(filePath)
-      } catch (err) {
-        console.warn(
-          '\n',
-          'error generating doc',
-          doc.name,
-          doc.type,
-          err.toString(),
-          '\n'
-        )
-        console.log(JSON.stringify(doc, null, 2))
+      },
+      {
+        concurrency: 8
       }
-    },
-    {
-      concurrency: 8
-    }
+    )
+  ).filter(Boolean)
+
+  console.log(
+    `\ngenerated ${results.length} files out of ${docs.length} total docs\n`,
+    errors.length ? errors : 'no errors!'
   )
 }
 

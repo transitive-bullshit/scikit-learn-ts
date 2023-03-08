@@ -3,6 +3,7 @@ import got from 'got'
 import isRelativeUrl from 'is-relative-url'
 
 import * as types from './types'
+import { isValidPythonIdentifier } from './utils'
 
 const methodIgnoreList = new Set(['get_params', 'set_params'])
 
@@ -171,7 +172,7 @@ export function parseValues(
       desc: parseDesc($, $(v).next())
     }))
     .toArray()
-    .filter((v) => v.name)
+    .filter((v) => isValidPythonIdentifier(v.name))
     .map((v) => ({ ...v, type: parseDocType(v.type) }))
 
   return dedupeValues(values)
