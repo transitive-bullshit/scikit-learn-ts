@@ -36,8 +36,8 @@ model.dispose()
 
 ## Comparison
 
-<table>
-<tr>
+<table width='100%' display='block'>
+<tr width='100%' display='block'>
 <td>
 
 **Python**
