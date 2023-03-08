@@ -32,6 +32,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18.14.4",
+    "@types/prettier": "^2.7.2",
     "ava": "^5.2.0",
     "del-cli": "^5.0.0",
     "dotenv": "^16.0.3",

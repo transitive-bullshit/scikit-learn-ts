@@ -40,8 +40,9 @@ model.dispose()
 - post-MVP
   - handle "py functions" ([example](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups_vectorized.html))
   - explore [camelcase](https://github.com/sindresorhus/camelcase)
-  - support positional arguments
+  - support positional arguments (in addition to keyword-based arguments)
   - support function exports in addition to class exports
+  - support class attributes
 
 ## License
 

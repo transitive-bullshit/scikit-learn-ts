@@ -1,18 +1,10 @@
 import camelCase from 'camelcase'
 import indentString from 'indent-string'
-import prettier from 'prettier'
 
 import * as types from './types'
+import { formatSource } from './formatter'
 
 const optionsSuffix = 'Options'
-
-// TODO: initialize PythonBridge properly
-// TODO: handle positional arguments vs keyword arguments
-// TODO: handle params
-// TODO: handle ndarray inputs
-// TODO: handle ndarray return types => tolist
-// TODO: pass params to python constructor
-// TODO: handle attributes
 
 function indentComment(...lines: string[]): string {
   const content = lines.filter((line) => line?.trim().length > 0).join('\n\n')
@@ -106,10 +98,37 @@ export interface ${pyDocClass.name}${
     )
     .join('\n\n\n')
 
-  // AttributeError
+  const generateParamsInitSnippet = (
+    params: types.PyDocParam[],
+    {
+      pyIdentifier = 'pms',
+      optsIdentifier = 'opts'
+    }: {
+      pyIdentifier?: string
+      optsIdentifier?: string
+    } = {}
+  ) => {
+    return `await this._py.ex\`${pyIdentifier} = {${params
+      .map((param) => {
+        if (param.type.isNDArray) {
+          // NOTE: even though we reference the value of the ndarray twice here, it should only get transferred to python land once since the second reference evaluates to a boolean
+          return `'${param.name}': np.array(\${${optsIdentifier}['${param.name}'] ?? undefined}) if \${${optsIdentifier}['${param.name}'] !== undefined} else None`
+        }
+
+        return `'${param.name}': \${${optsIdentifier}['${param.name}'] ?? undefined}`
+      })
+      .join(
+        ', '
+      )}}\n\n${pyIdentifier} = {k: v for k, v in ${pyIdentifier}.items() if v is not None}\`
+    `
+  }
+
   const methodDeclarations = pyDocClass.methods
     .map((method) => {
       const pre = method.desc ? indentComment(method.desc) : ''
+      const pyParamsIdentifier = `pms_${pyDocClass.name}_${method.name}`
+      const pyResIdentifier = `res_${pyDocClass.name}_${method.name}`
+
       const dec = `async ${method.name}(opts: ${pyDocClass.name}${
         methodNamesToPascalCase[method.name]
       }${optionsSuffix}): Promise<${method.return?.type?.type || 'any'}> {
@@ -126,35 +145,25 @@ export interface ${pyDocClass.name}${
           }
 
           // set up method params
-          await this._py.ex\`mp = {${method.params
-            .map((param) => {
-              if (param.type.isNDArray) {
-                // TODO: remove duplicate array copy here
-                return `'${param.name}': np.array(\${opts['${param.name}'] ?? undefined}) if \${opts['${param.name}'] !== undefined} else None`
-              }
-
-              return `'${param.name}': \${opts['${param.name}'] ?? undefined}`
-            })
-            .join(
-              ', '
-            )}}\n\nmp2 = {k: v for k, v in mp.items() if v is not None}\`
-
+          ${generateParamsInitSnippet(method.params, {
+            pyIdentifier: pyParamsIdentifier
+          })}
 
           // invoke method
-          await this._py.ex\`res = ${pyBridgeName}[\${this.id}].${
+          await this._py.ex\`${pyResIdentifier} = ${pyBridgeName}[\${this.id}].${
         method.name
-      }(**mp2)
-
-res2 = res.tolist() if hasattr(res, 'tolist') else res\`
+      }(**${pyParamsIdentifier})\`
 
           // convert the result from python to node.js
-          const res = await this._py\`res2\`
+          const res = await this._py\`${pyResIdentifier}.tolist() if hasattr(${pyResIdentifier}, 'tolist') else ${pyResIdentifier}\`
 
           return res
         }`
       return `${pre}\n${dec}`
     })
     .join('\n\n')
+
+  const pyConstructorParamsIdentifier = `ctor_${pyDocClass.name}`
 
   const source = `
 /* eslint-disable */
@@ -210,15 +219,14 @@ export class ${pyDocClass.name} {
     await this._py.ex\`${pyImports}\`
 
     // set up constructor params
-    await this._py.ex\`cp = {${pyDocClass.params
-      .map((key) => {
-        return `'${key.name}': \${this.opts['${key.name}'] ?? undefined}`
-      })
-      .join(', ')}}\n\ncp2 = {k: v for k, v in cp.items() if v is not None}\`
+    ${generateParamsInitSnippet(pyDocClass.params, {
+      pyIdentifier: pyConstructorParamsIdentifier,
+      optsIdentifier: 'this.opts'
+    })}
 
     await this._py.ex\`${pyBridgeName}[\${this.id}] = ${
     pyDocClass.name
-  }(**cp2)\`
+  }(**${pyConstructorParamsIdentifier})\`
 
     this._isInitialized = true
   }
@@ -249,18 +257,6 @@ ${optionsTypeDeclaration}
 
 ${methodParamsTypeDeclarations}
 `
-  // return source
 
-  const formatted = prettier.format(source, {
-    parser: 'typescript',
-    semi: false,
-    singleQuote: true,
-    useTabs: false,
-    tabWidth: 2,
-    bracketSpacing: true,
-    arrowParens: 'always',
-    trailingComma: 'none'
-  })
-
-  return formatted
+  return formatSource(source)
 }

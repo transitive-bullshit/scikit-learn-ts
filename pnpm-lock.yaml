@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@trivago/prettier-plugin-sort-imports': ^4.1.1
   '@types/node': ^18.14.4
+  '@types/prettier': ^2.7.2
   ava: ^5.2.0
   camelcase: ^7.0.1
   cheerio: 1.0.0-rc.12
@@ -32,6 +33,7 @@ dependencies:
 devDependencies:
   '@trivago/prettier-plugin-sort-imports': 4.1.1_prettier@2.8.4
   '@types/node': 18.14.6
+  '@types/prettier': 2.7.2
   ava: 5.2.0
   del-cli: 5.0.0
   dotenv: 16.0.3
@@ -444,6 +446,10 @@ packages:
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
+    dev: true
+
+  /@types/prettier/2.7.2:
+    resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
     dev: true
 
   /acorn-walk/8.2.0:
