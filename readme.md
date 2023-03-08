@@ -36,18 +36,18 @@ model.dispose()
 
 ## Comparison
 
-<table width='100%' display='block'>
-<tr width='100%' display='block'>
-<td>
+<table>
+<tr>
+<th width="450px">
 
 **Python**
 
-</td>
-<td>
+</th>
+<th width="450px">
 
 **TypeScript**
 
-</td>
+</th>
 </tr>
 <tr>
 <td>
