@@ -150,7 +150,7 @@ export async function fetchAndParseScikitLearnDoc(
       ...baseDefinition,
       type,
       attribs,
-      methods
+      methods: dedupeValues(methods)
     }
   }
 }
@@ -159,7 +159,7 @@ export function parseValues(
   $: cheerio.CheerioAPI,
   $values: cheerio.Cheerio<cheerio.Element>
 ): types.PyDocParam[] {
-  return $values
+  const values = $values
     .map((_, v) => ({
       name: $(v).find('strong').first().text().replaceAll(/\*/g, '').trim(),
       type: $(v)
@@ -173,6 +173,8 @@ export function parseValues(
     .toArray()
     .filter((v) => v.name)
     .map((v) => ({ ...v, type: parseDocType(v.type) }))
+
+  return dedupeValues(values)
 }
 
 export function parseDesc(
@@ -304,4 +306,19 @@ export function parseValue(
 
   // throw new Error(`invalid value: ${input}`)
   return null
+}
+
+function dedupeValues<
+  T = types.PyDocParam | types.PyDocMethod | types.PyDocAttrib
+>(params: T[]): T[] {
+  const seen = new Set<string>()
+
+  return params.filter((p: any) => {
+    if (seen.has(p.name)) {
+      return false
+    }
+
+    seen.add(p.name)
+    return true
+  })
 }

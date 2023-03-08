@@ -13,7 +13,7 @@ async function main() {
 
   // 487 total definitions
   // 228 functions
-  // 259 classes
+  // 259 classes (251 generate without errors)
 
   const scikitDocUrls = await fetchScikitLearnIndex()
   console.log(scikitDocUrls.length, scikitDocUrls)
