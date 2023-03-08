@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="sklearn ts logo" src="/media/scikit-learn-ts-social.png">
+</p>
+
 # scikit-learn-ts <!-- omit in toc -->
 
 > Use the full power of Python's #1 ML library from Node.js 🔥
@@ -94,7 +98,7 @@ const x = await model.fit_transform({ X: data })
   - [x] e2e working example for Kmeans
   - [x] add support for class attributes
   - [x] generate all sklearn classes
-  - [ ] refactor generated code into namespaces / folders
+  - [x] refactor generated code into namespaces / folders
   - [ ] port changes to python-bridge...
   - [x] validate generated code via `tsc`
   - [ ] refactor into `packages`
