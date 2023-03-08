@@ -6,6 +6,7 @@
 
 - [Intro](#intro)
 - [Usage](#usage)
+- [Comparison](#comparison)
 - [TODO](#todo)
 - [License](#license)
 
@@ -33,12 +34,58 @@ const x = await model.fitTransform([
 model.dispose()
 ```
 
+## Comparison
+
+<table>
+<tr>
+<td> Python </td> <td> TypeScript </td>
+</tr>
+<tr>
+<td>
+
+```python
+import numpy as np
+from sklearn.manifold import TSNE
+X = np.array([[0, 0, 0], [0, 1, 1], [1, 0, 1], [1, 1, 1]])
+X_embedded = TSNE(n_components=2, learning_rate='auto', init='random', perplexity=3).fit_transform(X)
+```
+
+</td>
+<td>
+
+```ts
+import { TSNE } from 'sklearn/manifold'
+
+const data = [
+  [0, 0, 0],
+  [0, 1, 1],
+  [1, 0, 1],
+  [1, 1, 1]
+]
+
+const model = new TSNE({
+  nComponents: 2,
+  learningRate: 'auto',
+  init: 'random',
+  perplexity: 3
+})
+
+await model.init(py)
+const x = await model.fitTransform({ X: data })
+
+model.dispose()
+```
+
+</td>
+</tr>
+</table>
+
 ## TODO
 
 - MVP
   - [x] e2e working example for MinMaxScaler
   - [x] e2e working example for TSNE
-  - [ ] e2e working example for Kmeans
+  - [x] e2e working example for Kmeans
   - [ ] add support for class attributes
   - [ ] generate all sklearn classes
   - [ ] generate all sklearn functions

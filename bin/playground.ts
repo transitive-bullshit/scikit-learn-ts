@@ -17,20 +17,24 @@ async function main() {
   // await s.init(py)
   // const res = await s.fit_transform({ X: v })
   // console.log(res)
+  // await s.dispose()
 
   // const s = new TSNE({ perplexity: 2 })
   // await s.init(py)
   // const res = await s.fit_transform({ X: v })
   // console.log(res)
+  // await s.dispose()
 
   // const s = new KMeans({ n_clusters: 2, n_init: 'auto' })
   // await s.init(py)
   // const res = await s.fit_predict({ X: v })
   // console.log(res)
+  // console.log('n_iter', await s.n_iter_)
   // const res0 = await s.fit({ X: v })
   // console.log(res0)
   // const res1 = await s.predict({ X: v })
   // console.log(res1)
+  // await s.dispose()
 
   // await py.ex`
   // import numpy as np

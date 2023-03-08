@@ -12,9 +12,9 @@ async function main() {
   await mkdir(outDir)
 
   const sources = [
-    'https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html',
-    'https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html',
-    'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html'
+    // 'https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html',
+    'https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html'
+    // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html'
     // 'https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html',
     // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html'
   ]
@@ -22,14 +22,11 @@ async function main() {
     concurrency: 4
   })
 
-  // console.log(JSON.stringify(docs[0], null, 2))
-  // return
-
   await pMap(
     docs,
     async (doc) => {
       try {
-        // console.log(JSON.stringify(doc, null, 2))
+        console.log(JSON.stringify(doc, null, 2))
 
         const src = await generateClass(doc)
         const filePath = path.join(outDir, `${doc.name}.ts`)

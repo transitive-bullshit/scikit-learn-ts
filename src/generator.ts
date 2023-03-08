@@ -155,10 +155,42 @@ export interface ${pyDocClass.name}${
       }(**${pyParamsIdentifier})\`
 
           // convert the result from python to node.js
-          const res = await this._py\`${pyResIdentifier}.tolist() if hasattr(${pyResIdentifier}, 'tolist') else ${pyResIdentifier}\`
-
-          return res
+          return this._py\`${pyResIdentifier}.tolist() if hasattr(${pyResIdentifier}, 'tolist') else ${pyResIdentifier}\`
         }`
+      return `${pre}\n${dec}`
+    })
+    .join('\n\n')
+
+  const attribDeclarations = pyDocClass.attribs
+    .map((attrib) => {
+      const pre = attrib.desc ? indentComment(attrib.desc) : ''
+      const pyResIdentifier = `attr_${pyDocClass.name}_${attrib.name}`
+
+      // We use an IIFE here to get around the fact that getters can't be async functions
+      const dec = `get ${attrib.name}(): Promise<${attrib.type.type || 'any'}> {
+          if (this._isDisposed) {
+            throw new Error('This ${
+              pyDocClass.name
+            } instance has already been disposed')
+          }
+
+          if (!this._isInitialized) {
+            throw new Error('${
+              pyDocClass.name
+            } must call init() before accessing ${attrib.name}')
+          }
+
+          return (async () => {
+            // invoke accessor
+            await this._py.ex\`${pyResIdentifier} = ${pyBridgeName}[\${this.id}].${
+        attrib.name
+      }\`
+
+            // convert the result from python to node.js
+            return this._py\`${pyResIdentifier}.tolist() if hasattr(${pyResIdentifier}, 'tolist') else ${pyResIdentifier}\`
+          })()
+}`
+
       return `${pre}\n${dec}`
     })
     .join('\n\n')
@@ -251,6 +283,8 @@ export class ${pyDocClass.name} {
   }
 
   ${methodDeclarations}
+
+  ${attribDeclarations}
 }
 
 ${optionsTypeDeclaration}
