@@ -93,11 +93,13 @@ const x = await model.fit_transform({ X: data })
   - [x] e2e working example for TSNE
   - [x] e2e working example for Kmeans
   - [x] add support for class attributes
-  - [ ] generate all sklearn classes
+  - [x] generate all sklearn classes
+  - [ ] refactor generated code into namespaces / folders
+  - [ ] port changes to python-bridge...
+  - [x] validate generated code via `tsc`
+  - [ ] refactor into `packages`
   - [ ] generate all sklearn functions
   - [ ] generate docs via tsdoc
-  - [ ] validate generated code via `tsc`
-  - [ ] refactor into `packages`
   - [ ] basic readme w/ usage and examples
 - post-MVP
   - add support for better python exception / error handling
@@ -110,9 +112,9 @@ const x = await model.fit_transform({ X: data })
     - this may work currently, but it's untested and likely to have race conditions
   - consider changing identifier names from python `snake_case` to JS `camelCase`
 - ideas
-  - support polars or danfo.js dataframe formatting
+  - add support for [polars](https://github.com/pola-rs/nodejs-polars) and/or [danfo.js](https://github.com/javascriptdata/danfojs) dataframe formatting
   - explore memory mapping arrays between node.js and python for efficiency
-    - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult to guarantee
+    - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult...
 
 ## License
 
