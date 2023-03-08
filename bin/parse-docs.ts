@@ -27,15 +27,21 @@ async function main() {
     docs,
     async (doc) => {
       try {
-        console.log(JSON.stringify(doc, null, 2))
+        // console.log(JSON.stringify(doc, null, 2))
+
         const src = await generateClass(doc)
-        await fs.writeFile(path.join(outDir, `${doc.name}.ts`), src, 'utf-8')
+        const filePath = path.join(outDir, `${doc.name}.ts`)
+        await fs.writeFile(filePath, src, 'utf-8')
+        console.log(filePath)
       } catch (err) {
+        console.warn()
         console.warn('error generating doc', doc.name, err.toString())
+        console.warn()
+        console.log(JSON.stringify(doc, null, 2))
       }
     },
     {
-      concurrency: 1
+      concurrency: 4
     }
   )
 }

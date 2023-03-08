@@ -2,10 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   '@trivago/prettier-plugin-sort-imports': ^4.1.1
-  '@types/d3-array': ^3.0.4
-  '@types/d3-scale': ^4.0.3
   '@types/node': ^18.14.4
   ava: ^5.2.0
+  camelcase: ^7.0.1
   cheerio: 1.0.0-rc.12
   del-cli: ^5.0.0
   dotenv: ^16.0.3
@@ -22,6 +21,7 @@ specifiers:
   typescript: ^4.9.3
 
 dependencies:
+  camelcase: 7.0.1
   cheerio: 1.0.0-rc.12
   got: 12.6.0
   indent-string: 5.0.0
@@ -31,8 +31,6 @@ dependencies:
 
 devDependencies:
   '@trivago/prettier-plugin-sort-imports': 4.1.1_prettier@2.8.4
-  '@types/d3-array': 3.0.4
-  '@types/d3-scale': 4.0.3
   '@types/node': 18.14.6
   ava: 5.2.0
   del-cli: 5.0.0
@@ -432,20 +430,6 @@ packages:
       - supports-color
     dev: true
 
-  /@types/d3-array/3.0.4:
-    resolution: {integrity: sha512-nwvEkG9vYOc0Ic7G7kwgviY4AQlTfYGIZ0fqB7CQHXGyYM6nO7kJh5EguSNA3jfh4rq7Sb7eMVq8isuvg2/miQ==}
-    dev: true
-
-  /@types/d3-scale/4.0.3:
-    resolution: {integrity: sha512-PATBiMCpvHJSMtZAMEhc2WyL+hnzarKzI6wAHYjhsonjWJYGq5BXTzQjv4l8m2jO183/4wZ90rKvSeT7o72xNQ==}
-    dependencies:
-      '@types/d3-time': 3.0.0
-    dev: true
-
-  /@types/d3-time/3.0.0:
-    resolution: {integrity: sha512-sZLCdHvBUcNby1cB6Fd3ZBrABbjz3v1Vm90nysCQ6Vt7vd6e/h9Lt7SiJUoEX0l4Dzc7P5llKyhqSi1ycSf1Hg==}
-    dev: true
-
   /@types/http-cache-semantics/4.0.1:
     resolution: {integrity: sha512-SZs7ekbP8CN0txVG2xVRH6EgKmEm31BOxA07vkFaETzZz1xh+cbt8BcI0slpymvwhx5dlFnQG2rTlPVQn+iRPQ==}
     dev: false
@@ -710,6 +694,11 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
     dev: true
+
+  /camelcase/7.0.1:
+    resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
+    engines: {node: '>=14.16'}
+    dev: false
 
   /cbor/8.1.0:
     resolution: {integrity: sha512-DwGjNW9omn6EwP70aXsn7FQJx5kO12tX0bZkaTjzdVFM6/7nhA4t0EENocKGx6D2Bch9PE2KzCUf5SceBdeijg==}

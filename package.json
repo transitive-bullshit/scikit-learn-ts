@@ -21,6 +21,7 @@
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
   },
   "dependencies": {
+    "camelcase": "^7.0.1",
     "cheerio": "1.0.0-rc.12",
     "got": "^12.6.0",
     "indent-string": "^5.0.0",

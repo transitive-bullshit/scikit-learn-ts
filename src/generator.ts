@@ -1,3 +1,4 @@
+import camelCase from 'camelcase'
 import indentString from 'indent-string'
 import prettier from 'prettier'
 
@@ -36,9 +37,13 @@ import {
 } from '../types'
 `
 
+  const pyBridgeName = `bridge${pyDocClass.name}`
+
   const pyImports = `
 import numpy as np
 from ${pyDocClass.namespace} import ${pyDocClass.name}
+try: ${pyBridgeName}
+except NameError: ${pyBridgeName} = {}
 `
 
   const optionsTypeDeclaration = `
@@ -62,10 +67,24 @@ export interface ${pyDocClass.name}${optionsSuffix} {
     .join('\n\n')}
 }
 `
+  const methodNamesToPascalCase = pyDocClass.methods.reduce(
+    (acc, method) => ({
+      ...acc,
+      [method.name]: camelCase(method.name, {
+        pascalCase: true,
+        preserveConsecutiveUppercase: true,
+        locale: 'en-US'
+      })
+    }),
+    {} as Record<string, string>
+  )
+
   const methodParamsTypeDeclarations = pyDocClass.methods
     .map(
       (method) => `
-export interface ${pyDocClass.name}${method.name}${optionsSuffix} {
+export interface ${pyDocClass.name}${
+        methodNamesToPascalCase[method.name]
+      }${optionsSuffix} {
   ${method.params
     .map((param) => {
       const pre = indentComment(
@@ -87,11 +106,12 @@ export interface ${pyDocClass.name}${method.name}${optionsSuffix} {
     )
     .join('\n\n\n')
 
+  // AttributeError
   const methodDeclarations = pyDocClass.methods
     .map((method) => {
       const pre = method.desc ? indentComment(method.desc) : ''
       const dec = `async ${method.name}(opts: ${pyDocClass.name}${
-        method.name
+        methodNamesToPascalCase[method.name]
       }${optionsSuffix}): Promise<${method.return?.type?.type || 'any'}> {
           if (this._isDisposed) {
             throw new Error('This ${
@@ -105,7 +125,30 @@ export interface ${pyDocClass.name}${method.name}${optionsSuffix} {
       }()')
           }
 
-          const res = await this._py\`\${this.id}.${method.name}()\`
+          // set up method params
+          await this._py.ex\`mp = {${method.params
+            .map((key) => {
+              if (key.type?.type.toLowerCase().includes('ndarray')) {
+                return `'${key.name}': \${opts['${key.name}'] ?? undefined}`
+              }
+
+              return `'${key.name}': \${opts['${key.name}'] ?? undefined}`
+            })
+            .join(
+              ', '
+            )}}\n\nmp2 = {k: v for k, v in mp.items() if v is not None}\`
+
+
+          // invoke method
+          await this._py.ex\`res = ${pyBridgeName}[\${this.id}].${
+        method.name
+      }(**mp2)
+
+res2 = res.tolist() if hasattr(res, 'tolist') else res\`
+
+          // convert the result from python to JS
+          const res = await this._py\`res2\`
+
           return res
         }`
       return `${pre}\n${dec}`
@@ -113,7 +156,8 @@ export interface ${pyDocClass.name}${method.name}${optionsSuffix} {
     .join('\n\n')
 
   const source = `
-// NOTE: This file is auto-generated. Do not edit it directly.
+/* eslint-disable */
+/* NOTE: This file is auto-generated. Do not edit it directly. */
 
 ${tsImports}
 
@@ -125,10 +169,10 @@ export class ${pyDocClass.name} {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
   
-  _params = ${JSON.stringify(pyDocClass.params)}
+  _schema = ${JSON.stringify(pyDocClass)}
 
   constructor(opts?: ${pyDocClass.name}${optionsSuffix}) {
-    this.id = \`${pyDocClass.name}\${crypto.randomUUID()}\`
+    this.id = \`${pyDocClass.name}\${crypto.randomUUID().split('-')[0]}\`
     this.opts = opts || {}
   }
 
@@ -140,7 +184,12 @@ export class ${pyDocClass.name} {
     this._py = pythonBridge
   }
 
-  async init() {
+  /**
+    Initializes the underlying Python resources.
+
+    This instance is not usable until the \`Promise\` returned by \`init()\` resolves.
+   */
+  async init(py: PythonBridge): Promise<void> {
     if (this._isDisposed) {
       throw new Error('This ${
         pyDocClass.name
@@ -151,35 +200,36 @@ export class ${pyDocClass.name} {
       return
     }
 
-    if (!this._py) {
-      throw new Error('PythonBridge must be set before calling init()')
+    if (!py) {
+      throw new Error('${
+        pyDocClass.name
+      }.init requires a PythonBridge instance')
     }
 
-    const params = \`\${Object.keys(this.opts).map((key) => {
-      const value = this.opts[key]
-      const param = this._params.find((param) => param.name === key)
-
-      if (!param) {
-        throw new Error(\`Unknown param \${key}\`)
-      }
-
-      if (param.type === null) {
-        throw new Error(\`Unsupported param \${key}\`)
-      }
-
-      if (param.type.type?.toLowerCase().includes('ndarray')) {
-        return \`\${key}=np.array(\${value})\`
-      }
-
-      return \`\${key}=\${value}\`
-    }).join(', ')}\`
+    this._py = py
 
     await this._py.ex\`${pyImports}\`
-    await this._py.ex\`\${this.id} = ${pyDocClass.name}(\${params})\`
+
+    // set up constructor params
+    await this._py.ex\`cp = {${pyDocClass.params
+      .map((key) => {
+        // if (key.type?.type.toLowerCase().includes('ndarray')) {
+        return `'${key.name}': \${this.opts['${key.name}'] ?? undefined}`
+      })
+      .join(', ')}}\n\ncp2 = {k: v for k, v in cp.items() if v is not None}\`
+
+    await this._py.ex\`${pyBridgeName}[\${this.id}] = ${
+    pyDocClass.name
+  }(**cp2)\`
 
     this._isInitialized = true
   }
 
+  /**
+    Disposes of the underlying Python resources.
+
+    Once \`dispose()\` is called, the instance is no longer usable.
+   */
   async dispose() {
     if (this._isDisposed) {
       return
@@ -189,7 +239,7 @@ export class ${pyDocClass.name} {
       return
     }
 
-    await this._py.ex\`del \${this.id}\`
+    await this._py.ex\`del ${pyBridgeName}[\${this.id}]\`
 
     this._isDisposed = true
   }
@@ -211,7 +261,7 @@ ${methodParamsTypeDeclarations}
     tabWidth: 2,
     bracketSpacing: true,
     arrowParens: 'always',
-    trailingComma: 'all'
+    trailingComma: 'none'
   })
 
   return formatted
