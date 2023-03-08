@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "outDir": "build",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@lib/*": ["./lib/*"]
     }
   },
   "exclude": ["node_modules", "build"],

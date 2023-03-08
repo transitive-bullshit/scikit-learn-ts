@@ -13,7 +13,8 @@ async function main() {
 
   const sources = [
     'https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html',
-    'https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html'
+    'https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html',
+    'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html'
     // 'https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html',
     // 'https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html'
   ]
