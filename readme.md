@@ -40,12 +40,12 @@ model.dispose()
 <tr>
 <th width="450px">
 
-**Python**
+<b>Python</b>
 
 </th>
 <th width="450px">
 
-**TypeScript**
+<b>TypeScript</b>
 
 </th>
 </tr>
