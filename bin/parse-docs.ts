@@ -4,6 +4,7 @@ import path from 'node:path'
 import mkdir from 'mkdirp'
 import pMap from 'p-map'
 
+import { formatSource } from '@/formatter'
 import { generateDefinition } from '@/generator'
 import { fetchAndParseScikitLearnDoc, fetchScikitLearnIndex } from '@/parser'
 
@@ -13,7 +14,7 @@ async function main() {
 
   // 487 total definitions
   // 228 functions
-  // 259 classes (251 generate without errors)
+  // 259 classes
 
   const scikitDocUrls = await fetchScikitLearnIndex()
   console.log(scikitDocUrls.length, scikitDocUrls)
@@ -60,7 +61,7 @@ async function main() {
         }
       },
       {
-        concurrency: 8
+        concurrency: 32
       }
     )
   ).filter(Boolean)
@@ -69,6 +70,7 @@ async function main() {
   // console.log(JSON.stringify(docs[0], null, 2))
 
   const errors: string[] = []
+  const generatedDirs: any = {}
 
   const results = (
     await pMap(
@@ -88,8 +90,24 @@ async function main() {
           // console.log(JSON.stringify(doc, null, 2))
 
           const source = await generateDefinition(doc)
-          const filePath = path.join(outDir, `${doc.name}.ts`)
+          const fileName = `${doc.name}.ts`
+          const namespaceDirs = doc.namespace.split('.').slice(1)
+          const destDir = path.join(outDir, ...namespaceDirs)
+          await mkdir(destDir)
+
+          const filePath = path.join(destDir, fileName)
           await fs.writeFile(filePath, source, 'utf-8')
+
+          let generatedDir = generatedDirs
+          for (const dir of namespaceDirs) {
+            if (!generatedDir[dir]) {
+              generatedDir[dir] = {}
+            }
+
+            generatedDir = generatedDir[dir]
+          }
+          generatedDir[fileName] = true
+
           console.log(filePath)
           return filePath
         } catch (err) {
@@ -111,9 +129,34 @@ async function main() {
     )
   ).filter(Boolean)
 
+  async function visitDir(dir: any, parents: string[]) {
+    if (typeof dir !== 'object') {
+      return
+    }
+
+    let indexFileSource = ''
+    for (const [key, value] of Object.entries(dir)) {
+      await visitDir(value, [...parents, key])
+      const keyPrefix = key.split('.')[0]
+      indexFileSource += `export * from './${keyPrefix}'\n`
+    }
+
+    const source = await formatSource(indexFileSource)
+    const fileName = 'index.ts'
+    const destDir = path.join(outDir, ...parents)
+    const filePath = path.join(destDir, fileName)
+    await fs.writeFile(filePath, source, 'utf-8')
+    console.log(filePath)
+  }
+
+  console.log()
+
+  // recursively generate index.ts files for all directories
+  await visitDir(generatedDirs, [])
+
   console.log(
-    `\ngenerated ${results.length} files out of ${docs.length} total docs\n`,
-    errors.length ? errors : 'no errors!'
+    `\ngenerated ${results.length} files out of ${docs.length} total docs`,
+    errors.length ? errors : '(no errors!)'
   )
 }
 

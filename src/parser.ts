@@ -50,9 +50,8 @@ export async function fetchScikitLearnIndex({
         !a.title.startsWith('sklearn.get_config') &&
         !a.title.startsWith('sklearn.set_config')
     )
-  // console.log(links)
 
-  const filteredUrls = links
+  const urls = links
     .map((a) => {
       try {
         // validate that this is a valid URL and remove query params + hash
@@ -64,9 +63,7 @@ export async function fetchScikitLearnIndex({
     })
     .filter(Boolean)
 
-  const uniqueUrls = Array.from(new Set(filteredUrls))
-
-  return uniqueUrls
+  return Array.from(new Set(urls))
 }
 
 export async function fetchAndParseScikitLearnDoc(

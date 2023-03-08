@@ -12,7 +12,7 @@ import {
   NDArray, 
   ArrayLike, 
   SparseMatrix
-} from '../types'
+} from '@lib/types'
 `
 
 export async function generateDefinition(
@@ -48,7 +48,7 @@ except NameError: ${pyBridgeName} = {}
 export interface ${pyDocClass.name}${optionsSuffix} {
   ${pyDocClass.params
     .map((param) => {
-      const pre = indentComment(
+      const pre = indentComment([
         param.desc,
         param.type.default !== undefined && param.type.default !== null
           ? `@defaultValue \`${
@@ -57,7 +57,7 @@ export interface ${pyDocClass.name}${optionsSuffix} {
                 : param.type.default
             }\``
           : ''
-      )
+      ])
 
       const dec = `${param.name}?: ${param.type.type || 'any'}`
       return `${pre}\n${dec}`
@@ -81,7 +81,7 @@ export interface ${pyDocClass.name}${
       }${optionsSuffix} {
   ${method.params
     .map((param) => {
-      const pre = indentComment(
+      const pre = indentComment([
         param.desc,
         param.type.default !== undefined && param.type.default !== null
           ? `@defaultValue \`${
@@ -90,7 +90,7 @@ export interface ${pyDocClass.name}${
                 : param.type.default
             }\``
           : ''
-      )
+      ])
       const dec = `${param.name}?: ${param.type.type || 'any'}`
       return `${pre}\n${dec}`
     })
@@ -199,12 +199,17 @@ export interface ${pyDocClass.name}${
 
   const pyConstructorParamsIdentifier = `ctor_${pyDocClass.name}`
 
+  const preClass = indentComment([pyDocClass.desc, `@see ${pyDocClass.url}`], {
+    indent: 2
+  })
+
   const source = `
 /* eslint-disable */
 /* NOTE: This file is auto-generated. Do not edit it directly. */
 
 ${tsImports}
 
+${preClass}
 export class ${pyDocClass.name} {
   id: string
   opts: any

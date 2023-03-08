@@ -1,6 +1,6 @@
 import * as lib from '@lib/index'
-// import { TSNE } from '@lib/generated/TSNE'
-import { KMeans } from '@lib/generated/KMeans'
+// import { TSNE } from '@lib/index'
+import { KMeans } from '@lib/index'
 
 async function main() {
   const py = await lib.createPythonBridge()

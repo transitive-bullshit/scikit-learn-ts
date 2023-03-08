@@ -1,13 +1,18 @@
 import camelCaseImpl, { type Options as CamelCaseOptions } from 'camelcase'
 import indentString from 'indent-string'
 
-export function indentComment(...lines: string[]): string {
+export function indentComment(
+  lines: string | string[],
+  { indent = 4 }: { indent?: number } = {}
+): string {
+  lines = Array.isArray(lines) ? lines : [lines]
   const content = lines.filter((line) => line?.trim().length > 0).join('\n\n')
   if (!content) {
     return ''
   }
+  const indentStr = ' '.repeat(Math.max(0, indent - 2))
 
-  return `/**\n${indentString(content, 4)}\n   */`
+  return `/**\n${indentString(content, indent)}\n ${indentStr}*/`
 }
 
 export function camelCase(input: string, options?: CamelCaseOptions): string {
