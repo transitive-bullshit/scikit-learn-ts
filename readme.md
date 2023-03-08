@@ -38,7 +38,16 @@ model.dispose()
 
 <table>
 <tr>
-<td> Python </td> <td> TypeScript </td>
+<td>
+
+**Python**
+
+</td>
+<td>
+
+**TypeScript**
+
+</td>
 </tr>
 <tr>
 <td>
