@@ -5,36 +5,28 @@
 [![Build Status](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 
 - [Intro](#intro)
+  - [Pros](#pros)
+  - [Notes](#notes)
 - [Usage](#usage)
-- [Comparison](#comparison)
 - [TODO](#todo)
 - [License](#license)
 
 ## Intro
 
+### Pros
+
+- **auto-generated from the official python scikit-learn docs**
+-
+
+### Notes
+
+- hacky as fuck
+- only tested with Node.js v19 and Python 3.11
+- copying arrays between node and python isn't ideal, but the python implementations are so much faster and more robust, that it ends up being a massive win over JS-based alternatives for common ML algorithims like K-Means and t-SNE
+  - seriously; I tested 6 different t-SNE JS packages, and several k-Means packages. none of the t-SNE packages worked for medium-sized inputs, they were 1000x slower, and I kept running into `NaN` city with the JS-based versions.
+  - case in point; it's _really_ hard to compete with the robustness and optimizations of a mature ML library like `scikit-learn` in JS/TS land.
+
 ## Usage
-
-```ts
-import { TSNE } from 'sklearn/manifold'
-
-const model = new TSNE({
-  nComponents: 2,
-  learningRate: 'auto',
-  init: 'random',
-  perplexity: 3
-})
-
-const x = await model.fitTransform([
-  [0, 0, 0],
-  [0, 1, 1],
-  [1, 0, 1],
-  [1, 1, 1]
-])
-
-model.dispose()
-```
-
-## Comparison
 
 <table>
 <tr>
@@ -68,7 +60,7 @@ x = model.fit_transform(data)
 <td>
 
 ```ts
-import { TSNE } from 'sklearn/manifold'
+import { TSNE, createPythonBridge } from 'sklearn'
 
 const data = [
   [0, 0, 0],
@@ -84,10 +76,10 @@ const model = new TSNE({
   perplexity: 2
 })
 
+const py = await createPythonBridge()
 await model.init(py)
-const x = await model.fit_transform({ X: data })
 
-model.dispose()
+const x = await model.fit_transform({ X: data })
 ```
 
 </td>
@@ -100,7 +92,7 @@ model.dispose()
   - [x] e2e working example for MinMaxScaler
   - [x] e2e working example for TSNE
   - [x] e2e working example for Kmeans
-  - [ ] add support for class attributes
+  - [x] add support for class attributes
   - [ ] generate all sklearn classes
   - [ ] generate all sklearn functions
   - [ ] generate docs via tsdoc
