@@ -47,16 +47,20 @@ model.dispose()
 import numpy as np
 from sklearn.manifold import TSNE
 
-X = np.array([
+data = np.array([
   [0, 0, 0],
   [0, 1, 1],
   [1, 0, 1],
   [1, 1, 1]
 ])
 
-model = TSNE(n_components=2, learning_rate='auto',
-             init='random', perplexity=3)
-X_embedded = model.fit_transform(X)
+model = TSNE(
+  n_components=2,
+  learning_rate='auto',
+  init='random',
+  perplexity=2
+)
+x = model.fit_transform(data)
 ```
 
 </td>
@@ -73,14 +77,14 @@ const data = [
 ]
 
 const model = new TSNE({
-  nComponents: 2,
-  learningRate: 'auto',
+  n_components: 2,
+  learning_rate: 'auto',
   init: 'random',
-  perplexity: 3
+  perplexity: 2
 })
 
 await model.init(py)
-const x = await model.fitTransform({ X: data })
+const x = await model.fit_transform({ X: data })
 
 model.dispose()
 ```
