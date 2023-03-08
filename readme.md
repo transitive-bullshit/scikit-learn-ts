@@ -5,12 +5,13 @@
 [![Build Status](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 
 - [Intro](#intro)
+- [Usage](#usage)
 - [TODO](#todo)
 - [License](#license)
 
 ## Intro
 
-## TODO
+## Usage
 
 ```ts
 import { TSNE } from 'sklearn/manifold'
@@ -32,15 +33,14 @@ const x = await model.fitTransform([
 model.dispose()
 ```
 
-- core mvp
-  - embeddings
-  - k-means
-  - t-SNE
-  - visualize
-- extra
-  - preprocess tweet urls for opengraph metadata
-  - embed opengraph metadata for links
-  - handle quotes and retweets
+## TODO
+
+- MVP
+  - basic e2e working example for tsne
+- post-MVP
+  - explore [camelcase](https://github.com/sindresorhus/camelcase)
+  - support positional arguments
+  - support function exports in addition to class exports
 
 ## License
 

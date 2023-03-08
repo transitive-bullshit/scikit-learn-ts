@@ -3,6 +3,11 @@ import got from 'got'
 
 import * as types from './types'
 
+// TODO: handle "py functions"
+// https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups_vectorized.html
+
+const methodIgnoreList = new Set(['get_params', 'set_params'])
+
 export async function getAndParseDoc(url: string): Promise<types.PyDocClass> {
   const res = await got(url).text()
   // console.log(res)
@@ -33,6 +38,10 @@ export async function getAndParseDoc(url: string): Promise<types.PyDocClass> {
       const desc = parseDesc($, $body)
       const name = id.replace(fullName, '').replace(/^\./, '').trim()
 
+      if (methodIgnoreList.has(name)) {
+        return null
+      }
+
       const $p = $('.field-list', $body).first()
       const $params = $('dd:nth-child(2) dt', $p)
       const $return = $('dd:nth-child(4) dt', $p)
@@ -45,11 +54,13 @@ export async function getAndParseDoc(url: string): Promise<types.PyDocClass> {
       } as types.PyDocMethod
     })
     .toArray()
+    .filter(Boolean)
 
   return {
     namespace,
     name,
     desc,
+    url,
     params,
     attribs,
     methods
@@ -62,7 +73,7 @@ export function parseValues(
 ): types.PyDocParam[] {
   return $values
     .map((_, v) => ({
-      name: $(v).find('strong').first().text().trim(),
+      name: $(v).find('strong').first().text().replaceAll(/\*/g, '').trim(),
       type: $(v)
         .find('.classifier')
         .first()
@@ -103,7 +114,8 @@ export function parseDocType(input: string) {
   if (p.length > 2) {
     throw new Error(`invalid text: ${input}`)
   } else if (p.length === 2) {
-    return { type: parseType(p[0]), default: parseValue(p[1]), raw: input }
+    const defaultValue = parseValue(p[1])
+    return { type: parseType(p[0]), default: defaultValue, raw: input }
   } else {
     return { type: parseType(p[0]), raw: input }
   }

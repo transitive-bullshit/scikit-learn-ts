@@ -98,7 +98,7 @@ const fixtures = [
   },
   {
     namespace: 'sklearn.cluster',
-    name: 'k_means',
+    name: 'KMeans',
     params: [
       {
         name: 'X',

@@ -2,6 +2,7 @@ export interface PyDocClass {
   namespace: string
   name: string
   desc?: string
+  url: string
   params: PyDocParam[]
   attribs: PyDocAttrib[]
   methods: PyDocMethod[]
