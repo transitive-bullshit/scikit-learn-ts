@@ -1,24 +1,10 @@
-import camelCase from 'camelcase'
-import indentString from 'indent-string'
-
 import * as types from './types'
 import { formatSource } from './formatter'
+import { indentComment, pascalCase } from './utils'
 
 const optionsSuffix = 'Options'
 
-function indentComment(...lines: string[]): string {
-  const content = lines.filter((line) => line?.trim().length > 0).join('\n\n')
-  if (!content) {
-    return ''
-  }
-
-  return `/**\n${indentString(content, 4)}\n   */`
-}
-
-export async function generateClass(
-  pyDocClass: types.PyDocClass
-): Promise<string> {
-  const tsImports = `
+const tsImports = `
 import crypto from 'node:crypto'
 
 import {
@@ -29,6 +15,26 @@ import {
 } from '../types'
 `
 
+export async function generateDefinition(
+  pyDocDefinition: types.PyDocDefinition
+): Promise<string> {
+  if (pyDocDefinition.type === 'function') {
+    return generateFunction(pyDocDefinition)
+  } else {
+    return generateClass(pyDocDefinition)
+  }
+}
+
+export async function generateFunction(
+  pyDocFunction: types.PyDocFunction
+): Promise<string> {
+  // TODO
+  throw new Error('Not yet implemented')
+}
+
+export async function generateClass(
+  pyDocClass: types.PyDocClass
+): Promise<string> {
   const pyBridgeName = `bridge${pyDocClass.name}`
 
   const pyImports = `
@@ -62,11 +68,7 @@ export interface ${pyDocClass.name}${optionsSuffix} {
   const methodNamesToPascalCase = pyDocClass.methods.reduce(
     (acc, method) => ({
       ...acc,
-      [method.name]: camelCase(method.name, {
-        pascalCase: true,
-        preserveConsecutiveUppercase: true,
-        locale: 'en-US'
-      })
+      [method.name]: pascalCase(method.name)
     }),
     {} as Record<string, string>
   )

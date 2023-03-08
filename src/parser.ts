@@ -49,7 +49,7 @@ export async function fetchScikitLearnIndex({
         !a.title.startsWith('sklearn.get_config') &&
         !a.title.startsWith('sklearn.set_config')
     )
-  console.log(links)
+  // console.log(links)
 
   const filteredUrls = links
     .map((a) => {
