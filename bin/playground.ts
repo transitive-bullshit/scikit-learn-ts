@@ -1,5 +1,6 @@
 import * as lib from '@lib/index'
-import { MinMaxScaler } from '@lib/generated/MinMaxScaler'
+// import { TSNE } from '@lib/generated/TSNE'
+import { KMeans } from '@lib/generated/KMeans'
 
 async function main() {
   const py = await lib.createPythonBridge()
@@ -12,10 +13,24 @@ async function main() {
     [2, 8, 7, 10, 0, 9, 2, 4, 9, 1]
   ]
 
-  const s = new MinMaxScaler()
-  await s.init(py)
-  const res = await s.fit_transform({ X: v })
-  console.log(res)
+  // const s = new MinMaxScaler()
+  // await s.init(py)
+  // const res = await s.fit_transform({ X: v })
+  // console.log(res)
+
+  // const s = new TSNE({ perplexity: 2 })
+  // await s.init(py)
+  // const res = await s.fit_transform({ X: v })
+  // console.log(res)
+
+  // const s = new KMeans({ n_clusters: 2, n_init: 'auto' })
+  // await s.init(py)
+  // const res = await s.fit_predict({ X: v })
+  // console.log(res)
+  // const res0 = await s.fit({ X: v })
+  // console.log(res0)
+  // const res1 = await s.predict({ X: v })
+  // console.log(res1)
 
   // await py.ex`
   // import numpy as np
