@@ -4,31 +4,72 @@
 
 # scikit-learn-ts <!-- omit in toc -->
 
-> Use the full power of Python's #1 ML library from Node.js 🔥
+> Unlock the full power of Python's #1 ML library from Node.js 🔥
+
+> Python's #1 ML library is now available in Node.js 🔥
+
+> The full power of Python's #1 ML library is now available in Node.js 🔥
+
+> Node.js users can now unlock the full power of Python's #1 ML library – without having to learn Python 🔥
 
 [![Build Status](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 
 - [Intro](#intro)
-  - [Pros](#pros)
-  - [Notes](#notes)
+- [Prequisites](#prequisites)
+- [Install](#install)
+- [Features](#features)
 - [Usage](#usage)
 - [TODO](#todo)
+- [Why?](#why)
+- [How it works](#how-it-works)
+- [Credit](#credit)
 - [License](#license)
 
 ## Intro
 
-### Pros
+TODO
 
-- **auto-generated from the official python scikit-learn docs**
--
+## Prequisites
 
-### Notes
+_This package is meant for Node.js users, so don't worry if you're not familiar with Python. This is the only step where you'll need to touch Python, and it should be pretty straightforward._
 
-- hacky as fuck
-- only tested with Node.js v19 and Python 3.11
-- copying arrays between node and python isn't ideal, but the python implementations are so much faster and more robust, that it ends up being a massive win over JS-based alternatives for common ML algorithims like K-Means and t-SNE
-  - seriously; I tested 6 different t-SNE JS packages, and several k-Means packages. none of the t-SNE packages worked for medium-sized inputs, they were 1000x slower, and I kept running into `NaN` city with the JS-based versions.
-  - case in point; it's _really_ hard to compete with the robustness and optimizations of a mature ML library like `scikit-learn` in JS/TS land.
+Make sure you have Node.js and Python 3 installed and in your `PATH`.
+
+- `node >= 14`
+- `python >= 3.7`
+
+In python land, install `numpy` and `scikit-learn` either globally via `pip` or via your favorite virtualenv manager. The shell running your Node.js program will need access to these python modules, so if you're using a virtualenv, make sure it's activated.
+
+If you're not sure what this means, it's okay. First [install python](https://realpython.com/installing-python/), which will also install `pip`, python's package manager. Then run:
+
+```
+pip install numpy scikit-learn
+```
+
+_Congratulations!_ You've safely navigated Python land, and from here on out, we'll be using Node.js / JS / TS. The `sklearn` NPM package will be using your python installation under the hood — without you having to know a thing about Python. 🤯
+
+## Install
+
+```
+npm install sklearn
+```
+
+## Features
+
+- **Auto-generated from the official python scikit-learn distribution**
+- All [259 classes](https://scikit-learn.org/stable/modules/classes.html) are supported and fully documented
+  - `KMeans`
+  - `TSNE`
+  - `PCA`
+  - `LinearRegression`
+  - `LogisticRegression`
+  - `DecisionTreeClassifier`
+  - `RandomForestClassifier`
+  - `XGBClassifier`
+  - `DBSCAN`
+  - `StandardScaler`
+  - `MinMaxScaler`
+  - ... _all of them_ 💯
 
 ## Usage
 
@@ -99,6 +140,7 @@ const x = await model.fit_transform({ X: data })
   - [x] add support for class attributes
   - [x] generate all sklearn classes
   - [x] refactor generated code into namespaces / folders
+  - [ ] generate readme files for each directory
   - [ ] port changes to python-bridge...
   - [x] validate generated code via `tsc`
   - [ ] refactor into `packages`
@@ -106,6 +148,7 @@ const x = await model.fit_transform({ X: data })
   - [ ] generate docs via tsdoc
   - [ ] basic readme w/ usage and examples
 - post-MVP
+  - add support for accessing the built-in datasets
   - add support for better python exception / error handling
   - add support for positional arguments (in addition to the default keyword-based arguments)
   - add support for function exports in addition to class exports
@@ -113,13 +156,39 @@ const x = await model.fit_transform({ X: data })
   - add basic benchmarks
   - add python <> TS unit tests
   - add support for concurrent python requests and multiple python bridges
-    - this may work currently, but it's untested and likely to have race conditions
+    - this may work currently, but it's untested and is likely to have race conditions
   - consider changing identifier names from python `snake_case` to JS `camelCase`
+  - add support for `pandas`
 - ideas
   - add support for [polars](https://github.com/pola-rs/nodejs-polars) and/or [danfo.js](https://github.com/javascriptdata/danfojs) dataframe formatting
   - explore memory mapping arrays between node.js and python for efficiency
     - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult...
 
+## Why?
+
+<p align="center">
+  <a href="https://twitter.com/transitive_bs/status/1616559787101114374">
+    <img alt="JS / TS developers are jealous of the Python ML ecosystem" src="/media/python-vs-js-ts.jpg">
+  </a>
+</p>
+
+## How it works
+
+- this project is objectively pretty hacky
+- copying arrays between node and python isn't ideal, but the python implementations are so much faster and more robust, that it ends up being a massive win over JS-based alternatives for common ML algorithims like K-Means and t-SNE
+  - seriously; I tested 6 different t-SNE JS packages, and several k-Means packages. none of the t-SNE packages worked for medium-sized inputs, they were 1000x slower, and I kept running into `NaN` city with the JS-based versions.
+  - case in point; it's _really_ hard to compete with the robustness and optimizations of a mature ML library like `scikit-learn` in JS/TS land.
+
+## Credit
+
+This project is not affiliated with the [official Python scikit-learn project](https://scikit-learn.org/stable/about.html).
+
+All of the difficult machine learning work has been done over the course of 15+ years by their [absolutely amazing team](https://scikit-learn.org/stable/about.html). This project is just a small open source experiment to try and leverage the existing `scikit-learn` ecosystem for the Node.js community.
+
 ## License
 
+The official Python `scikit-learn` project is licensed under the [BSD 3-Clause](https://github.com/scikit-learn/scikit-learn/blob/main/COPYING).
+
 MIT © [Travis Fischer](https://transitivebullsh.it)
+
+If you found this project helpful, please consider [donating to the official scikit-learn project](https://scikit-learn.org/stable/about.html#donating-to-the-project), [following @scikit_learn on twitter](https://twitter.com/scikit_learn), or <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
