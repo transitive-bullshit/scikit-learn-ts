@@ -132,6 +132,14 @@ export class ${pyDocClass.name} {
     this.opts = opts || {}
   }
 
+  get py(): PythonBridge {
+    return this._py
+  }
+
+  set py(pythonBridge: PythonBridge) {
+    this._py = pythonBridge
+  }
+
   async init() {
     if (this._isDisposed) {
       throw new Error('This ${
@@ -141,6 +149,10 @@ export class ${pyDocClass.name} {
 
     if (this._isInitialized) {
       return
+    }
+
+    if (!this._py) {
+      throw new Error('PythonBridge must be set before calling init()')
     }
 
     const params = \`\${Object.keys(this.opts).map((key) => {

@@ -3,9 +3,6 @@ import got from 'got'
 
 import * as types from './types'
 
-// TODO: handle "py functions"
-// https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups_vectorized.html
-
 const methodIgnoreList = new Set(['get_params', 'set_params'])
 
 export async function getAndParseDoc(url: string): Promise<types.PyDocClass> {

@@ -1,6 +1,6 @@
-# TODO <!-- omit in toc -->
+# scikit-learn-ts <!-- omit in toc -->
 
-> TODO
+> Use the full power of Python's #1 ML library from Node.js 🔥
 
 [![Build Status](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 
@@ -38,6 +38,7 @@ model.dispose()
 - MVP
   - basic e2e working example for tsne
 - post-MVP
+  - handle "py functions" ([example](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups_vectorized.html))
   - explore [camelcase](https://github.com/sindresorhus/camelcase)
   - support positional arguments
   - support function exports in addition to class exports

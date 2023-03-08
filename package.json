@@ -2,7 +2,7 @@
   "name": "scikit-learn-ts",
   "version": "0.0.1",
   "private": true,
-  "description": "TODO",
+  "description": "Use the full power of Python's #1 ML library from Node.js 🔥",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "repository": "transitive-bullshit/scikit-learn-ts",
   "license": "MIT",
@@ -30,8 +30,6 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/d3-array": "^3.0.4",
-    "@types/d3-scale": "^4.0.3",
     "@types/node": "^18.14.4",
     "ava": "^5.2.0",
     "del-cli": "^5.0.0",
@@ -59,6 +57,7 @@
   "keywords": [
     "scikit",
     "learn",
+    "sklearn",
     "machine learning",
     "ml",
     "ai"
