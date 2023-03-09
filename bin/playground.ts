@@ -1,6 +1,6 @@
-// import { TSNE } from '../sklearn'
-import * as sklearn from '../sklearn'
-import { KMeans } from '../sklearn'
+// import { TSNE } from 'sklearn'
+import * as sklearn from 'sklearn'
+import { KMeans } from 'sklearn'
 
 async function main() {
   const py = await sklearn.createPythonBridge()

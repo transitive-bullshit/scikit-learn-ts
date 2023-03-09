@@ -1,12 +1,23 @@
 {
-  "name": "scikit-learn-ts",
+  "name": "sklearn",
   "version": "0.0.1",
-  "private": true,
   "description": "Use the full power of Python's #1 ML library from Node.js 🔥",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "repository": "transitive-bullshit/scikit-learn-ts",
   "license": "MIT",
   "type": "module",
+  "source": "./src/index.ts",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    }
+  },
+  "files": [
+    "build"
+  ],
   "engines": {
     "node": ">=16"
   },
@@ -14,34 +25,14 @@
     "build": "run-s build:*",
     "build:lib": "tsx bin/parse-docs.ts",
     "build:tsc": "tsc",
-    "prebuild": "del build packages/sklearn/src/generated",
-    "prepare": "husky install",
-    "pre-commit": "lint-staged",
+    "prebuild": "del build sklearn/generated",
     "pretest": "run-s build",
     "test": "run-p test:*",
     "test:unit": "ava",
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
   },
-  "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/node": "^18.14.4",
-    "@types/prettier": "^2.7.2",
-    "indent-string": "^5.0.0",
-    "is-relative-url": "^4.0.0",
-    "ava": "^5.2.0",
-    "camelcase": "^7.0.1",
-    "cheerio": "1.0.0-rc.12",
-    "del-cli": "^5.0.0",
-    "dotenv": "^16.0.3",
-    "got": "^12.6.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.0.3",
-    "mkdirp": "^2.1.5",
-    "npm-run-all": "^4.1.5",
-    "p-map": "^5.5.0",
-    "prettier": "^2.8.3",
-    "tsx": "^3.12.2",
-    "typescript": "^4.9.3"
+  "dependencies": {
+    "@fisch0920/python-bridge": "^1.1.0"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
