@@ -15,13 +15,13 @@
 [![Build Status](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 
 - [Intro](#intro)
+- [Features](#features)
 - [Prequisites](#prequisites)
 - [Install](#install)
-- [Features](#features)
 - [Usage](#usage)
-- [TODO](#todo)
 - [Why?](#why)
 - [How it works](#how-it-works)
+- [TODO](#todo)
 - [Credit](#credit)
 - [License](#license)
 
@@ -29,9 +29,26 @@
 
 TODO
 
+## Features
+
+- **Auto-generated from the official python scikit-learn**
+- All [259 classes](https://scikit-learn.org/stable/modules/classes.html) are supported along with proper TS types and docs
+  - `KMeans`
+  - `TSNE`
+  - `PCA`
+  - `LinearRegression`
+  - `LogisticRegression`
+  - `DecisionTreeClassifier`
+  - `RandomForestClassifier`
+  - `XGBClassifier`
+  - `DBSCAN`
+  - `StandardScaler`
+  - `MinMaxScaler`
+  - ... _all of them_ 💯
+
 ## Prequisites
 
-_This package is meant for Node.js users, so don't worry if you're not familiar with Python. This is the only step where you'll need to touch Python, and it should be pretty straightforward._
+_This project is meant for Node.js users, so don't worry if you're not familiar with Python. This is the only step where you'll need to touch Python, and it should be pretty straightforward._
 
 Make sure you have Node.js and Python 3 installed and in your `PATH`.
 
@@ -46,30 +63,13 @@ If you're not sure what this means, it's okay. First [install python](https://re
 pip install numpy scikit-learn
 ```
 
-_Congratulations!_ You've safely navigated Python land, and from here on out, we'll be using Node.js / JS / TS. The `sklearn` NPM package will be using your python installation under the hood — without you having to know a thing about Python. 🤯
+_Congratulations!_ You've safely navigated Python land, and from here on out, we'll be using Node.js / JS / TS. The `sklearn` NPM package will use your Python installation under the hood — without you needing to know Python! 🤯
 
 ## Install
 
 ```
 npm install sklearn
 ```
-
-## Features
-
-- **Auto-generated from the official python scikit-learn distribution**
-- All [259 classes](https://scikit-learn.org/stable/modules/classes.html) are supported and fully documented
-  - `KMeans`
-  - `TSNE`
-  - `PCA`
-  - `LinearRegression`
-  - `LogisticRegression`
-  - `DecisionTreeClassifier`
-  - `RandomForestClassifier`
-  - `XGBClassifier`
-  - `DBSCAN`
-  - `StandardScaler`
-  - `MinMaxScaler`
-  - ... _all of them_ 💯
 
 ## Usage
 
@@ -131,6 +131,31 @@ const x = await model.fit_transform({ X: data })
 </tr>
 </table>
 
+## Why?
+
+<p align="center">
+  <a href="https://twitter.com/transitive_bs/status/1616559787101114374">
+    <img alt="JS / TS developers are jealous of the Python ML ecosystem" src="/media/python-vs-js-ts.jpg" width="500">
+  </a>
+</p>
+
+## How it works
+
+This project uses a fork of [python-bridge](https://github.com/Submersible/node-python-bridge) to spawn a Python interpreter as a subprocess and communicates back and forth via standard Unix pipes. The IPC pipes don't interfere with `stdout`/`stderr`/`stdin`, so your Node.js and Python code can print things normally.
+
+The TS library is auto-generated from the Python `scikit-learn` [API docs](https://scikit-learn.org/stable/modules/classes.html). By using the official Python docs as a source of truth, we can guarantee a certain level of compatibility and future-proofing upgradeability.
+
+For each `scikit-learn` HTML page that belongs to an exported Python `class` of `function`, we first parse it's metadata, params, methods, return values, and convert Python types into TypeScript types. We then generate a corresponding `TypeScript` file which wraps an instance of that Python declaration via a `PythonBridge`.
+
+For each `TypeScript` wrapper `class` of `function`, we take special care to handle serializing values back and forth between Node.js and Python, including converting between primitive arrays and `numpy` arrays where necessary. All `numpy` array conversions should be handled automatically for you since we only support serializing primitive JSON types over the `PythonBridge`. There may be some edge cases where the automatic `numpy` inference fails, but we have a regression test suite for parsing these cases, so as long as the official Python docs are correct for a given type, then our implicit `numpy` conversion logic should "just work".
+
+Some related thoughts:
+
+- _This project is objectively pretty hacky_, but I think the premise is very much worth exploring.
+- Serializing and copying potentially large arrays between Node.js and Python certainly isn't ideal, but **the Python implementations are so much faster and more robust**, that it ends up being a massive win over JS-based alternatives for common ML algorithims like K-Means and t-SNE
+  - Seriously; for a recent data visualization project which was full-stack TypeScript, I tested 6 different t-SNE JS packages, and several k-means packages. None of the t-SNE packages worked for medium-sized inputs, they were 1000x slower in many cases, and I kept running into `NaN` city with the JS-based versions.
+  - Case in point; it's _incredibly hard_ to compete with the robustness, speed, and maturity of a foundational Python ML library like `scikit-learn` in JS/TS land.
+
 ## TODO
 
 - MVP
@@ -140,14 +165,16 @@ const x = await model.fit_transform({ X: data })
   - [x] add support for class attributes
   - [x] generate all sklearn classes
   - [x] refactor generated code into namespaces / folders
+  - [x] check python `scikit-learn` version
   - [ ] generate readme files for each directory
   - [ ] port changes to python-bridge...
   - [x] validate generated code via `tsc`
   - [ ] refactor into `packages`
-  - [ ] generate all sklearn functions
   - [ ] generate docs via tsdoc
   - [ ] basic readme w/ usage and examples
+  - [ ] contact `scikit-learn` for feedback
 - post-MVP
+  - add support for sklearn functions (in addition to classes)
   - add support for accessing the built-in datasets
   - add support for better python exception / error handling
   - add support for positional arguments (in addition to the default keyword-based arguments)
@@ -163,32 +190,23 @@ const x = await model.fit_transform({ X: data })
   - add support for [polars](https://github.com/pola-rs/nodejs-polars) and/or [danfo.js](https://github.com/javascriptdata/danfojs) dataframe formatting
   - explore memory mapping arrays between node.js and python for efficiency
     - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult...
-
-## Why?
-
-<p align="center">
-  <a href="https://twitter.com/transitive_bs/status/1616559787101114374">
-    <img alt="JS / TS developers are jealous of the Python ML ecosystem" src="/media/python-vs-js-ts.jpg">
-  </a>
-</p>
-
-## How it works
-
-- this project is objectively pretty hacky
-- copying arrays between node and python isn't ideal, but the python implementations are so much faster and more robust, that it ends up being a massive win over JS-based alternatives for common ML algorithims like K-Means and t-SNE
-  - seriously; I tested 6 different t-SNE JS packages, and several k-Means packages. none of the t-SNE packages worked for medium-sized inputs, they were 1000x slower, and I kept running into `NaN` city with the JS-based versions.
-  - case in point; it's _really_ hard to compete with the robustness and optimizations of a mature ML library like `scikit-learn` in JS/TS land.
+  - explore more efficient serialization formats for IPC
+  - explore [pyodide](https://github.com/pyodide/pyodide) as a possible alternative
+    - the `scikit-learn` team has an [open issue](https://github.com/scikit-learn/scikit-learn/issues/23727) considering support, but it looks stalled
+    - it would likely be more performance than the approach used by this project, and it would theoretically support both Node.js and browser via WASM
+    - it would, however, also be quite a bit more complicated on the tooling / buildchain side of things (as opposed to this package which punts this complexity to the runtime side of things); tradeoffs...
+    - see also this [example issue + code snippet](https://github.com/scikit-learn/scikit-learn/issues/23707)
 
 ## Credit
 
-This project is not affiliated with the [official Python scikit-learn project](https://scikit-learn.org/stable/about.html).
+This project is not affiliated with the [official Python scikit-learn project](https://scikit-learn.org/stable/about.html). Hopefully it will be one day. 😄
 
-All of the difficult machine learning work has been done over the course of 15+ years by their [absolutely amazing team](https://scikit-learn.org/stable/about.html). This project is just a small open source experiment to try and leverage the existing `scikit-learn` ecosystem for the Node.js community.
+All of the difficult machine learning work happens under the hood via the [official Python scikit-learn project](https://scikit-learn.org), with full credit given to their [absolutely amazing team](https://scikit-learn.org/stable/about.html). This project is just a small open source experiment to try and leverage the existing `scikit-learn` ecosystem for the Node.js community.
 
 ## License
 
 The official Python `scikit-learn` project is licensed under the [BSD 3-Clause](https://github.com/scikit-learn/scikit-learn/blob/main/COPYING).
 
-MIT © [Travis Fischer](https://transitivebullsh.it)
+This project is licensed under MIT © [Travis Fischer](https://transitivebullsh.it).
 
 If you found this project helpful, please consider [donating to the official scikit-learn project](https://scikit-learn.org/stable/about.html#donating-to-the-project), [following @scikit_learn on twitter](https://twitter.com/scikit_learn), or <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
