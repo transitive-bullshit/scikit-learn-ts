@@ -1,7 +1,7 @@
 import pythonBridge, {
   type PythonBridge,
   type PythonBridgeOptions
-} from 'python-bridge'
+} from '@fisch0920/python-bridge'
 
 export type { PythonBridge }
 

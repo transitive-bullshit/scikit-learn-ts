@@ -186,6 +186,11 @@ Some related thoughts:
     - this may work currently, but it's untested and is likely to have race conditions
   - consider changing identifier names from python `snake_case` to JS `camelCase`
   - add support for `pandas`
+  - update fork of `python-bridge` to be more modern
+    - update deps
+    - replace bluebird with native promises
+    - fix python warnings
+    - etc
 - ideas
   - add support for [polars](https://github.com/pola-rs/nodejs-polars) and/or [danfo.js](https://github.com/javascriptdata/danfojs) dataframe formatting
   - explore memory mapping arrays between node.js and python for efficiency
