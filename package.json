@@ -16,8 +16,8 @@
   "scripts": {
     "build": "run-s build:*",
     "build:lib": "tsx bin/parse-docs.ts",
-    "build:tsc": "tsc --build",
     "build:tsup": "lerna run build:tsup --no-private && tsup",
+    "build:tsc": "tsc --build",
     "prebuild": "del build packages/sklearn/build packages/sklearn/src/generated",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
