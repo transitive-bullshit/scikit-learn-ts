@@ -166,7 +166,7 @@ Some related thoughts:
   - [x] generate all sklearn classes
   - [x] refactor generated code into namespaces / folders
   - [x] check python `scikit-learn` version
-  - [ ] generate readme files for each directory
+  - [x] generate readme files for each directory
   - [ ] port changes to python-bridge...
   - [x] validate generated code via `tsc`
   - [ ] refactor into `packages`

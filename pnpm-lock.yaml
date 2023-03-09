@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fisch0920/python-bridge': ^1.1.0
   '@trivago/prettier-plugin-sort-imports': ^4.1.1
   '@types/node': ^18.14.4
   '@types/prettier': ^2.7.2
@@ -18,11 +19,11 @@ specifiers:
   npm-run-all: ^4.1.5
   p-map: ^5.5.0
   prettier: ^2.8.3
-  python-bridge: ^1.1.0
   tsx: ^3.12.2
   typescript: ^4.9.3
 
 dependencies:
+  '@fisch0920/python-bridge': 1.1.0
   camelcase: 7.0.1
   cheerio: 1.0.0-rc.12
   got: 12.6.0
@@ -30,7 +31,6 @@ dependencies:
   is-relative-url: 4.0.0
   mkdirp: 2.1.5
   p-map: 5.5.0
-  python-bridge: 1.1.0
 
 devDependencies:
   '@trivago/prettier-plugin-sort-imports': 4.1.1_prettier@2.8.4
@@ -380,6 +380,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fisch0920/python-bridge/1.1.0:
+    resolution: {integrity: sha512-ky37823e3UQkT8+1f78hsc27tjUI5LePylEJy3Xc/jSgms9O74KlPRzULLqUPi+1wiwMwrOyV/dgFD8d5bXabA==}
+    dependencies:
+      bluebird: 3.7.2
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2318,12 +2324,6 @@ packages:
     dependencies:
       parse-ms: 3.0.0
     dev: true
-
-  /python-bridge/1.1.0:
-    resolution: {integrity: sha512-qjQ0QB8p9cn/XDeILQH0aP307hV58lrmv0Opjyub68Um7FHdF+ZXlTqyxNkKaXOFk2QSkScoPWwn7U9GGnrkeQ==}
-    dependencies:
-      bluebird: 3.7.2
-    dev: false
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
