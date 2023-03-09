@@ -10,10 +10,14 @@
   "engines": {
     "node": ">=16"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "run-s build:*",
     "build:lib": "tsx bin/parse-docs.ts",
-    "build:tsc": "tsc",
+    "build:tsc": "tsc --build",
+    "build:tsup": "lerna run build --no-private",
     "prebuild": "del build packages/sklearn/src/generated",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
@@ -26,8 +30,6 @@
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18.14.4",
     "@types/prettier": "^2.7.2",
-    "indent-string": "^5.0.0",
-    "is-relative-url": "^4.0.0",
     "ava": "^5.2.0",
     "camelcase": "^7.0.1",
     "cheerio": "1.0.0-rc.12",
@@ -35,11 +37,16 @@
     "dotenv": "^16.0.3",
     "got": "^12.6.0",
     "husky": "^8.0.3",
+    "indent-string": "^5.0.0",
+    "is-relative-url": "^4.0.0",
+    "lerna": "^6.5.1",
     "lint-staged": "^13.0.3",
     "mkdirp": "^2.1.5",
     "npm-run-all": "^4.1.5",
     "p-map": "^5.5.0",
     "prettier": "^2.8.3",
+    "sklearn": "workspace:./packages/sklearn",
+    "tsup": "^6.6.3",
     "tsx": "^3.12.2",
     "typescript": "^4.9.3"
   },
