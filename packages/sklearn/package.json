@@ -22,7 +22,7 @@
     "node": ">=16"
   },
   "scripts": {
-    "tsup": "tsup"
+    "build:tsup": "tsup"
   },
   "dependencies": {
     "@fisch0920/python-bridge": "^1.1.0"
