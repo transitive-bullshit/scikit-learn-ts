@@ -9,7 +9,7 @@ import { generateDefinition } from '@/generator'
 import { fetchAndParseScikitLearnDoc, fetchScikitLearnIndex } from '@/parser'
 
 async function main() {
-  const outDir = path.join('lib', 'generated')
+  const outDir = path.join('sklearn', 'generated')
   await mkdir(outDir)
 
   // 487 total definitions

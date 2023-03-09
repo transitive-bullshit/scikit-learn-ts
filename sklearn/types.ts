@@ -1,4 +1,4 @@
-export type { PythonBridge } from 'python-bridge'
+export type { PythonBridge } from '@fisch0920/python-bridge'
 
 export type ArrayLike =
   | number[]

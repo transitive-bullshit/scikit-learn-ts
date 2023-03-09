@@ -6,4 +6,4 @@ node_modules/
 .vercel/
 third-party/
 out/
-lib/generated/
+sklearn/generated/

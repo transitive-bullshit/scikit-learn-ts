@@ -51,4 +51,4 @@ out/
 
 .ipynb_checkpoints/
 
-lib/generated/
+sklearn/generated/

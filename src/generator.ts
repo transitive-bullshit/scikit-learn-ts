@@ -12,7 +12,7 @@ import {
   NDArray, 
   ArrayLike, 
   SparseMatrix
-} from '@lib/types'
+} from '@/sklearn/types'
 `
 
 export async function generateDefinition(

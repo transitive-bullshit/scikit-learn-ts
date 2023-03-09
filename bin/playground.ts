@@ -1,9 +1,9 @@
-import * as lib from '@lib/index'
-// import { TSNE } from '@lib/index'
-import { KMeans } from '@lib/index'
+// import { TSNE } from '../sklearn'
+import * as sklearn from '../sklearn'
+import { KMeans } from '../sklearn'
 
 async function main() {
-  const py = await lib.createPythonBridge()
+  const py = await sklearn.createPythonBridge()
 
   const v = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -25,16 +25,16 @@ async function main() {
   // console.log(res)
   // await s.dispose()
 
-  // const s = new KMeans({ n_clusters: 2, n_init: 'auto' })
-  // await s.init(py)
-  // const res = await s.fit_predict({ X: v })
-  // console.log(res)
-  // console.log('n_iter', await s.n_iter_)
-  // const res0 = await s.fit({ X: v })
-  // console.log(res0)
-  // const res1 = await s.predict({ X: v })
-  // console.log(res1)
-  // await s.dispose()
+  const s = new KMeans({ n_clusters: 2, n_init: 'auto' })
+  await s.init(py)
+  const res = await s.fit_predict({ X: v })
+  console.log(res)
+  console.log('n_iter', await s.n_iter_)
+  const res0 = await s.fit({ X: v })
+  console.log(res0)
+  const res1 = await s.predict({ X: v })
+  console.log(res1)
+  await s.dispose()
 
   // await py.ex`
   // import numpy as np
