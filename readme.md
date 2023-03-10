@@ -109,7 +109,7 @@ The main differences are:
 - You need to call `createPythonBridge()` before using any `sklearn` classes
   - This spawns a Python child process and validates all of the Python dependencies
   - You can pass a custom `python` path via `createPythonBridge({ python: '/path/to/your/python3' })`
-- You need to pass this bridge to any class's async `init` method before using it
+- **You need to pass this bridge to a class's async `init` method before using it**
   - This creates an underlying Python variable representing your class instance.
 - Instead of using `numpy` or `pandas`, we're just using plain JavaScript arrays.
   - Anywhere the Python version would input or output a `nympy` array, we instead just use `number[]`, `number[][]`, etc
@@ -119,7 +119,7 @@ The main differences are:
 
 ## Restrictions
 
-- We don't currently support positional arguments; only keyword-based arguments
+- We don't currently support positional arguments; only keyword-based arguments:
 
 ```ts
 // this works (keyword args)
@@ -129,9 +129,10 @@ const x = await model.fit_transform({ X: data })
 const y = await model.fit_transform(data)
 ```
 
-- We don't currently generate TS code for loading data from `scikit-learn`'s built-in datasets
+- We don't currently generate TS code for `scikit-learn`'s built-in datasets
 - We don't currently generate TS code for `scikit-learn`'s top-level function exports (only classes right now)
-- There are basic unit tests for only a handful of the auto-generated TS classes right now, and they work well, but there are probably some edge cases and bugs in other auto-generated classes.
+- There are basic unit tests for a handful of the auto-generated TS classes, and they work well, but there are probably edge cases and bugs in other auto-generated classes
+  - Please create an issue on GitHub if you run into any weird behavior and include as much detail as possible, including code snippets
 
 ## Examples
 
@@ -149,7 +150,7 @@ Here are some side-by-side examples using the official Python `scikit-learn` pac
 
 ```python
 import numpy as np
-import sklearn.preprocessing
+from sklearn.preprocessing import StandardScaler
 
 data = np.array([
   [0, 0, 0],
@@ -158,7 +159,7 @@ data = np.array([
   [1, 1, 1]
 ])
 
-s = sklearn.preprocessing.StandardScaler()
+s = StandardScaler()
 x = s.fit_transform(data)
 ```
 
