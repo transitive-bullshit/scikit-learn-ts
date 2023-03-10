@@ -2,15 +2,15 @@
   <img alt="sklearn ts logo" src="/media/scikit-learn-ts-social.png">
 </p>
 
-# scikit-learn-ts <!-- omit in toc -->
+<h1 align="center">scikit-learn-ts</h1>
 
-> Unlock the full power of Python's #1 ML library from Node.js 🔥
+<p align="center">
+  <a href="https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml"><img alt="Build Status" src="https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg" /></a>&nbsp;&nbsp;
+  <a href="https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue" /></a>&nbsp;&nbsp;
+  <a href="https://prettier.io"><img alt="Prettier Code Formatting" src="https://img.shields.io/badge/code_style-prettier-brightgreen.svg" /></a>
+</p>
 
-> Python's #1 ML library is now available in Node.js 🔥
-
-> The full power of Python's #1 ML library is now available in Node.js 🔥
-
-> Node.js users can now unlock the full power of Python's #1 ML library – without having to learn Python 🔥
+---
 
 [![Build Status](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 
@@ -31,13 +31,13 @@
 
 ## Intro
 
-> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet. If you have feedback, questions, or bug reports, please create a GitHub issue. Any contributions are greatly appreciated!
+This project enables Node.js devs to use Python's powerful `scikit-learn` machine learning library – without having to know Python.
 
-TODO
+> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet. If you have feedback, questions, or bug reports, please create a GitHub issue. Any contributions are greatly appreciated!
 
 ## Features
 
-- **Auto-generated from the official python scikit-learn**
+- **All TS classes are auto-generated from the official python scikit-learn docs**
 - All [259 classes](https://scikit-learn.org/stable/modules/classes.html) are supported along with proper TS types and docs
   - `KMeans`
   - `TSNE`
