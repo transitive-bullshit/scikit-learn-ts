@@ -1,0 +1,5 @@
+export * from './BernoulliNB'
+export * from './CategoricalNB'
+export * from './ComplementNB'
+export * from './GaussianNB'
+export * from './MultinomialNB'

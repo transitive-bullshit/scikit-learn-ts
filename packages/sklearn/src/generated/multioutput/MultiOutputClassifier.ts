@@ -1,0 +1,471 @@
+/* eslint-disable */
+/* NOTE: This file is auto-generated. Do not edit it directly. */
+
+import crypto from 'node:crypto'
+
+import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
+
+/**
+  Multi target classification.
+
+  This strategy consists of fitting one classifier per target. This is a simple strategy for extending classifiers that do not natively support multi-target classification.
+
+  @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputClassifier.html
+ */
+export class MultiOutputClassifier {
+  id: string
+  opts: any
+
+  _py: PythonBridge
+  _isInitialized: boolean = false
+  _isDisposed: boolean = false
+
+  constructor(opts?: MultiOutputClassifierOptions) {
+    this.id = `MultiOutputClassifier${crypto.randomUUID().split('-')[0]}`
+    this.opts = opts || {}
+  }
+
+  get py(): PythonBridge {
+    return this._py
+  }
+
+  set py(pythonBridge: PythonBridge) {
+    this._py = pythonBridge
+  }
+
+  /**
+    Initializes the underlying Python resources.
+
+    This instance is not usable until the `Promise` returned by `init()` resolves.
+   */
+  async init(py: PythonBridge): Promise<void> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (this._isInitialized) {
+      return
+    }
+
+    if (!py) {
+      throw new Error(
+        'MultiOutputClassifier.init requires a PythonBridge instance'
+      )
+    }
+
+    this._py = py
+
+    await this._py.ex`
+import numpy as np
+from sklearn.multioutput import MultiOutputClassifier
+try: bridgeMultiOutputClassifier
+except NameError: bridgeMultiOutputClassifier = {}
+`
+
+    // set up constructor params
+    await this._py.ex`ctor_MultiOutputClassifier = {'estimator': ${
+      this.opts['estimator'] ?? undefined
+    }, 'n_jobs': ${this.opts['n_jobs'] ?? undefined}}
+
+ctor_MultiOutputClassifier = {k: v for k, v in ctor_MultiOutputClassifier.items() if v is not None}`
+
+    await this._py
+      .ex`bridgeMultiOutputClassifier[${this.id}] = MultiOutputClassifier(**ctor_MultiOutputClassifier)`
+
+    this._isInitialized = true
+  }
+
+  /**
+    Disposes of the underlying Python resources.
+
+    Once `dispose()` is called, the instance is no longer usable.
+   */
+  async dispose() {
+    if (this._isDisposed) {
+      return
+    }
+
+    if (!this._isInitialized) {
+      return
+    }
+
+    await this._py.ex`del bridgeMultiOutputClassifier[${this.id}]`
+
+    this._isDisposed = true
+  }
+
+  /**
+    Fit the model to data matrix X and targets Y.
+   */
+  async fit(opts: MultiOutputClassifierFitOptions): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('MultiOutputClassifier must call init() before fit()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_MultiOutputClassifier_fit = {'X': np.array(${
+      opts['X'] ?? undefined
+    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
+      opts['Y'] ?? undefined
+    }) if ${opts['Y'] !== undefined} else None, 'sample_weight': np.array(${
+      opts['sample_weight'] ?? undefined
+    }) if ${opts['sample_weight'] !== undefined} else None, 'fit_params': ${
+      opts['fit_params'] ?? undefined
+    }}
+
+pms_MultiOutputClassifier_fit = {k: v for k, v in pms_MultiOutputClassifier_fit.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_fit = bridgeMultiOutputClassifier[${this.id}].fit(**pms_MultiOutputClassifier_fit)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_fit.tolist() if hasattr(res_MultiOutputClassifier_fit, 'tolist') else res_MultiOutputClassifier_fit`
+  }
+
+  /**
+    Incrementally fit a separate model for each class output.
+   */
+  async partial_fit(
+    opts: MultiOutputClassifierPartialFitOptions
+  ): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before partial_fit()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_MultiOutputClassifier_partial_fit = {'X': np.array(${
+      opts['X'] ?? undefined
+    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
+      opts['y'] ?? undefined
+    }) if ${opts['y'] !== undefined} else None, 'classes': np.array(${
+      opts['classes'] ?? undefined
+    }) if ${
+      opts['classes'] !== undefined
+    } else None, 'sample_weight': np.array(${
+      opts['sample_weight'] ?? undefined
+    }) if ${opts['sample_weight'] !== undefined} else None}
+
+pms_MultiOutputClassifier_partial_fit = {k: v for k, v in pms_MultiOutputClassifier_partial_fit.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_partial_fit = bridgeMultiOutputClassifier[${this.id}].partial_fit(**pms_MultiOutputClassifier_partial_fit)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_partial_fit.tolist() if hasattr(res_MultiOutputClassifier_partial_fit, 'tolist') else res_MultiOutputClassifier_partial_fit`
+  }
+
+  /**
+    Predict multi-output variable using model for each target variable.
+   */
+  async predict(
+    opts: MultiOutputClassifierPredictOptions
+  ): Promise<ArrayLike | SparseMatrix[]> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('MultiOutputClassifier must call init() before predict()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_MultiOutputClassifier_predict = {'X': np.array(${
+      opts['X'] ?? undefined
+    }) if ${opts['X'] !== undefined} else None}
+
+pms_MultiOutputClassifier_predict = {k: v for k, v in pms_MultiOutputClassifier_predict.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_predict = bridgeMultiOutputClassifier[${this.id}].predict(**pms_MultiOutputClassifier_predict)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_predict.tolist() if hasattr(res_MultiOutputClassifier_predict, 'tolist') else res_MultiOutputClassifier_predict`
+  }
+
+  /**
+    Return prediction probabilities for each class of each output.
+
+    This method will raise a ValueError if any of the estimators do not have predict_proba.
+   */
+  async predict_proba(
+    opts: MultiOutputClassifierPredictProbaOptions
+  ): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before predict_proba()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputClassifier_predict_proba = {'X': np.array(${
+      opts['X'] ?? undefined
+    }) if ${opts['X'] !== undefined} else None}
+
+pms_MultiOutputClassifier_predict_proba = {k: v for k, v in pms_MultiOutputClassifier_predict_proba.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_predict_proba = bridgeMultiOutputClassifier[${this.id}].predict_proba(**pms_MultiOutputClassifier_predict_proba)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_predict_proba.tolist() if hasattr(res_MultiOutputClassifier_predict_proba, 'tolist') else res_MultiOutputClassifier_predict_proba`
+  }
+
+  /**
+    Return the mean accuracy on the given test data and labels.
+   */
+  async score(opts: MultiOutputClassifierScoreOptions): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('MultiOutputClassifier must call init() before score()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_MultiOutputClassifier_score = {'X': np.array(${
+      opts['X'] ?? undefined
+    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
+      opts['y'] ?? undefined
+    }) if ${opts['y'] !== undefined} else None}
+
+pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_score.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_score = bridgeMultiOutputClassifier[${this.id}].score(**pms_MultiOutputClassifier_score)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_score.tolist() if hasattr(res_MultiOutputClassifier_score, 'tolist') else res_MultiOutputClassifier_score`
+  }
+
+  /**
+    Class labels.
+   */
+  get classes_(): Promise<NDArray> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before accessing classes_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_MultiOutputClassifier_classes_ = bridgeMultiOutputClassifier[${this.id}].classes_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_MultiOutputClassifier_classes_.tolist() if hasattr(attr_MultiOutputClassifier_classes_, 'tolist') else attr_MultiOutputClassifier_classes_`
+    })()
+  }
+
+  /**
+    Estimators used for predictions.
+   */
+  get estimators_(): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before accessing estimators_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_MultiOutputClassifier_estimators_ = bridgeMultiOutputClassifier[${this.id}].estimators_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_MultiOutputClassifier_estimators_.tolist() if hasattr(attr_MultiOutputClassifier_estimators_, 'tolist') else attr_MultiOutputClassifier_estimators_`
+    })()
+  }
+
+  /**
+    Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+   */
+  get n_features_in_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before accessing n_features_in_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_MultiOutputClassifier_n_features_in_ = bridgeMultiOutputClassifier[${this.id}].n_features_in_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_MultiOutputClassifier_n_features_in_.tolist() if hasattr(attr_MultiOutputClassifier_n_features_in_, 'tolist') else attr_MultiOutputClassifier_n_features_in_`
+    })()
+  }
+
+  /**
+    Names of features seen during fit. Only defined if the underlying estimators expose such an attribute when fit.
+   */
+  get feature_names_in_(): Promise<NDArray> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before accessing feature_names_in_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_MultiOutputClassifier_feature_names_in_ = bridgeMultiOutputClassifier[${this.id}].feature_names_in_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_MultiOutputClassifier_feature_names_in_.tolist() if hasattr(attr_MultiOutputClassifier_feature_names_in_, 'tolist') else attr_MultiOutputClassifier_feature_names_in_`
+    })()
+  }
+}
+
+export interface MultiOutputClassifierOptions {
+  /**
+    An estimator object implementing fit and predict. A predict_proba method will be exposed only if estimator implements it.
+   */
+  estimator?: any
+
+  /**
+    The number of jobs to run in parallel. fit, predict and partial_fit (if supported by the passed estimator) will be parallelized for each target.
+
+    When individual estimators are fast to train or predict, using n_jobs > 1 can result in slower performance due to the parallelism overhead.
+
+    None means 1 unless in a joblib.parallel_backend context. -1 means using all available processes / threads. See Glossary for more details.
+   */
+  n_jobs?: number
+}
+
+export interface MultiOutputClassifierFitOptions {
+  /**
+    The input data.
+   */
+  X?: ArrayLike | SparseMatrix[]
+
+  /**
+    The target values.
+   */
+  Y?: ArrayLike[]
+
+  /**
+    Sample weights. If None, then samples are equally weighted. Only supported if the underlying classifier supports sample weights.
+   */
+  sample_weight?: ArrayLike
+
+  /**
+    Parameters passed to the estimator.fit method of each step.
+   */
+  fit_params?: any
+}
+
+export interface MultiOutputClassifierPartialFitOptions {
+  /**
+    The input data.
+   */
+  X?: ArrayLike | SparseMatrix[]
+
+  /**
+    Multi-output targets.
+   */
+  y?: ArrayLike | SparseMatrix[]
+
+  /**
+    Each array is unique classes for one output in str/int. Can be obtained via [np.unique(y[:, i]) for i in range(y.shape[1])], where y is the target matrix of the entire dataset. This argument is required for the first call to partial_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in classes.
+   */
+  classes?: any[]
+
+  /**
+    Sample weights. If None, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
+   */
+  sample_weight?: ArrayLike
+}
+
+export interface MultiOutputClassifierPredictOptions {
+  /**
+    The input data.
+   */
+  X?: ArrayLike | SparseMatrix[]
+}
+
+export interface MultiOutputClassifierPredictProbaOptions {
+  /**
+    The input data.
+   */
+  X?: ArrayLike[]
+}
+
+export interface MultiOutputClassifierScoreOptions {
+  /**
+    Test samples.
+   */
+  X?: ArrayLike[]
+
+  /**
+    True values for X.
+   */
+  y?: ArrayLike[]
+}

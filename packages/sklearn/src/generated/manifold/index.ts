@@ -1,0 +1,5 @@
+export * from './Isomap'
+export * from './LocallyLinearEmbedding'
+export * from './MDS'
+export * from './SpectralEmbedding'
+export * from './TSNE'

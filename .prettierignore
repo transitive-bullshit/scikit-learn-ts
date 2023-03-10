@@ -6,4 +6,3 @@ node_modules/
 .vercel/
 third-party/
 out/
-packages/sklearn/src/generated/

@@ -1,0 +1,7 @@
+export * from './LinearSVC'
+export * from './LinearSVR'
+export * from './NuSVC'
+export * from './NuSVR'
+export * from './OneClassSVM'
+export * from './SVC'
+export * from './SVR'
