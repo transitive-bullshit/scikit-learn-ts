@@ -15,16 +15,19 @@
   ],
   "scripts": {
     "build": "run-s build:*",
-    "build:lib": "tsx bin/parse-docs.ts",
-    "build:tsup": "lerna run build:tsup --no-private && tsup",
+    "build:lib": "path-exists packages/sklearn/src/generated || run-s generate",
+    "build:tsup": "lerna run build --no-private && tsup",
     "build:tsc": "tsc --build",
-    "prebuild": "del build packages/sklearn/build packages/sklearn/src/generated",
+    "prebuild": "del build packages/sklearn/build",
+    "generate": "tsx bin/generate-sklearn.ts",
+    "pregenerate": "del packages/sklearn/src/generated",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "pretest": "run-s build",
     "test": "run-p test:*",
     "test:unit": "ava",
-    "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
+    "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check",
+    "test:sklearn": "lerna run test --scope sklearn --stream"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
@@ -44,6 +47,7 @@
     "mkdirp": "^2.1.5",
     "npm-run-all": "^4.1.5",
     "p-map": "^5.5.0",
+    "path-exists-cli": "^2.0.0",
     "prettier": "^2.8.3",
     "sklearn": "workspace:./packages/sklearn",
     "tsup": "^6.6.3",

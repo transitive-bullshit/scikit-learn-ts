@@ -221,14 +221,18 @@ const fixtures = [
 
 for (const fixture of fixtures) {
   for (const param of fixture.params.concat(fixture.attribs)) {
-    test(`${fixture.name} parseType(${param.name})`, (t) => {
+    test(`${fixture.name} parseDocType(${param.name})`, (t) => {
       const parsed = parseDocType(param.type)
-      console.log({
-        name: param.name,
-        type: param.type,
-        parsed: parsed
-      })
-      t.truthy(parsed)
+      // console.log({
+      //   name: param.name,
+      //   type: param.type,
+      //   parsed: parsed
+      // })
+      t.truthy(parsed.type)
+      t.truthy(parsed.raw)
+      t.true(typeof parsed.type === 'string')
+      t.true(typeof parsed.isNDArray === 'boolean')
+      t.true(typeof parsed.raw === 'string')
     })
   }
 }

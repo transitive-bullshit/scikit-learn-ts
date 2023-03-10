@@ -116,14 +116,14 @@ const data = [
   [1, 1, 1]
 ]
 
+const py = await createPythonBridge()
+
 const model = new TSNE({
   n_components: 2,
   learning_rate: 'auto',
   init: 'random',
   perplexity: 2
 })
-
-const py = await createPythonBridge()
 await model.init(py)
 
 const x = await model.fit_transform({ X: data })
@@ -172,7 +172,7 @@ Some related thoughts:
   - [x] port changes to python-bridge...
   - [x] validate generated code via `tsc`
   - [x] refactor into `packages`
-  - [ ] test builds
+  - [ ] test build via CI
   - [ ] generate docs via tsdoc
   - [ ] basic readme w/ usage and examples
   - [ ] contact `scikit-learn` for feedback

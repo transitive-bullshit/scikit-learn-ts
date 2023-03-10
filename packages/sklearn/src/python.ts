@@ -20,7 +20,11 @@ const [scikitLearnVersionMajor, scikitLearnVersionMinor] =
 export async function createPythonBridge(
   opts: PythonBridgeOptions = {}
 ): Promise<PythonBridge> {
-  const py = PB({ python: 'python3', ...opts })
+  const py = PB({
+    python: 'python3',
+    stdio: ['pipe', 'pipe', 'pipe'],
+    ...opts
+  })
   await validatePythonBridge(py)
   return py
 }

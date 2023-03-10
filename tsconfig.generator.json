@@ -7,6 +7,6 @@
     "tsBuildInfoFile": "build/.tsbuildinfo",
     "emitDeclarationOnly": true
   },
-  "include": ["src/**/*.ts", "bin/**/*.ts"],
+  "include": ["src/**/*.ts", "bin/**/*.ts", "test/**/*.ts"],
   "references": [{ "path": "./packages/sklearn" }]
 }
