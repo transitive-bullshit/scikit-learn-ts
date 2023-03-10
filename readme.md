@@ -352,7 +352,7 @@ Some related thoughts:
   - [x] add support for class attributes
   - [x] generate all sklearn classes
   - [x] refactor generated code into namespaces / folders
-  - [x] check python `scikit-learn` version
+  - [x] validate python `scikit-learn` version
   - [x] generate readme files for each directory
   - [x] port changes to python-bridge...
   - [x] validate generated code via `tsc`
