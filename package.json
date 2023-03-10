@@ -19,6 +19,7 @@
     "build:tsup": "lerna run build --no-private && tsup",
     "build:tsc": "tsc --build",
     "prebuild": "del build packages/sklearn/build",
+    "clean": "run-s prebuild pregenerate",
     "generate": "tsx bin/generate-sklearn.ts",
     "pregenerate": "del packages/sklearn/src/generated",
     "prepare": "husky install",
