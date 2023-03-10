@@ -1,7 +1,4 @@
-<p align="center">
-  <img alt="sklearn ts logo" src="/media/scikit-learn-ts-social.png">
-</p>
-
+<img alt="sklearn ts logo" src="/media/scikit-learn-ts-social.png">
 <h1 align="center">scikit-learn-ts</h1>
 
 <p align="center">
