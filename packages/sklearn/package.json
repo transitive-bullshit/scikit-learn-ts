@@ -1,6 +1,6 @@
 {
   "name": "sklearn",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Use Python's #1 machine learning library from Node.js",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "repository": "transitive-bullshit/scikit-learn-ts",
