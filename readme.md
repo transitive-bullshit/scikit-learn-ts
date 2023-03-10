@@ -26,7 +26,8 @@
 
 This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*. 🤯
 
-> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet.
+> **Note**
+> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet. You can follow the progress on Twitter [@transitive_bs](https://twitter.com/transitive_bs).
 
 ## Features
 
@@ -44,6 +45,7 @@ This project enables Node.js devs to use Python's powerful [scikit-learn](https:
   - `StandardScaler`
   - `MinMaxScaler`
   - ... _all of them_ 💯
+- Significantly faster and more robust than JS-based versions
 
 ## Prequisites
 
@@ -292,15 +294,15 @@ const x = await model.fit_transform({ X: data })
   </a>
 </p>
 
-Seriously though, the Python ML ecosystem is significantly better than the Node.js ML ecosystem. I don't expect this to fundamentally change, but it does mean there's lots of room for improvement.
+Seriously though, the Python ML ecosystem is significantly more mature than the Node.js ML ecosystem. I don't expect this to fundamentally change, but it does mean there's a lot of room for improvement.
 
-I was recently working on a data viz project which was full-stack TypeScript, and I needed to use k-means and t-SNE on some text embeddings. I tested 6 different t-SNE JS packages, and several k-means packages. None of the t-SNE packages worked for medium-sized inputs, they were 1000x slower in many cases, and I kept running into `NaN` city with the JS-based versions. Ugh.
+For example, I was recently working on a data viz project using full-stack TypeScript, and I needed to use k-means and t-SNE on some text embeddings. I tested 6 different t-SNE JS packages, and several k-means packages. None of the t-SNE packages worked for medium-sized inputs, they were 1000x slower in many cases, and I kept running into `NaN` city with the JS-based versions. Ugh.
 
 Case in point; it's _incredibly difficult_ to compete with the robustness, speed, and maturity of proven Python ML library like `scikit-learn` in JS/TS land.
 
-So instead of trying to build a Rust-based version from scratch, or using ad hoc Node.js modules like above, I decided to create a quick experiment to see how practical it would be to just use `scikit-learn` from Node.js.
+So instead of trying to build a Rust-based version from scratch or using ad hoc Node.js packages like I tried above, I decided to create an experiment to see how practical it would be to just use `scikit-learn` from Node.js.
 
-And that's how the `scikit-learn-ts` project was born.
+And that's how `scikit-learn-ts` was born.
 
 ## How it works
 
