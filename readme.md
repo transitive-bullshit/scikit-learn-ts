@@ -24,7 +24,7 @@
 
 ## Intro
 
-This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*.
+This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*. 🤯
 
 > This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet.
 
@@ -62,7 +62,7 @@ If you're not sure what this means, it's okay. First [install python](https://re
 pip install numpy scikit-learn
 ```
 
-_Congratulations!_ You've safely navigated Python land, and from here on out, we'll be using Node.js / JS / TS. The `sklearn` NPM package will use your Python installation under the hood — without you needing to know Python! 🤯
+_Congratulations!_ You've safely navigated Python land, and from here on out, we'll be using Node.js / JS / TS. The `sklearn` NPM package will use your Python installation under the hood.
 
 ## Install
 
@@ -333,7 +333,7 @@ Some related thoughts:
   - [x] refactor into `packages`
   - [x] test build via CI
   - [x] basic readme w/ usage and examples
-  - [ ] publish `sklearn` package to NPM
+  - [x] publish `sklearn` package to NPM
   - [ ] contact `scikit-learn` for feedback
 - post-MVP
   - generate docs via tsdoc
