@@ -2,7 +2,7 @@ import camelCaseImpl, { type Options as CamelCaseOptions } from 'camelcase'
 import indentString from 'indent-string'
 
 export function indentComment(
-  lines: string | string[],
+  lines: string | (string | undefined)[],
   { indent = 4 }: { indent?: number } = {}
 ): string {
   lines = Array.isArray(lines) ? lines : [lines]

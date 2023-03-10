@@ -27,6 +27,8 @@
 
 ## Intro
 
+> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet. If you have feedback, questions, or bug reports, please create a GitHub issue. Any contributions are greatly appreciated!
+
 TODO
 
 ## Features
@@ -167,9 +169,10 @@ Some related thoughts:
   - [x] refactor generated code into namespaces / folders
   - [x] check python `scikit-learn` version
   - [x] generate readme files for each directory
-  - [ ] port changes to python-bridge...
+  - [x] port changes to python-bridge...
   - [x] validate generated code via `tsc`
-  - [ ] refactor into `packages`
+  - [x] refactor into `packages`
+  - [ ] test builds
   - [ ] generate docs via tsdoc
   - [ ] basic readme w/ usage and examples
   - [ ] contact `scikit-learn` for feedback

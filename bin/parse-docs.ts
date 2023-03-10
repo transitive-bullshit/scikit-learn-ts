@@ -4,12 +4,15 @@ import path from 'node:path'
 import mkdir from 'mkdirp'
 import pMap from 'p-map'
 
-import { formatSource } from '@/formatter'
-import { generateDefinition } from '@/generator'
-import { fetchAndParseScikitLearnDoc, fetchScikitLearnIndex } from '@/parser'
+import { formatSource } from '../src/formatter'
+import { generateDefinition } from '../src/generator'
+import {
+  fetchAndParseScikitLearnDoc,
+  fetchScikitLearnIndex
+} from '../src/parser'
 
 async function main() {
-  const outDir = path.join('sklearn', 'generated')
+  const outDir = path.join('packages', 'sklearn', 'src', 'generated')
   await mkdir(outDir)
 
   // 487 total definitions

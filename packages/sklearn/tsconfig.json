@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "build",
+    "rootDir": ".",
+    "tsBuildInfoFile": "build/.tsbuildinfo",
+    "emitDeclarationOnly": true,
+    "paths": {
+      "@/sklearn/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

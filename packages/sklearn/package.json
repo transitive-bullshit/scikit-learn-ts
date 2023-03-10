@@ -1,0 +1,51 @@
+{
+  "name": "sklearn",
+  "version": "0.0.1",
+  "description": "Use the full power of Python's #1 ML library from Node.js 🔥",
+  "author": "Travis Fischer <travis@transitivebullsh.it>",
+  "repository": "transitive-bullshit/scikit-learn-ts",
+  "license": "MIT",
+  "type": "module",
+  "source": "./src/index.ts",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    }
+  },
+  "files": [
+    "build"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build:tsup": "tsup"
+  },
+  "dependencies": {
+    "@fisch0920/python-bridge": "^1.1.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=tsx"
+    ]
+  },
+  "keywords": [
+    "scikit",
+    "learn",
+    "sklearn",
+    "machine learning",
+    "ml",
+    "ai"
+  ]
+}
