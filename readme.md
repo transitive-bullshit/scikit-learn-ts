@@ -27,7 +27,7 @@
 This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*. 🤯
 
 > **Note**
-> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production just yet. You can follow the progress on Twitter [@transitive_bs](https://twitter.com/transitive_bs).
+> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production just yet. You can follow the progress on Twitter [@transitive_bs](https://twitter.com/transitive_bs)
 
 ## Features
 
@@ -99,7 +99,7 @@ await model.dispose()
 await py.disconnect()
 ```
 
-Since the TS classes are auto-generated from the Python docs, the code will generally look very close to the Python version, so use their excellent [API docs](https://scikit-learn.org/stable/modules/classes.html) as a reference.
+Since the TS classes are auto-generated from the Python docs, the code will look almost identical to the Python version, so use their excellent [API docs](https://scikit-learn.org/stable/modules/classes.html) as a reference.
 
 All class names, method names, attribute (accessor) names and types are the same as the official Python version.
 
@@ -149,7 +149,7 @@ x = s.fit_transform(data)
 <td>
 
 ```ts
-import { StandardScaler, createPythonBridge } from 'sklearn'
+import * as sklearn from 'sklearn'
 
 const data = [
   [0, 0, 0],
@@ -158,9 +158,9 @@ const data = [
   [1, 1, 1]
 ]
 
-const py = await createPythonBridge()
+const py = await sklearn.createPythonBridge()
 
-const s = new StandardScaler()
+const s = new sklearn.StandardScaler()
 await s.init(py)
 
 const x = await s.fit_transform({ X: data })
@@ -202,7 +202,7 @@ x = model.fit_predict(data)
 <td>
 
 ```ts
-import { KMeans, createPythonBridge } from 'sklearn'
+import * as sklearn from 'sklearn'
 
 const data = [
   [0, 0, 0],
@@ -211,9 +211,9 @@ const data = [
   [1, 1, 1]
 ]
 
-const py = await createPythonBridge()
+const py = await sklearn.createPythonBridge()
 
-const model = new KMeans({
+const model = new sklearn.KMeans({
   n_clusters: 2,
   random_state: 42
 })
@@ -260,7 +260,7 @@ x = model.fit_transform(data)
 <td>
 
 ```ts
-import { TSNE, createPythonBridge } from 'sklearn'
+import * as sklearn from 'sklearn'
 
 const data = [
   [0, 0, 0],
@@ -269,9 +269,9 @@ const data = [
   [1, 1, 1]
 ]
 
-const py = await createPythonBridge()
+const py = await sklearn.createPythonBridge()
 
-const model = new TSNE({
+const model = new sklearn.TSNE({
   n_components: 2,
   learning_rate: 'auto',
   init: 'random',
