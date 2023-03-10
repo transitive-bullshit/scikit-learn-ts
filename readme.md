@@ -27,7 +27,7 @@
 This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*. 🤯
 
 > **Note**
-> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet. You can follow the progress on Twitter [@transitive_bs](https://twitter.com/transitive_bs).
+> This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production just yet. You can follow the progress on Twitter [@transitive_bs](https://twitter.com/transitive_bs).
 
 ## Features
 
