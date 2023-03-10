@@ -12,6 +12,7 @@
 - [Prequisites](#prequisites)
 - [Install](#install)
 - [Usage](#usage)
+- [Restrictions](#restrictions)
 - [Examples](#examples)
   - [StandardScaler](#standardscaler)
   - [KMeans](#kmeans)
@@ -116,6 +117,22 @@ The main differences are:
 - Whenever you're done using an instance, call `dispose()` to free the underlying Python resources
 - Whenever you're done using your Python bridge, call `disconnect()` on the bridge to cleanly exit the Python child process
 
+## Restrictions
+
+- We don't currently support positional arguments; only keyword-based arguments
+
+```ts
+// this works (keyword args)
+const x = await model.fit_transform({ X: data })
+
+// this doesn't work yet (positional args)
+const y = await model.fit_transform(data)
+```
+
+- We don't currently generate TS code for loading data from `scikit-learn`'s built-in datasets
+- We don't currently generate TS code for `scikit-learn`'s top-level function exports (only classes right now)
+- There are basic unit tests for only a handful of the auto-generated TS classes right now, and they work well, but there are probably some edge cases and bugs in other auto-generated classes.
+
 ## Examples
 
 Here are some side-by-side examples using the official Python `scikit-learn` package on the left and the TS `sklearn` package on the right.
@@ -132,7 +149,7 @@ Here are some side-by-side examples using the official Python `scikit-learn` pac
 
 ```python
 import numpy as np
-from sklearn.preprocessing import StandardScaler
+import sklearn.preprocessing
 
 data = np.array([
   [0, 0, 0],
@@ -141,7 +158,7 @@ data = np.array([
   [1, 1, 1]
 ])
 
-s = StandardScaler()
+s = sklearn.preprocessing.StandardScaler()
 x = s.fit_transform(data)
 ```
 
