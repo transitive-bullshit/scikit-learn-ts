@@ -140,6 +140,8 @@ Here are some side-by-side examples using the official Python `scikit-learn` pac
 
 ### StandardScaler
 
+<sub><a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html">StandardScaler Python docs</a></sub>
+
 <table>
 <tr>
 <th width="450px"><b>Python</b></th>
@@ -189,6 +191,8 @@ const x = await s.fit_transform({ X: data })
 </table>
 
 ### KMeans
+
+<sub><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html">KMeans Python docs</a></sub>
 
 <table>
 <tr>
@@ -245,6 +249,8 @@ const x = await model.fit_predict({ X: data })
 </table>
 
 ### TSNE
+
+<sub><a href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html">TSNE Python docs</a></sub>
 
 <table>
 <tr>
