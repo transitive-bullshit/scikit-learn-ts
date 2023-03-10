@@ -13,6 +13,8 @@ jobs:
           - 19
           - 18
           - 16
+        python-version:
+          - '3.11'
 
     steps:
       - name: Checkout
@@ -44,7 +46,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: pip install numpy scikit-learn
+
+      - name: Install Node.js dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Run test

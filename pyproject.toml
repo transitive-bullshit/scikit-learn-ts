@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "scikit_learn_ts"}]
 
 [tool.poetry.dependencies]
-python = ">=3.11,<=3.11.2"
+python = ">=3.11"
 numpy = "^1.24.2"
 scikit-learn = "^1.2.1"
 
