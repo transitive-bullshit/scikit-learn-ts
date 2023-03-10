@@ -5,8 +5,8 @@
 <h1 align="center">scikit-learn-ts</h1>
 
 <p align="center">
-  <a href="https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml"><img alt="Build Status" src="https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg" /></a>&nbsp;
-  <a href="https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue" /></a>&nbsp;
+  <a href="https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml"><img alt="Build Status" src="https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg" /></a>
+  <a href="https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue" /></a>
   <a href="https://prettier.io"><img alt="Prettier Code Formatting" src="https://img.shields.io/badge/code_style-prettier-brightgreen.svg" /></a>
 </p>
 
