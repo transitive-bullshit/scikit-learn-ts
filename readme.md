@@ -163,6 +163,7 @@ data = np.array([
 ])
 
 s = StandardScaler()
+
 x = s.fit_transform(data)
 ```
 
@@ -218,6 +219,7 @@ model = KMeans(
   n_clusters=2,
   random_state=42
 )
+
 x = model.fit_predict(data)
 ```
 
@@ -278,6 +280,7 @@ model = TSNE(
   init='random',
   perplexity=2
 )
+
 x = model.fit_transform(data)
 ```
 
