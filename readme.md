@@ -7,10 +7,6 @@
   <a href="https://prettier.io"><img alt="Prettier Code Formatting" src="https://img.shields.io/badge/code_style-prettier-brightgreen.svg" /></a>
 </p>
 
----
-
-[![Build Status](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/scikit-learn-ts/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/scikit-learn-ts/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
-
 - [Intro](#intro)
 - [Features](#features)
 - [Prequisites](#prequisites)
@@ -28,13 +24,13 @@
 
 ## Intro
 
-This project enables Node.js devs to use Python's powerful `scikit-learn` machine learning library – without having to know Python.
+This project enables Node.js devs to use Python's powerful `scikit-learn` machine learning library – *without having to know any Python*.
 
 > This project is new and _experimental_. It works great for local development, but I wouldn't recommend it for production scenarios just yet. If you have feedback, questions, or bug reports, please create a GitHub issue. Any contributions are greatly appreciated!
 
 ## Features
 
-- **All TS classes are auto-generated from the official python scikit-learn docs**
+- **Auto-generated from the official python scikit-learn docs**
 - All [259 classes](https://scikit-learn.org/stable/modules/classes.html) are supported along with proper TS types and docs
   - `KMeans`
   - `TSNE`
@@ -101,22 +97,22 @@ await model.dispose()
 await py.disconnect()
 ```
 
-Since the TS classes are auto-generated from the Python classes, the code will generally look very close to the Python version, so use their [API docs](https://scikit-learn.org/stable/modules/classes.html) as a reference.
+Since the TS classes are auto-generated from the Python docs, the code will generally look very close to the Python version, so use their excellent [API docs](https://scikit-learn.org/stable/modules/classes.html) as a reference.
 
 All class names, method names, attribute (accessor) names and types are the same as the official Python version.
 
 The main differences are:
 
-- You need to call `createPythonBridge()` before using any `sklearn` classes.
-  - This spawns a Python child process and validates all of the Python dependencies.
-  - You can pass a custom `python` path via `createPythonBridge({ python: 'your/path/to/python3' })`
-- You need to pass this bridge to any class's async `init` method before using it.
+- You need to call `createPythonBridge()` before using any `sklearn` classes
+  - This spawns a Python child process and validates all of the Python dependencies
+  - You can pass a custom `python` path via `createPythonBridge({ python: '/path/to/your/python3' })`
+- You need to pass this bridge to any class's async `init` method before using it
   - This creates an underlying Python variable representing your class instance.
 - Instead of using `numpy` or `pandas`, we're just using plain JavaScript arrays.
-  - Anywhere you would input or output a `nympy` array in python, instead use `number[]`, `number[][]`, etc
+  - Anywhere the Python version would input or output a `nympy` array, we instead just use `number[]`, `number[][]`, etc
   - We take care of converting to and from `numpy` arrays automatically where necessary
-- Whenever you're done using an instance, call `dispose()` to free the underlying Python resources.
-- Whenever you're done using your Python bridge, call `disconnect()` on the bridge to cleanly exit the Python child process.
+- Whenever you're done using an instance, call `dispose()` to free the underlying Python resources
+- Whenever you're done using your Python bridge, call `disconnect()` on the bridge to cleanly exit the Python child process
 
 ## Examples
 
@@ -296,22 +292,30 @@ const x = await model.fit_transform({ X: data })
   </a>
 </p>
 
+Seriously though, the Python ML ecosystem is significantly better than the Node.js ML ecosystem. I don't expect this to fundamentally change, but it does mean there's lots of room for improvement.
+
+I was recently working on a data viz project which was full-stack TypeScript, and I needed to use k-means and t-SNE on some text embeddings. I tested 6 different t-SNE JS packages, and several k-means packages. None of the t-SNE packages worked for medium-sized inputs, they were 1000x slower in many cases, and I kept running into `NaN` city with the JS-based versions. Ugh.
+
+Case in point; it's _incredibly difficult_ to compete with the robustness, speed, and maturity of proven Python ML library like `scikit-learn` in JS/TS land.
+
+So instead of trying to build a Rust-based version from scratch, or using ad hoc Node.js modules like above, I decided to create a quick experiment to see how practical it would be to just use `scikit-learn` from Node.js.
+
+And that's how the `scikit-learn-ts` project was born.
+
 ## How it works
 
-This project uses a fork of [python-bridge](https://github.com/Submersible/node-python-bridge) to spawn a Python interpreter as a subprocess and communicates back and forth via standard Unix pipes. The IPC pipes don't interfere with `stdout`/`stderr`/`stdin`, so your Node.js and Python code can print things normally.
+This project uses a fork of [python-bridge](https://github.com/Submersible/node-python-bridge) to spawn a Python interpreter as a subprocess and communicates back and forth via standard Unix pipes. The IPC pipes don't interfere with `stdout`/`stderr`/`stdin`, so your Node.js code and the underlying Python code can print things normally.
 
-The TS library is auto-generated from the Python `scikit-learn` [API docs](https://scikit-learn.org/stable/modules/classes.html). By using the official Python docs as a source of truth, we can guarantee a certain level of compatibility and future-proofing upgradeability.
+The TS library is auto-generated from the Python `scikit-learn` [API docs](https://scikit-learn.org/stable/modules/classes.html). By using the official Python docs as a source of truth, we can guarantee a certain level of compatibility and future-proofing.
 
-For each `scikit-learn` HTML page that belongs to an exported Python `class` of `function`, we first parse it's metadata, params, methods, return values, and convert Python types into TypeScript types. We then generate a corresponding `TypeScript` file which wraps an instance of that Python declaration via a `PythonBridge`.
+For each `scikit-learn` HTML page that belongs to an exported Python `class` or `function`, we first parse it's metadata, params, methods, attributes, and return values using `cheerio`, then we convert the Python types into equivalent TypeScript types. We then generate a corresponding `TypeScript` file which wraps an instance of that Python declaration via a `PythonBridge`.
 
-For each `TypeScript` wrapper `class` of `function`, we take special care to handle serializing values back and forth between Node.js and Python, including converting between primitive arrays and `numpy` arrays where necessary. All `numpy` array conversions should be handled automatically for you since we only support serializing primitive JSON types over the `PythonBridge`. There may be some edge cases where the automatic `numpy` inference fails, but we have a regression test suite for parsing these cases, so as long as the official Python docs are correct for a given type, then our implicit `numpy` conversion logic should "just work".
+For each `TypeScript` wrapper `class` of `function`, we take special care to handle serializing values back and forth between Node.js and Python as JSON, including converting between primitive arrays and `numpy` arrays where necessary. All `numpy` array conversions should be handled automatically for you since we only support serializing primitive JSON types over the `PythonBridge`. There may be some edge cases where the automatic `numpy` inference fails, but we have a regression test suite for parsing these cases, so as long as the official Python docs are correct for a given type, then our implicit `numpy` conversion logic should "just work".
 
 Some related thoughts:
 
 - _This project is objectively pretty hacky_, but I think the premise is very much worth exploring.
 - Serializing and copying potentially large arrays between Node.js and Python certainly isn't ideal, but **the Python implementations are so much faster and more robust**, that it ends up being a massive win over JS-based alternatives for common ML algorithims like K-Means and t-SNE
-  - Seriously; for a recent data visualization project which was full-stack TypeScript, I tested 6 different t-SNE JS packages, and several k-means packages. None of the t-SNE packages worked for medium-sized inputs, they were 1000x slower in many cases, and I kept running into `NaN` city with the JS-based versions.
-  - Case in point; it's _incredibly hard_ to compete with the robustness, speed, and maturity of a foundational Python ML library like `scikit-learn` in JS/TS land.
 
 ## TODO
 
@@ -327,11 +331,12 @@ Some related thoughts:
   - [x] port changes to python-bridge...
   - [x] validate generated code via `tsc`
   - [x] refactor into `packages`
-  - [ ] test build via CI
-  - [ ] generate docs via tsdoc
-  - [ ] basic readme w/ usage and examples
+  - [x] test build via CI
+  - [x] basic readme w/ usage and examples
+  - [ ] publish `sklearn` package to NPM
   - [ ] contact `scikit-learn` for feedback
 - post-MVP
+  - generate docs via tsdoc
   - add support for sklearn functions (in addition to classes)
   - add support for accessing the built-in datasets
   - add support for better python exception / error handling
@@ -372,4 +377,4 @@ The official Python `scikit-learn` project is licensed under the [BSD 3-Clause](
 
 This project is licensed under MIT © [Travis Fischer](https://transitivebullsh.it).
 
-If you found this project helpful, please consider [donating to the official scikit-learn project](https://scikit-learn.org/stable/about.html#donating-to-the-project), [following @scikit_learn on twitter](https://twitter.com/scikit_learn), or <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
+If you found this project helpful, please consider <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
