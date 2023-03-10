@@ -387,7 +387,7 @@ Some related thoughts:
   - explore more efficient serialization formats for IPC
   - explore [pyodide](https://github.com/pyodide/pyodide) as a possible alternative
     - the `scikit-learn` team has an [open issue](https://github.com/scikit-learn/scikit-learn/issues/23727) considering support, but it looks stalled
-    - it would likely be more performance than the approach used by this project, and it would theoretically support both Node.js and browser via WASM
+    - it would likely be more performant in many cases than the approach used by this project, and it would theoretically support both Node.js and browser via WASM
     - it would, however, also be quite a bit more complicated on the tooling / buildchain side of things (as opposed to this package which punts this complexity to the runtime side of things); tradeoffs...
     - see also this [example issue + code snippet](https://github.com/scikit-learn/scikit-learn/issues/23707)
 
