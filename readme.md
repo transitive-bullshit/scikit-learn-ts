@@ -218,7 +218,8 @@ data = np.array([
 
 model = KMeans(
   n_clusters=2,
-  random_state=42
+  random_state=42,
+  n_init='auto'
 )
 
 x = model.fit_predict(data)
@@ -241,7 +242,8 @@ const py = await sklearn.createPythonBridge()
 
 const model = new sklearn.KMeans({
   n_clusters: 2,
-  random_state: 42
+  random_state: 42,
+  n_init: 'auto'
 })
 await model.init(py)
 
@@ -277,9 +279,9 @@ data = np.array([
 
 model = TSNE(
   n_components=2,
+  perplexity=2,
   learning_rate='auto',
-  init='random',
-  perplexity=2
+  init='random'
 )
 
 x = model.fit_transform(data)
@@ -302,9 +304,9 @@ const py = await sklearn.createPythonBridge()
 
 const model = new sklearn.TSNE({
   n_components: 2,
+  perplexity: 2,
   learning_rate: 'auto',
-  init: 'random',
-  perplexity: 2
+  init: 'random'
 })
 await model.init(py)
 
