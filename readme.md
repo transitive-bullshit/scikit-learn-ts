@@ -47,7 +47,8 @@ This project enables Node.js devs to use Python's powerful [scikit-learn](https:
   - `StandardScaler`
   - `MinMaxScaler`
   - ... _all of them_ 💯
-- Significantly faster and more robust than JS-based versions
+- Generally much faster and more robust than JS-based alternatives
+  - (benchmarks & comparisons coming soon)
 
 ## Prequisites
 
@@ -316,15 +317,9 @@ const x = await model.fit_transform({ X: data })
 
 ## Why?
 
-<p align="center">
-  <a href="https://twitter.com/transitive_bs/status/1616559787101114374">
-    <img alt="JS / TS developers are jealous of the Python ML ecosystem" src="/media/python-vs-js-ts.jpg" width="500">
-  </a>
-</p>
+The Python ML ecosystem is generally a lot more mature than the Node.js ML ecosystem. Most ML research happens in Python, and many common ML tasks that Python devs take for granted are much more difficult to accomplish in Node.js.
 
-Seriously though, the Python ML ecosystem is significantly more mature than the Node.js ML ecosystem. I don't expect this to fundamentally change, but it does mean there's a lot of room for improvement.
-
-For example, I was recently working on a data viz project using full-stack TypeScript, and I needed to use k-means and t-SNE on some text embeddings. I tested 6 different t-SNE JS packages and several k-means packages. None of the t-SNE packages worked for medium-sized inputs, they were 1000x slower in many cases, and I kept running into `NaN` city with the JS-based versions. Ugh.
+For example, I was recently working on a data viz project using full-stack TypeScript, and I needed to use k-means and t-SNE on some text embeddings. I tested 6 different t-SNE JS packages and several k-means packages. None of the t-SNE packages worked for medium-sized inputs, they were 1000x slower in many cases, and I kept running into `NaN` city with the JS-based versions.
 
 Case in point; it's _incredibly difficult_ to compete with the robustness, speed, and maturity of proven Python ML libraries like `scikit-learn` in JS/TS land.
 
@@ -341,11 +336,6 @@ The TS library is **auto-generated** from the Python `scikit-learn` [API docs](h
 For each `scikit-learn` HTML page that belongs to an exported Python `class` or `function`, we first parse it's metadata, params, methods, attributes, etc using `cheerio`, then we convert the Python types into equivalent TypeScript types. We then generate a corresponding `TypeScript` file which wraps an instance of that Python declaration via a `PythonBridge`.
 
 For each `TypeScript` wrapper `class` of `function`, we take special care to handle serializing values back and forth between Node.js and Python as JSON, including converting between primitive arrays and `numpy` arrays where necessary. All `numpy` array conversions should be handled automatically for you since we only support serializing primitive JSON types over the `PythonBridge`. There may be some edge cases where the automatic `numpy` inference fails, but we have a regression test suite for parsing these cases, so as long as the official Python docs are correct for a given type, then our implicit `numpy` conversion logic should "just work".
-
-Some related thoughts:
-
-- _This project is objectively pretty hacky_, but I think the premise is very much worth exploring.
-- Serializing and copying potentially very large arrays between Node.js and Python certainly isn't ideal, but **the Python implementations are so much faster and more robust**, that it ends up being a massive win over JS-based alternatives for many common ML algorithms
 
 ## TODO
 
@@ -364,7 +354,7 @@ Some related thoughts:
   - [x] test build via CI
   - [x] basic readme w/ usage and examples
   - [x] publish `sklearn` package to NPM
-  - [ ] contact `scikit-learn` for feedback
+  - [x] contact `scikit-learn` for feedback
 - post-MVP
   - generate docs via tsdoc
   - add support for sklearn functions (in addition to classes)
@@ -386,14 +376,10 @@ Some related thoughts:
     - etc
 - ideas
   - add support for [polars](https://github.com/pola-rs/nodejs-polars) and/or [danfo.js](https://github.com/javascriptdata/danfojs) dataframe formatting
-  - explore memory mapping arrays between node.js and python for efficiency
-    - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult...
   - explore more efficient serialization formats for IPC
-  - explore [pyodide](https://github.com/pyodide/pyodide) as a possible alternative
-    - the `scikit-learn` team has an [open issue](https://github.com/scikit-learn/scikit-learn/issues/23727) considering support, but it looks stalled
-    - it would likely be more performant in many cases than the approach used by this project, and it would theoretically support both Node.js and browser via WASM
-    - it would, however, also be quite a bit more complicated on the tooling / buildchain side of things (as opposed to this package which punts this complexity to the runtime side of things); tradeoffs...
-    - see also this [example issue + code snippet](https://github.com/scikit-learn/scikit-learn/issues/23707)
+    - explore memory mapping arrays between node.js and python for efficiency
+    - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult...
+  - explore [pyodide](https://github.com/pyodide/pyodide) as a possible alternative to the Python bridge
 
 ## Credit
 
