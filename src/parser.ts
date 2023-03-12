@@ -180,7 +180,6 @@ export function parseDesc(
   $: cheerio.CheerioAPI,
   $body: cheerio.Cheerio<cheerio.Element>
 ): string {
-  // TODO: parse $body as markdown
   let desc = ''
   let $p = $body.first().find('p').first()
 
