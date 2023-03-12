@@ -426,7 +426,7 @@ export interface NystroemOptions {
   /**
     The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n\_jobs` even slices and computing them in parallel.
 
-    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -438,7 +438,7 @@ export interface NystroemFitOptions {
   X?: ArrayLike
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 }
@@ -450,7 +450,7 @@ export interface NystroemFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

@@ -349,7 +349,7 @@ export interface KernelRidgeFitOptions {
   y?: ArrayLike
 
   /**
-    Individual weights for each sample, ignored if None is passed.
+    Individual weights for each sample, ignored if `undefined` is passed.
    */
   sample_weight?: number | ArrayLike
 }

@@ -316,7 +316,7 @@ export interface BinarizerOptions {
   threshold?: number
 
   /**
-    Set to False to perform inplace binarization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
+    Set to `false` to perform inplace binarization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
 
     @defaultValue `true`
    */
@@ -342,7 +342,7 @@ export interface BinarizerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

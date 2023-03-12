@@ -361,26 +361,26 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
 
 export interface LinearRegressionOptions {
   /**
-    Whether to calculate the intercept for this model. If set to False, no intercept will be used in calculations (i.e. data is expected to be centered).
+    Whether to calculate the intercept for this model. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
 
     @defaultValue `true`
    */
   fit_intercept?: boolean
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
   copy_X?: boolean
 
   /**
-    The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `True`. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    When set to `True`, forces the coefficients to be positive. This option is only supported for dense arrays.
+    When set to `true`, forces the coefficients to be positive. This option is only supported for dense arrays.
 
     @defaultValue `false`
    */

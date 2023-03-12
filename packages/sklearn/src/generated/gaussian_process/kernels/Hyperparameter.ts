@@ -199,7 +199,7 @@ export interface HyperparameterOptions {
   n_elements?: number
 
   /**
-    Whether the value of this hyperparameter is fixed, i.e., cannot be changed during hyperparameter tuning. If None is passed, the “fixed” is derived based on the given bounds.
+    Whether the value of this hyperparameter is fixed, i.e., cannot be changed during hyperparameter tuning. If `undefined` is passed, the “fixed” is derived based on the given bounds.
    */
   fixed?: boolean
 }

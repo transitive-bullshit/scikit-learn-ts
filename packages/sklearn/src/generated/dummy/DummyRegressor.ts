@@ -295,7 +295,7 @@ export interface DummyRegressorPredictOptions {
 
 export interface DummyRegressorScoreOptions {
   /**
-    Test samples. Passing None as test samples gives the same result as passing real test samples, since `DummyRegressor` operates independently of the sampled observations.
+    Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since `DummyRegressor` operates independently of the sampled observations.
    */
   X?: ArrayLike[]
 

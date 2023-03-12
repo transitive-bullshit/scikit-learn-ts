@@ -462,7 +462,7 @@ export interface HashingVectorizerOptions {
   decode_error?: 'strict' | 'ignore' | 'replace'
 
   /**
-    Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any character. None (default) does nothing.
+    Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any character. `undefined` (default) does nothing.
 
     Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
    */
@@ -519,21 +519,21 @@ export interface HashingVectorizerOptions {
   n_features?: number
 
   /**
-    If True, all non zero counts are set to 1. This is useful for discrete probabilistic models that model binary events rather than integer counts.
+    If `true`, all non zero counts are set to 1. This is useful for discrete probabilistic models that model binary events rather than integer counts.
 
     @defaultValue `false`
    */
   binary?: boolean
 
   /**
-    Norm used to normalize term vectors. None for no normalization.
+    Norm used to normalize term vectors. `undefined` for no normalization.
 
     @defaultValue `'l2'`
    */
   norm?: 'l1' | 'l2'
 
   /**
-    When True, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
+    When `true`, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
 
     @defaultValue `true`
    */

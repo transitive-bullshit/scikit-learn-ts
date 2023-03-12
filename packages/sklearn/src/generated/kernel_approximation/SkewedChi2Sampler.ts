@@ -404,7 +404,7 @@ export interface SkewedChi2SamplerFitOptions {
   X?: ArrayLike
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 }
@@ -416,7 +416,7 @@ export interface SkewedChi2SamplerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

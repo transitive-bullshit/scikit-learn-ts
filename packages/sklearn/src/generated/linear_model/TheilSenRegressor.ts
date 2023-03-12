@@ -401,7 +401,7 @@ export interface TheilSenRegressorOptions {
   fit_intercept?: boolean
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -415,7 +415,7 @@ export interface TheilSenRegressorOptions {
   max_subpopulation?: number
 
   /**
-    Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit\_intercept=True) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If None, take the minimum number of subsamples leading to maximal robustness. If n\_subsamples is set to n\_samples, Theil-Sen is identical to least squares.
+    Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit\_intercept=`true`) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If `undefined`, take the minimum number of subsamples leading to maximal robustness. If n\_subsamples is set to n\_samples, Theil-Sen is identical to least squares.
    */
   n_subsamples?: number
 
@@ -439,7 +439,7 @@ export interface TheilSenRegressorOptions {
   random_state?: number
 
   /**
-    Number of CPUs to use during the cross validation. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 

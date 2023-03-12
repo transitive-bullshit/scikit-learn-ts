@@ -376,7 +376,7 @@ export interface AdditiveChi2SamplerFitOptions {
   X?: ArrayLike
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 }
@@ -388,7 +388,7 @@ export interface AdditiveChi2SamplerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

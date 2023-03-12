@@ -524,7 +524,7 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store\_precision is True)
+    Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -776,14 +776,14 @@ export interface EllipticEnvelopeOptions {
   store_precision?: boolean
 
   /**
-    If True, the support of robust location and covariance estimates is computed, and a covariance estimate is recomputed from it, without centering the data. Useful to work with data whose mean is significantly equal to zero but is not exactly zero. If False, the robust location and covariance are directly computed with the FastMCD algorithm without additional treatment.
+    If `true`, the support of robust location and covariance estimates is computed, and a covariance estimate is recomputed from it, without centering the data. Useful to work with data whose mean is significantly equal to zero but is not exactly zero. If `false`, the robust location and covariance are directly computed with the FastMCD algorithm without additional treatment.
 
     @defaultValue `false`
    */
   assume_centered?: boolean
 
   /**
-    The proportion of points to be included in the support of the raw MCD estimate. If None, the minimum value of support\_fraction will be used within the algorithm: `\[n\_sample + n\_features + 1\] / 2`. Range is (0, 1).
+    The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support\_fraction will be used within the algorithm: `\[n\_sample + n\_features + 1\] / 2`. Range is (0, 1).
    */
   support_fraction?: number
 
@@ -828,14 +828,14 @@ export interface EllipticEnvelopeErrorNormOptions {
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
+    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */
   scaling?: boolean
 
   /**
-    Whether to compute the squared error norm or the error norm. If True (default), the squared error norm is returned. If False, the error norm is returned.
+    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
 
     @defaultValue `true`
    */

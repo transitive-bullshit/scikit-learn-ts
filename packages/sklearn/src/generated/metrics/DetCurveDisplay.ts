@@ -305,7 +305,7 @@ export interface DetCurveDisplayOptions {
   fnr?: NDArray
 
   /**
-    Name of estimator. If None, the estimator name is not shown.
+    Name of estimator. If `undefined`, the estimator name is not shown.
    */
   estimator_name?: string
 
@@ -347,12 +347,12 @@ export interface DetCurveDisplayFromEstimatorOptions {
   pos_label?: string | number
 
   /**
-    Name of DET curve for labeling. If `None`, use the name of the estimator.
+    Name of DET curve for labeling. If `undefined`, use the name of the estimator.
    */
   name?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -384,12 +384,12 @@ export interface DetCurveDisplayFromPredictionsOptions {
   pos_label?: string | number
 
   /**
-    Name of DET curve for labeling. If `None`, name will be set to `"Classifier"`.
+    Name of DET curve for labeling. If `undefined`, name will be set to `"Classifier"`.
    */
   name?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -401,12 +401,12 @@ export interface DetCurveDisplayFromPredictionsOptions {
 
 export interface DetCurveDisplayPlotOptions {
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Name of DET curve for labeling. If `None`, use `estimator\_name` if it is not `None`, otherwise no labeling is shown.
+    Name of DET curve for labeling. If `undefined`, use `estimator\_name` if it is not `undefined`, otherwise no labeling is shown.
    */
   name?: string
 

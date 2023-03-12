@@ -515,14 +515,14 @@ export interface MinMaxScalerOptions {
   feature_range?: any
 
   /**
-    Set to False to perform inplace row normalization and avoid a copy (if the input is already a numpy array).
+    Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array).
 
     @defaultValue `true`
    */
   copy?: boolean
 
   /**
-    Set to True to clip transformed values of held-out data to provided `feature range`.
+    Set to `true` to clip transformed values of held-out data to provided `feature range`.
 
     @defaultValue `false`
    */
@@ -548,7 +548,7 @@ export interface MinMaxScalerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

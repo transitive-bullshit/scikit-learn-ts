@@ -298,12 +298,12 @@ export interface SpectralClusteringOptions {
   n_clusters?: number
 
   /**
-    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems, but may also lead to instabilities. If None, then `'arpack'` is used. See [\[4\]](#r5f6cbeb1558e-4) for more details regarding `'lobpcg'`.
+    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems, but may also lead to instabilities. If `undefined`, then `'arpack'` is used. See [\[4\]](#r5f6cbeb1558e-4) for more details regarding `'lobpcg'`.
    */
   eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
 
   /**
-    Number of eigenvectors to use for the spectral embedding. If None, defaults to `n\_clusters`.
+    Number of eigenvectors to use for the spectral embedding. If `undefined`, defaults to `n\_clusters`.
    */
   n_components?: number
 
@@ -374,7 +374,7 @@ export interface SpectralClusteringOptions {
   kernel_params?: any
 
   /**
-    The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 

@@ -422,7 +422,7 @@ pms_LogisticRegression_sparsify = {k: v for k, v in pms_LogisticRegression_spars
   /**
     Coefficient of the features in the decision function.
 
-    `coef\_` is of shape (1, n\_features) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `coef\_` corresponds to outcome 1 (True) and `\-coef\_` corresponds to outcome 0 (False).
+    `coef\_` is of shape (1, n\_features) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `coef\_` corresponds to outcome 1 (`true`) and `\-coef\_` corresponds to outcome 0 (`false`).
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -451,7 +451,7 @@ pms_LogisticRegression_sparsify = {k: v for k, v in pms_LogisticRegression_spars
   /**
     Intercept (a.k.a. bias) added to the decision function.
 
-    If `fit\_intercept` is set to False, the intercept is set to zero. `intercept\_` is of shape (1,) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `intercept\_` corresponds to outcome 1 (True) and `\-intercept\_` corresponds to outcome 0 (False).
+    If `fit\_intercept` is set to `false`, the intercept is set to zero. `intercept\_` is of shape (1,) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `intercept\_` corresponds to outcome 1 (`true`) and `\-intercept\_` corresponds to outcome 0 (`false`).
    */
   get intercept_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -568,7 +568,7 @@ export interface LogisticRegressionOptions {
   penalty?: 'l1' | 'l2' | 'elasticnet'
 
   /**
-    Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=False when n\_samples > n\_features.
+    Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n\_samples > n\_features.
 
     @defaultValue `false`
    */
@@ -596,7 +596,7 @@ export interface LogisticRegressionOptions {
   fit_intercept?: boolean
 
   /**
-    Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to True. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
+    Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to `true`. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
 
     Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
 
@@ -653,14 +653,14 @@ export interface LogisticRegressionOptions {
   verbose?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 

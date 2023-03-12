@@ -552,7 +552,7 @@ export interface SelfTrainingClassifierOptions {
   k_best?: number
 
   /**
-    Maximum number of iterations allowed. Should be greater than or equal to 0. If it is `None`, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.
+    Maximum number of iterations allowed. Should be greater than or equal to 0. If it is `undefined`, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.
 
     @defaultValue `10`
    */

@@ -545,7 +545,7 @@ export interface PerceptronOptions {
   l1_ratio?: number
 
   /**
-    Whether the intercept should be estimated or not. If False, the data is assumed to be already centered.
+    Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
 
     @defaultValue `true`
    */
@@ -559,7 +559,7 @@ export interface PerceptronOptions {
   max_iter?: number
 
   /**
-    The stopping criterion. If it is not None, the iterations will stop when (loss > previous\_loss - tol).
+    The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol).
 
     @defaultValue `0.001`
    */
@@ -587,26 +587,26 @@ export interface PerceptronOptions {
   eta0?: number
 
   /**
-    The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Used to shuffle the training data, when `shuffle` is set to `True`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
     @defaultValue `0`
    */
   random_state?: number
 
   /**
-    Whether to use early stopping to terminate training when validation. score is not improving. If set to True, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
+    Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
 
     @defaultValue `false`
    */
   early_stopping?: boolean
 
   /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is True.
+    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
 
     @defaultValue `0.1`
    */
@@ -629,7 +629,7 @@ export interface PerceptronOptions {
   class_weight?: any | 'balanced'
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */

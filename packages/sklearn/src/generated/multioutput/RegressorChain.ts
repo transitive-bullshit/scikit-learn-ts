@@ -298,7 +298,7 @@ export interface RegressorChainOptions {
   base_estimator?: any
 
   /**
-    If `None`, the order will be determined by the order of columns in the label matrix Y.:
+    If `undefined`, the order will be determined by the order of columns in the label matrix Y.:
    */
   order?: ArrayLike | 'random'
 
@@ -313,7 +313,7 @@ export interface RegressorChainOptions {
   random_state?: number
 
   /**
-    If True, chain progress is output as each model is completed.
+    If `true`, chain progress is output as each model is completed.
 
     @defaultValue `false`
    */

@@ -433,7 +433,7 @@ pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_tran
 
 export interface DictionaryLearningOptions {
   /**
-    Number of dictionary elements to extract. If None, then `n\_components` is set to `n\_features`.
+    Number of dictionary elements to extract. If `undefined`, then `n\_components` is set to `n\_features`.
    */
   n_components?: number
 
@@ -473,27 +473,27 @@ export interface DictionaryLearningOptions {
   transform_algorithm?: 'lasso_lars' | 'lasso_cd' | 'lars' | 'omp' | 'threshold'
 
   /**
-    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `None`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
+    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
    */
   transform_n_nonzero_coefs?: number
 
   /**
-    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `None`, defaults to `alpha`.
+    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
    */
   transform_alpha?: number
 
   /**
-    Number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Initial value for the code, for warm restart. Only used if `code\_init` and `dict\_init` are not None.
+    Initial value for the code, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
    */
   code_init?: NDArray[]
 
   /**
-    Initial values for the dictionary, for warm restart. Only used if `code\_init` and `dict\_init` are not None.
+    Initial values for the dictionary, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
    */
   dict_init?: NDArray[]
 
@@ -512,7 +512,7 @@ export interface DictionaryLearningOptions {
   split_sign?: boolean
 
   /**
-    Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `True`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -557,7 +557,7 @@ export interface DictionaryLearningFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

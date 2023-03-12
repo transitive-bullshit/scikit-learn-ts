@@ -352,7 +352,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
   }
 
   /**
-    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is True.
+    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -379,7 +379,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
   }
 
   /**
-    Prediction computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_prediction\_` might contain NaN. This attribute exists only when `oob\_score` is True.
+    Prediction computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_prediction\_` might contain NaN. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_prediction_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -408,7 +408,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
 
 export interface BaggingRegressorOptions {
   /**
-    The base estimator to fit on random subsets of the dataset. If None, then the base estimator is a [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor").
+    The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor").
    */
   estimator?: any
 
@@ -434,7 +434,7 @@ export interface BaggingRegressorOptions {
   max_features?: number
 
   /**
-    Whether samples are drawn with replacement. If False, sampling without replacement is performed.
+    Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.
 
     @defaultValue `true`
    */
@@ -448,21 +448,21 @@ export interface BaggingRegressorOptions {
   bootstrap_features?: boolean
 
   /**
-    Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=True.
+    Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.
 
     @defaultValue `false`
    */
   oob_score?: boolean
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -498,7 +498,7 @@ export interface BaggingRegressorFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
+    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
    */
   sample_weight?: ArrayLike
 }

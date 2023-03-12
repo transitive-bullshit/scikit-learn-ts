@@ -472,7 +472,7 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
   }
 
   /**
-    False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise True.
+    False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise `true`.
    */
   get outputs_2d_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -552,7 +552,7 @@ export interface KNeighborsClassifierOptions {
   metric_params?: any
 
   /**
-    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsClassifier.fit "sklearn.neighbors.KNeighborsClassifier.fit") method.
+    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsClassifier.fit "sklearn.neighbors.KNeighborsClassifier.fit") method.
    */
   n_jobs?: number
 }

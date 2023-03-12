@@ -296,7 +296,7 @@ export interface MultiLabelBinarizerOptions {
   classes?: ArrayLike
 
   /**
-    Set to True if output binary array is desired in CSR sparse format.
+    Set to `true` if output binary array is desired in CSR sparse format.
 
     @defaultValue `false`
    */

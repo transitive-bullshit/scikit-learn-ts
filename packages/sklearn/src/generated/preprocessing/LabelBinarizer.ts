@@ -307,7 +307,7 @@ pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.it
   }
 
   /**
-    True if the input data to transform is given as a sparse matrix, False otherwise.
+    True if the input data to transform is given as a sparse matrix, `false` otherwise.
    */
   get sparse_input_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -380,7 +380,7 @@ export interface LabelBinarizerInverseTransformOptions {
 
     Use 0 when `Y` contains the output of decision\_function (classifier). Use 0.5 when `Y` contains the output of predict\_proba.
 
-    If None, the threshold is assumed to be half way between neg\_label and pos\_label.
+    If `undefined`, the threshold is assumed to be half way between neg\_label and pos\_label.
    */
   threshold?: number
 }

@@ -237,7 +237,7 @@ pms_Lars_score = {k: v for k, v in pms_Lars_score.items() if v is not None}`
   }
 
   /**
-    The varying values of the coefficients along the path. It is not present if the `fit\_path` parameter is `False`. If this is a list of array-like, the length of the outer list is `n\_targets`.
+    The varying values of the coefficients along the path. It is not present if the `fit\_path` parameter is `false`. If this is a list of array-like, the length of the outer list is `n\_targets`.
    */
   get coef_path_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -391,7 +391,7 @@ export interface LarsOptions {
   verbose?: boolean | number
 
   /**
-    This parameter is ignored when `fit\_intercept` is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
+    This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
 
     @defaultValue `false`
    */
@@ -417,14 +417,14 @@ export interface LarsOptions {
   eps?: number
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
   copy_X?: boolean
 
   /**
-    If True the full path is stored in the `coef\_path\_` attribute. If you compute the solution for a large problem or many targets, setting `fit\_path` to `False` will lead to a speedup, especially with a small alpha.
+    If `true` the full path is stored in the `coef\_path\_` attribute. If you compute the solution for a large problem or many targets, setting `fit\_path` to `false` will lead to a speedup, especially with a small alpha.
 
     @defaultValue `true`
    */
@@ -436,7 +436,7 @@ export interface LarsOptions {
   jitter?: number
 
   /**
-    Determines random number generation for jittering. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Ignored if `jitter` is None.
+    Determines random number generation for jittering. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Ignored if `jitter` is `undefined`.
    */
   random_state?: number
 }

@@ -341,7 +341,7 @@ export interface TfidfTransformerOptions {
   norm?: 'l1' | 'l2'
 
   /**
-    Enable inverse-document-frequency reweighting. If False, idf(t) = 1.
+    Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
     @defaultValue `true`
    */
@@ -381,7 +381,7 @@ export interface TfidfTransformerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

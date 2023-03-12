@@ -175,7 +175,7 @@ export interface StratifiedKFoldOptions {
   shuffle?: boolean
 
   /**
-    When `shuffle` is True, `random\_state` affects the ordering of the indices, which controls the randomness of each fold for each class. Otherwise, leave `random\_state` as `None`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold for each class. Otherwise, leave `random\_state` as `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }

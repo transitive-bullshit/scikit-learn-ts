@@ -454,7 +454,7 @@ export interface LinearSVCOptions {
   loss?: 'hinge' | 'squared_hinge'
 
   /**
-    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=False when n\_samples > n\_features.
+    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features.
 
     @defaultValue `true`
    */
@@ -489,7 +489,7 @@ export interface LinearSVCOptions {
   fit_intercept?: boolean
 
   /**
-    When self.fit\_intercept is True, instance vector x becomes `\[x, self.intercept\_scaling\]`, i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
+    When self.fit\_intercept is `true`, instance vector x becomes `\[x, self.intercept\_scaling\]`, i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
 
     @defaultValue `1`
    */

@@ -268,7 +268,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set to `None`. Refer to the `best\_validation\_score\_` fitted attribute instead. Only accessible when solver=’sgd’ or ‘adam’.
+    The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set to `undefined`. Refer to the `best\_validation\_score\_` fitted attribute instead. Only accessible when solver=’sgd’ or ‘adam’.
    */
   get best_loss_(): Promise<number> {
     if (this._isDisposed) {
@@ -318,7 +318,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    The score at each iteration on a held-out validation set. The score reported is the R2 score. Only available if `early\_stopping=True`, otherwise the attribute is set to `None`. Only accessible when solver=’sgd’ or ‘adam’.
+    The score at each iteration on a held-out validation set. The score reported is the R2 score. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`. Only accessible when solver=’sgd’ or ‘adam’.
    */
   get validation_scores_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -343,7 +343,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    The best validation score (i.e. R2 score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `None`. Only accessible when solver=’sgd’ or ‘adam’.
+    The best validation score (i.e. R2 score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`. Only accessible when solver=’sgd’ or ‘adam’.
    */
   get best_validation_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -676,7 +676,7 @@ export interface MLPRegressorOptions {
   verbose?: boolean
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -697,14 +697,14 @@ export interface MLPRegressorOptions {
   nesterovs_momentum?: boolean
 
   /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to True, it will automatically set aside `validation\_fraction` of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs. Only effective when solver=’sgd’ or ‘adam’.
+    Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside `validation\_fraction` of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs. Only effective when solver=’sgd’ or ‘adam’.
 
     @defaultValue `false`
    */
   early_stopping?: boolean
 
   /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is True.
+    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
 
     @defaultValue `0.1`
    */

@@ -125,7 +125,7 @@ ctor_BayesianGaussianMixture = {k: v for k, v in ctor_BayesianGaussianMixture.it
   /**
     Estimate model parameters with the EM algorithm.
 
-    The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `True`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
+    The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `true`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
    */
   async fit(opts: BayesianGaussianMixtureFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -491,7 +491,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    True when convergence was reached in fit(), False otherwise.
+    True when convergence was reached in fit(), `false` otherwise.
    */
   get converged_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -626,7 +626,7 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
   }
 
   /**
-    The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. If mean\_precision\_prior is set to None, `mean\_precision\_prior\_` is set to 1.
+    The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. If mean\_precision\_prior is set to `undefined`, `mean\_precision\_prior\_` is set to 1.
    */
   get mean_precision_prior_(): Promise<number> {
     if (this._isDisposed) {
@@ -902,27 +902,27 @@ export interface BayesianGaussianMixtureOptions {
     | 'dirichlet_distribution'
 
   /**
-    The dirichlet concentration of each component on the weight distribution (Dirichlet). This is commonly called gamma in the literature. The higher concentration puts more mass in the center and will lead to more components being active, while a lower concentration parameter will lead to more mass at the edge of the mixture weights simplex. The value of the parameter must be greater than 0. If it is None, it’s set to `1. / n\_components`.
+    The dirichlet concentration of each component on the weight distribution (Dirichlet). This is commonly called gamma in the literature. The higher concentration puts more mass in the center and will lead to more components being active, while a lower concentration parameter will lead to more mass at the edge of the mixture weights simplex. The value of the parameter must be greater than 0. If it is `undefined`, it’s set to `1. / n\_components`.
    */
   weight_concentration_prior?: number
 
   /**
-    The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. The value of the parameter must be greater than 0. If it is None, it is set to 1.
+    The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. The value of the parameter must be greater than 0. If it is `undefined`, it is set to 1.
    */
   mean_precision_prior?: number
 
   /**
-    The prior on the mean distribution (Gaussian). If it is None, it is set to the mean of X.
+    The prior on the mean distribution (Gaussian). If it is `undefined`, it is set to the mean of X.
    */
   mean_prior?: ArrayLike
 
   /**
-    The prior of the number of degrees of freedom on the covariance distributions (Wishart). If it is None, it’s set to `n\_features`.
+    The prior of the number of degrees of freedom on the covariance distributions (Wishart). If it is `undefined`, it’s set to `n\_features`.
    */
   degrees_of_freedom_prior?: number
 
   /**
-    The prior on the covariance distribution (Wishart). If it is None, the emiprical covariance prior is initialized using the covariance of X. The shape depends on `covariance\_type`:
+    The prior on the covariance distribution (Wishart). If it is `undefined`, the emiprical covariance prior is initialized using the covariance of X. The shape depends on `covariance\_type`:
    */
   covariance_prior?: number | ArrayLike
 
@@ -932,7 +932,7 @@ export interface BayesianGaussianMixtureOptions {
   random_state?: number
 
   /**
-    If ‘warm\_start’ is True, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. See [the Glossary](../../glossary.html#term-warm_start).
+    If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */

@@ -284,7 +284,7 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
   }
 
   /**
-    The number of non-zero coefficients in the solution. If `n\_nonzero\_coefs` is None and `tol` is None this value is either set to 10% of `n\_features` or 1, whichever is greater.
+    The number of non-zero coefficients in the solution. If `n\_nonzero\_coefs` is `undefined` and `tol` is `undefined` this value is either set to 10% of `n\_features` or 1, whichever is greater.
    */
   get n_nonzero_coefs_(): Promise<number> {
     if (this._isDisposed) {
@@ -367,12 +367,12 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
 
 export interface OrthogonalMatchingPursuitOptions {
   /**
-    Desired number of non-zero entries in the solution. If None (by default) this value is set to 10% of n\_features.
+    Desired number of non-zero entries in the solution. If `undefined` (by default) this value is set to 10% of n\_features.
    */
   n_nonzero_coefs?: number
 
   /**
-    Maximum norm of the residual. If not None, overrides n\_nonzero\_coefs.
+    Maximum norm of the residual. If not `undefined`, overrides n\_nonzero\_coefs.
    */
   tol?: number
 
@@ -384,7 +384,7 @@ export interface OrthogonalMatchingPursuitOptions {
   fit_intercept?: boolean
 
   /**
-    This parameter is ignored when `fit\_intercept` is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
+    This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
 
     @defaultValue `false`
    */

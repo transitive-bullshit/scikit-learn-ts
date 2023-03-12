@@ -403,7 +403,7 @@ export interface ColumnTransformerOptions {
   sparse_threshold?: number
 
   /**
-    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -413,14 +413,14 @@ export interface ColumnTransformerOptions {
   transformer_weights?: any
 
   /**
-    If True, the time elapsed while fitting each transformer will be printed as it is completed.
+    If `true`, the time elapsed while fitting each transformer will be printed as it is completed.
 
     @defaultValue `false`
    */
   verbose?: boolean
 
   /**
-    If True, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If False, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
+    If `true`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
 
     @defaultValue `true`
    */

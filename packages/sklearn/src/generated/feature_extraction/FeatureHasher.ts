@@ -246,7 +246,7 @@ export interface FeatureHasherOptions {
   dtype?: any
 
   /**
-    When True, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
+    When `true`, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
 
     @defaultValue `true`
    */
@@ -272,7 +272,7 @@ export interface FeatureHasherFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

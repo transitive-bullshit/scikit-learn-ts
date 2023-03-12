@@ -478,7 +478,7 @@ export interface RadiusNeighborsRegressorOptions {
   metric_params?: any
 
   /**
-    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -521,7 +521,7 @@ export interface RadiusNeighborsRegressorRadiusNeighborsOptions {
   return_distance?: boolean
 
   /**
-    If True, the distances and indices will be sorted by increasing distances before being returned. If False, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
+    If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
 
     @defaultValue `false`
    */
@@ -547,7 +547,7 @@ export interface RadiusNeighborsRegressorRadiusNeighborsGraphOptions {
   mode?: 'connectivity' | 'distance'
 
   /**
-    If True, in each row of the result, the non-zero entries will be sorted by increasing distances. If False, the non-zero entries may not be sorted. Only used with mode=’distance’.
+    If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.
 
     @defaultValue `false`
    */

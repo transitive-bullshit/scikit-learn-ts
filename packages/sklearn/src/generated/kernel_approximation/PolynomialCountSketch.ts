@@ -431,7 +431,7 @@ export interface PolynomialCountSketchFitOptions {
   X?: ArrayLike | SparseMatrix[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 }
@@ -443,7 +443,7 @@ export interface PolynomialCountSketchFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

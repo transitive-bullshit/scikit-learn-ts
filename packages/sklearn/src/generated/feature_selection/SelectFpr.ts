@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Filter: Select the pvalues below alpha based on a FPR test.
 
-  FPR test stands for False Positive Rate test. It controls the total amount of false detections.
+  FPR test stands for `false` Positive Rate test. It controls the total amount of false detections.
 
   Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
 
@@ -436,7 +436,7 @@ export interface SelectFprFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -455,7 +455,7 @@ export interface SelectFprGetFeatureNamesOutOptions {
 
 export interface SelectFprGetSupportOptions {
   /**
-    If True, the return value will be an array of integers, rather than a boolean mask.
+    If `true`, the return value will be an array of integers, rather than a boolean mask.
 
     @defaultValue `false`
    */

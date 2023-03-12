@@ -371,7 +371,7 @@ pms_GenericUnivariateSelect_transform = {k: v for k, v in pms_GenericUnivariateS
   }
 
   /**
-    p-values of feature scores, None if `score\_func` returned scores only.
+    p-values of feature scores, `undefined` if `score\_func` returned scores only.
    */
   get pvalues_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -492,7 +492,7 @@ export interface GenericUnivariateSelectFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -511,7 +511,7 @@ export interface GenericUnivariateSelectGetFeatureNamesOutOptions {
 
 export interface GenericUnivariateSelectGetSupportOptions {
   /**
-    If True, the return value will be an array of integers, rather than a boolean mask.
+    If `true`, the return value will be an array of integers, rather than a boolean mask.
 
     @defaultValue `false`
    */

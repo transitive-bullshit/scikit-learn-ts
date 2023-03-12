@@ -285,7 +285,7 @@ pms_ConfusionMatrixDisplay_plot = {k: v for k, v in pms_ConfusionMatrixDisplay_p
   }
 
   /**
-    Array of matplotlib axes. `None` if `include\_values` is false.
+    Array of matplotlib axes. `undefined` if `include\_values` is false.
    */
   get text_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -373,7 +373,7 @@ export interface ConfusionMatrixDisplayOptions {
   confusion_matrix?: NDArray[]
 
   /**
-    Display labels for plot. If None, display labels are set from 0 to `n\_classes \- 1`.
+    Display labels for plot. If `undefined`, display labels are set from 0 to `n\_classes \- 1`.
    */
   display_labels?: NDArray
 }
@@ -395,7 +395,7 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   y?: ArrayLike
 
   /**
-    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `None` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
+    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
    */
   labels?: ArrayLike
 
@@ -429,7 +429,7 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   xticks_rotation?: 'vertical' | 'horizontal' | number
 
   /**
-    Format specification for values in confusion matrix. If `None`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+    Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
    */
   values_format?: string
 
@@ -441,7 +441,7 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   cmap?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -475,7 +475,7 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   y_pred?: ArrayLike
 
   /**
-    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `None` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
+    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
    */
   labels?: ArrayLike
 
@@ -509,7 +509,7 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   xticks_rotation?: 'vertical' | 'horizontal' | number
 
   /**
-    Format specification for values in confusion matrix. If `None`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+    Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
    */
   values_format?: string
 
@@ -521,7 +521,7 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   cmap?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -566,12 +566,12 @@ export interface ConfusionMatrixDisplayPlotOptions {
   xticks_rotation?: 'vertical' | 'horizontal' | number
 
   /**
-    Format specification for values in confusion matrix. If `None`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+    Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
    */
   values_format?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 

@@ -228,7 +228,7 @@ export interface CompoundKernelCallOptions {
   X?: ArrayLike[]
 
   /**
-    Right argument of the returned kernel k(X, Y). If None, k(X, X) is evaluated instead.
+    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
    */
   Y?: ArrayLike[]
 

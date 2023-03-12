@@ -451,7 +451,7 @@ pms_LogisticRegressionCV_sparsify = {k: v for k, v in pms_LogisticRegressionCV_s
   /**
     Intercept (a.k.a. bias) added to the decision function.
 
-    If `fit\_intercept` is set to False, the intercept is set to zero. `intercept\_` is of shape(1,) when the problem is binary.
+    If `fit\_intercept` is set to `false`, the intercept is set to zero. `intercept\_` is of shape(1,) when the problem is binary.
    */
   get intercept_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -505,7 +505,7 @@ pms_LogisticRegressionCV_sparsify = {k: v for k, v in pms_LogisticRegressionCV_s
   }
 
   /**
-    Array of l1\_ratios used for cross-validation. If no l1\_ratio is used (i.e. penalty is not ‘elasticnet’), this is set to `\[None\]`
+    Array of l1\_ratios used for cross-validation. If no l1\_ratio is used (i.e. penalty is not ‘elasticnet’), this is set to `\[`undefined`\]`
    */
   get l1_ratios_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -586,7 +586,7 @@ pms_LogisticRegressionCV_sparsify = {k: v for k, v in pms_LogisticRegressionCV_s
   }
 
   /**
-    Array of C that maps to the best scores across every class. If refit is set to False, then for each class, the best C is the average of the C’s that correspond to the best scores for each fold. `C\_` is of shape(n\_classes,) when the problem is binary.
+    Array of C that maps to the best scores across every class. If refit is set to `false`, then for each class, the best C is the average of the C’s that correspond to the best scores for each fold. `C\_` is of shape(n\_classes,) when the problem is binary.
    */
   get C_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -613,7 +613,7 @@ pms_LogisticRegressionCV_sparsify = {k: v for k, v in pms_LogisticRegressionCV_s
   }
 
   /**
-    Array of l1\_ratio that maps to the best scores across every class. If refit is set to False, then for each class, the best l1\_ratio is the average of the l1\_ratio’s that correspond to the best scores for each fold. `l1\_ratio\_` is of shape(n\_classes,) when the problem is binary.
+    Array of l1\_ratio that maps to the best scores across every class. If refit is set to `false`, then for each class, the best l1\_ratio is the average of the l1\_ratio’s that correspond to the best scores for each fold. `l1\_ratio\_` is of shape(n\_classes,) when the problem is binary.
    */
   get l1_ratio_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -742,7 +742,7 @@ export interface LogisticRegressionCVOptions {
   cv?: number
 
   /**
-    Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=False when n\_samples > n\_features.
+    Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n\_samples > n\_features.
 
     @defaultValue `false`
    */
@@ -797,7 +797,7 @@ export interface LogisticRegressionCVOptions {
   class_weight?: any | 'balanced'
 
   /**
-    Number of CPU cores used during the cross-validation loop. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of CPU cores used during the cross-validation loop. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -809,14 +809,14 @@ export interface LogisticRegressionCVOptions {
   verbose?: number
 
   /**
-    If set to True, the scores are averaged across all folds, and the coefs and the C that corresponds to the best score is taken, and a final refit is done using these parameters. Otherwise the coefs, intercepts and C that correspond to the best scores across folds are averaged.
+    If set to `true`, the scores are averaged across all folds, and the coefs and the C that corresponds to the best score is taken, and a final refit is done using these parameters. Otherwise the coefs, intercepts and C that correspond to the best scores across folds are averaged.
 
     @defaultValue `true`
    */
   refit?: boolean
 
   /**
-    Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to True. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
+    Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to `true`. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
 
     Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
 

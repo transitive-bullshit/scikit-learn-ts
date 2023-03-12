@@ -518,7 +518,7 @@ export interface TfidfVectorizerOptions {
   decode_error?: 'strict' | 'ignore' | 'replace'
 
   /**
-    Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. None (default) does nothing.
+    Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. `undefined` (default) does nothing.
 
     Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
    */
@@ -555,7 +555,7 @@ export interface TfidfVectorizerOptions {
 
     If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
 
-    If None, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
+    If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
    */
   stop_words?: 'english' | any[]
 
@@ -572,23 +572,23 @@ export interface TfidfVectorizerOptions {
   ngram_range?: any
 
   /**
-    When building the vocabulary ignore terms that have a document frequency strictly higher than the given threshold (corpus-specific stop words). If float in range \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not None.
+    When building the vocabulary ignore terms that have a document frequency strictly higher than the given threshold (corpus-specific stop words). If float in range \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
 
     @defaultValue `1`
    */
   max_df?: number
 
   /**
-    When building the vocabulary ignore terms that have a document frequency strictly lower than the given threshold. This value is also called cut-off in the literature. If float in range of \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not None.
+    When building the vocabulary ignore terms that have a document frequency strictly lower than the given threshold. This value is also called cut-off in the literature. If float in range of \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
 
     @defaultValue `1`
    */
   min_df?: number
 
   /**
-    If not None, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
+    If not `undefined`, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
 
-    This parameter is ignored if vocabulary is not None.
+    This parameter is ignored if vocabulary is not `undefined`.
    */
   max_features?: number
 
@@ -598,7 +598,7 @@ export interface TfidfVectorizerOptions {
   vocabulary?: any
 
   /**
-    If True, all non-zero term counts are set to 1. This does not mean outputs will have only 0/1 values, only that the tf term in tf-idf is binary. (Set idf and normalization to False to get 0/1 outputs).
+    If `true`, all non-zero term counts are set to 1. This does not mean outputs will have only 0/1 values, only that the tf term in tf-idf is binary. (Set idf and normalization to `false` to get 0/1 outputs).
 
     @defaultValue `false`
    */
@@ -617,7 +617,7 @@ export interface TfidfVectorizerOptions {
   norm?: 'l1' | 'l2'
 
   /**
-    Enable inverse-document-frequency reweighting. If False, idf(t) = 1.
+    Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
     @defaultValue `true`
    */

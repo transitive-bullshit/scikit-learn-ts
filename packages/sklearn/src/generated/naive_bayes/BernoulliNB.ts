@@ -507,21 +507,21 @@ pms_BernoulliNB_score = {k: v for k, v in pms_BernoulliNB_score.items() if v is 
 
 export interface BernoulliNBOptions {
   /**
-    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=True, for no smoothing).
+    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`true`, for no smoothing).
 
     @defaultValue `1`
    */
   alpha?: number | ArrayLike
 
   /**
-    If False and alpha is less than 1e-10, it will set alpha to 1e-10. If True, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
+    If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
 
     @defaultValue `false`
    */
   force_alpha?: boolean
 
   /**
-    Threshold for binarizing (mapping to booleans) of sample features. If None, input is presumed to already consist of binary vectors.
+    Threshold for binarizing (mapping to booleans) of sample features. If `undefined`, input is presumed to already consist of binary vectors.
 
     @defaultValue `0`
    */

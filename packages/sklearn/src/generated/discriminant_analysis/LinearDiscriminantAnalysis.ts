@@ -528,7 +528,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Weighted within-class covariance matrix. It corresponds to `sum\_k prior\_k \* C\_k` where `C\_k` is the covariance matrix of the samples in class `k`. The `C\_k` are estimated using the (potentially shrunk) biased estimator of covariance. If solver is ‘svd’, only exists when `store\_covariance` is True.
+    Weighted within-class covariance matrix. It corresponds to `sum\_k prior\_k \* C\_k` where `C\_k` is the covariance matrix of the samples in class `k`. The `C\_k` are estimated using the (potentially shrunk) biased estimator of covariance. If solver is ‘svd’, only exists when `store\_covariance` is `true`.
    */
   get covariance_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -790,12 +790,12 @@ export interface LinearDiscriminantAnalysisOptions {
   priors?: ArrayLike
 
   /**
-    Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If None, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
+    Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If `undefined`, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
    */
   n_components?: number
 
   /**
-    If True, explicitly compute the weighted within-class covariance matrix when solver is ‘svd’. The matrix is always computed and stored for the other solvers.
+    If `true`, explicitly compute the weighted within-class covariance matrix when solver is ‘svd’. The matrix is always computed and stored for the other solvers.
 
     @defaultValue `false`
    */
@@ -809,9 +809,9 @@ export interface LinearDiscriminantAnalysisOptions {
   tol?: number
 
   /**
-    If not None, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../classes.html#module-sklearn.covariance "sklearn.covariance"). if None the shrinkage parameter drives the estimate.
+    If not `undefined`, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../classes.html#module-sklearn.covariance "sklearn.covariance"). if `undefined` the shrinkage parameter drives the estimate.
 
-    This should be left to None if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
+    This should be left to `undefined` if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
    */
   covariance_estimator?: any
 }
@@ -842,7 +842,7 @@ export interface LinearDiscriminantAnalysisFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

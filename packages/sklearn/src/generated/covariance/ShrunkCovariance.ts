@@ -314,7 +314,7 @@ pms_ShrunkCovariance_score = {k: v for k, v in pms_ShrunkCovariance_score.items(
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store\_precision is True)
+    Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -404,7 +404,7 @@ export interface ShrunkCovarianceOptions {
   store_precision?: boolean
 
   /**
-    If True, data will not be centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If False, data will be centered before computation.
+    If `true`, data will not be centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data will be centered before computation.
 
     @defaultValue `false`
    */
@@ -432,14 +432,14 @@ export interface ShrunkCovarianceErrorNormOptions {
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
+    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */
   scaling?: boolean
 
   /**
-    Whether to compute the squared error norm or the error norm. If True (default), the squared error norm is returned. If False, the error norm is returned.
+    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
 
     @defaultValue `true`
    */

@@ -684,7 +684,7 @@ export interface PLSRegressionOptions {
   tol?: number
 
   /**
-    Whether to copy `X` and `Y` in [fit](../../glossary.html#term-fit) before applying centering, and potentially scaling. If `False`, these operations will be done inplace, modifying both arrays.
+    Whether to copy `X` and `Y` in [fit](../../glossary.html#term-fit) before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
 
     @defaultValue `true`
    */

@@ -487,7 +487,7 @@ export interface ARDRegressionOptions {
   lambda_2?: number
 
   /**
-    If True, compute the objective function at each step of the model.
+    If `true`, compute the objective function at each step of the model.
 
     @defaultValue `false`
    */
@@ -508,7 +508,7 @@ export interface ARDRegressionOptions {
   fit_intercept?: boolean
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */

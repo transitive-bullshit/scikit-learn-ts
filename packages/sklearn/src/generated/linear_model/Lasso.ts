@@ -397,21 +397,21 @@ export interface LassoOptions {
   alpha?: number
 
   /**
-    Whether to calculate the intercept for this model. If set to False, no intercept will be used in calculations (i.e. data is expected to be centered).
+    Whether to calculate the intercept for this model. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
 
     @defaultValue `true`
    */
   fit_intercept?: boolean
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. The Gram matrix can also be passed as argument. For sparse input this option is always `False` to preserve sparsity.
+    Whether to use a precomputed Gram matrix to speed up calculations. The Gram matrix can also be passed as argument. For sparse input this option is always `false` to preserve sparsity.
 
     @defaultValue `false`
    */
   precompute?: boolean | ArrayLike[]
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -432,14 +432,14 @@ export interface LassoOptions {
   tol?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    When set to `True`, forces the coefficients to be positive.
+    When set to `true`, forces the coefficients to be positive.
 
     @defaultValue `false`
    */
@@ -515,7 +515,7 @@ export interface LassoPathOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If None alphas are set automatically.
+    List of alphas where to compute the models. If `undefined` alphas are set automatically.
    */
   alphas?: NDArray
 
@@ -532,7 +532,7 @@ export interface LassoPathOptions {
   Xy?: ArrayLike
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -558,14 +558,14 @@ export interface LassoPathOptions {
   return_n_iter?: boolean
 
   /**
-    If set to True, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
+    If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
 
     @defaultValue `false`
    */
   positive?: boolean
 
   /**
-    If set to False, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
+    If set to `false`, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
 
     @defaultValue `true`
    */

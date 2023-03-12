@@ -111,7 +111,7 @@ ctor_LocalOutlierFactor = {k: v for k, v in ctor_LocalOutlierFactor.items() if v
 
     Bigger is better, i.e. large values correspond to inliers.
 
-    **Only available for novelty detection (when novelty is set to True).** The shift offset allows a zero threshold for being an outlier. The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point.
+    **Only available for novelty detection (when novelty is set to `true`).** The shift offset allows a zero threshold for being an outlier. The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point.
    */
   async decision_function(
     opts: LocalOutlierFactorDecisionFunctionOptions
@@ -178,7 +178,7 @@ pms_LocalOutlierFactor_fit = {k: v for k, v in pms_LocalOutlierFactor_fit.items(
   /**
     Fit the model to the training set X and return the labels.
 
-    **Not available for novelty detection (when novelty is set to True).** Label is 1 for an inlier and -1 for an outlier according to the LOF score and the contamination parameter.
+    **Not available for novelty detection (when novelty is set to `true`).** Label is 1 for an inlier and -1 for an outlier according to the LOF score and the contamination parameter.
    */
   async fit_predict(
     opts: LocalOutlierFactorFitPredictOptions
@@ -287,7 +287,7 @@ pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFact
   /**
     Predict the labels (1 inlier, -1 outlier) of X according to LOF.
 
-    **Only available for novelty detection (when novelty is set to True).** This method allows to generalize prediction to *new observations* (not in the training set). Note that the result of `clf.fit(X)` then `clf.predict(X)` with `novelty=True` may differ from the result obtained by `clf.fit\_predict(X)` with `novelty=False`.
+    **Only available for novelty detection (when novelty is set to `true`).** This method allows to generalize prediction to *new observations* (not in the training set). Note that the result of `clf.fit(X)` then `clf.predict(X)` with `novelty=True` may differ from the result obtained by `clf.fit\_predict(X)` with `novelty=False`.
    */
   async predict(opts: LocalOutlierFactorPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -321,7 +321,7 @@ pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predic
 
     It is the opposite as bigger is better, i.e. large values correspond to inliers.
 
-    **Only available for novelty detection (when novelty is set to True).** The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point. Because of this, the scores obtained via `score\_samples` may differ from the standard LOF scores. The standard LOF scores for the training data is available via the `negative\_outlier\_factor\_` attribute.
+    **Only available for novelty detection (when novelty is set to `true`).** The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point. Because of this, the scores obtained via `score\_samples` may differ from the standard LOF scores. The standard LOF scores for the training data is available via the `negative\_outlier\_factor\_` attribute.
    */
   async score_samples(
     opts: LocalOutlierFactorScoreSamplesOptions
@@ -626,14 +626,14 @@ export interface LocalOutlierFactorOptions {
   contamination?: 'auto' | number
 
   /**
-    By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=False). Set novelty to True if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision\_function and score\_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
+    By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=`false`). Set novelty to `true` if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision\_function and score\_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
 
     @defaultValue `false`
    */
   novelty?: boolean
 
   /**
-    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }

@@ -177,7 +177,7 @@ pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v
   /**
     Estimate model parameters with the EM algorithm.
 
-    The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `True`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
+    The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `true`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
    */
   async fit(opts: GaussianMixtureFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -500,7 +500,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    True when convergence was reached in fit(), False otherwise.
+    True when convergence was reached in fit(), `false` otherwise.
    */
   get converged_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -676,17 +676,17 @@ export interface GaussianMixtureOptions {
   init_params?: 'kmeans' | 'k-means++' | 'random' | 'random_from_data'
 
   /**
-    The user-provided initial weights. If it is None, weights are initialized using the `init\_params` method.
+    The user-provided initial weights. If it is `undefined`, weights are initialized using the `init\_params` method.
    */
   weights_init?: ArrayLike
 
   /**
-    The user-provided initial means, If it is None, means are initialized using the `init\_params` method.
+    The user-provided initial means, If it is `undefined`, means are initialized using the `init\_params` method.
    */
   means_init?: ArrayLike[]
 
   /**
-    The user-provided initial precisions (inverse of the covariance matrices). If it is None, precisions are initialized using the ‘init\_params’ method. The shape depends on ‘covariance\_type’:
+    The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init\_params’ method. The shape depends on ‘covariance\_type’:
    */
   precisions_init?: ArrayLike
 
@@ -696,7 +696,7 @@ export interface GaussianMixtureOptions {
   random_state?: number
 
   /**
-    If ‘warm\_start’ is True, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n\_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](../../glossary.html#term-warm_start).
+    If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n\_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */

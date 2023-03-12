@@ -257,7 +257,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Boolean mask of inliers classified as `True`.
+    Boolean mask of inliers classified as `true`.
    */
   get inlier_mask_(): Promise<any> {
     if (this._isDisposed) {
@@ -424,12 +424,12 @@ export interface RANSACRegressorOptions {
   residual_threshold?: number
 
   /**
-    This function is called with the randomly selected data before the model is fitted to it: `is\_data\_valid(X, y)`. If its return value is False the current randomly chosen sub-sample is skipped.
+    This function is called with the randomly selected data before the model is fitted to it: `is\_data\_valid(X, y)`. If its return value is `false` the current randomly chosen sub-sample is skipped.
    */
   is_data_valid?: any
 
   /**
-    This function is called with the estimated model and the randomly selected data: `is\_model\_valid(model, X, y)`. If its return value is False the current randomly chosen sub-sample is skipped. Rejecting samples with this function is computationally costlier than with `is\_data\_valid`. `is\_model\_valid` should therefore only be used if the estimated model is needed for making the rejection decision.
+    This function is called with the estimated model and the randomly selected data: `is\_model\_valid(model, X, y)`. If its return value is `false` the current randomly chosen sub-sample is skipped. Rejecting samples with this function is computationally costlier than with `is\_data\_valid`. `is\_model\_valid` should therefore only be used if the estimated model is needed for making the rejection decision.
    */
   is_model_valid?: any
 

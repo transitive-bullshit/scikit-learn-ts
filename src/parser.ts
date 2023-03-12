@@ -188,14 +188,15 @@ export function parseDesc(
     const md = html2md($p.html())
     const text = md
       .replaceAll(/\n/g, ' ')
-      // .replaceAll(/\bTrue\b/g, 'true')
-      // .replaceAll(/\bFalse\b/g, 'false')
-      // .replaceAll(/\b`None`\b/g, '`undefined`')
-      // .replaceAll(/\b([^`])None([^`])\b/g, '$1undefined$2')
       .trim()
-    // if (text.toLowerCase().includes('read more in the user guide')) {
-    //   break
-    // }
+      .replaceAll(/`True`/g, '`true`')
+      .replaceAll(/([^`\w])True([^`\w])/g, '$1`true`$2')
+      .replaceAll(/`False`/g, '`false`')
+      .replaceAll(/([^`\w])False([^`\w])/g, '$1`false`$2')
+      .replaceAll(/`None`/g, '`undefined`')
+      .replaceAll(/([^`\w])None([^`\w])/g, '$1`undefined`$2')
+      // .replaceAll(/\b`(\w)+)=()`\b/g, '`$1: $2`')
+      .trim()
     desc += text + '\n\n'
     $p = $p.next()
   }

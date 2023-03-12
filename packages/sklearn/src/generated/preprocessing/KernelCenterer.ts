@@ -297,7 +297,7 @@ export interface KernelCentererFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -328,7 +328,7 @@ export interface KernelCentererTransformOptions {
   K?: NDArray[]
 
   /**
-    Set to False to perform inplace computation.
+    Set to `false` to perform inplace computation.
 
     @defaultValue `true`
    */

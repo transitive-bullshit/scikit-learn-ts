@@ -446,7 +446,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Indicator used to add binary indicators for missing values. `None` if `add\_indicator=False`.
+    Indicator used to add binary indicators for missing values. `undefined` if `add\_indicator=False`.
    */
   get indicator_(): Promise<any> {
     if (this._isDisposed) {
@@ -512,7 +512,7 @@ export interface IterativeImputerOptions {
   missing_values?: number
 
   /**
-    Whether to sample from the (Gaussian) predictive posterior of the fitted estimator for each imputation. Estimator must support `return\_std` in its `predict` method if set to `True`. Set to `True` if using `IterativeImputer` for multiple imputations.
+    Whether to sample from the (Gaussian) predictive posterior of the fitted estimator for each imputation. Estimator must support `return\_std` in its `predict` method if set to `true`. Set to `true` if using `IterativeImputer` for multiple imputations.
 
     @defaultValue `false`
    */
@@ -533,7 +533,7 @@ export interface IterativeImputerOptions {
   tol?: number
 
   /**
-    Number of other features to use to estimate the missing values of each feature column. Nearness between features is measured using the absolute correlation coefficient between each feature pair (after initial imputation). To ensure coverage of features throughout the imputation process, the neighbor features are not necessarily nearest, but are drawn with probability proportional to correlation for each imputed target feature. Can provide significant speed-up when the number of features is huge. If `None`, all features will be used.
+    Number of other features to use to estimate the missing values of each feature column. Nearness between features is measured using the absolute correlation coefficient between each feature pair (after initial imputation). To ensure coverage of features throughout the imputation process, the neighbor features are not necessarily nearest, but are drawn with probability proportional to correlation for each imputed target feature. Can provide significant speed-up when the number of features is huge. If `undefined`, all features will be used.
    */
   n_nearest_features?: number
 
@@ -552,7 +552,7 @@ export interface IterativeImputerOptions {
   imputation_order?: 'ascending' | 'descending' | 'roman' | 'arabic' | 'random'
 
   /**
-    If `True` then features with missing values during [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") which did not have any missing values during [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") will be imputed with the initial imputation method only. Set to `True` if you have many features with no missing values at both [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") and [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") time to save compute.
+    If `true` then features with missing values during [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") which did not have any missing values during [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") will be imputed with the initial imputation method only. Set to `true` if you have many features with no missing values at both [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") and [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") time to save compute.
 
     @defaultValue `false`
    */
@@ -576,19 +576,19 @@ export interface IterativeImputerOptions {
   verbose?: number
 
   /**
-    The seed of the pseudo random number generator to use. Randomizes selection of estimator features if `n\_nearest\_features` is not `None`, the `imputation\_order` if `random`, and the sampling from posterior if `sample\_posterior=True`. Use an integer for determinism. See [the Glossary](../../glossary.html#term-random_state).
+    The seed of the pseudo random number generator to use. Randomizes selection of estimator features if `n\_nearest\_features` is not `undefined`, the `imputation\_order` if `random`, and the sampling from posterior if `sample\_posterior=True`. Use an integer for determinism. See [the Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    If `True`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+    If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
 
     @defaultValue `false`
    */
   add_indicator?: boolean
 
   /**
-    If True, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `initial\_strategy="constant"` in which case `fill\_value` will be used instead.
+    If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `initial\_strategy="constant"` in which case `fill\_value` will be used instead.
 
     @defaultValue `false`
    */

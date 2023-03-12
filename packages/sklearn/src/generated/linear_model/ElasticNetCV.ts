@@ -522,7 +522,7 @@ export interface ElasticNetCVOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If None alphas are set automatically.
+    List of alphas where to compute the models. If `undefined` alphas are set automatically.
    */
   alphas?: ArrayLike
 
@@ -560,7 +560,7 @@ export interface ElasticNetCVOptions {
   cv?: number
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -574,12 +574,12 @@ export interface ElasticNetCVOptions {
   verbose?: boolean | number
 
   /**
-    Number of CPUs to use during the cross validation. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    When set to `True`, forces the coefficients to be positive.
+    When set to `true`, forces the coefficients to be positive.
 
     @defaultValue `false`
    */
@@ -648,7 +648,7 @@ export interface ElasticNetCVPathOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If None alphas are set automatically.
+    List of alphas where to compute the models. If `undefined` alphas are set automatically.
    */
   alphas?: NDArray
 
@@ -665,7 +665,7 @@ export interface ElasticNetCVPathOptions {
   Xy?: ArrayLike
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -691,14 +691,14 @@ export interface ElasticNetCVPathOptions {
   return_n_iter?: boolean
 
   /**
-    If set to True, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
+    If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
 
     @defaultValue `false`
    */
   positive?: boolean
 
   /**
-    If set to False, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
+    If set to `false`, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
 
     @defaultValue `true`
    */

@@ -334,17 +334,17 @@ export interface DecisionBoundaryDisplayFromEstimatorOptions {
   response_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
 
   /**
-    The label used for the x-axis. If `None`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
+    The label used for the x-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
    */
   xlabel?: string
 
   /**
-    The label used for the y-axis. If `None`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
+    The label used for the y-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
    */
   ylabel?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -363,7 +363,7 @@ export interface DecisionBoundaryDisplayPlotOptions {
   plot_method?: 'contourf' | 'contour' | 'pcolormesh'
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 

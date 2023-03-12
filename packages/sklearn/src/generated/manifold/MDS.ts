@@ -311,7 +311,7 @@ export interface MDSOptions {
   n_components?: number
 
   /**
-    If `True`, perform metric MDS; otherwise, perform nonmetric MDS. When `False` (i.e. non-metric MDS), dissimilarities with 0 are considered as missing values.
+    If `true`, perform metric MDS; otherwise, perform nonmetric MDS. When `false` (i.e. non-metric MDS), dissimilarities with 0 are considered as missing values.
 
     @defaultValue `true`
    */
@@ -348,7 +348,7 @@ export interface MDSOptions {
   /**
     The number of jobs to use for the computation. If multiple initializations are used (`n\_init`), each run of the algorithm is computed in parallel.
 
-    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 

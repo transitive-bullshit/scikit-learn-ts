@@ -214,7 +214,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, the `bounding\_ax\_` is the axes where the grid of partial dependence plots are drawn. If `ax` is a list of axes or a numpy array of axes, `bounding\_ax\_` is None.
+    If `ax` is an axes or `undefined`, the `bounding\_ax\_` is the axes where the grid of partial dependence plots are drawn. If `ax` is a list of axes or a numpy array of axes, `bounding\_ax\_` is `undefined`.
    */
   get bounding_ax_(): Promise<any> {
     if (this._isDisposed) {
@@ -241,7 +241,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, `axes\_\[i, j\]` is the axes on the i-th row and j-th column. If `ax` is a list of axes, `axes\_\[i\]` is the i-th item in `ax`. Elements that are None correspond to a nonexisting axes in that position.
+    If `ax` is an axes or `undefined`, `axes\_\[i, j\]` is the axes on the i-th row and j-th column. If `ax` is a list of axes, `axes\_\[i\]` is the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes in that position.
    */
   get axes_(): Promise<any> {
     if (this._isDisposed) {
@@ -268,7 +268,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, `lines\_\[i, j\]` is the partial dependence curve on the i-th row and j-th column. If `ax` is a list of axes, `lines\_\[i\]` is the partial dependence curve corresponding to the i-th item in `ax`. Elements that are None correspond to a nonexisting axes or an axes that does not include a line plot.
+    If `ax` is an axes or `undefined`, `lines\_\[i, j\]` is the partial dependence curve on the i-th row and j-th column. If `ax` is a list of axes, `lines\_\[i\]` is the partial dependence curve corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a line plot.
    */
   get lines_(): Promise<any> {
     if (this._isDisposed) {
@@ -295,7 +295,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, `vlines\_\[i, j\]` is the line collection representing the x axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines\_\[i\]` corresponds to the i-th item in `ax`. Elements that are None correspond to a nonexisting axes or an axes that does not include a PDP plot.
+    If `ax` is an axes or `undefined`, `vlines\_\[i, j\]` is the line collection representing the x axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines\_\[i\]` corresponds to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a PDP plot.
    */
   get deciles_vlines_(): Promise<any> {
     if (this._isDisposed) {
@@ -322,7 +322,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, `vlines\_\[i, j\]` is the line collection representing the y axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines\_\[i\]` corresponds to the i-th item in `ax`. Elements that are None correspond to a nonexisting axes or an axes that does not include a 2-way plot.
+    If `ax` is an axes or `undefined`, `vlines\_\[i, j\]` is the line collection representing the y axis deciles of the i-th row and j-th column. If `ax` is a list of axes, `vlines\_\[i\]` corresponds to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a 2-way plot.
    */
   get deciles_hlines_(): Promise<any> {
     if (this._isDisposed) {
@@ -349,7 +349,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, `contours\_\[i, j\]` is the partial dependence plot on the i-th row and j-th column. If `ax` is a list of axes, `contours\_\[i\]` is the partial dependence plot corresponding to the i-th item in `ax`. Elements that are None correspond to a nonexisting axes or an axes that does not include a contour plot.
+    If `ax` is an axes or `undefined`, `contours\_\[i, j\]` is the partial dependence plot on the i-th row and j-th column. If `ax` is a list of axes, `contours\_\[i\]` is the partial dependence plot corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a contour plot.
    */
   get contours_(): Promise<any> {
     if (this._isDisposed) {
@@ -376,7 +376,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, `bars\_\[i, j\]` is the partial dependence bar plot on the i-th row and j-th column (for a categorical feature). If `ax` is a list of axes, `bars\_\[i\]` is the partial dependence bar plot corresponding to the i-th item in `ax`. Elements that are None correspond to a nonexisting axes or an axes that does not include a bar plot.
+    If `ax` is an axes or `undefined`, `bars\_\[i, j\]` is the partial dependence bar plot on the i-th row and j-th column (for a categorical feature). If `ax` is a list of axes, `bars\_\[i\]` is the partial dependence bar plot corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a bar plot.
    */
   get bars_(): Promise<any> {
     if (this._isDisposed) {
@@ -403,7 +403,7 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
   }
 
   /**
-    If `ax` is an axes or None, `heatmaps\_\[i, j\]` is the partial dependence heatmap on the i-th row and j-th column (for a pair of categorical features) . If `ax` is a list of axes, `heatmaps\_\[i\]` is the partial dependence heatmap corresponding to the i-th item in `ax`. Elements that are None correspond to a nonexisting axes or an axes that does not include a heatmap.
+    If `ax` is an axes or `undefined`, `heatmaps\_\[i, j\]` is the partial dependence heatmap on the i-th row and j-th column (for a pair of categorical features) . If `ax` is a list of axes, `heatmaps\_\[i\]` is the partial dependence heatmap corresponding to the i-th item in `ax`. Elements that are `undefined` correspond to a nonexisting axes or an axes that does not include a heatmap.
    */
   get heatmaps_(): Promise<any> {
     if (this._isDisposed) {
@@ -484,7 +484,7 @@ export interface PartialDependenceDisplayOptions {
   deciles?: any
 
   /**
-    Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `None`, the limit will be inferred from the global minimum and maximum of all predictions.
+    Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined`, the limit will be inferred from the global minimum and maximum of all predictions.
    */
   pdp_lim?: any
 
@@ -505,12 +505,12 @@ export interface PartialDependenceDisplayOptions {
   subsample?: number
 
   /**
-    Controls the randomness of the selected samples when subsamples is not `None`. See [Glossary](../../glossary.html#term-random_state) for details.
+    Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
   /**
-    Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `None`, all features are assumed to be continuous.
+    Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `undefined`, all features are assumed to be continuous.
    */
   is_categorical?: any
 }
@@ -554,7 +554,7 @@ export interface PartialDependenceDisplayFromEstimatorOptions {
   response_method?: 'auto' | 'predict_proba' | 'decision_function'
 
   /**
-    The maximum number of columns in the grid plot. Only active when `ax` is a single axis or `None`.
+    The maximum number of columns in the grid plot. Only active when `ax` is a single axis or `undefined`.
 
     @defaultValue `3`
    */
@@ -582,7 +582,7 @@ export interface PartialDependenceDisplayFromEstimatorOptions {
   /**
     The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.
 
-    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -626,7 +626,7 @@ export interface PartialDependenceDisplayFromEstimatorOptions {
   kind?: 'average' | 'individual' | 'both'
 
   /**
-    If `True`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
+    If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
 
     @defaultValue `false`
    */
@@ -642,7 +642,7 @@ export interface PartialDependenceDisplayFromEstimatorOptions {
   subsample?: number
 
   /**
-    Controls the randomness of the selected samples when subsamples is not `None` and `kind` is either `'both'` or `'individual'`. See [Glossary](../../glossary.html#term-random_state) for details.
+    Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 }
@@ -654,7 +654,7 @@ export interface PartialDependenceDisplayPlotOptions {
   ax?: any
 
   /**
-    The maximum number of columns in the grid plot. Only active when `ax` is a single axes or `None`.
+    The maximum number of columns in the grid plot. Only active when `ax` is a single axes or `undefined`.
 
     @defaultValue `3`
    */
@@ -691,12 +691,12 @@ export interface PartialDependenceDisplayPlotOptions {
   heatmap_kw?: any
 
   /**
-    Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `None` (default), the limit will be inferred from the global minimum and maximum of all predictions.
+    Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined` (default), the limit will be inferred from the global minimum and maximum of all predictions.
    */
   pdp_lim?: any
 
   /**
-    If `True`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
+    If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
 
     @defaultValue `false`
    */

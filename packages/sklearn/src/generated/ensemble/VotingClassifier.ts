@@ -519,24 +519,24 @@ export interface VotingClassifierOptions {
   voting?: 'hard' | 'soft'
 
   /**
-    Sequence of weights (`float` or `int`) to weight the occurrences of predicted class labels (`hard` voting) or class probabilities before averaging (`soft` voting). Uses uniform weights if `None`.
+    Sequence of weights (`float` or `int`) to weight the occurrences of predicted class labels (`hard` voting) or class probabilities before averaging (`soft` voting). Uses uniform weights if `undefined`.
    */
   weights?: ArrayLike
 
   /**
-    The number of jobs to run in parallel for `fit`. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten\_transform=True, transform method returns matrix with shape (n\_samples, n\_classifiers \* n\_classes). If flatten\_transform=False, it returns (n\_classifiers, n\_samples, n\_classes).
+    Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten\_transform=`true`, transform method returns matrix with shape (n\_samples, n\_classifiers \* n\_classes). If flatten\_transform=`false`, it returns (n\_classifiers, n\_samples, n\_classes).
 
     @defaultValue `true`
    */
   flatten_transform?: boolean
 
   /**
-    If True, the time elapsed while fitting will be printed as it is completed.
+    If `true`, the time elapsed while fitting will be printed as it is completed.
 
     @defaultValue `false`
    */
@@ -555,7 +555,7 @@ export interface VotingClassifierFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
    */
   sample_weight?: ArrayLike
 }
@@ -567,7 +567,7 @@ export interface VotingClassifierFitTransformOptions {
   X?: ArrayLike | SparseMatrix[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: NDArray
 

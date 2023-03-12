@@ -325,7 +325,7 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
   }
 
   /**
-    For each class, gives the covariance matrix estimated using the samples of that class. The estimations are unbiased. Only present if `store\_covariance` is True.
+    For each class, gives the covariance matrix estimated using the samples of that class. The estimations are unbiased. Only present if `store\_covariance` is `true`.
    */
   get covariance_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -555,7 +555,7 @@ export interface QuadraticDiscriminantAnalysisOptions {
   reg_param?: number
 
   /**
-    If True, the class covariance matrices are explicitly computed and stored in the `self.covariance\_` attribute.
+    If `true`, the class covariance matrices are explicitly computed and stored in the `self.covariance\_` attribute.
 
     @defaultValue `false`
    */

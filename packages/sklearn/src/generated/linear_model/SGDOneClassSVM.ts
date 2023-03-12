@@ -528,7 +528,7 @@ export interface SGDOneClassSVMOptions {
   nu?: number
 
   /**
-    Whether the intercept should be estimated or not. Defaults to True.
+    Whether the intercept should be estimated or not. Defaults to `true`.
 
     @defaultValue `true`
    */
@@ -542,14 +542,14 @@ export interface SGDOneClassSVMOptions {
   max_iter?: number
 
   /**
-    The stopping criterion. If it is not None, the iterations will stop when (loss > previous\_loss - tol). Defaults to 1e-3.
+    The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol). Defaults to 1e-3.
 
     @defaultValue `0.001`
    */
   tol?: number
 
   /**
-    Whether or not the training data should be shuffled after each epoch. Defaults to True.
+    Whether or not the training data should be shuffled after each epoch. Defaults to `true`.
 
     @defaultValue `true`
    */
@@ -563,7 +563,7 @@ export interface SGDOneClassSVMOptions {
   verbose?: number
 
   /**
-    The seed of the pseudo random number generator to use when shuffling the data. If int, random\_state is the seed used by the random number generator; If RandomState instance, random\_state is the random number generator; If None, the random number generator is the RandomState instance used by `np.random`.
+    The seed of the pseudo random number generator to use when shuffling the data. If int, random\_state is the seed used by the random number generator; If RandomState instance, random\_state is the random number generator; If `undefined`, the random number generator is the RandomState instance used by `np.random`.
    */
   random_state?: number
 
@@ -589,16 +589,16 @@ export interface SGDOneClassSVMOptions {
   power_t?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
-    Repeatedly calling fit or partial\_fit when warm\_start is True can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
+    Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    When set to True, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So `average=10` will begin averaging after seeing 10 samples.
+    When set to `true`, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So `average=10` will begin averaging after seeing 10 samples.
 
     @defaultValue `false`
    */

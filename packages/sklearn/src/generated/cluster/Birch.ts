@@ -537,7 +537,7 @@ export interface BirchOptions {
   compute_labels?: boolean
 
   /**
-    Whether or not to make a copy of the given data. If set to False, the initial data will be overwritten.
+    Whether or not to make a copy of the given data. If set to `false`, the initial data will be overwritten.
 
     @defaultValue `true`
    */
@@ -575,7 +575,7 @@ export interface BirchFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

@@ -555,7 +555,7 @@ export interface KMeansOptions {
   random_state?: number
 
   /**
-    When pre-computing distances it is more numerically accurate to center the data first. If copy\_x is True (default), then the original data is not modified. If False, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy\_x is False. If the original data is sparse, but not in CSR format, a copy will be made even if copy\_x is False.
+    When pre-computing distances it is more numerically accurate to center the data first. If copy\_x is `true` (default), then the original data is not modified. If `false`, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy\_x is `false`. If the original data is sparse, but not in CSR format, a copy will be made even if copy\_x is `false`.
 
     @defaultValue `true`
    */
@@ -583,7 +583,7 @@ export interface KMeansFitOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -600,7 +600,7 @@ export interface KMeansFitPredictOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -617,7 +617,7 @@ export interface KMeansFitTransformOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -636,7 +636,7 @@ export interface KMeansPredictOptions {
   X?: ArrayLike | SparseMatrix[]
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -653,7 +653,7 @@ export interface KMeansScoreOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }

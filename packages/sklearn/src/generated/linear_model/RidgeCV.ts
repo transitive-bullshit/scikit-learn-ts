@@ -371,7 +371,7 @@ export interface RidgeCVOptions {
   fit_intercept?: boolean
 
   /**
-    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If None, the negative mean squared error if cv is ‘auto’ or None (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
+    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If `undefined`, the negative mean squared error if cv is ‘auto’ or `undefined` (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
    */
   scoring?: string
 
@@ -395,7 +395,7 @@ export interface RidgeCVOptions {
   store_cv_values?: boolean
 
   /**
-    Flag indicating whether to optimize the alpha value (picked from the `alphas` parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to `True`, after fitting, the `alpha\_` attribute will contain a value for each target. When set to `False`, a single alpha is used for all targets.
+    Flag indicating whether to optimize the alpha value (picked from the `alphas` parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to `true`, after fitting, the `alpha\_` attribute will contain a value for each target. When set to `false`, a single alpha is used for all targets.
 
     @defaultValue `false`
    */

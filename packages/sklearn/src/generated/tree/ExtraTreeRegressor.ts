@@ -543,7 +543,7 @@ export interface ExtraTreeRegressorOptions {
   splitter?: 'random' | 'best'
 
   /**
-    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+    The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
    */
   max_depth?: number
 
@@ -590,7 +590,7 @@ export interface ExtraTreeRegressorOptions {
   min_impurity_decrease?: number
 
   /**
-    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
@@ -628,7 +628,7 @@ export interface ExtraTreeRegressorCostComplexityPruningPathOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
    */
   sample_weight?: ArrayLike
 }
@@ -659,7 +659,7 @@ export interface ExtraTreeRegressorFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node.
+    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node.
    */
   sample_weight?: ArrayLike
 

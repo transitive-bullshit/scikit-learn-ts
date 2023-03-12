@@ -377,7 +377,7 @@ export interface PoissonRegressorOptions {
   tol?: number
 
   /**
-    If set to `True`, reuse the solution of the previous call to `fit` as initialization for `coef\_` and `intercept\_` .
+    If set to `true`, reuse the solution of the previous call to `fit` as initialization for `coef\_` and `intercept\_` .
 
     @defaultValue `false`
    */

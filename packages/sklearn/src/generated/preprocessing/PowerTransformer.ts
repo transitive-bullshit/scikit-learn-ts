@@ -394,14 +394,14 @@ export interface PowerTransformerOptions {
   method?: 'yeo-johnson' | 'box-cox'
 
   /**
-    Set to True to apply zero-mean, unit-variance normalization to the transformed output.
+    Set to `true` to apply zero-mean, unit-variance normalization to the transformed output.
 
     @defaultValue `true`
    */
   standardize?: boolean
 
   /**
-    Set to False to perform inplace computation during transformation.
+    Set to `false` to perform inplace computation during transformation.
 
     @defaultValue `true`
    */

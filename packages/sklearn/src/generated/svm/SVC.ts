@@ -207,7 +207,7 @@ pms_SVC_predict = {k: v for k, v in pms_SVC_predict.items() if v is not None}`
   /**
     Compute log probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
    */
   async predict_log_proba(opts: SVCPredictLogProbaOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -237,7 +237,7 @@ pms_SVC_predict_log_proba = {k: v for k, v in pms_SVC_predict_log_proba.items() 
   /**
     Compute probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
    */
   async predict_proba(opts: SVCPredictProbaOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -644,7 +644,7 @@ export interface SVCOptions {
   break_ties?: boolean
 
   /**
-    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is False. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }

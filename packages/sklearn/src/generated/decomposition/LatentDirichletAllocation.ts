@@ -596,7 +596,7 @@ pms_LatentDirichletAllocation_transform = {k: v for k, v in pms_LatentDirichletA
   }
 
   /**
-    Prior of document topic distribution `theta`. If the value is None, it is `1 / n\_components`.
+    Prior of document topic distribution `theta`. If the value is `undefined`, it is `1 / n\_components`.
    */
   get doc_topic_prior_(): Promise<number> {
     if (this._isDisposed) {
@@ -650,7 +650,7 @@ pms_LatentDirichletAllocation_transform = {k: v for k, v in pms_LatentDirichletA
   }
 
   /**
-    Prior of topic word distribution `beta`. If the value is None, it is `1 / n\_components`.
+    Prior of topic word distribution `beta`. If the value is `undefined`, it is `1 / n\_components`.
    */
   get topic_word_prior_(): Promise<number> {
     if (this._isDisposed) {
@@ -686,12 +686,12 @@ export interface LatentDirichletAllocationOptions {
   n_components?: number
 
   /**
-    Prior of document topic distribution `theta`. If the value is None, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `alpha`.
+    Prior of document topic distribution `theta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `alpha`.
    */
   doc_topic_prior?: number
 
   /**
-    Prior of topic word distribution `beta`. If the value is None, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `eta`.
+    Prior of topic word distribution `beta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `eta`.
    */
   topic_word_prior?: number
 
@@ -768,7 +768,7 @@ export interface LatentDirichletAllocationOptions {
   max_doc_update_iter?: number
 
   /**
-    The number of jobs to use in the E-step. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -804,7 +804,7 @@ export interface LatentDirichletAllocationFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

@@ -551,7 +551,7 @@ pms_ExtraTreesClassifier_score = {k: v for k, v in pms_ExtraTreesClassifier_scor
   }
 
   /**
-    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is True.
+    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -578,7 +578,7 @@ pms_ExtraTreesClassifier_score = {k: v for k, v in pms_ExtraTreesClassifier_scor
   }
 
   /**
-    Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is True.
+    Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_decision_function_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -621,7 +621,7 @@ export interface ExtraTreesClassifierOptions {
   criterion?: 'gini' | 'entropy' | 'log_loss'
 
   /**
-    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+    The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
    */
   max_depth?: number
 
@@ -654,7 +654,7 @@ export interface ExtraTreesClassifierOptions {
   max_features?: 'sqrt' | 'log2' | number | number
 
   /**
-    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
@@ -668,21 +668,21 @@ export interface ExtraTreesClassifierOptions {
   min_impurity_decrease?: number
 
   /**
-    Whether bootstrap samples are used when building trees. If False, the whole dataset is used to build each tree.
+    Whether bootstrap samples are used when building trees. If `false`, the whole dataset is used to build each tree.
 
     @defaultValue `false`
    */
   bootstrap?: boolean
 
   /**
-    Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=True.
+    Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=`true`.
 
     @defaultValue `false`
    */
   oob_score?: boolean
 
   /**
-    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesClassifier.fit "sklearn.ensemble.ExtraTreesClassifier.fit"), [`predict`](#sklearn.ensemble.ExtraTreesClassifier.predict "sklearn.ensemble.ExtraTreesClassifier.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesClassifier.decision_path "sklearn.ensemble.ExtraTreesClassifier.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesClassifier.apply "sklearn.ensemble.ExtraTreesClassifier.apply") are all parallelized over the trees. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesClassifier.fit "sklearn.ensemble.ExtraTreesClassifier.fit"), [`predict`](#sklearn.ensemble.ExtraTreesClassifier.predict "sklearn.ensemble.ExtraTreesClassifier.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesClassifier.decision_path "sklearn.ensemble.ExtraTreesClassifier.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesClassifier.apply "sklearn.ensemble.ExtraTreesClassifier.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -699,7 +699,7 @@ export interface ExtraTreesClassifierOptions {
   verbose?: number
 
   /**
-    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
 
     @defaultValue `false`
    */
@@ -728,7 +728,7 @@ export interface ExtraTreesClassifierOptions {
   ccp_alpha?: any
 
   /**
-    If bootstrap is True, the number of samples to draw from X to train each base estimator.
+    If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
    */
   max_samples?: number
 }
@@ -759,7 +759,7 @@ export interface ExtraTreesClassifierFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
    */
   sample_weight?: ArrayLike
 }

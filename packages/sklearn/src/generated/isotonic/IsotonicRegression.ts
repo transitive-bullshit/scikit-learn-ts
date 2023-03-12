@@ -534,7 +534,7 @@ export interface IsotonicRegressionFitOptions {
   y?: ArrayLike
 
   /**
-    Weights. If set to None, all weights will be set to 1 (equal weights).
+    Weights. If set to `undefined`, all weights will be set to 1 (equal weights).
    */
   sample_weight?: ArrayLike
 }
@@ -546,7 +546,7 @@ export interface IsotonicRegressionFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

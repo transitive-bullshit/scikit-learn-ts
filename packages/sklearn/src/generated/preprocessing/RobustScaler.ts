@@ -386,14 +386,14 @@ pms_RobustScaler_transform = {k: v for k, v in pms_RobustScaler_transform.items(
 
 export interface RobustScalerOptions {
   /**
-    If `True`, center the data before scaling. This will cause [`transform`](#sklearn.preprocessing.RobustScaler.transform "sklearn.preprocessing.RobustScaler.transform") to raise an exception when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
+    If `true`, center the data before scaling. This will cause [`transform`](#sklearn.preprocessing.RobustScaler.transform "sklearn.preprocessing.RobustScaler.transform") to raise an exception when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
 
     @defaultValue `true`
    */
   with_centering?: boolean
 
   /**
-    If `True`, scale the data to interquartile range.
+    If `true`, scale the data to interquartile range.
 
     @defaultValue `true`
    */
@@ -405,14 +405,14 @@ export interface RobustScalerOptions {
   quantile_range?: any
 
   /**
-    If `False`, try to avoid a copy and do inplace scaling instead. This is not guaranteed to always work inplace; e.g. if the data is not a NumPy array or scipy.sparse CSR matrix, a copy may still be returned.
+    If `false`, try to avoid a copy and do inplace scaling instead. This is not guaranteed to always work inplace; e.g. if the data is not a NumPy array or scipy.sparse CSR matrix, a copy may still be returned.
 
     @defaultValue `true`
    */
   copy?: boolean
 
   /**
-    If `True`, scale data so that normally distributed features have a variance of 1. In general, if the difference between the x-values of `q\_max` and `q\_min` for a standard normal distribution is greater than 1, the dataset will be scaled down. If less than 1, the dataset will be scaled up.
+    If `true`, scale data so that normally distributed features have a variance of 1. In general, if the difference between the x-values of `q\_max` and `q\_min` for a standard normal distribution is greater than 1, the dataset will be scaled down. If less than 1, the dataset will be scaled up.
 
     @defaultValue `false`
    */
@@ -438,7 +438,7 @@ export interface RobustScalerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

@@ -430,7 +430,7 @@ pms_NeighborhoodComponentsAnalysis_transform = {k: v for k, v in pms_Neighborhoo
 
 export interface NeighborhoodComponentsAnalysisOptions {
   /**
-    Preferred dimensionality of the projected space. If None it will be set to `n\_features`.
+    Preferred dimensionality of the projected space. If `undefined` it will be set to `n\_features`.
    */
   n_components?: number
 
@@ -442,7 +442,7 @@ export interface NeighborhoodComponentsAnalysisOptions {
   init?: 'auto' | 'pca' | 'lda' | 'identity' | 'random' | NDArray[]
 
   /**
-    If `True` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") has been called before, the solution of the previous call to [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") is used as the initial linear transformation (`n\_components` and `init` will be ignored).
+    If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") has been called before, the solution of the previous call to [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") is used as the initial linear transformation (`n\_components` and `init` will be ignored).
 
     @defaultValue `false`
    */
@@ -463,7 +463,7 @@ export interface NeighborhoodComponentsAnalysisOptions {
   tol?: number
 
   /**
-    If not `None`, this function is called after every iteration of the optimizer, taking as arguments the current solution (flattened transformation matrix) and the number of iterations. This might be useful in case one wants to examine or store the transformation found after each iteration.
+    If not `undefined`, this function is called after every iteration of the optimizer, taking as arguments the current solution (flattened transformation matrix) and the number of iterations. This might be useful in case one wants to examine or store the transformation found after each iteration.
    */
   callback?: any
 
@@ -499,7 +499,7 @@ export interface NeighborhoodComponentsAnalysisFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

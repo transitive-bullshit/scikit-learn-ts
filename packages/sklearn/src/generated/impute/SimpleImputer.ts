@@ -317,7 +317,7 @@ pms_SimpleImputer_transform = {k: v for k, v in pms_SimpleImputer_transform.item
   }
 
   /**
-    Indicator used to add binary indicators for missing values. `None` if `add\_indicator=False`.
+    Indicator used to add binary indicators for missing values. `undefined` if `add\_indicator=False`.
    */
   get indicator_(): Promise<any> {
     if (this._isDisposed) {
@@ -406,7 +406,7 @@ export interface SimpleImputerOptions {
   strategy?: string
 
   /**
-    When strategy == “constant”, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `None`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types.
+    When strategy == “constant”, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `undefined`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types.
    */
   fill_value?: string
 
@@ -418,21 +418,21 @@ export interface SimpleImputerOptions {
   verbose?: number
 
   /**
-    If True, a copy of X will be created. If False, imputation will be done in-place whenever possible. Note that, in the following cases, a new copy will always be made, even if `copy=False`:
+    If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible. Note that, in the following cases, a new copy will always be made, even if `copy=False`:
 
     @defaultValue `true`
    */
   copy?: boolean
 
   /**
-    If True, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+    If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
 
     @defaultValue `false`
    */
   add_indicator?: boolean
 
   /**
-    If True, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `strategy="constant"` in which case `fill\_value` will be used instead.
+    If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `strategy="constant"` in which case `fill\_value` will be used instead.
 
     @defaultValue `false`
    */
@@ -458,7 +458,7 @@ export interface SimpleImputerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

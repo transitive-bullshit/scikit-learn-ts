@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Sequentially apply a list of transforms and a final estimator. Intermediate steps of the pipeline must be ‘transforms’, that is, they must implement `fit` and `transform` methods. The final estimator only needs to implement `fit`. The transformers in the pipeline can be cached using `memory` argument.
 
-  The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters. For this, it enables setting parameters of the various steps using their names and the parameter name separated by a `'\_\_'`, as in the example below. A step’s estimator may be replaced entirely by setting the parameter with its name to another estimator, or a transformer removed by setting it to `'passthrough'` or `None`.
+  The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters. For this, it enables setting parameters of the various steps using their names and the parameter name separated by a `'\_\_'`, as in the example below. A step’s estimator may be replaced entirely by setting the parameter with its name to another estimator, or a transformer removed by setting it to `'passthrough'` or `undefined`.
 
   Read more in the [User Guide](../compose.html#pipeline).
 
@@ -482,7 +482,7 @@ pms_Pipeline_set_output = {k: v for k, v in pms_Pipeline_set_output.items() if v
 
     Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `transform` method. Only valid if the final estimator implements `transform`.
 
-    This also works where final estimator is `None` in which case all prior transformations are applied.
+    This also works where final estimator is `undefined` in which case all prior transformations are applied.
    */
   async transform(opts: PipelineTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -520,7 +520,7 @@ export interface PipelineOptions {
   memory?: string
 
   /**
-    If True, the time elapsed while fitting each step will be printed as it is completed.
+    If `true`, the time elapsed while fitting each step will be printed as it is completed.
 
     @defaultValue `false`
    */
@@ -647,7 +647,7 @@ export interface PipelineScoreOptions {
   y?: any
 
   /**
-    If not None, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator.
+    If not `undefined`, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator.
    */
   sample_weight?: ArrayLike
 }

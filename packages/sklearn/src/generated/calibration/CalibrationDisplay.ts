@@ -342,7 +342,7 @@ export interface CalibrationDisplayOptions {
   y_prob?: NDArray
 
   /**
-    Name of estimator. If None, the estimator name is not shown.
+    Name of estimator. If `undefined`, the estimator name is not shown.
    */
   estimator_name?: string
 
@@ -388,19 +388,19 @@ export interface CalibrationDisplayFromEstimatorOptions {
   pos_label?: string | number
 
   /**
-    Name for labeling curve. If `None`, the name of the estimator is used.
+    Name for labeling curve. If `undefined`, the name of the estimator is used.
    */
   name?: string
 
   /**
-    If `True`, plots a reference line representing a perfectly calibrated classifier.
+    If `true`, plots a reference line representing a perfectly calibrated classifier.
 
     @defaultValue `true`
    */
   ref_line?: boolean
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -446,14 +446,14 @@ export interface CalibrationDisplayFromPredictionsOptions {
   name?: string
 
   /**
-    If `True`, plots a reference line representing a perfectly calibrated classifier.
+    If `true`, plots a reference line representing a perfectly calibrated classifier.
 
     @defaultValue `true`
    */
   ref_line?: boolean
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -465,17 +465,17 @@ export interface CalibrationDisplayFromPredictionsOptions {
 
 export interface CalibrationDisplayPlotOptions {
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Name for labeling curve. If `None`, use `estimator\_name` if not `None`, otherwise no labeling is shown.
+    Name for labeling curve. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
    */
   name?: string
 
   /**
-    If `True`, plots a reference line representing a perfectly calibrated classifier.
+    If `true`, plots a reference line representing a perfectly calibrated classifier.
 
     @defaultValue `true`
    */

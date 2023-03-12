@@ -322,7 +322,7 @@ pms_BayesianRidge_score = {k: v for k, v in pms_BayesianRidge_score.items() if v
   }
 
   /**
-    If computed\_score is True, value of the log marginal likelihood (to be maximized) at each iteration of the optimization. The array starts with the value of the log marginal likelihood obtained for the initial values of alpha and lambda and ends with the value obtained for the estimated alpha and lambda.
+    If computed\_score is `true`, value of the log marginal likelihood (to be maximized) at each iteration of the optimization. The array starts with the value of the log marginal likelihood obtained for the initial values of alpha and lambda and ends with the value obtained for the estimated alpha and lambda.
    */
   get scores_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -522,21 +522,21 @@ export interface BayesianRidgeOptions {
   lambda_init?: number
 
   /**
-    If True, compute the log marginal likelihood at each iteration of the optimization.
+    If `true`, compute the log marginal likelihood at each iteration of the optimization.
 
     @defaultValue `false`
    */
   compute_score?: boolean
 
   /**
-    Whether to calculate the intercept for this model. The intercept is not treated as a probabilistic parameter and thus has no associated variance. If set to False, no intercept will be used in calculations (i.e. data is expected to be centered).
+    Whether to calculate the intercept for this model. The intercept is not treated as a probabilistic parameter and thus has no associated variance. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
 
     @defaultValue `true`
    */
   fit_intercept?: boolean
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */

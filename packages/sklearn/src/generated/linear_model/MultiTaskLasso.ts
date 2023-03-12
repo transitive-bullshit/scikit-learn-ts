@@ -430,7 +430,7 @@ export interface MultiTaskLassoOptions {
   fit_intercept?: boolean
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -451,7 +451,7 @@ export interface MultiTaskLassoOptions {
   tol?: number
 
   /**
-    When set to `True`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -515,7 +515,7 @@ export interface MultiTaskLassoPathOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If None alphas are set automatically.
+    List of alphas where to compute the models. If `undefined` alphas are set automatically.
    */
   alphas?: NDArray
 
@@ -532,7 +532,7 @@ export interface MultiTaskLassoPathOptions {
   Xy?: ArrayLike
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -558,14 +558,14 @@ export interface MultiTaskLassoPathOptions {
   return_n_iter?: boolean
 
   /**
-    If set to True, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
+    If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
 
     @defaultValue `false`
    */
   positive?: boolean
 
   /**
-    If set to False, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
+    If set to `false`, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
 
     @defaultValue `true`
    */

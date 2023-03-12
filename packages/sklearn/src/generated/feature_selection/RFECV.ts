@@ -653,7 +653,7 @@ export interface RFECVOptions {
   verbose?: number
 
   /**
-    Number of cores to run in parallel while fitting across folds. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of cores to run in parallel while fitting across folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -700,7 +700,7 @@ export interface RFECVFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -719,7 +719,7 @@ export interface RFECVGetFeatureNamesOutOptions {
 
 export interface RFECVGetSupportOptions {
   /**
-    If True, the return value will be an array of integers, rather than a boolean mask.
+    If `true`, the return value will be an array of integers, rather than a boolean mask.
 
     @defaultValue `false`
    */

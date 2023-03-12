@@ -496,7 +496,7 @@ export interface SequentialFeatureSelectorOptions {
 
     NOTE that when using a custom scorer, it should return a single value.
 
-    If None, the estimator’s score method is used.
+    If `undefined`, the estimator’s score method is used.
    */
   scoring?: string
 
@@ -506,7 +506,7 @@ export interface SequentialFeatureSelectorOptions {
   cv?: number
 
   /**
-    Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -530,7 +530,7 @@ export interface SequentialFeatureSelectorFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -549,7 +549,7 @@ export interface SequentialFeatureSelectorGetFeatureNamesOutOptions {
 
 export interface SequentialFeatureSelectorGetSupportOptions {
   /**
-    If True, the return value will be an array of integers, rather than a boolean mask.
+    If `true`, the return value will be an array of integers, rather than a boolean mask.
 
     @defaultValue `false`
    */

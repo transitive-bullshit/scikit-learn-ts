@@ -487,7 +487,7 @@ pms_MiniBatchSparsePCA_transform = {k: v for k, v in pms_MiniBatchSparsePCA_tran
 
 export interface MiniBatchSparsePCAOptions {
   /**
-    Number of sparse atoms to extract. If None, then `n\_components` is set to `n\_features`.
+    Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`.
    */
   n_components?: number
 
@@ -513,7 +513,7 @@ export interface MiniBatchSparsePCAOptions {
   n_iter?: number
 
   /**
-    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `None`, `n\_iter` is ignored.
+    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
    */
   max_iter?: number
 
@@ -544,7 +544,7 @@ export interface MiniBatchSparsePCAOptions {
   shuffle?: boolean
 
   /**
-    Number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -556,12 +556,12 @@ export interface MiniBatchSparsePCAOptions {
   method?: 'lars' | 'cd'
 
   /**
-    Used for random shuffling when `shuffle` is set to `True`, during online dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Used for random shuffling when `shuffle` is set to `true`, during online dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not None.
+    Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not `undefined`.
 
     To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
 
@@ -570,9 +570,9 @@ export interface MiniBatchSparsePCAOptions {
   tol?: number
 
   /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not None.
+    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not `undefined`.
 
-    To disable convergence detection based on cost function, set `max\_no\_improvement` to `None`.
+    To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
 
     @defaultValue `10`
    */
@@ -598,7 +598,7 @@ export interface MiniBatchSparsePCAFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

@@ -326,17 +326,17 @@ export interface PrecisionRecallDisplayOptions {
   recall?: NDArray
 
   /**
-    Average precision. If None, the average precision is not shown.
+    Average precision. If `undefined`, the average precision is not shown.
    */
   average_precision?: number
 
   /**
-    Name of estimator. If None, then the estimator name is not shown.
+    Name of estimator. If `undefined`, then the estimator name is not shown.
    */
   estimator_name?: string
 
   /**
-    The class considered as the positive class. If None, the class will not be shown in the legend.
+    The class considered as the positive class. If `undefined`, the class will not be shown in the legend.
    */
   pos_label?: string | number
 }
@@ -375,12 +375,12 @@ export interface PrecisionRecallDisplayFromEstimatorOptions {
   response_method?: 'predict_proba' | 'decision_function' | 'auto'
 
   /**
-    Name for labeling curve. If `None`, no name is used.
+    Name for labeling curve. If `undefined`, no name is used.
    */
   name?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -412,12 +412,12 @@ export interface PrecisionRecallDisplayFromPredictionsOptions {
   pos_label?: string | number
 
   /**
-    Name for labeling curve. If `None`, name will be set to `"Classifier"`.
+    Name for labeling curve. If `undefined`, name will be set to `"Classifier"`.
    */
   name?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -429,12 +429,12 @@ export interface PrecisionRecallDisplayFromPredictionsOptions {
 
 export interface PrecisionRecallDisplayPlotOptions {
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Name of precision recall curve for labeling. If `None`, use `estimator\_name` if not `None`, otherwise no labeling is shown.
+    Name of precision recall curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
    */
   name?: string
 

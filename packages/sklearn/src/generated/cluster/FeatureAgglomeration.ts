@@ -508,7 +508,7 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
   }
 
   /**
-    Distances between nodes in the corresponding place in `children\_`. Only computed if `distance\_threshold` is used or `compute\_distances` is set to `True`.
+    Distances between nodes in the corresponding place in `children\_`. Only computed if `distance\_threshold` is used or `compute\_distances` is set to `true`.
    */
   get distances_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -537,7 +537,7 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
 
 export interface FeatureAgglomerationOptions {
   /**
-    The number of clusters to find. It must be `None` if `distance\_threshold` is not `None`.
+    The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.
 
     @defaultValue `2`
    */
@@ -551,7 +551,7 @@ export interface FeatureAgglomerationOptions {
   affinity?: string
 
   /**
-    Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `None` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
+    Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
    */
   metric?: string
 
@@ -561,12 +561,12 @@ export interface FeatureAgglomerationOptions {
   memory?: string
 
   /**
-    Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `None`, i.e, the hierarchical clustering algorithm is unstructured.
+    Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
    */
   connectivity?: ArrayLike
 
   /**
-    Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `True` if `distance\_threshold` is not `None`. By default `compute\_full\_tree` is “auto”, which is equivalent to `True` when `distance\_threshold` is not `None` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `False`.
+    Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.
 
     @defaultValue `'auto'`
    */
@@ -585,7 +585,7 @@ export interface FeatureAgglomerationOptions {
   pooling_func?: any
 
   /**
-    The linkage distance threshold at or above which clusters will not be merged. If not `None`, `n\_clusters` must be `None` and `compute\_full\_tree` must be `True`.
+    The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
    */
   distance_threshold?: number
 
@@ -616,7 +616,7 @@ export interface FeatureAgglomerationFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

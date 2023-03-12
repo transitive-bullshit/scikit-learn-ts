@@ -274,12 +274,12 @@ export interface RBFCallOptions {
   X?: NDArray[]
 
   /**
-    Right argument of the returned kernel k(X, Y). If None, k(X, X) if evaluated instead.
+    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
    */
   Y?: NDArray[]
 
   /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is None.
+    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
 
     @defaultValue `false`
    */

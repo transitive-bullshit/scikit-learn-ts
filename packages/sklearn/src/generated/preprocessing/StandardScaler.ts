@@ -326,7 +326,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    Per feature relative scaling of the data to achieve zero mean and unit variance. Generally this is calculated using `np.sqrt(var\_)`. If a variance is zero, we can’t achieve unit variance, and the data is left as-is, giving a scaling factor of 1. `scale\_` is equal to `None` when `with\_std=False`.
+    Per feature relative scaling of the data to achieve zero mean and unit variance. Generally this is calculated using `np.sqrt(var\_)`. If a variance is zero, we can’t achieve unit variance, and the data is left as-is, giving a scaling factor of 1. `scale\_` is equal to `undefined` when `with\_std=False`.
    */
   get scale_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -349,7 +349,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    The mean value for each feature in the training set. Equal to `None` when `with\_mean=False`.
+    The mean value for each feature in the training set. Equal to `undefined` when `with\_mean=False`.
    */
   get mean_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -372,7 +372,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    The variance for each feature in the training set. Used to compute `scale\_`. Equal to `None` when `with\_std=False`.
+    The variance for each feature in the training set. Used to compute `scale\_`. Equal to `undefined` when `with\_std=False`.
    */
   get var_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -472,21 +472,21 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
 
 export interface StandardScalerOptions {
   /**
-    If False, try to avoid a copy and do inplace scaling instead. This is not guaranteed to always work inplace; e.g. if the data is not a NumPy array or scipy.sparse CSR matrix, a copy may still be returned.
+    If `false`, try to avoid a copy and do inplace scaling instead. This is not guaranteed to always work inplace; e.g. if the data is not a NumPy array or scipy.sparse CSR matrix, a copy may still be returned.
 
     @defaultValue `true`
    */
   copy?: boolean
 
   /**
-    If True, center the data before scaling. This does not work (and will raise an exception) when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
+    If `true`, center the data before scaling. This does not work (and will raise an exception) when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
 
     @defaultValue `true`
    */
   with_mean?: boolean
 
   /**
-    If True, scale the data to unit variance (or equivalently, unit standard deviation).
+    If `true`, scale the data to unit variance (or equivalently, unit standard deviation).
 
     @defaultValue `true`
    */
@@ -517,7 +517,7 @@ export interface StandardScalerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

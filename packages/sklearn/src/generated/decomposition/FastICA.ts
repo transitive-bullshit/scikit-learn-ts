@@ -284,7 +284,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    The linear operator to apply to the data to get the independent sources. This is equal to the unmixing matrix when `whiten` is False, and equal to `np.dot(unmixing\_matrix, self.whitening\_)` when `whiten` is True.
+    The linear operator to apply to the data to get the independent sources. This is equal to the unmixing matrix when `whiten` is `false`, and equal to `np.dot(unmixing\_matrix, self.whitening\_)` when `whiten` is `true`.
    */
   get components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -330,7 +330,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    The mean over features. Only set if `self.whiten` is True.
+    The mean over features. Only set if `self.whiten` is `true`.
    */
   get mean_(): Promise<any> {
     if (this._isDisposed) {
@@ -425,7 +425,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    Only set if whiten is ‘True’. This is the pre-whitening matrix that projects data onto the first `n\_components` principal components.
+    Only set if whiten is ‘`true`’. This is the pre-whitening matrix that projects data onto the first `n\_components` principal components.
    */
   get whitening_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -450,7 +450,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
 
 export interface FastICAOptions {
   /**
-    Number of components to use. If None is passed, all are used.
+    Number of components to use. If `undefined` is passed, all are used.
    */
   n_components?: number
 
@@ -476,7 +476,7 @@ export interface FastICAOptions {
   fun?: 'logcosh' | 'exp' | 'cube'
 
   /**
-    Arguments to send to the functional form. If empty or None and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}.
+    Arguments to send to the functional form. If empty or `undefined` and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}.
    */
   fun_args?: any
 
@@ -550,7 +550,7 @@ export interface FastICAInverseTransformOptions {
   X?: ArrayLike[]
 
   /**
-    If False, data passed to fit are overwritten. Defaults to True.
+    If `false`, data passed to fit are overwritten. Defaults to `true`.
 
     @defaultValue `true`
    */
@@ -571,7 +571,7 @@ export interface FastICATransformOptions {
   X?: ArrayLike[]
 
   /**
-    If False, data passed to fit can be overwritten. Defaults to True.
+    If `false`, data passed to fit can be overwritten. Defaults to `true`.
 
     @defaultValue `true`
    */

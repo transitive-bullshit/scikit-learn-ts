@@ -362,14 +362,14 @@ export interface PolynomialFeaturesOptions {
   degree?: number
 
   /**
-    If `True`, only interaction features are produced: features that are products of at most `degree` *distinct* input features, i.e. terms with power of 2 or higher of the same input feature are excluded:
+    If `true`, only interaction features are produced: features that are products of at most `degree` *distinct* input features, i.e. terms with power of 2 or higher of the same input feature are excluded:
 
     @defaultValue `false`
    */
   interaction_only?: boolean
 
   /**
-    If `True` (default), then include a bias column, the feature in which all polynomial powers are zero (i.e. a column of ones - acts as an intercept term in a linear model).
+    If `true` (default), then include a bias column, the feature in which all polynomial powers are zero (i.e. a column of ones - acts as an intercept term in a linear model).
 
     @defaultValue `true`
    */
@@ -402,7 +402,7 @@ export interface PolynomialFeaturesFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

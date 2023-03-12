@@ -478,14 +478,14 @@ export interface IsolationForestOptions {
   max_features?: number
 
   /**
-    If True, individual trees are fit on random subsets of the training data sampled with replacement. If False, sampling without replacement is performed.
+    If `true`, individual trees are fit on random subsets of the training data sampled with replacement. If `false`, sampling without replacement is performed.
 
     @defaultValue `false`
    */
   bootstrap?: boolean
 
   /**
-    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -504,7 +504,7 @@ export interface IsolationForestOptions {
   verbose?: number
 
   /**
-    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -530,7 +530,7 @@ export interface IsolationForestFitOptions {
   y?: any
 
   /**
-    Sample weights. If None, then samples are equally weighted.
+    Sample weights. If `undefined`, then samples are equally weighted.
    */
   sample_weight?: ArrayLike
 }

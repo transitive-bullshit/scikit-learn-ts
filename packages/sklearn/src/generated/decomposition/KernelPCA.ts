@@ -345,7 +345,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Inverse transform matrix. Only available when `fit\_inverse\_transform` is True.
+    Inverse transform matrix. Only available when `fit\_inverse\_transform` is `true`.
    */
   get dual_coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -368,7 +368,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Projection of the fitted data on the kernel principal components. Only available when `fit\_inverse\_transform` is True.
+    Projection of the fitted data on the kernel principal components. Only available when `fit\_inverse\_transform` is `true`.
    */
   get X_transformed_fit_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -468,7 +468,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
 
 export interface KernelPCAOptions {
   /**
-    Number of components. If None, all non-zero components are kept.
+    Number of components. If `undefined`, all non-zero components are kept.
    */
   n_components?: number
 
@@ -480,7 +480,7 @@ export interface KernelPCAOptions {
   kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'cosine' | 'precomputed'
 
   /**
-    Kernel coefficient for rbf, poly and sigmoid kernels. Ignored by other kernels. If `gamma` is `None`, then it is set to `1/n\_features`.
+    Kernel coefficient for rbf, poly and sigmoid kernels. Ignored by other kernels. If `gamma` is `undefined`, then it is set to `1/n\_features`.
    */
   gamma?: number
 
@@ -504,7 +504,7 @@ export interface KernelPCAOptions {
   kernel_params?: any
 
   /**
-    Hyperparameter of the ridge regression that learns the inverse transform (when fit\_inverse\_transform=True).
+    Hyperparameter of the ridge regression that learns the inverse transform (when fit\_inverse\_transform=`true`).
 
     @defaultValue `1`
    */
@@ -532,7 +532,7 @@ export interface KernelPCAOptions {
   tol?: number
 
   /**
-    Maximum number of iterations for arpack. If None, optimal value will be chosen by arpack.
+    Maximum number of iterations for arpack. If `undefined`, optimal value will be chosen by arpack.
    */
   max_iter?: number
 
@@ -544,7 +544,7 @@ export interface KernelPCAOptions {
   iterated_power?: 'auto'
 
   /**
-    If True, then all components with zero eigenvalues are removed, so that the number of components in the output may be < n\_components (and sometimes even zero due to numerical instability). When n\_components is None, this parameter is ignored and components with zero eigenvalues are removed regardless.
+    If `true`, then all components with zero eigenvalues are removed, so that the number of components in the output may be < n\_components (and sometimes even zero due to numerical instability). When n\_components is `undefined`, this parameter is ignored and components with zero eigenvalues are removed regardless.
 
     @defaultValue `false`
    */
@@ -556,14 +556,14 @@ export interface KernelPCAOptions {
   random_state?: number
 
   /**
-    If True, input X is copied and stored by the model in the `X\_fit\_` attribute. If no further changes will be done to X, setting `copy\_X=False` saves memory by storing a reference.
+    If `true`, input X is copied and stored by the model in the `X\_fit\_` attribute. If no further changes will be done to X, setting `copy\_X=False` saves memory by storing a reference.
 
     @defaultValue `true`
    */
   copy_X?: boolean
 
   /**
-    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }

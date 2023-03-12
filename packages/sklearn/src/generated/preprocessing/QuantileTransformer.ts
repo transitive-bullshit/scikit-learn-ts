@@ -464,7 +464,7 @@ export interface QuantileTransformerOptions {
   output_distribution?: 'uniform' | 'normal'
 
   /**
-    Only applies to sparse matrices. If True, the sparse entries of the matrix are discarded to compute the quantile statistics. If False, these entries are treated as zeros.
+    Only applies to sparse matrices. If `true`, the sparse entries of the matrix are discarded to compute the quantile statistics. If `false`, these entries are treated as zeros.
 
     @defaultValue `false`
    */
@@ -483,7 +483,7 @@ export interface QuantileTransformerOptions {
   random_state?: number
 
   /**
-    Set to False to perform inplace transformation and avoid a copy (if the input is already a numpy array).
+    Set to `false` to perform inplace transformation and avoid a copy (if the input is already a numpy array).
 
     @defaultValue `true`
    */
@@ -492,7 +492,7 @@ export interface QuantileTransformerOptions {
 
 export interface QuantileTransformerFitOptions {
   /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is False.
+    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -509,7 +509,7 @@ export interface QuantileTransformerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -528,7 +528,7 @@ export interface QuantileTransformerGetFeatureNamesOutOptions {
 
 export interface QuantileTransformerInverseTransformOptions {
   /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is False.
+    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
@@ -542,7 +542,7 @@ export interface QuantileTransformerSetOutputOptions {
 
 export interface QuantileTransformerTransformOptions {
   /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is False.
+    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
    */
   X?: ArrayLike | SparseMatrix[]
 }

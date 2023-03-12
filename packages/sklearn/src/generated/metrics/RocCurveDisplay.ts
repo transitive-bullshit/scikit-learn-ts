@@ -313,12 +313,12 @@ export interface RocCurveDisplayOptions {
   tpr?: NDArray
 
   /**
-    Area under ROC curve. If None, the roc\_auc score is not shown.
+    Area under ROC curve. If `undefined`, the roc\_auc score is not shown.
    */
   roc_auc?: number
 
   /**
-    Name of estimator. If None, the estimator name is not shown.
+    Name of estimator. If `undefined`, the estimator name is not shown.
    */
   estimator_name?: string
 
@@ -367,12 +367,12 @@ export interface RocCurveDisplayFromEstimatorOptions {
   pos_label?: string | number
 
   /**
-    Name of ROC Curve for labeling. If `None`, use the name of the estimator.
+    Name of ROC Curve for labeling. If `undefined`, use the name of the estimator.
    */
   name?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -411,12 +411,12 @@ export interface RocCurveDisplayFromPredictionsOptions {
   pos_label?: string | number
 
   /**
-    Name of ROC curve for labeling. If `None`, name will be set to `"Classifier"`.
+    Name of ROC curve for labeling. If `undefined`, name will be set to `"Classifier"`.
    */
   name?: string
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -428,12 +428,12 @@ export interface RocCurveDisplayFromPredictionsOptions {
 
 export interface RocCurveDisplayPlotOptions {
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Name of ROC Curve for labeling. If `None`, use `estimator\_name` if not `None`, otherwise no labeling is shown.
+    Name of ROC Curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
    */
   name?: string
 

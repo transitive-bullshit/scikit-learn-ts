@@ -672,7 +672,7 @@ export interface ExtraTreeClassifierOptions {
   splitter?: 'random' | 'best'
 
   /**
-    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+    The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
    */
   max_depth?: number
 
@@ -710,7 +710,7 @@ export interface ExtraTreeClassifierOptions {
   random_state?: number
 
   /**
-    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
@@ -724,7 +724,7 @@ export interface ExtraTreeClassifierOptions {
   min_impurity_decrease?: number
 
   /**
-    Weights associated with classes in the form `{class\_label: weight}`. If None, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
+    Weights associated with classes in the form `{class\_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
 
     Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].
 
@@ -770,7 +770,7 @@ export interface ExtraTreeClassifierCostComplexityPruningPathOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
    */
   sample_weight?: ArrayLike
 }
@@ -801,7 +801,7 @@ export interface ExtraTreeClassifierFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
    */
   sample_weight?: ArrayLike
 

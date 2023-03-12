@@ -213,7 +213,7 @@ pms_GaussianRandomProjection_get_feature_names_out = {k: v for k, v in pms_Gauss
 
     Returns an array X\_original whose transform would be X. Note that even if X is sparse, X\_original is dense: this may use a lot of RAM.
 
-    If `compute\_inverse\_components` is False, the inverse of the components is computed during each call to `inverse\_transform` which can be costly.
+    If `compute\_inverse\_components` is `false`, the inverse of the components is computed during each call to `inverse\_transform` which can be costly.
    */
   async inverse_transform(
     opts: GaussianRandomProjectionInverseTransformOptions
@@ -372,7 +372,7 @@ pms_GaussianRandomProjection_transform = {k: v for k, v in pms_GaussianRandomPro
   }
 
   /**
-    Pseudo-inverse of the components, only computed if `compute\_inverse\_components` is True.
+    Pseudo-inverse of the components, only computed if `compute\_inverse\_components` is `true`.
    */
   get inverse_components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -506,7 +506,7 @@ export interface GaussianRandomProjectionFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

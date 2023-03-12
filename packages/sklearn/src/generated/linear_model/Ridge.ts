@@ -237,7 +237,7 @@ pms_Ridge_score = {k: v for k, v in pms_Ridge_score.items() if v is not None}`
   }
 
   /**
-    Actual number of iterations for each target. Available only for sag and lsqr solvers. Other solvers will return None.
+    Actual number of iterations for each target. Available only for sag and lsqr solvers. Other solvers will return `undefined`.
    */
   get n_iter_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -327,7 +327,7 @@ export interface RidgeOptions {
   fit_intercept?: boolean
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -361,7 +361,7 @@ export interface RidgeOptions {
     | 'lbfgs'
 
   /**
-    When set to `True`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
+    When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
 
     @defaultValue `false`
    */

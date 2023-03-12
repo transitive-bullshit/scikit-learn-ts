@@ -341,7 +341,7 @@ pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if
   }
 
   /**
-    A boolean mask which is set to True where the samples are identified as outliers.
+    A boolean mask which is set to `true` where the samples are identified as outliers.
    */
   get outliers_(): Promise<any> {
     if (this._isDisposed) {
@@ -389,14 +389,14 @@ export interface HuberRegressorOptions {
   alpha?: number
 
   /**
-    This is useful if the stored attributes of a previously used model has to be reused. If set to False, then the coefficients will be rewritten for every call to fit. See [the Glossary](../../glossary.html#term-warm_start).
+    This is useful if the stored attributes of a previously used model has to be reused. If set to `false`, then the coefficients will be rewritten for every call to fit. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    Whether or not to fit the intercept. This can be set to False if the data is already centered around the origin.
+    Whether or not to fit the intercept. This can be set to `false` if the data is already centered around the origin.
 
     @defaultValue `true`
    */

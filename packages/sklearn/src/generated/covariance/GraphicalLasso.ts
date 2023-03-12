@@ -435,14 +435,14 @@ export interface GraphicalLassoOptions {
   max_iter?: number
 
   /**
-    If verbose is True, the objective function and dual gap are plotted at each iteration.
+    If verbose is `true`, the objective function and dual gap are plotted at each iteration.
 
     @defaultValue `false`
    */
   verbose?: boolean
 
   /**
-    If True, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If False, data are centered before computation.
+    If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.
 
     @defaultValue `false`
    */
@@ -463,14 +463,14 @@ export interface GraphicalLassoErrorNormOptions {
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
+    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */
   scaling?: boolean
 
   /**
-    Whether to compute the squared error norm or the error norm. If True (default), the squared error norm is returned. If False, the error norm is returned.
+    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
 
     @defaultValue `true`
    */

@@ -317,7 +317,7 @@ export interface NormalizerOptions {
   norm?: 'l1' | 'l2' | 'max'
 
   /**
-    Set to False to perform inplace row normalization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
+    Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
 
     @defaultValue `true`
    */
@@ -343,7 +343,7 @@ export interface NormalizerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

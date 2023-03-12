@@ -174,7 +174,7 @@ export interface KFoldOptions {
   shuffle?: boolean
 
   /**
-    When `shuffle` is True, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }

@@ -605,12 +605,12 @@ export interface StackingClassifierOptions {
   stack_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
 
   /**
-    The number of jobs to run in parallel all `estimators` `fit`. `None` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
    */
   n_jobs?: number
 
   /**
-    When False, only the predictions of estimators will be used as training data for `final\_estimator`. When True, the `final\_estimator` is trained on the predictions as well as the original training data.
+    When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.
 
     @defaultValue `false`
    */
@@ -643,7 +643,7 @@ export interface StackingClassifierFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
    */
   sample_weight?: ArrayLike
 }
@@ -655,7 +655,7 @@ export interface StackingClassifierFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -667,7 +667,7 @@ export interface StackingClassifierFitTransformOptions {
 
 export interface StackingClassifierGetFeatureNamesOutOptions {
   /**
-    Input features. The input feature names are only used when `passthrough` is `True`.
+    Input features. The input feature names are only used when `passthrough` is `true`.
    */
   input_features?: any
 }

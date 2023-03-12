@@ -122,7 +122,7 @@ pms_Parallel_dispatch_next = {k: v for k, v in pms_Parallel_dispatch_next.items(
   /**
     Prefetch the tasks for the next batch and dispatch them.
 
-    The effective size of the batch is computed here. If there are no more jobs to dispatch, return False, else return True.
+    The effective size of the batch is computed here. If there are no more jobs to dispatch, return `false`, else return `true`.
 
     The iterator consumption and dispatching is protected by the same lock so calling this function should be thread safe.
    */

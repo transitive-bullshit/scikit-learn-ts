@@ -357,7 +357,7 @@ pms_MLPClassifier_score = {k: v for k, v in pms_MLPClassifier_score.items() if v
   }
 
   /**
-    The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set ot `None`. Refer to the `best\_validation\_score\_` fitted attribute instead.
+    The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set ot `undefined`. Refer to the `best\_validation\_score\_` fitted attribute instead.
    */
   get best_loss_(): Promise<number> {
     if (this._isDisposed) {
@@ -407,7 +407,7 @@ pms_MLPClassifier_score = {k: v for k, v in pms_MLPClassifier_score.items() if v
   }
 
   /**
-    The score at each iteration on a held-out validation set. The score reported is the accuracy score. Only available if `early\_stopping=True`, otherwise the attribute is set to `None`.
+    The score at each iteration on a held-out validation set. The score reported is the accuracy score. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`.
    */
   get validation_scores_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -432,7 +432,7 @@ pms_MLPClassifier_score = {k: v for k, v in pms_MLPClassifier_score.items() if v
   }
 
   /**
-    The best validation score (i.e. accuracy score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `None`.
+    The best validation score (i.e. accuracy score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`.
    */
   get best_validation_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -765,7 +765,7 @@ export interface MLPClassifierOptions {
   verbose?: boolean
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -786,14 +786,14 @@ export interface MLPClassifierOptions {
   nesterovs_momentum?: boolean
 
   /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to true, it will automatically set aside 10% of training data as validation and terminate training when validation score is not improving by at least tol for `n\_iter\_no\_change` consecutive epochs. The split is stratified, except in a multilabel setting. If early stopping is False, then the training stops when the training loss does not improve by more than tol for n\_iter\_no\_change consecutive passes over the training set. Only effective when solver=’sgd’ or ‘adam’.
+    Whether to use early stopping to terminate training when validation score is not improving. If set to true, it will automatically set aside 10% of training data as validation and terminate training when validation score is not improving by at least tol for `n\_iter\_no\_change` consecutive epochs. The split is stratified, except in a multilabel setting. If early stopping is `false`, then the training stops when the training loss does not improve by more than tol for n\_iter\_no\_change consecutive passes over the training set. Only effective when solver=’sgd’ or ‘adam’.
 
     @defaultValue `false`
    */
   early_stopping?: boolean
 
   /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is True.
+    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
 
     @defaultValue `0.1`
    */

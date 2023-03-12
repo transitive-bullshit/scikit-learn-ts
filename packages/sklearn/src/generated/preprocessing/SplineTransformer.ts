@@ -412,7 +412,7 @@ export interface SplineTransformerOptions {
   extrapolation?: 'error' | 'constant' | 'linear' | 'continue' | 'periodic'
 
   /**
-    If True (default), then the last spline element inside the data range of a feature is dropped. As B-splines sum to one over the spline basis functions for each data point, they implicitly include a bias term, i.e. a column of ones. It acts as an intercept term in a linear models.
+    If `true` (default), then the last spline element inside the data range of a feature is dropped. As B-splines sum to one over the spline basis functions for each data point, they implicitly include a bias term, i.e. a column of ones. It acts as an intercept term in a linear models.
 
     @defaultValue `true`
    */
@@ -450,7 +450,7 @@ export interface SplineTransformerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

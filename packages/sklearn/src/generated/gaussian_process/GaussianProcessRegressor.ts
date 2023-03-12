@@ -506,7 +506,7 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
 
 export interface GaussianProcessRegressorOptions {
   /**
-    The kernel specifying the covariance function of the GP. If None is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
+    The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
    */
   kernel?: any
 
@@ -539,7 +539,7 @@ export interface GaussianProcessRegressorOptions {
   normalize_y?: boolean
 
   /**
-    If True, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
+    If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
 
     @defaultValue `true`
    */
@@ -565,19 +565,19 @@ export interface GaussianProcessRegressorFitOptions {
 
 export interface GaussianProcessRegressorLogMarginalLikelihoodOptions {
   /**
-    Kernel hyperparameters for which the log-marginal likelihood is evaluated. If None, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
+    Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
    */
   theta?: any
 
   /**
-    If True, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. If True, theta must not be None.
+    If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. If `true`, theta must not be `undefined`.
 
     @defaultValue `false`
    */
   eval_gradient?: boolean
 
   /**
-    If True, the kernel attribute is copied. If False, the kernel attribute is modified, but may result in a performance improvement.
+    If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.
 
     @defaultValue `true`
    */
@@ -591,14 +591,14 @@ export interface GaussianProcessRegressorPredictOptions {
   X?: ArrayLike[]
 
   /**
-    If True, the standard-deviation of the predictive distribution at the query points is returned along with the mean.
+    If `true`, the standard-deviation of the predictive distribution at the query points is returned along with the mean.
 
     @defaultValue `false`
    */
   return_std?: boolean
 
   /**
-    If True, the covariance of the joint predictive distribution at the query points is returned along with the mean.
+    If `true`, the covariance of the joint predictive distribution at the query points is returned along with the mean.
 
     @defaultValue `false`
    */

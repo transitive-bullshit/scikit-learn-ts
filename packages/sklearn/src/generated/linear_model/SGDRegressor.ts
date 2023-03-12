@@ -464,7 +464,7 @@ export interface SGDRegressorOptions {
   loss?: string
 
   /**
-    The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is the standard regularizer for linear SVM models. ‘l1’ and ‘elasticnet’ might bring sparsity to the model (feature selection) not achievable with ‘l2’. No penalty is added when set to `None`.
+    The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is the standard regularizer for linear SVM models. ‘l1’ and ‘elasticnet’ might bring sparsity to the model (feature selection) not achievable with ‘l2’. No penalty is added when set to `undefined`.
 
     @defaultValue `'l2'`
    */
@@ -485,7 +485,7 @@ export interface SGDRegressorOptions {
   l1_ratio?: number
 
   /**
-    Whether the intercept should be estimated or not. If False, the data is assumed to be already centered.
+    Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
 
     @defaultValue `true`
    */
@@ -499,7 +499,7 @@ export interface SGDRegressorOptions {
   max_iter?: number
 
   /**
-    The stopping criterion. If it is not None, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
+    The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
 
     @defaultValue `0.001`
    */
@@ -527,7 +527,7 @@ export interface SGDRegressorOptions {
   epsilon?: number
 
   /**
-    Used for shuffling the data, when `shuffle` is set to `True`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -553,14 +553,14 @@ export interface SGDRegressorOptions {
   power_t?: number
 
   /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to True, it will automatically set aside a fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs.
+    Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs.
 
     @defaultValue `false`
    */
   early_stopping?: boolean
 
   /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is True.
+    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`.
 
     @defaultValue `0.1`
    */
@@ -574,16 +574,16 @@ export interface SGDRegressorOptions {
   n_iter_no_change?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
-    Repeatedly calling fit or partial\_fit when warm\_start is True can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
+    Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    When set to True, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples.
+    When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples.
 
     @defaultValue `false`
    */

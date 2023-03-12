@@ -514,7 +514,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
   }
 
   /**
-    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is True.
+    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -541,7 +541,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
   }
 
   /**
-    Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is True.
+    Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_decision_function_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -570,7 +570,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
 
 export interface BaggingClassifierOptions {
   /**
-    The base estimator to fit on random subsets of the dataset. If None, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier").
+    The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier").
    */
   estimator?: any
 
@@ -596,7 +596,7 @@ export interface BaggingClassifierOptions {
   max_features?: number
 
   /**
-    Whether samples are drawn with replacement. If False, sampling without replacement is performed.
+    Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.
 
     @defaultValue `true`
    */
@@ -610,21 +610,21 @@ export interface BaggingClassifierOptions {
   bootstrap_features?: boolean
 
   /**
-    Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=True.
+    Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.
 
     @defaultValue `false`
    */
   oob_score?: boolean
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -667,7 +667,7 @@ export interface BaggingClassifierFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
+    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
    */
   sample_weight?: ArrayLike
 }

@@ -546,7 +546,7 @@ export interface MiniBatchNMFOptions {
   tol?: number
 
   /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max\_no\_improvement` to None.
+    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
 
     @defaultValue `10`
    */
@@ -602,7 +602,7 @@ export interface MiniBatchNMFOptions {
   fresh_restarts_max_iter?: number
 
   /**
-    Maximum number of iterations when solving for W at transform time. If None, it defaults to `max\_iter`.
+    Maximum number of iterations when solving for W at transform time. If `undefined`, it defaults to `max\_iter`.
    */
   transform_max_iter?: number
 

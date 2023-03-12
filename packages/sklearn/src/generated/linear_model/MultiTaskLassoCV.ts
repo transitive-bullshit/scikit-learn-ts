@@ -546,7 +546,7 @@ export interface MultiTaskLassoCVOptions {
   tol?: number
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -565,7 +565,7 @@ export interface MultiTaskLassoCVOptions {
   verbose?: boolean | number
 
   /**
-    Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1\_ratio are given. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1\_ratio are given. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -620,7 +620,7 @@ export interface MultiTaskLassoCVPathOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If `None` alphas are set automatically.
+    List of alphas where to compute the models. If `undefined` alphas are set automatically.
    */
   alphas?: NDArray
 
@@ -637,7 +637,7 @@ export interface MultiTaskLassoCVPathOptions {
   Xy?: ArrayLike
 
   /**
-    If `True`, X will be copied; else, it may be overwritten.
+    If `true`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -663,7 +663,7 @@ export interface MultiTaskLassoCVPathOptions {
   return_n_iter?: boolean
 
   /**
-    If set to True, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
+    If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
 
     @defaultValue `false`
    */

@@ -329,7 +329,7 @@ export interface MultiOutputRegressorOptions {
 
     When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-    `None` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -346,7 +346,7 @@ export interface MultiOutputRegressorFitOptions {
   y?: ArrayLike | SparseMatrix[]
 
   /**
-    Sample weights. If `None`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
+    Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
    */
   sample_weight?: ArrayLike
 
@@ -368,7 +368,7 @@ export interface MultiOutputRegressorPartialFitOptions {
   y?: ArrayLike | SparseMatrix[]
 
   /**
-    Sample weights. If `None`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
+    Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
    */
   sample_weight?: ArrayLike
 }

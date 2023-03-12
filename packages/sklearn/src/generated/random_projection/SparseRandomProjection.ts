@@ -217,7 +217,7 @@ pms_SparseRandomProjection_get_feature_names_out = {k: v for k, v in pms_SparseR
 
     Returns an array X\_original whose transform would be X. Note that even if X is sparse, X\_original is dense: this may use a lot of RAM.
 
-    If `compute\_inverse\_components` is False, the inverse of the components is computed during each call to `inverse\_transform` which can be costly.
+    If `compute\_inverse\_components` is `false`, the inverse of the components is computed during each call to `inverse\_transform` which can be costly.
    */
   async inverse_transform(
     opts: SparseRandomProjectionInverseTransformOptions
@@ -374,7 +374,7 @@ pms_SparseRandomProjection_transform = {k: v for k, v in pms_SparseRandomProject
   }
 
   /**
-    Pseudo-inverse of the components, only computed if `compute\_inverse\_components` is True.
+    Pseudo-inverse of the components, only computed if `compute\_inverse\_components` is `true`.
    */
   get inverse_components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -515,9 +515,9 @@ export interface SparseRandomProjectionOptions {
   eps?: number
 
   /**
-    If True, ensure that the output of the random projection is a dense numpy array even if the input and random projection matrix are both sparse. In practice, if the number of components is small the number of zero components in the projected data will be very small and it will be more CPU and memory efficient to use a dense representation.
+    If `true`, ensure that the output of the random projection is a dense numpy array even if the input and random projection matrix are both sparse. In practice, if the number of components is small the number of zero components in the projected data will be very small and it will be more CPU and memory efficient to use a dense representation.
 
-    If False, the projected data uses a sparse representation if the input is sparse.
+    If `false`, the projected data uses a sparse representation if the input is sparse.
 
     @defaultValue `false`
    */
@@ -555,7 +555,7 @@ export interface SparseRandomProjectionFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

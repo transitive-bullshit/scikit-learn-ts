@@ -256,7 +256,7 @@ pms_PredictionErrorDisplay_plot = {k: v for k, v in pms_PredictionErrorDisplay_p
   }
 
   /**
-    Residual lines. If `with\_errors=False`, then it is set to `None`.
+    Residual lines. If `with\_errors=False`, then it is set to `undefined`.
    */
   get errors_lines_(): Promise<any> {
     if (this._isDisposed) {
@@ -400,19 +400,19 @@ export interface PredictionErrorDisplayFromEstimatorOptions {
   kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
 
   /**
-    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `None`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
 
     @defaultValue `1`
    */
   subsample?: number
 
   /**
-    Controls the randomness when `subsample` is not `None`. See [Glossary](../../glossary.html#term-random_state) for details.
+    Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -446,19 +446,19 @@ export interface PredictionErrorDisplayFromPredictionsOptions {
   kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
 
   /**
-    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `None`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
 
     @defaultValue `1`
    */
   subsample?: number
 
   /**
-    Controls the randomness when `subsample` is not `None`. See [Glossary](../../glossary.html#term-random_state) for details.
+    Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -475,7 +475,7 @@ export interface PredictionErrorDisplayFromPredictionsOptions {
 
 export interface PredictionErrorDisplayPlotOptions {
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 

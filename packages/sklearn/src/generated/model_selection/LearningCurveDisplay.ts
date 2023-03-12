@@ -265,7 +265,7 @@ pms_LearningCurveDisplay_plot = {k: v for k, v in pms_LearningCurveDisplay_plot.
   }
 
   /**
-    When the `std\_display\_style` is `"errorbar"`, this is a list of `matplotlib.container.ErrorbarContainer` objects. If another style is used, `errorbar\_` is `None`.
+    When the `std\_display\_style` is `"errorbar"`, this is a list of `matplotlib.container.ErrorbarContainer` objects. If another style is used, `errorbar\_` is `undefined`.
    */
   get errorbar_(): Promise<any> {
     if (this._isDisposed) {
@@ -292,7 +292,7 @@ pms_LearningCurveDisplay_plot = {k: v for k, v in pms_LearningCurveDisplay_plot.
   }
 
   /**
-    When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.lines.Line2D` objects corresponding to the mean train and test scores. If another style is used, `line\_` is `None`.
+    When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.lines.Line2D` objects corresponding to the mean train and test scores. If another style is used, `line\_` is `undefined`.
    */
   get lines_(): Promise<any> {
     if (this._isDisposed) {
@@ -319,7 +319,7 @@ pms_LearningCurveDisplay_plot = {k: v for k, v in pms_LearningCurveDisplay_plot.
   }
 
   /**
-    When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.collections.PolyCollection` objects. If another style is used, `fill\_between\_` is `None`.
+    When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.collections.PolyCollection` objects. If another style is used, `fill\_between\_` is `undefined`.
    */
   get fill_between_(): Promise<any> {
     if (this._isDisposed) {
@@ -363,7 +363,7 @@ export interface LearningCurveDisplayOptions {
   test_scores?: NDArray[]
 
   /**
-    The name of the score used in `learning\_curve`. It will be used to decorate the y-axis. If `None`, the generic name `"Score"` will be used.
+    The name of the score used in `learning\_curve`. It will be used to decorate the y-axis. If `undefined`, the generic name `"Score"` will be used.
    */
   score_name?: string
 }
@@ -380,7 +380,7 @@ export interface LearningCurveDisplayFromEstimatorOptions {
   X?: ArrayLike[]
 
   /**
-    Target relative to X for classification or regression; None for unsupervised learning.
+    Target relative to X for classification or regression; `undefined` for unsupervised learning.
    */
   y?: ArrayLike
 
@@ -412,7 +412,7 @@ export interface LearningCurveDisplayFromEstimatorOptions {
   exploit_incremental_learning?: boolean
 
   /**
-    Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -438,7 +438,7 @@ export interface LearningCurveDisplayFromEstimatorOptions {
   shuffle?: boolean
 
   /**
-    Used when `shuffle` is True. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Used when `shuffle` is `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -453,7 +453,7 @@ export interface LearningCurveDisplayFromEstimatorOptions {
   fit_params?: any
 
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -465,7 +465,7 @@ export interface LearningCurveDisplayFromEstimatorOptions {
   negate_score?: boolean
 
   /**
-    The name of the score used to decorate the y-axis of the plot. If `None`, the generic `"Score"` name will be used.
+    The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic `"Score"` name will be used.
    */
   score_name?: string
 
@@ -484,7 +484,7 @@ export interface LearningCurveDisplayFromEstimatorOptions {
   log_scale?: boolean
 
   /**
-    The style used to display the score standard deviation around the mean score. If `None`, no representation of the standard deviation is displayed.
+    The style used to display the score standard deviation around the mean score. If `undefined`, no representation of the standard deviation is displayed.
 
     @defaultValue `'fill_between'`
    */
@@ -508,7 +508,7 @@ export interface LearningCurveDisplayFromEstimatorOptions {
 
 export interface LearningCurveDisplayPlotOptions {
   /**
-    Axes object to plot on. If `None`, a new figure and axes is created.
+    Axes object to plot on. If `undefined`, a new figure and axes is created.
    */
   ax?: any
 
@@ -520,7 +520,7 @@ export interface LearningCurveDisplayPlotOptions {
   negate_score?: boolean
 
   /**
-    The name of the score used to decorate the y-axis of the plot. If `None`, the generic name “Score” will be used.
+    The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic name “Score” will be used.
    */
   score_name?: string
 
@@ -539,7 +539,7 @@ export interface LearningCurveDisplayPlotOptions {
   log_scale?: boolean
 
   /**
-    The style used to display the score standard deviation around the mean score. If None, no standard deviation representation is displayed.
+    The style used to display the score standard deviation around the mean score. If `undefined`, no standard deviation representation is displayed.
 
     @defaultValue `'fill_between'`
    */

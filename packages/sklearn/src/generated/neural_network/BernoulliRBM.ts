@@ -545,7 +545,7 @@ export interface BernoulliRBMFitOptions {
   X?: ArrayLike | SparseMatrix[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 }
@@ -557,7 +557,7 @@ export interface BernoulliRBMFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -588,7 +588,7 @@ export interface BernoulliRBMPartialFitOptions {
   X?: NDArray[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 }

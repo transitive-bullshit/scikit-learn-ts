@@ -245,7 +245,7 @@ pms_SpectralCoclustering_get_submatrix = {k: v for k, v in pms_SpectralCocluster
   }
 
   /**
-    Results of the clustering. `rows\[i, r\]` is True if cluster `i` contains row `r`. Available only after calling `fit`.
+    Results of the clustering. `rows\[i, r\]` is `true` if cluster `i` contains row `r`. Available only after calling `fit`.
    */
   get rows_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {

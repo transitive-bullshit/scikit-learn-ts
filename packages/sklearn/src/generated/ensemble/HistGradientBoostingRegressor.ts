@@ -368,7 +368,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
   }
 
   /**
-    The scores at each iteration on the held-out validation data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. Empty if no early stopping or if `validation\_fraction` is None.
+    The scores at each iteration on the held-out validation data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. Empty if no early stopping or if `validation\_fraction` is `undefined`.
    */
   get validation_score_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -395,7 +395,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
   }
 
   /**
-    Boolean mask for the categorical features. `None` if there are no categorical features.
+    Boolean mask for the categorical features. `undefined` if there are no categorical features.
    */
   get is_categorical_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -504,7 +504,7 @@ export interface HistGradientBoostingRegressorOptions {
   max_iter?: number
 
   /**
-    The maximum number of leaves for each tree. Must be strictly greater than 1. If None, there is no maximum limit.
+    The maximum number of leaves for each tree. Must be strictly greater than 1. If `undefined`, there is no maximum limit.
 
     @defaultValue `31`
    */
@@ -558,28 +558,28 @@ export interface HistGradientBoostingRegressorOptions {
   interaction_cst?: 'pairwise' | 'no_interaction'
 
   /**
-    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](../../glossary.html#term-warm_start).
+    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    If ‘auto’, early stopping is enabled if the sample size is larger than 10000. If True, early stopping is enabled, otherwise early stopping is disabled.
+    If ‘auto’, early stopping is enabled if the sample size is larger than 10000. If `true`, early stopping is enabled, otherwise early stopping is disabled.
 
     @defaultValue `'auto'`
    */
   early_stopping?: 'auto' | boolean
 
   /**
-    Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)). If None, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed.
+    Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)). If `undefined`, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed.
 
     @defaultValue `'loss'`
    */
   scoring?: string
 
   /**
-    Proportion (or absolute size) of training data to set aside as validation data for early stopping. If None, early stopping is done on the training data. Only used if early stopping is performed.
+    Proportion (or absolute size) of training data to set aside as validation data for early stopping. If `undefined`, early stopping is done on the training data. Only used if early stopping is performed.
 
     @defaultValue `0.1`
    */

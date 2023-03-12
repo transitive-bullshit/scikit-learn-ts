@@ -564,7 +564,7 @@ pms_FactorAnalysis_transform = {k: v for k, v in pms_FactorAnalysis_transform.it
 
 export interface FactorAnalysisOptions {
   /**
-    Dimensionality of latent space, the number of components of `X` that are obtained after `transform`. If None, n\_components is set to the number of features.
+    Dimensionality of latent space, the number of components of `X` that are obtained after `transform`. If `undefined`, n\_components is set to the number of features.
    */
   n_components?: number
 
@@ -576,7 +576,7 @@ export interface FactorAnalysisOptions {
   tol?: number
 
   /**
-    Whether to make a copy of X. If `False`, the input X gets overwritten during fitting.
+    Whether to make a copy of X. If `false`, the input X gets overwritten during fitting.
 
     @defaultValue `true`
    */
@@ -590,7 +590,7 @@ export interface FactorAnalysisOptions {
   max_iter?: number
 
   /**
-    The initial guess of the noise variance for each feature. If None, it defaults to np.ones(n\_features).
+    The initial guess of the noise variance for each feature. If `undefined`, it defaults to np.ones(n\_features).
    */
   noise_variance_init?: ArrayLike
 
@@ -609,7 +609,7 @@ export interface FactorAnalysisOptions {
   iterated_power?: number
 
   /**
-    If not None, apply the indicated rotation. Currently, varimax and quartimax are implemented. See [“The varimax criterion for analytic rotation in factor analysis”](https://link.springer.com/article/10.1007%2FBF02289233) H. F. Kaiser, 1958.
+    If not `undefined`, apply the indicated rotation. Currently, varimax and quartimax are implemented. See [“The varimax criterion for analytic rotation in factor analysis”](https://link.springer.com/article/10.1007%2FBF02289233) H. F. Kaiser, 1958.
    */
   rotation?: 'varimax' | 'quartimax'
 
@@ -640,7 +640,7 @@ export interface FactorAnalysisFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

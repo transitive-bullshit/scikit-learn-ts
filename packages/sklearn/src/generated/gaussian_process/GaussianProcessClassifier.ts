@@ -457,7 +457,7 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
 
 export interface GaussianProcessClassifierOptions {
   /**
-    The kernel specifying the covariance function of the GP. If None is passed, the kernel “1.0 \* RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a `CompoundKernel`.
+    The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel “1.0 \* RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a `CompoundKernel`.
    */
   kernel?: any
 
@@ -490,7 +490,7 @@ export interface GaussianProcessClassifierOptions {
   warm_start?: boolean
 
   /**
-    If True, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
+    If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
 
     @defaultValue `true`
    */
@@ -509,7 +509,7 @@ export interface GaussianProcessClassifierOptions {
   multi_class?: 'one_vs_rest' | 'one_vs_one'
 
   /**
-    The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -528,19 +528,19 @@ export interface GaussianProcessClassifierFitOptions {
 
 export interface GaussianProcessClassifierLogMarginalLikelihoodOptions {
   /**
-    Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If None, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
+    Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
    */
   theta?: ArrayLike
 
   /**
-    If True, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. Note that gradient computation is not supported for non-binary classification. If True, theta must not be None.
+    If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. Note that gradient computation is not supported for non-binary classification. If `true`, theta must not be `undefined`.
 
     @defaultValue `false`
    */
   eval_gradient?: boolean
 
   /**
-    If True, the kernel attribute is copied. If False, the kernel attribute is modified, but may result in a performance improvement.
+    If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.
 
     @defaultValue `true`
    */

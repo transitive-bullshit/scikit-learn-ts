@@ -416,7 +416,7 @@ export interface BallTreeKernelDensityOptions {
   rtol?: number
 
   /**
-    If True, use a breadth-first search. If False (default) use a depth-first search. Breadth-first is generally faster for compact kernels and/or high tolerances.
+    If `true`, use a breadth-first search. If `false` (default) use a depth-first search. Breadth-first is generally faster for compact kernels and/or high tolerances.
 
     @defaultValue `false`
    */
@@ -444,28 +444,28 @@ export interface BallTreeQueryOptions {
   k?: number
 
   /**
-    if True, return a tuple (d, i) of distances and indices if False, return array i
+    if `true`, return a tuple (d, i) of distances and indices if `false`, return array i
 
     @defaultValue `true`
    */
   return_distance?: boolean
 
   /**
-    if True, use the dual tree formalism for the query: a tree is built for the query points, and the pair of trees is used to efficiently search this space. This can lead to better performance as the number of points grows large.
+    if `true`, use the dual tree formalism for the query: a tree is built for the query points, and the pair of trees is used to efficiently search this space. This can lead to better performance as the number of points grows large.
 
     @defaultValue `false`
    */
   dualtree?: boolean
 
   /**
-    if True, then query the nodes in a breadth-first manner. Otherwise, query the nodes in a depth-first manner.
+    if `true`, then query the nodes in a breadth-first manner. Otherwise, query the nodes in a depth-first manner.
 
     @defaultValue `false`
    */
   breadth_first?: boolean
 
   /**
-    if True, then distances and indices of each point are sorted on return, so that the first column contains the closest points. Otherwise, neighbors are returned in an arbitrary order.
+    if `true`, then distances and indices of each point are sorted on return, so that the first column contains the closest points. Otherwise, neighbors are returned in an arbitrary order.
 
     @defaultValue `true`
    */
@@ -484,21 +484,21 @@ export interface BallTreeQueryRadiusOptions {
   r?: any
 
   /**
-    if True, return distances to neighbors of each point if False, return only neighbors Note that unlike the query() method, setting return\_distance=True here adds to the computation time. Not all distances need to be calculated explicitly for return\_distance=False. Results are not sorted by default: see `sort\_results` keyword.
+    if `true`, return distances to neighbors of each point if `false`, return only neighbors Note that unlike the query() method, setting return\_distance=`true` here adds to the computation time. Not all distances need to be calculated explicitly for return\_distance=`false`. Results are not sorted by default: see `sort\_results` keyword.
 
     @defaultValue `false`
    */
   return_distance?: boolean
 
   /**
-    if True, return only the count of points within distance r if False, return the indices of all points within distance r If return\_distance==True, setting count\_only=True will result in an error.
+    if `true`, return only the count of points within distance r if `false`, return the indices of all points within distance r If return\_distance==`true`, setting count\_only=`true` will result in an error.
 
     @defaultValue `false`
    */
   count_only?: boolean
 
   /**
-    if True, the distances and indices will be sorted before being returned. If False, the results will not be sorted. If return\_distance == False, setting sort\_results = True will result in an error.
+    if `true`, the distances and indices will be sorted before being returned. If `false`, the results will not be sorted. If return\_distance == `false`, setting sort\_results = `true` will result in an error.
 
     @defaultValue `false`
    */
@@ -519,7 +519,7 @@ export interface BallTreeTwoPointCorrelationOptions {
   r?: ArrayLike
 
   /**
-    If True, use a dualtree algorithm. Otherwise, use a single-tree algorithm. Dual tree algorithms can have better scaling for large N.
+    If `true`, use a dualtree algorithm. Otherwise, use a single-tree algorithm. Dual tree algorithms can have better scaling for large N.
 
     @defaultValue `false`
    */

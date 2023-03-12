@@ -329,7 +329,7 @@ pms_SelectKBest_transform = {k: v for k, v in pms_SelectKBest_transform.items() 
   }
 
   /**
-    p-values of feature scores, None if `score\_func` returned only scores.
+    p-values of feature scores, `undefined` if `score\_func` returned only scores.
    */
   get pvalues_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -435,7 +435,7 @@ export interface SelectKBestFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -454,7 +454,7 @@ export interface SelectKBestGetFeatureNamesOutOptions {
 
 export interface SelectKBestGetSupportOptions {
   /**
-    If True, the return value will be an array of integers, rather than a boolean mask.
+    If `true`, the return value will be an array of integers, rather than a boolean mask.
 
     @defaultValue `false`
    */

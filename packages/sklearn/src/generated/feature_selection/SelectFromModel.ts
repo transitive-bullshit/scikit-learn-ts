@@ -371,7 +371,7 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
   }
 
   /**
-    Maximum number of features calculated during [fit](../../glossary.html#term-fit). Only defined if the `max\_features` is not `None`.
+    Maximum number of features calculated during [fit](../../glossary.html#term-fit). Only defined if the `max\_features` is not `undefined`.
    */
   get max_features_(): Promise<number> {
     if (this._isDisposed) {
@@ -423,17 +423,17 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
 
 export interface SelectFromModelOptions {
   /**
-    The base estimator from which the transformer is built. This can be both a fitted (if `prefit` is set to True) or a non-fitted estimator. The estimator should have a `feature\_importances\_` or `coef\_` attribute after fitting. Otherwise, the `importance\_getter` parameter should be used.
+    The base estimator from which the transformer is built. This can be both a fitted (if `prefit` is set to `true`) or a non-fitted estimator. The estimator should have a `feature\_importances\_` or `coef\_` attribute after fitting. Otherwise, the `importance\_getter` parameter should be used.
    */
   estimator?: any
 
   /**
-    The threshold value to use for feature selection. Features whose absolute importance value is greater or equal are kept while the others are discarded. If “median” (resp. “mean”), then the `threshold` value is the median (resp. the mean) of the feature importances. A scaling factor (e.g., “1.25\*mean”) may also be used. If None and if the estimator has a parameter penalty set to l1, either explicitly or implicitly (e.g, Lasso), the threshold used is 1e-5. Otherwise, “mean” is used by default.
+    The threshold value to use for feature selection. Features whose absolute importance value is greater or equal are kept while the others are discarded. If “median” (resp. “mean”), then the `threshold` value is the median (resp. the mean) of the feature importances. A scaling factor (e.g., “1.25\*mean”) may also be used. If `undefined` and if the estimator has a parameter penalty set to l1, either explicitly or implicitly (e.g, Lasso), the threshold used is 1e-5. Otherwise, “mean” is used by default.
    */
   threshold?: string | number
 
   /**
-    Whether a prefit model is expected to be passed into the constructor directly or not. If `True`, `estimator` must be a fitted estimator. If `False`, `estimator` is fitted and updated by calling `fit` and `partial\_fit`, respectively.
+    Whether a prefit model is expected to be passed into the constructor directly or not. If `true`, `estimator` must be a fitted estimator. If `false`, `estimator` is fitted and updated by calling `fit` and `partial\_fit`, respectively.
 
     @defaultValue `false`
    */
@@ -487,7 +487,7 @@ export interface SelectFromModelFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -506,7 +506,7 @@ export interface SelectFromModelGetFeatureNamesOutOptions {
 
 export interface SelectFromModelGetSupportOptions {
   /**
-    If True, the return value will be an array of integers, rather than a boolean mask.
+    If `true`, the return value will be an array of integers, rather than a boolean mask.
 
     @defaultValue `false`
    */

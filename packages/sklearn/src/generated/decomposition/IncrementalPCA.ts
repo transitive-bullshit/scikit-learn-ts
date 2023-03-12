@@ -682,12 +682,12 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
 
 export interface IncrementalPCAOptions {
   /**
-    Number of components to keep. If `n\_components` is `None`, then `n\_components` is set to `min(n\_samples, n\_features)`.
+    Number of components to keep. If `n\_components` is `undefined`, then `n\_components` is set to `min(n\_samples, n\_features)`.
    */
   n_components?: number
 
   /**
-    When True (False by default) the `components\_` vectors are divided by `n\_samples` times `components\_` to ensure uncorrelated outputs with unit component-wise variances.
+    When `true` (`false` by default) the `components\_` vectors are divided by `n\_samples` times `components\_` to ensure uncorrelated outputs with unit component-wise variances.
 
     Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometimes improve the predictive accuracy of the downstream estimators by making data respect some hard-wired assumptions.
 
@@ -696,14 +696,14 @@ export interface IncrementalPCAOptions {
   whiten?: boolean
 
   /**
-    If False, X will be overwritten. `copy=False` can be used to save memory but is unsafe for general use.
+    If `false`, X will be overwritten. `copy=False` can be used to save memory but is unsafe for general use.
 
     @defaultValue `true`
    */
   copy?: boolean
 
   /**
-    The number of samples to use for each batch. Only used when calling `fit`. If `batch\_size` is `None`, then `batch\_size` is inferred from the data and set to `5 \* n\_features`, to provide a balance between approximation accuracy and memory consumption.
+    The number of samples to use for each batch. Only used when calling `fit`. If `batch\_size` is `undefined`, then `batch\_size` is inferred from the data and set to `5 \* n\_features`, to provide a balance between approximation accuracy and memory consumption.
    */
   batch_size?: number
 }
@@ -727,7 +727,7 @@ export interface IncrementalPCAFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

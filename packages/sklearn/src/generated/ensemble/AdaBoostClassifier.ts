@@ -689,7 +689,7 @@ pms_AdaBoostClassifier_staged_score = {k: v for k, v in pms_AdaBoostClassifier_s
 
 export interface AdaBoostClassifierOptions {
   /**
-    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `None`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
+    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
    */
   estimator?: any
 
@@ -720,7 +720,7 @@ export interface AdaBoostClassifierOptions {
   random_state?: number
 
   /**
-    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `None`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
+    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
    */
   base_estimator?: any
 }
@@ -744,7 +744,7 @@ export interface AdaBoostClassifierFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, the sample weights are initialized to 1 / n\_samples.
+    Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
    */
   sample_weight?: ArrayLike
 }

@@ -436,7 +436,7 @@ export interface KBinsDiscretizerOptions {
   strategy?: 'uniform' | 'quantile' | 'kmeans'
 
   /**
-    The desired data-type for the output. If None, output dtype is consistent with input dtype. Only np.float32 and np.float64 are supported.
+    The desired data-type for the output. If `undefined`, output dtype is consistent with input dtype. Only np.float32 and np.float64 are supported.
    */
   dtype?: any
 
@@ -470,7 +470,7 @@ export interface KBinsDiscretizerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

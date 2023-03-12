@@ -208,7 +208,7 @@ pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_ge
   /**
     Convert the data back to the original representation.
 
-    When unknown categories are encountered (all zeros in the one-hot encoding), `None` is used to represent this category. If the feature with the unknown category has a dropped category, the dropped category will be its inverse.
+    When unknown categories are encountered (all zeros in the one-hot encoding), `undefined` is used to represent this category. If the feature with the unknown category has a dropped category, the dropped category will be its inverse.
 
     For a given input feature, if there is an infrequent category, ‘infrequent\_sklearn’ will be used to represent the infrequent category.
    */
@@ -420,14 +420,14 @@ export interface OneHotEncoderOptions {
   drop?: 'first' | 'if_binary' | any[]
 
   /**
-    Will return sparse matrix if set True else will return an array.
+    Will return sparse matrix if set `true` else will return an array.
 
     @defaultValue `true`
    */
   sparse?: boolean
 
   /**
-    Will return sparse matrix if set True else will return an array.
+    Will return sparse matrix if set `true` else will return an array.
 
     @defaultValue `true`
    */
@@ -451,7 +451,7 @@ export interface OneHotEncoderOptions {
   min_frequency?: number
 
   /**
-    Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `None`, there is no limit to the number of output features.
+    Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
    */
   max_categories?: number
 }
@@ -475,7 +475,7 @@ export interface OneHotEncoderFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

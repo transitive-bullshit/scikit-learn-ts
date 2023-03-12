@@ -607,7 +607,7 @@ export interface RadiusNeighborsTransformerRadiusNeighborsOptions {
   return_distance?: boolean
 
   /**
-    If True, the distances and indices will be sorted by increasing distances before being returned. If False, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
+    If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
 
     @defaultValue `false`
    */
@@ -633,7 +633,7 @@ export interface RadiusNeighborsTransformerRadiusNeighborsGraphOptions {
   mode?: 'connectivity' | 'distance'
 
   /**
-    If True, in each row of the result, the non-zero entries will be sorted by increasing distances. If False, the non-zero entries may not be sorted. Only used with mode=’distance’.
+    If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.
 
     @defaultValue `false`
    */

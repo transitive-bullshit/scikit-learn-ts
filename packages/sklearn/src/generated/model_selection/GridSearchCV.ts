@@ -590,7 +590,7 @@ pms_GridSearchCV_transform = {k: v for k, v in pms_GridSearchCV_transform.items(
   /**
     Seconds used for refitting the best model on the whole dataset.
 
-    This is present only if `refit` is not False.
+    This is present only if `refit` is not `false`.
    */
   get refit_time_(): Promise<number> {
     if (this._isDisposed) {
@@ -684,7 +684,7 @@ export interface GridSearchCVOptions {
   scoring?: string | any[] | any
 
   /**
-    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -730,7 +730,7 @@ export interface GridSearchCVOptions {
   error_score?: 'raise'
 
   /**
-    If `False`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+    If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
 
     @defaultValue `false`
    */
@@ -751,7 +751,7 @@ export interface GridSearchCVFitOptions {
   X?: ArrayLike[]
 
   /**
-    Target relative to X for classification or regression; None for unsupervised learning.
+    Target relative to X for classification or regression; `undefined` for unsupervised learning.
    */
   y?: ArrayLike[]
 
@@ -803,7 +803,7 @@ export interface GridSearchCVScoreOptions {
   X?: ArrayLike[]
 
   /**
-    Target relative to X for classification or regression; None for unsupervised learning.
+    Target relative to X for classification or regression; `undefined` for unsupervised learning.
    */
   y?: ArrayLike[]
 }

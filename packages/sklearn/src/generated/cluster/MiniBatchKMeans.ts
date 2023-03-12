@@ -425,7 +425,7 @@ pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.
   }
 
   /**
-    Labels of each point (if compute\_labels is set to True).
+    Labels of each point (if compute\_labels is set to `true`).
    */
   get labels_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -450,7 +450,7 @@ pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.
   }
 
   /**
-    The value of the inertia criterion associated with the chosen partition if compute\_labels is set to True. If compute\_labels is set to False, it’s an approximation of the inertia based on an exponentially weighted average of the batch inertiae. The inertia is defined as the sum of square distances of samples to their cluster center, weighted by the sample weights if provided.
+    The value of the inertia criterion associated with the chosen partition if compute\_labels is set to `true`. If compute\_labels is set to `false`, it’s an approximation of the inertia based on an exponentially weighted average of the batch inertiae. The inertia is defined as the sum of square distances of samples to their cluster center, weighted by the sample weights if provided.
    */
   get inertia_(): Promise<number> {
     if (this._isDisposed) {
@@ -643,7 +643,7 @@ export interface MiniBatchKMeansOptions {
   /**
     Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed inertia.
 
-    To disable convergence detection based on inertia, set max\_no\_improvement to None.
+    To disable convergence detection based on inertia, set max\_no\_improvement to `undefined`.
 
     @defaultValue `10`
    */
@@ -652,7 +652,7 @@ export interface MiniBatchKMeansOptions {
   /**
     Number of samples to randomly sample for speeding up the initialization (sometimes at the expense of accuracy): the only algorithm is initialized by running a batch KMeans on a random subset of the data. This needs to be larger than n\_clusters.
 
-    If `None`, the heuristic is `init\_size \= 3 \* batch\_size` if `3 \* batch\_size < n\_clusters`, else `init\_size \= 3 \* n\_clusters`.
+    If `undefined`, the heuristic is `init\_size \= 3 \* batch\_size` if `3 \* batch\_size < n\_clusters`, else `init\_size \= 3 \* n\_clusters`.
    */
   init_size?: number
 
@@ -685,7 +685,7 @@ export interface MiniBatchKMeansFitOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -702,7 +702,7 @@ export interface MiniBatchKMeansFitPredictOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -719,7 +719,7 @@ export interface MiniBatchKMeansFitTransformOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -743,7 +743,7 @@ export interface MiniBatchKMeansPartialFitOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -755,7 +755,7 @@ export interface MiniBatchKMeansPredictOptions {
   X?: ArrayLike | SparseMatrix[]
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }
@@ -772,7 +772,7 @@ export interface MiniBatchKMeansScoreOptions {
   y?: any
 
   /**
-    The weights for each observation in X. If None, all observations are assigned equal weight.
+    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
    */
   sample_weight?: ArrayLike
 }

@@ -206,7 +206,7 @@ pms_NuSVC_predict = {k: v for k, v in pms_NuSVC_predict.items() if v is not None
   /**
     Compute log probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
    */
   async predict_log_proba(
     opts: NuSVCPredictLogProbaOptions
@@ -238,7 +238,7 @@ pms_NuSVC_predict_log_proba = {k: v for k, v in pms_NuSVC_predict_log_proba.item
   /**
     Compute probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
    */
   async predict_proba(opts: NuSVCPredictProbaOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -652,7 +652,7 @@ export interface NuSVCOptions {
   break_ties?: boolean
 
   /**
-    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is False. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }

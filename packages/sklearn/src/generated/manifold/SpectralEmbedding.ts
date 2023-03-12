@@ -326,7 +326,7 @@ export interface SpectralEmbeddingOptions {
     | 'precomputed_nearest_neighbors'
 
   /**
-    Kernel coefficient for rbf kernel. If None, gamma will be set to 1/n\_features.
+    Kernel coefficient for rbf kernel. If `undefined`, gamma will be set to 1/n\_features.
    */
   gamma?: number
 
@@ -336,7 +336,7 @@ export interface SpectralEmbeddingOptions {
   random_state?: number
 
   /**
-    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems. If None, then `'arpack'` is used.
+    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems. If `undefined`, then `'arpack'` is used.
    */
   eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
 
@@ -348,12 +348,12 @@ export interface SpectralEmbeddingOptions {
   eigen_tol?: number
 
   /**
-    Number of nearest neighbors for nearest\_neighbors graph building. If None, n\_neighbors will be set to max(n\_samples/10, 1).
+    Number of nearest neighbors for nearest\_neighbors graph building. If `undefined`, n\_neighbors will be set to max(n\_samples/10, 1).
    */
   n_neighbors?: number
 
   /**
-    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }

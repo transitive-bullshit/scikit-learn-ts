@@ -328,7 +328,7 @@ pms_OneVsOneClassifier_score = {k: v for k, v in pms_OneVsOneClassifier_score.it
   }
 
   /**
-    Indices of samples used when training the estimators. `None` when `estimator`’s `pairwise` tag is False.
+    Indices of samples used when training the estimators. `undefined` when `estimator`’s `pairwise` tag is `false`.
    */
   get pairwise_indices_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -418,7 +418,7 @@ export interface OneVsOneClassifierOptions {
   /**
     The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \- 1) / 2` OVO problems are computed in parallel.
 
-    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }

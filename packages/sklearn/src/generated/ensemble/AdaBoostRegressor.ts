@@ -449,7 +449,7 @@ pms_AdaBoostRegressor_staged_score = {k: v for k, v in pms_AdaBoostRegressor_sta
 
 export interface AdaBoostRegressorOptions {
   /**
-    The base estimator from which the boosted ensemble is built. If `None`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
+    The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
    */
   estimator?: any
 
@@ -480,7 +480,7 @@ export interface AdaBoostRegressorOptions {
   random_state?: number
 
   /**
-    The base estimator from which the boosted ensemble is built. If `None`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
+    The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
    */
   base_estimator?: any
 }
@@ -497,7 +497,7 @@ export interface AdaBoostRegressorFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, the sample weights are initialized to 1 / n\_samples.
+    Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
    */
   sample_weight?: ArrayLike
 }

@@ -438,7 +438,7 @@ export interface VarianceThresholdFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 
@@ -457,7 +457,7 @@ export interface VarianceThresholdGetFeatureNamesOutOptions {
 
 export interface VarianceThresholdGetSupportOptions {
   /**
-    If True, the return value will be an array of integers, rather than a boolean mask.
+    If `true`, the return value will be an array of integers, rather than a boolean mask.
 
     @defaultValue `false`
    */

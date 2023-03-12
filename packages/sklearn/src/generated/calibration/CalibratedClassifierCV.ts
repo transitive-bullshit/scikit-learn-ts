@@ -377,7 +377,7 @@ export interface CalibratedClassifierCVOptions {
   cv?: number | 'prefit'
 
   /**
-    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors.
+    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors.
 
     Base estimator clones are fitted in parallel across cross-validation iterations. Therefore parallelism happens only when `cv != "prefit"`.
 
@@ -388,9 +388,9 @@ export interface CalibratedClassifierCVOptions {
   /**
     Determines how the calibrator is fitted when `cv` is not `'prefit'`. Ignored if `cv='prefit'`.
 
-    If `True`, the `estimator` is fitted using training data, and calibrated using testing data, for each `cv` fold. The final estimator is an ensemble of `n\_cv` fitted classifier and calibrator pairs, where `n\_cv` is the number of cross-validation folds. The output is the average predicted probabilities of all pairs.
+    If `true`, the `estimator` is fitted using training data, and calibrated using testing data, for each `cv` fold. The final estimator is an ensemble of `n\_cv` fitted classifier and calibrator pairs, where `n\_cv` is the number of cross-validation folds. The output is the average predicted probabilities of all pairs.
 
-    If `False`, `cv` is used to compute unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. At prediction time, the classifier used is the `estimator` trained on all the data. Note that this method is also internally implemented in [`sklearn.svm`](../classes.html#module-sklearn.svm "sklearn.svm") estimators with the `probabilities=True` parameter.
+    If `false`, `cv` is used to compute unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. At prediction time, the classifier used is the `estimator` trained on all the data. Note that this method is also internally implemented in [`sklearn.svm`](../classes.html#module-sklearn.svm "sklearn.svm") estimators with the `probabilities=True` parameter.
 
     @defaultValue `true`
    */
@@ -414,7 +414,7 @@ export interface CalibratedClassifierCVFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted.
+    Sample weights. If `undefined`, then samples are equally weighted.
    */
   sample_weight?: ArrayLike
 

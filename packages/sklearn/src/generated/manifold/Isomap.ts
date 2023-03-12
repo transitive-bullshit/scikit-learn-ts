@@ -424,14 +424,14 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
 
 export interface IsomapOptions {
   /**
-    Number of neighbors to consider for each point. If `n\_neighbors` is an int, then `radius` must be `None`.
+    Number of neighbors to consider for each point. If `n\_neighbors` is an int, then `radius` must be `undefined`.
 
     @defaultValue `5`
    */
   n_neighbors?: number
 
   /**
-    Limiting distance of neighbors to return. If `radius` is a float, then `n\_neighbors` must be set to `None`.
+    Limiting distance of neighbors to return. If `radius` is a float, then `n\_neighbors` must be set to `undefined`.
    */
   radius?: number
 
@@ -486,7 +486,7 @@ export interface IsomapOptions {
   neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
   /**
-    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 

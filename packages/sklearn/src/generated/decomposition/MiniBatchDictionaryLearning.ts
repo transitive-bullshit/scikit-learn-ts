@@ -585,7 +585,7 @@ export interface MiniBatchDictionaryLearningOptions {
   n_iter?: number
 
   /**
-    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not None, `n\_iter` is ignored.
+    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
    */
   max_iter?: number
 
@@ -597,7 +597,7 @@ export interface MiniBatchDictionaryLearningOptions {
   fit_algorithm?: 'lars' | 'cd'
 
   /**
-    Number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -628,12 +628,12 @@ export interface MiniBatchDictionaryLearningOptions {
   transform_algorithm?: 'lasso_lars' | 'lasso_cd' | 'lars' | 'omp' | 'threshold'
 
   /**
-    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `None`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
+    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
    */
   transform_n_nonzero_coefs?: number
 
   /**
-    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `None`, defaults to `alpha`.
+    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
    */
   transform_alpha?: number
 
@@ -652,7 +652,7 @@ export interface MiniBatchDictionaryLearningOptions {
   split_sign?: boolean
 
   /**
-    Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `True`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+    Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -683,7 +683,7 @@ export interface MiniBatchDictionaryLearningOptions {
   callback?: any
 
   /**
-    Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not None.
+    Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not `undefined`.
 
     To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
 
@@ -692,9 +692,9 @@ export interface MiniBatchDictionaryLearningOptions {
   tol?: number
 
   /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not None.
+    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not `undefined`.
 
-    To disable convergence detection based on cost function, set `max\_no\_improvement` to None.
+    To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
 
     @defaultValue `10`
    */
@@ -720,7 +720,7 @@ export interface MiniBatchDictionaryLearningFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

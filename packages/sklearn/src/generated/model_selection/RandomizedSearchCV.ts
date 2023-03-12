@@ -497,7 +497,7 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
   /**
     Mean cross-validated score of the best\_estimator.
 
-    For multi-metric evaluation, this is not available if `refit` is `False`. See `refit` parameter for more information.
+    For multi-metric evaluation, this is not available if `refit` is `false`. See `refit` parameter for more information.
 
     This attribute is not available if `refit` is a function.
    */
@@ -528,7 +528,7 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
   /**
     Parameter setting that gave the best results on the hold out data.
 
-    For multi-metric evaluation, this is not available if `refit` is `False`. See `refit` parameter for more information.
+    For multi-metric evaluation, this is not available if `refit` is `false`. See `refit` parameter for more information.
    */
   get best_params_(): Promise<any> {
     if (this._isDisposed) {
@@ -559,7 +559,7 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
 
     The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best\_score\_`).
 
-    For multi-metric evaluation, this is not available if `refit` is `False`. See `refit` parameter for more information.
+    For multi-metric evaluation, this is not available if `refit` is `false`. See `refit` parameter for more information.
    */
   get best_index_(): Promise<number> {
     if (this._isDisposed) {
@@ -644,7 +644,7 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
   /**
     Seconds used for refitting the best model on the whole dataset.
 
-    This is present only if `refit` is not False.
+    This is present only if `refit` is not `false`.
    */
   get refit_time_(): Promise<number> {
     if (this._isDisposed) {
@@ -751,7 +751,7 @@ export interface RandomizedSearchCVOptions {
   scoring?: string | any[] | any
 
   /**
-    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -800,7 +800,7 @@ export interface RandomizedSearchCVOptions {
   error_score?: 'raise'
 
   /**
-    If `False`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+    If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
 
     @defaultValue `false`
    */
@@ -821,7 +821,7 @@ export interface RandomizedSearchCVFitOptions {
   X?: ArrayLike[]
 
   /**
-    Target relative to X for classification or regression; None for unsupervised learning.
+    Target relative to X for classification or regression; `undefined` for unsupervised learning.
    */
   y?: ArrayLike[]
 
@@ -873,7 +873,7 @@ export interface RandomizedSearchCVScoreOptions {
   X?: ArrayLike[]
 
   /**
-    Target relative to X for classification or regression; None for unsupervised learning.
+    Target relative to X for classification or regression; `undefined` for unsupervised learning.
    */
   y?: ArrayLike[]
 }

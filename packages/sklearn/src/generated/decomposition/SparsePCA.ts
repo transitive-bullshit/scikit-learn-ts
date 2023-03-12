@@ -466,7 +466,7 @@ pms_SparsePCA_transform = {k: v for k, v in pms_SparsePCA_transform.items() if v
 
 export interface SparsePCAOptions {
   /**
-    Number of sparse atoms to extract. If None, then `n\_components` is set to `n\_features`.
+    Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`.
    */
   n_components?: number
 
@@ -506,17 +506,17 @@ export interface SparsePCAOptions {
   method?: 'lars' | 'cd'
 
   /**
-    Number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Initial values for the loadings for warm restart scenarios. Only used if `U\_init` and `V\_init` are not None.
+    Initial values for the loadings for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
    */
   U_init?: NDArray[]
 
   /**
-    Initial values for the components for warm restart scenarios. Only used if `U\_init` and `V\_init` are not None.
+    Initial values for the components for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
    */
   V_init?: NDArray[]
 
@@ -552,7 +552,7 @@ export interface SparsePCAFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

@@ -286,7 +286,7 @@ export interface FeatureUnionOptions {
   transformer_list?: any
 
   /**
-    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -296,7 +296,7 @@ export interface FeatureUnionOptions {
   transformer_weights?: any
 
   /**
-    If True, the time elapsed while fitting each transformer will be printed as it is completed.
+    If `true`, the time elapsed while fitting each transformer will be printed as it is completed.
 
     @defaultValue `false`
    */

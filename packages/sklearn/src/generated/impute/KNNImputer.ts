@@ -254,7 +254,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
   }
 
   /**
-    Indicator used to add binary indicators for missing values. `None` if add\_indicator is False.
+    Indicator used to add binary indicators for missing values. `undefined` if add\_indicator is `false`.
    */
   get indicator_(): Promise<any> {
     if (this._isDisposed) {
@@ -355,21 +355,21 @@ export interface KNNImputerOptions {
   metric?: 'nan_euclidean'
 
   /**
-    If True, a copy of X will be created. If False, imputation will be done in-place whenever possible.
+    If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible.
 
     @defaultValue `true`
    */
   copy?: boolean
 
   /**
-    If True, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+    If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
 
     @defaultValue `false`
    */
   add_indicator?: boolean
 
   /**
-    If True, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0`.
+    If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0`.
 
     @defaultValue `false`
    */
@@ -395,7 +395,7 @@ export interface KNNImputerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

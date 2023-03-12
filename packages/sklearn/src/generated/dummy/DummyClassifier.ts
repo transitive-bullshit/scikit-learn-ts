@@ -361,7 +361,7 @@ pms_DummyClassifier_score = {k: v for k, v in pms_DummyClassifier_score.items() 
   }
 
   /**
-    True if the array returned from predict is to be in sparse CSC format. Is automatically set to True if the input `y` is passed in sparse format.
+    True if the array returned from predict is to be in sparse CSC format. Is automatically set to `true` if the input `y` is passed in sparse format.
    */
   get sparse_output_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -445,7 +445,7 @@ export interface DummyClassifierPredictProbaOptions {
 
 export interface DummyClassifierScoreOptions {
   /**
-    Test samples. Passing None as test samples gives the same result as passing real test samples, since DummyClassifier operates independently of the sampled observations.
+    Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since DummyClassifier operates independently of the sampled observations.
    */
   X?: ArrayLike[]
 

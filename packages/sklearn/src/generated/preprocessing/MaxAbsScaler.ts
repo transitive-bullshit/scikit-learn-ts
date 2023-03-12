@@ -435,7 +435,7 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
 
 export interface MaxAbsScalerOptions {
   /**
-    Set to False to perform inplace scaling and avoid a copy (if the input is already a numpy array).
+    Set to `false` to perform inplace scaling and avoid a copy (if the input is already a numpy array).
 
     @defaultValue `true`
    */
@@ -461,7 +461,7 @@ export interface MaxAbsScalerFitTransformOptions {
   X?: ArrayLike[]
 
   /**
-    Target values (None for unsupervised transformations).
+    Target values (`undefined` for unsupervised transformations).
    */
   y?: ArrayLike
 

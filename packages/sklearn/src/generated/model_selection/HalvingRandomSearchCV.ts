@@ -570,7 +570,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   }
 
   /**
-    The actual number of iterations that were run. This is equal to `n\_required\_iterations\_` if `aggressive\_elimination` is `True`. Else, this is equal to `min(n\_possible\_iterations\_, n\_required\_iterations\_)`.
+    The actual number of iterations that were run. This is equal to `n\_required\_iterations\_` if `aggressive\_elimination` is `true`. Else, this is equal to `min(n\_possible\_iterations\_, n\_required\_iterations\_)`.
    */
   get n_iterations_(): Promise<number> {
     if (this._isDisposed) {
@@ -844,7 +844,7 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
   /**
     Seconds used for refitting the best model on the whole dataset.
 
-    This is present only if `refit` is not False.
+    This is present only if `refit` is not `false`.
    */
   get refit_time_(): Promise<number> {
     if (this._isDisposed) {
@@ -972,7 +972,7 @@ export interface HalvingRandomSearchCVOptions {
   min_resources?: 'exhaust' | 'smallest' | number
 
   /**
-    This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `True`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `False` by default, which means that the last iteration may evaluate more than `factor` candidates. See [Aggressive elimination of candidates](../grid_search.html#aggressive-elimination) for more details.
+    This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `true`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `false` by default, which means that the last iteration may evaluate more than `factor` candidates. See [Aggressive elimination of candidates](../grid_search.html#aggressive-elimination) for more details.
 
     @defaultValue `false`
    */
@@ -986,12 +986,12 @@ export interface HalvingRandomSearchCVOptions {
   cv?: number
 
   /**
-    A single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If None, the estimator’s score method is used.
+    A single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
    */
   scoring?: string
 
   /**
-    If True, refit an estimator using the best found parameters on the whole dataset.
+    If `true`, refit an estimator using the best found parameters on the whole dataset.
 
     The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `HalvingRandomSearchCV` instance.
 
@@ -1005,7 +1005,7 @@ export interface HalvingRandomSearchCVOptions {
   error_score?: 'raise'
 
   /**
-    If `False`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+    If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
 
     @defaultValue `false`
    */
@@ -1017,7 +1017,7 @@ export interface HalvingRandomSearchCVOptions {
   random_state?: number
 
   /**
-    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -1041,7 +1041,7 @@ export interface HalvingRandomSearchCVFitOptions {
   X?: ArrayLike
 
   /**
-    Target relative to X for classification or regression; None for unsupervised learning.
+    Target relative to X for classification or regression; `undefined` for unsupervised learning.
    */
   y?: ArrayLike
 
@@ -1091,7 +1091,7 @@ export interface HalvingRandomSearchCVScoreOptions {
   X?: ArrayLike[]
 
   /**
-    Target relative to X for classification or regression; None for unsupervised learning.
+    Target relative to X for classification or regression; `undefined` for unsupervised learning.
    */
   y?: ArrayLike[]
 }

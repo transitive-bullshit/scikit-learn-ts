@@ -423,7 +423,7 @@ pms_RandomForestRegressor_score = {k: v for k, v in pms_RandomForestRegressor_sc
   }
 
   /**
-    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is True.
+    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -450,7 +450,7 @@ pms_RandomForestRegressor_score = {k: v for k, v in pms_RandomForestRegressor_sc
   }
 
   /**
-    Prediction computed with out-of-bag estimate on the training set. This attribute exists only when `oob\_score` is True.
+    Prediction computed with out-of-bag estimate on the training set. This attribute exists only when `oob\_score` is `true`.
    */
   get oob_prediction_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -493,7 +493,7 @@ export interface RandomForestRegressorOptions {
   criterion?: 'squared_error' | 'absolute_error' | 'friedman_mse' | 'poisson'
 
   /**
-    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+    The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
    */
   max_depth?: number
 
@@ -526,7 +526,7 @@ export interface RandomForestRegressorOptions {
   max_features?: 'sqrt' | 'log2' | number | number
 
   /**
-    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
@@ -540,21 +540,21 @@ export interface RandomForestRegressorOptions {
   min_impurity_decrease?: number
 
   /**
-    Whether bootstrap samples are used when building trees. If False, the whole dataset is used to build each tree.
+    Whether bootstrap samples are used when building trees. If `false`, the whole dataset is used to build each tree.
 
     @defaultValue `true`
    */
   bootstrap?: boolean
 
   /**
-    Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=True.
+    Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=`true`.
 
     @defaultValue `false`
    */
   oob_score?: boolean
 
   /**
-    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomForestRegressor.fit "sklearn.ensemble.RandomForestRegressor.fit"), [`predict`](#sklearn.ensemble.RandomForestRegressor.predict "sklearn.ensemble.RandomForestRegressor.predict"), [`decision\_path`](#sklearn.ensemble.RandomForestRegressor.decision_path "sklearn.ensemble.RandomForestRegressor.decision_path") and [`apply`](#sklearn.ensemble.RandomForestRegressor.apply "sklearn.ensemble.RandomForestRegressor.apply") are all parallelized over the trees. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomForestRegressor.fit "sklearn.ensemble.RandomForestRegressor.fit"), [`predict`](#sklearn.ensemble.RandomForestRegressor.predict "sklearn.ensemble.RandomForestRegressor.predict"), [`decision\_path`](#sklearn.ensemble.RandomForestRegressor.decision_path "sklearn.ensemble.RandomForestRegressor.decision_path") and [`apply`](#sklearn.ensemble.RandomForestRegressor.apply "sklearn.ensemble.RandomForestRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -571,7 +571,7 @@ export interface RandomForestRegressorOptions {
   verbose?: number
 
   /**
-    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
 
     @defaultValue `false`
    */
@@ -585,7 +585,7 @@ export interface RandomForestRegressorOptions {
   ccp_alpha?: any
 
   /**
-    If bootstrap is True, the number of samples to draw from X to train each base estimator.
+    If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
    */
   max_samples?: number
 }
@@ -616,7 +616,7 @@ export interface RandomForestRegressorFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
    */
   sample_weight?: ArrayLike
 }
