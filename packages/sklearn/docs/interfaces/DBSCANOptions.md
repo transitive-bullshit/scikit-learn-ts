@@ -1,0 +1,132 @@
+[sklearn](../readme.md) / [Exports](../modules.md) / DBSCANOptions
+
+# Interface: DBSCANOptions
+
+## Table of contents
+
+### Properties
+
+- [algorithm](DBSCANOptions.md#algorithm)
+- [eps](DBSCANOptions.md#eps)
+- [leaf\_size](DBSCANOptions.md#leaf_size)
+- [metric](DBSCANOptions.md#metric)
+- [metric\_params](DBSCANOptions.md#metric_params)
+- [min\_samples](DBSCANOptions.md#min_samples)
+- [n\_jobs](DBSCANOptions.md#n_jobs)
+- [p](DBSCANOptions.md#p)
+
+## Properties
+
+### algorithm
+
+• `Optional` **algorithm**: ``"auto"`` \| ``"ball_tree"`` \| ``"kd_tree"`` \| ``"brute"``
+
+The algorithm to be used by the NearestNeighbors module to compute pointwise distances and find nearest neighbors. See NearestNeighbors module documentation for details.
+
+**`Default Value`**
+
+`'auto'`
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L319)
+
+___
+
+### eps
+
+• `Optional` **eps**: `number`
+
+The maximum distance between two samples for one to be considered as in the neighborhood of the other. This is not a maximum bound on the distances of points within a cluster. This is the most important DBSCAN parameter to choose appropriately for your data set and distance function.
+
+**`Default Value`**
+
+`0.5`
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L293)
+
+___
+
+### leaf\_size
+
+• `Optional` **leaf\_size**: `number`
+
+Leaf size passed to BallTree or cKDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+**`Default Value`**
+
+`30`
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L326)
+
+___
+
+### metric
+
+• `Optional` **metric**: `any`
+
+The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors for DBSCAN.
+
+**`Default Value`**
+
+`'euclidean'`
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L307)
+
+___
+
+### metric\_params
+
+• `Optional` **metric\_params**: `any`
+
+Additional keyword arguments for the metric function.
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L312)
+
+___
+
+### min\_samples
+
+• `Optional` **min\_samples**: `number`
+
+The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
+
+**`Default Value`**
+
+`5`
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L300)
+
+___
+
+### n\_jobs
+
+• `Optional` **n\_jobs**: `number`
+
+The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L336)
+
+___
+
+### p
+
+• `Optional` **p**: `number`
+
+The power of the Minkowski metric to be used to calculate distance between points. If `undefined`, then `p=2` (equivalent to the Euclidean distance).
+
+#### Defined in
+
+[generated/cluster/DBSCAN.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/DBSCAN.ts#L331)
