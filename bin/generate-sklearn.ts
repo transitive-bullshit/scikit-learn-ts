@@ -145,7 +145,11 @@ async function main() {
     {
       // index.ts
       let indexFileSource = ''
-      for (const [key, value] of Object.entries(dir)) {
+      const sortedDirEntries = Object.entries(dir).sort((a, b) =>
+        a[0].localeCompare(b[0])
+      )
+
+      for (const [key, value] of sortedDirEntries) {
         await visitDir(value, [...parents, key])
         const keyPrefix = key.split('.')[0]
         indexFileSource += `export * from './${keyPrefix}'\n`

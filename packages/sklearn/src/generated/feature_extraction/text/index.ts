@@ -1,4 +1,4 @@
-export * from './HashingVectorizer'
 export * from './CountVectorizer'
-export * from './TfidfVectorizer'
+export * from './HashingVectorizer'
 export * from './TfidfTransformer'
+export * from './TfidfVectorizer'

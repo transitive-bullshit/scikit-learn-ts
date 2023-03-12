@@ -1,3 +1,3 @@
 export * from './GaussianProcessClassifier'
-export * from './kernels'
 export * from './GaussianProcessRegressor'
+export * from './kernels'

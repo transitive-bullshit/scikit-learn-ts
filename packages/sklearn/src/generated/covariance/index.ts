@@ -1,5 +1,5 @@
-export * from './EmpiricalCovariance'
 export * from './EllipticEnvelope'
+export * from './EmpiricalCovariance'
 export * from './GraphicalLasso'
 export * from './GraphicalLassoCV'
 export * from './LedoitWolf'
