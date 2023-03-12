@@ -11,7 +11,8 @@
     "node": ">=16"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "docs"
   ],
   "scripts": {
     "build": "run-s build:*",

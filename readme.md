@@ -351,14 +351,18 @@ For each `TypeScript` wrapper `class` of `function`, we take special care to han
   - [x] validate python `scikit-learn` version
   - [x] generate readme files for each directory
   - [x] port changes to python-bridge...
-  - [x] validate generated code via `tsc`
+  - [x] validate generated code via `tsc`G
   - [x] refactor into `packages`
   - [x] test build via CI
   - [x] basic readme w/ usage and examples
   - [x] publish `sklearn` package to NPM
   - [x] contact `scikit-learn` for feedback
+- current
+  - [ ] generate docs via tsdoc
+    - improve python => TS markdown and type edge cases
+    - fix relative markdown links
+    - docs website via `nextra`
 - post-MVP
-  - generate docs via tsdoc
   - add support for sklearn functions (in addition to classes)
   - add support for accessing the built-in datasets
   - add support for better python exception / error handling
