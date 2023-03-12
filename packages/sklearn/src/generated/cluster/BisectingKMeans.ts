@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Bisecting K-Means clustering.
 
+  Read more in the [User Guide](../clustering.html#bisect-k-means).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.BisectingKMeans.html
  */
 export class BisectingKMeans {
@@ -203,7 +205,7 @@ pms_BisectingKMeans_fit_transform = {k: v for k, v in pms_BisectingKMeans_fit_tr
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: BisectingKMeansGetFeatureNamesOutOptions
@@ -240,7 +242,7 @@ pms_BisectingKMeans_get_feature_names_out = {k: v for k, v in pms_BisectingKMean
 
     Prediction is made by going down the hierarchical tree in searching of closest leaf cluster.
 
-    In the vector quantization literature, cluster_centers_ is called the code book and each value returned by predict is the index of the closest code in the code book.
+    In the vector quantization literature, `cluster\_centers\_` is called the code book and each value returned by `predict` is the index of the closest code in the code book.
    */
   async predict(opts: BisectingKMeansPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -302,7 +304,7 @@ pms_BisectingKMeans_score = {k: v for k, v in pms_BisectingKMeans_score.items() 
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: BisectingKMeansSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -332,7 +334,7 @@ pms_BisectingKMeans_set_output = {k: v for k, v in pms_BisectingKMeans_set_outpu
   /**
     Transform X to a cluster-distance space.
 
-    In the new space, each dimension is the distance to the cluster centers. Note that even if X is sparse, the array returned by transform will typically be dense.
+    In the new space, each dimension is the distance to the cluster centers. Note that even if X is sparse, the array returned by `transform` will typically be dense.
    */
   async transform(opts: BisectingKMeansTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -360,7 +362,7 @@ pms_BisectingKMeans_transform = {k: v for k, v in pms_BisectingKMeans_transform.
   }
 
   /**
-    Coordinates of cluster centers. If the algorithm stops before fully converging (see tol and max_iter), these will not be consistent with labels_.
+    Coordinates of cluster centers. If the algorithm stops before fully converging (see `tol` and `max\_iter`), these will not be consistent with `labels\_`.
    */
   get cluster_centers_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -435,7 +437,7 @@ pms_BisectingKMeans_transform = {k: v for k, v in pms_BisectingKMeans_transform.
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -460,7 +462,7 @@ pms_BisectingKMeans_transform = {k: v for k, v in pms_BisectingKMeans_transform.
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -496,25 +498,25 @@ export interface BisectingKMeansOptions {
   /**
     Method for initialization:
 
-    ‘k-means++’ : selects initial cluster centers for k-mean clustering in a smart way to speed up convergence. See section Notes in k_init for more details.
+    ‘k-means++’ : selects initial cluster centers for k-mean clustering in a smart way to speed up convergence. See section Notes in k\_init for more details.
 
-    ‘random’: choose n_clusters observations (rows) at random from data for the initial centroids.
+    ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.
 
-    If a callable is passed, it should take arguments X, n_clusters and a random state and return an initialization.
+    If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.
 
     @defaultValue `'random'`
    */
   init?: 'k-means++' | 'random'
 
   /**
-    Number of time the inner k-means algorithm will be run with different centroid seeds in each bisection. That will result producing for each bisection best output of n_init consecutive runs in terms of inertia.
+    Number of time the inner k-means algorithm will be run with different centroid seeds in each bisection. That will result producing for each bisection best output of n\_init consecutive runs in terms of inertia.
 
     @defaultValue `1`
    */
   n_init?: number
 
   /**
-    Determines random number generation for centroid initialization in inner K-Means. Use an int to make the randomness deterministic. See Glossary.
+    Determines random number generation for centroid initialization in inner K-Means. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -533,21 +535,21 @@ export interface BisectingKMeansOptions {
   verbose?: number
 
   /**
-    Relative tolerance with regards to Frobenius norm of the difference in the cluster centers of two consecutive iterations  to declare convergence. Used in inner k-means algorithm at each bisection to pick best possible clusters.
+    Relative tolerance with regards to Frobenius norm of the difference in the cluster centers of two consecutive iterations to declare convergence. Used in inner k-means algorithm at each bisection to pick best possible clusters.
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    When pre-computing distances it is more numerically accurate to center the data first. If copy_x is True (default), then the original data is not modified. If False, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy_x is False. If the original data is sparse, but not in CSR format, a copy will be made even if copy_x is False.
+    When pre-computing distances it is more numerically accurate to center the data first. If copy\_x is True (default), then the original data is not modified. If False, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy\_x is False. If the original data is sparse, but not in CSR format, a copy will be made even if copy\_x is False.
 
     @defaultValue `true`
    */
   copy_x?: boolean
 
   /**
-    Inner K-means algorithm used in bisection. The classical EM-style algorithm is "lloyd". The "elkan" variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape (n_samples, n_clusters).
+    Inner K-means algorithm used in bisection. The classical EM-style algorithm is `"lloyd"`. The `"elkan"` variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape `(n\_samples, n\_clusters)`.
 
     @defaultValue `'lloyd'`
    */
@@ -614,7 +616,7 @@ export interface BisectingKMeansFitTransformOptions {
 
 export interface BisectingKMeansGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.BisectingKMeans.fit "sklearn.cluster.BisectingKMeans.fit").
    */
   input_features?: any
 }
@@ -645,7 +647,7 @@ export interface BisectingKMeansScoreOptions {
 
 export interface BisectingKMeansSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

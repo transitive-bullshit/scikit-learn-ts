@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   L2-regularized linear regression model that is robust to outliers.
 
-  The Huber Regressor optimizes the squared loss for the samples where |(y - Xw - c) / sigma| < epsilon and the absolute loss for the samples where |(y - Xw - c) / sigma| > epsilon, where the model coefficients w, the intercept c and the scale sigma are parameters to be optimized. The parameter sigma makes sure that if y is scaled up or down by a certain factor, one does not need to rescale epsilon to achieve the same robustness. Note that this does not take into account the fact that the different features of X may be of different scales.
+  The Huber Regressor optimizes the squared loss for the samples where `|(y \- Xw \- c) / sigma| < epsilon` and the absolute loss for the samples where `|(y \- Xw \- c) / sigma| > epsilon`, where the model coefficients `w`, the intercept `c` and the scale `sigma` are parameters to be optimized. The parameter sigma makes sure that if y is scaled up or down by a certain factor, one does not need to rescale epsilon to achieve the same robustness. Note that this does not take into account the fact that the different features of X may be of different scales.
 
   The Huber loss function has the advantage of not being heavily influenced by the outliers while not completely ignoring their effect.
+
+  Read more in the [User Guide](../linear_model.html#huber-regression)
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.HuberRegressor.html
  */
@@ -161,7 +163,7 @@ pms_HuberRegressor_predict = {k: v for k, v in pms_HuberRegressor_predict.items(
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: HuberRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -241,7 +243,7 @@ pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if
   }
 
   /**
-    The value by which |y - Xw - c| is scaled down.
+    The value by which `|y \- Xw \- c|` is scaled down.
    */
   get scale_(): Promise<number> {
     if (this._isDisposed) {
@@ -264,7 +266,7 @@ pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -289,7 +291,7 @@ pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -314,7 +316,7 @@ pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if
   }
 
   /**
-    Number of iterations that scipy.optimize.minimize(method="L-BFGS-B") has run for.
+    Number of iterations that `scipy.optimize.minimize(method="L-BFGS-B")` has run for.
    */
   get n_iter_(): Promise<number> {
     if (this._isDisposed) {
@@ -366,28 +368,28 @@ pms_HuberRegressor_score = {k: v for k, v in pms_HuberRegressor_score.items() if
 
 export interface HuberRegressorOptions {
   /**
-    The parameter epsilon controls the number of samples that should be classified as outliers. The smaller the epsilon, the more robust it is to outliers. Epsilon must be in the range [1, inf).
+    The parameter epsilon controls the number of samples that should be classified as outliers. The smaller the epsilon, the more robust it is to outliers. Epsilon must be in the range `\[1, inf)`.
 
     @defaultValue `1.35`
    */
   epsilon?: number
 
   /**
-    Maximum number of iterations that scipy.optimize.minimize(method="L-BFGS-B") should run for.
+    Maximum number of iterations that `scipy.optimize.minimize(method="L-BFGS-B")` should run for.
 
     @defaultValue `100`
    */
   max_iter?: number
 
   /**
-    Strength of the squared L2 regularization. Note that the penalty is equal to alpha * ||w||^2. Must be in the range [0, inf).
+    Strength of the squared L2 regularization. Note that the penalty is equal to `alpha \* ||w||^2`. Must be in the range `\[0, inf)`.
 
     @defaultValue `0.0001`
    */
   alpha?: number
 
   /**
-    This is useful if the stored attributes of a previously used model has to be reused. If set to False, then the coefficients will be rewritten for every call to fit. See the Glossary.
+    This is useful if the stored attributes of a previously used model has to be reused. If set to False, then the coefficients will be rewritten for every call to fit. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -401,7 +403,7 @@ export interface HuberRegressorOptions {
   fit_intercept?: boolean
 
   /**
-    The iteration will stop when max{|proj g_i | i = 1, ..., n} <= tol where pg_i is the i-th component of the projected gradient.
+    The iteration will stop when `max{|proj g\_i | i \= 1, ..., n}` <= `tol` where pg\_i is the i-th component of the projected gradient.
 
     @defaultValue `0.00001`
    */
@@ -410,7 +412,7 @@ export interface HuberRegressorOptions {
 
 export interface HuberRegressorFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike
 
@@ -434,12 +436,12 @@ export interface HuberRegressorPredictOptions {
 
 export interface HuberRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

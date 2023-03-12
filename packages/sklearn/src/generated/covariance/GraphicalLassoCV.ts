@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Sparse inverse covariance w/ cross-validated choice of the l1 penalty.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+
+  Read more in the [User Guide](../covariance.html#sparse-inverse-covariance).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.GraphicalLassoCV.html
  */
@@ -234,9 +236,9 @@ pms_GraphicalLassoCV_mahalanobis = {k: v for k, v in pms_GraphicalLassoCV_mahala
   }
 
   /**
-    Compute the log-likelihood of X_test under the estimated Gaussian model.
+    Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
 
-    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by self.location_ and self.covariance_.
+    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
   async score(opts: GraphicalLassoCVScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -430,7 +432,7 @@ pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -457,7 +459,7 @@ pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -486,14 +488,14 @@ pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items(
 
 export interface GraphicalLassoCVOptions {
   /**
-    If an integer is given, it fixes the number of points on the grids of alpha to be used. If a list is given, it gives the grid to be used. See the notes in the class docstring for more details. Range is [1, inf) for an integer. Range is (0, inf] for an array-like of floats.
+    If an integer is given, it fixes the number of points on the grids of alpha to be used. If a list is given, it gives the grid to be used. See the notes in the class docstring for more details. Range is \[1, inf) for an integer. Range is (0, inf\] for an array-like of floats.
 
     @defaultValue `4`
    */
   alphas?: number | ArrayLike
 
   /**
-    The number of times the grid is refined. Not used if explicit values of alphas are passed. Range is [1, inf).
+    The number of times the grid is refined. Not used if explicit values of alphas are passed. Range is \[1, inf).
 
     @defaultValue `4`
    */
@@ -505,14 +507,14 @@ export interface GraphicalLassoCVOptions {
   cv?: number
 
   /**
-    The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf].
+    The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf].
+    The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].
 
     @defaultValue `0.0001`
    */
@@ -533,7 +535,7 @@ export interface GraphicalLassoCVOptions {
   mode?: 'cd' | 'lars'
 
   /**
-    Number of jobs to run in parallel. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -559,14 +561,14 @@ export interface GraphicalLassoCVErrorNormOptions {
   comp_cov?: ArrayLike[]
 
   /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error (comp_cov - self.covariance_).
+    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
 
     @defaultValue `'frobenius'`
    */
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n_features. If False, the squared error norm is not rescaled.
+    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */
@@ -608,7 +610,7 @@ export interface GraphicalLassoCVMahalanobisOptions {
 
 export interface GraphicalLassoCVScoreOptions {
   /**
-    Test data of which we compute the likelihood, where n_samples is the number of samples and n_features is the number of features. X_test is assumed to be drawn from the same distribution than the data used in fit (including centering).
+    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
    */
   X_test?: ArrayLike[]
 

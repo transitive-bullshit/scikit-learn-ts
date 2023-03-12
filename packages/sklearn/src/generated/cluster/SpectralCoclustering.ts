@@ -8,11 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Spectral Co-Clustering algorithm (Dhillon, 2001).
 
-  Clusters rows and columns of an array X to solve the relaxed normalized cut of the bipartite graph created from X as follows: the edge between row vertex i and column vertex j has weight X[i, j].
+  Clusters rows and columns of an array `X` to solve the relaxed normalized cut of the bipartite graph created from `X` as follows: the edge between row vertex `i` and column vertex `j` has weight `X\[i, j\]`.
 
   The resulting bicluster structure is block-diagonal, since each row and each column belongs to exactly one bicluster.
 
   Supports sparse matrices, as long as they are nonnegative.
+
+  Read more in the [User Guide](../biclustering.html#spectral-coclustering).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralCoclustering.html
  */
@@ -139,9 +141,9 @@ pms_SpectralCoclustering_fit = {k: v for k, v in pms_SpectralCoclustering_fit.it
   }
 
   /**
-    Row and column indices of the i’th bicluster.
+    Row and column indices of the `i`’th bicluster.
 
-    Only works if rows_ and columns_ attributes exist.
+    Only works if `rows\_` and `columns\_` attributes exist.
    */
   async get_indices(
     opts: SpectralCoclusteringGetIndicesOptions
@@ -175,7 +177,7 @@ pms_SpectralCoclustering_get_indices = {k: v for k, v in pms_SpectralCoclusterin
   }
 
   /**
-    Shape of the i’th bicluster.
+    Shape of the `i`’th bicluster.
    */
   async get_shape(opts: SpectralCoclusteringGetShapeOptions): Promise<number> {
     if (this._isDisposed) {
@@ -207,7 +209,7 @@ pms_SpectralCoclustering_get_shape = {k: v for k, v in pms_SpectralCoclustering_
   }
 
   /**
-    Return the submatrix corresponding to bicluster i.
+    Return the submatrix corresponding to bicluster `i`.
    */
   async get_submatrix(
     opts: SpectralCoclusteringGetSubmatrixOptions
@@ -243,7 +245,7 @@ pms_SpectralCoclustering_get_submatrix = {k: v for k, v in pms_SpectralCocluster
   }
 
   /**
-    Results of the clustering. rows[i, r] is True if cluster i contains row r. Available only after calling fit.
+    Results of the clustering. `rows\[i, r\]` is True if cluster `i` contains row `r`. Available only after calling `fit`.
    */
   get rows_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -270,7 +272,7 @@ pms_SpectralCoclustering_get_submatrix = {k: v for k, v in pms_SpectralCocluster
   }
 
   /**
-    Results of the clustering, like rows.
+    Results of the clustering, like `rows`.
    */
   get columns_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -351,7 +353,7 @@ pms_SpectralCoclustering_get_submatrix = {k: v for k, v in pms_SpectralCocluster
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -378,7 +380,7 @@ pms_SpectralCoclustering_get_submatrix = {k: v for k, v in pms_SpectralCocluster
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -414,14 +416,14 @@ export interface SpectralCoclusteringOptions {
   n_clusters?: number
 
   /**
-    Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use sklearn.utils.extmath.randomized_svd, which may be faster for large matrices. If ‘arpack’, use scipy.sparse.linalg.svds, which is more accurate, but possibly slower in some cases.
+    Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.10.1)"), which is more accurate, but possibly slower in some cases.
 
     @defaultValue `'randomized'`
    */
   svd_method?: 'randomized' | 'arpack'
 
   /**
-    Number of vectors to use in calculating the SVD. Corresponds to ncv when svd_method=arpack and n_oversamples when svd_method is ‘randomized`.
+    Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized\`.
    */
   n_svd_vecs?: number
 
@@ -449,7 +451,7 @@ export interface SpectralCoclusteringOptions {
   n_init?: number
 
   /**
-    Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See Glossary.
+    Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }

@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Univariate feature selector with configurable strategy.
 
+  Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.GenericUnivariateSelect.html
  */
 export class GenericUnivariateSelect {
@@ -131,7 +133,7 @@ pms_GenericUnivariateSelect_fit = {k: v for k, v in pms_GenericUnivariateSelect_
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: GenericUnivariateSelectFitTransformOptions
@@ -276,7 +278,7 @@ pms_GenericUnivariateSelect_inverse_transform = {k: v for k, v in pms_GenericUni
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(
     opts: GenericUnivariateSelectSetOutputOptions
@@ -369,7 +371,7 @@ pms_GenericUnivariateSelect_transform = {k: v for k, v in pms_GenericUnivariateS
   }
 
   /**
-    p-values of feature scores, None if score_func returned scores only.
+    p-values of feature scores, None if `score\_func` returned scores only.
    */
   get pvalues_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -396,7 +398,7 @@ pms_GenericUnivariateSelect_transform = {k: v for k, v in pms_GenericUnivariateS
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -423,7 +425,7 @@ pms_GenericUnivariateSelect_transform = {k: v for k, v in pms_GenericUnivariateS
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -525,7 +527,7 @@ export interface GenericUnivariateSelectInverseTransformOptions {
 
 export interface GenericUnivariateSelectSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Linear regression model that predicts conditional quantiles.
 
-  The linear QuantileRegressor optimizes the pinball loss for a desired quantile and is robust to outliers.
+  The linear [`QuantileRegressor`](#sklearn.linear_model.QuantileRegressor "sklearn.linear_model.QuantileRegressor") optimizes the pinball loss for a desired `quantile` and is robust to outliers.
 
-  This model uses an L1 regularization like Lasso.
+  This model uses an L1 regularization like [`Lasso`](sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso "sklearn.linear_model.Lasso").
+
+  Read more in the [User Guide](../linear_model.html#quantile-regression).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.QuantileRegressor.html
  */
@@ -167,7 +169,7 @@ pms_QuantileRegressor_predict = {k: v for k, v in pms_QuantileRegressor_predict.
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: QuantileRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -255,7 +257,7 @@ pms_QuantileRegressor_score = {k: v for k, v in pms_QuantileRegressor_score.item
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -282,7 +284,7 @@ pms_QuantileRegressor_score = {k: v for k, v in pms_QuantileRegressor_score.item
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -359,11 +361,11 @@ export interface QuantileRegressorOptions {
   fit_intercept?: boolean
 
   /**
-    Method used by scipy.optimize.linprog to solve the linear programming formulation.
+    Method used by [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") to solve the linear programming formulation.
 
-    From scipy>=1.6.0, it is recommended to use the highs methods because they are the fastest ones. Solvers “highs-ds”, “highs-ipm” and “highs” support sparse input data and, in fact, always convert to sparse csc.
+    From `scipy>=1.6.0`, it is recommended to use the highs methods because they are the fastest ones. Solvers “highs-ds”, “highs-ipm” and “highs” support sparse input data and, in fact, always convert to sparse csc.
 
-    From scipy>=1.11.0, “interior-point” is not available anymore.
+    From `scipy>=1.11.0`, “interior-point” is not available anymore.
 
     @defaultValue `'interior-point'`
    */
@@ -375,7 +377,7 @@ export interface QuantileRegressorOptions {
     | 'revised simplex'
 
   /**
-    Additional parameters passed to scipy.optimize.linprog as options. If None and if solver='interior-point', then {"lstsq": True} is passed to scipy.optimize.linprog for the sake of stability.
+    Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") as options. If `None` and if `solver='interior-point'`, then `{"lstsq": True}` is passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") for the sake of stability.
    */
   solver_options?: any
 }
@@ -406,12 +408,12 @@ export interface QuantileRegressorPredictOptions {
 
 export interface QuantileRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

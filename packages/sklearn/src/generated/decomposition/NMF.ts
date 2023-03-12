@@ -171,7 +171,7 @@ pms_NMF_fit_transform = {k: v for k, v in pms_NMF_fit_transform.items() if v is 
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: NMFGetFeatureNamesOutOptions
@@ -233,7 +233,7 @@ pms_NMF_inverse_transform = {k: v for k, v in pms_NMF_inverse_transform.items() 
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: NMFSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -312,7 +312,7 @@ pms_NMF_transform = {k: v for k, v in pms_NMF_transform.items() if v is not None
   }
 
   /**
-    The number of components. It is same as the n_components parameter if it was given. Otherwise, it will be same as the number of features.
+    The number of components. It is same as the `n\_components` parameter if it was given. Otherwise, it will be same as the number of features.
    */
   get n_components_(): Promise<number> {
     if (this._isDisposed) {
@@ -335,7 +335,7 @@ pms_NMF_transform = {k: v for k, v in pms_NMF_transform.items() if v is not None
   }
 
   /**
-    Frobenius norm of the matrix difference, or beta-divergence, between the training data X and the reconstructed data WH from the fitted model.
+    Frobenius norm of the matrix difference, or beta-divergence, between the training data `X` and the reconstructed data `WH` from the fitted model.
    */
   get reconstruction_err_(): Promise<number> {
     if (this._isDisposed) {
@@ -382,7 +382,7 @@ pms_NMF_transform = {k: v for k, v in pms_NMF_transform.items() if v is not None
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -405,7 +405,7 @@ pms_NMF_transform = {k: v for k, v in pms_NMF_transform.items() if v is not None
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -430,7 +430,7 @@ pms_NMF_transform = {k: v for k, v in pms_NMF_transform.items() if v is not None
 
 export interface NMFOptions {
   /**
-    Number of components, if n_components is not set all features are kept.
+    Number of components, if n\_components is not set all features are kept.
    */
   n_components?: number
 
@@ -447,7 +447,7 @@ export interface NMFOptions {
   solver?: 'cd' | 'mu'
 
   /**
-    Beta divergence to be minimized, measuring the distance between X and the dot product WH. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for beta_loss <= 0 (or ‘itakura-saito’), the input matrix X cannot contain zeros. Used only in ‘mu’ solver.
+    Beta divergence to be minimized, measuring the distance between X and the dot product WH. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for beta\_loss <= 0 (or ‘itakura-saito’), the input matrix X cannot contain zeros. Used only in ‘mu’ solver.
 
     @defaultValue `'frobenius'`
    */
@@ -468,26 +468,26 @@ export interface NMFOptions {
   max_iter?: number
 
   /**
-    Used for initialisation (when init == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    Constant that multiplies the regularization terms of W. Set it to zero (default) to have no regularization on W.
+    Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
 
     @defaultValue `0`
    */
   alpha_W?: number
 
   /**
-    Constant that multiplies the regularization terms of H. Set it to zero to have no regularization on H. If “same” (default), it takes the same value as alpha_W.
+    Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.
 
     @defaultValue `'same'`
    */
   alpha_H?: number | 'same'
 
   /**
-    The regularization mixing parameter, with 0 <= l1_ratio <= 1. For l1_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1_ratio = 1 it is an elementwise L1 penalty. For 0 < l1_ratio < 1, the penalty is a combination of L1 and L2.
+    The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.
 
     @defaultValue `0`
    */
@@ -510,7 +510,7 @@ export interface NMFOptions {
 
 export interface NMFFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -520,14 +520,14 @@ export interface NMFFitOptions {
   y?: any
 
   /**
-    Parameters (keyword arguments) and values passed to the fit_transform instance.
+    Parameters (keyword arguments) and values passed to the fit\_transform instance.
    */
   params?: any
 }
 
 export interface NMFFitTransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -549,7 +549,7 @@ export interface NMFFitTransformOptions {
 
 export interface NMFGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.NMF.fit "sklearn.decomposition.NMF.fit").
    */
   input_features?: any
 }
@@ -563,14 +563,14 @@ export interface NMFInverseTransformOptions {
 
 export interface NMFSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface NMFTransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 }

@@ -10,7 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The free parameters in the model are C and epsilon.
 
-  The implementation is based on libsvm. The fit time complexity is more than quadratic with the number of samples which makes it hard to scale to datasets with more than a couple of 10000 samples. For large datasets consider using LinearSVR or SGDRegressor instead, possibly after a Nystroem transformer or other Kernel Approximation.
+  The implementation is based on libsvm. The fit time complexity is more than quadratic with the number of samples which makes it hard to scale to datasets with more than a couple of 10000 samples. For large datasets consider using [`LinearSVR`](sklearn.svm.LinearSVR.html#sklearn.svm.LinearSVR "sklearn.svm.LinearSVR") or [`SGDRegressor`](sklearn.linear_model.SGDRegressor.html#sklearn.linear_model.SGDRegressor "sklearn.linear_model.SGDRegressor") instead, possibly after a [`Nystroem`](sklearn.kernel_approximation.Nystroem.html#sklearn.kernel_approximation.Nystroem "sklearn.kernel_approximation.Nystroem") transformer or other [Kernel Approximation](../kernel_approximation.html#kernel-approximation).
+
+  Read more in the [User Guide](../svm.html#svm-regression).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html
  */
@@ -167,7 +169,7 @@ pms_SVR_predict = {k: v for k, v in pms_SVR_predict.items() if v is not None}`
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: SVRScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -199,7 +201,7 @@ pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
   }
 
   /**
-    Multipliers of parameter C for each class. Computed based on the class_weight parameter.
+    Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
    */
   get class_weight_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -289,7 +291,7 @@ pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -312,7 +314,7 @@ pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -357,7 +359,7 @@ pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
   }
 
   /**
-    Array dimensions of training vector X.
+    Array dimensions of training vector `X`.
    */
   get shape_fit_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -475,7 +477,7 @@ export interface SVROptions {
   epsilon?: number
 
   /**
-    Whether to use the shrinking heuristic. See the User Guide.
+    Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
 
     @defaultValue `true`
    */
@@ -505,7 +507,7 @@ export interface SVROptions {
 
 export interface SVRFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features. For kernel=”precomputed”, the expected shape of X is (n_samples, n_samples).
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -522,19 +524,19 @@ export interface SVRFitOptions {
 
 export interface SVRPredictOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface SVRScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

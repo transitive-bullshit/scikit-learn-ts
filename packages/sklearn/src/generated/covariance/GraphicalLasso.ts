@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Sparse inverse covariance estimation with an l1-penalized estimator.
 
+  Read more in the [User Guide](../covariance.html#sparse-inverse-covariance).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.GraphicalLasso.html
  */
 export class GraphicalLasso {
@@ -214,9 +216,9 @@ pms_GraphicalLasso_mahalanobis = {k: v for k, v in pms_GraphicalLasso_mahalanobi
   }
 
   /**
-    Compute the log-likelihood of X_test under the estimated Gaussian model.
+    Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
 
-    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by self.location_ and self.covariance_.
+    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
   async score(opts: GraphicalLassoScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -346,7 +348,7 @@ pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -371,7 +373,7 @@ pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -398,7 +400,7 @@ pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if
 
 export interface GraphicalLassoOptions {
   /**
-    The regularization parameter: the higher alpha, the more regularization, the sparser the inverse covariance. Range is (0, inf].
+    The regularization parameter: the higher alpha, the more regularization, the sparser the inverse covariance. Range is (0, inf\].
 
     @defaultValue `0.01`
    */
@@ -412,14 +414,14 @@ export interface GraphicalLassoOptions {
   mode?: 'cd' | 'lars'
 
   /**
-    The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf].
+    The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf].
+    The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].
 
     @defaultValue `0.0001`
    */
@@ -454,14 +456,14 @@ export interface GraphicalLassoErrorNormOptions {
   comp_cov?: ArrayLike[]
 
   /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error (comp_cov - self.covariance_).
+    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
 
     @defaultValue `'frobenius'`
    */
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n_features. If False, the squared error norm is not rescaled.
+    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */
@@ -503,7 +505,7 @@ export interface GraphicalLassoMahalanobisOptions {
 
 export interface GraphicalLassoScoreOptions {
   /**
-    Test data of which we compute the likelihood, where n_samples is the number of samples and n_features is the number of features. X_test is assumed to be drawn from the same distribution than the data used in fit (including centering).
+    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
    */
   X_test?: ArrayLike[]
 

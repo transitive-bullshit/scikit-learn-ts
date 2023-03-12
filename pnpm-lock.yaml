@@ -13,6 +13,7 @@ importers:
       del-cli: ^5.0.0
       dotenv: ^16.0.3
       got: ^12.6.0
+      html-to-md: ^0.8.3
       husky: ^8.0.3
       indent-string: ^5.0.0
       is-relative-url: ^4.0.0
@@ -37,6 +38,7 @@ importers:
       del-cli: 5.0.0
       dotenv: 16.0.3
       got: 12.6.0
+      html-to-md: 0.8.3
       husky: 8.0.3
       indent-string: 5.0.0
       is-relative-url: 4.0.0
@@ -2868,6 +2870,10 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
       lru-cache: 7.18.3
+    dev: true
+
+  /html-to-md/0.8.3:
+    resolution: {integrity: sha512-Va+bB1YOdD6vMRDue9/l7YxbERgwOgsos4erUDRfRN6YE0B2Wbbw8uAj6xZJk9A9vrjVy7mG/WLlhDw6RXfgsA==}
     dev: true
 
   /htmlparser2/8.0.1:

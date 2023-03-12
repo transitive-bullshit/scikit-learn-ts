@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note : Laplacian Eigenmaps is the actual algorithm implemented here.
 
+  Read more in the [User Guide](../manifold.html#spectral-embedding).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html
  */
 export class SpectralEmbedding {
@@ -196,7 +198,7 @@ pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fi
   }
 
   /**
-    Affinity_matrix constructed from samples or precomputed.
+    Affinity\_matrix constructed from samples or precomputed.
    */
   get affinity_matrix_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -223,7 +225,7 @@ pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fi
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -250,7 +252,7 @@ pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fi
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -313,7 +315,7 @@ export interface SpectralEmbeddingOptions {
   n_components?: number
 
   /**
-    ‘nearest_neighbors’ : construct the affinity matrix by computing a graph of nearest neighbors.
+    ‘nearest\_neighbors’ : construct the affinity matrix by computing a graph of nearest neighbors.
 
     @defaultValue `'nearest_neighbors'`
    */
@@ -324,43 +326,43 @@ export interface SpectralEmbeddingOptions {
     | 'precomputed_nearest_neighbors'
 
   /**
-    Kernel coefficient for rbf kernel. If None, gamma will be set to 1/n_features.
+    Kernel coefficient for rbf kernel. If None, gamma will be set to 1/n\_features.
    */
   gamma?: number
 
   /**
-    A pseudo random number generator used for the initialization of the lobpcg eigen vectors decomposition when eigen_solver == 'amg', and for the K-Means initialization. Use an int to make the results deterministic across calls (See Glossary).
+    A pseudo random number generator used for the initialization of the lobpcg eigen vectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
    */
   random_state?: number
 
   /**
-    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems. If None, then 'arpack' is used.
+    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems. If None, then `'arpack'` is used.
    */
   eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
 
   /**
-    Stopping criterion for eigendecomposition of the Laplacian matrix. If eigen_tol="auto" then the passed tolerance will depend on the eigen_solver:
+    Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:
 
     @defaultValue `'auto'`
    */
   eigen_tol?: number
 
   /**
-    Number of nearest neighbors for nearest_neighbors graph building. If None, n_neighbors will be set to max(n_samples/10, 1).
+    Number of nearest neighbors for nearest\_neighbors graph building. If None, n\_neighbors will be set to max(n\_samples/10, 1).
    */
   n_neighbors?: number
 
   /**
-    The number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
 
 export interface SpectralEmbeddingFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-    If affinity is “precomputed” X : {array-like, sparse matrix}, shape (n_samples, n_samples), Interpret X as precomputed adjacency graph computed from samples.
+    If affinity is “precomputed” X : {array-like, sparse matrix}, shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -372,9 +374,9 @@ export interface SpectralEmbeddingFitOptions {
 
 export interface SpectralEmbeddingFitTransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-    If affinity is “precomputed” X : {array-like, sparse matrix} of shape (n_samples, n_samples), Interpret X as precomputed adjacency graph computed from samples.
+    If affinity is “precomputed” X : {array-like, sparse matrix} of shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
    */
   X?: ArrayLike | SparseMatrix[]
 

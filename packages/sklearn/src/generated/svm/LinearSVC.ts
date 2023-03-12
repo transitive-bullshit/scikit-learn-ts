@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This class supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme.
 
+  Read more in the [User Guide](../svm.html#svm-classification).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html
  */
 export class LinearSVC {
@@ -142,7 +144,7 @@ pms_LinearSVC_decision_function = {k: v for k, v in pms_LinearSVC_decision_funct
   /**
     Convert coefficient matrix to dense array format.
 
-    Converts the coef_ member (back) to a numpy.ndarray. This is the default format of coef_ and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
+    Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
   async densify(opts: LinearSVCDensifyOptions): Promise<any> {
     if (this._isDisposed) {
@@ -264,9 +266,9 @@ pms_LinearSVC_score = {k: v for k, v in pms_LinearSVC_score.items() if v is not 
   /**
     Convert coefficient matrix to sparse format.
 
-    Converts the coef_ member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
+    Converts the `coef\_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
 
-    The intercept_ member is not converted.
+    The `intercept\_` member is not converted.
    */
   async sparsify(opts: LinearSVCSparsifyOptions): Promise<any> {
     if (this._isDisposed) {
@@ -294,7 +296,7 @@ pms_LinearSVC_sparsify = {k: v for k, v in pms_LinearSVC_sparsify.items() if v i
   /**
     Weights assigned to the features (coefficients in the primal problem).
 
-    coef_ is a readonly property derived from raw_coef_ that follows the internal memory layout of liblinear.
+    `coef\_` is a readonly property derived from `raw\_coef\_` that follows the internal memory layout of liblinear.
    */
   get coef_(): Promise<NDArray[][]> {
     if (this._isDisposed) {
@@ -363,7 +365,7 @@ pms_LinearSVC_sparsify = {k: v for k, v in pms_LinearSVC_sparsify.items() if v i
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -388,7 +390,7 @@ pms_LinearSVC_sparsify = {k: v for k, v in pms_LinearSVC_sparsify.items() if v i
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -438,21 +440,21 @@ pms_LinearSVC_sparsify = {k: v for k, v in pms_LinearSVC_sparsify.items() if v i
 
 export interface LinearSVCOptions {
   /**
-    Specifies the norm used in the penalization. The ‘l2’ penalty is the standard used in SVC. The ‘l1’ leads to coef_ vectors that are sparse.
+    Specifies the norm used in the penalization. The ‘l2’ penalty is the standard used in SVC. The ‘l1’ leads to `coef\_` vectors that are sparse.
 
     @defaultValue `'l2'`
    */
   penalty?: 'l1' | 'l2'
 
   /**
-    Specifies the loss function. ‘hinge’ is the standard SVM loss (used e.g. by the SVC class) while ‘squared_hinge’ is the square of the hinge loss. The combination of penalty='l1' and loss='hinge' is not supported.
+    Specifies the loss function. ‘hinge’ is the standard SVM loss (used e.g. by the SVC class) while ‘squared\_hinge’ is the square of the hinge loss. The combination of `penalty='l1'` and `loss='hinge'` is not supported.
 
     @defaultValue `'squared_hinge'`
    */
   loss?: 'hinge' | 'squared_hinge'
 
   /**
-    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=False when n_samples > n_features.
+    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=False when n\_samples > n\_features.
 
     @defaultValue `true`
    */
@@ -473,7 +475,7 @@ export interface LinearSVCOptions {
   C?: number
 
   /**
-    Determines the multi-class strategy if y contains more than two classes. "ovr" trains n_classes one-vs-rest classifiers, while "crammer_singer" optimizes a joint objective over all classes. While crammer_singer is interesting from a theoretical perspective as it is consistent, it is seldom used in practice as it rarely leads to better accuracy and is more expensive to compute. If "crammer_singer" is chosen, the options loss, penalty and dual will be ignored.
+    Determines the multi-class strategy if `y` contains more than two classes. `"ovr"` trains n\_classes one-vs-rest classifiers, while `"crammer\_singer"` optimizes a joint objective over all classes. While `crammer\_singer` is interesting from a theoretical perspective as it is consistent, it is seldom used in practice as it rarely leads to better accuracy and is more expensive to compute. If `"crammer\_singer"` is chosen, the options loss, penalty and dual will be ignored.
 
     @defaultValue `'ovr'`
    */
@@ -487,14 +489,14 @@ export interface LinearSVCOptions {
   fit_intercept?: boolean
 
   /**
-    When self.fit_intercept is True, instance vector x becomes [x, self.intercept_scaling], i.e. a “synthetic” feature with constant value equals to intercept_scaling is appended to the instance vector. The intercept becomes intercept_scaling * synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept_scaling has to be increased.
+    When self.fit\_intercept is True, instance vector x becomes `\[x, self.intercept\_scaling\]`, i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
 
     @defaultValue `1`
    */
   intercept_scaling?: number
 
   /**
-    Set the parameter C of class i to class_weight[i]*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y)).
+    Set the parameter C of class i to `class\_weight\[i\]\*C` for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
    */
   class_weight?: any | 'balanced'
 
@@ -506,7 +508,7 @@ export interface LinearSVCOptions {
   verbose?: number
 
   /**
-    Controls the pseudo random number generation for shuffling the data for the dual coordinate descent (if dual=True). When dual=False the underlying implementation of LinearSVC is not random and random_state has no effect on the results. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the pseudo random number generation for shuffling the data for the dual coordinate descent (if `dual=True`). When `dual=False` the underlying implementation of [`LinearSVC`](#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC") is not random and `random\_state` has no effect on the results. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -529,7 +531,7 @@ export interface LinearSVCDensifyOptions {}
 
 export interface LinearSVCFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -558,7 +560,7 @@ export interface LinearSVCScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

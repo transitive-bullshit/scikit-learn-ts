@@ -12,7 +12,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each group will appear exactly once in the test set across all folds (the number of distinct groups has to be at least equal to the number of folds).
 
-  The difference between GroupKFold and StratifiedGroupKFold is that the former attempts to create balanced folds such that the number of distinct groups is approximately the same in each fold, whereas StratifiedGroupKFold attempts to create folds which preserve the percentage of samples for each class as much as possible given the constraint of non-overlapping groups between splits.
+  The difference between [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold") and [`StratifiedGroupKFold`](#sklearn.model_selection.StratifiedGroupKFold "sklearn.model_selection.StratifiedGroupKFold") is that the former attempts to create balanced folds such that the number of distinct groups is approximately the same in each fold, whereas StratifiedGroupKFold attempts to create folds which preserve the percentage of samples for each class as much as possible given the constraint of non-overlapping groups between splits.
+
+  Read more in the [User Guide](../cross_validation.html#cross-validation).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html
  */
@@ -187,7 +189,7 @@ export interface StratifiedGroupKFoldOptions {
   shuffle?: boolean
 
   /**
-    When shuffle is True, random_state affects the ordering of the indices, which controls the randomness of each fold for each class. Otherwise, leave random_state as None. Pass an int for reproducible output across multiple function calls. See Glossary.
+    When `shuffle` is True, `random\_state` affects the ordering of the indices, which controls the randomness of each fold for each class. Otherwise, leave `random\_state` as `None`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -211,7 +213,7 @@ export interface StratifiedGroupKFoldGetNSplitsOptions {
 
 export interface StratifiedGroupKFoldSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

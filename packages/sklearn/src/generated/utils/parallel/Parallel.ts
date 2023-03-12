@@ -6,11 +6,11 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Tweak of joblib.Parallel that propagates the scikit-learn configuration.
+  Tweak of [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.3.0.dev0)") that propagates the scikit-learn configuration.
 
-  This subclass of joblib.Parallel ensures that the active configuration (thread-local) of scikit-learn is propagated to the parallel workers for the duration of the execution of the parallel tasks.
+  This subclass of [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.3.0.dev0)") ensures that the active configuration (thread-local) of scikit-learn is propagated to the parallel workers for the duration of the execution of the parallel tasks.
 
-  The API does not change and you can refer to joblib.Parallel documentation for more details.
+  The API does not change and you can refer to [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.3.0.dev0)") documentation for more details.
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.utils.parallel.Parallel.html
  */
@@ -94,7 +94,7 @@ ctor_Parallel = {k: v for k, v in ctor_Parallel.items() if v is not None}`
   /**
     Dispatch more data for parallel processing
 
-    This method is meant to be called concurrently by the multiprocessing callback. We rely on the thread-safety of dispatch_one_batch to protect against concurrent consumption of the unprotected iterator.
+    This method is meant to be called concurrently by the multiprocessing callback. We rely on the thread-safety of dispatch\_one\_batch to protect against concurrent consumption of the unprotected iterator.
    */
   async dispatch_next(opts: ParallelDispatchNextOptions): Promise<any> {
     if (this._isDisposed) {

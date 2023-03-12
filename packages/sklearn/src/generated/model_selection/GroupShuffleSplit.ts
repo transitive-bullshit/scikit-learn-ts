@@ -12,11 +12,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   For instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.
 
-  The difference between LeavePGroupsOut and GroupShuffleSplit is that the former generates splits using all subsets of size p unique groups, whereas GroupShuffleSplit generates a user-determined number of random test splits, each with a user-determined fraction of unique groups.
+  The difference between LeavePGroupsOut and GroupShuffleSplit is that the former generates splits using all subsets of size `p` unique groups, whereas GroupShuffleSplit generates a user-determined number of random test splits, each with a user-determined fraction of unique groups.
 
-  For example, a less computationally intensive alternative to LeavePGroupsOut(p=10) would be GroupShuffleSplit(test_size=10, n_splits=100).
+  For example, a less computationally intensive alternative to `LeavePGroupsOut(p=10)` would be `GroupShuffleSplit(test\_size=10, n\_splits=100)`.
 
-  Note: The parameters test_size and train_size refer to groups, and not to samples, as in ShuffleSplit.
+  Note: The parameters `test\_size` and `train\_size` refer to groups, and not to samples, as in ShuffleSplit.
+
+  Read more in the [User Guide](../cross_validation.html#group-shuffle-split).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html
  */
@@ -182,7 +184,7 @@ export interface GroupShuffleSplitOptions {
   n_splits?: number
 
   /**
-    If float, should be between 0.0 and 1.0 and represent the proportion of groups to include in the test split (rounded up). If int, represents the absolute number of test groups. If None, the value is set to the complement of the train size. The default will change in version 0.21. It will remain 0.2 only if train_size is unspecified, otherwise it will complement the specified train_size.
+    If float, should be between 0.0 and 1.0 and represent the proportion of groups to include in the test split (rounded up). If int, represents the absolute number of test groups. If None, the value is set to the complement of the train size. The default will change in version 0.21. It will remain 0.2 only if `train\_size` is unspecified, otherwise it will complement the specified `train\_size`.
 
     @defaultValue `0.2`
    */
@@ -194,7 +196,7 @@ export interface GroupShuffleSplitOptions {
   train_size?: number
 
   /**
-    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -218,7 +220,7 @@ export interface GroupShuffleSplitGetNSplitsOptions {
 
 export interface GroupShuffleSplitSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

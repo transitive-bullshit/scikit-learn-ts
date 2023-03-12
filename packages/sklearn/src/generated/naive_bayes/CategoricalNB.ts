@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The categorical Naive Bayes classifier is suitable for classification with discrete features that are categorically distributed. The categories of each feature are drawn from a categorical distribution.
 
+  Read more in the [User Guide](../naive_bayes.html#categorical-naive-bayes).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.CategoricalNB.html
  */
 export class CategoricalNB {
@@ -137,7 +139,7 @@ pms_CategoricalNB_fit = {k: v for k, v in pms_CategoricalNB_fit.items() if v is 
 
     This is especially useful when the whole dataset is too big to fit in memory at once.
 
-    This method has some performance overhead hence it is better to call partial_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
+    This method has some performance overhead hence it is better to call partial\_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
    */
   async partial_fit(opts: CategoricalNBPartialFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -203,7 +205,7 @@ pms_CategoricalNB_predict = {k: v for k, v in pms_CategoricalNB_predict.items() 
   /**
     Return joint log probability estimates for the test vector X.
 
-    For each row x of X and class y, the joint log probability is given by log P(x, y) = log P(y) + log P(x|y), where log P(y) is the class prior probability and log P(x|y) is the class-conditional probability.
+    For each row x of X and class y, the joint log probability is given by `log P(x, y) \= log P(y) + log P(x|y),` where `log P(y)` is the class prior probability and `log P(x|y)` is the class-conditional probability.
    */
   async predict_joint_log_proba(
     opts: CategoricalNBPredictJointLogProbaOptions
@@ -332,7 +334,7 @@ pms_CategoricalNB_score = {k: v for k, v in pms_CategoricalNB_score.items() if v
   }
 
   /**
-    Holds arrays of shape (n_classes, n_categories of respective feature) for each feature. Each array provides the number of samples encountered for each class and category of the specific feature.
+    Holds arrays of shape (n\_classes, n\_categories of respective feature) for each feature. Each array provides the number of samples encountered for each class and category of the specific feature.
    */
   get category_count_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -432,7 +434,7 @@ pms_CategoricalNB_score = {k: v for k, v in pms_CategoricalNB_score.items() if v
   }
 
   /**
-    Holds arrays of shape (n_classes, n_categories of respective feature) for each feature. Each array provides the empirical log probability of categories given the respective feature and class, P(x_i|y).
+    Holds arrays of shape (n\_classes, n\_categories of respective feature) for each feature. Each array provides the empirical log probability of categories given the respective feature and class, `P(x\_i|y)`.
    */
   get feature_log_prob_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -457,7 +459,7 @@ pms_CategoricalNB_score = {k: v for k, v in pms_CategoricalNB_score.items() if v
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -482,7 +484,7 @@ pms_CategoricalNB_score = {k: v for k, v in pms_CategoricalNB_score.items() if v
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -534,7 +536,7 @@ pms_CategoricalNB_score = {k: v for k, v in pms_CategoricalNB_score.items() if v
 
 export interface CategoricalNBOptions {
   /**
-    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force_alpha=True, for no smoothing).
+    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=True, for no smoothing).
 
     @defaultValue `1`
    */
@@ -567,7 +569,7 @@ export interface CategoricalNBOptions {
 
 export interface CategoricalNBFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -584,7 +586,7 @@ export interface CategoricalNBFitOptions {
 
 export interface CategoricalNBPartialFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. Here, each feature of X is assumed to be from a different categorical distribution. It is further assumed that all categories of each feature are represented by the numbers 0, …, n - 1, where n refers to the total number of categories for the given feature. This can, for instance, be achieved with the help of OrdinalEncoder.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -596,7 +598,7 @@ export interface CategoricalNBPartialFitOptions {
   /**
     List of all the classes that can possibly appear in the y vector.
 
-    Must be provided at the first call to partial_fit, can be omitted in subsequent calls.
+    Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
    */
   classes?: ArrayLike
 
@@ -641,7 +643,7 @@ export interface CategoricalNBScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

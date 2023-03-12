@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This model is similar to the basic Label Propagation algorithm, but uses affinity matrix based on the normalized graph Laplacian and soft clamping across the labels.
 
+  Read more in the [User Guide](../semi_supervised.html#label-propagation).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelSpreading.html
  */
 export class LabelSpreading {
@@ -298,7 +300,7 @@ pms_LabelSpreading_score = {k: v for k, v in pms_LabelSpreading_score.items() if
   }
 
   /**
-    Label assigned to each item during fit.
+    Label assigned to each item during [fit](../../glossary.html#term-fit).
    */
   get transduction_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -323,7 +325,7 @@ pms_LabelSpreading_score = {k: v for k, v in pms_LabelSpreading_score.items() if
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -348,7 +350,7 @@ pms_LabelSpreading_score = {k: v for k, v in pms_LabelSpreading_score.items() if
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -400,7 +402,7 @@ pms_LabelSpreading_score = {k: v for k, v in pms_LabelSpreading_score.items() if
 
 export interface LabelSpreadingOptions {
   /**
-    String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n_samples, n_features), and return a (n_samples, n_samples) shaped weight matrix.
+    String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.
 
     @defaultValue `'rbf'`
    */
@@ -442,19 +444,19 @@ export interface LabelSpreadingOptions {
   tol?: number
 
   /**
-    The number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
 
 export interface LabelSpreadingFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
   /**
-    Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in transduction_.
+    Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
    */
   y?: ArrayLike
 }
@@ -480,7 +482,7 @@ export interface LabelSpreadingScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

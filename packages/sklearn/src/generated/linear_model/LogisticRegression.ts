@@ -8,11 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Logistic Regression (aka logit, MaxEnt) classifier.
 
-  In the multiclass case, the training algorithm uses the one-vs-rest (OvR) scheme if the ‘multi_class’ option is set to ‘ovr’, and uses the cross-entropy loss if the ‘multi_class’ option is set to ‘multinomial’. (Currently the ‘multinomial’ option is supported only by the ‘lbfgs’, ‘sag’, ‘saga’ and ‘newton-cg’ solvers.)
+  In the multiclass case, the training algorithm uses the one-vs-rest (OvR) scheme if the ‘multi\_class’ option is set to ‘ovr’, and uses the cross-entropy loss if the ‘multi\_class’ option is set to ‘multinomial’. (Currently the ‘multinomial’ option is supported only by the ‘lbfgs’, ‘sag’, ‘saga’ and ‘newton-cg’ solvers.)
 
-  This class implements regularized logistic regression using the ‘liblinear’ library, ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ solvers. Note that regularization is applied by default. It can handle both dense and sparse input. Use C-ordered arrays or CSR matrices containing 64-bit floats for optimal performance; any other input format will be converted (and copied).
+  This class implements regularized logistic regression using the ‘liblinear’ library, ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ solvers. **Note that regularization is applied by default**. It can handle both dense and sparse input. Use C-ordered arrays or CSR matrices containing 64-bit floats for optimal performance; any other input format will be converted (and copied).
 
   The ‘newton-cg’, ‘sag’, and ‘lbfgs’ solvers support only L2 regularization with primal formulation, or no regularization. The ‘liblinear’ solver supports both L1 and L2 regularization, with a dual formulation only for the L2 penalty. The Elastic-Net regularization is only supported by the ‘saga’ solver.
+
+  Read more in the [User Guide](../linear_model.html#logistic-regression).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
  */
@@ -156,7 +158,7 @@ pms_LogisticRegression_decision_function = {k: v for k, v in pms_LogisticRegress
   /**
     Convert coefficient matrix to dense array format.
 
-    Converts the coef_ member (back) to a numpy.ndarray. This is the default format of coef_ and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
+    Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
   async densify(opts: LogisticRegressionDensifyOptions): Promise<any> {
     if (this._isDisposed) {
@@ -289,7 +291,7 @@ pms_LogisticRegression_predict_log_proba = {k: v for k, v in pms_LogisticRegress
 
     The returned estimates for all classes are ordered by the label of classes.
 
-    For a multi_class problem, if multi_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e calculate the probability of each class assuming it to be positive using the logistic function. and normalize these values across all the classes.
+    For a multi\_class problem, if multi\_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e calculate the probability of each class assuming it to be positive using the logistic function. and normalize these values across all the classes.
    */
   async predict_proba(
     opts: LogisticRegressionPredictProbaOptions
@@ -361,9 +363,9 @@ pms_LogisticRegression_score = {k: v for k, v in pms_LogisticRegression_score.it
   /**
     Convert coefficient matrix to sparse format.
 
-    Converts the coef_ member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
+    Converts the `coef\_` member to a scipy.sparse matrix, which for L1-regularized models can be much more memory- and storage-efficient than the usual numpy.ndarray representation.
 
-    The intercept_ member is not converted.
+    The `intercept\_` member is not converted.
    */
   async sparsify(opts: LogisticRegressionSparsifyOptions): Promise<any> {
     if (this._isDisposed) {
@@ -420,7 +422,7 @@ pms_LogisticRegression_sparsify = {k: v for k, v in pms_LogisticRegression_spars
   /**
     Coefficient of the features in the decision function.
 
-    coef_ is of shape (1, n_features) when the given problem is binary. In particular, when multi_class='multinomial', coef_ corresponds to outcome 1 (True) and -coef_ corresponds to outcome 0 (False).
+    `coef\_` is of shape (1, n\_features) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `coef\_` corresponds to outcome 1 (True) and `\-coef\_` corresponds to outcome 0 (False).
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -449,7 +451,7 @@ pms_LogisticRegression_sparsify = {k: v for k, v in pms_LogisticRegression_spars
   /**
     Intercept (a.k.a. bias) added to the decision function.
 
-    If fit_intercept is set to False, the intercept is set to zero. intercept_ is of shape (1,) when the given problem is binary. In particular, when multi_class='multinomial', intercept_ corresponds to outcome 1 (True) and -intercept_ corresponds to outcome 0 (False).
+    If `fit\_intercept` is set to False, the intercept is set to zero. `intercept\_` is of shape (1,) when the given problem is binary. In particular, when `multi\_class='multinomial'`, `intercept\_` corresponds to outcome 1 (True) and `\-intercept\_` corresponds to outcome 0 (False).
    */
   get intercept_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -476,7 +478,7 @@ pms_LogisticRegression_sparsify = {k: v for k, v in pms_LogisticRegression_spars
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -503,7 +505,7 @@ pms_LogisticRegression_sparsify = {k: v for k, v in pms_LogisticRegression_spars
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -566,7 +568,7 @@ export interface LogisticRegressionOptions {
   penalty?: 'l1' | 'l2' | 'elasticnet'
 
   /**
-    Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=False when n_samples > n_features.
+    Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=False when n\_samples > n\_features.
 
     @defaultValue `false`
    */
@@ -594,25 +596,25 @@ export interface LogisticRegressionOptions {
   fit_intercept?: boolean
 
   /**
-    Useful only when the solver ‘liblinear’ is used and self.fit_intercept is set to True. In this case, x becomes [x, self.intercept_scaling], i.e. a “synthetic” feature with constant value equal to intercept_scaling is appended to the instance vector. The intercept becomes intercept_scaling * synthetic_feature_weight.
+    Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to True. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
 
-    Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept_scaling has to be increased.
+    Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
 
     @defaultValue `1`
    */
   intercept_scaling?: number
 
   /**
-    Weights associated with classes in the form {class_label: weight}. If not given, all classes are supposed to have weight one.
+    Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
 
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y)).
+    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-    Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified.
+    Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
    */
   class_weight?: any | 'balanced'
 
   /**
-    Used when solver == ‘sag’, ‘saga’ or ‘liblinear’ to shuffle the data. See Glossary for details.
+    Used when `solver` == ‘sag’, ‘saga’ or ‘liblinear’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
@@ -637,7 +639,7 @@ export interface LogisticRegressionOptions {
   max_iter?: number
 
   /**
-    If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, even when the data is binary. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’.
+    If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, *even when the data is binary*. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’.
 
     @defaultValue `'auto'`
    */
@@ -651,19 +653,19 @@ export interface LogisticRegressionOptions {
   verbose?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See the Glossary.
+    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    Number of CPU cores used when parallelizing over classes if multi_class=’ovr’”. This parameter is ignored when the solver is set to ‘liblinear’ regardless of whether ‘multi_class’ is specified or not. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    The Elastic-Net mixing parameter, with 0 <= l1_ratio <= 1. Only used if penalty='elasticnet'. Setting l1_ratio=0 is equivalent to using penalty='l2', while setting l1_ratio=1 is equivalent to using penalty='l1'. For 0 < l1_ratio <1, the penalty is a combination of L1 and L2.
+    The Elastic-Net mixing parameter, with `0 <= l1\_ratio <= 1`. Only used if `penalty='elasticnet'`. Setting `l1\_ratio=0` is equivalent to using `penalty='l2'`, while setting `l1\_ratio=1` is equivalent to using `penalty='l1'`. For `0 < l1\_ratio <1`, the penalty is a combination of L1 and L2.
    */
   l1_ratio?: number
 }
@@ -679,7 +681,7 @@ export interface LogisticRegressionDensifyOptions {}
 
 export interface LogisticRegressionFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -703,14 +705,14 @@ export interface LogisticRegressionPredictOptions {
 
 export interface LogisticRegressionPredictLogProbaOptions {
   /**
-    Vector to be scored, where n_samples is the number of samples and n_features is the number of features.
+    Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 }
 
 export interface LogisticRegressionPredictProbaOptions {
   /**
-    Vector to be scored, where n_samples is the number of samples and n_features is the number of features.
+    Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 }
@@ -722,7 +724,7 @@ export interface LogisticRegressionScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

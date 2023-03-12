@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Mini-batch Sparse Principal Components Analysis.
 
-  Finds the set of sparse components that can optimally reconstruct the data.  The amount of sparseness is controllable by the coefficient of the L1 penalty, given by the parameter alpha.
+  Finds the set of sparse components that can optimally reconstruct the data. The amount of sparseness is controllable by the coefficient of the L1 penalty, given by the parameter alpha.
+
+  Read more in the [User Guide](../decomposition.html#sparsepca).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchSparsePCA.html
  */
@@ -141,7 +143,7 @@ pms_MiniBatchSparsePCA_fit = {k: v for k, v in pms_MiniBatchSparsePCA_fit.items(
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: MiniBatchSparsePCAFitTransformOptions
@@ -181,7 +183,7 @@ pms_MiniBatchSparsePCA_fit_transform = {k: v for k, v in pms_MiniBatchSparsePCA_
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: MiniBatchSparsePCAGetFeatureNamesOutOptions
@@ -255,7 +257,7 @@ pms_MiniBatchSparsePCA_inverse_transform = {k: v for k, v in pms_MiniBatchSparse
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: MiniBatchSparsePCASetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -287,7 +289,7 @@ pms_MiniBatchSparsePCA_set_output = {k: v for k, v in pms_MiniBatchSparsePCA_set
   /**
     Least Squares projection of the data onto the sparse components.
 
-    To avoid instability issues in case the system is under-determined, regularization can be applied (Ridge regression) via the ridge_alpha parameter.
+    To avoid instability issues in case the system is under-determined, regularization can be applied (Ridge regression) via the `ridge\_alpha` parameter.
 
     Note that Sparse PCA components orthogonality is not enforced as in PCA hence one cannot use a simple linear projection.
    */
@@ -402,7 +404,7 @@ pms_MiniBatchSparsePCA_transform = {k: v for k, v in pms_MiniBatchSparsePCA_tran
   }
 
   /**
-    Per-feature empirical mean, estimated from the training set. Equal to X.mean(axis=0).
+    Per-feature empirical mean, estimated from the training set. Equal to `X.mean(axis=0)`.
    */
   get mean_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -429,7 +431,7 @@ pms_MiniBatchSparsePCA_transform = {k: v for k, v in pms_MiniBatchSparsePCA_tran
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -456,7 +458,7 @@ pms_MiniBatchSparsePCA_transform = {k: v for k, v in pms_MiniBatchSparsePCA_tran
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -485,7 +487,7 @@ pms_MiniBatchSparsePCA_transform = {k: v for k, v in pms_MiniBatchSparsePCA_tran
 
 export interface MiniBatchSparsePCAOptions {
   /**
-    Number of sparse atoms to extract. If None, then n_components is set to n_features.
+    Number of sparse atoms to extract. If None, then `n\_components` is set to `n\_features`.
    */
   n_components?: number
 
@@ -511,7 +513,7 @@ export interface MiniBatchSparsePCAOptions {
   n_iter?: number
 
   /**
-    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If max_iter is not None, n_iter is ignored.
+    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `None`, `n\_iter` is ignored.
    */
   max_iter?: number
 
@@ -542,35 +544,35 @@ export interface MiniBatchSparsePCAOptions {
   shuffle?: boolean
 
   /**
-    Number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear_model.lars_path) cd: uses the coordinate descent method to compute the Lasso solution (linear_model.Lasso). Lars will be faster if the estimated components are sparse.
+    Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear\_model.lars\_path) cd: uses the coordinate descent method to compute the Lasso solution (linear\_model.Lasso). Lars will be faster if the estimated components are sparse.
 
     @defaultValue `'lars'`
    */
   method?: 'lars' | 'cd'
 
   /**
-    Used for random shuffling when shuffle is set to True, during online dictionary learning. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Used for random shuffling when `shuffle` is set to `True`, during online dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if max_iter is not None.
+    Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not None.
 
-    To disable early stopping based on changes in the dictionary, set tol to 0.0.
+    To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
 
     @defaultValue `0.001`
    */
   tol?: number
 
   /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if max_iter is not None.
+    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not None.
 
-    To disable convergence detection based on cost function, set max_no_improvement to None.
+    To disable convergence detection based on cost function, set `max\_no\_improvement` to `None`.
 
     @defaultValue `10`
    */
@@ -579,7 +581,7 @@ export interface MiniBatchSparsePCAOptions {
 
 export interface MiniBatchSparsePCAFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -608,7 +610,7 @@ export interface MiniBatchSparsePCAFitTransformOptions {
 
 export interface MiniBatchSparsePCAGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchSparsePCA.fit "sklearn.decomposition.MiniBatchSparsePCA.fit").
    */
   input_features?: any
 }
@@ -622,7 +624,7 @@ export interface MiniBatchSparsePCAInverseTransformOptions {
 
 export interface MiniBatchSparsePCASetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Bernoulli Restricted Boltzmann Machine (RBM).
 
-  A Restricted Boltzmann Machine with binary visible units and binary hidden units. Parameters are estimated using Stochastic Maximum Likelihood (SML), also known as Persistent Contrastive Divergence (PCD) [2].
+  A Restricted Boltzmann Machine with binary visible units and binary hidden units. Parameters are estimated using Stochastic Maximum Likelihood (SML), also known as Persistent Contrastive Divergence (PCD) \[2\].
 
-  The time complexity of this implementation is O(d ** 2) assuming d ~ n_features ~ n_components.
+  The time complexity of this implementation is `O(d \*\* 2)` assuming d ~ n\_features ~ n\_components.
+
+  Read more in the [User Guide](../neural_networks_unsupervised.html#rbm).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html
  */
@@ -133,7 +135,7 @@ pms_BernoulliRBM_fit = {k: v for k, v in pms_BernoulliRBM_fit.items() if v is no
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: BernoulliRBMFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -167,7 +169,7 @@ pms_BernoulliRBM_fit_transform = {k: v for k, v in pms_BernoulliRBM_fit_transfor
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: BernoulliRBMGetFeatureNamesOutOptions
@@ -288,7 +290,7 @@ pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_sample
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: BernoulliRBMSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -394,7 +396,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Weight matrix, where n_features is the number of visible units and n_components is the number of hidden units.
+    Weight matrix, where `n\_features` is the number of visible units and `n\_components` is the number of hidden units.
    */
   get components_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -419,7 +421,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Hidden Activation sampled from the model distribution, where batch_size is the number of examples per minibatch and n_components is the number of hidden units.
+    Hidden Activation sampled from the model distribution, where `batch\_size` is the number of examples per minibatch and `n\_components` is the number of hidden units.
    */
   get h_samples_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -444,7 +446,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -469,7 +471,7 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -503,7 +505,7 @@ export interface BernoulliRBMOptions {
   n_components?: number
 
   /**
-    The learning rate for weight updates. It is highly recommended to tune this hyper-parameter. Reasonable values are in the 10**[0., -3.] range.
+    The learning rate for weight updates. It is *highly* recommended to tune this hyper-parameter. Reasonable values are in the 10\*\*\[0., -3.\] range.
 
     @defaultValue `0.1`
    */
@@ -524,7 +526,7 @@ export interface BernoulliRBMOptions {
   n_iter?: number
 
   /**
-    The verbosity level. The default, zero, means silent mode. Range of values is [0, inf].
+    The verbosity level. The default, zero, means silent mode. Range of values is \[0, inf\].
 
     @defaultValue `0`
    */
@@ -567,7 +569,7 @@ export interface BernoulliRBMFitTransformOptions {
 
 export interface BernoulliRBMGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.neural_network.BernoulliRBM.fit "sklearn.neural_network.BernoulliRBM.fit").
    */
   input_features?: any
 }
@@ -600,7 +602,7 @@ export interface BernoulliRBMScoreSamplesOptions {
 
 export interface BernoulliRBMSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -112,8 +112,8 @@ The main differences are:
   - This spawns a Python child process and validates all of the Python dependencies
   - You can pass a custom `python` path via `createPythonBridge({ python: '/path/to/your/python3' })`
 - **You need to pass this bridge to a class's async `init` method before using it**
-  - This creates an underlying Python variable representing your class instance.
-- Instead of using `numpy` or `pandas`, we're just using plain JavaScript arrays.
+  - This creates an underlying Python variable representing your class instance
+- Instead of using `numpy` or `pandas`, we're just using plain JavaScript arrays
   - Anywhere the Python version would input or output a `nympy` array, we instead just use `number[]`, `number[][]`, etc
   - We take care of converting to and from `numpy` arrays automatically where necessary
 - Whenever you're done using an instance, call `dispose()` to free the underlying Python resources

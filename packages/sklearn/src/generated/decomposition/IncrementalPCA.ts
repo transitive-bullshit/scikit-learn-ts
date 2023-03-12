@@ -12,9 +12,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Depending on the size of the input data, this algorithm can be much more memory efficient than a PCA, and allows sparse input.
 
-  This algorithm has constant memory complexity, on the order of batch_size * n_features, enabling use of np.memmap files without loading the entire file into memory. For sparse matrices, the input is converted to dense in batches (in order to be able to subtract the mean) which avoids storing the entire dense matrix at any one time.
+  This algorithm has constant memory complexity, on the order of `batch\_size \* n\_features`, enabling use of np.memmap files without loading the entire file into memory. For sparse matrices, the input is converted to dense in batches (in order to be able to subtract the mean) which avoids storing the entire dense matrix at any one time.
 
-  The computational overhead of each SVD is O(batch_size * n_features ** 2), but only 2 * batch_size samples remain in memory at a time. There will be n_samples / batch_size SVD computations to get the principal components, versus 1 large SVD of complexity O(n_samples * n_features ** 2) for PCA.
+  The computational overhead of each SVD is `O(batch\_size \* n\_features \*\* 2)`, but only 2 \* batch\_size samples remain in memory at a time. There will be `n\_samples / batch\_size` SVD computations to get the principal components, versus 1 large SVD of complexity `O(n\_samples \* n\_features \*\* 2)` for PCA.
+
+  Read more in the [User Guide](../decomposition.html#incrementalpca).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html
  */
@@ -101,7 +103,7 @@ ctor_IncrementalPCA = {k: v for k, v in ctor_IncrementalPCA.items() if v is not 
   }
 
   /**
-    Fit the model with X, using minibatches of size batch_size.
+    Fit the model with X, using minibatches of size batch\_size.
    */
   async fit(opts: IncrementalPCAFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -131,7 +133,7 @@ pms_IncrementalPCA_fit = {k: v for k, v in pms_IncrementalPCA_fit.items() if v i
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: IncrementalPCAFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -165,7 +167,7 @@ pms_IncrementalPCA_fit_transform = {k: v for k, v in pms_IncrementalPCA_fit_tran
   /**
     Compute data covariance with the generative model.
 
-    cov = components_.T * S**2 * components_ + sigma2 * eye(n_features) where S**2 contains the explained variances, and sigma2 contains the noise variances.
+    `cov \= components\_.T \* S\*\*2 \* components\_ + sigma2 \* eye(n\_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
    */
   async get_covariance(opts: IncrementalPCAGetCovarianceOptions): Promise<any> {
     if (this._isDisposed) {
@@ -195,7 +197,7 @@ pms_IncrementalPCA_get_covariance = {k: v for k, v in pms_IncrementalPCA_get_cov
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: IncrementalPCAGetFeatureNamesOutOptions
@@ -260,7 +262,7 @@ pms_IncrementalPCA_get_precision = {k: v for k, v in pms_IncrementalPCA_get_prec
   /**
     Transform data back to its original space.
 
-    In other words, return an input X_original whose transform would be X.
+    In other words, return an input `X\_original` whose transform would be X.
    */
   async inverse_transform(
     opts: IncrementalPCAInverseTransformOptions
@@ -324,7 +326,7 @@ pms_IncrementalPCA_partial_fit = {k: v for k, v in pms_IncrementalPCA_partial_fi
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: IncrementalPCASetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -354,7 +356,7 @@ pms_IncrementalPCA_set_output = {k: v for k, v in pms_IncrementalPCA_set_output.
   /**
     Apply dimensionality reduction to X.
 
-    X is projected on the first principal components previously extracted from a training set, using minibatches of size batch_size if X is sparse.
+    X is projected on the first principal components previously extracted from a training set, using minibatches of size batch\_size if X is sparse.
    */
   async transform(opts: IncrementalPCATransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -382,7 +384,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing explained_variance_.
+    Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing `explained\_variance\_`.
    */
   get components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -457,7 +459,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the n_components variables in the lower-dimensional space.
+    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n\_components` variables in the lower-dimensional space.
    */
   get singular_values_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -482,7 +484,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Per-feature empirical mean, aggregate over calls to partial_fit.
+    Per-feature empirical mean, aggregate over calls to `partial\_fit`.
    */
   get mean_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -505,7 +507,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Per-feature empirical variance, aggregate over calls to partial_fit.
+    Per-feature empirical variance, aggregate over calls to `partial\_fit`.
    */
   get var_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -528,7 +530,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    The estimated noise covariance following the Probabilistic PCA model from Tipping and Bishop 1999. See “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or http://www.miketipping.com/papers/met-mppca.pdf.
+    The estimated noise covariance following the Probabilistic PCA model from Tipping and Bishop 1999. See “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf).
    */
   get noise_variance_(): Promise<number> {
     if (this._isDisposed) {
@@ -553,7 +555,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    The estimated number of components. Relevant when n_components=None.
+    The estimated number of components. Relevant when `n\_components=None`.
    */
   get n_components_(): Promise<number> {
     if (this._isDisposed) {
@@ -578,7 +580,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across partial_fit calls.
+    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across `partial\_fit` calls.
    */
   get n_samples_seen_(): Promise<number> {
     if (this._isDisposed) {
@@ -603,7 +605,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Inferred batch size from batch_size.
+    Inferred batch size from `batch\_size`.
    */
   get batch_size_(): Promise<number> {
     if (this._isDisposed) {
@@ -628,7 +630,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -653,7 +655,7 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -680,12 +682,12 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
 
 export interface IncrementalPCAOptions {
   /**
-    Number of components to keep. If n_components is None, then n_components is set to min(n_samples, n_features).
+    Number of components to keep. If `n\_components` is `None`, then `n\_components` is set to `min(n\_samples, n\_features)`.
    */
   n_components?: number
 
   /**
-    When True (False by default) the components_ vectors are divided by n_samples times components_ to ensure uncorrelated outputs with unit component-wise variances.
+    When True (False by default) the `components\_` vectors are divided by `n\_samples` times `components\_` to ensure uncorrelated outputs with unit component-wise variances.
 
     Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometimes improve the predictive accuracy of the downstream estimators by making data respect some hard-wired assumptions.
 
@@ -694,21 +696,21 @@ export interface IncrementalPCAOptions {
   whiten?: boolean
 
   /**
-    If False, X will be overwritten. copy=False can be used to save memory but is unsafe for general use.
+    If False, X will be overwritten. `copy=False` can be used to save memory but is unsafe for general use.
 
     @defaultValue `true`
    */
   copy?: boolean
 
   /**
-    The number of samples to use for each batch. Only used when calling fit. If batch_size is None, then batch_size is inferred from the data and set to 5 * n_features, to provide a balance between approximation accuracy and memory consumption.
+    The number of samples to use for each batch. Only used when calling `fit`. If `batch\_size` is `None`, then `batch\_size` is inferred from the data and set to `5 \* n\_features`, to provide a balance between approximation accuracy and memory consumption.
    */
   batch_size?: number
 }
 
 export interface IncrementalPCAFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -744,7 +746,7 @@ export interface IncrementalPCAGetCovarianceOptions {
 
 export interface IncrementalPCAGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.IncrementalPCA.fit "sklearn.decomposition.IncrementalPCA.fit").
    */
   input_features?: any
 }
@@ -758,14 +760,14 @@ export interface IncrementalPCAGetPrecisionOptions {
 
 export interface IncrementalPCAInverseTransformOptions {
   /**
-    New data, where n_samples is the number of samples and n_components is the number of components.
+    New data, where `n\_samples` is the number of samples and `n\_components` is the number of components.
    */
   X?: ArrayLike[]
 }
 
 export interface IncrementalPCAPartialFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -775,7 +777,7 @@ export interface IncrementalPCAPartialFitOptions {
   y?: any
 
   /**
-    Run check_array on X.
+    Run check\_array on X.
 
     @defaultValue `true`
    */
@@ -784,14 +786,14 @@ export interface IncrementalPCAPartialFitOptions {
 
 export interface IncrementalPCASetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface IncrementalPCATransformOptions {
   /**
-    New data, where n_samples is the number of samples and n_features is the number of features.
+    New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 }

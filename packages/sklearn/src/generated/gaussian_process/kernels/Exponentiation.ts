@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  The Exponentiation kernel takes one base kernel and a scalar parameter \(p\) and combines them via
+  The Exponentiation kernel takes one base kernel and a scalar parameter \\(p\\) and combines them via
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html
  */

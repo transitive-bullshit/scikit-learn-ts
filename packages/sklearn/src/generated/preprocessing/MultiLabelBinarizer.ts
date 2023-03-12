@@ -99,7 +99,7 @@ ctor_MultiLabelBinarizer = {k: v for k, v in ctor_MultiLabelBinarizer.items() if
   }
 
   /**
-    Fit the label sets binarizer, storing classes_.
+    Fit the label sets binarizer, storing [classes\_](../../glossary.html#term-classes_).
    */
   async fit(opts: MultiLabelBinarizerFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -200,7 +200,7 @@ pms_MultiLabelBinarizer_inverse_transform = {k: v for k, v in pms_MultiLabelBina
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: MultiLabelBinarizerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -262,7 +262,7 @@ pms_MultiLabelBinarizer_transform = {k: v for k, v in pms_MultiLabelBinarizer_tr
   }
 
   /**
-    A copy of the classes parameter when provided. Otherwise it corresponds to the sorted set of classes found when fitting.
+    A copy of the `classes` parameter when provided. Otherwise it corresponds to the sorted set of classes found when fitting.
    */
   get classes_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -305,14 +305,14 @@ export interface MultiLabelBinarizerOptions {
 
 export interface MultiLabelBinarizerFitOptions {
   /**
-    A set of labels (any orderable and hashable object) for each sample. If the classes parameter is set, y will not be iterated.
+    A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
    */
   y?: any
 }
 
 export interface MultiLabelBinarizerFitTransformOptions {
   /**
-    A set of labels (any orderable and hashable object) for each sample. If the classes parameter is set, y will not be iterated.
+    A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
    */
   y?: any
 }
@@ -326,14 +326,14 @@ export interface MultiLabelBinarizerInverseTransformOptions {
 
 export interface MultiLabelBinarizerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface MultiLabelBinarizerTransformOptions {
   /**
-    A set of labels (any orderable and hashable object) for each sample. If the classes parameter is set, y will not be iterated.
+    A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
    */
   y?: any
 }

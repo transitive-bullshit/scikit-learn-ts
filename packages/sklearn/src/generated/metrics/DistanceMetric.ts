@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   DistanceMetric class
 
-  This class provides a uniform interface to fast distance metric functions.  The various metrics can be accessed via the get_metric class method and the metric string identifier (see below).
+  This class provides a uniform interface to fast distance metric functions. The various metrics can be accessed via the [`get\_metric`](#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") class method and the metric string identifier (see below).
 
   Examples
 
@@ -157,7 +157,7 @@ pms_DistanceMetric_get_metric = {k: v for k, v in pms_DistanceMetric_get_metric.
   /**
     Compute the pairwise distances between X and Y
 
-    This is a convenience routine for the sake of testing.  For many metrics, the utilities in scipy.spatial.distance.cdist and scipy.spatial.distance.pdist will be faster.
+    This is a convenience routine for the sake of testing. For many metrics, the utilities in scipy.spatial.distance.cdist and scipy.spatial.distance.pdist will be faster.
    */
   async pairwise(opts: DistanceMetricPairwiseOptions): Promise<NDArray[]> {
     if (this._isDisposed) {

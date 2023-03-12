@@ -14,9 +14,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   If a feature value is a sequence or set of strings, this transformer will iterate over the values and will count the occurrences of each string value.
 
-  However, note that this transformer will only do a binary one-hot encoding when feature values are of type string. If categorical features are represented as numeric values such as int or iterables of strings, the DictVectorizer can be followed by OneHotEncoder to complete binary one-hot encoding.
+  However, note that this transformer will only do a binary one-hot encoding when feature values are of type string. If categorical features are represented as numeric values such as int or iterables of strings, the DictVectorizer can be followed by [`OneHotEncoder`](sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder "sklearn.preprocessing.OneHotEncoder") to complete binary one-hot encoding.
 
   Features that do not occur in a sample (mapping) will have a zero value in the resulting array/matrix.
+
+  Read more in the [User Guide](../feature_extraction.html#dict-feature-extraction).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html
  */
@@ -198,7 +200,7 @@ pms_DictVectorizer_get_feature_names_out = {k: v for k, v in pms_DictVectorizer_
   /**
     Transform array or sparse matrix X back to feature mappings.
 
-    X must have been produced by this DictVectorizer’s transform or fit_transform method; it may only have passed through transformers that preserve the number of features and their order.
+    X must have been produced by this DictVectorizer’s transform or fit\_transform method; it may only have passed through transformers that preserve the number of features and their order.
 
     In the case of one-hot/one-of-K coding, the constructed feature names and values are returned rather than the original ones.
    */
@@ -266,7 +268,7 @@ pms_DictVectorizer_restrict = {k: v for k, v in pms_DictVectorizer_restrict.item
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: DictVectorizerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -296,7 +298,7 @@ pms_DictVectorizer_set_output = {k: v for k, v in pms_DictVectorizer_set_output.
   /**
     Transform feature->value dicts to array or sparse matrix.
 
-    Named features not encountered during fit or fit_transform will be silently ignored.
+    Named features not encountered during fit or fit\_transform will be silently ignored.
    */
   async transform(opts: DictVectorizerTransformOptions): Promise<SparseMatrix> {
     if (this._isDisposed) {
@@ -349,7 +351,7 @@ pms_DictVectorizer_transform = {k: v for k, v in pms_DictVectorizer_transform.it
   }
 
   /**
-    A list of length n_features containing the feature names (e.g., “f=ham” and “f=spam”).
+    A list of length n\_features containing the feature names (e.g., “f=ham” and “f=spam”).
    */
   get feature_names_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -395,7 +397,7 @@ export interface DictVectorizerOptions {
   sparse?: boolean
 
   /**
-    Whether feature_names_ and vocabulary_ should be sorted when fitting.
+    Whether `feature\_names\_` and `vocabulary\_` should be sorted when fitting.
 
     @defaultValue `true`
    */
@@ -447,7 +449,7 @@ export interface DictVectorizerInverseTransformOptions {
 
 export interface DictVectorizerRestrictOptions {
   /**
-    Boolean mask or list of indices (as returned by the get_support member of feature selectors).
+    Boolean mask or list of indices (as returned by the get\_support member of feature selectors).
    */
   support?: ArrayLike
 
@@ -461,7 +463,7 @@ export interface DictVectorizerRestrictOptions {
 
 export interface DictVectorizerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

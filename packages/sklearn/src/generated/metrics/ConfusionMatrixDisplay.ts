@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Confusion Matrix visualization.
 
-  It is recommend to use from_estimator or from_predictions to create a ConfusionMatrixDisplay. All parameters are stored as attributes.
+  It is recommend to use [`from\_estimator`](#sklearn.metrics.ConfusionMatrixDisplay.from_estimator "sklearn.metrics.ConfusionMatrixDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.ConfusionMatrixDisplay.from_predictions "sklearn.metrics.ConfusionMatrixDisplay.from_predictions") to create a [`ConfusionMatrixDisplay`](#sklearn.metrics.ConfusionMatrixDisplay "sklearn.metrics.ConfusionMatrixDisplay"). All parameters are stored as attributes.
+
+  Read more in the [User Guide](../../visualizations.html#visualizations).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html
  */
@@ -103,6 +105,8 @@ ctor_ConfusionMatrixDisplay = {k: v for k, v in ctor_ConfusionMatrixDisplay.item
 
   /**
     Plot Confusion Matrix given an estimator and some data.
+
+    Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
    */
   async from_estimator(
     opts: ConfusionMatrixDisplayFromEstimatorOptions
@@ -160,6 +164,8 @@ pms_ConfusionMatrixDisplay_from_estimator = {k: v for k, v in pms_ConfusionMatri
 
   /**
     Plot Confusion Matrix given true and predicted labels.
+
+    Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
    */
   async from_predictions(
     opts: ConfusionMatrixDisplayFromPredictionsOptions
@@ -279,7 +285,7 @@ pms_ConfusionMatrixDisplay_plot = {k: v for k, v in pms_ConfusionMatrixDisplay_p
   }
 
   /**
-    Array of matplotlib axes. None if include_values is false.
+    Array of matplotlib axes. `None` if `include\_values` is false.
    */
   get text_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -367,14 +373,14 @@ export interface ConfusionMatrixDisplayOptions {
   confusion_matrix?: NDArray[]
 
   /**
-    Display labels for plot. If None, display labels are set from 0 to n_classes - 1.
+    Display labels for plot. If None, display labels are set from 0 to `n\_classes \- 1`.
    */
   display_labels?: NDArray
 }
 
 export interface ConfusionMatrixDisplayFromEstimatorOptions {
   /**
-    Fitted classifier or a fitted Pipeline in which the last estimator is a classifier.
+    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
    */
   estimator?: any
 
@@ -389,7 +395,7 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   y?: ArrayLike
 
   /**
-    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If None is given, those that appear at least once in y_true or y_pred are used in sorted order.
+    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `None` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
    */
   labels?: ArrayLike
 
@@ -404,7 +410,7 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   normalize?: 'true' | 'pred' | 'all'
 
   /**
-    Target names used for plotting. By default, labels will be used if it is defined, otherwise the unique labels of y_true and y_pred will be used.
+    Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
    */
   display_labels?: ArrayLike
 
@@ -423,7 +429,7 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   xticks_rotation?: 'vertical' | 'horizontal' | number
 
   /**
-    Format specification for values in confusion matrix. If None, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+    Format specification for values in confusion matrix. If `None`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
    */
   values_format?: string
 
@@ -435,7 +441,7 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   cmap?: string
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
@@ -447,12 +453,12 @@ export interface ConfusionMatrixDisplayFromEstimatorOptions {
   colorbar?: boolean
 
   /**
-    Dict with keywords passed to matplotlib.pyplot.imshow call.
+    Dict with keywords passed to `matplotlib.pyplot.imshow` call.
    */
   im_kw?: any
 
   /**
-    Dict with keywords passed to matplotlib.pyplot.text call.
+    Dict with keywords passed to `matplotlib.pyplot.text` call.
    */
   text_kw?: any
 }
@@ -464,12 +470,12 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   y_true?: ArrayLike
 
   /**
-    The predicted labels given by the method predict of an classifier.
+    The predicted labels given by the method `predict` of an classifier.
    */
   y_pred?: ArrayLike
 
   /**
-    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If None is given, those that appear at least once in y_true or y_pred are used in sorted order.
+    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `None` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
    */
   labels?: ArrayLike
 
@@ -484,7 +490,7 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   normalize?: 'true' | 'pred' | 'all'
 
   /**
-    Target names used for plotting. By default, labels will be used if it is defined, otherwise the unique labels of y_true and y_pred will be used.
+    Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
    */
   display_labels?: ArrayLike
 
@@ -503,7 +509,7 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   xticks_rotation?: 'vertical' | 'horizontal' | number
 
   /**
-    Format specification for values in confusion matrix. If None, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+    Format specification for values in confusion matrix. If `None`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
    */
   values_format?: string
 
@@ -515,7 +521,7 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   cmap?: string
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
@@ -527,12 +533,12 @@ export interface ConfusionMatrixDisplayFromPredictionsOptions {
   colorbar?: boolean
 
   /**
-    Dict with keywords passed to matplotlib.pyplot.imshow call.
+    Dict with keywords passed to `matplotlib.pyplot.imshow` call.
    */
   im_kw?: any
 
   /**
-    Dict with keywords passed to matplotlib.pyplot.text call.
+    Dict with keywords passed to `matplotlib.pyplot.text` call.
    */
   text_kw?: any
 }
@@ -560,12 +566,12 @@ export interface ConfusionMatrixDisplayPlotOptions {
   xticks_rotation?: 'vertical' | 'horizontal' | number
 
   /**
-    Format specification for values in confusion matrix. If None, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+    Format specification for values in confusion matrix. If `None`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
    */
   values_format?: string
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
@@ -577,12 +583,12 @@ export interface ConfusionMatrixDisplayPlotOptions {
   colorbar?: boolean
 
   /**
-    Dict with keywords passed to matplotlib.pyplot.imshow call.
+    Dict with keywords passed to `matplotlib.pyplot.imshow` call.
    */
   im_kw?: any
 
   /**
-    Dict with keywords passed to matplotlib.pyplot.text call.
+    Dict with keywords passed to `matplotlib.pyplot.text` call.
    */
   text_kw?: any
 }

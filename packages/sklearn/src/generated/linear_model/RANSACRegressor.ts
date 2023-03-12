@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   RANSAC is an iterative algorithm for the robust estimation of parameters from a subset of inliers from the complete data set.
 
+  Read more in the [User Guide](../linear_model.html#ransac-regression).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html
  */
 export class RANSACRegressor {
@@ -145,7 +147,7 @@ pms_RANSACRegressor_fit = {k: v for k, v in pms_RANSACRegressor_fit.items() if v
   /**
     Predict using the estimated model.
 
-    This is a wrapper for estimator_.predict(X).
+    This is a wrapper for `estimator\_.predict(X)`.
    */
   async predict(opts: RANSACRegressorPredictOptions): Promise<any> {
     if (this._isDisposed) {
@@ -175,7 +177,7 @@ pms_RANSACRegressor_predict = {k: v for k, v in pms_RANSACRegressor_predict.item
   /**
     Return the score of the prediction.
 
-    This is a wrapper for estimator_.score(X, y).
+    This is a wrapper for `estimator\_.score(X, y)`.
    */
   async score(opts: RANSACRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -205,7 +207,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Best fitted model (copy of the estimator object).
+    Best fitted model (copy of the `estimator` object).
    */
   get estimator_(): Promise<any> {
     if (this._isDisposed) {
@@ -230,7 +232,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Number of random selection trials until one of the stop criteria is met. It is always <= max_trials.
+    Number of random selection trials until one of the stop criteria is met. It is always `<= max\_trials`.
    */
   get n_trials_(): Promise<number> {
     if (this._isDisposed) {
@@ -255,7 +257,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Boolean mask of inliers classified as True.
+    Boolean mask of inliers classified as `True`.
    */
   get inlier_mask_(): Promise<any> {
     if (this._isDisposed) {
@@ -305,7 +307,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Number of iterations skipped due to invalid data defined by is_data_valid.
+    Number of iterations skipped due to invalid data defined by `is\_data\_valid`.
    */
   get n_skips_invalid_data_(): Promise<number> {
     if (this._isDisposed) {
@@ -330,7 +332,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Number of iterations skipped due to an invalid model defined by is_model_valid.
+    Number of iterations skipped due to an invalid model defined by `is\_model\_valid`.
    */
   get n_skips_invalid_model_(): Promise<number> {
     if (this._isDisposed) {
@@ -355,7 +357,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -380,7 +382,7 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -412,22 +414,22 @@ export interface RANSACRegressorOptions {
   estimator?: any
 
   /**
-    Minimum number of samples chosen randomly from original data. Treated as an absolute number of samples for min_samples >= 1, treated as a relative number ceil(min_samples * X.shape[0]) for min_samples < 1. This is typically chosen as the minimal number of samples necessary to estimate the given estimator. By default a sklearn.linear_model.LinearRegression() estimator is assumed and min_samples is chosen as X.shape[1] + 1. This parameter is highly dependent upon the model, so if a estimator other than linear_model.LinearRegression is used, the user must provide a value.
+    Minimum number of samples chosen randomly from original data. Treated as an absolute number of samples for `min\_samples >= 1`, treated as a relative number `ceil(min\_samples \* X.shape\[0\])` for `min\_samples < 1`. This is typically chosen as the minimal number of samples necessary to estimate the given `estimator`. By default a `sklearn.linear\_model.LinearRegression()` estimator is assumed and `min\_samples` is chosen as `X.shape\[1\] + 1`. This parameter is highly dependent upon the model, so if a `estimator` other than `linear\_model.LinearRegression` is used, the user must provide a value.
    */
   min_samples?: number
 
   /**
-    Maximum residual for a data sample to be classified as an inlier. By default the threshold is chosen as the MAD (median absolute deviation) of the target values y. Points whose residuals are strictly equal to the threshold are considered as inliers.
+    Maximum residual for a data sample to be classified as an inlier. By default the threshold is chosen as the MAD (median absolute deviation) of the target values `y`. Points whose residuals are strictly equal to the threshold are considered as inliers.
    */
   residual_threshold?: number
 
   /**
-    This function is called with the randomly selected data before the model is fitted to it: is_data_valid(X, y). If its return value is False the current randomly chosen sub-sample is skipped.
+    This function is called with the randomly selected data before the model is fitted to it: `is\_data\_valid(X, y)`. If its return value is False the current randomly chosen sub-sample is skipped.
    */
   is_data_valid?: any
 
   /**
-    This function is called with the estimated model and the randomly selected data: is_model_valid(model, X, y). If its return value is False the current randomly chosen sub-sample is skipped. Rejecting samples with this function is computationally costlier than with is_data_valid. is_model_valid should therefore only be used if the estimated model is needed for making the rejection decision.
+    This function is called with the estimated model and the randomly selected data: `is\_model\_valid(model, X, y)`. If its return value is False the current randomly chosen sub-sample is skipped. Rejecting samples with this function is computationally costlier than with `is\_data\_valid`. `is\_model\_valid` should therefore only be used if the estimated model is needed for making the rejection decision.
    */
   is_model_valid?: any
 
@@ -439,7 +441,7 @@ export interface RANSACRegressorOptions {
   max_trials?: number
 
   /**
-    Maximum number of iterations that can be skipped due to finding zero inliers or invalid data defined by is_data_valid or invalid models defined by is_model_valid.
+    Maximum number of iterations that can be skipped due to finding zero inliers or invalid data defined by `is\_data\_valid` or invalid models defined by `is\_model\_valid`.
    */
   max_skips?: number
 
@@ -461,23 +463,23 @@ export interface RANSACRegressorOptions {
   stop_probability?: number
 
   /**
-    String inputs, ‘absolute_error’ and ‘squared_error’ are supported which find the absolute error and squared error per sample respectively.
+    String inputs, ‘absolute\_error’ and ‘squared\_error’ are supported which find the absolute error and squared error per sample respectively.
 
-    If loss is a callable, then it should be a function that takes two arrays as inputs, the true and predicted value and returns a 1-D array with the i-th value of the array corresponding to the loss on X[i].
+    If `loss` is a callable, then it should be a function that takes two arrays as inputs, the true and predicted value and returns a 1-D array with the i-th value of the array corresponding to the loss on `X\[i\]`.
 
-    If the loss on a sample is greater than the residual_threshold, then this sample is classified as an outlier.
+    If the loss on a sample is greater than the `residual\_threshold`, then this sample is classified as an outlier.
 
     @defaultValue `'absolute_error'`
    */
   loss?: string
 
   /**
-    The generator used to initialize the centers. Pass an int for reproducible output across multiple function calls. See Glossary.
+    The generator used to initialize the centers. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    Use estimator instead.
+    Use `estimator` instead.
 
     @defaultValue `'deprecated'`
    */
@@ -496,7 +498,7 @@ export interface RANSACRegressorFitOptions {
   y?: ArrayLike
 
   /**
-    Individual weights for each sample raises error if sample_weight is passed and estimator fit method does not support it.
+    Individual weights for each sample raises error if sample\_weight is passed and estimator fit method does not support it.
    */
   sample_weight?: ArrayLike
 }

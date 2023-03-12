@@ -10,9 +10,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Provides train/test indices to split time series data samples that are observed at fixed time intervals, in train/test sets. In each split, test indices must be higher than before, and thus shuffling in cross validator is inappropriate.
 
-  This cross-validation object is a variation of KFold. In the kth split, it returns first k folds as train set and the (k+1)th fold as test set.
+  This cross-validation object is a variation of [`KFold`](sklearn.model_selection.KFold.html#sklearn.model_selection.KFold "sklearn.model_selection.KFold"). In the kth split, it returns first k folds as train set and the (k+1)th fold as test set.
 
   Note that unlike standard cross-validation methods, successive training sets are supersets of those that come before them.
+
+  Read more in the [User Guide](../cross_validation.html#time-series-split).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html
  */
@@ -175,7 +177,7 @@ export interface TimeSeriesSplitOptions {
   max_train_size?: number
 
   /**
-    Used to limit the size of the test set. Defaults to n_samples // (n_splits + 1), which is the maximum allowed value with gap=0.
+    Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 1)`, which is the maximum allowed value with `gap=0`.
    */
   test_size?: number
 
@@ -206,7 +208,7 @@ export interface TimeSeriesSplitGetNSplitsOptions {
 
 export interface TimeSeriesSplitSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

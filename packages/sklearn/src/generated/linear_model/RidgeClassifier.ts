@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Classifier using Ridge regression.
 
-  This classifier first converts the target values into {-1, 1} and then treats the problem as a regression task (multi-output regression in the multiclass case).
+  This classifier first converts the target values into `{-1, 1}` and then treats the problem as a regression task (multi-output regression in the multiclass case).
+
+  Read more in the [User Guide](../linear_model.html#ridge-regression).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html
  */
@@ -167,7 +169,7 @@ pms_RidgeClassifier_fit = {k: v for k, v in pms_RidgeClassifier_fit.items() if v
   }
 
   /**
-    Predict class labels for samples in X.
+    Predict class labels for samples in `X`.
    */
   async predict(opts: RidgeClassifierPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -231,7 +233,7 @@ pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() 
   /**
     Coefficient of the features in the decision function.
 
-    coef_ is of shape (1, n_features) when the given problem is binary.
+    `coef\_` is of shape (1, n\_features) when the given problem is binary.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -254,7 +256,7 @@ pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() 
   }
 
   /**
-    Independent term in decision function. Set to 0.0 if fit_intercept = False.
+    Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
    */
   get intercept_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -304,7 +306,7 @@ pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -329,7 +331,7 @@ pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -356,7 +358,7 @@ pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() 
 
 export interface RidgeClassifierOptions {
   /**
-    Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to 1 / (2C) in other linear models such as LogisticRegression or LinearSVC.
+    Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
 
     @defaultValue `1`
    */
@@ -382,16 +384,16 @@ export interface RidgeClassifierOptions {
   max_iter?: number
 
   /**
-    Precision of the solution. Note that tol has no effect for solvers ‘svd’ and ‘cholesky’.
+    Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ and ‘cholesky’.
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    Weights associated with classes in the form {class_label: weight}. If not given, all classes are supposed to have weight one.
+    Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
 
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y)).
+    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
    */
   class_weight?: any | 'balanced'
 
@@ -411,14 +413,14 @@ export interface RidgeClassifierOptions {
     | 'lbfgs'
 
   /**
-    When set to True, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
+    When set to `True`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
 
     @defaultValue `false`
    */
   positive?: boolean
 
   /**
-    Used when solver == ‘sag’ or ‘saga’ to shuffle the data. See Glossary for details.
+    Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 }
@@ -461,7 +463,7 @@ export interface RidgeClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

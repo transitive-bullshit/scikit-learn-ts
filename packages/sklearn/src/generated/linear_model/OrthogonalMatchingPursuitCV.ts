@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Cross-validated Orthogonal Matching Pursuit model (OMP).
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+
+  Read more in the [User Guide](../linear_model.html#omp).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.OrthogonalMatchingPursuitCV.html
  */
@@ -171,7 +173,7 @@ pms_OrthogonalMatchingPursuitCV_predict = {k: v for k, v in pms_OrthogonalMatchi
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: OrthogonalMatchingPursuitCVScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -315,7 +317,7 @@ pms_OrthogonalMatchingPursuitCV_score = {k: v for k, v in pms_OrthogonalMatching
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -342,7 +344,7 @@ pms_OrthogonalMatchingPursuitCV_score = {k: v for k, v in pms_OrthogonalMatching
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -385,14 +387,14 @@ export interface OrthogonalMatchingPursuitCVOptions {
   fit_intercept?: boolean
 
   /**
-    This parameter is ignored when fit_intercept is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use StandardScaler before calling fit on an estimator with normalize=False.
+    This parameter is ignored when `fit\_intercept` is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
 
     @defaultValue `false`
    */
   normalize?: boolean
 
   /**
-    Maximum numbers of iterations to perform, therefore maximum features to include. 10% of n_features but at least 5 if available.
+    Maximum numbers of iterations to perform, therefore maximum features to include. 10% of `n\_features` but at least 5 if available.
    */
   max_iter?: number
 
@@ -402,7 +404,7 @@ export interface OrthogonalMatchingPursuitCVOptions {
   cv?: number
 
   /**
-    Number of CPUs to use during the cross validation. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of CPUs to use during the cross validation. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -435,12 +437,12 @@ export interface OrthogonalMatchingPursuitCVPredictOptions {
 
 export interface OrthogonalMatchingPursuitCVScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

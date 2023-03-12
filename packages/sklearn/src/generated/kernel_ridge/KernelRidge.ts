@@ -12,7 +12,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The form of the model learned by KRR is identical to support vector regression (SVR). However, different loss functions are used: KRR uses squared error loss while support vector regression uses epsilon-insensitive loss, both combined with l2 regularization. In contrast to SVR, fitting a KRR model can be done in closed-form and is typically faster for medium-sized datasets. On the other hand, the learned model is non-sparse and thus slower than SVR, which learns a sparse model for epsilon > 0, at prediction-time.
 
-  This estimator has built-in support for multi-variate regression (i.e., when y is a 2d-array of shape [n_samples, n_targets]).
+  This estimator has built-in support for multi-variate regression (i.e., when y is a 2d-array of shape \[n\_samples, n\_targets\]).
+
+  Read more in the [User Guide](../kernel_ridge.html#kernel-ridge).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html
  */
@@ -165,7 +167,7 @@ pms_KernelRidge_predict = {k: v for k, v in pms_KernelRidge_predict.items() if v
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: KernelRidgeScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -222,7 +224,7 @@ pms_KernelRidge_score = {k: v for k, v in pms_KernelRidge_score.items() if v is 
   }
 
   /**
-    Training data, which is also required for prediction. If kernel == “precomputed” this is instead the precomputed training matrix, of shape (n_samples, n_samples).
+    Training data, which is also required for prediction. If kernel == “precomputed” this is instead the precomputed training matrix, of shape (n\_samples, n\_samples).
    */
   get X_fit_(): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
@@ -245,7 +247,7 @@ pms_KernelRidge_score = {k: v for k, v in pms_KernelRidge_score.items() if v is 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -270,7 +272,7 @@ pms_KernelRidge_score = {k: v for k, v in pms_KernelRidge_score.items() if v is 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -297,14 +299,14 @@ pms_KernelRidge_score = {k: v for k, v in pms_KernelRidge_score.items() if v is 
 
 export interface KernelRidgeOptions {
   /**
-    Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to 1 / (2C) in other linear models such as LogisticRegression or LinearSVC. If an array is passed, penalties are assumed to be specific to the targets. Hence they must correspond in number. See Ridge regression and classification for formula.
+    Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If an array is passed, penalties are assumed to be specific to the targets. Hence they must correspond in number. See [Ridge regression and classification](../linear_model.html#ridge-regression) for formula.
 
     @defaultValue `1`
    */
   alpha?: number | ArrayLike
 
   /**
-    Kernel mapping used internally. This parameter is directly passed to pairwise_kernel. If kernel is a string, it must be one of the metrics in pairwise.PAIRWISE_KERNEL_FUNCTIONS or “precomputed”. If kernel is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if kernel is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two rows from X as input and return the corresponding kernel value as a single number. This means that callables from sklearn.metrics.pairwise are not allowed, as they operate on matrices, not single samples. Use the string identifying the kernel instead.
+    Kernel mapping used internally. This parameter is directly passed to `pairwise\_kernel`. If `kernel` is a string, it must be one of the metrics in `pairwise.PAIRWISE\_KERNEL\_FUNCTIONS` or “precomputed”. If `kernel` is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if `kernel` is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two rows from X as input and return the corresponding kernel value as a single number. This means that callables from [`sklearn.metrics.pairwise`](../classes.html#module-sklearn.metrics.pairwise "sklearn.metrics.pairwise") are not allowed, as they operate on matrices, not single samples. Use the string identifying the kernel instead.
 
     @defaultValue `'linear'`
    */
@@ -337,7 +339,7 @@ export interface KernelRidgeOptions {
 
 export interface KernelRidgeFitOptions {
   /**
-    Training data. If kernel == “precomputed” this is instead a precomputed kernel matrix, of shape (n_samples, n_samples).
+    Training data. If kernel == “precomputed” this is instead a precomputed kernel matrix, of shape (n\_samples, n\_samples).
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -354,19 +356,19 @@ export interface KernelRidgeFitOptions {
 
 export interface KernelRidgePredictOptions {
   /**
-    Samples. If kernel == “precomputed” this is instead a precomputed kernel matrix, shape = [n_samples, n_samples_fitted], where n_samples_fitted is the number of samples used in the fitting for this estimator.
+    Samples. If kernel == “precomputed” this is instead a precomputed kernel matrix, shape = \[n\_samples, n\_samples\_fitted\], where n\_samples\_fitted is the number of samples used in the fitting for this estimator.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface KernelRidgeScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

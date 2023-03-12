@@ -97,7 +97,7 @@ ctor_DataDimensionalityWarning = {k: v for k, v in ctor_DataDimensionalityWarnin
   }
 
   /**
-    Exception.with_traceback(tb) – set self.__traceback__ to tb and return self.
+    Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
   async with_traceback(
     opts: DataDimensionalityWarningWithTracebackOptions

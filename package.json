@@ -40,6 +40,7 @@
     "del-cli": "^5.0.0",
     "dotenv": "^16.0.3",
     "got": "^12.6.0",
+    "html-to-md": "^0.8.3",
     "husky": "^8.0.3",
     "indent-string": "^5.0.0",
     "is-relative-url": "^4.0.0",

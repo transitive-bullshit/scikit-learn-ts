@@ -6,9 +6,11 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Encode target labels with value between 0 and n_classes-1.
+  Encode target labels with value between 0 and n\_classes-1.
 
-  This transformer should be used to encode target values, i.e. y, and not the input X.
+  This transformer should be used to encode target values, *i.e.* `y`, and not the input `X`.
+
+  Read more in the [User Guide](../preprocessing_targets.html#preprocessing-targets).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
  */
@@ -185,7 +187,7 @@ pms_LabelEncoder_inverse_transform = {k: v for k, v in pms_LabelEncoder_inverse_
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: LabelEncoderSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -271,7 +273,7 @@ export interface LabelEncoderInverseTransformOptions {
 
 export interface LabelEncoderSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

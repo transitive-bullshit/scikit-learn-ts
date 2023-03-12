@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Ridge regression with built-in cross-validation.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
 
   By default, it performs efficient Leave-One-Out Cross-Validation.
+
+  Read more in the [User Guide](../linear_model.html#ridge-regression).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeCV.html
  */
@@ -160,7 +162,7 @@ pms_RidgeCV_predict = {k: v for k, v in pms_RidgeCV_predict.items() if v is not 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: RidgeCVScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -192,7 +194,7 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
   }
 
   /**
-    Cross-validation values for each alpha (only available if store_cv_values=True and cv=None). After fit() has been called, this attribute will contain the mean squared errors if scoring is None otherwise it will contain standardized per point prediction values.
+    Cross-validation values for each alpha (only available if `store\_cv\_values=True` and `cv=None`). After `fit()` has been called, this attribute will contain the mean squared errors if `scoring is None` otherwise it will contain standardized per point prediction values.
    */
   get cv_values_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -237,7 +239,7 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
   }
 
   /**
-    Independent term in decision function. Set to 0.0 if fit_intercept = False.
+    Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
    */
   get intercept_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -260,7 +262,7 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
   }
 
   /**
-    Estimated regularization parameter, or, if alpha_per_target=True, the estimated regularization parameter for each target.
+    Estimated regularization parameter, or, if `alpha\_per\_target=True`, the estimated regularization parameter for each target.
    */
   get alpha_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -282,7 +284,7 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
   }
 
   /**
-    Score of base estimator with best alpha, or, if alpha_per_target=True, a score for each target.
+    Score of base estimator with best alpha, or, if `alpha\_per\_target=True`, a score for each target.
    */
   get best_score_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -305,7 +307,7 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -330,7 +332,7 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -357,7 +359,7 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
 
 export interface RidgeCVOptions {
   /**
-    Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to 1 / (2C) in other linear models such as LogisticRegression or LinearSVC. If using Leave-One-Out cross-validation, alphas must be positive.
+    Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If using Leave-One-Out cross-validation, alphas must be positive.
    */
   alphas?: ArrayLike
 
@@ -369,7 +371,7 @@ export interface RidgeCVOptions {
   fit_intercept?: boolean
 
   /**
-    A string (see model evaluation documentation) or a scorer callable object / function with signature scorer(estimator, X, y). If None, the negative mean squared error if cv is ‘auto’ or None (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
+    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If None, the negative mean squared error if cv is ‘auto’ or None (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
    */
   scoring?: string
 
@@ -386,14 +388,14 @@ export interface RidgeCVOptions {
   gcv_mode?: 'auto' | 'svd' | 'eigen'
 
   /**
-    Flag indicating if the cross-validation values corresponding to each alpha should be stored in the cv_values_ attribute (see below). This flag is only compatible with cv=None (i.e. using Leave-One-Out Cross-Validation).
+    Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
 
     @defaultValue `false`
    */
   store_cv_values?: boolean
 
   /**
-    Flag indicating whether to optimize the alpha value (picked from the alphas parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to True, after fitting, the alpha_ attribute will contain a value for each target. When set to False, a single alpha is used for all targets.
+    Flag indicating whether to optimize the alpha value (picked from the `alphas` parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to `True`, after fitting, the `alpha\_` attribute will contain a value for each target. When set to `False`, a single alpha is used for all targets.
 
     @defaultValue `false`
    */
@@ -426,12 +428,12 @@ export interface RidgeCVPredictOptions {
 
 export interface RidgeCVScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

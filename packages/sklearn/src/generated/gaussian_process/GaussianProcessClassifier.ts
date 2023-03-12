@@ -8,11 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Gaussian process classification (GPC) based on Laplace approximation.
 
-  The implementation is based on Algorithm 3.1, 3.2, and 5.1 from [RW2006].
+  The implementation is based on Algorithm 3.1, 3.2, and 5.1 from [\[RW2006\]](#r2da648a61a73-rw2006).
 
   Internally, the Laplace approximation is used for approximating the non-Gaussian posterior by a Gaussian.
 
   Currently, the implementation is restricted to using the logistic link function. For multi-class classification, several binary one-versus rest classifiers are fitted. Note that this class thus does not implement a true multi-class Laplace approximation.
+
+  Read more in the [User Guide](../gaussian_process.html#gaussian-process).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier.html
  */
@@ -318,7 +320,7 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
   }
 
   /**
-    The log-marginal-likelihood of self.kernel_.theta
+    The log-marginal-likelihood of `self.kernel\_.theta`
    */
   get log_marginal_likelihood_value_(): Promise<number> {
     if (this._isDisposed) {
@@ -399,7 +401,7 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -426,7 +428,7 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -455,19 +457,19 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
 
 export interface GaussianProcessClassifierOptions {
   /**
-    The kernel specifying the covariance function of the GP. If None is passed, the kernel “1.0 * RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a CompoundKernel.
+    The kernel specifying the covariance function of the GP. If None is passed, the kernel “1.0 \* RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a `CompoundKernel`.
    */
   kernel?: any
 
   /**
-    Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the  signature:
+    Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:
 
     @defaultValue `'fmin_l_bfgs_b'`
    */
   optimizer?: 'fmin_l_bfgs_b'
 
   /**
-    The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n_restarts_optimizer=0 implies that one run is performed.
+    The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n\_restarts\_optimizer=0 implies that one run is performed.
 
     @defaultValue `0`
    */
@@ -481,7 +483,7 @@ export interface GaussianProcessClassifierOptions {
   max_iter_predict?: number
 
   /**
-    If warm-starts are enabled, the solution of the last Newton iteration on the Laplace approximation of the posterior mode is used as initialization for the next call of _posterior_mode(). This can speed up convergence when _posterior_mode is called several times on similar problems as in hyperparameter optimization. See the Glossary.
+    If warm-starts are enabled, the solution of the last Newton iteration on the Laplace approximation of the posterior mode is used as initialization for the next call of \_posterior\_mode(). This can speed up convergence when \_posterior\_mode is called several times on similar problems as in hyperparameter optimization. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -495,19 +497,19 @@ export interface GaussianProcessClassifierOptions {
   copy_X_train?: boolean
 
   /**
-    Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    Specifies how multi-class classification problems are handled. Supported are ‘one_vs_rest’ and ‘one_vs_one’. In ‘one_vs_rest’, one binary Gaussian process classifier is fitted for each class, which is trained to separate this class from the rest. In ‘one_vs_one’, one binary Gaussian process classifier is fitted for each pair of classes, which is trained to separate these two classes. The predictions of these binary predictors are combined into multi-class predictions. Note that ‘one_vs_one’ does not support predicting probability estimates.
+    Specifies how multi-class classification problems are handled. Supported are ‘one\_vs\_rest’ and ‘one\_vs\_one’. In ‘one\_vs\_rest’, one binary Gaussian process classifier is fitted for each class, which is trained to separate this class from the rest. In ‘one\_vs\_one’, one binary Gaussian process classifier is fitted for each pair of classes, which is trained to separate these two classes. The predictions of these binary predictors are combined into multi-class predictions. Note that ‘one\_vs\_one’ does not support predicting probability estimates.
 
     @defaultValue `'one_vs_rest'`
    */
   multi_class?: 'one_vs_rest' | 'one_vs_one'
 
   /**
-    The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -526,7 +528,7 @@ export interface GaussianProcessClassifierFitOptions {
 
 export interface GaussianProcessClassifierLogMarginalLikelihoodOptions {
   /**
-    Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the  hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If None, the precomputed log_marginal_likelihood of self.kernel_.theta is returned.
+    Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If None, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
    */
   theta?: ArrayLike
 
@@ -566,7 +568,7 @@ export interface GaussianProcessClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

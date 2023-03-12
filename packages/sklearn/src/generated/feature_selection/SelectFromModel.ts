@@ -129,7 +129,7 @@ pms_SelectFromModel_fit = {k: v for k, v in pms_SelectFromModel_fit.items() if v
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: SelectFromModelFitTransformOptions
@@ -290,7 +290,7 @@ pms_SelectFromModel_partial_fit = {k: v for k, v in pms_SelectFromModel_partial_
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: SelectFromModelSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -346,7 +346,7 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
   }
 
   /**
-    The base estimator from which the transformer is built. This attribute exist only when fit has been called.
+    The base estimator from which the transformer is built. This attribute exist only when `fit` has been called.
    */
   get estimator_(): Promise<any> {
     if (this._isDisposed) {
@@ -371,7 +371,7 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
   }
 
   /**
-    Maximum number of features calculated during fit. Only defined if the max_features is not None.
+    Maximum number of features calculated during [fit](../../glossary.html#term-fit). Only defined if the `max\_features` is not `None`.
    */
   get max_features_(): Promise<number> {
     if (this._isDisposed) {
@@ -396,7 +396,7 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -423,24 +423,24 @@ pms_SelectFromModel_transform = {k: v for k, v in pms_SelectFromModel_transform.
 
 export interface SelectFromModelOptions {
   /**
-    The base estimator from which the transformer is built. This can be both a fitted (if prefit is set to True) or a non-fitted estimator. The estimator should have a feature_importances_ or coef_ attribute after fitting. Otherwise, the importance_getter parameter should be used.
+    The base estimator from which the transformer is built. This can be both a fitted (if `prefit` is set to True) or a non-fitted estimator. The estimator should have a `feature\_importances\_` or `coef\_` attribute after fitting. Otherwise, the `importance\_getter` parameter should be used.
    */
   estimator?: any
 
   /**
-    The threshold value to use for feature selection. Features whose absolute importance value is greater or equal are kept while the others are discarded. If “median” (resp. “mean”), then the threshold value is the median (resp. the mean) of the feature importances. A scaling factor (e.g., “1.25*mean”) may also be used. If None and if the estimator has a parameter penalty set to l1, either explicitly or implicitly (e.g, Lasso), the threshold used is 1e-5. Otherwise, “mean” is used by default.
+    The threshold value to use for feature selection. Features whose absolute importance value is greater or equal are kept while the others are discarded. If “median” (resp. “mean”), then the `threshold` value is the median (resp. the mean) of the feature importances. A scaling factor (e.g., “1.25\*mean”) may also be used. If None and if the estimator has a parameter penalty set to l1, either explicitly or implicitly (e.g, Lasso), the threshold used is 1e-5. Otherwise, “mean” is used by default.
    */
   threshold?: string | number
 
   /**
-    Whether a prefit model is expected to be passed into the constructor directly or not. If True, estimator must be a fitted estimator. If False, estimator is fitted and updated by calling fit and partial_fit, respectively.
+    Whether a prefit model is expected to be passed into the constructor directly or not. If `True`, `estimator` must be a fitted estimator. If `False`, `estimator` is fitted and updated by calling `fit` and `partial\_fit`, respectively.
 
     @defaultValue `false`
    */
   prefit?: boolean
 
   /**
-    Order of the norm used to filter the vectors of coefficients below threshold in the case where the coef_ attribute of the estimator is of dimension 2.
+    Order of the norm used to filter the vectors of coefficients below `threshold` in the case where the `coef\_` attribute of the estimator is of dimension 2.
 
     @defaultValue `1`
    */
@@ -452,11 +452,11 @@ export interface SelectFromModelOptions {
   max_features?: number
 
   /**
-    If ‘auto’, uses the feature importance either through a coef_ attribute or feature_importances_ attribute of estimator.
+    If ‘auto’, uses the feature importance either through a `coef\_` attribute or `feature\_importances\_` attribute of estimator.
 
-    Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with attrgetter). For example, give regressor_.coef_ in case of TransformedTargetRegressor  or named_steps.clf.feature_importances_ in case of Pipeline with its last step named clf.
+    Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") with its last step named `clf`.
 
-    If callable, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
+    If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
 
     @defaultValue `'auto'`
    */
@@ -539,7 +539,7 @@ export interface SelectFromModelPartialFitOptions {
 
 export interface SelectFromModelSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

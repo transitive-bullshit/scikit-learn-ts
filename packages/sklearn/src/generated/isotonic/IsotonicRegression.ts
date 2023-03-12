@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Isotonic regression model.
 
+  Read more in the [User Guide](../isotonic.html#isotonic).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html
  */
 export class IsotonicRegression {
@@ -133,7 +135,7 @@ pms_IsotonicRegression_fit = {k: v for k, v in pms_IsotonicRegression_fit.items(
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: IsotonicRegressionFitTransformOptions
@@ -238,7 +240,7 @@ pms_IsotonicRegression_predict = {k: v for k, v in pms_IsotonicRegression_predic
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: IsotonicRegressionScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -274,7 +276,7 @@ pms_IsotonicRegression_score = {k: v for k, v in pms_IsotonicRegression_score.it
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: IsotonicRegressionSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -334,7 +336,7 @@ pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_tran
   }
 
   /**
-    Minimum value of input array X_ for left bound.
+    Minimum value of input array `X\_` for left bound.
    */
   get X_min_(): Promise<number> {
     if (this._isDisposed) {
@@ -361,7 +363,7 @@ pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_tran
   }
 
   /**
-    Maximum value of input array X_ for right bound.
+    Maximum value of input array `X\_` for right bound.
    */
   get X_max_(): Promise<number> {
     if (this._isDisposed) {
@@ -388,7 +390,7 @@ pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_tran
   }
 
   /**
-    Unique ascending X values used to interpolate the y = f(X) monotonic function.
+    Unique ascending `X` values used to interpolate the y = f(X) monotonic function.
    */
   get X_thresholds_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -415,7 +417,7 @@ pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_tran
   }
 
   /**
-    De-duplicated y values suitable to interpolate the y = f(X) monotonic function.
+    De-duplicated `y` values suitable to interpolate the y = f(X) monotonic function.
    */
   get y_thresholds_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -442,7 +444,7 @@ pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_tran
   }
 
   /**
-    The stepwise interpolating function that covers the input domain X.
+    The stepwise interpolating function that covers the input domain `X`.
    */
   get f_(): Promise<any> {
     if (this._isDisposed) {
@@ -467,7 +469,7 @@ pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_tran
   }
 
   /**
-    Inferred value for increasing.
+    Inferred value for `increasing`.
    */
   get increasing_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -506,14 +508,14 @@ export interface IsotonicRegressionOptions {
   y_max?: number
 
   /**
-    Determines whether the predictions should be constrained to increase or decrease with X. ‘auto’ will decide based on the Spearman correlation estimate’s sign.
+    Determines whether the predictions should be constrained to increase or decrease with `X`. ‘auto’ will decide based on the Spearman correlation estimate’s sign.
 
     @defaultValue `true`
    */
   increasing?: boolean | 'auto'
 
   /**
-    Handles how X values outside of the training domain are handled during prediction.
+    Handles how `X` values outside of the training domain are handled during prediction.
 
     @defaultValue `'nan'`
    */
@@ -570,12 +572,12 @@ export interface IsotonicRegressionPredictOptions {
 
 export interface IsotonicRegressionScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 
@@ -587,7 +589,7 @@ export interface IsotonicRegressionScoreOptions {
 
 export interface IsotonicRegressionSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

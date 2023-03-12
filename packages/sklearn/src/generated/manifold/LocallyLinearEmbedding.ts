@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Locally Linear Embedding.
 
+  Read more in the [User Guide](../manifold.html#locally-linear-embedding).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html
  */
 export class LocallyLinearEmbedding {
@@ -176,7 +178,7 @@ pms_LocallyLinearEmbedding_fit_transform = {k: v for k, v in pms_LocallyLinearEm
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: LocallyLinearEmbeddingGetFeatureNamesOutOptions
@@ -213,7 +215,7 @@ pms_LocallyLinearEmbedding_get_feature_names_out = {k: v for k, v in pms_Locally
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: LocallyLinearEmbeddingSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -306,7 +308,7 @@ pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedd
   }
 
   /**
-    Reconstruction error associated with embedding_
+    Reconstruction error associated with `embedding\_`
    */
   get reconstruction_error_(): Promise<number> {
     if (this._isDisposed) {
@@ -333,7 +335,7 @@ pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedd
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -360,7 +362,7 @@ pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedd
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -444,54 +446,54 @@ export interface LocallyLinearEmbeddingOptions {
   eigen_solver?: 'auto' | 'arpack' | 'dense'
 
   /**
-    Tolerance for ‘arpack’ method Not used if eigen_solver==’dense’.
+    Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
 
     @defaultValue `0.000001`
    */
   tol?: number
 
   /**
-    Maximum number of iterations for the arpack solver. Not used if eigen_solver==’dense’.
+    Maximum number of iterations for the arpack solver. Not used if eigen\_solver==’dense’.
 
     @defaultValue `100`
    */
   max_iter?: number
 
   /**
-    standard: use the standard locally linear embedding algorithm. see reference [1]
+    `standard`: use the standard locally linear embedding algorithm. see reference [\[1\]](#r62e36dd1b056-1)
 
     @defaultValue `'standard'`
    */
   method?: 'standard' | 'hessian' | 'modified' | 'ltsa'
 
   /**
-    Tolerance for Hessian eigenmapping method. Only used if method == 'hessian'.
+    Tolerance for Hessian eigenmapping method. Only used if `method \== 'hessian'`.
 
     @defaultValue `0.0001`
    */
   hessian_tol?: number
 
   /**
-    Tolerance for modified LLE method. Only used if method == 'modified'.
+    Tolerance for modified LLE method. Only used if `method \== 'modified'`.
 
     @defaultValue `1e-12`
    */
   modified_tol?: number
 
   /**
-    Algorithm to use for nearest neighbors search, passed to NearestNeighbors instance.
+    Algorithm to use for nearest neighbors search, passed to [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") instance.
 
     @defaultValue `'auto'`
    */
   neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
   /**
-    Determines the random number generator when eigen_solver == ‘arpack’. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines the random number generator when `eigen\_solver` == ‘arpack’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    The number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -522,14 +524,14 @@ export interface LocallyLinearEmbeddingFitTransformOptions {
 
 export interface LocallyLinearEmbeddingGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.manifold.LocallyLinearEmbedding.fit "sklearn.manifold.LocallyLinearEmbedding.fit").
    */
   input_features?: any
 }
 
 export interface LocallyLinearEmbeddingSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

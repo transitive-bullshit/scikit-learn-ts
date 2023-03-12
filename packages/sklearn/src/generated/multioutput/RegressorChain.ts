@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain.
 
+  Read more in the [User Guide](../multiclass.html#regressorchain).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html
  */
 export class RegressorChain {
@@ -159,7 +161,7 @@ pms_RegressorChain_predict = {k: v for k, v in pms_RegressorChain_predict.items(
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: RegressorChainScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -191,7 +193,7 @@ pms_RegressorChain_score = {k: v for k, v in pms_RegressorChain_score.items() if
   }
 
   /**
-    A list of clones of base_estimator.
+    A list of clones of base\_estimator.
    */
   get estimators_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -239,7 +241,7 @@ pms_RegressorChain_score = {k: v for k, v in pms_RegressorChain_score.items() if
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying base_estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `base\_estimator` exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -264,7 +266,7 @@ pms_RegressorChain_score = {k: v for k, v in pms_RegressorChain_score.items() if
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -296,7 +298,7 @@ export interface RegressorChainOptions {
   base_estimator?: any
 
   /**
-    If None, the order will be determined by the order of columns in the label matrix Y.:
+    If `None`, the order will be determined by the order of columns in the label matrix Y.:
    */
   order?: ArrayLike | 'random'
 
@@ -306,7 +308,7 @@ export interface RegressorChainOptions {
   cv?: number
 
   /**
-    If order='random', determines random number generation for the chain order. In addition, it controls the random seed given at each base_estimator at each chaining iteration. Thus, it is only used when base_estimator exposes a random_state. Pass an int for reproducible output across multiple function calls. See Glossary.
+    If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -330,7 +332,7 @@ export interface RegressorChainFitOptions {
   Y?: ArrayLike[]
 
   /**
-    Parameters passed to the fit method at each step of the regressor chain.
+    Parameters passed to the `fit` method at each step of the regressor chain.
    */
   fit_params?: any
 }
@@ -344,12 +346,12 @@ export interface RegressorChainPredictOptions {
 
 export interface RegressorChainScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

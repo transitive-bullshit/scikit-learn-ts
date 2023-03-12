@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Repeats Stratified K-Fold n times with different randomization in each repetition.
 
+  Read more in the [User Guide](../cross_validation.html#repeated-k-fold).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RepeatedStratifiedKFold.html
  */
 export class RepeatedStratifiedKFold {
@@ -185,19 +187,19 @@ export interface RepeatedStratifiedKFoldOptions {
   n_repeats?: number
 
   /**
-    Controls the generation of the random states for each repetition. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the generation of the random states for each repetition. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
 
 export interface RepeatedStratifiedKFoldGetNSplitsOptions {
   /**
-    Always ignored, exists for compatibility. np.zeros(n_samples) may be used as a placeholder.
+    Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
    */
   X?: any
 
   /**
-    Always ignored, exists for compatibility. np.zeros(n_samples) may be used as a placeholder.
+    Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
    */
   y?: any
 
@@ -209,7 +211,7 @@ export interface RepeatedStratifiedKFoldGetNSplitsOptions {
 
 export interface RepeatedStratifiedKFoldSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

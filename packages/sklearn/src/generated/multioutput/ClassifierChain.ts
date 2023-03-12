@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain.
 
+  Read more in the [User Guide](../multiclass.html#classifierchain).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html
  */
 export class ClassifierChain {
@@ -97,7 +99,7 @@ ctor_ClassifierChain = {k: v for k, v in ctor_ClassifierChain.items() if v is no
   }
 
   /**
-    Evaluate the decision_function of the models in the chain.
+    Evaluate the decision\_function of the models in the chain.
    */
   async decision_function(
     opts: ClassifierChainDecisionFunctionOptions
@@ -251,7 +253,7 @@ pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() 
   }
 
   /**
-    A list of arrays of length len(estimators_) containing the class labels for each estimator in the chain.
+    A list of arrays of length `len(estimators\_)` containing the class labels for each estimator in the chain.
    */
   get classes_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -276,7 +278,7 @@ pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() 
   }
 
   /**
-    A list of clones of base_estimator.
+    A list of clones of base\_estimator.
    */
   get estimators_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -326,7 +328,7 @@ pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() 
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying base_estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `base\_estimator` exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -351,7 +353,7 @@ pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -383,7 +385,7 @@ export interface ClassifierChainOptions {
   base_estimator?: any
 
   /**
-    If None, the order will be determined by the order of columns in the label matrix Y.:
+    If `None`, the order will be determined by the order of columns in the label matrix Y.:
    */
   order?: ArrayLike | 'random'
 
@@ -393,7 +395,7 @@ export interface ClassifierChainOptions {
   cv?: number
 
   /**
-    If order='random', determines random number generation for the chain order. In addition, it controls the random seed given at each base_estimator at each chaining iteration. Thus, it is only used when base_estimator exposes a random_state. Pass an int for reproducible output across multiple function calls. See Glossary.
+    If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -445,7 +447,7 @@ export interface ClassifierChainScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   FastICA: a fast algorithm for Independent Component Analysis.
 
-  The implementation is based on [1].
+  The implementation is based on [\[1\]](#r44c805292efc-1).
+
+  Read more in the [User Guide](../decomposition.html#ica).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html
  */
@@ -160,7 +162,7 @@ pms_FastICA_fit_transform = {k: v for k, v in pms_FastICA_fit_transform.items() 
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: FastICAGetFeatureNamesOutOptions
@@ -224,7 +226,7 @@ pms_FastICA_inverse_transform = {k: v for k, v in pms_FastICA_inverse_transform.
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: FastICASetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -282,7 +284,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    The linear operator to apply to the data to get the independent sources. This is equal to the unmixing matrix when whiten is False, and equal to np.dot(unmixing_matrix, self.whitening_) when whiten is True.
+    The linear operator to apply to the data to get the independent sources. This is equal to the unmixing matrix when `whiten` is False, and equal to `np.dot(unmixing\_matrix, self.whitening\_)` when `whiten` is True.
    */
   get components_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -305,7 +307,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    The pseudo-inverse of components_. It is the linear operator that maps independent sources to the data.
+    The pseudo-inverse of `components\_`. It is the linear operator that maps independent sources to the data.
    */
   get mixing_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -328,7 +330,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    The mean over features. Only set if self.whiten is True.
+    The mean over features. Only set if `self.whiten` is True.
    */
   get mean_(): Promise<any> {
     if (this._isDisposed) {
@@ -350,7 +352,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -375,7 +377,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -400,7 +402,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    If the algorithm is “deflation”, n_iter is the maximum number of iterations run across all components. Else they are just the number of iterations taken to converge.
+    If the algorithm is “deflation”, n\_iter is the maximum number of iterations run across all components. Else they are just the number of iterations taken to converge.
    */
   get n_iter_(): Promise<number> {
     if (this._isDisposed) {
@@ -423,7 +425,7 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
   }
 
   /**
-    Only set if whiten is ‘True’. This is the pre-whitening matrix that projects data onto the first n_components principal components.
+    Only set if whiten is ‘True’. This is the pre-whitening matrix that projects data onto the first `n\_components` principal components.
    */
   get whitening_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -474,7 +476,7 @@ export interface FastICAOptions {
   fun?: 'logcosh' | 'exp' | 'cube'
 
   /**
-    Arguments to send to the functional form. If empty or None and if fun=’logcosh’, fun_args will take value {‘alpha’ : 1.0}.
+    Arguments to send to the functional form. If empty or None and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}.
    */
   fun_args?: any
 
@@ -493,7 +495,7 @@ export interface FastICAOptions {
   tol?: number
 
   /**
-    Initial un-mixing array. If w_init=None, then an array of values drawn from a normal distribution is used.
+    Initial un-mixing array. If `w\_init=None`, then an array of values drawn from a normal distribution is used.
    */
   w_init?: ArrayLike[]
 
@@ -505,14 +507,14 @@ export interface FastICAOptions {
   whiten_solver?: 'eigh' | 'svd'
 
   /**
-    Used to initialize w_init when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See Glossary.
+    Used to initialize `w\_init` when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
 
 export interface FastICAFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -524,7 +526,7 @@ export interface FastICAFitOptions {
 
 export interface FastICAFitTransformOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -536,14 +538,14 @@ export interface FastICAFitTransformOptions {
 
 export interface FastICAGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.FastICA.fit "sklearn.decomposition.FastICA.fit").
    */
   input_features?: any
 }
 
 export interface FastICAInverseTransformOptions {
   /**
-    Sources, where n_samples is the number of samples and n_components is the number of components.
+    Sources, where `n\_samples` is the number of samples and `n\_components` is the number of components.
    */
   X?: ArrayLike[]
 
@@ -557,14 +559,14 @@ export interface FastICAInverseTransformOptions {
 
 export interface FastICASetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface FastICATransformOptions {
   /**
-    Data to transform, where n_samples is the number of samples and n_features is the number of features.
+    Data to transform, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

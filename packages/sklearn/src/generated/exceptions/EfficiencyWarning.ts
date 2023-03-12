@@ -95,7 +95,7 @@ ctor_EfficiencyWarning = {k: v for k, v in ctor_EfficiencyWarning.items() if v i
   }
 
   /**
-    Exception.with_traceback(tb) – set self.__traceback__ to tb and return self.
+    Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
   async with_traceback(
     opts: EfficiencyWarningWithTracebackOptions

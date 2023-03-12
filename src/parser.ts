@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio'
 import got from 'got'
+import html2md from 'html-to-md'
 import isRelativeUrl from 'is-relative-url'
 
 import * as types from './types'
@@ -184,10 +185,17 @@ export function parseDesc(
   let $p = $body.first().find('p').first()
 
   while ($p.length && $p.is('p')) {
-    const text = $p.text().replaceAll(/\n/g, ' ').trim()
-    if (text.toLowerCase().includes('read more in the user guide')) {
-      break
-    }
+    const md = html2md($p.html())
+    const text = md
+      .replaceAll(/\n/g, ' ')
+      // .replaceAll(/\bTrue\b/g, 'true')
+      // .replaceAll(/\bFalse\b/g, 'false')
+      // .replaceAll(/\b`None`\b/g, '`undefined`')
+      // .replaceAll(/\b([^`])None([^`])\b/g, '$1undefined$2')
+      .trim()
+    // if (text.toLowerCase().includes('read more in the user guide')) {
+    //   break
+    // }
     desc += text + '\n\n'
     $p = $p.next()
   }

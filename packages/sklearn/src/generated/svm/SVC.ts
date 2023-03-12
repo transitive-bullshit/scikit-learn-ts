@@ -8,11 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   C-Support Vector Classification.
 
-  The implementation is based on libsvm. The fit time scales at least quadratically with the number of samples and may be impractical beyond tens of thousands of samples. For large datasets consider using LinearSVC or SGDClassifier instead, possibly after a Nystroem transformer or other Kernel Approximation.
+  The implementation is based on libsvm. The fit time scales at least quadratically with the number of samples and may be impractical beyond tens of thousands of samples. For large datasets consider using [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC") or [`SGDClassifier`](sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier "sklearn.linear_model.SGDClassifier") instead, possibly after a [`Nystroem`](sklearn.kernel_approximation.Nystroem.html#sklearn.kernel_approximation.Nystroem "sklearn.kernel_approximation.Nystroem") transformer or other [Kernel Approximation](../kernel_approximation.html#kernel-approximation).
 
   The multiclass support is handled according to a one-vs-one scheme.
 
-  For details on the precise mathematical formulation of the provided kernel functions and how gamma, coef0 and degree affect each other, see the corresponding section in the narrative documentation: Kernel functions.
+  For details on the precise mathematical formulation of the provided kernel functions and how `gamma`, `coef0` and `degree` affect each other, see the corresponding section in the narrative documentation: [Kernel functions](../svm.html#svm-kernels).
+
+  Read more in the [User Guide](../svm.html#svm-classification).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
  */
@@ -205,7 +207,7 @@ pms_SVC_predict = {k: v for k, v in pms_SVC_predict.items() if v is not None}`
   /**
     Compute log probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute probability set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
    */
   async predict_log_proba(opts: SVCPredictLogProbaOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -235,7 +237,7 @@ pms_SVC_predict_log_proba = {k: v for k, v in pms_SVC_predict_log_proba.items() 
   /**
     Compute probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute probability set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
    */
   async predict_proba(opts: SVCPredictProbaOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -297,7 +299,7 @@ pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
   }
 
   /**
-    Multipliers of parameter C for each class. Computed based on the class_weight parameter.
+    Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
    */
   get class_weight_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -342,7 +344,7 @@ pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
   }
 
   /**
-    Dual coefficients of the support vector in the decision function (see Mathematical formulation), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the multi-class section of the User Guide for details.
+    Dual coefficients of the support vector in the decision function (see [Mathematical formulation](../sgd.html#sgd-mathematical-formulation)), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the [multi-class section of the User Guide](../svm.html#svm-multi-class) for details.
    */
   get dual_coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -409,7 +411,7 @@ pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -432,7 +434,7 @@ pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -522,7 +524,7 @@ pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
   }
 
   /**
-    Array dimensions of training vector X.
+    Array dimensions of training vector `X`.
    */
   get shape_fit_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -553,7 +555,7 @@ export interface SVCOptions {
   C?: number
 
   /**
-    Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to pre-compute the kernel matrix from data matrices; that matrix should be an array of shape (n_samples, n_samples).
+    Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to pre-compute the kernel matrix from data matrices; that matrix should be an array of shape `(n\_samples, n\_samples)`.
 
     @defaultValue `'rbf'`
    */
@@ -581,13 +583,15 @@ export interface SVCOptions {
   coef0?: number
 
   /**
-    Whether to use the shrinking heuristic. See the User Guide.
+    Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
 
     @defaultValue `true`
    */
   shrinking?: boolean
 
   /**
+    Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict\_proba` may be inconsistent with `predict`. Read more in the [User Guide](../svm.html#scores-probabilities).
+
     @defaultValue `false`
    */
   probability?: boolean
@@ -607,7 +611,7 @@ export interface SVCOptions {
   cache_size?: number
 
   /**
-    Set the parameter C of class i to class_weight[i]*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y)).
+    Set the parameter C of class i to class\_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
    */
   class_weight?: any | 'balanced'
 
@@ -626,21 +630,21 @@ export interface SVCOptions {
   max_iter?: number
 
   /**
-    Whether to return a one-vs-rest (‘ovr’) decision function of shape (n_samples, n_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n_samples, n_classes * (n_classes - 1) / 2). However, note that internally, one-vs-one (‘ovo’) is always used as a multi-class strategy to train models; an ovr matrix is only constructed from the ovo matrix. The parameter is ignored for binary classification.
+    Whether to return a one-vs-rest (‘ovr’) decision function of shape (n\_samples, n\_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n\_samples, n\_classes \* (n\_classes - 1) / 2). However, note that internally, one-vs-one (‘ovo’) is always used as a multi-class strategy to train models; an ovr matrix is only constructed from the ovo matrix. The parameter is ignored for binary classification.
 
     @defaultValue `'ovr'`
    */
   decision_function_shape?: 'ovo' | 'ovr'
 
   /**
-    If true, decision_function_shape='ovr', and number of classes > 2, predict will break ties according to the confidence values of decision_function; otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
+    If true, `decision\_function\_shape='ovr'`, and number of classes > 2, [predict](../../glossary.html#term-predict) will break ties according to the confidence values of [decision\_function](../../glossary.html#term-decision_function); otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
 
     @defaultValue `false`
    */
   break_ties?: boolean
 
   /**
-    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when probability is False. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is False. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -654,7 +658,7 @@ export interface SVCDecisionFunctionOptions {
 
 export interface SVCFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features. For kernel=”precomputed”, the expected shape of X is (n_samples, n_samples).
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -671,21 +675,21 @@ export interface SVCFitOptions {
 
 export interface SVCPredictOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface SVCPredictLogProbaOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike[]
 }
 
 export interface SVCPredictProbaOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike[]
 }
@@ -697,7 +701,7 @@ export interface SVCScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

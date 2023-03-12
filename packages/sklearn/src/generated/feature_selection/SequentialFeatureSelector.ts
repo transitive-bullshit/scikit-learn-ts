@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This Sequential Feature Selector adds (forward selection) or removes (backward selection) features to form a feature subset in a greedy fashion. At each stage, this estimator chooses the best feature to add or remove based on the cross-validation score of an estimator. In the case of unsupervised learning, this Sequential Feature Selector looks only at the features (X), not the desired outputs (y).
 
+  Read more in the [User Guide](../feature_selection.html#sequential-feature-selection).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html
  */
 export class SequentialFeatureSelector {
@@ -137,7 +139,7 @@ pms_SequentialFeatureSelector_fit = {k: v for k, v in pms_SequentialFeatureSelec
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: SequentialFeatureSelectorFitTransformOptions
@@ -282,7 +284,7 @@ pms_SequentialFeatureSelector_inverse_transform = {k: v for k, v in pms_Sequenti
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(
     opts: SequentialFeatureSelectorSetOutputOptions
@@ -352,7 +354,7 @@ pms_SequentialFeatureSelector_transform = {k: v for k, v in pms_SequentialFeatur
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -379,7 +381,7 @@ pms_SequentialFeatureSelector_transform = {k: v for k, v in pms_SequentialFeatur
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -467,18 +469,18 @@ export interface SequentialFeatureSelectorOptions {
   estimator?: any
 
   /**
-    If "auto", the behaviour depends on the tol parameter:
+    If `"auto"`, the behaviour depends on the `tol` parameter:
 
     @defaultValue `'warn'`
    */
   n_features_to_select?: 'auto' | number | number
 
   /**
-    If the score is not incremented by at least tol between two consecutive feature additions or removals, stop adding or removing.
+    If the score is not incremented by at least `tol` between two consecutive feature additions or removals, stop adding or removing.
 
-    tol can be negative when removing features using direction="backward". It can be useful to reduce the number of features at the cost of a small decrease in the score.
+    `tol` can be negative when removing features using `direction="backward"`. It can be useful to reduce the number of features at the cost of a small decrease in the score.
 
-    tol is enabled only when n_features_to_select is "auto".
+    `tol` is enabled only when `n\_features\_to\_select` is `"auto"`.
    */
   tol?: number
 
@@ -490,7 +492,7 @@ export interface SequentialFeatureSelectorOptions {
   direction?: 'forward' | 'backward'
 
   /**
-    A single str (see The scoring parameter: defining model evaluation rules) or a callable (see Defining your scoring strategy from metric functions) to evaluate the predictions on the test set.
+    A single str (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set.
 
     NOTE that when using a custom scorer, it should return a single value.
 
@@ -504,14 +506,14 @@ export interface SequentialFeatureSelectorOptions {
   cv?: number
 
   /**
-    Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
 
 export interface SequentialFeatureSelectorFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of predictors.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
    */
   X?: ArrayLike[]
 
@@ -563,7 +565,7 @@ export interface SequentialFeatureSelectorInverseTransformOptions {
 
 export interface SequentialFeatureSelectorSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

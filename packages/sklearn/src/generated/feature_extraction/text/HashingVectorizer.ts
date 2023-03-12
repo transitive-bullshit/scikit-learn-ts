@@ -377,7 +377,7 @@ pms_HashingVectorizer_partial_fit = {k: v for k, v in pms_HashingVectorizer_part
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: HashingVectorizerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -441,7 +441,7 @@ pms_HashingVectorizer_transform = {k: v for k, v in pms_HashingVectorizer_transf
 
 export interface HashingVectorizerOptions {
   /**
-    If 'filename', the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
+    If `'filename'`, the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
 
     @defaultValue `'content'`
    */
@@ -455,7 +455,7 @@ export interface HashingVectorizerOptions {
   encoding?: string
 
   /**
-    Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given encoding. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
+    Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given `encoding`. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
 
     @defaultValue `'strict'`
    */
@@ -464,7 +464,7 @@ export interface HashingVectorizerOptions {
   /**
     Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any character. None (default) does nothing.
 
-    Both ‘ascii’ and ‘unicode’ use NFKD normalization from unicodedata.normalize.
+    Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
    */
   strip_accents?: 'ascii' | 'unicode'
 
@@ -476,36 +476,36 @@ export interface HashingVectorizerOptions {
   lowercase?: boolean
 
   /**
-    Override the preprocessing (string transformation) stage while preserving the tokenizing and n-grams generation steps. Only applies if analyzer is not callable.
+    Override the preprocessing (string transformation) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
    */
   preprocessor?: any
 
   /**
-    Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if analyzer == 'word'.
+    Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
    */
   tokenizer?: any
 
   /**
-    If ‘english’, a built-in stop word list for English is used. There are several known issues with ‘english’ and you should consider an alternative (see Using stop words).
+    If ‘english’, a built-in stop word list for English is used. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](../feature_extraction.html#stop-words)).
 
-    If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if analyzer == 'word'.
+    If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
    */
   stop_words?: 'english' | any[]
 
   /**
-    Regular expression denoting what constitutes a “token”, only used if analyzer == 'word'. The default regexp selects tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
+    Regular expression denoting what constitutes a “token”, only used if `analyzer \== 'word'`. The default regexp selects tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
 
-    If there is a capturing group in token_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
+    If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
    */
   token_pattern?: string
 
   /**
-    The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min_n <= n <= max_n will be used. For example an ngram_range of (1, 1) means only unigrams, (1, 2) means unigrams and bigrams, and (2, 2) means only bigrams. Only applies if analyzer is not callable.
+    The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
    */
   ngram_range?: any
 
   /**
-    Whether the feature should be made of word or character n-grams. Option ‘char_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
+    Whether the feature should be made of word or character n-grams. Option ‘char\_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
 
     If a callable is passed it is used to extract the sequence of features out of the raw, unprocessed input.
 
@@ -533,14 +533,14 @@ export interface HashingVectorizerOptions {
   norm?: 'l1' | 'l2'
 
   /**
-    When True, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n_features. This approach is similar to sparse random projection.
+    When True, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
 
     @defaultValue `true`
    */
   alternate_sign?: boolean
 
   /**
-    Type of the matrix returned by fit_transform() or transform().
+    Type of the matrix returned by fit\_transform() or transform().
    */
   dtype?: any
 }
@@ -598,7 +598,7 @@ export interface HashingVectorizerPartialFitOptions {
 
 export interface HashingVectorizerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

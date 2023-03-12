@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The folds are approximately balanced in the sense that the number of distinct groups is approximately the same in each fold.
 
+  Read more in the [User Guide](../cross_validation.html#group-k-fold).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html
  */
 export class GroupKFold {
@@ -183,7 +185,7 @@ export interface GroupKFoldGetNSplitsOptions {
 
 export interface GroupKFoldSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

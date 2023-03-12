@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The implementation is based on libsvm.
 
+  Read more in the [User Guide](../svm.html#svm-classification).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html
  */
 export class NuSVC {
@@ -204,7 +206,7 @@ pms_NuSVC_predict = {k: v for k, v in pms_NuSVC_predict.items() if v is not None
   /**
     Compute log probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute probability set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
    */
   async predict_log_proba(
     opts: NuSVCPredictLogProbaOptions
@@ -236,7 +238,7 @@ pms_NuSVC_predict_log_proba = {k: v for k, v in pms_NuSVC_predict_log_proba.item
   /**
     Compute probabilities of possible outcomes for samples in X.
 
-    The model need to have probability information computed at training time: fit with attribute probability set to True.
+    The model need to have probability information computed at training time: fit with attribute `probability` set to True.
    */
   async predict_proba(opts: NuSVCPredictProbaOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -298,7 +300,7 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
   }
 
   /**
-    Multipliers of parameter C of each class. Computed based on the class_weight parameter.
+    Multipliers of parameter C of each class. Computed based on the `class\_weight` parameter.
    */
   get class_weight_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -343,7 +345,7 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
   }
 
   /**
-    Dual coefficients of the support vector in the decision function (see Mathematical formulation), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the multi-class section of the User Guide for details.
+    Dual coefficients of the support vector in the decision function (see [Mathematical formulation](../sgd.html#sgd-mathematical-formulation)), multiplied by their targets. For multiclass, coefficient for all 1-vs-1 classifiers. The layout of the coefficients in the multiclass case is somewhat non-trivial. See the [multi-class section of the User Guide](../svm.html#svm-multi-class) for details.
    */
   get dual_coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -412,7 +414,7 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -435,7 +437,7 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -529,7 +531,7 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
   }
 
   /**
-    Array dimensions of training vector X.
+    Array dimensions of training vector `X`.
    */
   get shape_fit_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -554,7 +556,7 @@ pms_NuSVC_score = {k: v for k, v in pms_NuSVC_score.items() if v is not None}`
 
 export interface NuSVCOptions {
   /**
-    An upper bound on the fraction of margin errors (see User Guide) and a lower bound of the fraction of support vectors. Should be in the interval (0, 1].
+    An upper bound on the fraction of margin errors (see [User Guide](../svm.html#nu-svc)) and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\].
 
     @defaultValue `0.5`
    */
@@ -589,13 +591,15 @@ export interface NuSVCOptions {
   coef0?: number
 
   /**
-    Whether to use the shrinking heuristic. See the User Guide.
+    Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
 
     @defaultValue `true`
    */
   shrinking?: boolean
 
   /**
+    Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict\_proba` may be inconsistent with `predict`. Read more in the [User Guide](../svm.html#scores-probabilities).
+
     @defaultValue `false`
    */
   probability?: boolean
@@ -615,7 +619,7 @@ export interface NuSVCOptions {
   cache_size?: number
 
   /**
-    Set the parameter C of class i to class_weight[i]*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies as n_samples / (n_classes * np.bincount(y)).
+    Set the parameter C of class i to class\_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies as `n\_samples / (n\_classes \* np.bincount(y))`.
    */
   class_weight?: any | 'balanced'
 
@@ -634,21 +638,21 @@ export interface NuSVCOptions {
   max_iter?: number
 
   /**
-    Whether to return a one-vs-rest (‘ovr’) decision function of shape (n_samples, n_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n_samples, n_classes * (n_classes - 1) / 2). However, one-vs-one (‘ovo’) is always used as multi-class strategy. The parameter is ignored for binary classification.
+    Whether to return a one-vs-rest (‘ovr’) decision function of shape (n\_samples, n\_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n\_samples, n\_classes \* (n\_classes - 1) / 2). However, one-vs-one (‘ovo’) is always used as multi-class strategy. The parameter is ignored for binary classification.
 
     @defaultValue `'ovr'`
    */
   decision_function_shape?: 'ovo' | 'ovr'
 
   /**
-    If true, decision_function_shape='ovr', and number of classes > 2, predict will break ties according to the confidence values of decision_function; otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
+    If true, `decision\_function\_shape='ovr'`, and number of classes > 2, [predict](../../glossary.html#term-predict) will break ties according to the confidence values of [decision\_function](../../glossary.html#term-decision_function); otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
 
     @defaultValue `false`
    */
   break_ties?: boolean
 
   /**
-    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when probability is False. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is False. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -662,7 +666,7 @@ export interface NuSVCDecisionFunctionOptions {
 
 export interface NuSVCFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features. For kernel=”precomputed”, the expected shape of X is (n_samples, n_samples).
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -679,21 +683,21 @@ export interface NuSVCFitOptions {
 
 export interface NuSVCPredictOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface NuSVCPredictLogProbaOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike[]
 }
 
 export interface NuSVCPredictProbaOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike[]
 }
@@ -705,7 +709,7 @@ export interface NuSVCScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

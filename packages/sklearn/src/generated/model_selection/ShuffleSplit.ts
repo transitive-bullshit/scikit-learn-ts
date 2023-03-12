@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note: contrary to other cross-validation strategies, random splits do not guarantee that all folds will be different, although this is still very likely for sizeable datasets.
 
+  Read more in the [User Guide](../cross_validation.html#shufflesplit).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ShuffleSplit.html
  */
 export class ShuffleSplit {
@@ -166,7 +168,7 @@ export interface ShuffleSplitOptions {
   n_splits?: number
 
   /**
-    If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If None, the value is set to the complement of the train size. If train_size is also None, it will be set to 0.1.
+    If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If None, the value is set to the complement of the train size. If `train\_size` is also None, it will be set to 0.1.
    */
   test_size?: number
 
@@ -176,7 +178,7 @@ export interface ShuffleSplitOptions {
   train_size?: number
 
   /**
-    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -200,7 +202,7 @@ export interface ShuffleSplitGetNSplitsOptions {
 
 export interface ShuffleSplitSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

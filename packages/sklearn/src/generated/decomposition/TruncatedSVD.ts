@@ -10,9 +10,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This transformer performs linear dimensionality reduction by means of truncated singular value decomposition (SVD). Contrary to PCA, this estimator does not center the data before computing the singular value decomposition. This means it can work with sparse matrices efficiently.
 
-  In particular, truncated SVD works on term count/tf-idf matrices as returned by the vectorizers in sklearn.feature_extraction.text. In that context, it is known as latent semantic analysis (LSA).
+  In particular, truncated SVD works on term count/tf-idf matrices as returned by the vectorizers in [`sklearn.feature\_extraction.text`](../classes.html#module-sklearn.feature_extraction.text "sklearn.feature_extraction.text"). In that context, it is known as latent semantic analysis (LSA).
 
-  This estimator supports two algorithms: a fast randomized SVD solver, and a “naive” algorithm that uses ARPACK as an eigensolver on X * X.T or X.T * X, whichever is more efficient.
+  This estimator supports two algorithms: a fast randomized SVD solver, and a “naive” algorithm that uses ARPACK as an eigensolver on `X \* X.T` or `X.T \* X`, whichever is more efficient.
+
+  Read more in the [User Guide](../decomposition.html#lsa).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html
  */
@@ -165,7 +167,7 @@ pms_TruncatedSVD_fit_transform = {k: v for k, v in pms_TruncatedSVD_fit_transfor
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: TruncatedSVDGetFeatureNamesOutOptions
@@ -200,7 +202,7 @@ pms_TruncatedSVD_get_feature_names_out = {k: v for k, v in pms_TruncatedSVD_get_
   /**
     Transform X back to its original space.
 
-    Returns an array X_original whose transform would be X.
+    Returns an array X\_original whose transform would be X.
    */
   async inverse_transform(
     opts: TruncatedSVDInverseTransformOptions
@@ -234,7 +236,7 @@ pms_TruncatedSVD_inverse_transform = {k: v for k, v in pms_TruncatedSVD_inverse_
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: TruncatedSVDSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -365,7 +367,7 @@ pms_TruncatedSVD_transform = {k: v for k, v in pms_TruncatedSVD_transform.items(
   }
 
   /**
-    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the n_components variables in the lower-dimensional space.
+    The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n\_components` variables in the lower-dimensional space.
    */
   get singular_values_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -390,7 +392,7 @@ pms_TruncatedSVD_transform = {k: v for k, v in pms_TruncatedSVD_transform.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -415,7 +417,7 @@ pms_TruncatedSVD_transform = {k: v for k, v in pms_TruncatedSVD_transform.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -456,28 +458,28 @@ export interface TruncatedSVDOptions {
   algorithm?: 'arpack' | 'randomized'
 
   /**
-    Number of iterations for randomized SVD solver. Not used by ARPACK. The default is larger than the default in randomized_svd to handle sparse matrices that may have large slowly decaying spectrum.
+    Number of iterations for randomized SVD solver. Not used by ARPACK. The default is larger than the default in [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") to handle sparse matrices that may have large slowly decaying spectrum.
 
     @defaultValue `5`
    */
   n_iter?: number
 
   /**
-    Number of oversamples for randomized SVD solver. Not used by ARPACK. See randomized_svd for a complete description.
+    Number of oversamples for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for a complete description.
 
     @defaultValue `10`
    */
   n_oversamples?: number
 
   /**
-    Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See randomized_svd for more details.
+    Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
 
     @defaultValue `'auto'`
    */
   power_iteration_normalizer?: 'auto' | 'QR' | 'LU' | 'none'
 
   /**
-    Used during randomized svd. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Used during randomized svd. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -515,7 +517,7 @@ export interface TruncatedSVDFitTransformOptions {
 
 export interface TruncatedSVDGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.TruncatedSVD.fit "sklearn.decomposition.TruncatedSVD.fit").
    */
   input_features?: any
 }
@@ -529,7 +531,7 @@ export interface TruncatedSVDInverseTransformOptions {
 
 export interface TruncatedSVDSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

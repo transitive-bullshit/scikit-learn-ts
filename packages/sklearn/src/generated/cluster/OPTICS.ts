@@ -8,11 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Estimate clustering structure from vector array.
 
-  OPTICS (Ordering Points To Identify the Clustering Structure), closely related to DBSCAN, finds core sample of high density and expands clusters from them [1]. Unlike DBSCAN, keeps cluster hierarchy for a variable neighborhood radius. Better suited for usage on large datasets than the current sklearn implementation of DBSCAN.
+  OPTICS (Ordering Points To Identify the Clustering Structure), closely related to DBSCAN, finds core sample of high density and expands clusters from them [\[1\]](#r2c55e37003fe-1). Unlike DBSCAN, keeps cluster hierarchy for a variable neighborhood radius. Better suited for usage on large datasets than the current sklearn implementation of DBSCAN.
 
-  Clusters are then extracted using a DBSCAN-like method (cluster_method = ‘dbscan’) or an automatic technique proposed in [1] (cluster_method = ‘xi’).
+  Clusters are then extracted using a DBSCAN-like method (cluster\_method = ‘dbscan’) or an automatic technique proposed in [\[1\]](#r2c55e37003fe-1) (cluster\_method = ‘xi’).
 
   This implementation deviates from the original OPTICS by first performing k-nearest-neighborhood searches on all points to identify core sizes, then computing only the distances to unprocessed points when constructing the cluster order. Note that we do not employ a heap to manage the expansion candidates, so the time complexity will be O(n^2).
+
+  Read more in the [User Guide](../clustering.html#optics).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.OPTICS.html
  */
@@ -112,7 +114,7 @@ ctor_OPTICS = {k: v for k, v in ctor_OPTICS.items() if v is not None}`
   /**
     Perform OPTICS clustering.
 
-    Extracts an ordered list of points and reachability distances, and performs initial clustering using max_eps distance specified at OPTICS object instantiation.
+    Extracts an ordered list of points and reachability distances, and performs initial clustering using `max\_eps` distance specified at OPTICS object instantiation.
    */
   async fit(opts: OPTICSFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -140,7 +142,7 @@ pms_OPTICS_fit = {k: v for k, v in pms_OPTICS_fit.items() if v is not None}`
   }
 
   /**
-    Perform clustering on X and returns cluster labels.
+    Perform clustering on `X` and returns cluster labels.
    */
   async fit_predict(opts: OPTICSFitPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -168,7 +170,7 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
   }
 
   /**
-    Cluster labels for each point in the dataset given to fit(). Noisy samples and points which are not included in a leaf cluster of cluster_hierarchy_ are labeled as -1.
+    Cluster labels for each point in the dataset given to fit(). Noisy samples and points which are not included in a leaf cluster of `cluster\_hierarchy\_` are labeled as -1.
    */
   get labels_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -190,7 +192,7 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
   }
 
   /**
-    Reachability distances per sample, indexed by object order. Use clust.reachability_[clust.ordering_] to access in cluster order.
+    Reachability distances per sample, indexed by object order. Use `clust.reachability\_\[clust.ordering\_\]` to access in cluster order.
    */
   get reachability_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -236,7 +238,7 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
   }
 
   /**
-    Distance at which each sample becomes a core point, indexed by object order. Points which will never be core have a distance of inf. Use clust.core_distances_[clust.ordering_] to access in cluster order.
+    Distance at which each sample becomes a core point, indexed by object order. Points which will never be core have a distance of inf. Use `clust.core\_distances\_\[clust.ordering\_\]` to access in cluster order.
    */
   get core_distances_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -284,7 +286,7 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
   }
 
   /**
-    The list of clusters in the form of [start, end] in each row, with all indices inclusive. The clusters are ordered according to (end, -start) (ascending) so that larger clusters encompassing smaller clusters come after those smaller ones. Since labels_ does not reflect the hierarchy, usually len(cluster_hierarchy_) > np.unique(optics.labels_). Please also note that these indices are of the ordering_, i.e. X[ordering_][start:end + 1] form a cluster. Only available when cluster_method='xi'.
+    The list of clusters in the form of `\[start, end\]` in each row, with all indices inclusive. The clusters are ordered according to `(end, \-start)` (ascending) so that larger clusters encompassing smaller clusters come after those smaller ones. Since `labels\_` does not reflect the hierarchy, usually `len(cluster\_hierarchy\_) > np.unique(optics.labels\_)`. Please also note that these indices are of the `ordering\_`, i.e. `X\[ordering\_\]\[start:end + 1\]` form a cluster. Only available when `cluster\_method='xi'`.
    */
   get cluster_hierarchy_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -309,7 +311,7 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -332,7 +334,7 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -359,21 +361,21 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
 
 export interface OPTICSOptions {
   /**
-    The number of samples in a neighborhood for a point to be considered as a core point. Also, up and down steep regions can’t have more than min_samples consecutive non-steep points. Expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2).
+    The number of samples in a neighborhood for a point to be considered as a core point. Also, up and down steep regions can’t have more than `min\_samples` consecutive non-steep points. Expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2).
 
     @defaultValue `5`
    */
   min_samples?: any
 
   /**
-    The maximum distance between two samples for one to be considered as in the neighborhood of the other. Default value of np.inf will identify clusters across all scales; reducing max_eps will result in shorter run times.
+    The maximum distance between two samples for one to be considered as in the neighborhood of the other. Default value of `np.inf` will identify clusters across all scales; reducing `max\_eps` will result in shorter run times.
    */
   max_eps?: number
 
   /**
     Metric to use for distance computation. Any metric from scikit-learn or scipy.spatial.distance can be used.
 
-    If metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays as input and return one value indicating the distance between them. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string. If metric is “precomputed”, X is assumed to be a distance matrix and must be square.
+    If metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays as input and return one value indicating the distance between them. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string. If metric is “precomputed”, `X` is assumed to be a distance matrix and must be square.
 
     Valid values for metric are:
 
@@ -382,7 +384,7 @@ export interface OPTICSOptions {
   metric?: string
 
   /**
-    Parameter for the Minkowski metric from pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+    Parameter for the Minkowski metric from [`pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances"). When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
 
     @defaultValue `2`
    */
@@ -401,26 +403,26 @@ export interface OPTICSOptions {
   cluster_method?: string
 
   /**
-    The maximum distance between two samples for one to be considered as in the neighborhood of the other. By default it assumes the same value as max_eps. Used only when cluster_method='dbscan'.
+    The maximum distance between two samples for one to be considered as in the neighborhood of the other. By default it assumes the same value as `max\_eps`. Used only when `cluster\_method='dbscan'`.
    */
   eps?: number
 
   /**
-    Determines the minimum steepness on the reachability plot that constitutes a cluster boundary. For example, an upwards point in the reachability plot is defined by the ratio from one point to its successor being at most 1-xi. Used only when cluster_method='xi'.
+    Determines the minimum steepness on the reachability plot that constitutes a cluster boundary. For example, an upwards point in the reachability plot is defined by the ratio from one point to its successor being at most 1-xi. Used only when `cluster\_method='xi'`.
 
     @defaultValue `0.05`
    */
   xi?: any
 
   /**
-    Correct clusters according to the predecessors calculated by OPTICS [2]. This parameter has minimal effect on most datasets. Used only when cluster_method='xi'.
+    Correct clusters according to the predecessors calculated by OPTICS [\[2\]](#r2c55e37003fe-2). This parameter has minimal effect on most datasets. Used only when `cluster\_method='xi'`.
 
     @defaultValue `true`
    */
   predecessor_correction?: boolean
 
   /**
-    Minimum number of samples in an OPTICS cluster, expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). If None, the value of min_samples is used instead. Used only when cluster_method='xi'.
+    Minimum number of samples in an OPTICS cluster, expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). If `None`, the value of `min\_samples` is used instead. Used only when `cluster\_method='xi'`.
    */
   min_cluster_size?: any
 
@@ -432,7 +434,7 @@ export interface OPTICSOptions {
   algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
 
   /**
-    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+    Leaf size passed to `BallTree` or `KDTree`. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
     @defaultValue `30`
    */
@@ -444,7 +446,7 @@ export interface OPTICSOptions {
   memory?: string
 
   /**
-    The number of parallel jobs to run for neighbors search. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }

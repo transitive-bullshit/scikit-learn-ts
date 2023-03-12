@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   PLSRegression is also known as PLS2 or PLS1, depending on the number of targets.
 
+  Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSRegression.html
  */
 export class PLSRegression {
@@ -161,7 +163,7 @@ pms_PLSRegression_fit_transform = {k: v for k, v in pms_PLSRegression_fit_transf
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: PLSRegressionGetFeatureNamesOutOptions
@@ -260,7 +262,7 @@ pms_PLSRegression_predict = {k: v for k, v in pms_PLSRegression_predict.items() 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: PLSRegressionScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -294,7 +296,7 @@ pms_PLSRegression_score = {k: v for k, v in pms_PLSRegression_score.items() if v
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: PLSRegressionSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -404,7 +406,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    The loadings of X.
+    The loadings of `X`.
    */
   get x_loadings_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -429,7 +431,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    The loadings of Y.
+    The loadings of `Y`.
    */
   get y_loadings_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -504,7 +506,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    The projection matrix used to transform X.
+    The projection matrix used to transform `X`.
    */
   get x_rotations_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -529,7 +531,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    The projection matrix used to transform Y.
+    The projection matrix used to transform `Y`.
    */
   get y_rotations_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -554,7 +556,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    The intercepts of the linear model such that Y is approximated as Y = X @ coef_ + intercept_.
+    The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef\_ + intercept\_`.
    */
   get intercept_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -602,7 +604,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -627,7 +629,7 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -654,35 +656,35 @@ pms_PLSRegression_transform = {k: v for k, v in pms_PLSRegression_transform.item
 
 export interface PLSRegressionOptions {
   /**
-    Number of components to keep. Should be in [1, min(n_samples, n_features, n_targets)].
+    Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
 
     @defaultValue `2`
    */
   n_components?: number
 
   /**
-    Whether to scale X and Y.
+    Whether to scale `X` and `Y`.
 
     @defaultValue `true`
    */
   scale?: boolean
 
   /**
-    The maximum number of iterations of the power method when algorithm='nipals'. Ignored otherwise.
+    The maximum number of iterations of the power method when `algorithm='nipals'`. Ignored otherwise.
 
     @defaultValue `500`
    */
   max_iter?: number
 
   /**
-    The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of u_i - u_{i-1} is less than tol, where u corresponds to the left singular vector.
+    The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
 
     @defaultValue `0.000001`
    */
   tol?: number
 
   /**
-    Whether to copy X and Y in fit before applying centering, and potentially scaling. If False, these operations will be done inplace, modifying both arrays.
+    Whether to copy `X` and `Y` in [fit](../../glossary.html#term-fit) before applying centering, and potentially scaling. If `False`, these operations will be done inplace, modifying both arrays.
 
     @defaultValue `true`
    */
@@ -691,43 +693,43 @@ export interface PLSRegressionOptions {
 
 export interface PLSRegressionFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of predictors.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
    */
   X?: ArrayLike[]
 
   /**
-    Target vectors, where n_samples is the number of samples and n_targets is the number of response variables.
+    Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
    */
   Y?: ArrayLike
 }
 
 export interface PLSRegressionFitTransformOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of predictors.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
    */
   X?: ArrayLike[]
 
   /**
-    Target vectors, where n_samples is the number of samples and n_targets is the number of response variables.
+    Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
    */
   y?: ArrayLike[]
 }
 
 export interface PLSRegressionGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.PLSRegression.fit "sklearn.cross_decomposition.PLSRegression.fit").
    */
   input_features?: any
 }
 
 export interface PLSRegressionInverseTransformOptions {
   /**
-    New data, where n_samples is the number of samples and n_components is the number of pls components.
+    New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
    */
   X?: ArrayLike[]
 
   /**
-    New target, where n_samples is the number of samples and n_components is the number of pls components.
+    New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
    */
   Y?: ArrayLike[]
 }
@@ -739,7 +741,7 @@ export interface PLSRegressionPredictOptions {
   X?: ArrayLike[]
 
   /**
-    Whether to copy X and Y, or perform in-place normalization.
+    Whether to copy `X` and `Y`, or perform in-place normalization.
 
     @defaultValue `true`
    */
@@ -748,12 +750,12 @@ export interface PLSRegressionPredictOptions {
 
 export interface PLSRegressionScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 
@@ -765,7 +767,7 @@ export interface PLSRegressionScoreOptions {
 
 export interface PLSRegressionSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
@@ -782,7 +784,7 @@ export interface PLSRegressionTransformOptions {
   Y?: ArrayLike[]
 
   /**
-    Whether to copy X and Y, or perform in-place normalization.
+    Whether to copy `X` and `Y`, or perform in-place normalization.
 
     @defaultValue `true`
    */

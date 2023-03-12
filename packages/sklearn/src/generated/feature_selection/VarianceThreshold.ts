@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This feature selection algorithm looks only at the features (X), not the desired outputs (y), and can thus be used for unsupervised learning.
 
+  Read more in the [User Guide](../feature_selection.html#variance-threshold).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html
  */
 export class VarianceThreshold {
@@ -127,7 +129,7 @@ pms_VarianceThreshold_fit = {k: v for k, v in pms_VarianceThreshold_fit.items() 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: VarianceThresholdFitTransformOptions
@@ -267,7 +269,7 @@ pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshol
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: VarianceThresholdSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -354,7 +356,7 @@ pms_VarianceThreshold_transform = {k: v for k, v in pms_VarianceThreshold_transf
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -381,7 +383,7 @@ pms_VarianceThreshold_transform = {k: v for k, v in pms_VarianceThreshold_transf
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -419,7 +421,7 @@ export interface VarianceThresholdOptions {
 
 export interface VarianceThresholdFitOptions {
   /**
-    Data from which to compute variances, where n_samples is the number of samples and n_features is the number of features.
+    Data from which to compute variances, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix
 
@@ -471,7 +473,7 @@ export interface VarianceThresholdInverseTransformOptions {
 
 export interface VarianceThresholdSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Gaussian process regression (GPR).
 
-  The implementation is based on Algorithm 2.1 of [RW2006].
+  The implementation is based on Algorithm 2.1 of [\[RW2006\]](#rf75674b0f418-rw2006).
 
-  In addition to standard scikit-learn estimator API, GaussianProcessRegressor:
+  In addition to standard scikit-learn estimator API, [`GaussianProcessRegressor`](#sklearn.gaussian_process.GaussianProcessRegressor "sklearn.gaussian_process.GaussianProcessRegressor"):
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html
  */
@@ -180,7 +180,7 @@ pms_GaussianProcessRegressor_log_marginal_likelihood = {k: v for k, v in pms_Gau
   /**
     Predict using the Gaussian process regression model.
 
-    We can also predict based on an unfitted model by using the GP prior. In addition to the mean of the predictive distribution, optionally also returns its standard deviation (return_std=True) or covariance (return_cov=True). Note that at most one of the two can be requested.
+    We can also predict based on an unfitted model by using the GP prior. In addition to the mean of the predictive distribution, optionally also returns its standard deviation (`return\_std=True`) or covariance (`return\_cov=True`). Note that at most one of the two can be requested.
    */
   async predict(
     opts: GaussianProcessRegressorPredictOptions
@@ -252,7 +252,7 @@ pms_GaussianProcessRegressor_sample_y = {k: v for k, v in pms_GaussianProcessReg
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: GaussianProcessRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -369,7 +369,7 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
   }
 
   /**
-    Lower-triangular Cholesky decomposition of the kernel in X_train_.
+    Lower-triangular Cholesky decomposition of the kernel in `X\_train\_`.
    */
   get L_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -423,7 +423,7 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
   }
 
   /**
-    The log-marginal-likelihood of self.kernel_.theta.
+    The log-marginal-likelihood of `self.kernel\_.theta`.
    */
   get log_marginal_likelihood_value_(): Promise<number> {
     if (this._isDisposed) {
@@ -450,7 +450,7 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -477,7 +477,7 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -506,12 +506,12 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
 
 export interface GaussianProcessRegressorOptions {
   /**
-    The kernel specifying the covariance function of the GP. If None is passed, the kernel ConstantKernel(1.0, constant_value_bounds="fixed") * RBF(1.0, length_scale_bounds="fixed") is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
+    The kernel specifying the covariance function of the GP. If None is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
    */
   kernel?: any
 
   /**
-    Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a WhiteKernel. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with Ridge.
+    Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a `WhiteKernel`. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with [`Ridge`](sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge "sklearn.linear_model.Ridge").
 
     @defaultValue `1e-10`
    */
@@ -525,14 +525,14 @@ export interface GaussianProcessRegressorOptions {
   optimizer?: 'fmin_l_bfgs_b'
 
   /**
-    The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n_restarts_optimizer == 0 implies that one run is performed.
+    The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n\_restarts\_optimizer \== 0` implies that one run is performed.
 
     @defaultValue `0`
    */
   n_restarts_optimizer?: number
 
   /**
-    Whether or not to normalize the target values y by removing the mean and scaling to unit-variance. This is recommended for cases where zero-mean, unit-variance priors are used. Note that, in this implementation, the normalisation is reversed before the GP predictions are reported.
+    Whether or not to normalize the target values `y` by removing the mean and scaling to unit-variance. This is recommended for cases where zero-mean, unit-variance priors are used. Note that, in this implementation, the normalisation is reversed before the GP predictions are reported.
 
     @defaultValue `false`
    */
@@ -546,7 +546,7 @@ export interface GaussianProcessRegressorOptions {
   copy_X_train?: boolean
 
   /**
-    Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -565,7 +565,7 @@ export interface GaussianProcessRegressorFitOptions {
 
 export interface GaussianProcessRegressorLogMarginalLikelihoodOptions {
   /**
-    Kernel hyperparameters for which the log-marginal likelihood is evaluated. If None, the precomputed log_marginal_likelihood of self.kernel_.theta is returned.
+    Kernel hyperparameters for which the log-marginal likelihood is evaluated. If None, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
    */
   theta?: any
 
@@ -619,7 +619,7 @@ export interface GaussianProcessRegressorSampleYOptions {
   n_samples?: number
 
   /**
-    Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
     @defaultValue `0`
    */
@@ -628,12 +628,12 @@ export interface GaussianProcessRegressorSampleYOptions {
 
 export interface GaussianProcessRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

@@ -127,7 +127,7 @@ pms_MinMaxScaler_fit = {k: v for k, v in pms_MinMaxScaler_fit.items() if v is no
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: MinMaxScalerFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -192,7 +192,7 @@ pms_MinMaxScaler_get_feature_names_out = {k: v for k, v in pms_MinMaxScaler_get_
   }
 
   /**
-    Undo the scaling of X according to feature_range.
+    Undo the scaling of X according to feature\_range.
    */
   async inverse_transform(
     opts: MinMaxScalerInverseTransformOptions
@@ -226,7 +226,7 @@ pms_MinMaxScaler_inverse_transform = {k: v for k, v in pms_MinMaxScaler_inverse_
   /**
     Online computation of min and max on X for later scaling.
 
-    All of X is processed as a single batch. This is intended for cases when fit is not feasible due to very large number of n_samples or because X is read from a continuous stream.
+    All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.MinMaxScaler.fit "sklearn.preprocessing.MinMaxScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
    */
   async partial_fit(opts: MinMaxScalerPartialFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -256,7 +256,7 @@ pms_MinMaxScaler_partial_fit = {k: v for k, v in pms_MinMaxScaler_partial_fit.it
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: MinMaxScalerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -284,7 +284,7 @@ pms_MinMaxScaler_set_output = {k: v for k, v in pms_MinMaxScaler_set_output.item
   }
 
   /**
-    Scale features of X according to feature_range.
+    Scale features of X according to feature\_range.
    */
   async transform(opts: MinMaxScalerTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -312,7 +312,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Per feature adjustment for minimum. Equivalent to min - X.min(axis=0) * self.scale_
+    Per feature adjustment for minimum. Equivalent to `min \- X.min(axis=0) \* self.scale\_`
    */
   get min_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -335,7 +335,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Per feature relative scaling of the data. Equivalent to (max - min) / (X.max(axis=0) - X.min(axis=0))
+    Per feature relative scaling of the data. Equivalent to `(max \- min) / (X.max(axis=0) \- X.min(axis=0))`
    */
   get scale_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -408,7 +408,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Per feature range (data_max_ - data_min_) seen in the data
+    Per feature range `(data\_max\_ \- data\_min\_)` seen in the data
    */
   get data_range_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -433,7 +433,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -458,7 +458,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    The number of samples processed by the estimator. It will be reset on new calls to fit, but increments across partial_fit calls.
+    The number of samples processed by the estimator. It will be reset on new calls to fit, but increments across `partial\_fit` calls.
    */
   get n_samples_seen_(): Promise<number> {
     if (this._isDisposed) {
@@ -483,7 +483,7 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -522,7 +522,7 @@ export interface MinMaxScalerOptions {
   copy?: boolean
 
   /**
-    Set to True to clip transformed values of held-out data to provided feature range.
+    Set to True to clip transformed values of held-out data to provided `feature range`.
 
     @defaultValue `false`
    */
@@ -586,7 +586,7 @@ export interface MinMaxScalerPartialFitOptions {
 
 export interface MinMaxScalerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

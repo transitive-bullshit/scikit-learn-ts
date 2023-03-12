@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Elastic Net model with iterative fitting along a regularization path.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+
+  Read more in the [User Guide](../linear_model.html#elastic-net).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNetCV.html
  */
@@ -223,7 +225,7 @@ pms_ElasticNetCV_predict = {k: v for k, v in pms_ElasticNetCV_predict.items() if
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: ElasticNetCVScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -351,7 +353,7 @@ pms_ElasticNetCV_score = {k: v for k, v in pms_ElasticNetCV_score.items() if v i
   }
 
   /**
-    Mean square error for the test set on each fold, varying l1_ratio and alpha.
+    Mean square error for the test set on each fold, varying l1\_ratio and alpha.
    */
   get mse_path_(): Promise<NDArray[][]> {
     if (this._isDisposed) {
@@ -376,7 +378,7 @@ pms_ElasticNetCV_score = {k: v for k, v in pms_ElasticNetCV_score.items() if v i
   }
 
   /**
-    The grid of alphas used for fitting, for each l1_ratio.
+    The grid of alphas used for fitting, for each l1\_ratio.
    */
   get alphas_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -447,7 +449,7 @@ pms_ElasticNetCV_score = {k: v for k, v in pms_ElasticNetCV_score.items() if v i
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -472,7 +474,7 @@ pms_ElasticNetCV_score = {k: v for k, v in pms_ElasticNetCV_score.items() if v i
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -499,21 +501,21 @@ pms_ElasticNetCV_score = {k: v for k, v in pms_ElasticNetCV_score.items() if v i
 
 export interface ElasticNetCVOptions {
   /**
-    Float between 0 and 1 passed to ElasticNet (scaling between l1 and l2 penalties). For l1_ratio = 0 the penalty is an L2 penalty. For l1_ratio = 1 it is an L1 penalty. For 0 < l1_ratio < 1, the penalty is a combination of L1 and L2 This parameter can be a list, in which case the different values are tested by cross-validation and the one giving the best prediction score is used. Note that a good choice of list of values for l1_ratio is often to put more values close to 1 (i.e. Lasso) and less close to 0 (i.e. Ridge), as in [.1, .5, .7, .9, .95, .99, 1].
+    Float between 0 and 1 passed to ElasticNet (scaling between l1 and l2 penalties). For `l1\_ratio \= 0` the penalty is an L2 penalty. For `l1\_ratio \= 1` it is an L1 penalty. For `0 < l1\_ratio < 1`, the penalty is a combination of L1 and L2 This parameter can be a list, in which case the different values are tested by cross-validation and the one giving the best prediction score is used. Note that a good choice of list of values for l1\_ratio is often to put more values close to 1 (i.e. Lasso) and less close to 0 (i.e. Ridge), as in `\[.1, .5, .7, .9, .95, .99, 1\]`.
 
     @defaultValue `0.5`
    */
   l1_ratio?: number
 
   /**
-    Length of the path. eps=1e-3 means that alpha_min / alpha_max = 1e-3.
+    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
     @defaultValue `0.001`
    */
   eps?: number
 
   /**
-    Number of alphas along the regularization path, used for each l1_ratio.
+    Number of alphas along the regularization path, used for each l1\_ratio.
 
     @defaultValue `100`
    */
@@ -532,7 +534,7 @@ export interface ElasticNetCVOptions {
   fit_intercept?: boolean
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to 'auto' let us decide. The Gram matrix can also be passed as argument.
+    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
     @defaultValue `'auto'`
    */
@@ -546,7 +548,7 @@ export interface ElasticNetCVOptions {
   max_iter?: number
 
   /**
-    The tolerance for the optimization: if the updates are smaller than tol, the optimization code checks the dual gap for optimality and continues until it is smaller than tol.
+    The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.
 
     @defaultValue `0.0001`
    */
@@ -558,7 +560,7 @@ export interface ElasticNetCVOptions {
   cv?: number
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `True`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -572,19 +574,19 @@ export interface ElasticNetCVOptions {
   verbose?: boolean | number
 
   /**
-    Number of CPUs to use during the cross validation. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of CPUs to use during the cross validation. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    When set to True, forces the coefficients to be positive.
+    When set to `True`, forces the coefficients to be positive.
 
     @defaultValue `false`
    */
   positive?: boolean
 
   /**
-    The seed of the pseudo random number generator that selects a random feature to update. Used when selection == ‘random’. Pass an int for reproducible output across multiple function calls. See Glossary.
+    The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -615,7 +617,7 @@ export interface ElasticNetCVFitOptions {
 
 export interface ElasticNetCVPathOptions {
   /**
-    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output then X can be sparse.
+    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -625,14 +627,14 @@ export interface ElasticNetCVPathOptions {
   y?: ArrayLike | SparseMatrix
 
   /**
-    Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penalties). l1_ratio=1 corresponds to the Lasso.
+    Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penalties). `l1\_ratio=1` corresponds to the Lasso.
 
     @defaultValue `0.5`
    */
   l1_ratio?: number
 
   /**
-    Length of the path. eps=1e-3 means that alpha_min / alpha_max = 1e-3.
+    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
     @defaultValue `0.001`
    */
@@ -651,7 +653,7 @@ export interface ElasticNetCVPathOptions {
   alphas?: NDArray
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to 'auto' let us decide. The Gram matrix can also be passed as argument.
+    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
     @defaultValue `'auto'`
    */
@@ -663,7 +665,7 @@ export interface ElasticNetCVPathOptions {
   Xy?: ArrayLike
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `True`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -689,7 +691,7 @@ export interface ElasticNetCVPathOptions {
   return_n_iter?: boolean
 
   /**
-    If set to True, forces coefficients to be positive. (Only allowed when y.ndim == 1).
+    If set to True, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
 
     @defaultValue `false`
    */
@@ -717,12 +719,12 @@ export interface ElasticNetCVPredictOptions {
 
 export interface ElasticNetCVScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

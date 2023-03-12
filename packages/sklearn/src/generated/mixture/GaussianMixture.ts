@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Representation of a Gaussian mixture model probability distribution. This class allows to estimate the parameters of a Gaussian mixture distribution.
 
+  Read more in the [User Guide](../mixture.html#gmm).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html
  */
 export class GaussianMixture {
@@ -115,7 +117,7 @@ ctor_GaussianMixture = {k: v for k, v in ctor_GaussianMixture.items() if v is no
   /**
     Akaike information criterion for the current model on the input X.
 
-    You can refer to this mathematical section for more details regarding the formulation of the AIC used.
+    You can refer to this [mathematical section](../linear_model.html#aic-bic) for more details regarding the formulation of the AIC used.
    */
   async aic(opts: GaussianMixtureAicOptions): Promise<number> {
     if (this._isDisposed) {
@@ -145,7 +147,7 @@ pms_GaussianMixture_aic = {k: v for k, v in pms_GaussianMixture_aic.items() if v
   /**
     Bayesian information criterion for the current model on the input X.
 
-    You can refer to this mathematical section for more details regarding the formulation of the BIC used.
+    You can refer to this [mathematical section](../linear_model.html#aic-bic) for more details regarding the formulation of the BIC used.
    */
   async bic(opts: GaussianMixtureBicOptions): Promise<number> {
     if (this._isDisposed) {
@@ -175,7 +177,7 @@ pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v
   /**
     Estimate model parameters with the EM algorithm.
 
-    The method fits the model n_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for max_iter times until the change of likelihood or lower bound is less than tol, otherwise, a ConvergenceWarning is raised. If warm_start is True, then n_init is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
+    The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `True`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
    */
   async fit(opts: GaussianMixtureFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -205,7 +207,7 @@ pms_GaussianMixture_fit = {k: v for k, v in pms_GaussianMixture_fit.items() if v
   /**
     Estimate model parameters using X and predict the labels for X.
 
-    The method fits the model n_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for max_iter times until the change of likelihood or lower bound is less than tol, otherwise, a ConvergenceWarning is raised. After fitting, it predicts the most probable label for the input data points.
+    The method fits the model n\_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
    */
   async fit_predict(opts: GaussianMixtureFitPredictOptions): Promise<any> {
     if (this._isDisposed) {
@@ -423,7 +425,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    The covariance of each mixture component. The shape depends on covariance_type:
+    The covariance of each mixture component. The shape depends on `covariance\_type`:
    */
   get covariances_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -448,7 +450,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    The precision matrices for each component in the mixture. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on covariance_type:
+    The precision matrices for each component in the mixture. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
    */
   get precisions_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -473,7 +475,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    The cholesky decomposition of the precision matrices of each mixture component. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on covariance_type:
+    The cholesky decomposition of the precision matrices of each mixture component. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
    */
   get precisions_cholesky_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -573,7 +575,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -598,7 +600,7 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -674,27 +676,27 @@ export interface GaussianMixtureOptions {
   init_params?: 'kmeans' | 'k-means++' | 'random' | 'random_from_data'
 
   /**
-    The user-provided initial weights. If it is None, weights are initialized using the init_params method.
+    The user-provided initial weights. If it is None, weights are initialized using the `init\_params` method.
    */
   weights_init?: ArrayLike
 
   /**
-    The user-provided initial means, If it is None, means are initialized using the init_params method.
+    The user-provided initial means, If it is None, means are initialized using the `init\_params` method.
    */
   means_init?: ArrayLike[]
 
   /**
-    The user-provided initial precisions (inverse of the covariance matrices). If it is None, precisions are initialized using the ‘init_params’ method. The shape depends on ‘covariance_type’:
+    The user-provided initial precisions (inverse of the covariance matrices). If it is None, precisions are initialized using the ‘init\_params’ method. The shape depends on ‘covariance\_type’:
    */
   precisions_init?: ArrayLike
 
   /**
-    Controls the random seed given to the method chosen to initialize the parameters (see init_params). In addition, it controls the generation of random samples from the fitted distribution (see the method sample). Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    If ‘warm_start’ is True, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n_init’ is ignored and only a single initialization occurs upon the first call. See the Glossary.
+    If ‘warm\_start’ is True, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n\_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -731,7 +733,7 @@ export interface GaussianMixtureBicOptions {
 
 export interface GaussianMixtureFitOptions {
   /**
-    List of n_features-dimensional data points. Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 
@@ -743,7 +745,7 @@ export interface GaussianMixtureFitOptions {
 
 export interface GaussianMixtureFitPredictOptions {
   /**
-    List of n_features-dimensional data points. Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 
@@ -755,14 +757,14 @@ export interface GaussianMixtureFitPredictOptions {
 
 export interface GaussianMixturePredictOptions {
   /**
-    List of n_features-dimensional data points. Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 }
 
 export interface GaussianMixturePredictProbaOptions {
   /**
-    List of n_features-dimensional data points. Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 }
@@ -778,7 +780,7 @@ export interface GaussianMixtureSampleOptions {
 
 export interface GaussianMixtureScoreOptions {
   /**
-    List of n_features-dimensional data points. Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 
@@ -790,7 +792,7 @@ export interface GaussianMixtureScoreOptions {
 
 export interface GaussianMixtureScoreSamplesOptions {
   /**
-    List of n_features-dimensional data points. Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 }

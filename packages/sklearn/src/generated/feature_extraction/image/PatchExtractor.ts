@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Extracts patches from a collection of images.
 
+  Read more in the [User Guide](../feature_extraction.html#image-feature-extraction).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.image.PatchExtractor.html
  */
 export class PatchExtractor {
@@ -123,7 +125,7 @@ pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v i
   }
 
   /**
-    Transform the image samples in X into a matrix of patch data.
+    Transform the image samples in `X` into a matrix of patch data.
    */
   async transform(opts: PatchExtractorTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -158,12 +160,12 @@ export interface PatchExtractorOptions {
   patch_size?: any
 
   /**
-    The maximum number of patches per image to extract. If max_patches is a float in (0, 1), it is taken to mean a proportion of the total number of patches.
+    The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches.
    */
   max_patches?: number
 
   /**
-    Determines the random number generator used for random sampling when max_patches is not None. Use an int to make the randomness deterministic. See Glossary.
+    Determines the random number generator used for random sampling when `max\_patches is not None`. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -182,7 +184,7 @@ export interface PatchExtractorFitOptions {
 
 export interface PatchExtractorTransformOptions {
   /**
-    Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have n_channels=3.
+    Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n\_channels=3`.
    */
   X?: NDArray[][]
 }

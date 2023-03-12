@@ -181,7 +181,7 @@ pms_MiniBatchNMF_fit_transform = {k: v for k, v in pms_MiniBatchNMF_fit_transfor
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: MiniBatchNMFGetFeatureNamesOutOptions
@@ -246,11 +246,11 @@ pms_MiniBatchNMF_inverse_transform = {k: v for k, v in pms_MiniBatchNMF_inverse_
   }
 
   /**
-    Update the model using the data in X as a mini-batch.
+    Update the model using the data in `X` as a mini-batch.
 
     This method is expected to be called several times consecutively on different chunks of a dataset so as to implement out-of-core or online learning.
 
-    This is especially useful when the whole dataset is too big to fit in memory at once (see Strategies to scale computationally: bigger data).
+    This is especially useful when the whole dataset is too big to fit in memory at once (see [Strategies to scale computationally: bigger data](../../computing/scaling_strategies.html#scaling-strategies)).
    */
   async partial_fit(opts: MiniBatchNMFPartialFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -286,7 +286,7 @@ pms_MiniBatchNMF_partial_fit = {k: v for k, v in pms_MiniBatchNMF_partial_fit.it
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: MiniBatchNMFSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -367,7 +367,7 @@ pms_MiniBatchNMF_transform = {k: v for k, v in pms_MiniBatchNMF_transform.items(
   }
 
   /**
-    The number of components. It is same as the n_components parameter if it was given. Otherwise, it will be same as the number of features.
+    The number of components. It is same as the `n\_components` parameter if it was given. Otherwise, it will be same as the number of features.
    */
   get n_components_(): Promise<number> {
     if (this._isDisposed) {
@@ -392,7 +392,7 @@ pms_MiniBatchNMF_transform = {k: v for k, v in pms_MiniBatchNMF_transform.items(
   }
 
   /**
-    Frobenius norm of the matrix difference, or beta-divergence, between the training data X and the reconstructed data WH from the fitted model.
+    Frobenius norm of the matrix difference, or beta-divergence, between the training data `X` and the reconstructed data `WH` from the fitted model.
    */
   get reconstruction_err_(): Promise<number> {
     if (this._isDisposed) {
@@ -463,7 +463,7 @@ pms_MiniBatchNMF_transform = {k: v for k, v in pms_MiniBatchNMF_transform.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -488,7 +488,7 @@ pms_MiniBatchNMF_transform = {k: v for k, v in pms_MiniBatchNMF_transform.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -515,7 +515,7 @@ pms_MiniBatchNMF_transform = {k: v for k, v in pms_MiniBatchNMF_transform.items(
 
 export interface MiniBatchNMFOptions {
   /**
-    Number of components, if n_components is not set all features are kept.
+    Number of components, if `n\_components` is not set all features are kept.
    */
   n_components?: number
 
@@ -532,21 +532,21 @@ export interface MiniBatchNMFOptions {
   batch_size?: number
 
   /**
-    Beta divergence to be minimized, measuring the distance between X and the dot product WH. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for beta_loss <= 0 (or ‘itakura-saito’), the input matrix X cannot contain zeros.
+    Beta divergence to be minimized, measuring the distance between `X` and the dot product `WH`. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for `beta\_loss <= 0` (or ‘itakura-saito’), the input matrix `X` cannot contain zeros.
 
     @defaultValue `'frobenius'`
    */
   beta_loss?: number | 'frobenius' | 'kullback-leibler' | 'itakura-saito'
 
   /**
-    Control early stopping based on the norm of the differences in H between 2 steps. To disable early stopping based on changes in H, set tol to 0.0.
+    Control early stopping based on the norm of the differences in `H` between 2 steps. To disable early stopping based on changes in `H`, set `tol` to 0.0.
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set max_no_improvement to None.
+    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max\_no\_improvement` to None.
 
     @defaultValue `10`
    */
@@ -560,21 +560,21 @@ export interface MiniBatchNMFOptions {
   max_iter?: number
 
   /**
-    Constant that multiplies the regularization terms of W. Set it to zero (default) to have no regularization on W.
+    Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
 
     @defaultValue `0`
    */
   alpha_W?: number
 
   /**
-    Constant that multiplies the regularization terms of H. Set it to zero to have no regularization on H. If “same” (default), it takes the same value as alpha_W.
+    Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.
 
     @defaultValue `'same'`
    */
   alpha_H?: number | 'same'
 
   /**
-    The regularization mixing parameter, with 0 <= l1_ratio <= 1. For l1_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1_ratio = 1 it is an elementwise L1 penalty. For 0 < l1_ratio < 1, the penalty is a combination of L1 and L2.
+    The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.
 
     @defaultValue `0`
    */
@@ -595,19 +595,19 @@ export interface MiniBatchNMFOptions {
   fresh_restarts?: boolean
 
   /**
-    Maximum number of iterations when solving for W at each step. Only used when doing fresh restarts. These iterations may be stopped early based on a small change of W controlled by tol.
+    Maximum number of iterations when solving for W at each step. Only used when doing fresh restarts. These iterations may be stopped early based on a small change of W controlled by `tol`.
 
     @defaultValue `30`
    */
   fresh_restarts_max_iter?: number
 
   /**
-    Maximum number of iterations when solving for W at transform time. If None, it defaults to max_iter.
+    Maximum number of iterations when solving for W at transform time. If None, it defaults to `max\_iter`.
    */
   transform_max_iter?: number
 
   /**
-    Used for initialisation (when init == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -621,7 +621,7 @@ export interface MiniBatchNMFOptions {
 
 export interface MiniBatchNMFFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -631,7 +631,7 @@ export interface MiniBatchNMFFitOptions {
   y?: any
 
   /**
-    Parameters (keyword arguments) and values passed to the fit_transform instance.
+    Parameters (keyword arguments) and values passed to the fit\_transform instance.
    */
   params?: any
 }
@@ -648,19 +648,19 @@ export interface MiniBatchNMFFitTransformOptions {
   y?: any
 
   /**
-    If init='custom', it is used as initial guess for the solution.
+    If `init='custom'`, it is used as initial guess for the solution.
    */
   W?: ArrayLike[]
 
   /**
-    If init='custom', it is used as initial guess for the solution.
+    If `init='custom'`, it is used as initial guess for the solution.
    */
   H?: ArrayLike[]
 }
 
 export interface MiniBatchNMFGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchNMF.fit "sklearn.decomposition.MiniBatchNMF.fit").
    */
   input_features?: any
 }
@@ -684,19 +684,19 @@ export interface MiniBatchNMFPartialFitOptions {
   y?: any
 
   /**
-    If init='custom', it is used as initial guess for the solution. Only used for the first call to partial_fit.
+    If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial\_fit`.
    */
   W?: ArrayLike[]
 
   /**
-    If init='custom', it is used as initial guess for the solution. Only used for the first call to partial_fit.
+    If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial\_fit`.
    */
   H?: ArrayLike[]
 }
 
 export interface MiniBatchNMFSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

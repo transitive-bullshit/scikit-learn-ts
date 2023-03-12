@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Recursive feature elimination with cross-validation to select features.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+
+  Read more in the [User Guide](../feature_selection.html#rfe).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html
  */
@@ -98,7 +100,7 @@ ctor_RFECV = {k: v for k, v in ctor_RFECV.items() if v is not None}`
   }
 
   /**
-    Compute the decision function of X.
+    Compute the decision function of `X`.
    */
   async decision_function(opts: RFECVDecisionFunctionOptions): Promise<any> {
     if (this._isDisposed) {
@@ -160,7 +162,7 @@ pms_RFECV_fit = {k: v for k, v in pms_RFECV_fit.items() if v is not None}`
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: RFECVFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -396,7 +398,7 @@ pms_RFECV_score = {k: v for k, v in pms_RFECV_score.items() if v is not None}`
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: RFECVSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -521,7 +523,7 @@ pms_RFECV_transform = {k: v for k, v in pms_RFECV_transform.items() if v is not 
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -544,7 +546,7 @@ pms_RFECV_transform = {k: v for k, v in pms_RFECV_transform.items() if v is not 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -569,7 +571,7 @@ pms_RFECV_transform = {k: v for k, v in pms_RFECV_transform.items() if v is not 
   }
 
   /**
-    The feature ranking, such that ranking_[i] corresponds to the ranking position of the i-th feature. Selected (i.e., estimated best) features are assigned rank 1.
+    The feature ranking, such that `ranking\_\[i\]` corresponds to the ranking position of the i-th feature. Selected (i.e., estimated best) features are assigned rank 1.
    */
   get ranking_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -615,19 +617,19 @@ pms_RFECV_transform = {k: v for k, v in pms_RFECV_transform.items() if v is not 
 
 export interface RFECVOptions {
   /**
-    A supervised learning estimator with a fit method that provides information about feature importance either through a coef_ attribute or through a feature_importances_ attribute.
+    A supervised learning estimator with a `fit` method that provides information about feature importance either through a `coef\_` attribute or through a `feature\_importances\_` attribute.
    */
   estimator?: any
 
   /**
-    If greater than or equal to 1, then step corresponds to the (integer) number of features to remove at each iteration. If within (0.0, 1.0), then step corresponds to the percentage (rounded down) of features to remove at each iteration. Note that the last iteration may remove fewer than step features in order to reach min_features_to_select.
+    If greater than or equal to 1, then `step` corresponds to the (integer) number of features to remove at each iteration. If within (0.0, 1.0), then `step` corresponds to the percentage (rounded down) of features to remove at each iteration. Note that the last iteration may remove fewer than `step` features in order to reach `min\_features\_to\_select`.
 
     @defaultValue `1`
    */
   step?: number
 
   /**
-    The minimum number of features to be selected. This number of features will always be scored, even if the difference between the original feature count and min_features_to_select isn’t divisible by step.
+    The minimum number of features to be selected. This number of features will always be scored, even if the difference between the original feature count and `min\_features\_to\_select` isn’t divisible by `step`.
 
     @defaultValue `1`
    */
@@ -639,7 +641,7 @@ export interface RFECVOptions {
   cv?: number
 
   /**
-    A string (see model evaluation documentation) or a scorer callable object / function with signature scorer(estimator, X, y).
+    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
    */
   scoring?: string
 
@@ -651,16 +653,16 @@ export interface RFECVOptions {
   verbose?: number
 
   /**
-    Number of cores to run in parallel while fitting across folds. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of cores to run in parallel while fitting across folds. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    If ‘auto’, uses the feature importance either through a coef_ or feature_importances_ attributes of estimator.
+    If ‘auto’, uses the feature importance either through a `coef\_` or `feature\_importances\_` attributes of estimator.
 
-    Also accepts a string that specifies an attribute name/path for extracting feature importance. For example, give regressor_.coef_ in case of TransformedTargetRegressor  or named_steps.clf.feature_importances_ in case of Pipeline with its last step named clf.
+    Also accepts a string that specifies an attribute name/path for extracting feature importance. For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") with its last step named `clf`.
 
-    If callable, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
+    If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
 
     @defaultValue `'auto'`
    */
@@ -669,14 +671,14 @@ export interface RFECVOptions {
 
 export interface RFECVDecisionFunctionOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: any[]
 }
 
 export interface RFECVFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the total number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the total number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -686,7 +688,7 @@ export interface RFECVFitOptions {
   y?: ArrayLike
 
   /**
-    Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” cv instance (e.g., GroupKFold).
+    Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
    */
   groups?: ArrayLike
 }
@@ -747,7 +749,7 @@ export interface RFECVPredictLogProbaOptions {
 
 export interface RFECVPredictProbaOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: any[]
 }
@@ -764,14 +766,14 @@ export interface RFECVScoreOptions {
   y?: any
 
   /**
-    Parameters to pass to the score method of the underlying estimator.
+    Parameters to pass to the `score` method of the underlying estimator.
    */
   fit_params?: any
 }
 
 export interface RFECVSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Select features according to a percentile of the highest scores.
 
+  Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html
  */
 export class SelectPercentile {
@@ -127,7 +129,7 @@ pms_SelectPercentile_fit = {k: v for k, v in pms_SelectPercentile_fit.items() if
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: SelectPercentileFitTransformOptions
@@ -266,7 +268,7 @@ pms_SelectPercentile_inverse_transform = {k: v for k, v in pms_SelectPercentile_
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: SelectPercentileSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -353,7 +355,7 @@ pms_SelectPercentile_transform = {k: v for k, v in pms_SelectPercentile_transfor
   }
 
   /**
-    p-values of feature scores, None if score_func returned only scores.
+    p-values of feature scores, None if `score\_func` returned only scores.
    */
   get pvalues_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -380,7 +382,7 @@ pms_SelectPercentile_transform = {k: v for k, v in pms_SelectPercentile_transfor
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -407,7 +409,7 @@ pms_SelectPercentile_transform = {k: v for k, v in pms_SelectPercentile_transfor
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -436,7 +438,7 @@ pms_SelectPercentile_transform = {k: v for k, v in pms_SelectPercentile_transfor
 
 export interface SelectPercentileOptions {
   /**
-    Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f_classif (see below “See Also”). The default function only works with classification tasks.
+    Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
    */
   score_func?: any
 
@@ -502,7 +504,7 @@ export interface SelectPercentileInverseTransformOptions {
 
 export interface SelectPercentileSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

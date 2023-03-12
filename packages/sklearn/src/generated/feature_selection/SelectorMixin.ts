@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Transformer mixin that performs feature selection given a support mask
 
-  This mixin provides a feature selector implementation with transform and inverse_transform functionality given an implementation of _get_support_mask.
+  This mixin provides a feature selector implementation with `transform` and `inverse\_transform` functionality given an implementation of `\_get\_support\_mask`.
 
   Methods
 
@@ -101,7 +101,7 @@ ctor_SelectorMixin = {k: v for k, v in ctor_SelectorMixin.items() if v is not No
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: SelectorMixinFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -228,7 +228,7 @@ pms_SelectorMixin_inverse_transform = {k: v for k, v in pms_SelectorMixin_invers
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: SelectorMixinSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -366,7 +366,7 @@ export interface SelectorMixinInverseTransformOptions {
 
 export interface SelectorMixinSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Constructs an approximate feature map for an arbitrary kernel using a subset of the data as basis.
 
+  Read more in the [User Guide](../kernel_approximation.html#nystroem-kernel-approx).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html
  */
 export class Nystroem {
@@ -132,7 +134,7 @@ pms_Nystroem_fit = {k: v for k, v in pms_Nystroem_fit.items() if v is not None}`
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: NystroemFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -166,7 +168,7 @@ pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items(
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: NystroemGetFeatureNamesOutOptions
@@ -200,7 +202,7 @@ pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: NystroemSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -281,7 +283,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Indices of components_ in the training set.
+    Indices of `components\_` in the training set.
    */
   get component_indices_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -306,7 +308,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Normalization matrix needed for embedding. Square root of the kernel matrix on components_.
+    Normalization matrix needed for embedding. Square root of the kernel matrix on `components\_`.
    */
   get normalization_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -331,7 +333,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -356,7 +358,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -383,7 +385,7 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
 
 export interface NystroemOptions {
   /**
-    Kernel map to be approximated. A callable should accept two arguments and the keyword arguments passed to this object as kernel_params, and should return a floating point number.
+    Kernel map to be approximated. A callable should accept two arguments and the keyword arguments passed to this object as `kernel\_params`, and should return a floating point number.
 
     @defaultValue `'rbf'`
    */
@@ -417,21 +419,21 @@ export interface NystroemOptions {
   n_components?: number
 
   /**
-    Pseudo-random number generator to control the uniform sampling without replacement of n_components of the training data to construct the basis kernel. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Pseudo-random number generator to control the uniform sampling without replacement of `n\_components` of the training data to construct the basis kernel. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    The number of jobs to use for the computation. This works by breaking down the kernel matrix into n_jobs even slices and computing them in parallel.
+    The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n\_jobs` even slices and computing them in parallel.
 
-    None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
 
 export interface NystroemFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike
 
@@ -460,14 +462,14 @@ export interface NystroemFitTransformOptions {
 
 export interface NystroemGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.Nystroem.fit "sklearn.kernel_approximation.Nystroem.fit").
    */
   input_features?: any
 }
 
 export interface NystroemSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

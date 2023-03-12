@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Fit the weights of a regression model, using an ARD prior. The weights of the regression model are assumed to be in Gaussian distributions. Also estimate the parameters lambda (precisions of the distributions of the weights) and alpha (precision of the distribution of the noise). The estimation is done by an iterative procedures (Evidence Maximization)
 
+  Read more in the [User Guide](../linear_model.html#bayesian-regression).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ARDRegression.html
  */
 export class ARDRegression {
@@ -169,7 +171,7 @@ pms_ARDRegression_predict = {k: v for k, v in pms_ARDRegression_predict.items() 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: ARDRegressionScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -316,7 +318,7 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
   }
 
   /**
-    Independent term in decision function. Set to 0.0 if fit_intercept = False.
+    Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
    */
   get intercept_(): Promise<number> {
     if (this._isDisposed) {
@@ -341,7 +343,7 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
   }
 
   /**
-    If fit_intercept=True, offset subtracted for centering data to a zero mean. Set to np.zeros(n_features) otherwise.
+    If `fit\_intercept=True`, offset subtracted for centering data to a zero mean. Set to np.zeros(n\_features) otherwise.
    */
   get X_offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -366,7 +368,7 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
   }
 
   /**
-    Set to np.ones(n_features).
+    Set to np.ones(n\_features).
    */
   get X_scale_(): Promise<number> {
     if (this._isDisposed) {
@@ -391,7 +393,7 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -416,7 +418,7 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -522,7 +524,7 @@ export interface ARDRegressionOptions {
 
 export interface ARDRegressionFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -548,12 +550,12 @@ export interface ARDRegressionPredictOptions {
 
 export interface ARDRegressionScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

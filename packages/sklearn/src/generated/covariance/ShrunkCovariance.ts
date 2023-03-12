@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Covariance estimator with shrinkage.
 
+  Read more in the [User Guide](../covariance.html#shrunk-covariance).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.ShrunkCovariance.html
  */
 export class ShrunkCovariance {
@@ -224,9 +226,9 @@ pms_ShrunkCovariance_mahalanobis = {k: v for k, v in pms_ShrunkCovariance_mahala
   }
 
   /**
-    Compute the log-likelihood of X_test under the estimated Gaussian model.
+    Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
 
-    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by self.location_ and self.covariance_.
+    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
   async score(opts: ShrunkCovarianceScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -312,7 +314,7 @@ pms_ShrunkCovariance_score = {k: v for k, v in pms_ShrunkCovariance_score.items(
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store_precision is True)
+    Estimated pseudo inverse matrix. (stored only if store\_precision is True)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -339,7 +341,7 @@ pms_ShrunkCovariance_score = {k: v for k, v in pms_ShrunkCovariance_score.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -366,7 +368,7 @@ pms_ShrunkCovariance_score = {k: v for k, v in pms_ShrunkCovariance_score.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -409,7 +411,7 @@ export interface ShrunkCovarianceOptions {
   assume_centered?: boolean
 
   /**
-    Coefficient in the convex combination used for the computation of the shrunk estimate. Range is [0, 1].
+    Coefficient in the convex combination used for the computation of the shrunk estimate. Range is \[0, 1\].
 
     @defaultValue `0.1`
    */
@@ -423,14 +425,14 @@ export interface ShrunkCovarianceErrorNormOptions {
   comp_cov?: ArrayLike[]
 
   /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error (comp_cov - self.covariance_).
+    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
 
     @defaultValue `'frobenius'`
    */
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n_features. If False, the squared error norm is not rescaled.
+    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */
@@ -446,7 +448,7 @@ export interface ShrunkCovarianceErrorNormOptions {
 
 export interface ShrunkCovarianceFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -472,7 +474,7 @@ export interface ShrunkCovarianceMahalanobisOptions {
 
 export interface ShrunkCovarianceScoreOptions {
   /**
-    Test data of which we compute the likelihood, where n_samples is the number of samples and n_features is the number of features. X_test is assumed to be drawn from the same distribution than the data used in fit (including centering).
+    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
    */
   X_test?: ArrayLike[]
 

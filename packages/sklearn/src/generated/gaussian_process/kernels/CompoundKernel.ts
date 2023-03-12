@@ -160,7 +160,7 @@ pms_CompoundKernel_clone_with_theta = {k: v for k, v in pms_CompoundKernel_clone
   /**
     Returns the diagonal of the kernel k(X, X).
 
-    The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
+    The result of this method is identical to `np.diag(self(X))`; however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
   async diag(opts: CompoundKernelDiagOptions): Promise<NDArray[]> {
     if (this._isDisposed) {

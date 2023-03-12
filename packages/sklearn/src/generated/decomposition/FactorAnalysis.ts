@@ -12,9 +12,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The observations are assumed to be caused by a linear transformation of lower dimensional latent factors and added Gaussian noise. Without loss of generality the factors are distributed according to a Gaussian with zero mean and unit covariance. The noise is also zero mean and has an arbitrary diagonal covariance matrix.
 
-  If we would restrict the model further, by assuming that the Gaussian noise is even isotropic (all diagonal entries are the same) we would obtain PCA.
+  If we would restrict the model further, by assuming that the Gaussian noise is even isotropic (all diagonal entries are the same) we would obtain [`PCA`](sklearn.decomposition.PCA.html#sklearn.decomposition.PCA "sklearn.decomposition.PCA").
 
-  FactorAnalysis performs a maximum likelihood estimate of the so-called loading matrix, the transformation of the latent variables to the observed ones, using SVD based approach.
+  FactorAnalysis performs a maximum likelihood estimate of the so-called `loading` matrix, the transformation of the latent variables to the observed ones, using SVD based approach.
+
+  Read more in the [User Guide](../decomposition.html#fa).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FactorAnalysis.html
  */
@@ -143,7 +145,7 @@ pms_FactorAnalysis_fit = {k: v for k, v in pms_FactorAnalysis_fit.items() if v i
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: FactorAnalysisFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -177,7 +179,7 @@ pms_FactorAnalysis_fit_transform = {k: v for k, v in pms_FactorAnalysis_fit_tran
   /**
     Compute data covariance with the FactorAnalysis model.
 
-    cov = components_.T * components_ + diag(noise_variance)
+    `cov \= components\_.T \* components\_ + diag(noise\_variance)`
    */
   async get_covariance(opts: FactorAnalysisGetCovarianceOptions): Promise<any> {
     if (this._isDisposed) {
@@ -207,7 +209,7 @@ pms_FactorAnalysis_get_covariance = {k: v for k, v in pms_FactorAnalysis_get_cov
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: FactorAnalysisGetFeatureNamesOutOptions
@@ -329,7 +331,7 @@ pms_FactorAnalysis_score_samples = {k: v for k, v in pms_FactorAnalysis_score_sa
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: FactorAnalysisSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -510,7 +512,7 @@ pms_FactorAnalysis_transform = {k: v for k, v in pms_FactorAnalysis_transform.it
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -535,7 +537,7 @@ pms_FactorAnalysis_transform = {k: v for k, v in pms_FactorAnalysis_transform.it
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -562,7 +564,7 @@ pms_FactorAnalysis_transform = {k: v for k, v in pms_FactorAnalysis_transform.it
 
 export interface FactorAnalysisOptions {
   /**
-    Dimensionality of latent space, the number of components of X that are obtained after transform. If None, n_components is set to the number of features.
+    Dimensionality of latent space, the number of components of `X` that are obtained after `transform`. If None, n\_components is set to the number of features.
    */
   n_components?: number
 
@@ -574,7 +576,7 @@ export interface FactorAnalysisOptions {
   tol?: number
 
   /**
-    Whether to make a copy of X. If False, the input X gets overwritten during fitting.
+    Whether to make a copy of X. If `False`, the input X gets overwritten during fitting.
 
     @defaultValue `true`
    */
@@ -588,31 +590,31 @@ export interface FactorAnalysisOptions {
   max_iter?: number
 
   /**
-    The initial guess of the noise variance for each feature. If None, it defaults to np.ones(n_features).
+    The initial guess of the noise variance for each feature. If None, it defaults to np.ones(n\_features).
    */
   noise_variance_init?: ArrayLike
 
   /**
-    Which SVD method to use. If ‘lapack’ use standard SVD from scipy.linalg, if ‘randomized’ use fast randomized_svd function. Defaults to ‘randomized’. For most applications ‘randomized’ will be sufficiently precise while providing significant speed gains. Accuracy can also be improved by setting higher values for iterated_power. If this is not sufficient, for maximum precision you should choose ‘lapack’.
+    Which SVD method to use. If ‘lapack’ use standard SVD from scipy.linalg, if ‘randomized’ use fast `randomized\_svd` function. Defaults to ‘randomized’. For most applications ‘randomized’ will be sufficiently precise while providing significant speed gains. Accuracy can also be improved by setting higher values for `iterated\_power`. If this is not sufficient, for maximum precision you should choose ‘lapack’.
 
     @defaultValue `'randomized'`
    */
   svd_method?: 'lapack' | 'randomized'
 
   /**
-    Number of iterations for the power method. 3 by default. Only used if svd_method equals ‘randomized’.
+    Number of iterations for the power method. 3 by default. Only used if `svd\_method` equals ‘randomized’.
 
     @defaultValue `3`
    */
   iterated_power?: number
 
   /**
-    If not None, apply the indicated rotation. Currently, varimax and quartimax are implemented. See “The varimax criterion for analytic rotation in factor analysis” H. F. Kaiser, 1958.
+    If not None, apply the indicated rotation. Currently, varimax and quartimax are implemented. See [“The varimax criterion for analytic rotation in factor analysis”](https://link.springer.com/article/10.1007%2FBF02289233) H. F. Kaiser, 1958.
    */
   rotation?: 'varimax' | 'quartimax'
 
   /**
-    Only used when svd_method equals ‘randomized’. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Only used when `svd\_method` equals ‘randomized’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
     @defaultValue `0`
    */
@@ -657,7 +659,7 @@ export interface FactorAnalysisGetCovarianceOptions {
 
 export interface FactorAnalysisGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.FactorAnalysis.fit "sklearn.decomposition.FactorAnalysis.fit").
    */
   input_features?: any
 }
@@ -690,7 +692,7 @@ export interface FactorAnalysisScoreSamplesOptions {
 
 export interface FactorAnalysisSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

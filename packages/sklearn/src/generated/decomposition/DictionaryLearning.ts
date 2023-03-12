@@ -155,7 +155,7 @@ pms_DictionaryLearning_fit = {k: v for k, v in pms_DictionaryLearning_fit.items(
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: DictionaryLearningFitTransformOptions
@@ -195,7 +195,7 @@ pms_DictionaryLearning_fit_transform = {k: v for k, v in pms_DictionaryLearning_
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: DictionaryLearningGetFeatureNamesOutOptions
@@ -232,7 +232,7 @@ pms_DictionaryLearning_get_feature_names_out = {k: v for k, v in pms_DictionaryL
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: DictionaryLearningSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -264,7 +264,7 @@ pms_DictionaryLearning_set_output = {k: v for k, v in pms_DictionaryLearning_set
   /**
     Encode the data as a sparse combination of the dictionary atoms.
 
-    Coding method is determined by the object parameter transform_algorithm.
+    Coding method is determined by the object parameter `transform\_algorithm`.
    */
   async transform(
     opts: DictionaryLearningTransformOptions
@@ -350,7 +350,7 @@ pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_tran
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -377,7 +377,7 @@ pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_tran
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -433,7 +433,7 @@ pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_tran
 
 export interface DictionaryLearningOptions {
   /**
-    Number of dictionary elements to extract. If None, then n_components is set to n_features.
+    Number of dictionary elements to extract. If None, then `n\_components` is set to `n\_features`.
    */
   n_components?: number
 
@@ -459,7 +459,7 @@ export interface DictionaryLearningOptions {
   tol?: number
 
   /**
-    'lars': uses the least angle regression method to solve the lasso problem (lars_path);
+    `'lars'`: uses the least angle regression method to solve the lasso problem ([`lars\_path`](sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path "sklearn.linear_model.lars_path"));
 
     @defaultValue `'lars'`
    */
@@ -473,27 +473,27 @@ export interface DictionaryLearningOptions {
   transform_algorithm?: 'lasso_lars' | 'lasso_cd' | 'lars' | 'omp' | 'threshold'
 
   /**
-    Number of nonzero coefficients to target in each column of the solution. This is only used by algorithm='lars' and algorithm='omp'. If None, then transform_n_nonzero_coefs=int(n_features / 10).
+    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `None`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
    */
   transform_n_nonzero_coefs?: number
 
   /**
-    If algorithm='lasso_lars' or algorithm='lasso_cd', alpha is the penalty applied to the L1 norm. If algorithm='threshold', alpha is the absolute value of the threshold below which coefficients will be squashed to zero. If None, defaults to alpha.
+    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `None`, defaults to `alpha`.
    */
   transform_alpha?: number
 
   /**
-    Number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Initial value for the code, for warm restart. Only used if code_init and dict_init are not None.
+    Initial value for the code, for warm restart. Only used if `code\_init` and `dict\_init` are not None.
    */
   code_init?: NDArray[]
 
   /**
-    Initial values for the dictionary, for warm restart. Only used if code_init and dict_init are not None.
+    Initial values for the dictionary, for warm restart. Only used if `code\_init` and `dict\_init` are not None.
    */
   dict_init?: NDArray[]
 
@@ -512,7 +512,7 @@ export interface DictionaryLearningOptions {
   split_sign?: boolean
 
   /**
-    Used for initializing the dictionary when dict_init is not specified, randomly shuffling the data when shuffle is set to True, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `True`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -531,7 +531,7 @@ export interface DictionaryLearningOptions {
   positive_dict?: boolean
 
   /**
-    Maximum number of iterations to perform if algorithm='lasso_cd' or 'lasso_lars'.
+    Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_lars'`.
 
     @defaultValue `1000`
    */
@@ -540,7 +540,7 @@ export interface DictionaryLearningOptions {
 
 export interface DictionaryLearningFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -569,14 +569,14 @@ export interface DictionaryLearningFitTransformOptions {
 
 export interface DictionaryLearningGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.DictionaryLearning.fit "sklearn.decomposition.DictionaryLearning.fit").
    */
   input_features?: any
 }
 
 export interface DictionaryLearningSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

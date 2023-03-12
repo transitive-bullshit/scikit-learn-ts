@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   A random forest classifier.
 
-  A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the max_samples parameter if bootstrap=True (default), otherwise the whole dataset is used to build each tree.
+  A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the `max\_samples` parameter if `bootstrap=True` (default), otherwise the whole dataset is used to build each tree.
+
+  Read more in the [User Guide](../ensemble.html#forest).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
  */
@@ -472,7 +474,7 @@ pms_RandomForestClassifier_score = {k: v for k, v in pms_RandomForestClassifier_
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -499,7 +501,7 @@ pms_RandomForestClassifier_score = {k: v for k, v in pms_RandomForestClassifier_
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -526,7 +528,7 @@ pms_RandomForestClassifier_score = {k: v for k, v in pms_RandomForestClassifier_
   }
 
   /**
-    The number of outputs when fit is performed.
+    The number of outputs when `fit` is performed.
    */
   get n_outputs_(): Promise<number> {
     if (this._isDisposed) {
@@ -553,7 +555,7 @@ pms_RandomForestClassifier_score = {k: v for k, v in pms_RandomForestClassifier_
   }
 
   /**
-    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when oob_score is True.
+    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is True.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -580,7 +582,7 @@ pms_RandomForestClassifier_score = {k: v for k, v in pms_RandomForestClassifier_
   }
 
   /**
-    Decision function computed with out-of-bag estimate on the training set. If n_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, oob_decision_function_ might contain NaN. This attribute exists only when oob_score is True.
+    Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is True.
    */
   get oob_decision_function_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -616,14 +618,14 @@ export interface RandomForestClassifierOptions {
   n_estimators?: number
 
   /**
-    The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log_loss” and “entropy” both for the Shannon information gain, see Mathematical formulation. Note: This parameter is tree-specific.
+    The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log\_loss” and “entropy” both for the Shannon information gain, see [Mathematical formulation](../tree.html#tree-mathematical-formulation). Note: This parameter is tree-specific.
 
     @defaultValue `'gini'`
    */
   criterion?: 'gini' | 'entropy' | 'log_loss'
 
   /**
-    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
+    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
    */
   max_depth?: number
 
@@ -635,14 +637,14 @@ export interface RandomForestClassifierOptions {
   min_samples_split?: number
 
   /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least min_samples_leaf training samples in each of the left and right branches.  This may have the effect of smoothing the model, especially in regression.
+    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
     @defaultValue `1`
    */
   min_samples_leaf?: number
 
   /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided.
+    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
 
     @defaultValue `0`
    */
@@ -656,7 +658,7 @@ export interface RandomForestClassifierOptions {
   max_features?: 'sqrt' | 'log2' | number | number
 
   /**
-    Grow trees with max_leaf_nodes in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
@@ -684,12 +686,12 @@ export interface RandomForestClassifierOptions {
   oob_score?: boolean
 
   /**
-    The number of jobs to run in parallel. fit, predict, decision_path and apply are all parallelized over the trees. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomForestClassifier.fit "sklearn.ensemble.RandomForestClassifier.fit"), [`predict`](#sklearn.ensemble.RandomForestClassifier.predict "sklearn.ensemble.RandomForestClassifier.predict"), [`decision\_path`](#sklearn.ensemble.RandomForestClassifier.decision_path "sklearn.ensemble.RandomForestClassifier.decision_path") and [`apply`](#sklearn.ensemble.RandomForestClassifier.apply "sklearn.ensemble.RandomForestClassifier.apply") are all parallelized over the trees. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Controls both the randomness of the bootstrapping of the samples used when building trees (if bootstrap=True) and the sampling of the features to consider when looking for the best split at each node (if max_features < n_features). See Glossary for details.
+    Controls both the randomness of the bootstrapping of the samples used when building trees (if `bootstrap=True`) and the sampling of the features to consider when looking for the best split at each node (if `max\_features < n\_features`). See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
@@ -701,29 +703,29 @@ export interface RandomForestClassifierOptions {
   verbose?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See Glossary and Fitting additional weak-learners for details.
+    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    Weights associated with classes in the form {class_label: weight}. If not given, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
+    Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
 
-    Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be [{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}] instead of [{1:1}, {2:5}, {3:1}, {4:1}].
+    Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].
 
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y))
+    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`
 
-    The “balanced_subsample” mode is the same as “balanced” except that weights are computed based on the bootstrap sample for every tree grown.
+    The “balanced\_subsample” mode is the same as “balanced” except that weights are computed based on the bootstrap sample for every tree grown.
 
     For multi-output, the weights of each column of y will be multiplied.
 
-    Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified.
+    Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
    */
   class_weight?: 'balanced' | 'balanced_subsample' | any
 
   /**
-    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than ccp_alpha will be chosen. By default, no pruning is performed. See Minimal Cost-Complexity Pruning for details.
+    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
 
     @defaultValue `0`
    */
@@ -737,21 +739,21 @@ export interface RandomForestClassifierOptions {
 
 export interface RandomForestClassifierApplyOptions {
   /**
-    The input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface RandomForestClassifierDecisionPathOptions {
   /**
-    The input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface RandomForestClassifierFitOptions {
   /**
-    The training input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csc_matrix.
+    The training input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -768,21 +770,21 @@ export interface RandomForestClassifierFitOptions {
 
 export interface RandomForestClassifierPredictOptions {
   /**
-    The input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface RandomForestClassifierPredictLogProbaOptions {
   /**
-    The input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface RandomForestClassifierPredictProbaOptions {
   /**
-    The input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
@@ -794,7 +796,7 @@ export interface RandomForestClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

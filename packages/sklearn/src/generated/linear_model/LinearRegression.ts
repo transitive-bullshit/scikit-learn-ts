@@ -163,7 +163,7 @@ pms_LinearRegression_predict = {k: v for k, v in pms_LinearRegression_predict.it
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: LinearRegressionScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -197,7 +197,7 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
   }
 
   /**
-    Estimated coefficients for the linear regression problem. If multiple targets are passed during the fit (y 2D), this is a 2D array of shape (n_targets, n_features), while if only one target is passed, this is a 1D array of length n_features.
+    Estimated coefficients for the linear regression problem. If multiple targets are passed during the fit (y 2D), this is a 2D array of shape (n\_targets, n\_features), while if only one target is passed, this is a 1D array of length n\_features.
    */
   get coef_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -224,7 +224,7 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
   }
 
   /**
-    Rank of matrix X. Only available when X is dense.
+    Rank of matrix `X`. Only available when `X` is dense.
    */
   get rank_(): Promise<number> {
     if (this._isDisposed) {
@@ -251,7 +251,7 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
   }
 
   /**
-    Singular values of X. Only available when X is dense.
+    Singular values of `X`. Only available when `X` is dense.
    */
   get singular_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -278,7 +278,7 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
   }
 
   /**
-    Independent term in the linear model. Set to 0.0 if fit_intercept = False.
+    Independent term in the linear model. Set to 0.0 if `fit\_intercept \= False`.
    */
   get intercept_(): Promise<number | any[]> {
     if (this._isDisposed) {
@@ -305,7 +305,7 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -332,7 +332,7 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -375,12 +375,12 @@ export interface LinearRegressionOptions {
   copy_X?: boolean
 
   /**
-    The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly n_targets > 1 and secondly X is sparse or if positive is set to True. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `True`. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    When set to True, forces the coefficients to be positive. This option is only supported for dense arrays.
+    When set to `True`, forces the coefficients to be positive. This option is only supported for dense arrays.
 
     @defaultValue `false`
    */
@@ -413,12 +413,12 @@ export interface LinearRegressionPredictOptions {
 
 export interface LinearRegressionScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

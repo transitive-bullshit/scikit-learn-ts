@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   (Error-Correcting) Output-Code multiclass strategy.
 
-  Output-code based strategies consist in representing each class with a binary code (an array of 0s and 1s). At fitting time, one binary classifier per bit in the code book is fitted.  At prediction time, the classifiers are used to project new points in the class space and the class closest to the points is chosen. The main advantage of these strategies is that the number of classifiers used can be controlled by the user, either for compressing the model (0 < code_size < 1) or for making the model more robust to errors (code_size > 1). See the documentation for more details.
+  Output-code based strategies consist in representing each class with a binary code (an array of 0s and 1s). At fitting time, one binary classifier per bit in the code book is fitted. At prediction time, the classifiers are used to project new points in the class space and the class closest to the points is chosen. The main advantage of these strategies is that the number of classifiers used can be controlled by the user, either for compressing the model (0 < code\_size < 1) or for making the model more robust to errors (code\_size > 1). See the documentation for more details.
+
+  Read more in the [User Guide](../multiclass.html#ecoc).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OutputCodeClassifier.html
  */
@@ -278,7 +280,7 @@ pms_OutputCodeClassifier_score = {k: v for k, v in pms_OutputCodeClassifier_scor
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -305,7 +307,7 @@ pms_OutputCodeClassifier_score = {k: v for k, v in pms_OutputCodeClassifier_scor
   }
 
   /**
-    Names of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -334,7 +336,7 @@ pms_OutputCodeClassifier_score = {k: v for k, v in pms_OutputCodeClassifier_scor
 
 export interface OutputCodeClassifierOptions {
   /**
-    An estimator object implementing fit and one of decision_function or predict_proba.
+    An estimator object implementing [fit](../../glossary.html#term-fit) and one of [decision\_function](../../glossary.html#term-decision_function) or [predict\_proba](../../glossary.html#term-predict_proba).
    */
   estimator?: any
 
@@ -346,14 +348,14 @@ export interface OutputCodeClassifierOptions {
   code_size?: number
 
   /**
-    The generator used to initialize the codebook. Pass an int for reproducible output across multiple function calls. See Glossary.
+    The generator used to initialize the codebook. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
     The number of jobs to use for the computation: the multiclass problems are computed in parallel.
 
-    None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -384,7 +386,7 @@ export interface OutputCodeClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

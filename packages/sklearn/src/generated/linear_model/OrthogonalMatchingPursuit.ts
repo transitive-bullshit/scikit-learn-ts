@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Orthogonal Matching Pursuit model (OMP).
 
+  Read more in the [User Guide](../linear_model.html#omp).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.OrthogonalMatchingPursuit.html
  */
 export class OrthogonalMatchingPursuit {
@@ -165,7 +167,7 @@ pms_OrthogonalMatchingPursuit_predict = {k: v for k, v in pms_OrthogonalMatching
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: OrthogonalMatchingPursuitScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -282,7 +284,7 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
   }
 
   /**
-    The number of non-zero coefficients in the solution. If n_nonzero_coefs is None and tol is None this value is either set to 10% of n_features or 1, whichever is greater.
+    The number of non-zero coefficients in the solution. If `n\_nonzero\_coefs` is None and `tol` is None this value is either set to 10% of `n\_features` or 1, whichever is greater.
    */
   get n_nonzero_coefs_(): Promise<number> {
     if (this._isDisposed) {
@@ -309,7 +311,7 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -336,7 +338,7 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -365,12 +367,12 @@ pms_OrthogonalMatchingPursuit_score = {k: v for k, v in pms_OrthogonalMatchingPu
 
 export interface OrthogonalMatchingPursuitOptions {
   /**
-    Desired number of non-zero entries in the solution. If None (by default) this value is set to 10% of n_features.
+    Desired number of non-zero entries in the solution. If None (by default) this value is set to 10% of n\_features.
    */
   n_nonzero_coefs?: number
 
   /**
-    Maximum norm of the residual. If not None, overrides n_nonzero_coefs.
+    Maximum norm of the residual. If not None, overrides n\_nonzero\_coefs.
    */
   tol?: number
 
@@ -382,14 +384,14 @@ export interface OrthogonalMatchingPursuitOptions {
   fit_intercept?: boolean
 
   /**
-    This parameter is ignored when fit_intercept is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use StandardScaler before calling fit on an estimator with normalize=False.
+    This parameter is ignored when `fit\_intercept` is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
 
     @defaultValue `false`
    */
   normalize?: boolean
 
   /**
-    Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improves performance when n_targets or n_samples is very large. Note that if you already have such matrices, you can pass them directly to the fit method.
+    Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improves performance when [n\_targets](../../glossary.html#term-n_targets) or [n\_samples](../../glossary.html#term-n_samples) is very large. Note that if you already have such matrices, you can pass them directly to the fit method.
 
     @defaultValue `'auto'`
    */
@@ -417,12 +419,12 @@ export interface OrthogonalMatchingPursuitPredictOptions {
 
 export interface OrthogonalMatchingPursuitScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

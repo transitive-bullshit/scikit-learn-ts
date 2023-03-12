@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The implementation is based on libsvm.
 
+  Read more in the [User Guide](../outlier_detection.html#outlier-detection).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html
  */
 export class OneClassSVM {
@@ -255,7 +257,7 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
   }
 
   /**
-    Multipliers of parameter C for each class. Computed based on the class_weight parameter.
+    Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
    */
   get class_weight_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -355,7 +357,7 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -380,7 +382,7 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -428,7 +430,7 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: decision_function = score_samples - offset_. The offset is the opposite of intercept_ and is provided for consistency with other outlier detection algorithms.
+    Offset used to define the decision function from the raw scores. We have the relation: decision\_function = score\_samples - `offset\_`. The offset is the opposite of `intercept\_` and is provided for consistency with other outlier detection algorithms.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -451,7 +453,7 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
   }
 
   /**
-    Array dimensions of training vector X.
+    Array dimensions of training vector `X`.
    */
   get shape_fit_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -561,14 +563,14 @@ export interface OneClassSVMOptions {
   tol?: number
 
   /**
-    An upper bound on the fraction of training errors and a lower bound of the fraction of support vectors. Should be in the interval (0, 1]. By default 0.5 will be taken.
+    An upper bound on the fraction of training errors and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\]. By default 0.5 will be taken.
 
     @defaultValue `0.5`
    */
   nu?: number
 
   /**
-    Whether to use the shrinking heuristic. See the User Guide.
+    Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
 
     @defaultValue `true`
    */
@@ -605,7 +607,7 @@ export interface OneClassSVMDecisionFunctionOptions {
 
 export interface OneClassSVMFitOptions {
   /**
-    Set of samples, where n_samples is the number of samples and n_features is the number of features.
+    Set of samples, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -634,7 +636,7 @@ export interface OneClassSVMFitPredictOptions {
 
 export interface OneClassSVMPredictOptions {
   /**
-    For kernel=”precomputed”, the expected shape of X is (n_samples_test, n_samples_train).
+    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
    */
   X?: ArrayLike | SparseMatrix[]
 }

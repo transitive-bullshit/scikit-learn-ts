@@ -240,14 +240,14 @@ pms_ConstantKernel_is_stationary = {k: v for k, v in pms_ConstantKernel_is_stati
 
 export interface ConstantKernelOptions {
   /**
-    The constant value which defines the covariance: k(x_1, x_2) = constant_value
+    The constant value which defines the covariance: k(x\_1, x\_2) = constant\_value
 
     @defaultValue `1`
    */
   constant_value?: number
 
   /**
-    The lower and upper bound on constant_value. If set to “fixed”, constant_value cannot be changed during hyperparameter tuning.
+    The lower and upper bound on `constant\_value`. If set to “fixed”, `constant\_value` cannot be changed during hyperparameter tuning.
    */
   constant_value_bounds?: 'fixed'
 }

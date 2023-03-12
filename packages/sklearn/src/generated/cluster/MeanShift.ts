@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Seeding is performed using a binning technique for scalability.
 
+  Read more in the [User Guide](../clustering.html#mean-shift).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html
  */
 export class MeanShift {
@@ -130,7 +132,7 @@ pms_MeanShift_fit = {k: v for k, v in pms_MeanShift_fit.items() if v is not None
   }
 
   /**
-    Perform clustering on X and returns cluster labels.
+    Perform clustering on `X` and returns cluster labels.
    */
   async fit_predict(opts: MeanShiftFitPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -257,7 +259,7 @@ pms_MeanShift_predict = {k: v for k, v in pms_MeanShift_predict.items() if v is 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -282,7 +284,7 @@ pms_MeanShift_predict = {k: v for k, v in pms_MeanShift_predict.items() if v is 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -311,12 +313,12 @@ export interface MeanShiftOptions {
   /**
     Bandwidth used in the flat kernel.
 
-    If not given, the bandwidth is estimated using sklearn.cluster.estimate_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below).
+    If not given, the bandwidth is estimated using sklearn.cluster.estimate\_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below).
    */
   bandwidth?: number
 
   /**
-    Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get_bin_seeds with bandwidth as the grid size and default values for other parameters.
+    Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get\_bin\_seeds with bandwidth as the grid size and default values for other parameters.
    */
   seeds?: ArrayLike[]
 
@@ -328,7 +330,7 @@ export interface MeanShiftOptions {
   bin_seeding?: boolean
 
   /**
-    To speed up the algorithm, accept only those bins with at least min_bin_freq points as seeds.
+    To speed up the algorithm, accept only those bins with at least min\_bin\_freq points as seeds.
 
     @defaultValue `1`
    */

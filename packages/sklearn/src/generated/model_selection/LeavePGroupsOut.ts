@@ -12,7 +12,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   For instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.
 
-  The difference between LeavePGroupsOut and LeaveOneGroupOut is that the former builds the test sets with all the samples assigned to p different values of the groups while the latter uses samples all assigned the same groups.
+  The difference between LeavePGroupsOut and LeaveOneGroupOut is that the former builds the test sets with all the samples assigned to `p` different values of the groups while the latter uses samples all assigned the same groups.
+
+  Read more in the [User Guide](../cross_validation.html#leave-p-groups-out).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePGroupsOut.html
  */
@@ -161,7 +163,7 @@ pms_LeavePGroupsOut_split = {k: v for k, v in pms_LeavePGroupsOut_split.items() 
 
 export interface LeavePGroupsOutOptions {
   /**
-    Number of groups (p) to leave out in the test split.
+    Number of groups (`p`) to leave out in the test split.
    */
   n_groups?: number
 }
@@ -185,7 +187,7 @@ export interface LeavePGroupsOutGetNSplitsOptions {
 
 export interface LeavePGroupsOutSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

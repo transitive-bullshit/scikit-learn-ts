@@ -125,7 +125,7 @@ pms_MaxAbsScaler_fit = {k: v for k, v in pms_MaxAbsScaler_fit.items() if v is no
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: MaxAbsScalerFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -224,7 +224,7 @@ pms_MaxAbsScaler_inverse_transform = {k: v for k, v in pms_MaxAbsScaler_inverse_
   /**
     Online computation of max absolute value of X for later scaling.
 
-    All of X is processed as a single batch. This is intended for cases when fit is not feasible due to very large number of n_samples or because X is read from a continuous stream.
+    All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.MaxAbsScaler.fit "sklearn.preprocessing.MaxAbsScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
    */
   async partial_fit(opts: MaxAbsScalerPartialFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -254,7 +254,7 @@ pms_MaxAbsScaler_partial_fit = {k: v for k, v in pms_MaxAbsScaler_partial_fit.it
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: MaxAbsScalerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -358,7 +358,7 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -383,7 +383,7 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -408,7 +408,7 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
   }
 
   /**
-    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across partial_fit calls.
+    The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across `partial\_fit` calls.
    */
   get n_samples_seen_(): Promise<number> {
     if (this._isDisposed) {
@@ -499,7 +499,7 @@ export interface MaxAbsScalerPartialFitOptions {
 
 export interface MaxAbsScalerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

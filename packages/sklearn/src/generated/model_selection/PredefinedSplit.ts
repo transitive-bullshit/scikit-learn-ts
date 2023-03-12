@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Predefined split cross-validator
 
-  Provides train/test indices to split data into train/test sets using a predefined scheme specified by the user with the test_fold parameter.
+  Provides train/test indices to split data into train/test sets using a predefined scheme specified by the user with the `test\_fold` parameter.
+
+  Read more in the [User Guide](../cross_validation.html#predefined-split).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html
  */
@@ -151,7 +153,7 @@ pms_PredefinedSplit_split = {k: v for k, v in pms_PredefinedSplit_split.items() 
 
 export interface PredefinedSplitOptions {
   /**
-    The entry test_fold[i] represents the index of the test set that sample i belongs to. It is possible to exclude sample i from any test set (i.e. include sample i in every training set) by setting test_fold[i] equal to -1.
+    The entry `test\_fold\[i\]` represents the index of the test set that sample `i` belongs to. It is possible to exclude sample `i` from any test set (i.e. include sample `i` in every training set) by setting `test\_fold\[i\]` equal to -1.
    */
   test_fold?: ArrayLike
 }

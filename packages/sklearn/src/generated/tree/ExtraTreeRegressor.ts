@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   An extremely randomized tree regressor.
 
-  Extra-trees differ from classic decision trees in the way they are built. When looking for the best split to separate the samples of a node into two groups, random splits are drawn for each of the max_features randomly selected features and the best split among those is chosen. When max_features is set 1, this amounts to building a totally random decision tree.
+  Extra-trees differ from classic decision trees in the way they are built. When looking for the best split to separate the samples of a node into two groups, random splits are drawn for each of the `max\_features` randomly selected features and the best split among those is chosen. When `max\_features` is set 1, this amounts to building a totally random decision tree.
 
   Warning: Extra-trees should only be used within ensemble methods.
+
+  Read more in the [User Guide](../tree.html#tree).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.tree.ExtraTreeRegressor.html
  */
@@ -149,7 +151,7 @@ pms_ExtraTreeRegressor_apply = {k: v for k, v in pms_ExtraTreeRegressor_apply.it
   /**
     Compute the pruning path during Minimal Cost-Complexity Pruning.
 
-    See Minimal Cost-Complexity Pruning for details on the pruning process.
+    See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
    */
   async cost_complexity_pruning_path(
     opts: ExtraTreeRegressorCostComplexityPruningPathOptions
@@ -356,7 +358,7 @@ pms_ExtraTreeRegressor_predict = {k: v for k, v in pms_ExtraTreeRegressor_predic
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: ExtraTreeRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -390,7 +392,7 @@ pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.it
   }
 
   /**
-    The inferred value of max_features.
+    The inferred value of max\_features.
    */
   get max_features_(): Promise<number> {
     if (this._isDisposed) {
@@ -417,7 +419,7 @@ pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.it
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -444,7 +446,7 @@ pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.it
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -471,7 +473,7 @@ pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.it
   }
 
   /**
-    The number of outputs when fit is performed.
+    The number of outputs when `fit` is performed.
    */
   get n_outputs_(): Promise<number> {
     if (this._isDisposed) {
@@ -498,7 +500,7 @@ pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.it
   }
 
   /**
-    The underlying Tree object. Please refer to help(sklearn.tree._tree.Tree) for attributes of Tree object and Understanding the decision tree structure for basic usage of these attributes.
+    The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and [Understanding the decision tree structure](../../auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py) for basic usage of these attributes.
    */
   get tree_(): Promise<any> {
     if (this._isDisposed) {
@@ -527,7 +529,7 @@ pms_ExtraTreeRegressor_score = {k: v for k, v in pms_ExtraTreeRegressor_score.it
 
 export interface ExtraTreeRegressorOptions {
   /**
-    The function to measure the quality of a split. Supported criteria are “squared_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in Poisson deviance to find splits.
+    The function to measure the quality of a split. Supported criteria are “squared\_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman\_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute\_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in Poisson deviance to find splits.
 
     @defaultValue `'squared_error'`
    */
@@ -541,7 +543,7 @@ export interface ExtraTreeRegressorOptions {
   splitter?: 'random' | 'best'
 
   /**
-    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
+    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
    */
   max_depth?: number
 
@@ -553,14 +555,14 @@ export interface ExtraTreeRegressorOptions {
   min_samples_split?: number
 
   /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least min_samples_leaf training samples in each of the left and right branches.  This may have the effect of smoothing the model, especially in regression.
+    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
     @defaultValue `1`
    */
   min_samples_leaf?: number
 
   /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided.
+    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
 
     @defaultValue `0`
    */
@@ -574,7 +576,7 @@ export interface ExtraTreeRegressorOptions {
   max_features?: number | 'sqrt'
 
   /**
-    Used to pick randomly the max_features used at each split. See Glossary for details.
+    Used to pick randomly the `max\_features` used at each split. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
@@ -588,12 +590,12 @@ export interface ExtraTreeRegressorOptions {
   min_impurity_decrease?: number
 
   /**
-    Grow a tree with max_leaf_nodes in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
   /**
-    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than ccp_alpha will be chosen. By default, no pruning is performed. See Minimal Cost-Complexity Pruning for details.
+    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
 
     @defaultValue `0`
    */
@@ -602,7 +604,7 @@ export interface ExtraTreeRegressorOptions {
 
 export interface ExtraTreeRegressorApplyOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -616,7 +618,7 @@ export interface ExtraTreeRegressorApplyOptions {
 
 export interface ExtraTreeRegressorCostComplexityPruningPathOptions {
   /**
-    The training input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csc_matrix.
+    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -633,7 +635,7 @@ export interface ExtraTreeRegressorCostComplexityPruningPathOptions {
 
 export interface ExtraTreeRegressorDecisionPathOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -647,12 +649,12 @@ export interface ExtraTreeRegressorDecisionPathOptions {
 
 export interface ExtraTreeRegressorFitOptions {
   /**
-    The training input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csc_matrix.
+    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
   /**
-    The target values (real numbers). Use dtype=np.float64 and order='C' for maximum efficiency.
+    The target values (real numbers). Use `dtype=np.float64` and `order='C'` for maximum efficiency.
    */
   y?: ArrayLike
 
@@ -675,7 +677,7 @@ export interface ExtraTreeRegressorGetNLeavesOptions {}
 
 export interface ExtraTreeRegressorPredictOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -689,12 +691,12 @@ export interface ExtraTreeRegressorPredictOptions {
 
 export interface ExtraTreeRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

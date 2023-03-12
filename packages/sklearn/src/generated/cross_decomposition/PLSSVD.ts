@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Partial Least Square SVD.
 
-  This transformer simply performs a SVD on the cross-covariance matrix X'Y. It is able to project both the training data X and the targets Y. The training data X is projected on the left singular vectors, while the targets are projected on the right singular vectors.
+  This transformer simply performs a SVD on the cross-covariance matrix `X'Y`. It is able to project both the training data `X` and the targets `Y`. The training data `X` is projected on the left singular vectors, while the targets are projected on the right singular vectors.
+
+  Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSSVD.html
  */
@@ -156,7 +158,7 @@ pms_PLSSVD_fit_transform = {k: v for k, v in pms_PLSSVD_fit_transform.items() if
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: PLSSVDGetFeatureNamesOutOptions
@@ -188,7 +190,7 @@ pms_PLSSVD_get_feature_names_out = {k: v for k, v in pms_PLSSVD_get_feature_name
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: PLSSVDSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -246,7 +248,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    The left singular vectors of the SVD of the cross-covariance matrix. Used to project X in transform.
+    The left singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
    */
   get x_weights_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -269,7 +271,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    The right singular vectors of the SVD of the cross-covariance matrix. Used to project X in transform.
+    The right singular vectors of the SVD of the cross-covariance matrix. Used to project `X` in [`transform`](#sklearn.cross_decomposition.PLSSVD.transform "sklearn.cross_decomposition.PLSSVD.transform").
    */
   get y_weights_(): Promise<any> {
     if (this._isDisposed) {
@@ -292,7 +294,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -315,7 +317,7 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -342,21 +344,21 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
 
 export interface PLSSVDOptions {
   /**
-    The number of components to keep. Should be in [1, min(n_samples, n_features, n_targets)].
+    The number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
 
     @defaultValue `2`
    */
   n_components?: number
 
   /**
-    Whether to scale X and Y.
+    Whether to scale `X` and `Y`.
 
     @defaultValue `true`
    */
   scale?: boolean
 
   /**
-    Whether to copy X and Y in fit before applying centering, and potentially scaling. If False, these operations will be done inplace, modifying both arrays.
+    Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `False`, these operations will be done inplace, modifying both arrays.
 
     @defaultValue `true`
    */
@@ -389,14 +391,14 @@ export interface PLSSVDFitTransformOptions {
 
 export interface PLSSVDGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.PLSSVD.fit "sklearn.cross_decomposition.PLSSVD.fit").
    */
   input_features?: any
 }
 
 export interface PLSSVDSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

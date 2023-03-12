@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Perform Affinity Propagation Clustering of data.
 
+  Read more in the [User Guide](../clustering.html#affinity-propagation).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html
  */
 export class AffinityPropagation {
@@ -224,7 +226,7 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
   }
 
   /**
-    Cluster centers (if affinity != precomputed).
+    Cluster centers (if affinity != `precomputed`).
    */
   get cluster_centers_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -278,7 +280,7 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
   }
 
   /**
-    Stores the affinity matrix used in fit.
+    Stores the affinity matrix used in `fit`.
    */
   get affinity_matrix_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -332,7 +334,7 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -359,7 +361,7 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -388,7 +390,7 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
 
 export interface AffinityPropagationOptions {
   /**
-    Damping factor in the range [0.5, 1.0) is the extent to which the current value is maintained relative to incoming values (weighted 1 - damping). This in order to avoid numerical oscillations when updating these values (messages).
+    Damping factor in the range `\[0.5, 1.0)` is the extent to which the current value is maintained relative to incoming values (weighted 1 - damping). This in order to avoid numerical oscillations when updating these values (messages).
 
     @defaultValue `0.5`
    */
@@ -421,7 +423,7 @@ export interface AffinityPropagationOptions {
   preference?: ArrayLike | number
 
   /**
-    Which affinity to use. At the moment ‘precomputed’ and euclidean are supported. ‘euclidean’ uses the negative squared euclidean distance between points.
+    Which affinity to use. At the moment ‘precomputed’ and `euclidean` are supported. ‘euclidean’ uses the negative squared euclidean distance between points.
 
     @defaultValue `'euclidean'`
    */
@@ -435,14 +437,14 @@ export interface AffinityPropagationOptions {
   verbose?: boolean
 
   /**
-    Pseudo-random number generator to control the starting state. Use an int for reproducible results across function calls. See the Glossary.
+    Pseudo-random number generator to control the starting state. Use an int for reproducible results across function calls. See the [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
 
 export interface AffinityPropagationFitOptions {
   /**
-    Training instances to cluster, or similarities / affinities between instances if affinity='precomputed'. If a sparse feature matrix is provided, it will be converted into a sparse csr_matrix.
+    Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike[]
 
@@ -454,7 +456,7 @@ export interface AffinityPropagationFitOptions {
 
 export interface AffinityPropagationFitPredictOptions {
   /**
-    Training instances to cluster, or similarities / affinities between instances if affinity='precomputed'. If a sparse feature matrix is provided, it will be converted into a sparse csr_matrix.
+    Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike[]
 
@@ -466,7 +468,7 @@ export interface AffinityPropagationFitPredictOptions {
 
 export interface AffinityPropagationPredictOptions {
   /**
-    New data to predict. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    New data to predict. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }

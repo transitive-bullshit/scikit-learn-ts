@@ -10,7 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   An unsupervised transformation of a dataset to a high-dimensional sparse representation. A datapoint is coded according to which leaf of each tree it is sorted into. Using a one-hot encoding of the leaves, this leads to a binary coding with as many ones as there are trees in the forest.
 
-  The dimensionality of the resulting representation is n_out <= n_estimators * max_leaf_nodes. If max_leaf_nodes == None, the number of leaf nodes is at most n_estimators * 2 ** max_depth.
+  The dimensionality of the resulting representation is `n\_out <= n\_estimators \* max\_leaf\_nodes`. If `max\_leaf\_nodes \== None`, the number of leaf nodes is at most `n\_estimators \* 2 \*\* max\_depth`.
+
+  Read more in the [User Guide](../ensemble.html#random-trees-embedding).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomTreesEmbedding.html
  */
@@ -288,7 +290,7 @@ pms_RandomTreesEmbedding_get_feature_names_out = {k: v for k, v in pms_RandomTre
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: RandomTreesEmbeddingSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -408,7 +410,7 @@ pms_RandomTreesEmbedding_transform = {k: v for k, v in pms_RandomTreesEmbedding_
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -435,7 +437,7 @@ pms_RandomTreesEmbedding_transform = {k: v for k, v in pms_RandomTreesEmbedding_
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -462,7 +464,7 @@ pms_RandomTreesEmbedding_transform = {k: v for k, v in pms_RandomTreesEmbedding_
   }
 
   /**
-    The number of outputs when fit is performed.
+    The number of outputs when `fit` is performed.
    */
   get n_outputs_(): Promise<number> {
     if (this._isDisposed) {
@@ -525,7 +527,7 @@ export interface RandomTreesEmbeddingOptions {
   n_estimators?: number
 
   /**
-    The maximum depth of each tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
+    The maximum depth of each tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
 
     @defaultValue `5`
    */
@@ -539,21 +541,21 @@ export interface RandomTreesEmbeddingOptions {
   min_samples_split?: number
 
   /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least min_samples_leaf training samples in each of the left and right branches.  This may have the effect of smoothing the model, especially in regression.
+    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
     @defaultValue `1`
    */
   min_samples_leaf?: number
 
   /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided.
+    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
 
     @defaultValue `0`
    */
   min_weight_fraction_leaf?: number
 
   /**
-    Grow trees with max_leaf_nodes in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
@@ -574,12 +576,12 @@ export interface RandomTreesEmbeddingOptions {
   sparse_output?: boolean
 
   /**
-    The number of jobs to run in parallel. fit, transform, decision_path and apply are all parallelized over the trees. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Controls the generation of the random y used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See Glossary for details.
+    Controls the generation of the random `y` used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
@@ -591,7 +593,7 @@ export interface RandomTreesEmbeddingOptions {
   verbose?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See Glossary and Fitting additional weak-learners for details.
+    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
 
     @defaultValue `false`
    */
@@ -600,21 +602,21 @@ export interface RandomTreesEmbeddingOptions {
 
 export interface RandomTreesEmbeddingApplyOptions {
   /**
-    The input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface RandomTreesEmbeddingDecisionPathOptions {
   /**
-    The input samples. Internally, its dtype will be converted to dtype=np.float32. If a sparse matrix is provided, it will be converted into a sparse csr_matrix.
+    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface RandomTreesEmbeddingFitOptions {
   /**
-    The input samples. Use dtype=np.float32 for maximum efficiency. Sparse matrices are also supported, use sparse csc_matrix for maximum efficiency.
+    The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -631,7 +633,7 @@ export interface RandomTreesEmbeddingFitOptions {
 
 export interface RandomTreesEmbeddingFitTransformOptions {
   /**
-    Input data used to build forests. Use dtype=np.float32 for maximum efficiency.
+    Input data used to build forests. Use `dtype=np.float32` for maximum efficiency.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -648,21 +650,21 @@ export interface RandomTreesEmbeddingFitTransformOptions {
 
 export interface RandomTreesEmbeddingGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit").
    */
   input_features?: any
 }
 
 export interface RandomTreesEmbeddingSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface RandomTreesEmbeddingTransformOptions {
   /**
-    Input data to be transformed. Use dtype=np.float32 for maximum efficiency. Sparse matrices are also supported, use sparse csr_matrix for maximum efficiency.
+    Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csr\_matrix` for maximum efficiency.
    */
   X?: ArrayLike | SparseMatrix[]
 }

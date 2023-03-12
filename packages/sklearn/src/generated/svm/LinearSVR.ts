@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This class supports both dense and sparse input.
 
+  Read more in the [User Guide](../svm.html#svm-regression).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html
  */
 export class LinearSVR {
@@ -164,7 +166,7 @@ pms_LinearSVR_predict = {k: v for k, v in pms_LinearSVR_predict.items() if v is 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: LinearSVRScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -198,7 +200,7 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
   /**
     Weights assigned to the features (coefficients in the primal problem).
 
-    coef_ is a readonly property derived from raw_coef_ that follows the internal memory layout of liblinear.
+    `coef\_` is a readonly property derived from `raw\_coef\_` that follows the internal memory layout of liblinear.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -244,7 +246,7 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -269,7 +271,7 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -319,7 +321,7 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
 
 export interface LinearSVROptions {
   /**
-    Epsilon parameter in the epsilon-insensitive loss function. Note that the value of this parameter depends on the scale of the target variable y. If unsure, set epsilon=0.
+    Epsilon parameter in the epsilon-insensitive loss function. Note that the value of this parameter depends on the scale of the target variable y. If unsure, set `epsilon=0`.
 
     @defaultValue `0`
    */
@@ -340,7 +342,7 @@ export interface LinearSVROptions {
   C?: number
 
   /**
-    Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the L1 loss, while the squared epsilon-insensitive loss (‘squared_epsilon_insensitive’) is the L2 loss.
+    Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the L1 loss, while the squared epsilon-insensitive loss (‘squared\_epsilon\_insensitive’) is the L2 loss.
 
     @defaultValue `'epsilon_insensitive'`
    */
@@ -354,14 +356,14 @@ export interface LinearSVROptions {
   fit_intercept?: boolean
 
   /**
-    When self.fit_intercept is True, instance vector x becomes [x, self.intercept_scaling], i.e. a “synthetic” feature with constant value equals to intercept_scaling is appended to the instance vector. The intercept becomes intercept_scaling * synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept_scaling has to be increased.
+    When self.fit\_intercept is True, instance vector x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
 
     @defaultValue `1`
    */
   intercept_scaling?: number
 
   /**
-    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=False when n_samples > n_features.
+    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=False when n\_samples > n\_features.
 
     @defaultValue `true`
    */
@@ -375,7 +377,7 @@ export interface LinearSVROptions {
   verbose?: number
 
   /**
-    Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -389,7 +391,7 @@ export interface LinearSVROptions {
 
 export interface LinearSVRFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -413,12 +415,12 @@ export interface LinearSVRPredictOptions {
 
 export interface LinearSVRScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Neighborhood Component Analysis (NCA) is a machine learning algorithm for metric learning. It learns a linear transformation in a supervised fashion to improve the classification accuracy of a stochastic nearest neighbors rule in the transformed space.
 
+  Read more in the [User Guide](../neighbors.html#nca).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NeighborhoodComponentsAnalysis.html
  */
 export class NeighborhoodComponentsAnalysis {
@@ -143,7 +145,7 @@ pms_NeighborhoodComponentsAnalysis_fit = {k: v for k, v in pms_NeighborhoodCompo
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: NeighborhoodComponentsAnalysisFitTransformOptions
@@ -184,7 +186,7 @@ pms_NeighborhoodComponentsAnalysis_fit_transform = {k: v for k, v in pms_Neighbo
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: NeighborhoodComponentsAnalysisGetFeatureNamesOutOptions
@@ -221,7 +223,7 @@ pms_NeighborhoodComponentsAnalysis_get_feature_names_out = {k: v for k, v in pms
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(
     opts: NeighborhoodComponentsAnalysisSetOutputOptions
@@ -318,7 +320,7 @@ pms_NeighborhoodComponentsAnalysis_transform = {k: v for k, v in pms_Neighborhoo
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -399,7 +401,7 @@ pms_NeighborhoodComponentsAnalysis_transform = {k: v for k, v in pms_Neighborhoo
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -428,19 +430,19 @@ pms_NeighborhoodComponentsAnalysis_transform = {k: v for k, v in pms_Neighborhoo
 
 export interface NeighborhoodComponentsAnalysisOptions {
   /**
-    Preferred dimensionality of the projected space. If None it will be set to n_features.
+    Preferred dimensionality of the projected space. If None it will be set to `n\_features`.
    */
   n_components?: number
 
   /**
-    Initialization of the linear transformation. Possible options are 'auto', 'pca', 'lda', 'identity', 'random', and a numpy array of shape (n_features_a, n_features_b).
+    Initialization of the linear transformation. Possible options are `'auto'`, `'pca'`, `'lda'`, `'identity'`, `'random'`, and a numpy array of shape `(n\_features\_a, n\_features\_b)`.
 
     @defaultValue `'auto'`
    */
   init?: 'auto' | 'pca' | 'lda' | 'identity' | 'random' | NDArray[]
 
   /**
-    If True and fit has been called before, the solution of the previous call to fit is used as the initial linear transformation (n_components and init will be ignored).
+    If `True` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") has been called before, the solution of the previous call to [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") is used as the initial linear transformation (`n\_components` and `init` will be ignored).
 
     @defaultValue `false`
    */
@@ -461,19 +463,19 @@ export interface NeighborhoodComponentsAnalysisOptions {
   tol?: number
 
   /**
-    If not None, this function is called after every iteration of the optimizer, taking as arguments the current solution (flattened transformation matrix) and the number of iterations. This might be useful in case one wants to examine or store the transformation found after each iteration.
+    If not `None`, this function is called after every iteration of the optimizer, taking as arguments the current solution (flattened transformation matrix) and the number of iterations. This might be useful in case one wants to examine or store the transformation found after each iteration.
    */
   callback?: any
 
   /**
-    If 0, no progress messages will be printed. If 1, progress messages will be printed to stdout. If > 1, progress messages will be printed and the disp parameter of scipy.optimize.minimize will be set to verbose - 2.
+    If 0, no progress messages will be printed. If 1, progress messages will be printed to stdout. If > 1, progress messages will be printed and the `disp` parameter of [`scipy.optimize.minimize`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize "(in SciPy v1.10.1)") will be set to `verbose \- 2`.
 
     @defaultValue `0`
    */
   verbose?: number
 
   /**
-    A pseudo random number generator object or a seed for it if int. If init='random', random_state is used to initialize the random transformation. If init='pca', random_state is passed as an argument to PCA when initializing the transformation. Pass an int for reproducible results across multiple function calls. See Glossary.
+    A pseudo random number generator object or a seed for it if int. If `init='random'`, `random\_state` is used to initialize the random transformation. If `init='pca'`, `random\_state` is passed as an argument to PCA when initializing the transformation. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -509,14 +511,14 @@ export interface NeighborhoodComponentsAnalysisFitTransformOptions {
 
 export interface NeighborhoodComponentsAnalysisGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit").
    */
   input_features?: any
 }
 
 export interface NeighborhoodComponentsAnalysisSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -10,7 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A Bagging classifier is an ensemble meta-estimator that fits base classifiers each on random subsets of the original dataset and then aggregate their individual predictions (either by voting or by averaging) to form a final prediction. Such a meta-estimator can typically be used as a way to reduce the variance of a black-box estimator (e.g., a decision tree), by introducing randomization into its construction procedure and then making an ensemble out of it.
 
-  This algorithm encompasses several works from the literature. When random subsets of the dataset are drawn as random subsets of the samples, then this algorithm is known as Pasting [1]. If samples are drawn with replacement, then the method is known as Bagging [2]. When random subsets of the dataset are drawn as random subsets of the features, then the method is known as Random Subspaces [3]. Finally, when base estimators are built on subsets of both samples and features, then the method is known as Random Patches [4].
+  This algorithm encompasses several works from the literature. When random subsets of the dataset are drawn as random subsets of the samples, then this algorithm is known as Pasting [\[1\]](#rb1846455d0e5-1). If samples are drawn with replacement, then the method is known as Bagging [\[2\]](#rb1846455d0e5-2). When random subsets of the dataset are drawn as random subsets of the features, then the method is known as Random Subspaces [\[3\]](#rb1846455d0e5-3). Finally, when base estimators are built on subsets of both samples and features, then the method is known as Random Patches [\[4\]](#rb1846455d0e5-4).
+
+  Read more in the [User Guide](../ensemble.html#bagging).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html
  */
@@ -184,7 +186,7 @@ pms_BaggingClassifier_fit = {k: v for k, v in pms_BaggingClassifier_fit.items() 
   /**
     Predict class for X.
 
-    The predicted class of an input sample is computed as the class with the highest mean predicted probability. If base estimators do not implement a predict_proba method, then it resorts to voting.
+    The predicted class of an input sample is computed as the class with the highest mean predicted probability. If base estimators do not implement a `predict\_proba` method, then it resorts to voting.
    */
   async predict(opts: BaggingClassifierPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -253,7 +255,7 @@ pms_BaggingClassifier_predict_log_proba = {k: v for k, v in pms_BaggingClassifie
   /**
     Predict class probabilities for X.
 
-    The predicted class probabilities of an input sample is computed as the mean predicted class probabilities of the base estimators in the ensemble. If base estimators do not implement a predict_proba method, then it resorts to voting and the predicted class probabilities of an input sample represents the proportion of estimators predicting each class.
+    The predicted class probabilities of an input sample is computed as the mean predicted class probabilities of the base estimators in the ensemble. If base estimators do not implement a `predict\_proba` method, then it resorts to voting and the predicted class probabilities of an input sample represents the proportion of estimators predicting each class.
    */
   async predict_proba(
     opts: BaggingClassifierPredictProbaOptions
@@ -350,7 +352,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -377,7 +379,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -512,7 +514,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
   }
 
   /**
-    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when oob_score is True.
+    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is True.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -539,7 +541,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
   }
 
   /**
-    Decision function computed with out-of-bag estimate on the training set. If n_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, oob_decision_function_ might contain NaN. This attribute exists only when oob_score is True.
+    Decision function computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_decision\_function\_` might contain NaN. This attribute exists only when `oob\_score` is True.
    */
   get oob_decision_function_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -568,7 +570,7 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
 
 export interface BaggingClassifierOptions {
   /**
-    The base estimator to fit on random subsets of the dataset. If None, then the base estimator is a DecisionTreeClassifier.
+    The base estimator to fit on random subsets of the dataset. If None, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier").
    */
   estimator?: any
 
@@ -580,14 +582,14 @@ export interface BaggingClassifierOptions {
   n_estimators?: number
 
   /**
-    The number of samples to draw from X to train each base estimator (with replacement by default, see bootstrap for more details).
+    The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).
 
     @defaultValue `1`
    */
   max_samples?: number
 
   /**
-    The number of features to draw from X to train each base estimator ( without replacement by default, see bootstrap_features for more details).
+    The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).
 
     @defaultValue `1`
    */
@@ -615,19 +617,19 @@ export interface BaggingClassifierOptions {
   oob_score?: boolean
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See the Glossary.
+    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    The number of jobs to run in parallel for both fit and predict. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a random_state attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -639,7 +641,7 @@ export interface BaggingClassifierOptions {
   verbose?: number
 
   /**
-    Use estimator instead.
+    Use `estimator` instead.
 
     @defaultValue `'deprecated'`
    */
@@ -698,7 +700,7 @@ export interface BaggingClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

@@ -10,11 +10,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This classifier serves as a simple baseline to compare against other more complex classifiers.
 
-  The specific behavior of the baseline is selected with the strategy parameter.
+  The specific behavior of the baseline is selected with the `strategy` parameter.
 
-  All strategies make predictions that ignore the input feature values passed as the X argument to fit and predict. The predictions, however, typically depend on values observed in the y parameter passed to fit.
+  All strategies make predictions that ignore the input feature values passed as the `X` argument to `fit` and `predict`. The predictions, however, typically depend on values observed in the `y` parameter passed to `fit`.
 
-  Note that the “stratified” and “uniform” strategies lead to non-deterministic predictions that can be rendered deterministic by setting the random_state parameter if needed. The other strategies are naturally deterministic and, once fit, always return the same constant prediction for any value of X.
+  Note that the “stratified” and “uniform” strategies lead to non-deterministic predictions that can be rendered deterministic by setting the `random\_state` parameter if needed. The other strategies are naturally deterministic and, once fit, always return the same constant prediction for any value of `X`.
+
+  Read more in the [User Guide](../model_evaluation.html#dummy-estimators).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html
  */
@@ -259,7 +261,7 @@ pms_DummyClassifier_score = {k: v for k, v in pms_DummyClassifier_score.items() 
   }
 
   /**
-    Unique class labels observed in y. For multi-output classification problems, this attribute is a list of arrays as each output has an independent set of possible classes.
+    Unique class labels observed in `y`. For multi-output classification problems, this attribute is a list of arrays as each output has an independent set of possible classes.
    */
   get classes_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -309,7 +311,7 @@ pms_DummyClassifier_score = {k: v for k, v in pms_DummyClassifier_score.items() 
   }
 
   /**
-    Frequency of each class observed in y. For multioutput classification problems, this is computed independently for each output.
+    Frequency of each class observed in `y`. For multioutput classification problems, this is computed independently for each output.
    */
   get class_prior_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -359,7 +361,7 @@ pms_DummyClassifier_score = {k: v for k, v in pms_DummyClassifier_score.items() 
   }
 
   /**
-    True if the array returned from predict is to be in sparse CSC format. Is automatically set to True if the input y is passed in sparse format.
+    True if the array returned from predict is to be in sparse CSC format. Is automatically set to True if the input `y` is passed in sparse format.
    */
   get sparse_output_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -393,7 +395,7 @@ export interface DummyClassifierOptions {
   strategy?: 'most_frequent' | 'prior' | 'stratified' | 'uniform' | 'constant'
 
   /**
-    Controls the randomness to generate the predictions when strategy='stratified' or strategy='uniform'. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the randomness to generate the predictions when `strategy='stratified'` or `strategy='uniform'`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 

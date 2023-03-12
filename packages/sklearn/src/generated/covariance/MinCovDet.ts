@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The Minimum Covariance Determinant covariance estimator is to be applied on Gaussian-distributed data, but could still be relevant on data drawn from a unimodal, symmetric distribution. It is not meant to be used with multi-modal data (the algorithm used to fit a MinCovDet object is likely to fail in such a case). One should consider projection pursuit methods to deal with multi-modal datasets.
 
+  Read more in the [User Guide](../covariance.html#robust-covariance).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.MinCovDet.html
  */
 export class MinCovDet {
@@ -98,7 +100,7 @@ ctor_MinCovDet = {k: v for k, v in ctor_MinCovDet.items() if v is not None}`
   /**
     Apply a correction to raw Minimum Covariance Determinant estimates.
 
-    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [RVD].
+    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](#r491365aeaa84-rvd).
    */
   async correct_covariance(
     opts: MinCovDetCorrectCovarianceOptions
@@ -246,7 +248,7 @@ pms_MinCovDet_mahalanobis = {k: v for k, v in pms_MinCovDet_mahalanobis.items() 
   /**
     Re-weight raw Minimum Covariance Determinant estimates.
 
-    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [RVDriessen].
+    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](#r9465bad4668c-rvdriessen).
    */
   async reweight_covariance(
     opts: MinCovDetReweightCovarianceOptions
@@ -276,9 +278,9 @@ pms_MinCovDet_reweight_covariance = {k: v for k, v in pms_MinCovDet_reweight_cov
   }
 
   /**
-    Compute the log-likelihood of X_test under the estimated Gaussian model.
+    Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
 
-    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by self.location_ and self.covariance_.
+    The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
   async score(opts: MinCovDetScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -429,7 +431,7 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store_precision is True)
+    Estimated pseudo inverse matrix. (stored only if store\_precision is True)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -475,7 +477,7 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
   }
 
   /**
-    Mahalanobis distances of the training set (on which fit is called) observations.
+    Mahalanobis distances of the training set (on which [`fit`](#sklearn.covariance.MinCovDet.fit "sklearn.covariance.MinCovDet.fit") is called) observations.
    */
   get dist_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -498,7 +500,7 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -523,7 +525,7 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -564,12 +566,12 @@ export interface MinCovDetOptions {
   assume_centered?: boolean
 
   /**
-    The proportion of points to be included in the support of the raw MCD estimate. Default is None, which implies that the minimum value of support_fraction will be used within the algorithm: (n_sample + n_features + 1) / 2. The parameter must be in the range (0, 1].
+    The proportion of points to be included in the support of the raw MCD estimate. Default is None, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_sample + n\_features + 1) / 2`. The parameter must be in the range (0, 1\].
    */
   support_fraction?: number
 
   /**
-    Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -588,14 +590,14 @@ export interface MinCovDetErrorNormOptions {
   comp_cov?: ArrayLike[]
 
   /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error (comp_cov - self.covariance_).
+    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
 
     @defaultValue `'frobenius'`
    */
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n_features. If False, the squared error norm is not rescaled.
+    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */
@@ -611,7 +613,7 @@ export interface MinCovDetErrorNormOptions {
 
 export interface MinCovDetFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -644,7 +646,7 @@ export interface MinCovDetReweightCovarianceOptions {
 
 export interface MinCovDetScoreOptions {
   /**
-    Test data of which we compute the likelihood, where n_samples is the number of samples and n_features is the number of features. X_test is assumed to be drawn from the same distribution than the data used in fit (including centering).
+    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
    */
   X_test?: ArrayLike[]
 

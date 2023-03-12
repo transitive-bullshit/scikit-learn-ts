@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Transform X into a (weighted) graph of k nearest neighbors.
 
-  The transformed data is a sparse graph as returned by kneighbors_graph.
+  The transformed data is a sparse graph as returned by kneighbors\_graph.
+
+  Read more in the [User Guide](../neighbors.html#neighbors-transformer).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsTransformer.html
  */
@@ -135,7 +137,7 @@ pms_KNeighborsTransformer_fit = {k: v for k, v in pms_KNeighborsTransformer_fit.
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to X and y with optional parameters fit\_params and returns a transformed version of X.
    */
   async fit_transform(
     opts: KNeighborsTransformerFitTransformOptions
@@ -172,7 +174,7 @@ pms_KNeighborsTransformer_fit_transform = {k: v for k, v in pms_KNeighborsTransf
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: KNeighborsTransformerGetFeatureNamesOutOptions
@@ -284,7 +286,7 @@ pms_KNeighborsTransformer_kneighbors_graph = {k: v for k, v in pms_KNeighborsTra
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: KNeighborsTransformerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -350,7 +352,7 @@ pms_KNeighborsTransformer_transform = {k: v for k, v in pms_KNeighborsTransforme
   }
 
   /**
-    The distance metric used. It will be same as the metric parameter or a synonym of it, e.g. ‘euclidean’ if the metric parameter set to ‘minkowski’ and p parameter set to 2.
+    The distance metric used. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
    */
   get effective_metric_(): Promise<string> {
     if (this._isDisposed) {
@@ -377,7 +379,7 @@ pms_KNeighborsTransformer_transform = {k: v for k, v in pms_KNeighborsTransforme
   }
 
   /**
-    Additional keyword arguments for the metric function. For most metrics will be same with metric_params parameter, but may also contain the p parameter value if the effective_metric_ attribute is set to ‘minkowski’.
+    Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
    */
   get effective_metric_params_(): Promise<any> {
     if (this._isDisposed) {
@@ -404,7 +406,7 @@ pms_KNeighborsTransformer_transform = {k: v for k, v in pms_KNeighborsTransforme
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -431,7 +433,7 @@ pms_KNeighborsTransformer_transform = {k: v for k, v in pms_KNeighborsTransforme
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -494,7 +496,7 @@ export interface KNeighborsTransformerOptions {
   mode?: 'distance' | 'connectivity'
 
   /**
-    Number of neighbors for each sample in the transformed sparse graph. For compatibility reasons, as each sample is considered as its own neighbor, one extra neighbor will be computed when mode == ‘distance’. In this case, the sparse graph contains (n_neighbors + 1) neighbors.
+    Number of neighbors for each sample in the transformed sparse graph. For compatibility reasons, as each sample is considered as its own neighbor, one extra neighbor will be computed when mode == ‘distance’. In this case, the sparse graph contains (n\_neighbors + 1) neighbors.
 
     @defaultValue `5`
    */
@@ -508,14 +510,14 @@ export interface KNeighborsTransformerOptions {
   algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
 
   /**
-    Leaf size passed to BallTree or KDTree.  This can affect the speed of the construction and query, as well as the memory required to store the tree.  The optimal value depends on the nature of the problem.
+    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
     @defaultValue `30`
    */
   leaf_size?: number
 
   /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for valid metric values.
+    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
     If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
@@ -526,7 +528,7 @@ export interface KNeighborsTransformerOptions {
   metric?: string
 
   /**
-    Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+    Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
 
     @defaultValue `2`
    */
@@ -538,7 +540,7 @@ export interface KNeighborsTransformerOptions {
   metric_params?: any
 
   /**
-    The number of parallel jobs to run for neighbors search. If -1, then the number of jobs is set to the number of CPU cores.
+    The number of parallel jobs to run for neighbors search. If `\-1`, then the number of jobs is set to the number of CPU cores.
    */
   n_jobs?: number
 }
@@ -569,7 +571,7 @@ export interface KNeighborsTransformerFitTransformOptions {
 
 export interface KNeighborsTransformerGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.KNeighborsTransformer.fit "sklearn.neighbors.KNeighborsTransformer.fit").
    */
   input_features?: any
 }
@@ -595,7 +597,7 @@ export interface KNeighborsTransformerKneighborsOptions {
 
 export interface KNeighborsTransformerKneighborsGraphOptions {
   /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For metric='precomputed' the shape should be (n_queries, n_indexed). Otherwise the shape should be (n_queries, n_features).
+    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
    */
   X?: any
 
@@ -614,7 +616,7 @@ export interface KNeighborsTransformerKneighborsGraphOptions {
 
 export interface KNeighborsTransformerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

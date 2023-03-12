@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Mini-Batch K-Means clustering.
 
+  Read more in the [User Guide](../clustering.html#mini-batch-kmeans).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MiniBatchKMeans.html
  */
 export class MiniBatchKMeans {
@@ -209,7 +211,7 @@ pms_MiniBatchKMeans_fit_transform = {k: v for k, v in pms_MiniBatchKMeans_fit_tr
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: MiniBatchKMeansGetFeatureNamesOutOptions
@@ -276,7 +278,7 @@ pms_MiniBatchKMeans_partial_fit = {k: v for k, v in pms_MiniBatchKMeans_partial_
   /**
     Predict the closest cluster each sample in X belongs to.
 
-    In the vector quantization literature, cluster_centers_ is called the code book and each value returned by predict is the index of the closest code in the code book.
+    In the vector quantization literature, `cluster\_centers\_` is called the code book and each value returned by `predict` is the index of the closest code in the code book.
    */
   async predict(opts: MiniBatchKMeansPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -340,7 +342,7 @@ pms_MiniBatchKMeans_score = {k: v for k, v in pms_MiniBatchKMeans_score.items() 
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: MiniBatchKMeansSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -370,7 +372,7 @@ pms_MiniBatchKMeans_set_output = {k: v for k, v in pms_MiniBatchKMeans_set_outpu
   /**
     Transform X to a cluster-distance space.
 
-    In the new space, each dimension is the distance to the cluster centers. Note that even if X is sparse, the array returned by transform will typically be dense.
+    In the new space, each dimension is the distance to the cluster centers. Note that even if X is sparse, the array returned by `transform` will typically be dense.
    */
   async transform(opts: MiniBatchKMeansTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -423,7 +425,7 @@ pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.
   }
 
   /**
-    Labels of each point (if compute_labels is set to True).
+    Labels of each point (if compute\_labels is set to True).
    */
   get labels_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -448,7 +450,7 @@ pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.
   }
 
   /**
-    The value of the inertia criterion associated with the chosen partition if compute_labels is set to True. If compute_labels is set to False, it’s an approximation of the inertia based on an exponentially weighted average of the batch inertiae. The inertia is defined as the sum of square distances of samples to their cluster center, weighted by the sample weights if provided.
+    The value of the inertia criterion associated with the chosen partition if compute\_labels is set to True. If compute\_labels is set to False, it’s an approximation of the inertia based on an exponentially weighted average of the batch inertiae. The inertia is defined as the sum of square distances of samples to their cluster center, weighted by the sample weights if provided.
    */
   get inertia_(): Promise<number> {
     if (this._isDisposed) {
@@ -523,7 +525,7 @@ pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -548,7 +550,7 @@ pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -586,11 +588,11 @@ export interface MiniBatchKMeansOptions {
 
     ‘k-means++’ : selects initial cluster centroids using sampling based on an empirical probability distribution of the points’ contribution to the overall inertia. This technique speeds up convergence. The algorithm implemented is “greedy k-means++”. It differs from the vanilla k-means++ by making several trials at each sampling step and choosing the best centroid among them.
 
-    ‘random’: choose n_clusters observations (rows) at random from data for the initial centroids.
+    ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.
 
-    If an array is passed, it should be of shape (n_clusters, n_features) and gives the initial centers.
+    If an array is passed, it should be of shape (n\_clusters, n\_features) and gives the initial centers.
 
-    If a callable is passed, it should take arguments X, n_clusters and a random state and return an initialization.
+    If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.
 
     @defaultValue `'k-means++'`
    */
@@ -604,7 +606,7 @@ export interface MiniBatchKMeansOptions {
   max_iter?: number
 
   /**
-    Size of the mini batches. For faster computations, you can set the batch_size greater than 256 * number of cores to enable parallelism on all cores.
+    Size of the mini batches. For faster computations, you can set the `batch\_size` greater than 256 \* number of cores to enable parallelism on all cores.
 
     @defaultValue `1024`
    */
@@ -625,7 +627,7 @@ export interface MiniBatchKMeansOptions {
   compute_labels?: boolean
 
   /**
-    Determines random number generation for centroid initialization and random reassignment. Use an int to make the randomness deterministic. See Glossary.
+    Determines random number generation for centroid initialization and random reassignment. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -641,23 +643,23 @@ export interface MiniBatchKMeansOptions {
   /**
     Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed inertia.
 
-    To disable convergence detection based on inertia, set max_no_improvement to None.
+    To disable convergence detection based on inertia, set max\_no\_improvement to None.
 
     @defaultValue `10`
    */
   max_no_improvement?: number
 
   /**
-    Number of samples to randomly sample for speeding up the initialization (sometimes at the expense of accuracy): the only algorithm is initialized by running a batch KMeans on a random subset of the data. This needs to be larger than n_clusters.
+    Number of samples to randomly sample for speeding up the initialization (sometimes at the expense of accuracy): the only algorithm is initialized by running a batch KMeans on a random subset of the data. This needs to be larger than n\_clusters.
 
-    If None, the heuristic is init_size = 3 * batch_size if 3 * batch_size < n_clusters, else init_size = 3 * n_clusters.
+    If `None`, the heuristic is `init\_size \= 3 \* batch\_size` if `3 \* batch\_size < n\_clusters`, else `init\_size \= 3 \* n\_clusters`.
    */
   init_size?: number
 
   /**
-    Number of random initializations that are tried. In contrast to KMeans, the algorithm is only run once, using the best of the n_init initializations as measured by inertia. Several runs are recommended for sparse high-dimensional problems (see Clustering sparse data with k-means).
+    Number of random initializations that are tried. In contrast to KMeans, the algorithm is only run once, using the best of the `n\_init` initializations as measured by inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).
 
-    When n_init='auto', the number of runs depends on the value of init: 3 if using init='random', 1 if using init='k-means++'.
+    When `n\_init='auto'`, the number of runs depends on the value of init: 3 if using `init='random'`, 1 if using `init='k-means++'`.
 
     @defaultValue `3`
    */
@@ -724,7 +726,7 @@ export interface MiniBatchKMeansFitTransformOptions {
 
 export interface MiniBatchKMeansGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.MiniBatchKMeans.fit "sklearn.cluster.MiniBatchKMeans.fit").
    */
   input_features?: any
 }
@@ -777,7 +779,7 @@ export interface MiniBatchKMeansScoreOptions {
 
 export interface MiniBatchKMeansSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

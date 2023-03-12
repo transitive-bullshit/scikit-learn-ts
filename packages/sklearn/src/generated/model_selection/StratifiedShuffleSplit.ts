@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note: like the ShuffleSplit strategy, stratified random splits do not guarantee that all folds will be different, although this is still very likely for sizeable datasets.
 
+  Read more in the [User Guide](../cross_validation.html#stratified-shuffle-split).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html
  */
 export class StratifiedShuffleSplit {
@@ -180,7 +182,7 @@ export interface StratifiedShuffleSplitOptions {
   n_splits?: number
 
   /**
-    If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If None, the value is set to the complement of the train size. If train_size is also None, it will be set to 0.1.
+    If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If None, the value is set to the complement of the train size. If `train\_size` is also None, it will be set to 0.1.
    */
   test_size?: number
 
@@ -190,7 +192,7 @@ export interface StratifiedShuffleSplitOptions {
   train_size?: number
 
   /**
-    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -214,9 +216,9 @@ export interface StratifiedShuffleSplitGetNSplitsOptions {
 
 export interface StratifiedShuffleSplitSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-    Note that providing y is sufficient to generate the splits and hence np.zeros(n_samples) may be used as a placeholder for X instead of actual training data.
+    Note that providing `y` is sufficient to generate the splits and hence `np.zeros(n\_samples)` may be used as a placeholder for `X` instead of actual training data.
    */
   X?: ArrayLike[]
 

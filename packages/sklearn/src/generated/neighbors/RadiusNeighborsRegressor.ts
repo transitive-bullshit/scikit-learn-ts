@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The target is predicted by local interpolation of the targets associated of the nearest neighbors in the training set.
 
+  Read more in the [User Guide](../neighbors.html#regression).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsRegressor.html
  */
 export class RadiusNeighborsRegressor {
@@ -171,9 +173,9 @@ pms_RadiusNeighborsRegressor_predict = {k: v for k, v in pms_RadiusNeighborsRegr
   /**
     Find the neighbors within a given radius of a point or points.
 
-    Return the indices and distances of each point from the dataset lying in a ball with size radius around the points of the query array. Points lying on the boundary are included in the results.
+    Return the indices and distances of each point from the dataset lying in a ball with size `radius` around the points of the query array. Points lying on the boundary are included in the results.
 
-    The result points are not necessarily sorted by distance to their query point.
+    The result points are *not* necessarily sorted by distance to their query point.
    */
   async radius_neighbors(
     opts: RadiusNeighborsRegressorRadiusNeighborsOptions
@@ -252,7 +254,7 @@ pms_RadiusNeighborsRegressor_radius_neighbors_graph = {k: v for k, v in pms_Radi
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: RadiusNeighborsRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -288,7 +290,7 @@ pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegres
   }
 
   /**
-    The distance metric to use. It will be same as the metric parameter or a synonym of it, e.g. ‘euclidean’ if the metric parameter set to ‘minkowski’ and p parameter set to 2.
+    The distance metric to use. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
    */
   get effective_metric_(): Promise<string> {
     if (this._isDisposed) {
@@ -315,7 +317,7 @@ pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegres
   }
 
   /**
-    Additional keyword arguments for the metric function. For most metrics will be same with metric_params parameter, but may also contain the p parameter value if the effective_metric_ attribute is set to ‘minkowski’.
+    Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
    */
   get effective_metric_params_(): Promise<any> {
     if (this._isDisposed) {
@@ -342,7 +344,7 @@ pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegres
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -369,7 +371,7 @@ pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegres
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -425,14 +427,14 @@ pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegres
 
 export interface RadiusNeighborsRegressorOptions {
   /**
-    Range of parameter space to use by default for radius_neighbors queries.
+    Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors "sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors") queries.
 
     @defaultValue `1`
    */
   radius?: number
 
   /**
-    Weight function used in prediction.  Possible values:
+    Weight function used in prediction. Possible values:
 
     @defaultValue `'uniform'`
    */
@@ -446,23 +448,23 @@ export interface RadiusNeighborsRegressorOptions {
   algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
 
   /**
-    Leaf size passed to BallTree or KDTree.  This can affect the speed of the construction and query, as well as the memory required to store the tree.  The optimal value depends on the nature of the problem.
+    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
     @defaultValue `30`
    */
   leaf_size?: number
 
   /**
-    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
 
     @defaultValue `2`
    */
   p?: number
 
   /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for valid metric values.
+    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a sparse graph, in which case only “nonzero” elements may be considered neighbors.
+    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
 
     If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
@@ -476,7 +478,7 @@ export interface RadiusNeighborsRegressorOptions {
   metric_params?: any
 
   /**
-    The number of parallel jobs to run for neighbors search. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -519,7 +521,7 @@ export interface RadiusNeighborsRegressorRadiusNeighborsOptions {
   return_distance?: boolean
 
   /**
-    If True, the distances and indices will be sorted by increasing distances before being returned. If False, the results may not be sorted. If return_distance=False, setting sort_results=True will result in an error.
+    If True, the distances and indices will be sorted by increasing distances before being returned. If False, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
 
     @defaultValue `false`
    */
@@ -554,12 +556,12 @@ export interface RadiusNeighborsRegressorRadiusNeighborsGraphOptions {
 
 export interface RadiusNeighborsRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

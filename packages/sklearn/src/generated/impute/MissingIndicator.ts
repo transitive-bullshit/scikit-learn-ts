@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Binary indicators for missing values.
 
-  Note that this component typically should not be used in a vanilla Pipeline consisting of transformers and a classifier, but rather could be added using a FeatureUnion or ColumnTransformer.
+  Note that this component typically should not be used in a vanilla `Pipeline` consisting of transformers and a classifier, but rather could be added using a `FeatureUnion` or `ColumnTransformer`.
+
+  Read more in the [User Guide](../impute.html#impute).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.impute.MissingIndicator.html
  */
@@ -97,7 +99,7 @@ ctor_MissingIndicator = {k: v for k, v in ctor_MissingIndicator.items() if v is 
   }
 
   /**
-    Fit the transformer on X.
+    Fit the transformer on `X`.
    */
   async fit(opts: MissingIndicatorFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -127,7 +129,7 @@ pms_MissingIndicator_fit = {k: v for k, v in pms_MissingIndicator_fit.items() if
   }
 
   /**
-    Generate missing values indicator for X.
+    Generate missing values indicator for `X`.
    */
   async fit_transform(
     opts: MissingIndicatorFitTransformOptions
@@ -198,7 +200,7 @@ pms_MissingIndicator_get_feature_names_out = {k: v for k, v in pms_MissingIndica
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: MissingIndicatorSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -228,7 +230,7 @@ pms_MissingIndicator_set_output = {k: v for k, v in pms_MissingIndicator_set_out
   }
 
   /**
-    Generate missing values indicator for X.
+    Generate missing values indicator for `X`.
    */
   async transform(
     opts: MissingIndicatorTransformOptions
@@ -260,7 +262,7 @@ pms_MissingIndicator_transform = {k: v for k, v in pms_MissingIndicator_transfor
   }
 
   /**
-    The features indices which will be returned when calling transform. They are computed during fit. If features='all', features_ is equal to range(n_features).
+    The features indices which will be returned when calling [`transform`](#sklearn.impute.MissingIndicator.transform "sklearn.impute.MissingIndicator.transform"). They are computed during [`fit`](#sklearn.impute.MissingIndicator.fit "sklearn.impute.MissingIndicator.fit"). If `features='all'`, `features\_` is equal to `range(n\_features)`.
    */
   get features_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -287,7 +289,7 @@ pms_MissingIndicator_transform = {k: v for k, v in pms_MissingIndicator_transfor
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -314,7 +316,7 @@ pms_MissingIndicator_transform = {k: v for k, v in pms_MissingIndicator_transfor
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -343,7 +345,7 @@ pms_MissingIndicator_transform = {k: v for k, v in pms_MissingIndicator_transfor
 
 export interface MissingIndicatorOptions {
   /**
-    The placeholder for the missing values. All occurrences of missing_values will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, missing_values should be set to np.nan, since pd.NA will be converted to np.nan.
+    The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
    */
   missing_values?: number | string
 
@@ -362,7 +364,7 @@ export interface MissingIndicatorOptions {
   sparse?: boolean | 'auto'
 
   /**
-    If True, transform will raise an error when there are features with missing values that have no missing values in fit. This is applicable only when features='missing-only'.
+    If `True`, [`transform`](#sklearn.impute.MissingIndicator.transform "sklearn.impute.MissingIndicator.transform") will raise an error when there are features with missing values that have no missing values in [`fit`](#sklearn.impute.MissingIndicator.fit "sklearn.impute.MissingIndicator.fit"). This is applicable only when `features='missing-only'`.
 
     @defaultValue `true`
    */
@@ -371,7 +373,7 @@ export interface MissingIndicatorOptions {
 
 export interface MissingIndicatorFitOptions {
   /**
-    Input data, where n_samples is the number of samples and n_features is the number of features.
+    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -402,7 +404,7 @@ export interface MissingIndicatorGetFeatureNamesOutOptions {
 
 export interface MissingIndicatorSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

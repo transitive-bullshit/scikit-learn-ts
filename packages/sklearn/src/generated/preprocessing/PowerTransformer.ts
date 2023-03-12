@@ -16,6 +16,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   By default, zero-mean, unit-variance normalization is applied to the transformed data.
 
+  Read more in the [User Guide](../preprocessing.html#preprocessing-transformer).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PowerTransformer.html
  */
 export class PowerTransformer {
@@ -135,7 +137,7 @@ pms_PowerTransformer_fit = {k: v for k, v in pms_PowerTransformer_fit.items() if
   }
 
   /**
-    Fit PowerTransformer to X, then transform X.
+    Fit `PowerTransformer` to `X`, then transform `X`.
    */
   async fit_transform(
     opts: PowerTransformerFitTransformOptions
@@ -242,7 +244,7 @@ pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: PowerTransformerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -329,7 +331,7 @@ pms_PowerTransformer_transform = {k: v for k, v in pms_PowerTransformer_transfor
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -356,7 +358,7 @@ pms_PowerTransformer_transform = {k: v for k, v in pms_PowerTransformer_transfor
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -446,7 +448,7 @@ export interface PowerTransformerInverseTransformOptions {
 
 export interface PowerTransformerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

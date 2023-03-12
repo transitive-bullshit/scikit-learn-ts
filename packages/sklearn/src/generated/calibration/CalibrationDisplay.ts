@@ -8,9 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Calibration curve (also known as reliability diagram) visualization.
 
-  It is recommended to use from_estimator or from_predictions to create a CalibrationDisplay. All parameters are stored as attributes.
+  It is recommended to use [`from\_estimator`](#sklearn.calibration.CalibrationDisplay.from_estimator "sklearn.calibration.CalibrationDisplay.from_estimator") or [`from\_predictions`](#sklearn.calibration.CalibrationDisplay.from_predictions "sklearn.calibration.CalibrationDisplay.from_predictions") to create a `CalibrationDisplay`. All parameters are stored as attributes.
 
-  Read more about calibration in the User Guide and more about the scikit-learn visualization API in Visualizations.
+  Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html
  */
@@ -113,9 +113,9 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
 
     A calibration curve, also known as a reliability diagram, uses inputs from a binary classifier and plots the average predicted probability for each bin against the fraction of positive classes, on the y-axis.
 
-    Extra keyword arguments will be passed to matplotlib.pyplot.plot.
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
 
-    Read more about calibration in the User Guide and more about the scikit-learn visualization API in Visualizations.
+    Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
    */
   async from_estimator(
     opts: CalibrationDisplayFromEstimatorOptions
@@ -163,9 +163,9 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
 
     Calibration curve, also known as reliability diagram, uses inputs from a binary classifier and plots the average predicted probability for each bin against the fraction of positive classes, on the y-axis.
 
-    Extra keyword arguments will be passed to matplotlib.pyplot.plot.
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
 
-    Read more about calibration in the User Guide and more about the scikit-learn visualization API in Visualizations.
+    Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
    */
   async from_predictions(
     opts: CalibrationDisplayFromPredictionsOptions
@@ -212,7 +212,7 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
   /**
     Plot visualization.
 
-    Extra keyword arguments will be passed to matplotlib.pyplot.plot.
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
    */
   async plot(opts: CalibrationDisplayPlotOptions): Promise<any> {
     if (this._isDisposed) {
@@ -347,14 +347,14 @@ export interface CalibrationDisplayOptions {
   estimator_name?: string
 
   /**
-    The positive class when computing the calibration curve. By default, estimators.classes_[1] is considered as the positive class.
+    The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
    */
   pos_label?: string | number
 }
 
 export interface CalibrationDisplayFromEstimatorOptions {
   /**
-    Fitted classifier or a fitted Pipeline in which the last estimator is a classifier. The classifier must have a predict_proba method.
+    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict\_proba](../../glossary.html#term-predict_proba) method.
    */
   estimator?: any
 
@@ -369,7 +369,7 @@ export interface CalibrationDisplayFromEstimatorOptions {
   y?: ArrayLike
 
   /**
-    Number of bins to discretize the [0, 1] interval into when calculating the calibration curve. A bigger number requires more data.
+    Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.
 
     @defaultValue `5`
    */
@@ -383,29 +383,29 @@ export interface CalibrationDisplayFromEstimatorOptions {
   strategy?: 'uniform' | 'quantile'
 
   /**
-    The positive class when computing the calibration curve. By default, estimators.classes_[1] is considered as the positive class.
+    The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
    */
   pos_label?: string | number
 
   /**
-    Name for labeling curve. If None, the name of the estimator is used.
+    Name for labeling curve. If `None`, the name of the estimator is used.
    */
   name?: string
 
   /**
-    If True, plots a reference line representing a perfectly calibrated classifier.
+    If `True`, plots a reference line representing a perfectly calibrated classifier.
 
     @defaultValue `true`
    */
   ref_line?: boolean
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Keyword arguments to be passed to matplotlib.pyplot.plot.
+    Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
    */
   kwargs?: any
 }
@@ -422,7 +422,7 @@ export interface CalibrationDisplayFromPredictionsOptions {
   y_prob?: ArrayLike
 
   /**
-    Number of bins to discretize the [0, 1] interval into when calculating the calibration curve. A bigger number requires more data.
+    Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.
 
     @defaultValue `5`
    */
@@ -436,7 +436,7 @@ export interface CalibrationDisplayFromPredictionsOptions {
   strategy?: 'uniform' | 'quantile'
 
   /**
-    The positive class when computing the calibration curve. By default, estimators.classes_[1] is considered as the positive class.
+    The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
    */
   pos_label?: string | number
 
@@ -446,43 +446,43 @@ export interface CalibrationDisplayFromPredictionsOptions {
   name?: string
 
   /**
-    If True, plots a reference line representing a perfectly calibrated classifier.
+    If `True`, plots a reference line representing a perfectly calibrated classifier.
 
     @defaultValue `true`
    */
   ref_line?: boolean
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Keyword arguments to be passed to matplotlib.pyplot.plot.
+    Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
    */
   kwargs?: any
 }
 
 export interface CalibrationDisplayPlotOptions {
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Name for labeling curve. If None, use estimator_name if not None, otherwise no labeling is shown.
+    Name for labeling curve. If `None`, use `estimator\_name` if not `None`, otherwise no labeling is shown.
    */
   name?: string
 
   /**
-    If True, plots a reference line representing a perfectly calibrated classifier.
+    If `True`, plots a reference line representing a perfectly calibrated classifier.
 
     @defaultValue `true`
    */
   ref_line?: boolean
 
   /**
-    Keyword arguments to be passed to matplotlib.pyplot.plot.
+    Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
    */
   kwargs?: any
 }

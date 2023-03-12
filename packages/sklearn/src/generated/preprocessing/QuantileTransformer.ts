@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The transformation is applied on each feature independently. First an estimate of the cumulative distribution function of a feature is used to map the original values to a uniform distribution. The obtained values are then mapped to the desired output distribution using the associated quantile function. Features values of new/unseen data that fall below or above the fitted range will be mapped to the bounds of the output distribution. Note that this transform is non-linear. It may distort linear correlations between variables measured at the same scale but renders variables measured at different scales more directly comparable.
 
+  Read more in the [User Guide](../preprocessing.html#preprocessing-transformer).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html
  */
 export class QuantileTransformer {
@@ -137,7 +139,7 @@ pms_QuantileTransformer_fit = {k: v for k, v in pms_QuantileTransformer_fit.item
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: QuantileTransformerFitTransformOptions
@@ -247,7 +249,7 @@ pms_QuantileTransformer_inverse_transform = {k: v for k, v in pms_QuantileTransf
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: QuantileTransformerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -392,7 +394,7 @@ pms_QuantileTransformer_transform = {k: v for k, v in pms_QuantileTransformer_tr
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -419,7 +421,7 @@ pms_QuantileTransformer_transform = {k: v for k, v in pms_QuantileTransformer_tr
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -448,7 +450,7 @@ pms_QuantileTransformer_transform = {k: v for k, v in pms_QuantileTransformer_tr
 
 export interface QuantileTransformerOptions {
   /**
-    Number of quantiles to be computed. It corresponds to the number of landmarks used to discretize the cumulative distribution function. If n_quantiles is larger than the number of samples, n_quantiles is set to the number of samples as a larger number of quantiles does not give a better approximation of the cumulative distribution function estimator.
+    Number of quantiles to be computed. It corresponds to the number of landmarks used to discretize the cumulative distribution function. If n\_quantiles is larger than the number of samples, n\_quantiles is set to the number of samples as a larger number of quantiles does not give a better approximation of the cumulative distribution function estimator.
 
     @defaultValue `1000`
    */
@@ -476,7 +478,7 @@ export interface QuantileTransformerOptions {
   subsample?: number
 
   /**
-    Determines random number generation for subsampling and smoothing noise. Please see subsample for more details. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines random number generation for subsampling and smoothing noise. Please see `subsample` for more details. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -490,7 +492,7 @@ export interface QuantileTransformerOptions {
 
 export interface QuantileTransformerFitOptions {
   /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse csc_matrix. Additionally, the sparse matrix needs to be nonnegative if ignore_implicit_zeros is False.
+    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is False.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -526,21 +528,21 @@ export interface QuantileTransformerGetFeatureNamesOutOptions {
 
 export interface QuantileTransformerInverseTransformOptions {
   /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse csc_matrix. Additionally, the sparse matrix needs to be nonnegative if ignore_implicit_zeros is False.
+    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is False.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface QuantileTransformerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface QuantileTransformerTransformOptions {
   /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse csc_matrix. Additionally, the sparse matrix needs to be nonnegative if ignore_implicit_zeros is False.
+    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is False.
    */
   X?: ArrayLike | SparseMatrix[]
 }

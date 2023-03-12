@@ -111,7 +111,7 @@ ctor_LocalOutlierFactor = {k: v for k, v in ctor_LocalOutlierFactor.items() if v
 
     Bigger is better, i.e. large values correspond to inliers.
 
-    Only available for novelty detection (when novelty is set to True). The shift offset allows a zero threshold for being an outlier. The argument X is supposed to contain new data: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point.
+    **Only available for novelty detection (when novelty is set to True).** The shift offset allows a zero threshold for being an outlier. The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point.
    */
   async decision_function(
     opts: LocalOutlierFactorDecisionFunctionOptions
@@ -178,7 +178,7 @@ pms_LocalOutlierFactor_fit = {k: v for k, v in pms_LocalOutlierFactor_fit.items(
   /**
     Fit the model to the training set X and return the labels.
 
-    Not available for novelty detection (when novelty is set to True). Label is 1 for an inlier and -1 for an outlier according to the LOF score and the contamination parameter.
+    **Not available for novelty detection (when novelty is set to True).** Label is 1 for an inlier and -1 for an outlier according to the LOF score and the contamination parameter.
    */
   async fit_predict(
     opts: LocalOutlierFactorFitPredictOptions
@@ -287,7 +287,7 @@ pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFact
   /**
     Predict the labels (1 inlier, -1 outlier) of X according to LOF.
 
-    Only available for novelty detection (when novelty is set to True). This method allows to generalize prediction to new observations (not in the training set). Note that the result of clf.fit(X) then clf.predict(X) with novelty=True may differ from the result obtained by clf.fit_predict(X) with novelty=False.
+    **Only available for novelty detection (when novelty is set to True).** This method allows to generalize prediction to *new observations* (not in the training set). Note that the result of `clf.fit(X)` then `clf.predict(X)` with `novelty=True` may differ from the result obtained by `clf.fit\_predict(X)` with `novelty=False`.
    */
   async predict(opts: LocalOutlierFactorPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -321,7 +321,7 @@ pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predic
 
     It is the opposite as bigger is better, i.e. large values correspond to inliers.
 
-    Only available for novelty detection (when novelty is set to True). The argument X is supposed to contain new data: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point. Because of this, the scores obtained via score_samples may differ from the standard LOF scores. The standard LOF scores for the training data is available via the negative_outlier_factor_ attribute.
+    **Only available for novelty detection (when novelty is set to True).** The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point. Because of this, the scores obtained via `score\_samples` may differ from the standard LOF scores. The standard LOF scores for the training data is available via the `negative\_outlier\_factor\_` attribute.
    */
   async score_samples(
     opts: LocalOutlierFactorScoreSamplesOptions
@@ -355,7 +355,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    The opposite LOF of the training samples. The higher, the more normal. Inliers tend to have a LOF score close to 1 (negative_outlier_factor_ close to -1), while outliers tend to have a larger LOF score.
+    The opposite LOF of the training samples. The higher, the more normal. Inliers tend to have a LOF score close to 1 (`negative\_outlier\_factor\_` close to -1), while outliers tend to have a larger LOF score.
 
     The local outlier factor (LOF) of a sample captures its supposed ‘degree of abnormality’. It is the average of the ratio of the local reachability density of a sample and those of its k-nearest neighbors.
    */
@@ -384,7 +384,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    The actual number of neighbors used for kneighbors queries.
+    The actual number of neighbors used for [`kneighbors`](#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries.
    */
   get n_neighbors_(): Promise<number> {
     if (this._isDisposed) {
@@ -411,7 +411,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    Offset used to obtain binary labels from the raw scores. Observations having a negative_outlier_factor smaller than offset_ are detected as abnormal. The offset is set to -1.5 (inliers score around -1), except when a contamination parameter different than “auto” is provided. In that case, the offset is defined in such a way we obtain the expected number of outliers in training.
+    Offset used to obtain binary labels from the raw scores. Observations having a negative\_outlier\_factor smaller than `offset\_` are detected as abnormal. The offset is set to -1.5 (inliers score around -1), except when a contamination parameter different than “auto” is provided. In that case, the offset is defined in such a way we obtain the expected number of outliers in training.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -492,7 +492,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -519,7 +519,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -575,7 +575,7 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
 
 export interface LocalOutlierFactorOptions {
   /**
-    Number of neighbors to use by default for kneighbors queries. If n_neighbors is larger than the number of samples provided, all samples will be used.
+    Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries. If n\_neighbors is larger than the number of samples provided, all samples will be used.
 
     @defaultValue `20`
    */
@@ -589,16 +589,16 @@ export interface LocalOutlierFactorOptions {
   algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
 
   /**
-    Leaf is size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+    Leaf is size passed to [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
     @defaultValue `30`
    */
   leaf_size?: number
 
   /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for valid metric values.
+    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a sparse graph, in which case only “nonzero” elements may be considered neighbors.
+    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
 
     If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
@@ -607,7 +607,7 @@ export interface LocalOutlierFactorOptions {
   metric?: string
 
   /**
-    Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+    Parameter for the Minkowski metric from `sklearn.metrics.pairwise.pairwise\_distances`. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
 
     @defaultValue `2`
    */
@@ -626,14 +626,14 @@ export interface LocalOutlierFactorOptions {
   contamination?: 'auto' | number
 
   /**
-    By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=False). Set novelty to True if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision_function and score_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
+    By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=False). Set novelty to True if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision\_function and score\_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
 
     @defaultValue `false`
    */
   novelty?: boolean
 
   /**
-    The number of parallel jobs to run for neighbors search. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -690,7 +690,7 @@ export interface LocalOutlierFactorKneighborsOptions {
 
 export interface LocalOutlierFactorKneighborsGraphOptions {
   /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For metric='precomputed' the shape should be (n_queries, n_indexed). Otherwise the shape should be (n_queries, n_features).
+    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
    */
   X?: any
 

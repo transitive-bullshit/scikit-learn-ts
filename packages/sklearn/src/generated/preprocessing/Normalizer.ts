@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Scaling inputs to unit norms is a common operation for text classification or clustering for instance. For instance the dot product of two l2-normalized TF-IDF vectors is the cosine similarity of the vectors and is the base similarity metric for the Vector Space Model commonly used by the Information Retrieval community.
 
+  Read more in the [User Guide](../preprocessing.html#preprocessing-normalization).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html
  */
 export class Normalizer {
@@ -129,7 +131,7 @@ pms_Normalizer_fit = {k: v for k, v in pms_Normalizer_fit.items() if v is not No
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: NormalizerFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -196,7 +198,7 @@ pms_Normalizer_get_feature_names_out = {k: v for k, v in pms_Normalizer_get_feat
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: NormalizerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -256,7 +258,7 @@ pms_Normalizer_transform = {k: v for k, v in pms_Normalizer_transform.items() if
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -281,7 +283,7 @@ pms_Normalizer_transform = {k: v for k, v in pms_Normalizer_transform.items() if
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -360,7 +362,7 @@ export interface NormalizerGetFeatureNamesOutOptions {
 
 export interface NormalizerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

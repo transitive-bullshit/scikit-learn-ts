@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   An object for detecting outliers in a Gaussian distributed dataset.
 
+  Read more in the [User Guide](../outlier_detection.html#outlier-detection).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.EllipticEnvelope.html
  */
 export class EllipticEnvelope {
@@ -101,7 +103,7 @@ ctor_EllipticEnvelope = {k: v for k, v in ctor_EllipticEnvelope.items() if v is 
   /**
     Apply a correction to raw Minimum Covariance Determinant estimates.
 
-    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [RVD].
+    Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](#rbb2ba44703ed-rvd).
    */
   async correct_covariance(
     opts: EllipticEnvelopeCorrectCovarianceOptions
@@ -363,7 +365,7 @@ pms_EllipticEnvelope_predict = {k: v for k, v in pms_EllipticEnvelope_predict.it
   /**
     Re-weight raw Minimum Covariance Determinant estimates.
 
-    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [RVDriessen].
+    Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](#rd2c89e63f1c9-rvdriessen).
    */
   async reweight_covariance(
     opts: EllipticEnvelopeReweightCovarianceOptions
@@ -522,7 +524,7 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
   }
 
   /**
-    Estimated pseudo inverse matrix. (stored only if store_precision is True)
+    Estimated pseudo inverse matrix. (stored only if store\_precision is True)
    */
   get precision_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -576,7 +578,7 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: decision_function = score_samples - offset_. The offset depends on the contamination parameter and is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
+    Offset used to define the decision function from the raw scores. We have the relation: `decision\_function \= score\_samples \- offset\_`. The offset depends on the contamination parameter and is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -684,7 +686,7 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
   }
 
   /**
-    Mahalanobis distances of the training set (on which fit is called) observations.
+    Mahalanobis distances of the training set (on which [`fit`](#sklearn.covariance.EllipticEnvelope.fit "sklearn.covariance.EllipticEnvelope.fit") is called) observations.
    */
   get dist_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -711,7 +713,7 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -738,7 +740,7 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -781,19 +783,19 @@ export interface EllipticEnvelopeOptions {
   assume_centered?: boolean
 
   /**
-    The proportion of points to be included in the support of the raw MCD estimate. If None, the minimum value of support_fraction will be used within the algorithm: [n_sample + n_features + 1] / 2. Range is (0, 1).
+    The proportion of points to be included in the support of the raw MCD estimate. If None, the minimum value of support\_fraction will be used within the algorithm: `\[n\_sample + n\_features + 1\] / 2`. Range is (0, 1).
    */
   support_fraction?: number
 
   /**
-    The amount of contamination of the data set, i.e. the proportion of outliers in the data set. Range is (0, 0.5].
+    The amount of contamination of the data set, i.e. the proportion of outliers in the data set. Range is (0, 0.5\].
 
     @defaultValue `0.1`
    */
   contamination?: number
 
   /**
-    Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -819,14 +821,14 @@ export interface EllipticEnvelopeErrorNormOptions {
   comp_cov?: ArrayLike[]
 
   /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error (comp_cov - self.covariance_).
+    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
 
     @defaultValue `'frobenius'`
    */
   norm?: 'frobenius' | 'spectral'
 
   /**
-    If True (default), the squared error norm is divided by n_features. If False, the squared error norm is not rescaled.
+    If True (default), the squared error norm is divided by n\_features. If False, the squared error norm is not rescaled.
 
     @defaultValue `true`
    */

@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Imputation for completing missing values using k-Nearest Neighbors.
 
-  Each sample’s missing values are imputed using the mean value from n_neighbors nearest neighbors found in the training set. Two samples are close if the features that neither is missing are close.
+  Each sample’s missing values are imputed using the mean value from `n\_neighbors` nearest neighbors found in the training set. Two samples are close if the features that neither is missing are close.
+
+  Read more in the [User Guide](../impute.html#knnimpute).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html
  */
@@ -129,7 +131,7 @@ pms_KNNImputer_fit = {k: v for k, v in pms_KNNImputer_fit.items() if v is not No
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: KNNImputerFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -196,7 +198,7 @@ pms_KNNImputer_get_feature_names_out = {k: v for k, v in pms_KNNImputer_get_feat
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: KNNImputerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -252,7 +254,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
   }
 
   /**
-    Indicator used to add binary indicators for missing values. None if add_indicator is False.
+    Indicator used to add binary indicators for missing values. `None` if add\_indicator is False.
    */
   get indicator_(): Promise<any> {
     if (this._isDisposed) {
@@ -275,7 +277,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -300,7 +302,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -327,7 +329,7 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
 
 export interface KNNImputerOptions {
   /**
-    The placeholder for the missing values. All occurrences of missing_values will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, missing_values should be set to np.nan, since pd.NA will be converted to np.nan.
+    The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to np.nan, since `pd.NA` will be converted to np.nan.
    */
   missing_values?: number | string
 
@@ -339,7 +341,7 @@ export interface KNNImputerOptions {
   n_neighbors?: number
 
   /**
-    Weight function used in prediction.  Possible values:
+    Weight function used in prediction. Possible values:
 
     @defaultValue `'uniform'`
    */
@@ -360,14 +362,14 @@ export interface KNNImputerOptions {
   copy?: boolean
 
   /**
-    If True, a MissingIndicator transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+    If True, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
 
     @defaultValue `false`
    */
   add_indicator?: boolean
 
   /**
-    If True, features that consist exclusively of missing values when fit is called are returned in results when transform is called. The imputed value is always 0.
+    If True, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0`.
 
     @defaultValue `false`
    */
@@ -376,7 +378,7 @@ export interface KNNImputerOptions {
 
 export interface KNNImputerFitOptions {
   /**
-    Input data, where n_samples is the number of samples and n_features is the number of features.
+    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: any
 
@@ -412,7 +414,7 @@ export interface KNNImputerGetFeatureNamesOutOptions {
 
 export interface KNNImputerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

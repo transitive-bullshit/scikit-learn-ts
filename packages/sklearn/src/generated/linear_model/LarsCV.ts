@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Cross-validated Least Angle Regression model.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+
+  Read more in the [User Guide](../linear_model.html#least-angle-regression).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LarsCV.html
  */
@@ -158,7 +160,7 @@ pms_LarsCV_predict = {k: v for k, v in pms_LarsCV_predict.items() if v is not No
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: LarsCVScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -190,7 +192,7 @@ pms_LarsCV_score = {k: v for k, v in pms_LarsCV_score.items() if v is not None}`
   }
 
   /**
-    Indices of active variables at the end of the path. If this is a list of lists, the outer list length is n_targets.
+    Indices of active variables at the end of the path. If this is a list of lists, the outer list length is `n\_targets`.
    */
   get active_(): Promise<any> {
     if (this._isDisposed) {
@@ -347,7 +349,7 @@ pms_LarsCV_score = {k: v for k, v in pms_LarsCV_score.items() if v is not None}`
   }
 
   /**
-    the mean square error on left-out for each fold along the path (alpha values given by cv_alphas)
+    the mean square error on left-out for each fold along the path (alpha values given by `cv\_alphas`)
    */
   get mse_path_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -392,7 +394,7 @@ pms_LarsCV_score = {k: v for k, v in pms_LarsCV_score.items() if v is not None}`
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -415,7 +417,7 @@ pms_LarsCV_score = {k: v for k, v in pms_LarsCV_score.items() if v is not None}`
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -463,14 +465,14 @@ export interface LarsCVOptions {
   max_iter?: number
 
   /**
-    This parameter is ignored when fit_intercept is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use StandardScaler before calling fit on an estimator with normalize=False.
+    This parameter is ignored when `fit\_intercept` is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
 
     @defaultValue `false`
    */
   normalize?: boolean
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to 'auto' let us decide. The Gram matrix cannot be passed as argument since we will use only subsets of X.
+    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix cannot be passed as argument since we will use only subsets of X.
 
     @defaultValue `'auto'`
    */
@@ -489,17 +491,17 @@ export interface LarsCVOptions {
   max_n_alphas?: number
 
   /**
-    Number of CPUs to use during the cross validation. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of CPUs to use during the cross validation. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the tol parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
+    The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
    */
   eps?: number
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `True`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -527,12 +529,12 @@ export interface LarsCVPredictOptions {
 
 export interface LarsCVScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

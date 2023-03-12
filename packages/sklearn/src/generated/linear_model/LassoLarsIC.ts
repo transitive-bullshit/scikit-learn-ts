@@ -163,7 +163,7 @@ pms_LassoLarsIC_predict = {k: v for k, v in pms_LassoLarsIC_predict.items() if v
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: LassoLarsICScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -266,7 +266,7 @@ pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is 
   }
 
   /**
-    Maximum of covariances (in absolute value) at each iteration. n_alphas is either max_iter, n_features or the number of nodes in the path with alpha >= alpha_min, whichever is smaller. If a list, it will be of length n_targets.
+    Maximum of covariances (in absolute value) at each iteration. `n\_alphas` is either `max\_iter`, `n\_features` or the number of nodes in the path with `alpha >= alpha\_min`, whichever is smaller. If a list, it will be of length `n\_targets`.
    */
   get alphas_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -289,7 +289,7 @@ pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is 
   }
 
   /**
-    number of iterations run by lars_path to find the grid of alphas.
+    number of iterations run by lars\_path to find the grid of alphas.
    */
   get n_iter_(): Promise<number> {
     if (this._isDisposed) {
@@ -312,7 +312,7 @@ pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is 
   }
 
   /**
-    The value of the information criteria (‘aic’, ‘bic’) across all alphas. The alpha which has the smallest information criterion is chosen, as specified in [1].
+    The value of the information criteria (‘aic’, ‘bic’) across all alphas. The alpha which has the smallest information criterion is chosen, as specified in [\[1\]](#rde9cc43d0d41-1).
    */
   get criterion_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -362,7 +362,7 @@ pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -387,7 +387,7 @@ pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -435,14 +435,14 @@ export interface LassoLarsICOptions {
   verbose?: boolean | number
 
   /**
-    This parameter is ignored when fit_intercept is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use StandardScaler before calling fit on an estimator with normalize=False.
+    This parameter is ignored when `fit\_intercept` is set to False. If True, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
 
     @defaultValue `false`
    */
   normalize?: boolean
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to 'auto' let us decide. The Gram matrix can also be passed as argument.
+    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
     @defaultValue `'auto'`
    */
@@ -456,7 +456,7 @@ export interface LassoLarsICOptions {
   max_iter?: number
 
   /**
-    The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the tol parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
+    The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
    */
   eps?: number
 
@@ -468,14 +468,14 @@ export interface LassoLarsICOptions {
   copy_X?: boolean
 
   /**
-    Restrict coefficients to be >= 0. Be aware that you might want to remove fit_intercept which is set True by default. Under the positive restriction the model coefficients do not converge to the ordinary-least-squares solution for small values of alpha. Only coefficients up to the smallest alpha value (alphas_[alphas_ > 0.].min() when fit_path=True) reached by the stepwise Lars-Lasso algorithm are typically in congruence with the solution of the coordinate descent Lasso estimator. As a consequence using LassoLarsIC only makes sense for problems where a sparse solution is expected and/or reached.
+    Restrict coefficients to be >= 0. Be aware that you might want to remove fit\_intercept which is set True by default. Under the positive restriction the model coefficients do not converge to the ordinary-least-squares solution for small values of alpha. Only coefficients up to the smallest alpha value (`alphas\_\[alphas\_ > 0.\].min()` when fit\_path=True) reached by the stepwise Lars-Lasso algorithm are typically in congruence with the solution of the coordinate descent Lasso estimator. As a consequence using LassoLarsIC only makes sense for problems where a sparse solution is expected and/or reached.
 
     @defaultValue `false`
    */
   positive?: boolean
 
   /**
-    The estimated noise variance of the data. If None, an unbiased estimate is computed by an OLS model. However, it is only possible in the case where n_samples > n_features + fit_intercept.
+    The estimated noise variance of the data. If `None`, an unbiased estimate is computed by an OLS model. However, it is only possible in the case where `n\_samples > n\_features + fit\_intercept`.
    */
   noise_variance?: number
 }
@@ -492,7 +492,7 @@ export interface LassoLarsICFitOptions {
   y?: ArrayLike
 
   /**
-    If provided, this parameter will override the choice of copy_X made at instance creation. If True, X will be copied; else, it may be overwritten.
+    If provided, this parameter will override the choice of copy\_X made at instance creation. If `True`, X will be copied; else, it may be overwritten.
    */
   copy_X?: boolean
 }
@@ -506,12 +506,12 @@ export interface LassoLarsICPredictOptions {
 
 export interface LassoLarsICScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

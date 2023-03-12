@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This class is a low-memory alternative to DictVectorizer and CountVectorizer, intended for large-scale (online) learning and situations where memory is tight, e.g. when running prediction code on embedded devices.
 
+  Read more in the [User Guide](../feature_extraction.html#feature-hashing).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html
  */
 export class FeatureHasher {
@@ -131,7 +133,7 @@ pms_FeatureHasher_fit = {k: v for k, v in pms_FeatureHasher_fit.items() if v is 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: FeatureHasherFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -165,7 +167,7 @@ pms_FeatureHasher_fit_transform = {k: v for k, v in pms_FeatureHasher_fit_transf
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: FeatureHasherSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -232,7 +234,7 @@ export interface FeatureHasherOptions {
   n_features?: number
 
   /**
-    Choose a string from {‘dict’, ‘pair’, ‘string’}. Either “dict” (the default) to accept dictionaries over (feature_name, value); “pair” to accept pairs of (feature_name, value); or “string” to accept single strings. feature_name should be a string, while value should be a number. In the case of “string”, a value of 1 is implied. The feature_name is hashed to find the appropriate column for the feature. The value’s sign might be flipped in the output (but see non_negative, below).
+    Choose a string from {‘dict’, ‘pair’, ‘string’}. Either “dict” (the default) to accept dictionaries over (feature\_name, value); “pair” to accept pairs of (feature\_name, value); or “string” to accept single strings. feature\_name should be a string, while value should be a number. In the case of “string”, a value of 1 is implied. The feature\_name is hashed to find the appropriate column for the feature. The value’s sign might be flipped in the output (but see non\_negative, below).
 
     @defaultValue `'dict'`
    */
@@ -244,7 +246,7 @@ export interface FeatureHasherOptions {
   dtype?: any
 
   /**
-    When True, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n_features. This approach is similar to sparse random projection.
+    When True, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
 
     @defaultValue `true`
    */
@@ -282,14 +284,14 @@ export interface FeatureHasherFitTransformOptions {
 
 export interface FeatureHasherSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface FeatureHasherTransformOptions {
   /**
-    Samples. Each sample must be iterable an (e.g., a list or tuple) containing/generating feature names (and optionally values, see the input_type constructor argument) which will be hashed. raw_X need not support the len function, so it can be the result of a generator; n_samples is determined on the fly.
+    Samples. Each sample must be iterable an (e.g., a list or tuple) containing/generating feature names (and optionally values, see the input\_type constructor argument) which will be hashed. raw\_X need not support the len function, so it can be the result of a generator; n\_samples is determined on the fly.
    */
   raw_X?: any
 }

@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Multi-task Lasso model trained with L1/L2 mixed-norm as regularizer.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
 
   The optimization objective for MultiTaskLasso is:
 
@@ -227,7 +227,7 @@ pms_MultiTaskLassoCV_predict = {k: v for k, v in pms_MultiTaskLassoCV_predict.it
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: MultiTaskLassoCVScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -288,7 +288,7 @@ pms_MultiTaskLassoCV_score = {k: v for k, v in pms_MultiTaskLassoCV_score.items(
   }
 
   /**
-    Parameter vector (W in the cost function formula). Note that coef_ stores the transpose of W, W.T.
+    Parameter vector (W in the cost function formula). Note that `coef\_` stores the transpose of `W`, `W.T`.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -450,7 +450,7 @@ pms_MultiTaskLassoCV_score = {k: v for k, v in pms_MultiTaskLassoCV_score.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -477,7 +477,7 @@ pms_MultiTaskLassoCV_score = {k: v for k, v in pms_MultiTaskLassoCV_score.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -506,7 +506,7 @@ pms_MultiTaskLassoCV_score = {k: v for k, v in pms_MultiTaskLassoCV_score.items(
 
 export interface MultiTaskLassoCVOptions {
   /**
-    Length of the path. eps=1e-3 means that alpha_min / alpha_max = 1e-3.
+    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
     @defaultValue `0.001`
    */
@@ -539,14 +539,14 @@ export interface MultiTaskLassoCVOptions {
   max_iter?: number
 
   /**
-    The tolerance for the optimization: if the updates are smaller than tol, the optimization code checks the dual gap for optimality and continues until it is smaller than tol.
+    The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `True`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -565,12 +565,12 @@ export interface MultiTaskLassoCVOptions {
   verbose?: boolean | number
 
   /**
-    Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1_ratio are given. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1\_ratio are given. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    The seed of the pseudo random number generator that selects a random feature to update. Used when selection == ‘random’. Pass an int for reproducible output across multiple function calls. See Glossary.
+    The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -596,7 +596,7 @@ export interface MultiTaskLassoCVFitOptions {
 
 export interface MultiTaskLassoCVPathOptions {
   /**
-    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output then X can be sparse.
+    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -606,7 +606,7 @@ export interface MultiTaskLassoCVPathOptions {
   y?: ArrayLike | SparseMatrix
 
   /**
-    Length of the path. eps=1e-3 means that alpha_min / alpha_max = 1e-3.
+    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
     @defaultValue `0.001`
    */
@@ -620,12 +620,12 @@ export interface MultiTaskLassoCVPathOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If None alphas are set automatically.
+    List of alphas where to compute the models. If `None` alphas are set automatically.
    */
   alphas?: NDArray
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to 'auto' let us decide. The Gram matrix can also be passed as argument.
+    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
     @defaultValue `'auto'`
    */
@@ -637,7 +637,7 @@ export interface MultiTaskLassoCVPathOptions {
   Xy?: ArrayLike
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `True`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -663,7 +663,7 @@ export interface MultiTaskLassoCVPathOptions {
   return_n_iter?: boolean
 
   /**
-    If set to True, forces coefficients to be positive. (Only allowed when y.ndim == 1).
+    If set to True, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
 
     @defaultValue `false`
    */
@@ -684,12 +684,12 @@ export interface MultiTaskLassoCVPredictOptions {
 
 export interface MultiTaskLassoCVScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

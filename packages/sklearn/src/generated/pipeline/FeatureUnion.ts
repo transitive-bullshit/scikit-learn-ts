@@ -10,7 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This estimator applies a list of transformer objects in parallel to the input data, then concatenates the results. This is useful to combine several feature extraction mechanisms into a single transformer.
 
-  Parameters of the transformers may be set using its name and the parameter name separated by a ‘__’. A transformer may be replaced entirely by setting the parameter with its name to another transformer, removed by setting to ‘drop’ or disabled by setting to ‘passthrough’ (features are passed without transformation).
+  Parameters of the transformers may be set using its name and the parameter name separated by a ‘\_\_’. A transformer may be replaced entirely by setting the parameter with its name to another transformer, removed by setting to ‘drop’ or disabled by setting to ‘passthrough’ (features are passed without transformation).
+
+  Read more in the [User Guide](../compose.html#feature-union).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html
  */
@@ -192,9 +194,9 @@ pms_FeatureUnion_get_feature_names_out = {k: v for k, v in pms_FeatureUnion_get_
   }
 
   /**
-    Set the output container when "transform" and "fit_transform" are called.
+    Set the output container when `"transform"` and `"fit\_transform"` are called.
 
-    set_output will set the output of all estimators in transformer_list.
+    `set\_output` will set the output of all estimators in `transformer\_list`.
    */
   async set_output(opts: FeatureUnionSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -284,12 +286,12 @@ export interface FeatureUnionOptions {
   transformer_list?: any
 
   /**
-    Number of jobs to run in parallel. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of jobs to run in parallel. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Multiplicative weights for features per transformer. Keys are transformer names, values the weights. Raises ValueError if key not present in transformer_list.
+    Multiplicative weights for features per transformer. Keys are transformer names, values the weights. Raises ValueError if key not present in `transformer\_list`.
    */
   transformer_weights?: any
 
@@ -344,7 +346,7 @@ export interface FeatureUnionGetFeatureNamesOutOptions {
 
 export interface FeatureUnionSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

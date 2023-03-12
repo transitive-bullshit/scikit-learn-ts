@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each fold is then used once as a validation while the k - 1 remaining folds form the training set.
 
+  Read more in the [User Guide](../cross_validation.html#k-fold).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
  */
 export class KFold {
@@ -172,7 +174,7 @@ export interface KFoldOptions {
   shuffle?: boolean
 
   /**
-    When shuffle is True, random_state affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See Glossary.
+    When `shuffle` is True, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -196,7 +198,7 @@ export interface KFoldGetNSplitsOptions {
 
 export interface KFoldSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

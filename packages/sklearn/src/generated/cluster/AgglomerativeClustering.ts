@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Recursively merges pair of clusters of sample data; uses linkage distance.
 
+  Read more in the [User Guide](../clustering.html#hierarchical-clustering).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html
  */
 export class AgglomerativeClustering {
@@ -172,7 +174,7 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
   }
 
   /**
-    The number of clusters found by the algorithm. If distance_threshold=None, it will be equal to the given n_clusters.
+    The number of clusters found by the algorithm. If `distance\_threshold=None`, it will be equal to the given `n\_clusters`.
    */
   get n_clusters_(): Promise<number> {
     if (this._isDisposed) {
@@ -280,7 +282,7 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -307,7 +309,7 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -334,7 +336,7 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
   }
 
   /**
-    The children of each non-leaf node. Values less than n_samples correspond to leaves of the tree which are the original samples. A node i greater than or equal to n_samples is a non-leaf node and has children children_[i - n_samples]. Alternatively at the i-th iteration, children[i][0] and children[i][1] are merged to form node n_samples + i.
+    The children of each non-leaf node. Values less than `n\_samples` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n\_samples` is a non-leaf node and has children `children\_\[i \- n\_samples\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n\_samples + i`.
    */
   get children_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -361,7 +363,7 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
   }
 
   /**
-    Distances between nodes in the corresponding place in children_. Only computed if distance_threshold is used or compute_distances is set to True.
+    Distances between nodes in the corresponding place in `children\_`. Only computed if `distance\_threshold` is used or `compute\_distances` is set to `True`.
    */
   get distances_(): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -390,21 +392,21 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
 
 export interface AgglomerativeClusteringOptions {
   /**
-    The number of clusters to find. It must be None if distance_threshold is not None.
+    The number of clusters to find. It must be `None` if `distance\_threshold` is not `None`.
 
     @defaultValue `2`
    */
   n_clusters?: number
 
   /**
-    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by sklearn.metrics.pairwise_distances for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
+    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
 
     @defaultValue `'euclidean'`
    */
   affinity?: string
 
   /**
-    Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to None then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
+    Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `None` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
    */
   metric?: string
 
@@ -414,12 +416,12 @@ export interface AgglomerativeClusteringOptions {
   memory?: string
 
   /**
-    Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from kneighbors_graph. Default is None, i.e, the hierarchical clustering algorithm is unstructured.
+    Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `None`, i.e, the hierarchical clustering algorithm is unstructured.
    */
   connectivity?: ArrayLike
 
   /**
-    Stop early the construction of the tree at n_clusters. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be True if distance_threshold is not None. By default compute_full_tree is “auto”, which is equivalent to True when distance_threshold is not None or that n_clusters is inferior to the maximum between 100 or 0.02 * n_samples. Otherwise, “auto” is equivalent to False.
+    Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `True` if `distance\_threshold` is not `None`. By default `compute\_full\_tree` is “auto”, which is equivalent to `True` when `distance\_threshold` is not `None` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `False`.
 
     @defaultValue `'auto'`
    */
@@ -433,12 +435,12 @@ export interface AgglomerativeClusteringOptions {
   linkage?: 'ward' | 'complete' | 'average' | 'single'
 
   /**
-    The linkage distance threshold at or above which clusters will not be merged. If not None, n_clusters must be None and compute_full_tree must be True.
+    The linkage distance threshold at or above which clusters will not be merged. If not `None`, `n\_clusters` must be `None` and `compute\_full\_tree` must be `True`.
    */
   distance_threshold?: number
 
   /**
-    Computes distances between clusters even if distance_threshold is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
+    Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
 
     @defaultValue `false`
    */
@@ -447,7 +449,7 @@ export interface AgglomerativeClusteringOptions {
 
 export interface AgglomerativeClusteringFitOptions {
   /**
-    Training instances to cluster, or distances between instances if metric='precomputed'.
+    Training instances to cluster, or distances between instances if `metric='precomputed'`.
    */
   X?: ArrayLike
 
@@ -459,7 +461,7 @@ export interface AgglomerativeClusteringFitOptions {
 
 export interface AgglomerativeClusteringFitPredictOptions {
   /**
-    Training instances to cluster, or distances between instances if affinity='precomputed'.
+    Training instances to cluster, or distances between instances if `affinity='precomputed'`.
    */
   X?: ArrayLike[]
 

@@ -10,9 +10,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Uses sampling the fourier transform of the kernel characteristic at regular intervals.
 
-  Since the kernel that is to be approximated is additive, the components of the input vectors can be treated separately.  Each entry in the original space is transformed into 2*sample_steps-1 features, where sample_steps is a parameter of the method. Typical values of sample_steps include 1, 2 and 3.
+  Since the kernel that is to be approximated is additive, the components of the input vectors can be treated separately. Each entry in the original space is transformed into 2\*sample\_steps-1 features, where sample\_steps is a parameter of the method. Typical values of sample\_steps include 1, 2 and 3.
 
   Optimal choices for the sampling interval for certain data ranges can be computed (see the reference). The default values should be reasonable.
+
+  Read more in the [User Guide](../kernel_approximation.html#additive-chi-kernel-approx).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.AdditiveChi2Sampler.html
  */
@@ -133,7 +135,7 @@ pms_AdditiveChi2Sampler_fit = {k: v for k, v in pms_AdditiveChi2Sampler_fit.item
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: AdditiveChi2SamplerFitTransformOptions
@@ -208,7 +210,7 @@ pms_AdditiveChi2Sampler_get_feature_names_out = {k: v for k, v in pms_AdditiveCh
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: AdditiveChi2SamplerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -272,7 +274,7 @@ pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_tr
   }
 
   /**
-    Stored sampling interval. Specified as a parameter if sample_steps not in {1,2,3}.
+    Stored sampling interval. Specified as a parameter if `sample\_steps` not in {1,2,3}.
    */
   get sample_interval_(): Promise<number> {
     if (this._isDisposed) {
@@ -299,7 +301,7 @@ pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_tr
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -326,7 +328,7 @@ pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_tr
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -362,14 +364,14 @@ export interface AdditiveChi2SamplerOptions {
   sample_steps?: number
 
   /**
-    Sampling interval. Must be specified when sample_steps not in {1,2,3}.
+    Sampling interval. Must be specified when sample\_steps not in {1,2,3}.
    */
   sample_interval?: number
 }
 
 export interface AdditiveChi2SamplerFitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike
 
@@ -398,21 +400,21 @@ export interface AdditiveChi2SamplerFitTransformOptions {
 
 export interface AdditiveChi2SamplerGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.AdditiveChi2Sampler.fit "sklearn.kernel_approximation.AdditiveChi2Sampler.fit").
    */
   input_features?: any
 }
 
 export interface AdditiveChi2SamplerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface AdditiveChi2SamplerTransformOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix
 }

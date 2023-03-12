@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Non-deterministic iterable over random candidate combinations for hyper- parameter search. If all parameters are presented as a list, sampling without replacement is performed. If at least one parameter is given as a distribution, sampling with replacement is used. It is highly recommended to use continuous distributions for continuous parameters.
 
+  Read more in the [User Guide](../grid_search.html#grid-search).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterSampler.html
  */
 export class ParameterSampler {
@@ -97,7 +99,7 @@ ctor_ParameterSampler = {k: v for k, v in ctor_ParameterSampler.items() if v is 
   }
 
   /**
-    Yields dictionaries mapping each estimator parameter to as sampled value.
+   **Yields** dictionaries mapping each estimator parameter to as sampled value.
    */
   get params(): Promise<any> {
     if (this._isDisposed) {
@@ -126,7 +128,7 @@ ctor_ParameterSampler = {k: v for k, v in ctor_ParameterSampler.items() if v is 
 
 export interface ParameterSamplerOptions {
   /**
-    Dictionary with parameters names (str) as keys and distributions or lists of parameters to try. Distributions must provide a rvs method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
+    Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
    */
   param_distributions?: any
 
@@ -136,7 +138,7 @@ export interface ParameterSamplerOptions {
   n_iter?: number
 
   /**
-    Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }

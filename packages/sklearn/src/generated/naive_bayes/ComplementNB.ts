@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The Complement Naive Bayes classifier was designed to correct the “severe assumptions” made by the standard Multinomial Naive Bayes classifier. It is particularly suited for imbalanced data sets.
 
+  Read more in the [User Guide](../naive_bayes.html#complement-naive-bayes).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.ComplementNB.html
  */
 export class ComplementNB {
@@ -137,7 +139,7 @@ pms_ComplementNB_fit = {k: v for k, v in pms_ComplementNB_fit.items() if v is no
 
     This is especially useful when the whole dataset is too big to fit in memory at once.
 
-    This method has some performance overhead hence it is better to call partial_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
+    This method has some performance overhead hence it is better to call partial\_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
    */
   async partial_fit(opts: ComplementNBPartialFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -203,7 +205,7 @@ pms_ComplementNB_predict = {k: v for k, v in pms_ComplementNB_predict.items() if
   /**
     Return joint log probability estimates for the test vector X.
 
-    For each row x of X and class y, the joint log probability is given by log P(x, y) = log P(y) + log P(x|y), where log P(y) is the class prior probability and log P(x|y) is the class-conditional probability.
+    For each row x of X and class y, the joint log probability is given by `log P(x, y) \= log P(y) + log P(x|y),` where `log P(y)` is the class prior probability and `log P(x|y)` is the class-conditional probability.
    */
   async predict_joint_log_proba(
     opts: ComplementNBPredictJointLogProbaOptions
@@ -480,7 +482,7 @@ pms_ComplementNB_score = {k: v for k, v in pms_ComplementNB_score.items() if v i
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -505,7 +507,7 @@ pms_ComplementNB_score = {k: v for k, v in pms_ComplementNB_score.items() if v i
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -532,7 +534,7 @@ pms_ComplementNB_score = {k: v for k, v in pms_ComplementNB_score.items() if v i
 
 export interface ComplementNBOptions {
   /**
-    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force_alpha=True, for no smoothing).
+    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=True, for no smoothing).
 
     @defaultValue `1`
    */
@@ -567,7 +569,7 @@ export interface ComplementNBOptions {
 
 export interface ComplementNBFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -584,7 +586,7 @@ export interface ComplementNBFitOptions {
 
 export interface ComplementNBPartialFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -596,7 +598,7 @@ export interface ComplementNBPartialFitOptions {
   /**
     List of all the classes that can possibly appear in the y vector.
 
-    Must be provided at the first call to partial_fit, can be omitted in subsequent calls.
+    Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
    */
   classes?: ArrayLike
 
@@ -641,7 +643,7 @@ export interface ComplementNBScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

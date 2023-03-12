@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Ridge classifier with built-in cross-validation.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
 
-  By default, it performs Leave-One-Out Cross-Validation. Currently, only the n_features > n_samples case is handled efficiently.
+  By default, it performs Leave-One-Out Cross-Validation. Currently, only the n\_features > n\_samples case is handled efficiently.
+
+  Read more in the [User Guide](../linear_model.html#ridge-regression).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifierCV.html
  */
@@ -174,7 +176,7 @@ pms_RidgeClassifierCV_fit = {k: v for k, v in pms_RidgeClassifierCV_fit.items() 
   }
 
   /**
-    Predict class labels for samples in X.
+    Predict class labels for samples in `X`.
    */
   async predict(opts: RidgeClassifierCVPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -240,7 +242,7 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
   }
 
   /**
-    Cross-validation values for each alpha (only if store_cv_values=True and cv=None). After fit() has been called, this attribute will contain the mean squared errors if scoring is None otherwise it will contain standardized per point prediction values.
+    Cross-validation values for each alpha (only if `store\_cv\_values=True` and `cv=None`). After `fit()` has been called, this attribute will contain the mean squared errors if `scoring is None` otherwise it will contain standardized per point prediction values.
    */
   get cv_values_(): Promise<NDArray[][]> {
     if (this._isDisposed) {
@@ -269,7 +271,7 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
   /**
     Coefficient of the features in the decision function.
 
-    coef_ is of shape (1, n_features) when the given problem is binary.
+    `coef\_` is of shape (1, n\_features) when the given problem is binary.
    */
   get coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -296,7 +298,7 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
   }
 
   /**
-    Independent term in decision function. Set to 0.0 if fit_intercept = False.
+    Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
    */
   get intercept_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -377,7 +379,7 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -404,7 +406,7 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -433,7 +435,7 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
 
 export interface RidgeClassifierCVOptions {
   /**
-    Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to 1 / (2C) in other linear models such as LogisticRegression or LinearSVC.
+    Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
    */
   alphas?: ArrayLike
 
@@ -445,7 +447,7 @@ export interface RidgeClassifierCVOptions {
   fit_intercept?: boolean
 
   /**
-    A string (see model evaluation documentation) or a scorer callable object / function with signature scorer(estimator, X, y).
+    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
    */
   scoring?: string
 
@@ -455,14 +457,14 @@ export interface RidgeClassifierCVOptions {
   cv?: number
 
   /**
-    Weights associated with classes in the form {class_label: weight}. If not given, all classes are supposed to have weight one.
+    Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
 
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y)).
+    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
    */
   class_weight?: any | 'balanced'
 
   /**
-    Flag indicating if the cross-validation values corresponding to each alpha should be stored in the cv_values_ attribute (see below). This flag is only compatible with cv=None (i.e. using Leave-One-Out Cross-Validation).
+    Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
 
     @defaultValue `false`
    */
@@ -478,7 +480,7 @@ export interface RidgeClassifierCVDecisionFunctionOptions {
 
 export interface RidgeClassifierCVFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features. When using GCV, will be cast to float64 if necessary.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. When using GCV, will be cast to float64 if necessary.
    */
   X?: NDArray[]
 
@@ -507,7 +509,7 @@ export interface RidgeClassifierCVScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

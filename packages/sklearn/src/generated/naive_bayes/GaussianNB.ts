@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Gaussian Naive Bayes (GaussianNB).
 
-  Can perform online updates to model parameters via partial_fit. For details on algorithm used to update feature means and variance online, see Stanford CS tech report STAN-CS-79-773 by Chan, Golub, and LeVeque:
+  Can perform online updates to model parameters via [`partial\_fit`](#sklearn.naive_bayes.GaussianNB.partial_fit "sklearn.naive_bayes.GaussianNB.partial_fit"). For details on algorithm used to update feature means and variance online, see Stanford CS tech report STAN-CS-79-773 by Chan, Golub, and LeVeque:
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
  */
@@ -133,7 +133,7 @@ pms_GaussianNB_fit = {k: v for k, v in pms_GaussianNB_fit.items() if v is not No
 
     This is especially useful when the whole dataset is too big to fit in memory at once.
 
-    This method has some performance and numerical stability overhead, hence it is better to call partial_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
+    This method has some performance and numerical stability overhead, hence it is better to call partial\_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
    */
   async partial_fit(opts: GaussianNBPartialFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -199,7 +199,7 @@ pms_GaussianNB_predict = {k: v for k, v in pms_GaussianNB_predict.items() if v i
   /**
     Return joint log probability estimates for the test vector X.
 
-    For each row x of X and class y, the joint log probability is given by log P(x, y) = log P(y) + log P(x|y), where log P(y) is the class prior probability and log P(x|y) is the class-conditional probability.
+    For each row x of X and class y, the joint log probability is given by `log P(x, y) \= log P(y) + log P(x|y),` where `log P(y)` is the class prior probability and `log P(x|y)` is the class-conditional probability.
    */
   async predict_joint_log_proba(
     opts: GaussianNBPredictJointLogProbaOptions
@@ -421,7 +421,7 @@ pms_GaussianNB_score = {k: v for k, v in pms_GaussianNB_score.items() if v is no
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -446,7 +446,7 @@ pms_GaussianNB_score = {k: v for k, v in pms_GaussianNB_score.items() if v is no
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -533,7 +533,7 @@ export interface GaussianNBOptions {
 
 export interface GaussianNBFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -550,7 +550,7 @@ export interface GaussianNBFitOptions {
 
 export interface GaussianNBPartialFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -562,7 +562,7 @@ export interface GaussianNBPartialFitOptions {
   /**
     List of all the classes that can possibly appear in the y vector.
 
-    Must be provided at the first call to partial_fit, can be omitted in subsequent calls.
+    Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
    */
   classes?: ArrayLike
 
@@ -607,7 +607,7 @@ export interface GaussianNBScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

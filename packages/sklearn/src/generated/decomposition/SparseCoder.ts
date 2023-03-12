@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Finds a sparse representation of data against a fixed, precomputed dictionary.
 
-  Each row of the result is the solution to a sparse coding problem. The goal is to find a sparse array code such that:
+  Each row of the result is the solution to a sparse coding problem. The goal is to find a sparse array `code` such that:
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparseCoder.html
  */
@@ -139,7 +139,7 @@ pms_SparseCoder_fit = {k: v for k, v in pms_SparseCoder_fit.items() if v is not 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: SparseCoderFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -173,7 +173,7 @@ pms_SparseCoder_fit_transform = {k: v for k, v in pms_SparseCoder_fit_transform.
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: SparseCoderGetFeatureNamesOutOptions
@@ -208,7 +208,7 @@ pms_SparseCoder_get_feature_names_out = {k: v for k, v in pms_SparseCoder_get_fe
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: SparseCoderSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -238,7 +238,7 @@ pms_SparseCoder_set_output = {k: v for k, v in pms_SparseCoder_set_output.items(
   /**
     Encode the data as a sparse combination of the dictionary atoms.
 
-    Coding method is determined by the object parameter transform_algorithm.
+    Coding method is determined by the object parameter `transform\_algorithm`.
    */
   async transform(opts: SparseCoderTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -266,7 +266,7 @@ pms_SparseCoder_transform = {k: v for k, v in pms_SparseCoder_transform.items() 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -305,12 +305,12 @@ export interface SparseCoderOptions {
   transform_algorithm?: 'lasso_lars' | 'lasso_cd' | 'lars' | 'omp' | 'threshold'
 
   /**
-    Number of nonzero coefficients to target in each column of the solution. This is only used by algorithm='lars' and algorithm='omp' and is overridden by alpha in the omp case. If None, then transform_n_nonzero_coefs=int(n_features / 10).
+    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'` and is overridden by `alpha` in the `omp` case. If `None`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
    */
   transform_n_nonzero_coefs?: number
 
   /**
-    If algorithm='lasso_lars' or algorithm='lasso_cd', alpha is the penalty applied to the L1 norm. If algorithm='threshold', alpha is the absolute value of the threshold below which coefficients will be squashed to zero. If algorithm='omp', alpha is the tolerance parameter: the value of the reconstruction error targeted. In this case, it overrides n_nonzero_coefs. If None, default to 1.
+    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `algorithm='omp'`, `alpha` is the tolerance parameter: the value of the reconstruction error targeted. In this case, it overrides `n\_nonzero\_coefs`. If `None`, default to 1.
    */
   transform_alpha?: number
 
@@ -322,7 +322,7 @@ export interface SparseCoderOptions {
   split_sign?: boolean
 
   /**
-    Number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -334,7 +334,7 @@ export interface SparseCoderOptions {
   positive_code?: boolean
 
   /**
-    Maximum number of iterations to perform if algorithm='lasso_cd' or lasso_lars.
+    Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `lasso\_lars`.
 
     @defaultValue `1000`
    */
@@ -372,21 +372,21 @@ export interface SparseCoderFitTransformOptions {
 
 export interface SparseCoderGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.SparseCoder.fit "sklearn.decomposition.SparseCoder.fit").
    */
   input_features?: any
 }
 
 export interface SparseCoderSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface SparseCoderTransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: NDArray[]
 

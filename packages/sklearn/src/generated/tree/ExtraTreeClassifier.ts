@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   An extremely randomized tree classifier.
 
-  Extra-trees differ from classic decision trees in the way they are built. When looking for the best split to separate the samples of a node into two groups, random splits are drawn for each of the max_features randomly selected features and the best split among those is chosen. When max_features is set 1, this amounts to building a totally random decision tree.
+  Extra-trees differ from classic decision trees in the way they are built. When looking for the best split to separate the samples of a node into two groups, random splits are drawn for each of the `max\_features` randomly selected features and the best split among those is chosen. When `max\_features` is set 1, this amounts to building a totally random decision tree.
 
   Warning: Extra-trees should only be used within ensemble methods.
+
+  Read more in the [User Guide](../tree.html#tree).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.tree.ExtraTreeClassifier.html
  */
@@ -151,7 +153,7 @@ pms_ExtraTreeClassifier_apply = {k: v for k, v in pms_ExtraTreeClassifier_apply.
   /**
     Compute the pruning path during Minimal Cost-Complexity Pruning.
 
-    See Minimal Cost-Complexity Pruning for details on the pruning process.
+    See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
    */
   async cost_complexity_pruning_path(
     opts: ExtraTreeClassifierCostComplexityPruningPathOptions
@@ -492,7 +494,7 @@ pms_ExtraTreeClassifier_score = {k: v for k, v in pms_ExtraTreeClassifier_score.
   }
 
   /**
-    The inferred value of max_features.
+    The inferred value of max\_features.
    */
   get max_features_(): Promise<number> {
     if (this._isDisposed) {
@@ -546,7 +548,7 @@ pms_ExtraTreeClassifier_score = {k: v for k, v in pms_ExtraTreeClassifier_score.
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -573,7 +575,7 @@ pms_ExtraTreeClassifier_score = {k: v for k, v in pms_ExtraTreeClassifier_score.
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -600,7 +602,7 @@ pms_ExtraTreeClassifier_score = {k: v for k, v in pms_ExtraTreeClassifier_score.
   }
 
   /**
-    The number of outputs when fit is performed.
+    The number of outputs when `fit` is performed.
    */
   get n_outputs_(): Promise<number> {
     if (this._isDisposed) {
@@ -627,7 +629,7 @@ pms_ExtraTreeClassifier_score = {k: v for k, v in pms_ExtraTreeClassifier_score.
   }
 
   /**
-    The underlying Tree object. Please refer to help(sklearn.tree._tree.Tree) for attributes of Tree object and Understanding the decision tree structure for basic usage of these attributes.
+    The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and [Understanding the decision tree structure](../../auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py) for basic usage of these attributes.
    */
   get tree_(): Promise<any> {
     if (this._isDisposed) {
@@ -656,7 +658,7 @@ pms_ExtraTreeClassifier_score = {k: v for k, v in pms_ExtraTreeClassifier_score.
 
 export interface ExtraTreeClassifierOptions {
   /**
-    The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log_loss” and “entropy” both for the Shannon information gain, see Mathematical formulation.
+    The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log\_loss” and “entropy” both for the Shannon information gain, see [Mathematical formulation](../tree.html#tree-mathematical-formulation).
 
     @defaultValue `'gini'`
    */
@@ -670,7 +672,7 @@ export interface ExtraTreeClassifierOptions {
   splitter?: 'random' | 'best'
 
   /**
-    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
+    The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
    */
   max_depth?: number
 
@@ -682,14 +684,14 @@ export interface ExtraTreeClassifierOptions {
   min_samples_split?: number
 
   /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least min_samples_leaf training samples in each of the left and right branches.  This may have the effect of smoothing the model, especially in regression.
+    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
 
     @defaultValue `1`
    */
   min_samples_leaf?: number
 
   /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample_weight is not provided.
+    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
 
     @defaultValue `0`
    */
@@ -703,12 +705,12 @@ export interface ExtraTreeClassifierOptions {
   max_features?: number | 'sqrt'
 
   /**
-    Used to pick randomly the max_features used at each split. See Glossary for details.
+    Used to pick randomly the `max\_features` used at each split. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
   /**
-    Grow a tree with max_leaf_nodes in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
+    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If None then unlimited number of leaf nodes.
    */
   max_leaf_nodes?: number
 
@@ -722,20 +724,20 @@ export interface ExtraTreeClassifierOptions {
   min_impurity_decrease?: number
 
   /**
-    Weights associated with classes in the form {class_label: weight}. If None, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
+    Weights associated with classes in the form `{class\_label: weight}`. If None, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
 
-    Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be [{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}] instead of [{1:1}, {2:5}, {3:1}, {4:1}].
+    Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].
 
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as n_samples / (n_classes * np.bincount(y))
+    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`
 
     For multi-output, the weights of each column of y will be multiplied.
 
-    Note that these weights will be multiplied with sample_weight (passed through the fit method) if sample_weight is specified.
+    Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
    */
   class_weight?: any | 'balanced'
 
   /**
-    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than ccp_alpha will be chosen. By default, no pruning is performed. See Minimal Cost-Complexity Pruning for details.
+    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
 
     @defaultValue `0`
    */
@@ -744,7 +746,7 @@ export interface ExtraTreeClassifierOptions {
 
 export interface ExtraTreeClassifierApplyOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -758,7 +760,7 @@ export interface ExtraTreeClassifierApplyOptions {
 
 export interface ExtraTreeClassifierCostComplexityPruningPathOptions {
   /**
-    The training input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csc_matrix.
+    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -775,7 +777,7 @@ export interface ExtraTreeClassifierCostComplexityPruningPathOptions {
 
 export interface ExtraTreeClassifierDecisionPathOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -789,7 +791,7 @@ export interface ExtraTreeClassifierDecisionPathOptions {
 
 export interface ExtraTreeClassifierFitOptions {
   /**
-    The training input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csc_matrix.
+    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -817,7 +819,7 @@ export interface ExtraTreeClassifierGetNLeavesOptions {}
 
 export interface ExtraTreeClassifierPredictOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -831,14 +833,14 @@ export interface ExtraTreeClassifierPredictOptions {
 
 export interface ExtraTreeClassifierPredictLogProbaOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface ExtraTreeClassifierPredictProbaOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -857,7 +859,7 @@ export interface ExtraTreeClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

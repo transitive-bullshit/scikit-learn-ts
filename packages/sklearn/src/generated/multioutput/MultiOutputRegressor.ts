@@ -203,7 +203,7 @@ pms_MultiOutputRegressor_predict = {k: v for k, v in pms_MultiOutputRegressor_pr
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: MultiOutputRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -264,7 +264,7 @@ pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_scor
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `estimator` exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -291,7 +291,7 @@ pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_scor
   }
 
   /**
-    Names of features seen during fit. Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -320,16 +320,16 @@ pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_scor
 
 export interface MultiOutputRegressorOptions {
   /**
-    An estimator object implementing fit and predict.
+    An estimator object implementing [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict).
    */
   estimator?: any
 
   /**
-    The number of jobs to run in parallel. fit, predict and partial_fit (if supported by the passed estimator) will be parallelized for each target.
+    The number of jobs to run in parallel. [`fit`](#sklearn.multioutput.MultiOutputRegressor.fit "sklearn.multioutput.MultiOutputRegressor.fit"), [`predict`](#sklearn.multioutput.MultiOutputRegressor.predict "sklearn.multioutput.MultiOutputRegressor.predict") and [`partial\_fit`](#sklearn.multioutput.MultiOutputRegressor.partial_fit "sklearn.multioutput.MultiOutputRegressor.partial_fit") (if supported by the passed estimator) will be parallelized for each target.
 
-    When individual estimators are fast to train or predict, using n_jobs > 1 can result in slower performance due to the parallelism overhead.
+    When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-    None means 1 unless in a joblib.parallel_backend context. -1 means using all available processes / threads. See Glossary for more details.
+    `None` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -346,12 +346,12 @@ export interface MultiOutputRegressorFitOptions {
   y?: ArrayLike | SparseMatrix[]
 
   /**
-    Sample weights. If None, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
+    Sample weights. If `None`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
    */
   sample_weight?: ArrayLike
 
   /**
-    Parameters passed to the estimator.fit method of each step.
+    Parameters passed to the `estimator.fit` method of each step.
    */
   fit_params?: any
 }
@@ -368,7 +368,7 @@ export interface MultiOutputRegressorPartialFitOptions {
   y?: ArrayLike | SparseMatrix[]
 
   /**
-    Sample weights. If None, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
+    Sample weights. If `None`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
    */
   sample_weight?: ArrayLike
 }
@@ -382,12 +382,12 @@ export interface MultiOutputRegressorPredictOptions {
 
 export interface MultiOutputRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

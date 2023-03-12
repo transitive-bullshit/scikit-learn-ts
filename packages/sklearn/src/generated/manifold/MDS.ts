@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Multidimensional scaling.
 
+  Read more in the [User Guide](../manifold.html#multidimensional-scaling).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html
  */
 export class MDS {
@@ -131,7 +133,7 @@ pms_MDS_fit = {k: v for k, v in pms_MDS_fit.items() if v is not None}`
   }
 
   /**
-    Fit the data from X, and returns the embedded coordinates.
+    Fit the data from `X`, and returns the embedded coordinates.
    */
   async fit_transform(opts: MDSFitTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -185,7 +187,7 @@ pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is 
   }
 
   /**
-    The final value of the stress (sum of squared distance of the disparities and the distances for all constrained points). If normalized_stress=True, and metric=False returns Stress-1. A value of 0 indicates “perfect” fit, 0.025 excellent, 0.05 good, 0.1 fair, and 0.2 poor [1].
+    The final value of the stress (sum of squared distance of the disparities and the distances for all constrained points). If `normalized\_stress=True`, and `metric=False` returns Stress-1. A value of 0 indicates “perfect” fit, 0.025 excellent, 0.05 good, 0.1 fair, and 0.2 poor [\[1\]](#r77760563872b-1).
    */
   get stress_(): Promise<number> {
     if (this._isDisposed) {
@@ -232,7 +234,7 @@ pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -255,7 +257,7 @@ pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -309,7 +311,7 @@ export interface MDSOptions {
   n_components?: number
 
   /**
-    If True, perform metric MDS; otherwise, perform nonmetric MDS. When False (i.e. non-metric MDS), dissimilarities with 0 are considered as missing values.
+    If `True`, perform metric MDS; otherwise, perform nonmetric MDS. When `False` (i.e. non-metric MDS), dissimilarities with 0 are considered as missing values.
 
     @defaultValue `true`
    */
@@ -337,21 +339,21 @@ export interface MDSOptions {
   verbose?: number
 
   /**
-    Relative tolerance with respect to stress at which to declare convergence. The value of eps should be tuned separately depending on whether or not normalized_stress is being used.
+    Relative tolerance with respect to stress at which to declare convergence. The value of `eps` should be tuned separately depending on whether or not `normalized\_stress` is being used.
 
     @defaultValue `0.001`
    */
   eps?: number
 
   /**
-    The number of jobs to use for the computation. If multiple initializations are used (n_init), each run of the algorithm is computed in parallel.
+    The number of jobs to use for the computation. If multiple initializations are used (`n\_init`), each run of the algorithm is computed in parallel.
 
-    None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -370,7 +372,7 @@ export interface MDSOptions {
 
 export interface MDSFitOptions {
   /**
-    Input data. If dissimilarity=='precomputed', the input should be the dissimilarity matrix.
+    Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix.
    */
   X?: ArrayLike[]
 
@@ -387,7 +389,7 @@ export interface MDSFitOptions {
 
 export interface MDSFitTransformOptions {
   /**
-    Input data. If dissimilarity=='precomputed', the input should be the dissimilarity matrix.
+    Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix.
    */
   X?: ArrayLike[]
 

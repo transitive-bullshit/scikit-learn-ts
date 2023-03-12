@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Lasso linear model with iterative fitting along a regularization path.
 
-  See glossary entry for cross-validation estimator.
+  See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
 
   The best model is selected by cross-validation.
 
@@ -222,7 +222,7 @@ pms_LassoCV_predict = {k: v for k, v in pms_LassoCV_predict.items() if v is not 
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: LassoCVScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -367,7 +367,7 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
   }
 
   /**
-    The dual gap at the end of the optimization for the optimal alpha (alpha_).
+    The dual gap at the end of the optimization for the optimal alpha (`alpha\_`).
    */
   get dual_gap_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -413,7 +413,7 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -438,7 +438,7 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -465,7 +465,7 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
 
 export interface LassoCVOptions {
   /**
-    Length of the path. eps=1e-3 means that alpha_min / alpha_max = 1e-3.
+    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
     @defaultValue `0.001`
    */
@@ -479,7 +479,7 @@ export interface LassoCVOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If None alphas are set automatically.
+    List of alphas where to compute the models. If `None` alphas are set automatically.
    */
   alphas?: ArrayLike
 
@@ -491,7 +491,7 @@ export interface LassoCVOptions {
   fit_intercept?: boolean
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to 'auto' let us decide. The Gram matrix can also be passed as argument.
+    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
     @defaultValue `'auto'`
    */
@@ -505,14 +505,14 @@ export interface LassoCVOptions {
   max_iter?: number
 
   /**
-    The tolerance for the optimization: if the updates are smaller than tol, the optimization code checks the dual gap for optimality and continues until it is smaller than tol.
+    The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `True`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -531,7 +531,7 @@ export interface LassoCVOptions {
   verbose?: boolean | number
 
   /**
-    Number of CPUs to use during the cross validation. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    Number of CPUs to use during the cross validation. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -543,7 +543,7 @@ export interface LassoCVOptions {
   positive?: boolean
 
   /**
-    The seed of the pseudo random number generator that selects a random feature to update. Used when selection == ‘random’. Pass an int for reproducible output across multiple function calls. See Glossary.
+    The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -574,7 +574,7 @@ export interface LassoCVFitOptions {
 
 export interface LassoCVPathOptions {
   /**
-    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output then X can be sparse.
+    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -584,7 +584,7 @@ export interface LassoCVPathOptions {
   y?: ArrayLike | SparseMatrix
 
   /**
-    Length of the path. eps=1e-3 means that alpha_min / alpha_max = 1e-3.
+    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
     @defaultValue `0.001`
    */
@@ -598,12 +598,12 @@ export interface LassoCVPathOptions {
   n_alphas?: number
 
   /**
-    List of alphas where to compute the models. If None alphas are set automatically.
+    List of alphas where to compute the models. If `None` alphas are set automatically.
    */
   alphas?: NDArray
 
   /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to 'auto' let us decide. The Gram matrix can also be passed as argument.
+    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
 
     @defaultValue `'auto'`
    */
@@ -615,7 +615,7 @@ export interface LassoCVPathOptions {
   Xy?: ArrayLike
 
   /**
-    If True, X will be copied; else, it may be overwritten.
+    If `True`, X will be copied; else, it may be overwritten.
 
     @defaultValue `true`
    */
@@ -641,7 +641,7 @@ export interface LassoCVPathOptions {
   return_n_iter?: boolean
 
   /**
-    If set to True, forces coefficients to be positive. (Only allowed when y.ndim == 1).
+    If set to True, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
 
     @defaultValue `false`
    */
@@ -662,12 +662,12 @@ export interface LassoCVPredictOptions {
 
 export interface LassoCVScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

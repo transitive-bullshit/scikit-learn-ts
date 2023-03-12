@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Classifier implementing a vote among neighbors within a given radius.
 
+  Read more in the [User Guide](../neighbors.html#classification).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsClassifier.html
  */
 export class RadiusNeighborsClassifier {
@@ -206,9 +208,9 @@ pms_RadiusNeighborsClassifier_predict_proba = {k: v for k, v in pms_RadiusNeighb
   /**
     Find the neighbors within a given radius of a point or points.
 
-    Return the indices and distances of each point from the dataset lying in a ball with size radius around the points of the query array. Points lying on the boundary are included in the results.
+    Return the indices and distances of each point from the dataset lying in a ball with size `radius` around the points of the query array. Points lying on the boundary are included in the results.
 
-    The result points are not necessarily sorted by distance to their query point.
+    The result points are *not* necessarily sorted by distance to their query point.
    */
   async radius_neighbors(
     opts: RadiusNeighborsClassifierRadiusNeighborsOptions
@@ -350,7 +352,7 @@ pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClass
   }
 
   /**
-    The distance metric used. It will be same as the metric parameter or a synonym of it, e.g. ‘euclidean’ if the metric parameter set to ‘minkowski’ and p parameter set to 2.
+    The distance metric used. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
    */
   get effective_metric_(): Promise<string> {
     if (this._isDisposed) {
@@ -377,7 +379,7 @@ pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClass
   }
 
   /**
-    Additional keyword arguments for the metric function. For most metrics will be same with metric_params parameter, but may also contain the p parameter value if the effective_metric_ attribute is set to ‘minkowski’.
+    Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
    */
   get effective_metric_params_(): Promise<any> {
     if (this._isDisposed) {
@@ -404,7 +406,7 @@ pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClass
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -431,7 +433,7 @@ pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClass
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -512,7 +514,7 @@ pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClass
   }
 
   /**
-    False when y’s shape is (n_samples, ) or (n_samples, 1) during fit otherwise True.
+    False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise True.
    */
   get outputs_2d_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -541,14 +543,14 @@ pms_RadiusNeighborsClassifier_score = {k: v for k, v in pms_RadiusNeighborsClass
 
 export interface RadiusNeighborsClassifierOptions {
   /**
-    Range of parameter space to use by default for radius_neighbors queries.
+    Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors "sklearn.neighbors.RadiusNeighborsClassifier.radius_neighbors") queries.
 
     @defaultValue `1`
    */
   radius?: number
 
   /**
-    Weight function used in prediction.  Possible values:
+    Weight function used in prediction. Possible values:
 
     @defaultValue `'uniform'`
    */
@@ -562,23 +564,23 @@ export interface RadiusNeighborsClassifierOptions {
   algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
 
   /**
-    Leaf size passed to BallTree or KDTree.  This can affect the speed of the construction and query, as well as the memory required to store the tree.  The optimal value depends on the nature of the problem.
+    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
     @defaultValue `30`
    */
   leaf_size?: number
 
   /**
-    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
 
     @defaultValue `2`
    */
   p?: number
 
   /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for valid metric values.
+    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a sparse graph, in which case only “nonzero” elements may be considered neighbors.
+    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
 
     If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
@@ -597,7 +599,7 @@ export interface RadiusNeighborsClassifierOptions {
   metric_params?: any
 
   /**
-    The number of parallel jobs to run for neighbors search. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -647,7 +649,7 @@ export interface RadiusNeighborsClassifierRadiusNeighborsOptions {
   return_distance?: boolean
 
   /**
-    If True, the distances and indices will be sorted by increasing distances before being returned. If False, the results may not be sorted. If return_distance=False, setting sort_results=True will result in an error.
+    If True, the distances and indices will be sorted by increasing distances before being returned. If False, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
 
     @defaultValue `false`
    */
@@ -687,7 +689,7 @@ export interface RadiusNeighborsClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

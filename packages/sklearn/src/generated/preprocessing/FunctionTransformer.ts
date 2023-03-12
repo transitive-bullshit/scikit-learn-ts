@@ -111,7 +111,7 @@ ctor_FunctionTransformer = {k: v for k, v in ctor_FunctionTransformer.items() if
   /**
     Fit transformer by checking X.
 
-    If validate is True, X will be checked.
+    If `validate` is `True`, `X` will be checked.
    */
   async fit(opts: FunctionTransformerFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -143,7 +143,7 @@ pms_FunctionTransformer_fit = {k: v for k, v in pms_FunctionTransformer_fit.item
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: FunctionTransformerFitTransformOptions
@@ -183,7 +183,7 @@ pms_FunctionTransformer_fit_transform = {k: v for k, v in pms_FunctionTransforme
   /**
     Get output feature names for transformation.
 
-    This method is only defined if feature_names_out is not None.
+    This method is only defined if `feature\_names\_out` is not None.
    */
   async get_feature_names_out(
     opts: FunctionTransformerGetFeatureNamesOutOptions
@@ -255,7 +255,7 @@ pms_FunctionTransformer_inverse_transform = {k: v for k, v in pms_FunctionTransf
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: FunctionTransformerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -319,7 +319,7 @@ pms_FunctionTransformer_transform = {k: v for k, v in pms_FunctionTransformer_tr
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -346,7 +346,7 @@ pms_FunctionTransformer_transform = {k: v for k, v in pms_FunctionTransformer_tr
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -380,35 +380,35 @@ export interface FunctionTransformerOptions {
   func?: any
 
   /**
-    The callable to use for the inverse transformation. This will be passed the same arguments as inverse transform, with args and kwargs forwarded. If inverse_func is None, then inverse_func will be the identity function.
+    The callable to use for the inverse transformation. This will be passed the same arguments as inverse transform, with args and kwargs forwarded. If inverse\_func is None, then inverse\_func will be the identity function.
    */
   inverse_func?: any
 
   /**
-    Indicate that the input X array should be checked before calling func. The possibilities are:
+    Indicate that the input X array should be checked before calling `func`. The possibilities are:
 
     @defaultValue `false`
    */
   validate?: boolean
 
   /**
-    Indicate that func accepts a sparse matrix as input. If validate is False, this has no effect. Otherwise, if accept_sparse is false, sparse matrix inputs will cause an exception to be raised.
+    Indicate that func accepts a sparse matrix as input. If validate is False, this has no effect. Otherwise, if accept\_sparse is false, sparse matrix inputs will cause an exception to be raised.
 
     @defaultValue `false`
    */
   accept_sparse?: boolean
 
   /**
-    Whether to check that or func followed by inverse_func leads to the original inputs. It can be used for a sanity check, raising a warning when the condition is not fulfilled.
+    Whether to check that or `func` followed by `inverse\_func` leads to the original inputs. It can be used for a sanity check, raising a warning when the condition is not fulfilled.
 
     @defaultValue `true`
    */
   check_inverse?: boolean
 
   /**
-    Determines the list of feature names that will be returned by the get_feature_names_out method. If it is ‘one-to-one’, then the output feature names will be equal to the input feature names. If it is a callable, then it must take two positional arguments: this FunctionTransformer (self) and an array-like of input feature names (input_features). It must return an array-like of output feature names. The get_feature_names_out method is only defined if feature_names_out is not None.
+    Determines the list of feature names that will be returned by the `get\_feature\_names\_out` method. If it is ‘one-to-one’, then the output feature names will be equal to the input feature names. If it is a callable, then it must take two positional arguments: this `FunctionTransformer` (`self`) and an array-like of input feature names (`input\_features`). It must return an array-like of output feature names. The `get\_feature\_names\_out` method is only defined if `feature\_names\_out` is not None.
 
-    See get_feature_names_out for more details.
+    See `get\_feature\_names\_out` for more details.
    */
   feature_names_out?: 'one-to-one'
 
@@ -418,7 +418,7 @@ export interface FunctionTransformerOptions {
   kw_args?: any
 
   /**
-    Dictionary of additional keyword arguments to pass to inverse_func.
+    Dictionary of additional keyword arguments to pass to inverse\_func.
    */
   inv_kw_args?: any
 }
@@ -468,7 +468,7 @@ export interface FunctionTransformerInverseTransformOptions {
 
 export interface FunctionTransformerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

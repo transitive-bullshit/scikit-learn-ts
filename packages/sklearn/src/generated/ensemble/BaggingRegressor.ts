@@ -10,7 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A Bagging regressor is an ensemble meta-estimator that fits base regressors each on random subsets of the original dataset and then aggregate their individual predictions (either by voting or by averaging) to form a final prediction. Such a meta-estimator can typically be used as a way to reduce the variance of a black-box estimator (e.g., a decision tree), by introducing randomization into its construction procedure and then making an ensemble out of it.
 
-  This algorithm encompasses several works from the literature. When random subsets of the dataset are drawn as random subsets of the samples, then this algorithm is known as Pasting [1]. If samples are drawn with replacement, then the method is known as Bagging [2]. When random subsets of the dataset are drawn as random subsets of the features, then the method is known as Random Subspaces [3]. Finally, when base estimators are built on subsets of both samples and features, then the method is known as Random Patches [4].
+  This algorithm encompasses several works from the literature. When random subsets of the dataset are drawn as random subsets of the samples, then this algorithm is known as Pasting [\[1\]](#r4d113ba76fc0-1). If samples are drawn with replacement, then the method is known as Bagging [\[2\]](#r4d113ba76fc0-2). When random subsets of the dataset are drawn as random subsets of the features, then the method is known as Random Subspaces [\[3\]](#r4d113ba76fc0-3). Finally, when base estimators are built on subsets of both samples and features, then the method is known as Random Patches [\[4\]](#r4d113ba76fc0-4).
+
+  Read more in the [User Guide](../ensemble.html#bagging).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingRegressor.html
  */
@@ -181,7 +183,7 @@ pms_BaggingRegressor_predict = {k: v for k, v in pms_BaggingRegressor_predict.it
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: BaggingRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -242,7 +244,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -269,7 +271,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -350,7 +352,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
   }
 
   /**
-    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when oob_score is True.
+    Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is True.
    */
   get oob_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -377,7 +379,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
   }
 
   /**
-    Prediction computed with out-of-bag estimate on the training set. If n_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, oob_prediction_ might contain NaN. This attribute exists only when oob_score is True.
+    Prediction computed with out-of-bag estimate on the training set. If n\_estimators is small it might be possible that a data point was never left out during the bootstrap. In this case, `oob\_prediction\_` might contain NaN. This attribute exists only when `oob\_score` is True.
    */
   get oob_prediction_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -406,7 +408,7 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
 
 export interface BaggingRegressorOptions {
   /**
-    The base estimator to fit on random subsets of the dataset. If None, then the base estimator is a DecisionTreeRegressor.
+    The base estimator to fit on random subsets of the dataset. If None, then the base estimator is a [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor").
    */
   estimator?: any
 
@@ -418,14 +420,14 @@ export interface BaggingRegressorOptions {
   n_estimators?: number
 
   /**
-    The number of samples to draw from X to train each base estimator (with replacement by default, see bootstrap for more details).
+    The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).
 
     @defaultValue `1`
    */
   max_samples?: number
 
   /**
-    The number of features to draw from X to train each base estimator ( without replacement by default, see bootstrap_features for more details).
+    The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).
 
     @defaultValue `1`
    */
@@ -453,19 +455,19 @@ export interface BaggingRegressorOptions {
   oob_score?: boolean
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See the Glossary.
+    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    The number of jobs to run in parallel for both fit and predict. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a random_state attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -477,7 +479,7 @@ export interface BaggingRegressorOptions {
   verbose?: number
 
   /**
-    Use estimator instead.
+    Use `estimator` instead.
 
     @defaultValue `'deprecated'`
    */
@@ -510,12 +512,12 @@ export interface BaggingRegressorPredictOptions {
 
 export interface BaggingRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

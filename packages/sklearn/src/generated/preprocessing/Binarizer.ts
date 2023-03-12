@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   It can also be used as a pre-processing step for estimators that consider boolean random variables (e.g. modelled using the Bernoulli distribution in a Bayesian setting).
 
+  Read more in the [User Guide](../preprocessing.html#preprocessing-binarization).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html
  */
 export class Binarizer {
@@ -128,7 +130,7 @@ pms_Binarizer_fit = {k: v for k, v in pms_Binarizer_fit.items() if v is not None
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: BinarizerFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -195,7 +197,7 @@ pms_Binarizer_get_feature_names_out = {k: v for k, v in pms_Binarizer_get_featur
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: BinarizerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -255,7 +257,7 @@ pms_Binarizer_transform = {k: v for k, v in pms_Binarizer_transform.items() if v
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -280,7 +282,7 @@ pms_Binarizer_transform = {k: v for k, v in pms_Binarizer_transform.items() if v
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -359,7 +361,7 @@ export interface BinarizerGetFeatureNamesOutOptions {
 
 export interface BinarizerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

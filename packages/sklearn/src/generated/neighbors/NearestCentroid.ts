@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each class is represented by its centroid, with test samples classified to the class with the nearest centroid.
 
+  Read more in the [User Guide](../neighbors.html#nearest-centroid-classifier).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html
  */
 export class NearestCentroid {
@@ -123,9 +125,9 @@ pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v
   }
 
   /**
-    Perform classification on an array of test vectors X.
+    Perform classification on an array of test vectors `X`.
 
-    The predicted class C for each sample in X is returned.
+    The predicted class `C` for each sample in `X` is returned.
    */
   async predict(opts: NearestCentroidPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -237,7 +239,7 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -262,7 +264,7 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -289,9 +291,9 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
 
 export interface NearestCentroidOptions {
   /**
-    Metric to use for distance computation. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for valid metric values. Note that “wminkowski”, “seuclidean” and “mahalanobis” are not supported.
+    Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values. Note that “wminkowski”, “seuclidean” and “mahalanobis” are not supported.
 
-    The centroids for the samples corresponding to each class is the point from which the sum of the distances (according to the metric) of all samples that belong to that particular class are minimized. If the "manhattan" metric is provided, this centroid is the median and for all other metrics, the centroid is now set to be the mean.
+    The centroids for the samples corresponding to each class is the point from which the sum of the distances (according to the metric) of all samples that belong to that particular class are minimized. If the `"manhattan"` metric is provided, this centroid is the median and for all other metrics, the centroid is now set to be the mean.
 
     @defaultValue `'euclidean'`
    */
@@ -305,7 +307,7 @@ export interface NearestCentroidOptions {
 
 export interface NearestCentroidFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features. Note that centroid shrinking cannot be used with sparse matrices.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. Note that centroid shrinking cannot be used with sparse matrices.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -329,7 +331,7 @@ export interface NearestCentroidScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

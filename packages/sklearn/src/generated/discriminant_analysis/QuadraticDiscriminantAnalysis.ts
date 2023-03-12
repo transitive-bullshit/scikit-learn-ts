@@ -108,7 +108,7 @@ ctor_QuadraticDiscriminantAnalysis = {k: v for k, v in ctor_QuadraticDiscriminan
   /**
     Apply decision function to an array of samples.
 
-    The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. log p(y = k | x). In a binary classification setting this instead corresponds to the difference log p(y = 1 | x) - log p(y = 0 | x). See Mathematical formulation of the LDA and QDA classifiers.
+    The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See [Mathematical formulation of the LDA and QDA classifiers](../lda_qda.html#lda-qda-math).
    */
   async decision_function(
     opts: QuadraticDiscriminantAnalysisDecisionFunctionOptions
@@ -325,7 +325,7 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
   }
 
   /**
-    For each class, gives the covariance matrix estimated using the samples of that class. The estimations are unbiased. Only present if store_covariance is True.
+    For each class, gives the covariance matrix estimated using the samples of that class. The estimations are unbiased. Only present if `store\_covariance` is True.
    */
   get covariance_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -406,7 +406,7 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
   }
 
   /**
-    For each class k an array of shape (n_features, n_k), where n_k = min(n_features, number of elements in class k) It is the rotation of the Gaussian distribution, i.e. its principal axis. It corresponds to V, the matrix of eigenvectors coming from the SVD of Xk = U S Vt where Xk is the centered matrix of samples from class k.
+    For each class k an array of shape (n\_features, n\_k), where `n\_k \= min(n\_features, number of elements in class k)` It is the rotation of the Gaussian distribution, i.e. its principal axis. It corresponds to `V`, the matrix of eigenvectors coming from the SVD of `Xk \= U S Vt` where `Xk` is the centered matrix of samples from class k.
    */
   get rotations_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -433,7 +433,7 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
   }
 
   /**
-    For each class, contains the scaling of the Gaussian distributions along its principal axes, i.e. the variance in the rotated coordinate system. It corresponds to S^2 / (n_samples - 1), where S is the diagonal matrix of singular values from the SVD of Xk, where Xk is the centered matrix of samples from class k.
+    For each class, contains the scaling of the Gaussian distributions along its principal axes, i.e. the variance in the rotated coordinate system. It corresponds to `S^2 / (n\_samples \- 1)`, where `S` is the diagonal matrix of singular values from the SVD of `Xk`, where `Xk` is the centered matrix of samples from class k.
    */
   get scalings_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -487,7 +487,7 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -514,7 +514,7 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -548,21 +548,21 @@ export interface QuadraticDiscriminantAnalysisOptions {
   priors?: ArrayLike
 
   /**
-    Regularizes the per-class covariance estimates by transforming S2 as S2 = (1 - reg_param) * S2 + reg_param * np.eye(n_features), where S2 corresponds to the scaling_ attribute of a given class.
+    Regularizes the per-class covariance estimates by transforming S2 as `S2 \= (1 \- reg\_param) \* S2 + reg\_param \* np.eye(n\_features)`, where S2 corresponds to the `scaling\_` attribute of a given class.
 
     @defaultValue `0`
    */
   reg_param?: number
 
   /**
-    If True, the class covariance matrices are explicitly computed and stored in the self.covariance_ attribute.
+    If True, the class covariance matrices are explicitly computed and stored in the `self.covariance\_` attribute.
 
     @defaultValue `false`
    */
   store_covariance?: boolean
 
   /**
-    Absolute threshold for a singular value to be considered significant, used to estimate the rank of Xk where Xk is the centered matrix of samples in class k. This parameter does not affect the predictions. It only controls a warning that is raised when features are considered to be colinear.
+    Absolute threshold for a singular value to be considered significant, used to estimate the rank of `Xk` where `Xk` is the centered matrix of samples in class k. This parameter does not affect the predictions. It only controls a warning that is raised when features are considered to be colinear.
 
     @defaultValue `0.0001`
    */
@@ -578,7 +578,7 @@ export interface QuadraticDiscriminantAnalysisDecisionFunctionOptions {
 
 export interface QuadraticDiscriminantAnalysisFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -590,7 +590,7 @@ export interface QuadraticDiscriminantAnalysisFitOptions {
 
 export interface QuadraticDiscriminantAnalysisPredictOptions {
   /**
-    Vector to be scored, where n_samples is the number of samples and n_features is the number of features.
+    Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 }
@@ -616,7 +616,7 @@ export interface QuadraticDiscriminantAnalysisScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

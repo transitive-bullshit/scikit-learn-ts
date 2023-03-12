@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Convert a collection of text documents to a matrix of token counts.
 
-  This implementation produces a sparse representation of the counts using scipy.sparse.csr_matrix.
+  This implementation produces a sparse representation of the counts using scipy.sparse.csr\_matrix.
 
   If you do not provide an a-priori dictionary and you do not use an analyzer that does some kind of feature selection then the number of features will be equal to the vocabulary size found by analyzing the data.
+
+  Read more in the [User Guide](../feature_extraction.html#text-feature-extraction).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html
  */
@@ -497,7 +499,7 @@ pms_CountVectorizer_transform = {k: v for k, v in pms_CountVectorizer_transform.
 
 export interface CountVectorizerOptions {
   /**
-    If 'filename', the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
+    If `'filename'`, the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
 
     @defaultValue `'content'`
    */
@@ -511,7 +513,7 @@ export interface CountVectorizerOptions {
   encoding?: string
 
   /**
-    Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given encoding. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
+    Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given `encoding`. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
 
     @defaultValue `'strict'`
    */
@@ -520,7 +522,7 @@ export interface CountVectorizerOptions {
   /**
     Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. None (default) does nothing.
 
-    Both ‘ascii’ and ‘unicode’ use NFKD normalization from unicodedata.normalize.
+    Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
    */
   strip_accents?: 'ascii' | 'unicode'
 
@@ -532,38 +534,38 @@ export interface CountVectorizerOptions {
   lowercase?: boolean
 
   /**
-    Override the preprocessing (strip_accents and lowercase) stage while preserving the tokenizing and n-grams generation steps. Only applies if analyzer is not callable.
+    Override the preprocessing (strip\_accents and lowercase) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
    */
   preprocessor?: any
 
   /**
-    Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if analyzer == 'word'.
+    Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
    */
   tokenizer?: any
 
   /**
-    If ‘english’, a built-in stop word list for English is used. There are several known issues with ‘english’ and you should consider an alternative (see Using stop words).
+    If ‘english’, a built-in stop word list for English is used. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](../feature_extraction.html#stop-words)).
 
-    If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if analyzer == 'word'.
+    If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
 
-    If None, no stop words will be used. In this case, setting max_df to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
+    If None, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
    */
   stop_words?: 'english' | any[]
 
   /**
-    Regular expression denoting what constitutes a “token”, only used if analyzer == 'word'. The default regexp select tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
+    Regular expression denoting what constitutes a “token”, only used if `analyzer \== 'word'`. The default regexp select tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
 
-    If there is a capturing group in token_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
+    If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
    */
   token_pattern?: string
 
   /**
-    The lower and upper boundary of the range of n-values for different word n-grams or char n-grams to be extracted. All values of n such such that min_n <= n <= max_n will be used. For example an ngram_range of (1, 1) means only unigrams, (1, 2) means unigrams and bigrams, and (2, 2) means only bigrams. Only applies if analyzer is not callable.
+    The lower and upper boundary of the range of n-values for different word n-grams or char n-grams to be extracted. All values of n such such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
    */
   ngram_range?: any
 
   /**
-    Whether the feature should be made of word n-gram or character n-grams. Option ‘char_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
+    Whether the feature should be made of word n-gram or character n-grams. Option ‘char\_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
 
     If a callable is passed it is used to extract the sequence of features out of the raw, unprocessed input.
 
@@ -586,7 +588,7 @@ export interface CountVectorizerOptions {
   min_df?: number
 
   /**
-    If not None, build a vocabulary that only consider the top max_features ordered by term frequency across the corpus. Otherwise, all features are used.
+    If not None, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
 
     This parameter is ignored if vocabulary is not None.
    */
@@ -605,7 +607,7 @@ export interface CountVectorizerOptions {
   binary?: boolean
 
   /**
-    Type of the matrix returned by fit_transform() or transform().
+    Type of the matrix returned by fit\_transform() or transform().
    */
   dtype?: any
 }

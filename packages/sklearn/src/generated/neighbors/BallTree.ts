@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   BallTree for fast generalized N-point problems
 
+  Read more in the [User Guide](../neighbors.html#unsupervised-neighbors).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html
  */
 export class BallTree {
@@ -356,19 +358,19 @@ pms_BallTree_two_point_correlation = {k: v for k, v in pms_BallTree_two_point_co
 
 export interface BallTreeOptions {
   /**
-    n_samples is the number of points in the data set, and n_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
+    n\_samples is the number of points in the data set, and n\_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
    */
   X?: ArrayLike[]
 
   /**
-    Number of points at which to switch to brute-force. Changing leaf_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree.  The amount of memory needed to store the tree scales as approximately n_samples / leaf_size. For a specified leaf_size, a leaf node is guaranteed to satisfy leaf_size <= n_points <= 2 * leaf_size, except in the case that n_samples < leaf_size.
+    Number of points at which to switch to brute-force. Changing leaf\_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n\_samples / leaf\_size. For a specified `leaf\_size`, a leaf node is guaranteed to satisfy `leaf\_size <= n\_points <= 2 \* leaf\_size`, except in the case that `n\_samples < leaf\_size`.
 
     @defaultValue `40`
    */
   leaf_size?: any
 
   /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. ball_tree.valid_metrics gives a list of the metrics which are valid for BallTree. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for more information.
+    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. ball\_tree.valid\_metrics gives a list of the metrics which are valid for BallTree. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for more information.
 
     @defaultValue `'minkowski'`
    */
@@ -383,7 +385,7 @@ export interface BallTreeGetTreeStatsOptions {}
 
 export interface BallTreeKernelDensityOptions {
   /**
-    An array of points to query.  Last dimension should match dimension of training data.
+    An array of points to query. Last dimension should match dimension of training data.
    */
   X?: ArrayLike[]
 
@@ -393,35 +395,35 @@ export interface BallTreeKernelDensityOptions {
   h?: number
 
   /**
-    specify the kernel to use.  Options are - ‘gaussian’ - ‘tophat’ - ‘epanechnikov’ - ‘exponential’ - ‘linear’ - ‘cosine’ Default is kernel = ‘gaussian’
+    specify the kernel to use. Options are - ‘gaussian’ - ‘tophat’ - ‘epanechnikov’ - ‘exponential’ - ‘linear’ - ‘cosine’ Default is kernel = ‘gaussian’
 
     @defaultValue `'gaussian'`
    */
   kernel?: string
 
   /**
-    Specify the desired absolute tolerance of the result. If the true result is K_true, then the returned result K_ret satisfies abs(K_true - K_ret) < atol + rtol * K_ret The default is zero (i.e. machine precision).
+    Specify the desired absolute tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is zero (i.e. machine precision).
 
     @defaultValue `0`
    */
   atol?: number
 
   /**
-    Specify the desired relative tolerance of the result. If the true result is K_true, then the returned result K_ret satisfies abs(K_true - K_ret) < atol + rtol * K_ret The default is 1e-8 (i.e. machine precision).
+    Specify the desired relative tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is `1e-8` (i.e. machine precision).
 
     @defaultValue `1e-8`
    */
   rtol?: number
 
   /**
-    If True, use a breadth-first search.  If False (default) use a depth-first search.  Breadth-first is generally faster for compact kernels and/or high tolerances.
+    If True, use a breadth-first search. If False (default) use a depth-first search. Breadth-first is generally faster for compact kernels and/or high tolerances.
 
     @defaultValue `false`
    */
   breadth_first?: boolean
 
   /**
-    Return the logarithm of the result.  This can be more accurate than returning the result itself for narrow kernels.
+    Return the logarithm of the result. This can be more accurate than returning the result itself for narrow kernels.
 
     @defaultValue `false`
    */
@@ -449,7 +451,7 @@ export interface BallTreeQueryOptions {
   return_distance?: boolean
 
   /**
-    if True, use the dual tree formalism for the query: a tree is built for the query points, and the pair of trees is used to efficiently search this space.  This can lead to better performance as the number of points grows large.
+    if True, use the dual tree formalism for the query: a tree is built for the query points, and the pair of trees is used to efficiently search this space. This can lead to better performance as the number of points grows large.
 
     @defaultValue `false`
    */
@@ -477,26 +479,26 @@ export interface BallTreeQueryRadiusOptions {
   X?: ArrayLike[]
 
   /**
-    r can be a single value, or an array of values of shape x.shape[:-1] if different radii are desired for each point.
+    r can be a single value, or an array of values of shape x.shape\[:-1\] if different radii are desired for each point.
    */
   r?: any
 
   /**
-    if True,  return distances to neighbors of each point if False, return only neighbors Note that unlike the query() method, setting return_distance=True here adds to the computation time.  Not all distances need to be calculated explicitly for return_distance=False.  Results are not sorted by default: see sort_results keyword.
+    if True, return distances to neighbors of each point if False, return only neighbors Note that unlike the query() method, setting return\_distance=True here adds to the computation time. Not all distances need to be calculated explicitly for return\_distance=False. Results are not sorted by default: see `sort\_results` keyword.
 
     @defaultValue `false`
    */
   return_distance?: boolean
 
   /**
-    if True,  return only the count of points within distance r if False, return the indices of all points within distance r If return_distance==True, setting count_only=True will result in an error.
+    if True, return only the count of points within distance r if False, return the indices of all points within distance r If return\_distance==True, setting count\_only=True will result in an error.
 
     @defaultValue `false`
    */
   count_only?: boolean
 
   /**
-    if True, the distances and indices will be sorted before being returned.  If False, the results will not be sorted.  If return_distance == False, setting sort_results = True will result in an error.
+    if True, the distances and indices will be sorted before being returned. If False, the results will not be sorted. If return\_distance == False, setting sort\_results = True will result in an error.
 
     @defaultValue `false`
    */
@@ -507,7 +509,7 @@ export interface BallTreeResetNCallsOptions {}
 
 export interface BallTreeTwoPointCorrelationOptions {
   /**
-    An array of points to query.  Last dimension should match dimension of training data.
+    An array of points to query. Last dimension should match dimension of training data.
    */
   X?: ArrayLike[]
 
@@ -517,7 +519,7 @@ export interface BallTreeTwoPointCorrelationOptions {
   r?: ArrayLike
 
   /**
-    If True, use a dualtree algorithm.  Otherwise, use a single-tree algorithm.  Dual tree algorithms can have better scaling for large N.
+    If True, use a dualtree algorithm. Otherwise, use a single-tree algorithm. Dual tree algorithms can have better scaling for large N.
 
     @defaultValue `false`
    */

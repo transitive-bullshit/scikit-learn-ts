@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A voting regressor is an ensemble meta-estimator that fits several base regressors, each on the whole dataset. Then it averages the individual predictions to form a final prediction.
 
+  Read more in the [User Guide](../ensemble.html#voting-regressor).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingRegressor.html
  */
 export class VotingRegressor {
@@ -230,7 +232,7 @@ pms_VotingRegressor_predict = {k: v for k, v in pms_VotingRegressor_predict.item
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: VotingRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -264,7 +266,7 @@ pms_VotingRegressor_score = {k: v for k, v in pms_VotingRegressor_score.items() 
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: VotingRegressorSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -320,7 +322,7 @@ pms_VotingRegressor_transform = {k: v for k, v in pms_VotingRegressor_transform.
   }
 
   /**
-    The collection of fitted sub-estimators as defined in estimators that are not ‘drop’.
+    The collection of fitted sub-estimators as defined in `estimators` that are not ‘drop’.
    */
   get estimators_(): Promise<any> {
     if (this._isDisposed) {
@@ -370,7 +372,7 @@ pms_VotingRegressor_transform = {k: v for k, v in pms_VotingRegressor_transform.
   }
 
   /**
-    Names of features seen during fit. Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -397,17 +399,17 @@ pms_VotingRegressor_transform = {k: v for k, v in pms_VotingRegressor_transform.
 
 export interface VotingRegressorOptions {
   /**
-    Invoking the fit method on the VotingRegressor will fit clones of those original estimators that will be stored in the class attribute self.estimators_. An estimator can be set to 'drop' using set_params.
+    Invoking the `fit` method on the `VotingRegressor` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingRegressor.set_params "sklearn.ensemble.VotingRegressor.set_params").
    */
   estimators?: any
 
   /**
-    Sequence of weights (float or int) to weight the occurrences of predicted values before averaging. Uses uniform weights if None.
+    Sequence of weights (`float` or `int`) to weight the occurrences of predicted values before averaging. Uses uniform weights if `None`.
    */
   weights?: ArrayLike
 
   /**
-    The number of jobs to run in parallel for fit. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel for `fit`. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
@@ -421,7 +423,7 @@ export interface VotingRegressorOptions {
 
 export interface VotingRegressorFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -469,12 +471,12 @@ export interface VotingRegressorPredictOptions {
 
 export interface VotingRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 
@@ -486,7 +488,7 @@ export interface VotingRegressorScoreOptions {
 
 export interface VotingRegressorSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

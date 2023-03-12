@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   One-vs-the-rest (OvR) multiclass strategy.
 
-  Also known as one-vs-all, this strategy consists in fitting one classifier per class. For each classifier, the class is fitted against all the other classes. In addition to its computational efficiency (only n_classes classifiers are needed), one advantage of this approach is its interpretability. Since each class is represented by one and one classifier only, it is possible to gain knowledge about the class by inspecting its corresponding classifier. This is the most commonly used strategy for multiclass classification and is a fair default choice.
+  Also known as one-vs-all, this strategy consists in fitting one classifier per class. For each classifier, the class is fitted against all the other classes. In addition to its computational efficiency (only `n\_classes` classifiers are needed), one advantage of this approach is its interpretability. Since each class is represented by one and one classifier only, it is possible to gain knowledge about the class by inspecting its corresponding classifier. This is the most commonly used strategy for multiclass classification and is a fair default choice.
 
-  OneVsRestClassifier can also be used for multilabel classification. To use this feature, provide an indicator matrix for the target y when calling .fit. In other words, the target labels should be formatted as a 2D binary (0/1) matrix, where [i, j] == 1 indicates the presence of label j in sample i. This estimator uses the binary relevance method to perform multilabel classification, which involves training one binary classifier independently for each label.
+  OneVsRestClassifier can also be used for multilabel classification. To use this feature, provide an indicator matrix for the target `y` when calling `.fit`. In other words, the target labels should be formatted as a 2D binary (0/1) matrix, where \[i, j\] == 1 indicates the presence of label j in sample i. This estimator uses the binary relevance method to perform multilabel classification, which involves training one binary classifier independently for each label.
+
+  Read more in the [User Guide](../multiclass.html#ovr-classification).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html
  */
@@ -103,7 +105,7 @@ ctor_OneVsRestClassifier = {k: v for k, v in ctor_OneVsRestClassifier.items() if
   /**
     Decision function for the OneVsRestClassifier.
 
-    Return the distance of each sample from the decision boundary for each class. This can only be used with estimators which implement the decision_function method.
+    Return the distance of each sample from the decision boundary for each class. This can only be used with estimators which implement the `decision\_function` method.
    */
   async decision_function(
     opts: OneVsRestClassifierDecisionFunctionOptions
@@ -397,7 +399,7 @@ pms_OneVsRestClassifier_score = {k: v for k, v in pms_OneVsRestClassifier_score.
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -424,7 +426,7 @@ pms_OneVsRestClassifier_score = {k: v for k, v in pms_OneVsRestClassifier_score.
   }
 
   /**
-    Names of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -453,19 +455,19 @@ pms_OneVsRestClassifier_score = {k: v for k, v in pms_OneVsRestClassifier_score.
 
 export interface OneVsRestClassifierOptions {
   /**
-    A regressor or a classifier that implements fit. When a classifier is passed, decision_function will be used in priority and it will fallback to predict_proba if it is not available. When a regressor is passed, predict is used.
+    A regressor or a classifier that implements [fit](../../glossary.html#term-fit). When a classifier is passed, [decision\_function](../../glossary.html#term-decision_function) will be used in priority and it will fallback to [predict\_proba](../../glossary.html#term-predict_proba) if it is not available. When a regressor is passed, [predict](../../glossary.html#term-predict) is used.
    */
   estimator?: any
 
   /**
-    The number of jobs to use for the computation: the n_classes one-vs-rest problems are computed in parallel.
+    The number of jobs to use for the computation: the `n\_classes` one-vs-rest problems are computed in parallel.
 
-    None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    The verbosity level, if non zero, progress messages are printed. Below 50, the output is sent to stderr. Otherwise, the output is sent to stdout. The frequency of the messages increases with the verbosity level, reporting all iterations at 10. See joblib.Parallel for more details.
+    The verbosity level, if non zero, progress messages are printed. Below 50, the output is sent to stderr. Otherwise, the output is sent to stdout. The frequency of the messages increases with the verbosity level, reporting all iterations at 10. See [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.3.0.dev0)") for more details.
 
     @defaultValue `0`
    */
@@ -503,7 +505,7 @@ export interface OneVsRestClassifierPartialFitOptions {
   y?: ArrayLike | SparseMatrix
 
   /**
-    Classes across all calls to partial_fit. Can be obtained via np.unique(y_all), where y_all is the target vector of the entire dataset. This argument is only required in the first call of partial_fit and can be omitted in the subsequent calls.
+    Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls.
    */
   classes?: any
 }
@@ -529,7 +531,7 @@ export interface OneVsRestClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

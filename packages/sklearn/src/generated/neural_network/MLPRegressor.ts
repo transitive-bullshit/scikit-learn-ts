@@ -213,7 +213,7 @@ pms_MLPRegressor_predict = {k: v for k, v in pms_MLPRegressor_predict.items() if
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(opts: MLPRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -268,7 +268,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    The minimum loss reached by the solver throughout fitting. If early_stopping=True, this attribute is set to None. Refer to the best_validation_score_ fitted attribute instead. Only accessible when solver=’sgd’ or ‘adam’.
+    The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set to `None`. Refer to the `best\_validation\_score\_` fitted attribute instead. Only accessible when solver=’sgd’ or ‘adam’.
    */
   get best_loss_(): Promise<number> {
     if (this._isDisposed) {
@@ -318,7 +318,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    The score at each iteration on a held-out validation set. The score reported is the R2 score. Only available if early_stopping=True, otherwise the attribute is set to None. Only accessible when solver=’sgd’ or ‘adam’.
+    The score at each iteration on a held-out validation set. The score reported is the R2 score. Only available if `early\_stopping=True`, otherwise the attribute is set to `None`. Only accessible when solver=’sgd’ or ‘adam’.
    */
   get validation_scores_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -343,7 +343,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    The best validation score (i.e. R2 score) that triggered the early stopping. Only available if early_stopping=True, otherwise the attribute is set to None. Only accessible when solver=’sgd’ or ‘adam’.
+    The best validation score (i.e. R2 score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `None`. Only accessible when solver=’sgd’ or ‘adam’.
    */
   get best_validation_score_(): Promise<number> {
     if (this._isDisposed) {
@@ -368,7 +368,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    The number of training samples seen by the solver during fitting. Mathematically equals n_iters * X.shape[0], it means time_step and it is used by optimizer’s learning rate scheduler.
+    The number of training samples seen by the solver during fitting. Mathematically equals `n\_iters \* X.shape\[0\]`, it means `time\_step` and it is used by optimizer’s learning rate scheduler.
    */
   get t_(): Promise<number> {
     if (this._isDisposed) {
@@ -439,7 +439,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -464,7 +464,7 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -615,7 +615,7 @@ export interface MLPRegressorOptions {
   alpha?: number
 
   /**
-    Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the regressor will not use minibatch. When set to “auto”, batch_size=min(200, n_samples).
+    Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the regressor will not use minibatch. When set to “auto”, `batch\_size=min(200, n\_samples)`.
 
     @defaultValue `'auto'`
    */
@@ -636,7 +636,7 @@ export interface MLPRegressorOptions {
   learning_rate_init?: number
 
   /**
-    The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning_rate is set to ‘invscaling’. Only used when solver=’sgd’.
+    The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning\_rate is set to ‘invscaling’. Only used when solver=’sgd’.
 
     @defaultValue `0.5`
    */
@@ -657,12 +657,12 @@ export interface MLPRegressorOptions {
   shuffle?: boolean
 
   /**
-    Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    Tolerance for the optimization. When the loss or score is not improving by at least tol for n_iter_no_change consecutive iterations, unless learning_rate is set to ‘adaptive’, convergence is considered to be reached and training stops.
+    Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive iterations, unless `learning\_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.
 
     @defaultValue `0.0001`
    */
@@ -676,7 +676,7 @@ export interface MLPRegressorOptions {
   verbose?: boolean
 
   /**
-    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See the Glossary.
+    When set to True, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -697,28 +697,28 @@ export interface MLPRegressorOptions {
   nesterovs_momentum?: boolean
 
   /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to True, it will automatically set aside validation_fraction of training data as validation and terminate training when validation score is not improving by at least tol for n_iter_no_change consecutive epochs. Only effective when solver=’sgd’ or ‘adam’.
+    Whether to use early stopping to terminate training when validation score is not improving. If set to True, it will automatically set aside `validation\_fraction` of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs. Only effective when solver=’sgd’ or ‘adam’.
 
     @defaultValue `false`
    */
   early_stopping?: boolean
 
   /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early_stopping is True.
+    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is True.
 
     @defaultValue `0.1`
    */
   validation_fraction?: number
 
   /**
-    Exponential decay rate for estimates of first moment vector in adam, should be in [0, 1). Only used when solver=’adam’.
+    Exponential decay rate for estimates of first moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
 
     @defaultValue `0.9`
    */
   beta_1?: number
 
   /**
-    Exponential decay rate for estimates of second moment vector in adam, should be in [0, 1). Only used when solver=’adam’.
+    Exponential decay rate for estimates of second moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
 
     @defaultValue `0.999`
    */
@@ -732,14 +732,14 @@ export interface MLPRegressorOptions {
   epsilon?: number
 
   /**
-    Maximum number of epochs to not meet tol improvement. Only effective when solver=’sgd’ or ‘adam’.
+    Maximum number of epochs to not meet `tol` improvement. Only effective when solver=’sgd’ or ‘adam’.
 
     @defaultValue `10`
    */
   n_iter_no_change?: number
 
   /**
-    Only used when solver=’lbfgs’. Maximum number of function calls. The solver iterates until convergence (determined by tol), number of iterations reaches max_iter, or this number of function calls. Note that number of function calls will be greater than or equal to the number of iterations for the MLPRegressor.
+    Only used when solver=’lbfgs’. Maximum number of function calls. The solver iterates until convergence (determined by `tol`), number of iterations reaches max\_iter, or this number of function calls. Note that number of function calls will be greater than or equal to the number of iterations for the MLPRegressor.
 
     @defaultValue `15000`
    */
@@ -779,12 +779,12 @@ export interface MLPRegressorPredictOptions {
 
 export interface MLPRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

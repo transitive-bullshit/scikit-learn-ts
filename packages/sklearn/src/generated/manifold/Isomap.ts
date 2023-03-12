@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Non-linear dimensionality reduction through Isometric Mapping
 
+  Read more in the [User Guide](../manifold.html#isomap).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html
  */
 export class Isomap {
@@ -162,7 +164,7 @@ pms_Isomap_fit_transform = {k: v for k, v in pms_Isomap_fit_transform.items() if
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: IsomapGetFeatureNamesOutOptions
@@ -225,7 +227,7 @@ pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_er
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: IsomapSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -255,7 +257,7 @@ pms_Isomap_set_output = {k: v for k, v in pms_Isomap_set_output.items() if v is 
   /**
     Transform X.
 
-    This is implemented by linking the points X into the graph of geodesic distances of the training data. First the n_neighbors nearest neighbors of X are found in the training data, and from these the shortest geodesic distances from each point in X to each point in the training data are computed in order to construct the kernel. The embedding of X is the projection of this kernel onto the embedding vectors of the training set.
+    This is implemented by linking the points X into the graph of geodesic distances of the training data. First the `n\_neighbors` nearest neighbors of X are found in the training data, and from these the shortest geodesic distances from each point in X to each point in the training data are computed in order to construct the kernel. The embedding of X is the projection of this kernel onto the embedding vectors of the training set.
    */
   async transform(opts: IsomapTransformOptions): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -304,7 +306,7 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
   }
 
   /**
-    KernelPCA object used to implement the embedding.
+    [`KernelPCA`](sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA "sklearn.decomposition.KernelPCA") object used to implement the embedding.
    */
   get kernel_pca_(): Promise<any> {
     if (this._isDisposed) {
@@ -372,7 +374,7 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -395,7 +397,7 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -422,14 +424,14 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
 
 export interface IsomapOptions {
   /**
-    Number of neighbors to consider for each point. If n_neighbors is an int, then radius must be None.
+    Number of neighbors to consider for each point. If `n\_neighbors` is an int, then `radius` must be `None`.
 
     @defaultValue `5`
    */
   n_neighbors?: number
 
   /**
-    Limiting distance of neighbors to return. If radius is a float, then n_neighbors must be set to None.
+    Limiting distance of neighbors to return. If `radius` is a float, then `n\_neighbors` must be set to `None`.
    */
   radius?: number
 
@@ -452,14 +454,14 @@ export interface IsomapOptions {
   eigen_solver?: 'auto' | 'arpack' | 'dense'
 
   /**
-    Convergence tolerance passed to arpack or lobpcg. not used if eigen_solver == ‘dense’.
+    Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == ‘dense’.
 
     @defaultValue `0`
    */
   tol?: number
 
   /**
-    Maximum number of iterations for the arpack solver. not used if eigen_solver == ‘dense’.
+    Maximum number of iterations for the arpack solver. not used if eigen\_solver == ‘dense’.
    */
   max_iter?: number
 
@@ -484,19 +486,19 @@ export interface IsomapOptions {
   neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
 
   /**
-    The number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by sklearn.metrics.pairwise_distances for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a Glossary.
+    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [Glossary](../../glossary.html#term-sparse-graph).
 
     @defaultValue `'minkowski'`
    */
   metric?: any
 
   /**
-    Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+    Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
 
     @defaultValue `2`
    */
@@ -510,7 +512,7 @@ export interface IsomapOptions {
 
 export interface IsomapFitOptions {
   /**
-    Sample data, shape = (n_samples, n_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
+    Sample data, shape = (n\_samples, n\_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
    */
   X?: ArrayLike | SparseMatrix
 
@@ -522,7 +524,7 @@ export interface IsomapFitOptions {
 
 export interface IsomapFitTransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix
 
@@ -534,7 +536,7 @@ export interface IsomapFitTransformOptions {
 
 export interface IsomapGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.manifold.Isomap.fit "sklearn.manifold.Isomap.fit").
    */
   input_features?: any
 }
@@ -548,14 +550,14 @@ export interface IsomapReconstructionErrorOptions {
 
 export interface IsomapSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface IsomapTransformOptions {
   /**
-    If neighbors_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n_queries, n_samples_fit).
+    If neighbors\_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n\_queries, n\_samples\_fit).
    */
   X?: ArrayLike | SparseMatrix
 }

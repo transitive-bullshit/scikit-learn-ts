@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Partitions rows and columns under the assumption that the data has an underlying checkerboard structure. For instance, if there are two row partitions and three column partitions, each row will belong to three biclusters, and each column will belong to two biclusters. The outer product of the corresponding row and column label vectors gives this checkerboard structure.
 
+  Read more in the [User Guide](../biclustering.html#spectral-biclustering).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralBiclustering.html
  */
 export class SpectralBiclustering {
@@ -137,9 +139,9 @@ pms_SpectralBiclustering_fit = {k: v for k, v in pms_SpectralBiclustering_fit.it
   }
 
   /**
-    Row and column indices of the i’th bicluster.
+    Row and column indices of the `i`’th bicluster.
 
-    Only works if rows_ and columns_ attributes exist.
+    Only works if `rows\_` and `columns\_` attributes exist.
    */
   async get_indices(
     opts: SpectralBiclusteringGetIndicesOptions
@@ -173,7 +175,7 @@ pms_SpectralBiclustering_get_indices = {k: v for k, v in pms_SpectralBiclusterin
   }
 
   /**
-    Shape of the i’th bicluster.
+    Shape of the `i`’th bicluster.
    */
   async get_shape(opts: SpectralBiclusteringGetShapeOptions): Promise<number> {
     if (this._isDisposed) {
@@ -205,7 +207,7 @@ pms_SpectralBiclustering_get_shape = {k: v for k, v in pms_SpectralBiclustering_
   }
 
   /**
-    Return the submatrix corresponding to bicluster i.
+    Return the submatrix corresponding to bicluster `i`.
    */
   async get_submatrix(
     opts: SpectralBiclusteringGetSubmatrixOptions
@@ -241,7 +243,7 @@ pms_SpectralBiclustering_get_submatrix = {k: v for k, v in pms_SpectralBicluster
   }
 
   /**
-    Results of the clustering. rows[i, r] is True if cluster i contains row r. Available only after calling fit.
+    Results of the clustering. `rows\[i, r\]` is True if cluster `i` contains row `r`. Available only after calling `fit`.
    */
   get rows_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -268,7 +270,7 @@ pms_SpectralBiclustering_get_submatrix = {k: v for k, v in pms_SpectralBicluster
   }
 
   /**
-    Results of the clustering, like rows.
+    Results of the clustering, like `rows`.
    */
   get columns_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -349,7 +351,7 @@ pms_SpectralBiclustering_get_submatrix = {k: v for k, v in pms_SpectralBicluster
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -376,7 +378,7 @@ pms_SpectralBiclustering_get_submatrix = {k: v for k, v in pms_SpectralBicluster
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -433,14 +435,14 @@ export interface SpectralBiclusteringOptions {
   n_best?: number
 
   /**
-    Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, uses randomized_svd, which may be faster for large matrices. If ‘arpack’, uses scipy.sparse.linalg.svds, which is more accurate, but possibly slower in some cases.
+    Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, uses [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, uses `scipy.sparse.linalg.svds`, which is more accurate, but possibly slower in some cases.
 
     @defaultValue `'randomized'`
    */
   svd_method?: 'randomized' | 'arpack'
 
   /**
-    Number of vectors to use in calculating the SVD. Corresponds to ncv when svd_method=arpack and n_oversamples when svd_method is ‘randomized`.
+    Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized\`.
    */
   n_svd_vecs?: number
 
@@ -468,7 +470,7 @@ export interface SpectralBiclusteringOptions {
   n_init?: number
 
   /**
-    Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See Glossary.
+    Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }

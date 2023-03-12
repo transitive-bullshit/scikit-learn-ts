@@ -18,6 +18,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Random partitioning produces noticeably shorter paths for anomalies. Hence, when a forest of random trees collectively produce shorter path lengths for particular samples, they are highly likely to be anomalies.
 
+  Read more in the [User Guide](../outlier_detection.html#isolation-forest).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
  */
 export class IsolationForest {
@@ -115,7 +117,7 @@ ctor_IsolationForest = {k: v for k, v in ctor_IsolationForest.items() if v is no
 
     The anomaly score of an input sample is computed as the mean anomaly score of the trees in the forest.
 
-    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n_left in the leaf, the average path length of a n_left samples isolation tree is added.
+    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n\_left in the leaf, the average path length of a n\_left samples isolation tree is added.
    */
   async decision_function(
     opts: IsolationForestDecisionFunctionOptions
@@ -241,7 +243,7 @@ pms_IsolationForest_predict = {k: v for k, v in pms_IsolationForest_predict.item
 
     The anomaly score of an input sample is computed as the mean anomaly score of the trees in the forest.
 
-    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n_left in the leaf, the average path length of a n_left samples isolation tree is added.
+    The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n\_left in the leaf, the average path length of a n\_left samples isolation tree is added.
    */
   async score_samples(
     opts: IsolationForestScoreSamplesOptions
@@ -371,7 +373,7 @@ pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_
   }
 
   /**
-    Offset used to define the decision function from the raw scores. We have the relation: decision_function = score_samples - offset_. offset_ is defined as follows. When the contamination parameter is set to “auto”, the offset is equal to -0.5 as the scores of inliers are close to 0 and the scores of outliers are close to -1. When a contamination parameter different than “auto” is provided, the offset is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
+    Offset used to define the decision function from the raw scores. We have the relation: `decision\_function \= score\_samples \- offset\_`. `offset\_` is defined as follows. When the contamination parameter is set to “auto”, the offset is equal to -0.5 as the scores of inliers are close to 0 and the scores of outliers are close to -1. When a contamination parameter different than “auto” is provided, the offset is defined in such a way we obtain the expected number of outliers (samples with decision function < 0) in training.
    */
   get offset_(): Promise<number> {
     if (this._isDisposed) {
@@ -396,7 +398,7 @@ pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -421,7 +423,7 @@ pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -455,7 +457,7 @@ export interface IsolationForestOptions {
   n_estimators?: number
 
   /**
-    If int, then draw max_samples samples.
+    If int, then draw `max\_samples` samples.
 
     @defaultValue `'auto'`
    */
@@ -483,14 +485,14 @@ export interface IsolationForestOptions {
   bootstrap?: boolean
 
   /**
-    The number of jobs to run in parallel for both fit and predict. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
     Controls the pseudo-randomness of the selection of the feature and split values for each branching step and each tree in the forest.
 
-    Pass an int for reproducible results across multiple function calls. See Glossary.
+    Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
@@ -502,7 +504,7 @@ export interface IsolationForestOptions {
   verbose?: number
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See the Glossary.
+    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -511,14 +513,14 @@ export interface IsolationForestOptions {
 
 export interface IsolationForestDecisionFunctionOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface IsolationForestFitOptions {
   /**
-    The input samples. Use dtype=np.float32 for maximum efficiency. Sparse matrices are also supported, use sparse csc_matrix for maximum efficiency.
+    The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -547,7 +549,7 @@ export interface IsolationForestFitPredictOptions {
 
 export interface IsolationForestPredictOptions {
   /**
-    The input samples. Internally, it will be converted to dtype=np.float32 and if a sparse matrix is provided to a sparse csr_matrix.
+    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
    */
   X?: ArrayLike | SparseMatrix[]
 }

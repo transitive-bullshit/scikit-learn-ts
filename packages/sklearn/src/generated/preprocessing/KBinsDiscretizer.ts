@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Bin continuous data into intervals.
 
+  Read more in the [User Guide](../preprocessing.html#preprocessing-discretization).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KBinsDiscretizer.html
  */
 export class KBinsDiscretizer {
@@ -131,7 +133,7 @@ pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: KBinsDiscretizerFitTransformOptions
@@ -243,7 +245,7 @@ pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: KBinsDiscretizerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -303,7 +305,7 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
   }
 
   /**
-    The edges of each bin. Contain arrays of varying shapes (n_bins_, ) Ignored features will have empty arrays.
+    The edges of each bin. Contain arrays of varying shapes `(n\_bins\_, )` Ignored features will have empty arrays.
    */
   get bin_edges_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -357,7 +359,7 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -384,7 +386,7 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -413,7 +415,7 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
 
 export interface KBinsDiscretizerOptions {
   /**
-    The number of bins to produce. Raises ValueError if n_bins < 2.
+    The number of bins to produce. Raises ValueError if `n\_bins < 2`.
 
     @defaultValue `5`
    */
@@ -439,12 +441,12 @@ export interface KBinsDiscretizerOptions {
   dtype?: any
 
   /**
-    Maximum number of samples, used to fit the model, for computational efficiency. Used when strategy="quantile". subsample=None means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of X and that sorting has an n log(n) time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
+    Maximum number of samples, used to fit the model, for computational efficiency. Used when `strategy="quantile"`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
    */
   subsample?: number
 
   /**
-    Determines random number generation for subsampling. Pass an int for reproducible results across multiple function calls. See the subsample parameter for more details. See Glossary.
+    Determines random number generation for subsampling. Pass an int for reproducible results across multiple function calls. See the `subsample` parameter for more details. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -456,7 +458,7 @@ export interface KBinsDiscretizerFitOptions {
   X?: ArrayLike[]
 
   /**
-    Ignored. This parameter exists only for compatibility with Pipeline.
+    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
    */
   y?: any
 }
@@ -494,7 +496,7 @@ export interface KBinsDiscretizerInverseTransformOptions {
 
 export interface KBinsDiscretizerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

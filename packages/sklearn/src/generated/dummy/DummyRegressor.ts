@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This regressor is useful as a simple baseline to compare with other (real) regressors. Do not use it for real problems.
 
+  Read more in the [User Guide](../model_evaluation.html#dummy-estimators).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyRegressor.html
  */
 export class DummyRegressor {
@@ -159,7 +161,7 @@ pms_DummyRegressor_predict = {k: v for k, v in pms_DummyRegressor_predict.items(
   /**
     Return the coefficient of determination R^2 of the prediction.
 
-    The coefficient R^2 is defined as (1 - u/v), where u is the residual sum of squares ((y_true - y_pred) ** 2).sum() and v is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a R^2 score of 0.0.
+    The coefficient R^2 is defined as `(1 \- u/v)`, where `u` is the residual sum of squares `((y\_true \- y\_pred) \*\* 2).sum()` and `v` is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a R^2 score of 0.0.
    */
   async score(opts: DummyRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -293,7 +295,7 @@ export interface DummyRegressorPredictOptions {
 
 export interface DummyRegressorScoreOptions {
   /**
-    Test samples. Passing None as test samples gives the same result as passing real test samples, since DummyRegressor operates independently of the sampled observations.
+    Test samples. Passing None as test samples gives the same result as passing real test samples, since `DummyRegressor` operates independently of the sampled observations.
    */
   X?: ArrayLike[]
 

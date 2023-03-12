@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This tool can display “residuals vs predicted” or “actual vs predicted” using scatter plots to qualitatively assess the behavior of a regressor, preferably on held-out data points.
 
-  See the details in the docstrings of from_estimator or from_predictions to create a visualizer. All parameters are stored as attributes.
+  See the details in the docstrings of [`from\_estimator`](#sklearn.metrics.PredictionErrorDisplay.from_estimator "sklearn.metrics.PredictionErrorDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PredictionErrorDisplay.from_predictions "sklearn.metrics.PredictionErrorDisplay.from_predictions") to create a visualizer. All parameters are stored as attributes.
 
-  For general information regarding scikit-learn visualization tools, read more in the Visualization Guide. For details regarding interpreting these plots, refer to the Model Evaluation Guide.
+  For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PredictionErrorDisplay.html
  */
@@ -105,7 +105,7 @@ ctor_PredictionErrorDisplay = {k: v for k, v in ctor_PredictionErrorDisplay.item
   /**
     Plot the prediction error given a regressor and some data.
 
-    For general information regarding scikit-learn visualization tools, read more in the Visualization Guide. For details regarding interpreting these plots, refer to the Model Evaluation Guide.
+    For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
    */
   async from_estimator(
     opts: PredictionErrorDisplayFromEstimatorOptions
@@ -152,7 +152,7 @@ pms_PredictionErrorDisplay_from_estimator = {k: v for k, v in pms_PredictionErro
   /**
     Plot the prediction error given the true and predicted targets.
 
-    For general information regarding scikit-learn visualization tools, read more in the Visualization Guide. For details regarding interpreting these plots, refer to the Model Evaluation Guide.
+    For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
    */
   async from_predictions(
     opts: PredictionErrorDisplayFromPredictionsOptions
@@ -197,7 +197,7 @@ pms_PredictionErrorDisplay_from_predictions = {k: v for k, v in pms_PredictionEr
   /**
     Plot visualization.
 
-    Extra keyword arguments will be passed to matplotlib’s plot.
+    Extra keyword arguments will be passed to matplotlib’s `plot`.
    */
   async plot(opts: PredictionErrorDisplayPlotOptions): Promise<any> {
     if (this._isDisposed) {
@@ -229,7 +229,7 @@ pms_PredictionErrorDisplay_plot = {k: v for k, v in pms_PredictionErrorDisplay_p
   }
 
   /**
-    Optimal line representing y_true == y_pred. Therefore, it is a diagonal line for kind="predictions" and a horizontal line for kind="residuals".
+    Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal line for `kind="predictions"` and a horizontal line for `kind="residuals"`.
    */
   get line_(): Promise<any> {
     if (this._isDisposed) {
@@ -256,7 +256,7 @@ pms_PredictionErrorDisplay_plot = {k: v for k, v in pms_PredictionErrorDisplay_p
   }
 
   /**
-    Residual lines. If with_errors=False, then it is set to None.
+    Residual lines. If `with\_errors=False`, then it is set to `None`.
    */
   get errors_lines_(): Promise<any> {
     if (this._isDisposed) {
@@ -378,7 +378,7 @@ export interface PredictionErrorDisplayOptions {
 
 export interface PredictionErrorDisplayFromEstimatorOptions {
   /**
-    Fitted regressor or a fitted Pipeline in which the last estimator is a regressor.
+    Fitted regressor or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
    */
   estimator?: any
 
@@ -400,29 +400,29 @@ export interface PredictionErrorDisplayFromEstimatorOptions {
   kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
 
   /**
-    Sampling the samples to be shown on the scatter plot. If float, it should be between 0 and 1 and represents the proportion of the original dataset. If int, it represents the number of samples display on the scatter plot. If None, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `None`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
 
     @defaultValue `1`
    */
   subsample?: number
 
   /**
-    Controls the randomness when subsample is not None. See Glossary for details.
+    Controls the randomness when `subsample` is not `None`. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Dictionary with keywords passed to the matplotlib.pyplot.scatter call.
+    Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
    */
   scatter_kwargs?: any
 
   /**
-    Dictionary with keyword passed to the matplotlib.pyplot.plot call to draw the optimal line.
+    Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
    */
   line_kwargs?: any
 }
@@ -446,36 +446,36 @@ export interface PredictionErrorDisplayFromPredictionsOptions {
   kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
 
   /**
-    Sampling the samples to be shown on the scatter plot. If float, it should be between 0 and 1 and represents the proportion of the original dataset. If int, it represents the number of samples display on the scatter plot. If None, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `None`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
 
     @defaultValue `1`
    */
   subsample?: number
 
   /**
-    Controls the randomness when subsample is not None. See Glossary for details.
+    Controls the randomness when `subsample` is not `None`. See [Glossary](../../glossary.html#term-random_state) for details.
    */
   random_state?: number
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Dictionary with keywords passed to the matplotlib.pyplot.scatter call.
+    Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
    */
   scatter_kwargs?: any
 
   /**
-    Dictionary with keyword passed to the matplotlib.pyplot.plot call to draw the optimal line.
+    Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
    */
   line_kwargs?: any
 }
 
 export interface PredictionErrorDisplayPlotOptions {
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
@@ -487,12 +487,12 @@ export interface PredictionErrorDisplayPlotOptions {
   kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
 
   /**
-    Dictionary with keywords passed to the matplotlib.pyplot.scatter call.
+    Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
    */
   scatter_kwargs?: any
 
   /**
-    Dictionary with keyword passed to the matplotlib.pyplot.plot call to draw the optimal line.
+    Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
    */
   line_kwargs?: any
 }

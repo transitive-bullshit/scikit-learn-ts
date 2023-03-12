@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Classifier implementing the k-nearest neighbors vote.
 
+  Read more in the [User Guide](../neighbors.html#classification).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
  */
 export class KNeighborsClassifier {
@@ -335,7 +337,7 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
   }
 
   /**
-    The distance metric used. It will be same as the metric parameter or a synonym of it, e.g. ‘euclidean’ if the metric parameter set to ‘minkowski’ and p parameter set to 2.
+    The distance metric used. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
    */
   get effective_metric_(): Promise<string> {
     if (this._isDisposed) {
@@ -362,7 +364,7 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
   }
 
   /**
-    Additional keyword arguments for the metric function. For most metrics will be same with metric_params parameter, but may also contain the p parameter value if the effective_metric_ attribute is set to ‘minkowski’.
+    Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
    */
   get effective_metric_params_(): Promise<any> {
     if (this._isDisposed) {
@@ -389,7 +391,7 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -416,7 +418,7 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -470,7 +472,7 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
   }
 
   /**
-    False when y’s shape is (n_samples, ) or (n_samples, 1) during fit otherwise True.
+    False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise True.
    */
   get outputs_2d_(): Promise<boolean> {
     if (this._isDisposed) {
@@ -499,14 +501,14 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
 
 export interface KNeighborsClassifierOptions {
   /**
-    Number of neighbors to use by default for kneighbors queries.
+    Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.KNeighborsClassifier.kneighbors "sklearn.neighbors.KNeighborsClassifier.kneighbors") queries.
 
     @defaultValue `5`
    */
   n_neighbors?: number
 
   /**
-    Weight function used in prediction.  Possible values:
+    Weight function used in prediction. Possible values:
 
     @defaultValue `'uniform'`
    */
@@ -520,23 +522,23 @@ export interface KNeighborsClassifierOptions {
   algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
 
   /**
-    Leaf size passed to BallTree or KDTree.  This can affect the speed of the construction and query, as well as the memory required to store the tree.  The optimal value depends on the nature of the problem.
+    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 
     @defaultValue `30`
    */
   leaf_size?: number
 
   /**
-    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
 
     @defaultValue `2`
    */
   p?: number
 
   /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for valid metric values.
+    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a sparse graph, in which case only “nonzero” elements may be considered neighbors.
+    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
 
     If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
 
@@ -550,7 +552,7 @@ export interface KNeighborsClassifierOptions {
   metric_params?: any
 
   /**
-    The number of parallel jobs to run for neighbors search. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details. Doesn’t affect fit method.
+    The number of parallel jobs to run for neighbors search. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsClassifier.fit "sklearn.neighbors.KNeighborsClassifier.fit") method.
    */
   n_jobs?: number
 }
@@ -588,7 +590,7 @@ export interface KNeighborsClassifierKneighborsOptions {
 
 export interface KNeighborsClassifierKneighborsGraphOptions {
   /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For metric='precomputed' the shape should be (n_queries, n_indexed). Otherwise the shape should be (n_queries, n_features).
+    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
    */
   X?: any
 
@@ -626,7 +628,7 @@ export interface KNeighborsClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

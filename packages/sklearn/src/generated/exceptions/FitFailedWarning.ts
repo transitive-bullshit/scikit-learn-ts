@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Warning class used if there is an error while fitting the estimator.
 
-  This Warning is used in meta estimators GridSearchCV and RandomizedSearchCV and the cross-validation helper function cross_val_score to warn when there is an error while fitting the estimator.
+  This Warning is used in meta estimators GridSearchCV and RandomizedSearchCV and the cross-validation helper function cross\_val\_score to warn when there is an error while fitting the estimator.
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.FitFailedWarning.html
  */
@@ -95,7 +95,7 @@ ctor_FitFailedWarning = {k: v for k, v in ctor_FitFailedWarning.items() if v is 
   }
 
   /**
-    Exception.with_traceback(tb) – set self.__traceback__ to tb and return self.
+    Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
   async with_traceback(
     opts: FitFailedWarningWithTracebackOptions

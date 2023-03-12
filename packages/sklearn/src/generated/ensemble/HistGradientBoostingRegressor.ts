@@ -8,11 +8,13 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Histogram-based Gradient Boosting Regression Tree.
 
-  This estimator is much faster than GradientBoostingRegressor for big datasets (n_samples >= 10 000).
+  This estimator is much faster than [`GradientBoostingRegressor`](sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor "sklearn.ensemble.GradientBoostingRegressor") for big datasets (n\_samples >= 10 000).
 
   This estimator has native support for missing values (NaNs). During training, the tree grower learns at each split point whether samples with missing values should go to the left or right child, based on the potential gain. When predicting, samples with missing values are assigned to the left or right child consequently. If no missing values were encountered for a given feature during training, then samples with missing values are mapped to whichever child has the most samples.
 
-  This implementation is inspired by LightGBM.
+  This implementation is inspired by [LightGBM](https://github.com/Microsoft/LightGBM).
+
+  Read more in the [User Guide](../ensemble.html#histogram-based-gradient-boosting).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html
  */
@@ -209,7 +211,7 @@ pms_HistGradientBoostingRegressor_predict = {k: v for k, v in pms_HistGradientBo
   /**
     Return the coefficient of determination of the prediction.
 
-    The coefficient of determination \(R^2\) is defined as \((1 - \frac{u}{v})\), where \(u\) is the residual sum of squares ((y_true - y_pred)** 2).sum() and \(v\) is the total sum of squares ((y_true - y_true.mean()) ** 2).sum(). The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a \(R^2\) score of 0.0.
+    The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
   async score(
     opts: HistGradientBoostingRegressorScoreOptions
@@ -339,7 +341,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
   }
 
   /**
-    The scores at each iteration on the training data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the scoring parameter. If scoring is not ‘loss’, scores are computed on a subset of at most 10 000 samples. Empty if no early stopping.
+    The scores at each iteration on the training data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. If `scoring` is not ‘loss’, scores are computed on a subset of at most 10 000 samples. Empty if no early stopping.
    */
   get train_score_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -366,7 +368,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
   }
 
   /**
-    The scores at each iteration on the held-out validation data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the scoring parameter. Empty if no early stopping or if validation_fraction is None.
+    The scores at each iteration on the held-out validation data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. Empty if no early stopping or if `validation\_fraction` is None.
    */
   get validation_score_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -393,7 +395,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
   }
 
   /**
-    Boolean mask for the categorical features. None if there are no categorical features.
+    Boolean mask for the categorical features. `None` if there are no categorical features.
    */
   get is_categorical_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -420,7 +422,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -447,7 +449,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -476,7 +478,7 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
 
 export interface HistGradientBoostingRegressorOptions {
   /**
-    The loss function to use in the boosting process. Note that the “squared error” and “poisson” losses actually implement “half least squares loss” and “half poisson deviance” to simplify the computation of the gradient. Furthermore, “poisson” loss internally uses a log-link and requires y >= 0. “quantile” uses the pinball loss.
+    The loss function to use in the boosting process. Note that the “squared error” and “poisson” losses actually implement “half least squares loss” and “half poisson deviance” to simplify the computation of the gradient. Furthermore, “poisson” loss internally uses a log-link and requires `y >= 0`. “quantile” uses the pinball loss.
 
     @defaultValue `'squared_error'`
    */
@@ -488,7 +490,7 @@ export interface HistGradientBoostingRegressorOptions {
   quantile?: number
 
   /**
-    The learning rate, also known as shrinkage. This is used as a multiplicative factor for the leaves values. Use 1 for no shrinkage.
+    The learning rate, also known as *shrinkage*. This is used as a multiplicative factor for the leaves values. Use `1` for no shrinkage.
 
     @defaultValue `0.1`
    */
@@ -521,14 +523,14 @@ export interface HistGradientBoostingRegressorOptions {
   min_samples_leaf?: number
 
   /**
-    The L2 regularization parameter. Use 0 for no regularization (default).
+    The L2 regularization parameter. Use `0` for no regularization (default).
 
     @defaultValue `0`
    */
   l2_regularization?: number
 
   /**
-    The maximum number of bins to use for non-missing values. Before training, each feature of the input array X is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than max_bins bins. In addition to the max_bins bins, one more bin is always reserved for missing values. Must be no larger than 255.
+    The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max\_bins` bins. In addition to the `max\_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255.
 
     @defaultValue `255`
    */
@@ -549,14 +551,14 @@ export interface HistGradientBoostingRegressorOptions {
 
     Each item specifies the set of feature indices that are allowed to interact with each other. If there are more features than specified in these constraints, they are treated as if they were specified as an additional set.
 
-    The strings “pairwise” and “no_interactions” are shorthands for allowing only pairwise or no interactions, respectively.
+    The strings “pairwise” and “no\_interactions” are shorthands for allowing only pairwise or no interactions, respectively.
 
-    For instance, with 5 features in total, interaction_cst=[{0, 1}] is equivalent to interaction_cst=[{0, 1}, {2, 3, 4}], and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4.
+    For instance, with 5 features in total, `interaction\_cst=\[{0, 1}\]` is equivalent to `interaction\_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4.
    */
   interaction_cst?: 'pairwise' | 'no_interaction'
 
   /**
-    When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See the Glossary.
+    When set to `True`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](../../glossary.html#term-warm_start).
 
     @defaultValue `false`
    */
@@ -570,7 +572,7 @@ export interface HistGradientBoostingRegressorOptions {
   early_stopping?: 'auto' | boolean
 
   /**
-    Scoring parameter to use for early stopping. It can be a single string (see The scoring parameter: defining model evaluation rules) or a callable (see Defining your scoring strategy from metric functions). If None, the estimator’s default scorer is used. If scoring='loss', early stopping is checked w.r.t the loss value. Only used if early stopping is performed.
+    Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)). If None, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed.
 
     @defaultValue `'loss'`
    */
@@ -584,7 +586,7 @@ export interface HistGradientBoostingRegressorOptions {
   validation_fraction?: number
 
   /**
-    Used to determine when to “early stop”. The fitting process is stopped when none of the last n_iter_no_change scores are better than the n_iter_no_change - 1 -th-to-last one, up to some tolerance. Only used if early stopping is performed.
+    Used to determine when to “early stop”. The fitting process is stopped when none of the last `n\_iter\_no\_change` scores are better than the `n\_iter\_no\_change \- 1` -th-to-last one, up to some tolerance. Only used if early stopping is performed.
 
     @defaultValue `10`
    */
@@ -605,7 +607,7 @@ export interface HistGradientBoostingRegressorOptions {
   verbose?: number
 
   /**
-    Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
@@ -636,12 +638,12 @@ export interface HistGradientBoostingRegressorPredictOptions {
 
 export interface HistGradientBoostingRegressorScoreOptions {
   /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape (n_samples, n_samples_fitted), where n_samples_fitted is the number of samples used in the fitting for the estimator.
+    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
    */
   X?: ArrayLike[]
 
   /**
-    True values for X.
+    True values for `X`.
    */
   y?: ArrayLike
 

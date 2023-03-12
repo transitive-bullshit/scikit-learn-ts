@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Precision Recall visualization.
 
-  It is recommend to use from_estimator or from_predictions to create a PredictionRecallDisplay. All parameters are stored as attributes.
+  It is recommend to use [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") to create a `PredictionRecallDisplay`. All parameters are stored as attributes.
+
+  Read more in the [User Guide](../../visualizations.html#visualizations).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html
  */
@@ -199,7 +201,7 @@ pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRec
   /**
     Plot visualization.
 
-    Extra keyword arguments will be passed to matplotlib’s plot.
+    Extra keyword arguments will be passed to matplotlib’s `plot`.
    */
   async plot(opts: PrecisionRecallDisplayPlotOptions): Promise<any> {
     if (this._isDisposed) {
@@ -341,7 +343,7 @@ export interface PrecisionRecallDisplayOptions {
 
 export interface PrecisionRecallDisplayFromEstimatorOptions {
   /**
-    Fitted classifier or a fitted Pipeline in which the last estimator is a classifier.
+    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
    */
   estimator?: any
 
@@ -361,29 +363,29 @@ export interface PrecisionRecallDisplayFromEstimatorOptions {
   sample_weight?: ArrayLike
 
   /**
-    The class considered as the positive class when computing the precision and recall metrics. By default, estimators.classes_[1] is considered as the positive class.
+    The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
    */
   pos_label?: string | number
 
   /**
-    Specifies whether to use predict_proba or decision_function as the target response. If set to ‘auto’, predict_proba is tried first and if it does not exist decision_function is tried next.
+    Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
 
     @defaultValue `'auto'`
    */
   response_method?: 'predict_proba' | 'decision_function' | 'auto'
 
   /**
-    Name for labeling curve. If None, no name is used.
+    Name for labeling curve. If `None`, no name is used.
    */
   name?: string
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Keyword arguments to be passed to matplotlib’s plot.
+    Keyword arguments to be passed to matplotlib’s `plot`.
    */
   kwargs?: any
 }
@@ -410,34 +412,34 @@ export interface PrecisionRecallDisplayFromPredictionsOptions {
   pos_label?: string | number
 
   /**
-    Name for labeling curve. If None, name will be set to "Classifier".
+    Name for labeling curve. If `None`, name will be set to `"Classifier"`.
    */
   name?: string
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Keyword arguments to be passed to matplotlib’s plot.
+    Keyword arguments to be passed to matplotlib’s `plot`.
    */
   kwargs?: any
 }
 
 export interface PrecisionRecallDisplayPlotOptions {
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Name of precision recall curve for labeling. If None, use estimator_name if not None, otherwise no labeling is shown.
+    Name of precision recall curve for labeling. If `None`, use `estimator\_name` if not `None`, otherwise no labeling is shown.
    */
   name?: string
 
   /**
-    Keyword arguments to be passed to matplotlib’s plot.
+    Keyword arguments to be passed to matplotlib’s `plot`.
    */
   kwargs?: any
 }

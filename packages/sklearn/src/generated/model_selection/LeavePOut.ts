@@ -10,9 +10,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Provides train/test indices to split data in train/test sets. This results in testing on all distinct samples of size p, while the remaining n - p samples form the training set in each iteration.
 
-  Note: LeavePOut(p) is NOT equivalent to KFold(n_splits=n_samples // p) which creates non-overlapping test sets.
+  Note: `LeavePOut(p)` is NOT equivalent to `KFold(n\_splits=n\_samples // p)` which creates non-overlapping test sets.
 
-  Due to the high number of iterations which grows combinatorically with the number of samples this cross-validation method can be very costly. For large datasets one should favor KFold, StratifiedKFold or ShuffleSplit.
+  Due to the high number of iterations which grows combinatorically with the number of samples this cross-validation method can be very costly. For large datasets one should favor [`KFold`](sklearn.model_selection.KFold.html#sklearn.model_selection.KFold "sklearn.model_selection.KFold"), [`StratifiedKFold`](sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold "sklearn.model_selection.StratifiedKFold") or [`ShuffleSplit`](sklearn.model_selection.ShuffleSplit.html#sklearn.model_selection.ShuffleSplit "sklearn.model_selection.ShuffleSplit").
+
+  Read more in the [User Guide](../cross_validation.html#leave-p-out).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html
  */
@@ -165,7 +167,7 @@ export interface LeavePOutOptions {
 
 export interface LeavePOutGetNSplitsOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 
@@ -182,7 +184,7 @@ export interface LeavePOutGetNSplitsOptions {
 
 export interface LeavePOutSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

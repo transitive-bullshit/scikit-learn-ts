@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Soft Voting/Majority Rule classifier for unfitted estimators.
 
+  Read more in the [User Guide](../ensemble.html#voting-classifier).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html
  */
 export class VotingClassifier {
@@ -310,7 +312,7 @@ pms_VotingClassifier_score = {k: v for k, v in pms_VotingClassifier_score.items(
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: VotingClassifierSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -370,7 +372,7 @@ pms_VotingClassifier_transform = {k: v for k, v in pms_VotingClassifier_transfor
   }
 
   /**
-    The collection of fitted sub-estimators as defined in estimators that are not ‘drop’.
+    The collection of fitted sub-estimators as defined in `estimators` that are not ‘drop’.
    */
   get estimators_(): Promise<any> {
     if (this._isDisposed) {
@@ -476,7 +478,7 @@ pms_VotingClassifier_transform = {k: v for k, v in pms_VotingClassifier_transfor
   }
 
   /**
-    Names of features seen during fit. Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -505,7 +507,7 @@ pms_VotingClassifier_transform = {k: v for k, v in pms_VotingClassifier_transfor
 
 export interface VotingClassifierOptions {
   /**
-    Invoking the fit method on the VotingClassifier will fit clones of those original estimators that will be stored in the class attribute self.estimators_. An estimator can be set to 'drop' using set_params.
+    Invoking the `fit` method on the `VotingClassifier` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingClassifier.set_params "sklearn.ensemble.VotingClassifier.set_params").
    */
   estimators?: any
 
@@ -517,17 +519,17 @@ export interface VotingClassifierOptions {
   voting?: 'hard' | 'soft'
 
   /**
-    Sequence of weights (float or int) to weight the occurrences of predicted class labels (hard voting) or class probabilities before averaging (soft voting). Uses uniform weights if None.
+    Sequence of weights (`float` or `int`) to weight the occurrences of predicted class labels (`hard` voting) or class probabilities before averaging (`soft` voting). Uses uniform weights if `None`.
    */
   weights?: ArrayLike
 
   /**
-    The number of jobs to run in parallel for fit. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of jobs to run in parallel for `fit`. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 
   /**
-    Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten_transform=True, transform method returns matrix with shape (n_samples, n_classifiers * n_classes). If flatten_transform=False, it returns (n_classifiers, n_samples, n_classes).
+    Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten\_transform=True, transform method returns matrix with shape (n\_samples, n\_classifiers \* n\_classes). If flatten\_transform=False, it returns (n\_classifiers, n\_samples, n\_classes).
 
     @defaultValue `true`
    */
@@ -543,7 +545,7 @@ export interface VotingClassifierOptions {
 
 export interface VotingClassifierFitOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -603,7 +605,7 @@ export interface VotingClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 
@@ -615,14 +617,14 @@ export interface VotingClassifierScoreOptions {
 
 export interface VotingClassifierSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface VotingClassifierTransformOptions {
   /**
-    Training vectors, where n_samples is the number of samples and n_features is the number of features.
+    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 }

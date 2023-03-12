@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   White kernel.
 
-  The main use-case of this kernel is as part of a sum-kernel where it explains the noise of the signal as independently and identically normally-distributed. The parameter noise_level equals the variance of this noise.
+  The main use-case of this kernel is as part of a sum-kernel where it explains the noise of the signal as independently and identically normally-distributed. The parameter noise\_level equals the variance of this noise.
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.WhiteKernel.html
  */
@@ -240,7 +240,7 @@ export interface WhiteKernelOptions {
   noise_level?: number
 
   /**
-    The lower and upper bound on ‘noise_level’. If set to “fixed”, ‘noise_level’ cannot be changed during hyperparameter tuning.
+    The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise\_level’ cannot be changed during hyperparameter tuning.
    */
   noise_level_bounds?: 'fixed'
 }

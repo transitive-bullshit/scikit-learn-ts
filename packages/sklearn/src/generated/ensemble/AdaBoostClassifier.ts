@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   An AdaBoost classifier.
 
-  An AdaBoost [1] classifier is a meta-estimator that begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
+  An AdaBoost \[1\] classifier is a meta-estimator that begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
 
-  This class implements the algorithm known as AdaBoost-SAMME [2].
+  This class implements the algorithm known as AdaBoost-SAMME \[2\].
+
+  Read more in the [User Guide](../ensemble.html#adaboost).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html
  */
@@ -105,7 +107,7 @@ ctor_AdaBoostClassifier = {k: v for k, v in ctor_AdaBoostClassifier.items() if v
   }
 
   /**
-    Compute the decision function of X.
+    Compute the decision function of `X`.
    */
   async decision_function(
     opts: AdaBoostClassifierDecisionFunctionOptions
@@ -315,7 +317,7 @@ pms_AdaBoostClassifier_score = {k: v for k, v in pms_AdaBoostClassifier_score.it
   }
 
   /**
-    Compute decision function of X for each boosting iteration.
+    Compute decision function of `X` for each boosting iteration.
 
     This method allows monitoring (i.e. determine error on testing set) after each boosting iteration.
    */
@@ -631,7 +633,7 @@ pms_AdaBoostClassifier_staged_score = {k: v for k, v in pms_AdaBoostClassifier_s
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -658,7 +660,7 @@ pms_AdaBoostClassifier_staged_score = {k: v for k, v in pms_AdaBoostClassifier_s
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -687,38 +689,38 @@ pms_AdaBoostClassifier_staged_score = {k: v for k, v in pms_AdaBoostClassifier_s
 
 export interface AdaBoostClassifierOptions {
   /**
-    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper classes_ and n_classes_ attributes. If None, then the base estimator is DecisionTreeClassifier initialized with max_depth=1.
+    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `None`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
    */
   estimator?: any
 
   /**
-    The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range [1, inf).
+    The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range `\[1, inf)`.
 
     @defaultValue `50`
    */
   n_estimators?: number
 
   /**
-    Weight applied to each classifier at each boosting iteration. A higher learning rate increases the contribution of each classifier. There is a trade-off between the learning_rate and n_estimators parameters. Values must be in the range (0.0, inf).
+    Weight applied to each classifier at each boosting iteration. A higher learning rate increases the contribution of each classifier. There is a trade-off between the `learning\_rate` and `n\_estimators` parameters. Values must be in the range `(0.0, inf)`.
 
     @defaultValue `1`
    */
   learning_rate?: number
 
   /**
-    If ‘SAMME.R’ then use the SAMME.R real boosting algorithm. estimator must support calculation of class probabilities. If ‘SAMME’ then use the SAMME discrete boosting algorithm. The SAMME.R algorithm typically converges faster than SAMME, achieving a lower test error with fewer boosting iterations.
+    If ‘SAMME.R’ then use the SAMME.R real boosting algorithm. `estimator` must support calculation of class probabilities. If ‘SAMME’ then use the SAMME discrete boosting algorithm. The SAMME.R algorithm typically converges faster than SAMME, achieving a lower test error with fewer boosting iterations.
 
     @defaultValue `'SAMME.R'`
    */
   algorithm?: 'SAMME' | 'SAMME.R'
 
   /**
-    Controls the random seed given at each estimator at each boosting iteration. Thus, it is only used when estimator exposes a random_state. Pass an int for reproducible output across multiple function calls. See Glossary.
+    Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper classes_ and n_classes_ attributes. If None, then the base estimator is DecisionTreeClassifier initialized with max_depth=1.
+    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `None`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
    */
   base_estimator?: any
 }
@@ -742,7 +744,7 @@ export interface AdaBoostClassifierFitOptions {
   y?: ArrayLike
 
   /**
-    Sample weights. If None, the sample weights are initialized to 1 / n_samples.
+    Sample weights. If None, the sample weights are initialized to 1 / n\_samples.
    */
   sample_weight?: ArrayLike
 }
@@ -775,7 +777,7 @@ export interface AdaBoostClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

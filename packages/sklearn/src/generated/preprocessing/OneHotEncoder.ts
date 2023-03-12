@@ -8,13 +8,15 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Encode categorical features as a one-hot numeric array.
 
-  The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. The features are encoded using a one-hot (aka ‘one-of-K’ or ‘dummy’) encoding scheme. This creates a binary column for each category and returns a sparse matrix or dense array (depending on the sparse_output parameter)
+  The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. The features are encoded using a one-hot (aka ‘one-of-K’ or ‘dummy’) encoding scheme. This creates a binary column for each category and returns a sparse matrix or dense array (depending on the `sparse\_output` parameter)
 
-  By default, the encoder derives the categories based on the unique values in each feature. Alternatively, you can also specify the categories manually.
+  By default, the encoder derives the categories based on the unique values in each feature. Alternatively, you can also specify the `categories` manually.
 
   This encoding is needed for feeding categorical data to many scikit-learn estimators, notably linear models and SVMs with the standard kernels.
 
   Note: a one-hot encoding of y labels should use a LabelBinarizer instead.
+
+  Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html
  */
@@ -139,7 +141,7 @@ pms_OneHotEncoder_fit = {k: v for k, v in pms_OneHotEncoder_fit.items() if v is 
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: OneHotEncoderFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -206,9 +208,9 @@ pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_ge
   /**
     Convert the data back to the original representation.
 
-    When unknown categories are encountered (all zeros in the one-hot encoding), None is used to represent this category. If the feature with the unknown category has a dropped category, the dropped category will be its inverse.
+    When unknown categories are encountered (all zeros in the one-hot encoding), `None` is used to represent this category. If the feature with the unknown category has a dropped category, the dropped category will be its inverse.
 
-    For a given input feature, if there is an infrequent category, ‘infrequent_sklearn’ will be used to represent the infrequent category.
+    For a given input feature, if there is an infrequent category, ‘infrequent\_sklearn’ will be used to represent the infrequent category.
    */
   async inverse_transform(
     opts: OneHotEncoderInverseTransformOptions
@@ -242,7 +244,7 @@ pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_invers
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: OneHotEncoderSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -302,7 +304,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    The categories of each feature determined during fitting (in order of the features in X and corresponding with the output of transform). This includes the category specified in drop (if any).
+    The categories of each feature determined during fitting (in order of the features in X and corresponding with the output of `transform`). This includes the category specified in `drop` (if any).
    */
   get categories_(): Promise<any> {
     if (this._isDisposed) {
@@ -327,7 +329,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    drop_idx_[i] is the index in categories_[i] of the category to be dropped for each feature.
+    `drop\_idx\_\[i\]` is the index in `categories\_\[i\]` of the category to be dropped for each feature.
    */
   get drop_idx_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -352,7 +354,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -377,7 +379,7 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -437,7 +439,7 @@ export interface OneHotEncoderOptions {
   dtype?: any
 
   /**
-    Specifies the way unknown categories are handled during transform.
+    Specifies the way unknown categories are handled during [`transform`](#sklearn.preprocessing.OneHotEncoder.transform "sklearn.preprocessing.OneHotEncoder.transform").
 
     @defaultValue `'error'`
    */
@@ -449,7 +451,7 @@ export interface OneHotEncoderOptions {
   min_frequency?: number
 
   /**
-    Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, max_categories includes the category representing the infrequent categories along with the frequent categories. If None, there is no limit to the number of output features.
+    Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `None`, there is no limit to the number of output features.
    */
   max_categories?: number
 }
@@ -461,7 +463,7 @@ export interface OneHotEncoderFitOptions {
   X?: ArrayLike[]
 
   /**
-    Ignored. This parameter exists only for compatibility with Pipeline.
+    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
    */
   y?: any
 }
@@ -499,7 +501,7 @@ export interface OneHotEncoderInverseTransformOptions {
 
 export interface OneHotEncoderSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

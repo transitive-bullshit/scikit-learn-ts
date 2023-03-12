@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Pipeline of transforms with a final estimator.
 
-  Sequentially apply a list of transforms and a final estimator. Intermediate steps of the pipeline must be ‘transforms’, that is, they must implement fit and transform methods. The final estimator only needs to implement fit. The transformers in the pipeline can be cached using memory argument.
+  Sequentially apply a list of transforms and a final estimator. Intermediate steps of the pipeline must be ‘transforms’, that is, they must implement `fit` and `transform` methods. The final estimator only needs to implement `fit`. The transformers in the pipeline can be cached using `memory` argument.
 
-  The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters. For this, it enables setting parameters of the various steps using their names and the parameter name separated by a '__', as in the example below. A step’s estimator may be replaced entirely by setting the parameter with its name to another estimator, or a transformer removed by setting it to 'passthrough' or None.
+  The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters. For this, it enables setting parameters of the various steps using their names and the parameter name separated by a `'\_\_'`, as in the example below. A step’s estimator may be replaced entirely by setting the parameter with its name to another estimator, or a transformer removed by setting it to `'passthrough'` or `None`.
+
+  Read more in the [User Guide](../compose.html#pipeline).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
  */
@@ -96,9 +98,9 @@ ctor_Pipeline = {k: v for k, v in ctor_Pipeline.items() if v is not None}`
   }
 
   /**
-    Transform the data, and apply decision_function with the final estimator.
+    Transform the data, and apply `decision\_function` with the final estimator.
 
-    Call transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls decision_function method. Only valid if the final estimator implements decision_function.
+    Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `decision\_function` method. Only valid if the final estimator implements `decision\_function`.
    */
   async decision_function(
     opts: PipelineDecisionFunctionOptions
@@ -160,9 +162,9 @@ pms_Pipeline_fit = {k: v for k, v in pms_Pipeline_fit.items() if v is not None}`
   }
 
   /**
-    Transform the data, and apply fit_predict with the final estimator.
+    Transform the data, and apply `fit\_predict` with the final estimator.
 
-    Call fit_transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls fit_predict method. Only valid if the final estimator implements fit_predict.
+    Call `fit\_transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `fit\_predict` method. Only valid if the final estimator implements `fit\_predict`.
    */
   async fit_predict(opts: PipelineFitPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -194,7 +196,7 @@ pms_Pipeline_fit_predict = {k: v for k, v in pms_Pipeline_fit_predict.items() if
   /**
     Fit the model and transform with the final estimator.
 
-    Fits all the transformers one after the other and transform the data. Then uses fit_transform on transformed data with the final estimator.
+    Fits all the transformers one after the other and transform the data. Then uses `fit\_transform` on transformed data with the final estimator.
    */
   async fit_transform(opts: PipelineFitTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -258,9 +260,9 @@ pms_Pipeline_get_feature_names_out = {k: v for k, v in pms_Pipeline_get_feature_
   }
 
   /**
-    Apply inverse_transform for each step in a reverse order.
+    Apply `inverse\_transform` for each step in a reverse order.
 
-    All estimators in the pipeline must support inverse_transform.
+    All estimators in the pipeline must support `inverse\_transform`.
    */
   async inverse_transform(
     opts: PipelineInverseTransformOptions
@@ -290,9 +292,9 @@ pms_Pipeline_inverse_transform = {k: v for k, v in pms_Pipeline_inverse_transfor
   }
 
   /**
-    Transform the data, and apply predict with the final estimator.
+    Transform the data, and apply `predict` with the final estimator.
 
-    Call transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls predict method. Only valid if the final estimator implements predict.
+    Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict` method. Only valid if the final estimator implements `predict`.
    */
   async predict(opts: PipelinePredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -320,9 +322,9 @@ pms_Pipeline_predict = {k: v for k, v in pms_Pipeline_predict.items() if v is no
   }
 
   /**
-    Transform the data, and apply predict_log_proba with the final estimator.
+    Transform the data, and apply `predict\_log\_proba` with the final estimator.
 
-    Call transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls predict_log_proba method. Only valid if the final estimator implements predict_log_proba.
+    Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict\_log\_proba` method. Only valid if the final estimator implements `predict\_log\_proba`.
    */
   async predict_log_proba(
     opts: PipelinePredictLogProbaOptions
@@ -354,9 +356,9 @@ pms_Pipeline_predict_log_proba = {k: v for k, v in pms_Pipeline_predict_log_prob
   }
 
   /**
-    Transform the data, and apply predict_proba with the final estimator.
+    Transform the data, and apply `predict\_proba` with the final estimator.
 
-    Call transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls predict_proba method. Only valid if the final estimator implements predict_proba.
+    Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict\_proba` method. Only valid if the final estimator implements `predict\_proba`.
    */
   async predict_proba(opts: PipelinePredictProbaOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -384,9 +386,9 @@ pms_Pipeline_predict_proba = {k: v for k, v in pms_Pipeline_predict_proba.items(
   }
 
   /**
-    Transform the data, and apply score with the final estimator.
+    Transform the data, and apply `score` with the final estimator.
 
-    Call transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls score method. Only valid if the final estimator implements score.
+    Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `score` method. Only valid if the final estimator implements `score`.
    */
   async score(opts: PipelineScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -416,9 +418,9 @@ pms_Pipeline_score = {k: v for k, v in pms_Pipeline_score.items() if v is not No
   }
 
   /**
-    Transform the data, and apply score_samples with the final estimator.
+    Transform the data, and apply `score\_samples` with the final estimator.
 
-    Call transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls score_samples method. Only valid if the final estimator implements score_samples.
+    Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `score\_samples` method. Only valid if the final estimator implements `score\_samples`.
    */
   async score_samples(opts: PipelineScoreSamplesOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -446,9 +448,9 @@ pms_Pipeline_score_samples = {k: v for k, v in pms_Pipeline_score_samples.items(
   }
 
   /**
-    Set the output container when "transform" and "fit_transform" are called.
+    Set the output container when `"transform"` and `"fit\_transform"` are called.
 
-    Calling set_output will set the output of all estimators in steps.
+    Calling `set\_output` will set the output of all estimators in `steps`.
    */
   async set_output(opts: PipelineSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -476,11 +478,11 @@ pms_Pipeline_set_output = {k: v for k, v in pms_Pipeline_set_output.items() if v
   }
 
   /**
-    Transform the data, and apply transform with the final estimator.
+    Transform the data, and apply `transform` with the final estimator.
 
-    Call transform of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls transform method. Only valid if the final estimator implements transform.
+    Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `transform` method. Only valid if the final estimator implements `transform`.
 
-    This also works where final estimator is None in which case all prior transformations are applied.
+    This also works where final estimator is `None` in which case all prior transformations are applied.
    */
   async transform(opts: PipelineTransformOptions): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -508,12 +510,12 @@ pms_Pipeline_transform = {k: v for k, v in pms_Pipeline_transform.items() if v i
 
 export interface PipelineOptions {
   /**
-    List of (name, transform) tuples (implementing fit/transform) that are chained in sequential order. The last transform must be an estimator.
+    List of (name, transform) tuples (implementing `fit`/`transform`) that are chained in sequential order. The last transform must be an estimator.
    */
   steps?: any
 
   /**
-    Used to cache the fitted transformers of the pipeline. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute named_steps or steps to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
+    Used to cache the fitted transformers of the pipeline. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
    */
   memory?: string
 
@@ -544,7 +546,7 @@ export interface PipelineFitOptions {
   y?: any
 
   /**
-    Parameters passed to the fit method of each step, where each parameter name is prefixed such that parameter p for step s has key s__p.
+    Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
    */
   fit_params?: any
 }
@@ -561,7 +563,7 @@ export interface PipelineFitPredictOptions {
   y?: any
 
   /**
-    Parameters passed to the fit method of each step, where each parameter name is prefixed such that parameter p for step s has key s__p.
+    Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
    */
   fit_params?: any
 }
@@ -578,7 +580,7 @@ export interface PipelineFitTransformOptions {
   y?: any
 
   /**
-    Parameters passed to the fit method of each step, where each parameter name is prefixed such that parameter p for step s has key s__p.
+    Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
    */
   fit_params?: any
 }
@@ -592,7 +594,7 @@ export interface PipelineGetFeatureNamesOutOptions {
 
 export interface PipelineInverseTransformOptions {
   /**
-    Data samples, where n_samples is the number of samples and n_features is the number of features. Must fulfill input requirements of last step of pipeline’s inverse_transform method.
+    Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method.
    */
   Xt?: ArrayLike[]
 }
@@ -604,7 +606,7 @@ export interface PipelinePredictOptions {
   X?: any
 
   /**
-    Parameters to the predict called at the end of all transformations in the pipeline. Note that while this may be used to return uncertainties from some models with return_std or return_cov, uncertainties that are generated by the transformations in the pipeline are not propagated to the final estimator.
+    Parameters to the `predict` called at the end of all transformations in the pipeline. Note that while this may be used to return uncertainties from some models with return\_std or return\_cov, uncertainties that are generated by the transformations in the pipeline are not propagated to the final estimator.
    */
   predict_params?: any
 }
@@ -616,7 +618,7 @@ export interface PipelinePredictLogProbaOptions {
   X?: any
 
   /**
-    Parameters to the predict_log_proba called at the end of all transformations in the pipeline.
+    Parameters to the `predict\_log\_proba` called at the end of all transformations in the pipeline.
    */
   predict_log_proba_params?: any
 }
@@ -628,7 +630,7 @@ export interface PipelinePredictProbaOptions {
   X?: any
 
   /**
-    Parameters to the predict_proba called at the end of all transformations in the pipeline.
+    Parameters to the `predict\_proba` called at the end of all transformations in the pipeline.
    */
   predict_proba_params?: any
 }
@@ -645,7 +647,7 @@ export interface PipelineScoreOptions {
   y?: any
 
   /**
-    If not None, this argument is passed as sample_weight keyword argument to the score method of the final estimator.
+    If not None, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator.
    */
   sample_weight?: ArrayLike
 }
@@ -659,7 +661,7 @@ export interface PipelineScoreSamplesOptions {
 
 export interface PipelineSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

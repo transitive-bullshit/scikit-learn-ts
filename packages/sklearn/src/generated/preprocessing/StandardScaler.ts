@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Standardize features by removing the mean and scaling to unit variance.
 
-  The standard score of a sample x is calculated as:
+  The standard score of a sample `x` is calculated as:
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
  */
@@ -129,7 +129,7 @@ pms_StandardScaler_fit = {k: v for k, v in pms_StandardScaler_fit.items() if v i
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: StandardScalerFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -230,7 +230,7 @@ pms_StandardScaler_inverse_transform = {k: v for k, v in pms_StandardScaler_inve
   /**
     Online computation of mean and std on X for later scaling.
 
-    All of X is processed as a single batch. This is intended for cases when fit is not feasible due to very large number of n_samples or because X is read from a continuous stream.
+    All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.StandardScaler.fit "sklearn.preprocessing.StandardScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
 
     The algorithm for incremental mean and std is given in Equation 1.5a,b in Chan, Tony F., Gene H. Golub, and Randall J. LeVeque. “Algorithms for computing the sample variance: Analysis and recommendations.” The American Statistician 37.3 (1983): 242-247:
    */
@@ -266,7 +266,7 @@ pms_StandardScaler_partial_fit = {k: v for k, v in pms_StandardScaler_partial_fi
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: StandardScalerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -326,7 +326,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    Per feature relative scaling of the data to achieve zero mean and unit variance. Generally this is calculated using np.sqrt(var_). If a variance is zero, we can’t achieve unit variance, and the data is left as-is, giving a scaling factor of 1. scale_ is equal to None when with_std=False.
+    Per feature relative scaling of the data to achieve zero mean and unit variance. Generally this is calculated using `np.sqrt(var\_)`. If a variance is zero, we can’t achieve unit variance, and the data is left as-is, giving a scaling factor of 1. `scale\_` is equal to `None` when `with\_std=False`.
    */
   get scale_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -349,7 +349,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    The mean value for each feature in the training set. Equal to None when with_mean=False.
+    The mean value for each feature in the training set. Equal to `None` when `with\_mean=False`.
    */
   get mean_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -372,7 +372,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    The variance for each feature in the training set. Used to compute scale_. Equal to None when with_std=False.
+    The variance for each feature in the training set. Used to compute `scale\_`. Equal to `None` when `with\_std=False`.
    */
   get var_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -395,7 +395,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -420,7 +420,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -445,7 +445,7 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
   }
 
   /**
-    The number of samples processed by the estimator for each feature. If there are no missing samples, the n_samples_seen will be an integer, otherwise it will be an array of dtype int. If sample_weights are used it will be a float (if no missing data) or an array of dtype float that sums the weights seen so far. Will be reset on new calls to fit, but increments across partial_fit calls.
+    The number of samples processed by the estimator for each feature. If there are no missing samples, the `n\_samples\_seen` will be an integer, otherwise it will be an array of dtype int. If `sample\_weights` are used it will be a float (if no missing data) or an array of dtype float that sums the weights seen so far. Will be reset on new calls to fit, but increments across `partial\_fit` calls.
    */
   get n_samples_seen_(): Promise<number | NDArray> {
     if (this._isDisposed) {
@@ -565,7 +565,7 @@ export interface StandardScalerPartialFitOptions {
 
 export interface StandardScalerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

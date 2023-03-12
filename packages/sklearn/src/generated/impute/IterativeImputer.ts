@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A strategy for imputing missing values by modeling each feature with missing values as a function of other features in a round-robin fashion.
 
+  Read more in the [User Guide](../impute.html#iterative-imputer).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html
  */
 export class IterativeImputer {
@@ -119,7 +121,7 @@ ctor_IterativeImputer = {k: v for k, v in ctor_IterativeImputer.items() if v is 
   }
 
   /**
-    Fit the imputer on X and return self.
+    Fit the imputer on `X` and return self.
    */
   async fit(opts: IterativeImputerFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -149,7 +151,7 @@ pms_IterativeImputer_fit = {k: v for k, v in pms_IterativeImputer_fit.items() if
   }
 
   /**
-    Fit the imputer on X and return the transformed X.
+    Fit the imputer on `X` and return the transformed `X`.
    */
   async fit_transform(
     opts: IterativeImputerFitTransformOptions
@@ -220,7 +222,7 @@ pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImpu
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: IterativeImputerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -250,9 +252,9 @@ pms_IterativeImputer_set_output = {k: v for k, v in pms_IterativeImputer_set_out
   }
 
   /**
-    Impute all missing values in X.
+    Impute all missing values in `X`.
 
-    Note that this is stochastic, and that if random_state is not fixed, repeated calls, or permuted input, results will differ.
+    Note that this is stochastic, and that if `random\_state` is not fixed, repeated calls, or permuted input, results will differ.
    */
   async transform(opts: IterativeImputerTransformOptions): Promise<ArrayLike> {
     if (this._isDisposed) {
@@ -309,7 +311,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Each tuple has (feat_idx, neighbor_feat_idx, estimator), where feat_idx is the current feature to be imputed, neighbor_feat_idx is the array of other features used to impute the current feature, and estimator is the trained estimator used for the imputation. Length is self.n_features_with_missing_ * self.n_iter_.
+    Each tuple has `(feat\_idx, neighbor\_feat\_idx, estimator)`, where `feat\_idx` is the current feature to be imputed, `neighbor\_feat\_idx` is the array of other features used to impute the current feature, and `estimator` is the trained estimator used for the imputation. Length is `self.n\_features\_with\_missing\_ \* self.n\_iter\_`.
    */
   get imputation_sequence_(): Promise<any> {
     if (this._isDisposed) {
@@ -336,7 +338,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Number of iteration rounds that occurred. Will be less than self.max_iter if early stopping criterion was reached.
+    Number of iteration rounds that occurred. Will be less than `self.max\_iter` if early stopping criterion was reached.
    */
   get n_iter_(): Promise<number> {
     if (this._isDisposed) {
@@ -363,7 +365,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -390,7 +392,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -444,7 +446,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    Indicator used to add binary indicators for missing values. None if add_indicator=False.
+    Indicator used to add binary indicators for missing values. `None` if `add\_indicator=False`.
    */
   get indicator_(): Promise<any> {
     if (this._isDisposed) {
@@ -471,7 +473,7 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
   }
 
   /**
-    RandomState instance that is generated either from a seed, the random number generator or by np.random.
+    RandomState instance that is generated either from a seed, the random number generator or by `np.random`.
    */
   get random_state_(): Promise<any> {
     if (this._isDisposed) {
@@ -500,24 +502,24 @@ pms_IterativeImputer_transform = {k: v for k, v in pms_IterativeImputer_transfor
 
 export interface IterativeImputerOptions {
   /**
-    The estimator to use at each step of the round-robin imputation. If sample_posterior=True, the estimator must support return_std in its predict method.
+    The estimator to use at each step of the round-robin imputation. If `sample\_posterior=True`, the estimator must support `return\_std` in its `predict` method.
    */
   estimator?: any
 
   /**
-    The placeholder for the missing values. All occurrences of missing_values will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, missing_values should be set to np.nan, since pd.NA will be converted to np.nan.
+    The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
    */
   missing_values?: number
 
   /**
-    Whether to sample from the (Gaussian) predictive posterior of the fitted estimator for each imputation. Estimator must support return_std in its predict method if set to True. Set to True if using IterativeImputer for multiple imputations.
+    Whether to sample from the (Gaussian) predictive posterior of the fitted estimator for each imputation. Estimator must support `return\_std` in its `predict` method if set to `True`. Set to `True` if using `IterativeImputer` for multiple imputations.
 
     @defaultValue `false`
    */
   sample_posterior?: boolean
 
   /**
-    Maximum number of imputation rounds to perform before returning the imputations computed during the final round. A round is a single imputation of each feature with missing values. The stopping criterion is met once max(abs(X_t - X_{t-1}))/max(abs(X[known_vals])) < tol, where X_t is X at iteration t. Note that early stopping is only applied if sample_posterior=False.
+    Maximum number of imputation rounds to perform before returning the imputations computed during the final round. A round is a single imputation of each feature with missing values. The stopping criterion is met once `max(abs(X\_t \- X\_{t-1}))/max(abs(X\[known\_vals\])) < tol`, where `X\_t` is `X` at iteration `t`. Note that early stopping is only applied if `sample\_posterior=False`.
 
     @defaultValue `10`
    */
@@ -531,12 +533,12 @@ export interface IterativeImputerOptions {
   tol?: number
 
   /**
-    Number of other features to use to estimate the missing values of each feature column. Nearness between features is measured using the absolute correlation coefficient between each feature pair (after initial imputation). To ensure coverage of features throughout the imputation process, the neighbor features are not necessarily nearest, but are drawn with probability proportional to correlation for each imputed target feature. Can provide significant speed-up when the number of features is huge. If None, all features will be used.
+    Number of other features to use to estimate the missing values of each feature column. Nearness between features is measured using the absolute correlation coefficient between each feature pair (after initial imputation). To ensure coverage of features throughout the imputation process, the neighbor features are not necessarily nearest, but are drawn with probability proportional to correlation for each imputed target feature. Can provide significant speed-up when the number of features is huge. If `None`, all features will be used.
    */
   n_nearest_features?: number
 
   /**
-    Which strategy to use to initialize the missing values. Same as the strategy parameter in SimpleImputer.
+    Which strategy to use to initialize the missing values. Same as the `strategy` parameter in [`SimpleImputer`](sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer "sklearn.impute.SimpleImputer").
 
     @defaultValue `'mean'`
    */
@@ -550,19 +552,19 @@ export interface IterativeImputerOptions {
   imputation_order?: 'ascending' | 'descending' | 'roman' | 'arabic' | 'random'
 
   /**
-    If True then features with missing values during transform which did not have any missing values during fit will be imputed with the initial imputation method only. Set to True if you have many features with no missing values at both fit and transform time to save compute.
+    If `True` then features with missing values during [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") which did not have any missing values during [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") will be imputed with the initial imputation method only. Set to `True` if you have many features with no missing values at both [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") and [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") time to save compute.
 
     @defaultValue `false`
    */
   skip_complete?: boolean
 
   /**
-    Minimum possible imputed value. Broadcast to shape (n_features,) if scalar. If array-like, expects shape (n_features,), one min value for each feature. The default is -np.inf.
+    Minimum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one min value for each feature. The default is `\-np.inf`.
    */
   min_value?: number | ArrayLike
 
   /**
-    Maximum possible imputed value. Broadcast to shape (n_features,) if scalar. If array-like, expects shape (n_features,), one max value for each feature. The default is np.inf.
+    Maximum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one max value for each feature. The default is `np.inf`.
    */
   max_value?: number | ArrayLike
 
@@ -574,19 +576,19 @@ export interface IterativeImputerOptions {
   verbose?: number
 
   /**
-    The seed of the pseudo random number generator to use. Randomizes selection of estimator features if n_nearest_features is not None, the imputation_order if random, and the sampling from posterior if sample_posterior=True. Use an integer for determinism. See the Glossary.
+    The seed of the pseudo random number generator to use. Randomizes selection of estimator features if `n\_nearest\_features` is not `None`, the `imputation\_order` if `random`, and the sampling from posterior if `sample\_posterior=True`. Use an integer for determinism. See [the Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    If True, a MissingIndicator transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+    If `True`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
 
     @defaultValue `false`
    */
   add_indicator?: boolean
 
   /**
-    If True, features that consist exclusively of missing values when fit is called are returned in results when transform is called. The imputed value is always 0 except when initial_strategy="constant" in which case fill_value will be used instead.
+    If True, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `initial\_strategy="constant"` in which case `fill\_value` will be used instead.
 
     @defaultValue `false`
    */
@@ -595,7 +597,7 @@ export interface IterativeImputerOptions {
 
 export interface IterativeImputerFitOptions {
   /**
-    Input data, where n_samples is the number of samples and n_features is the number of features.
+    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike
 
@@ -607,7 +609,7 @@ export interface IterativeImputerFitOptions {
 
 export interface IterativeImputerFitTransformOptions {
   /**
-    Input data, where n_samples is the number of samples and n_features is the number of features.
+    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike
 
@@ -626,7 +628,7 @@ export interface IterativeImputerGetFeatureNamesOutOptions {
 
 export interface IterativeImputerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

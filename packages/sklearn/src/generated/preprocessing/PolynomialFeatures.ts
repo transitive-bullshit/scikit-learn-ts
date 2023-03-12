@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Generate polynomial and interaction features.
 
-  Generate a new feature matrix consisting of all polynomial combinations of the features with degree less than or equal to the specified degree. For example, if an input sample is two dimensional and of the form [a, b], the degree-2 polynomial features are [1, a, b, a^2, ab, b^2].
+  Generate a new feature matrix consisting of all polynomial combinations of the features with degree less than or equal to the specified degree. For example, if an input sample is two dimensional and of the form \[a, b\], the degree-2 polynomial features are \[1, a, b, a^2, ab, b^2\].
+
+  Read more in the [User Guide](../preprocessing.html#polynomial-features).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html
  */
@@ -133,7 +135,7 @@ pms_PolynomialFeatures_fit = {k: v for k, v in pms_PolynomialFeatures_fit.items(
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: PolynomialFeaturesFitTransformOptions
@@ -208,7 +210,7 @@ pms_PolynomialFeatures_get_feature_names_out = {k: v for k, v in pms_PolynomialF
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: PolynomialFeaturesSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -270,7 +272,7 @@ pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_tran
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -297,7 +299,7 @@ pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_tran
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -353,28 +355,28 @@ pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_tran
 
 export interface PolynomialFeaturesOptions {
   /**
-    If a single int is given, it specifies the maximal degree of the polynomial features. If a tuple (min_degree, max_degree) is passed, then min_degree is the minimum and max_degree is the maximum polynomial degree of the generated features. Note that min_degree=0 and min_degree=1 are equivalent as outputting the degree zero term is determined by include_bias.
+    If a single int is given, it specifies the maximal degree of the polynomial features. If a tuple `(min\_degree, max\_degree)` is passed, then `min\_degree` is the minimum and `max\_degree` is the maximum polynomial degree of the generated features. Note that `min\_degree=0` and `min\_degree=1` are equivalent as outputting the degree zero term is determined by `include\_bias`.
 
     @defaultValue `2`
    */
   degree?: number
 
   /**
-    If True, only interaction features are produced: features that are products of at most degree distinct input features, i.e. terms with power of 2 or higher of the same input feature are excluded:
+    If `True`, only interaction features are produced: features that are products of at most `degree` *distinct* input features, i.e. terms with power of 2 or higher of the same input feature are excluded:
 
     @defaultValue `false`
    */
   interaction_only?: boolean
 
   /**
-    If True (default), then include a bias column, the feature in which all polynomial powers are zero (i.e. a column of ones - acts as an intercept term in a linear model).
+    If `True` (default), then include a bias column, the feature in which all polynomial powers are zero (i.e. a column of ones - acts as an intercept term in a linear model).
 
     @defaultValue `true`
    */
   include_bias?: boolean
 
   /**
-    Order of output array in the dense case. 'F' order is faster to compute, but may slow down subsequent estimators.
+    Order of output array in the dense case. `'F'` order is faster to compute, but may slow down subsequent estimators.
 
     @defaultValue `'C'`
    */
@@ -419,7 +421,7 @@ export interface PolynomialFeaturesGetFeatureNamesOutOptions {
 
 export interface PolynomialFeaturesSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

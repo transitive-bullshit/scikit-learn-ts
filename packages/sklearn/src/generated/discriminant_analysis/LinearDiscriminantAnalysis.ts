@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The model fits a Gaussian density to each class, assuming that all classes share the same covariance matrix.
 
-  The fitted model can also be used to reduce the dimensionality of the input by projecting it to the most discriminative directions, using the transform method.
+  The fitted model can also be used to reduce the dimensionality of the input by projecting it to the most discriminative directions, using the `transform` method.
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html
  */
@@ -113,7 +113,7 @@ ctor_LinearDiscriminantAnalysis = {k: v for k, v in ctor_LinearDiscriminantAnaly
   /**
     Apply decision function to an array of samples.
 
-    The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. log p(y = k | x). In a binary classification setting this instead corresponds to the difference log p(y = 1 | x) - log p(y = 0 | x). See Mathematical formulation of the LDA and QDA classifiers.
+    The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See [Mathematical formulation of the LDA and QDA classifiers](../lda_qda.html#lda-qda-math).
    */
   async decision_function(
     opts: LinearDiscriminantAnalysisDecisionFunctionOptions
@@ -184,7 +184,7 @@ pms_LinearDiscriminantAnalysis_fit = {k: v for k, v in pms_LinearDiscriminantAna
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(
     opts: LinearDiscriminantAnalysisFitTransformOptions
@@ -225,7 +225,7 @@ pms_LinearDiscriminantAnalysis_fit_transform = {k: v for k, v in pms_LinearDiscr
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: LinearDiscriminantAnalysisGetFeatureNamesOutOptions
@@ -404,7 +404,7 @@ pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantA
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(
     opts: LinearDiscriminantAnalysisSetOutputOptions
@@ -528,7 +528,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Weighted within-class covariance matrix. It corresponds to sum_k prior_k * C_k where C_k is the covariance matrix of the samples in class k. The C_k are estimated using the (potentially shrunk) biased estimator of covariance. If solver is ‘svd’, only exists when store_covariance is True.
+    Weighted within-class covariance matrix. It corresponds to `sum\_k prior\_k \* C\_k` where `C\_k` is the covariance matrix of the samples in class `k`. The `C\_k` are estimated using the (potentially shrunk) biased estimator of covariance. If solver is ‘svd’, only exists when `store\_covariance` is True.
    */
   get covariance_(): Promise<ArrayLike[]> {
     if (this._isDisposed) {
@@ -555,7 +555,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Percentage of variance explained by each of the selected components. If n_components is not set then all components are stored and the sum of explained variances is equal to 1.0. Only available when eigen or svd solver is used.
+    Percentage of variance explained by each of the selected components. If `n\_components` is not set then all components are stored and the sum of explained variances is equal to 1.0. Only available when eigen or svd solver is used.
    */
   get explained_variance_ratio_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -717,7 +717,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -744,7 +744,7 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -790,7 +790,7 @@ export interface LinearDiscriminantAnalysisOptions {
   priors?: ArrayLike
 
   /**
-    Number of components (<= min(n_classes - 1, n_features)) for dimensionality reduction. If None, will be set to min(n_classes - 1, n_features). This parameter only affects the transform method.
+    Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If None, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
    */
   n_components?: number
 
@@ -809,9 +809,9 @@ export interface LinearDiscriminantAnalysisOptions {
   tol?: number
 
   /**
-    If not None, covariance_estimator is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a covariance_ attribute like the estimators in sklearn.covariance. if None the shrinkage parameter drives the estimate.
+    If not None, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../classes.html#module-sklearn.covariance "sklearn.covariance"). if None the shrinkage parameter drives the estimate.
 
-    This should be left to None if shrinkage is used. Note that covariance_estimator works only with ‘lsqr’ and ‘eigen’ solvers.
+    This should be left to None if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
    */
   covariance_estimator?: any
 }
@@ -854,7 +854,7 @@ export interface LinearDiscriminantAnalysisFitTransformOptions {
 
 export interface LinearDiscriminantAnalysisGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.discriminant_analysis.LinearDiscriminantAnalysis.fit "sklearn.discriminant_analysis.LinearDiscriminantAnalysis.fit").
    */
   input_features?: any
 }
@@ -887,7 +887,7 @@ export interface LinearDiscriminantAnalysisScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 
@@ -899,7 +899,7 @@ export interface LinearDiscriminantAnalysisScoreOptions {
 
 export interface LinearDiscriminantAnalysisSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

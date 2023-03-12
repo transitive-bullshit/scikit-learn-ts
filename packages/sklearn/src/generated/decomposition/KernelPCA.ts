@@ -6,11 +6,13 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  Kernel Principal component analysis (KPCA) [1].
+  Kernel Principal component analysis (KPCA) [\[1\]](#r396fc7d924b8-1).
 
-  Non-linear dimensionality reduction through the use of kernels (see Pairwise metrics, Affinities and Kernels).
+  Non-linear dimensionality reduction through the use of kernels (see [Pairwise metrics, Affinities and Kernels](../metrics.html#metrics)).
 
-  It uses the scipy.linalg.eigh LAPACK implementation of the full SVD or the scipy.sparse.linalg.eigsh ARPACK implementation of the truncated SVD, depending on the shape of the input data and the number of components to extract. It can also use a randomized truncated SVD by the method proposed in [3], see eigen_solver.
+  It uses the [`scipy.linalg.eigh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html#scipy.linalg.eigh "(in SciPy v1.10.1)") LAPACK implementation of the full SVD or the [`scipy.sparse.linalg.eigsh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html#scipy.sparse.linalg.eigsh "(in SciPy v1.10.1)") ARPACK implementation of the truncated SVD, depending on the shape of the input data and the number of components to extract. It can also use a randomized truncated SVD by the method proposed in [\[3\]](#r396fc7d924b8-3), see `eigen\_solver`.
+
+  Read more in the [User Guide](../decomposition.html#kernel-pca).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html
  */
@@ -170,7 +172,7 @@ pms_KernelPCA_fit_transform = {k: v for k, v in pms_KernelPCA_fit_transform.item
   /**
     Get output feature names for transformation.
 
-    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: ["class_name0", "class_name1", "class_name2"].
+    The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
   async get_feature_names_out(
     opts: KernelPCAGetFeatureNamesOutOptions
@@ -205,7 +207,7 @@ pms_KernelPCA_get_feature_names_out = {k: v for k, v in pms_KernelPCA_get_featur
   /**
     Transform X back to original space.
 
-    inverse_transform approximates the inverse transformation using a learned pre-image. The pre-image is learned by kernel ridge regression of the original data on their low-dimensional representation vectors.
+    `inverse\_transform` approximates the inverse transformation using a learned pre-image. The pre-image is learned by kernel ridge regression of the original data on their low-dimensional representation vectors.
    */
   async inverse_transform(
     opts: KernelPCAInverseTransformOptions
@@ -237,7 +239,7 @@ pms_KernelPCA_inverse_transform = {k: v for k, v in pms_KernelPCA_inverse_transf
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: KernelPCASetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -293,7 +295,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Eigenvalues of the centered kernel matrix in decreasing order. If n_components and remove_zero_eig are not set, then all values are stored.
+    Eigenvalues of the centered kernel matrix in decreasing order. If `n\_components` and `remove\_zero\_eig` are not set, then all values are stored.
    */
   get eigenvalues_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -318,7 +320,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Eigenvectors of the centered kernel matrix. If n_components and remove_zero_eig are not set, then all components are stored.
+    Eigenvectors of the centered kernel matrix. If `n\_components` and `remove\_zero\_eig` are not set, then all components are stored.
    */
   get eigenvectors_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -343,7 +345,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Inverse transform matrix. Only available when fit_inverse_transform is True.
+    Inverse transform matrix. Only available when `fit\_inverse\_transform` is True.
    */
   get dual_coef_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -366,7 +368,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Projection of the fitted data on the kernel principal components. Only available when fit_inverse_transform is True.
+    Projection of the fitted data on the kernel principal components. Only available when `fit\_inverse\_transform` is True.
    */
   get X_transformed_fit_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -391,7 +393,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    The data used to fit the model. If copy_X=False, then X_fit_ is a reference. This attribute is used for the calls to transform.
+    The data used to fit the model. If `copy\_X=False`, then `X\_fit\_` is a reference. This attribute is used for the calls to transform.
    */
   get X_fit_(): Promise<NDArray[]> {
     if (this._isDisposed) {
@@ -414,7 +416,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -439,7 +441,7 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -478,7 +480,7 @@ export interface KernelPCAOptions {
   kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'cosine' | 'precomputed'
 
   /**
-    Kernel coefficient for rbf, poly and sigmoid kernels. Ignored by other kernels. If gamma is None, then it is set to 1/n_features.
+    Kernel coefficient for rbf, poly and sigmoid kernels. Ignored by other kernels. If `gamma` is `None`, then it is set to `1/n\_features`.
    */
   gamma?: number
 
@@ -502,21 +504,21 @@ export interface KernelPCAOptions {
   kernel_params?: any
 
   /**
-    Hyperparameter of the ridge regression that learns the inverse transform (when fit_inverse_transform=True).
+    Hyperparameter of the ridge regression that learns the inverse transform (when fit\_inverse\_transform=True).
 
     @defaultValue `1`
    */
   alpha?: number
 
   /**
-    Learn the inverse transform for non-precomputed kernels (i.e. learn to find the pre-image of a point). This method is based on [2].
+    Learn the inverse transform for non-precomputed kernels (i.e. learn to find the pre-image of a point). This method is based on [\[2\]](#r396fc7d924b8-2).
 
     @defaultValue `false`
    */
   fit_inverse_transform?: boolean
 
   /**
-    Select eigensolver to use. If n_components is much less than the number of training samples, randomized (or arpack to a smaller extent) may be more efficient than the dense eigensolver. Randomized SVD is performed according to the method of Halko et al [3].
+    Select eigensolver to use. If `n\_components` is much less than the number of training samples, randomized (or arpack to a smaller extent) may be more efficient than the dense eigensolver. Randomized SVD is performed according to the method of Halko et al [\[3\]](#r396fc7d924b8-3).
 
     @defaultValue `'auto'`
    */
@@ -535,40 +537,40 @@ export interface KernelPCAOptions {
   max_iter?: number
 
   /**
-    Number of iterations for the power method computed by svd_solver == ‘randomized’. When ‘auto’, it is set to 7 when n_components < 0.1 * min(X.shape), other it is set to 4.
+    Number of iterations for the power method computed by svd\_solver == ‘randomized’. When ‘auto’, it is set to 7 when `n\_components < 0.1 \* min(X.shape)`, other it is set to 4.
 
     @defaultValue `'auto'`
    */
   iterated_power?: 'auto'
 
   /**
-    If True, then all components with zero eigenvalues are removed, so that the number of components in the output may be < n_components (and sometimes even zero due to numerical instability). When n_components is None, this parameter is ignored and components with zero eigenvalues are removed regardless.
+    If True, then all components with zero eigenvalues are removed, so that the number of components in the output may be < n\_components (and sometimes even zero due to numerical instability). When n\_components is None, this parameter is ignored and components with zero eigenvalues are removed regardless.
 
     @defaultValue `false`
    */
   remove_zero_eig?: boolean
 
   /**
-    Used when eigen_solver == ‘arpack’ or ‘randomized’. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Used when `eigen\_solver` == ‘arpack’ or ‘randomized’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 
   /**
-    If True, input X is copied and stored by the model in the X_fit_ attribute. If no further changes will be done to X, setting copy_X=False saves memory by storing a reference.
+    If True, input X is copied and stored by the model in the `X\_fit\_` attribute. If no further changes will be done to X, setting `copy\_X=False` saves memory by storing a reference.
 
     @defaultValue `true`
    */
   copy_X?: boolean
 
   /**
-    The number of parallel jobs to run. None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    The number of parallel jobs to run. `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
 
 export interface KernelPCAFitOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -580,7 +582,7 @@ export interface KernelPCAFitOptions {
 
 export interface KernelPCAFitTransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 
@@ -590,35 +592,35 @@ export interface KernelPCAFitTransformOptions {
   y?: any
 
   /**
-    Parameters (keyword arguments) and values passed to the fit_transform instance.
+    Parameters (keyword arguments) and values passed to the fit\_transform instance.
    */
   params?: any
 }
 
 export interface KernelPCAGetFeatureNamesOutOptions {
   /**
-    Only used to validate feature names with the names seen in fit.
+    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.KernelPCA.fit "sklearn.decomposition.KernelPCA.fit").
    */
   input_features?: any
 }
 
 export interface KernelPCAInverseTransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 }
 
 export interface KernelPCASetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }
 
 export interface KernelPCATransformOptions {
   /**
-    Training vector, where n_samples is the number of samples and n_features is the number of features.
+    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike | SparseMatrix[]
 }

@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Decisions boundary visualization.
 
-  It is recommended to use from_estimator to create a DecisionBoundaryDisplay. All parameters are stored as attributes.
+  It is recommended to use [`from\_estimator`](#sklearn.inspection.DecisionBoundaryDisplay.from_estimator "sklearn.inspection.DecisionBoundaryDisplay.from_estimator") to create a [`DecisionBoundaryDisplay`](#sklearn.inspection.DecisionBoundaryDisplay "sklearn.inspection.DecisionBoundaryDisplay"). All parameters are stored as attributes.
+
+  Read more in the [User Guide](../../visualizations.html#visualizations).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.inspection.DecisionBoundaryDisplay.html
  */
@@ -104,6 +106,8 @@ ctor_DecisionBoundaryDisplay = {k: v for k, v in ctor_DecisionBoundaryDisplay.it
 
   /**
     Plot decision boundary given an estimator.
+
+    Read more in the [User Guide](../../visualizations.html#visualizations).
    */
   async from_estimator(
     opts: DecisionBoundaryDisplayFromEstimatorOptions
@@ -182,7 +186,7 @@ pms_DecisionBoundaryDisplay_plot = {k: v for k, v in pms_DecisionBoundaryDisplay
   }
 
   /**
-    If plot_method is ‘contour’ or ‘contourf’, surface_ is a QuadContourSet. If plot_method is ‘pcolormesh’, surface_ is a QuadMesh.
+    If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.7.1)"). If `plot\_method` is ‘pcolormesh’, `surface\_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.7.1)").
    */
   get surface_(): Promise<any> {
     if (this._isDisposed) {
@@ -265,12 +269,12 @@ pms_DecisionBoundaryDisplay_plot = {k: v for k, v in pms_DecisionBoundaryDisplay
 
 export interface DecisionBoundaryDisplayOptions {
   /**
-    First output of meshgrid.
+    First output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
    */
   xx0?: NDArray[]
 
   /**
-    Second output of meshgrid.
+    Second output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
    */
   xx1?: NDArray[]
 
@@ -316,50 +320,50 @@ export interface DecisionBoundaryDisplayFromEstimatorOptions {
   eps?: number
 
   /**
-    Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: contourf, contour, pcolormesh.
+    Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.7.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.7.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.7.1)").
 
     @defaultValue `'contourf'`
    */
   plot_method?: 'contourf' | 'contour' | 'pcolormesh'
 
   /**
-    Specifies whether to use predict_proba, decision_function, predict as the target response. If set to ‘auto’, the response method is tried in the following order: decision_function, predict_proba, predict. For multiclass problems, predict is selected when response_method="auto".
+    Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba), [decision\_function](../../glossary.html#term-decision_function), [predict](../../glossary.html#term-predict) as the target response. If set to ‘auto’, the response method is tried in the following order: [decision\_function](../../glossary.html#term-decision_function), [predict\_proba](../../glossary.html#term-predict_proba), [predict](../../glossary.html#term-predict). For multiclass problems, [predict](../../glossary.html#term-predict) is selected when `response\_method="auto"`.
 
     @defaultValue `'auto'`
    */
   response_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
 
   /**
-    The label used for the x-axis. If None, an attempt is made to extract a label from X if it is a dataframe, otherwise an empty string is used.
+    The label used for the x-axis. If `None`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
    */
   xlabel?: string
 
   /**
-    The label used for the y-axis. If None, an attempt is made to extract a label from X if it is a dataframe, otherwise an empty string is used.
+    The label used for the y-axis. If `None`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
    */
   ylabel?: string
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
   /**
-    Additional keyword arguments to be passed to the plot_method.
+    Additional keyword arguments to be passed to the `plot\_method`.
    */
   kwargs?: any
 }
 
 export interface DecisionBoundaryDisplayPlotOptions {
   /**
-    Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: contourf, contour, pcolormesh.
+    Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.7.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.7.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.7.1)").
 
     @defaultValue `'contourf'`
    */
   plot_method?: 'contourf' | 'contour' | 'pcolormesh'
 
   /**
-    Axes object to plot on. If None, a new figure and axes is created.
+    Axes object to plot on. If `None`, a new figure and axes is created.
    */
   ax?: any
 
@@ -374,7 +378,7 @@ export interface DecisionBoundaryDisplayPlotOptions {
   ylabel?: string
 
   /**
-    Additional keyword arguments to be passed to the plot_method.
+    Additional keyword arguments to be passed to the `plot\_method`.
    */
   kwargs?: any
 }

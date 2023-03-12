@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   For instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.
 
+  Read more in the [User Guide](../cross_validation.html#leave-one-group-out).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneGroupOut.html
  */
 export class LeaveOneGroupOut {
@@ -228,7 +230,7 @@ export interface LeaveOneGroupOutGetNSplitsOptions {
 
 export interface LeaveOneGroupOutSplitOptions {
   /**
-    Training data, where n_samples is the number of samples and n_features is the number of features.
+    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
    */
   X?: ArrayLike[]
 

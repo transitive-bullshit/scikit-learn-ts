@@ -209,7 +209,7 @@ pms_MultiOutputClassifier_predict = {k: v for k, v in pms_MultiOutputClassifier_
   /**
     Return prediction probabilities for each class of each output.
 
-    This method will raise a ValueError if any of the estimators do not have predict_proba.
+    This method will raise a `ValueError` if any of the estimators do not have `predict\_proba`.
    */
   async predict_proba(
     opts: MultiOutputClassifierPredictProbaOptions
@@ -330,7 +330,7 @@ pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_sc
   }
 
   /**
-    Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+    Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `estimator` exposes such an attribute when fit.
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -357,7 +357,7 @@ pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_sc
   }
 
   /**
-    Names of features seen during fit. Only defined if the underlying estimators expose such an attribute when fit.
+    Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -386,16 +386,16 @@ pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_sc
 
 export interface MultiOutputClassifierOptions {
   /**
-    An estimator object implementing fit and predict. A predict_proba method will be exposed only if estimator implements it.
+    An estimator object implementing [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). A [predict\_proba](../../glossary.html#term-predict_proba) method will be exposed only if `estimator` implements it.
    */
   estimator?: any
 
   /**
-    The number of jobs to run in parallel. fit, predict and partial_fit (if supported by the passed estimator) will be parallelized for each target.
+    The number of jobs to run in parallel. [`fit`](#sklearn.multioutput.MultiOutputClassifier.fit "sklearn.multioutput.MultiOutputClassifier.fit"), [`predict`](#sklearn.multioutput.MultiOutputClassifier.predict "sklearn.multioutput.MultiOutputClassifier.predict") and [`partial\_fit`](#sklearn.multioutput.MultiOutputClassifier.partial_fit "sklearn.multioutput.MultiOutputClassifier.partial_fit") (if supported by the passed estimator) will be parallelized for each target.
 
-    When individual estimators are fast to train or predict, using n_jobs > 1 can result in slower performance due to the parallelism overhead.
+    When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-    None means 1 unless in a joblib.parallel_backend context. -1 means using all available processes / threads. See Glossary for more details.
+    `None` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -412,12 +412,12 @@ export interface MultiOutputClassifierFitOptions {
   Y?: ArrayLike[]
 
   /**
-    Sample weights. If None, then samples are equally weighted. Only supported if the underlying classifier supports sample weights.
+    Sample weights. If `None`, then samples are equally weighted. Only supported if the underlying classifier supports sample weights.
    */
   sample_weight?: ArrayLike
 
   /**
-    Parameters passed to the estimator.fit method of each step.
+    Parameters passed to the `estimator.fit` method of each step.
    */
   fit_params?: any
 }
@@ -434,12 +434,12 @@ export interface MultiOutputClassifierPartialFitOptions {
   y?: ArrayLike | SparseMatrix[]
 
   /**
-    Each array is unique classes for one output in str/int. Can be obtained via [np.unique(y[:, i]) for i in range(y.shape[1])], where y is the target matrix of the entire dataset. This argument is required for the first call to partial_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in classes.
+    Each array is unique classes for one output in str/int. Can be obtained via `\[np.unique(y\[:, i\]) for i in range(y.shape\[1\])\]`, where `y` is the target matrix of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that `y` doesn’t need to contain all labels in `classes`.
    */
   classes?: any[]
 
   /**
-    Sample weights. If None, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
+    Sample weights. If `None`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
    */
   sample_weight?: ArrayLike
 }

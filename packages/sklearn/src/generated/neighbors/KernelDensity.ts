@@ -8,6 +8,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Kernel Density Estimation.
 
+  Read more in the [User Guide](../density.html#kernel-density).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html
  */
 export class KernelDensity {
@@ -219,7 +221,7 @@ pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samp
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -267,7 +269,7 @@ pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samp
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -346,23 +348,23 @@ export interface KernelDensityOptions {
     | 'cosine'
 
   /**
-    Metric to use for distance computation. See the documentation of scipy.spatial.distance and the metrics listed in distance_metrics for valid metric values.
+    Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
 
-    Not all metrics are valid with all algorithms: refer to the documentation of BallTree and KDTree. Note that the normalization of the density output is correct only for the Euclidean distance metric.
+    Not all metrics are valid with all algorithms: refer to the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") and [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). Note that the normalization of the density output is correct only for the Euclidean distance metric.
 
     @defaultValue `'euclidean'`
    */
   metric?: string
 
   /**
-    The desired absolute tolerance of the result.  A larger tolerance will generally lead to faster execution.
+    The desired absolute tolerance of the result. A larger tolerance will generally lead to faster execution.
 
     @defaultValue `0`
    */
   atol?: number
 
   /**
-    The desired relative tolerance of the result.  A larger tolerance will generally lead to faster execution.
+    The desired relative tolerance of the result. A larger tolerance will generally lead to faster execution.
 
     @defaultValue `0`
    */
@@ -376,26 +378,26 @@ export interface KernelDensityOptions {
   breadth_first?: boolean
 
   /**
-    Specify the leaf size of the underlying tree.  See BallTree or KDTree for details.
+    Specify the leaf size of the underlying tree. See [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") for details.
 
     @defaultValue `40`
    */
   leaf_size?: number
 
   /**
-    Additional parameters to be passed to the tree for use with the metric.  For more information, see the documentation of BallTree or KDTree.
+    Additional parameters to be passed to the tree for use with the metric. For more information, see the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree").
    */
   metric_params?: any
 }
 
 export interface KernelDensityFitOptions {
   /**
-    List of n_features-dimensional data points.  Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 
   /**
-    Ignored. This parameter exists only for compatibility with Pipeline.
+    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
    */
   y?: any
 
@@ -414,26 +416,26 @@ export interface KernelDensitySampleOptions {
   n_samples?: number
 
   /**
-    Determines random number generation used to generate random samples. Pass an int for reproducible results across multiple function calls. See Glossary.
+    Determines random number generation used to generate random samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
    */
   random_state?: number
 }
 
 export interface KernelDensityScoreOptions {
   /**
-    List of n_features-dimensional data points.  Each row corresponds to a single data point.
+    List of n\_features-dimensional data points. Each row corresponds to a single data point.
    */
   X?: ArrayLike[]
 
   /**
-    Ignored. This parameter exists only for compatibility with Pipeline.
+    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
    */
   y?: any
 }
 
 export interface KernelDensityScoreSamplesOptions {
   /**
-    An array of points to query.  Last dimension should match dimension of training data (n_features).
+    An array of points to query. Last dimension should match dimension of training data (n\_features).
    */
   X?: ArrayLike[]
 }

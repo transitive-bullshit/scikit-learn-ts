@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Generalized Linear Model with a Tweedie distribution.
 
-  This estimator can be used to model different GLMs depending on the power parameter, which determines the underlying distribution.
+  This estimator can be used to model different GLMs depending on the `power` parameter, which determines the underlying distribution.
+
+  Read more in the [User Guide](../linear_model.html#generalized-linear-models).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.TweedieRegressor.html
  */
@@ -169,9 +171,9 @@ pms_TweedieRegressor_predict = {k: v for k, v in pms_TweedieRegressor_predict.it
   /**
     Compute D^2, the percentage of deviance explained.
 
-    D^2 is a generalization of the coefficient of determination R^2. R^2 uses squared error and D^2 uses the deviance of this GLM, see the User Guide.
+    D^2 is a generalization of the coefficient of determination R^2. R^2 uses squared error and D^2 uses the deviance of this GLM, see the [User Guide](../model_evaluation.html#regression-metrics).
 
-    D^2 is defined as \(D^2 = 1-\frac{D(y_{true},y_{pred})}{D_{null}}\), \(D_{null}\) is the null deviance, i.e. the deviance of a model with intercept alone, which corresponds to \(y_{pred} = \bar{y}\). The mean \(\bar{y}\) is averaged by sample_weight. Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse).
+    D^2 is defined as \\(D^2 = 1-\\frac{D(y\_{true},y\_{pred})}{D\_{null}}\\), \\(D\_{null}\\) is the null deviance, i.e. the deviance of a model with intercept alone, which corresponds to \\(y\_{pred} = \\bar{y}\\). The mean \\(\\bar{y}\\) is averaged by sample\_weight. Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse).
    */
   async score(opts: TweedieRegressorScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -205,7 +207,7 @@ pms_TweedieRegressor_score = {k: v for k, v in pms_TweedieRegressor_score.items(
   }
 
   /**
-    Estimated coefficients for the linear predictor (X @ coef_ + intercept_) in the GLM.
+    Estimated coefficients for the linear predictor (`X @ coef\_ + intercept\_`) in the GLM.
    */
   get coef_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -286,7 +288,7 @@ pms_TweedieRegressor_score = {k: v for k, v in pms_TweedieRegressor_score.items(
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -313,7 +315,7 @@ pms_TweedieRegressor_score = {k: v for k, v in pms_TweedieRegressor_score.items(
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -349,21 +351,21 @@ export interface TweedieRegressorOptions {
   power?: number
 
   /**
-    Constant that multiplies the L2 penalty term and determines the regularization strength. alpha = 0 is equivalent to unpenalized GLMs. In this case, the design matrix X must have full column rank (no collinearities). Values of alpha must be in the range [0.0, inf).
+    Constant that multiplies the L2 penalty term and determines the regularization strength. `alpha \= 0` is equivalent to unpenalized GLMs. In this case, the design matrix `X` must have full column rank (no collinearities). Values of `alpha` must be in the range `\[0.0, inf)`.
 
     @defaultValue `1`
    */
   alpha?: number
 
   /**
-    Specifies if a constant (a.k.a. bias or intercept) should be added to the linear predictor (X @ coef + intercept).
+    Specifies if a constant (a.k.a. bias or intercept) should be added to the linear predictor (`X @ coef + intercept`).
 
     @defaultValue `true`
    */
   fit_intercept?: boolean
 
   /**
-    The link function of the GLM, i.e. mapping from linear predictor X @ coeff + intercept to prediction y_pred. Option ‘auto’ sets the link depending on the chosen power parameter as follows:
+    The link function of the GLM, i.e. mapping from linear predictor `X @ coeff + intercept` to prediction `y\_pred`. Option ‘auto’ sets the link depending on the chosen `power` parameter as follows:
 
     @defaultValue `'auto'`
    */
@@ -377,28 +379,28 @@ export interface TweedieRegressorOptions {
   solver?: 'lbfgs' | 'newton-cholesky'
 
   /**
-    The maximal number of iterations for the solver. Values must be in the range [1, inf).
+    The maximal number of iterations for the solver. Values must be in the range `\[1, inf)`.
 
     @defaultValue `100`
    */
   max_iter?: number
 
   /**
-    Stopping criterion. For the lbfgs solver, the iteration will stop when max{|g_j|, j = 1, ..., d} <= tol where g_j is the j-th component of the gradient (derivative) of the objective function. Values must be in the range (0.0, inf).
+    Stopping criterion. For the lbfgs solver, the iteration will stop when `max{|g\_j|, j \= 1, ..., d} <= tol` where `g\_j` is the j-th component of the gradient (derivative) of the objective function. Values must be in the range `(0.0, inf)`.
 
     @defaultValue `0.0001`
    */
   tol?: number
 
   /**
-    If set to True, reuse the solution of the previous call to fit as initialization for coef_ and intercept_ .
+    If set to `True`, reuse the solution of the previous call to `fit` as initialization for `coef\_` and `intercept\_` .
 
     @defaultValue `false`
    */
   warm_start?: boolean
 
   /**
-    For the lbfgs solver set verbose to any positive number for verbosity. Values must be in the range [0, inf).
+    For the lbfgs solver set verbose to any positive number for verbosity. Values must be in the range `\[0, inf)`.
 
     @defaultValue `0`
    */

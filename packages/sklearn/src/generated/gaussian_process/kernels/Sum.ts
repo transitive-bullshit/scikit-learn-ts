@@ -6,7 +6,7 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  The Sum kernel takes two kernels \(k_1\) and \(k_2\) and combines them via
+  The `Sum` kernel takes two kernels \\(k\_1\\) and \\(k\_2\\) and combines them via
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Sum.html
  */
@@ -152,7 +152,7 @@ pms_Sum_clone_with_theta = {k: v for k, v in pms_Sum_clone_with_theta.items() if
   /**
     Returns the diagonal of the kernel k(X, X).
 
-    The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
+    The result of this method is identical to `np.diag(self(X))`; however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
   async diag(opts: SumDiagOptions): Promise<NDArray> {
     if (this._isDisposed) {

@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   FPR test stands for False Positive Rate test. It controls the total amount of false detections.
 
+  Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
+
   @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFpr.html
  */
 export class SelectFpr {
@@ -124,7 +126,7 @@ pms_SelectFpr_fit = {k: v for k, v in pms_SelectFpr_fit.items() if v is not None
   /**
     Fit to data, then transform it.
 
-    Fits transformer to X and y with optional parameters fit_params and returns a transformed version of X.
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
   async fit_transform(opts: SelectFprFitTransformOptions): Promise<any[]> {
     if (this._isDisposed) {
@@ -249,7 +251,7 @@ pms_SelectFpr_inverse_transform = {k: v for k, v in pms_SelectFpr_inverse_transf
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: SelectFprSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -351,7 +353,7 @@ pms_SelectFpr_transform = {k: v for k, v in pms_SelectFpr_transform.items() if v
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -376,7 +378,7 @@ pms_SelectFpr_transform = {k: v for k, v in pms_SelectFpr_transform.items() if v
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -403,12 +405,12 @@ pms_SelectFpr_transform = {k: v for k, v in pms_SelectFpr_transform.items() if v
 
 export interface SelectFprOptions {
   /**
-    Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). Default is f_classif (see below “See Also”). The default function only works with classification tasks.
+    Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
    */
   score_func?: any
 
   /**
-    Features with p-values less than alpha are selected.
+    Features with p-values less than `alpha` are selected.
 
     @defaultValue `0.05`
    */
@@ -469,7 +471,7 @@ export interface SelectFprInverseTransformOptions {
 
 export interface SelectFprSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -8,7 +8,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   One-vs-one multiclass strategy.
 
-  This strategy consists in fitting one classifier per class pair. At prediction time, the class which received the most votes is selected. Since it requires to fit n_classes * (n_classes - 1) / 2 classifiers, this method is usually slower than one-vs-the-rest, due to its O(n_classes^2) complexity. However, this method may be advantageous for algorithms such as kernel algorithms which don’t scale well with n_samples. This is because each individual learning problem only involves a small subset of the data whereas, with one-vs-the-rest, the complete dataset is used n_classes times.
+  This strategy consists in fitting one classifier per class pair. At prediction time, the class which received the most votes is selected. Since it requires to fit `n\_classes \* (n\_classes \- 1) / 2` classifiers, this method is usually slower than one-vs-the-rest, due to its O(n\_classes^2) complexity. However, this method may be advantageous for algorithms such as kernel algorithms which don’t scale well with `n\_samples`. This is because each individual learning problem only involves a small subset of the data whereas, with one-vs-the-rest, the complete dataset is used `n\_classes` times.
+
+  Read more in the [User Guide](../multiclass.html#ovo-classification).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsOneClassifier.html
  */
@@ -206,7 +208,7 @@ pms_OneVsOneClassifier_partial_fit = {k: v for k, v in pms_OneVsOneClassifier_pa
   /**
     Estimate the best class label for each sample in X.
 
-    This is implemented as argmax(decision_function(X), axis=1) which will return the label of the class with most votes by estimators predicting the outcome of a decision for each possible class pair.
+    This is implemented as `argmax(decision\_function(X), axis=1)` which will return the label of the class with most votes by estimators predicting the outcome of a decision for each possible class pair.
    */
   async predict(opts: OneVsOneClassifierPredictOptions): Promise<any> {
     if (this._isDisposed) {
@@ -326,7 +328,7 @@ pms_OneVsOneClassifier_score = {k: v for k, v in pms_OneVsOneClassifier_score.it
   }
 
   /**
-    Indices of samples used when training the estimators. None when estimator’s pairwise tag is False.
+    Indices of samples used when training the estimators. `None` when `estimator`’s `pairwise` tag is False.
    */
   get pairwise_indices_(): Promise<any[]> {
     if (this._isDisposed) {
@@ -353,7 +355,7 @@ pms_OneVsOneClassifier_score = {k: v for k, v in pms_OneVsOneClassifier_score.it
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -380,7 +382,7 @@ pms_OneVsOneClassifier_score = {k: v for k, v in pms_OneVsOneClassifier_score.it
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -409,14 +411,14 @@ pms_OneVsOneClassifier_score = {k: v for k, v in pms_OneVsOneClassifier_score.it
 
 export interface OneVsOneClassifierOptions {
   /**
-    A regressor or a classifier that implements fit. When a classifier is passed, decision_function will be used in priority and it will fallback to predict_proba if it is not available. When a regressor is passed, predict is used.
+    A regressor or a classifier that implements [fit](../../glossary.html#term-fit). When a classifier is passed, [decision\_function](../../glossary.html#term-decision_function) will be used in priority and it will fallback to [predict\_proba](../../glossary.html#term-predict_proba) if it is not available. When a regressor is passed, [predict](../../glossary.html#term-predict) is used.
    */
   estimator?: any
 
   /**
-    The number of jobs to use for the computation: the n_classes * ( n_classes - 1) / 2 OVO problems are computed in parallel.
+    The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \- 1) / 2` OVO problems are computed in parallel.
 
-    None means 1 unless in a joblib.parallel_backend context. -1 means using all processors. See Glossary for more details.
+    `None` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
    */
   n_jobs?: number
 }
@@ -452,7 +454,7 @@ export interface OneVsOneClassifierPartialFitOptions {
   y?: ArrayLike
 
   /**
-    Classes across all calls to partial_fit. Can be obtained via np.unique(y_all), where y_all is the target vector of the entire dataset. This argument is only required in the first call of partial_fit and can be omitted in the subsequent calls.
+    Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls.
    */
   classes?: any
 }
@@ -471,7 +473,7 @@ export interface OneVsOneClassifierScoreOptions {
   X?: ArrayLike[]
 
   /**
-    True labels for X.
+    True labels for `X`.
    */
   y?: ArrayLike
 

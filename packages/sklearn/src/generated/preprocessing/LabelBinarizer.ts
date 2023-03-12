@@ -12,7 +12,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   At learning time, this simply consists in learning one regressor or binary classifier per class. In doing so, one needs to convert multi-class labels to binary labels (belong or does not belong to the class). LabelBinarizer makes this process easy with the transform method.
 
-  At prediction time, one assigns the class for which the corresponding model gave the greatest confidence. LabelBinarizer makes this easy with the inverse_transform method.
+  At prediction time, one assigns the class for which the corresponding model gave the greatest confidence. LabelBinarizer makes this easy with the inverse\_transform method.
+
+  Read more in the [User Guide](../preprocessing_targets.html#preprocessing-targets).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html
  */
@@ -195,7 +197,7 @@ pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inve
   /**
     Set output container.
 
-    See Introducing the set_output API for an example on how to use the API.
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
   async set_output(opts: LabelBinarizerSetOutputOptions): Promise<any> {
     if (this._isDisposed) {
@@ -280,7 +282,7 @@ pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.it
   }
 
   /**
-    Represents the type of the target data as evaluated by utils.multiclass.type_of_target. Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
+    Represents the type of the target data as evaluated by utils.multiclass.type\_of\_target. Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
    */
   get y_type_(): Promise<string> {
     if (this._isDisposed) {
@@ -376,16 +378,16 @@ export interface LabelBinarizerInverseTransformOptions {
   /**
     Threshold used in the binary and multi-label cases.
 
-    Use 0 when Y contains the output of decision_function (classifier). Use 0.5 when Y contains the output of predict_proba.
+    Use 0 when `Y` contains the output of decision\_function (classifier). Use 0.5 when `Y` contains the output of predict\_proba.
 
-    If None, the threshold is assumed to be half way between neg_label and pos_label.
+    If None, the threshold is assumed to be half way between neg\_label and pos\_label.
    */
   threshold?: number
 }
 
 export interface LabelBinarizerSetOutputOptions {
   /**
-    Configure output of transform and fit_transform.
+    Configure output of `transform` and `fit\_transform`.
    */
   transform?: 'default' | 'pandas'
 }

@@ -8,9 +8,11 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Self-training classifier.
 
-  This metaestimator allows a given supervised classifier to function as a semi-supervised classifier, allowing it to learn from unlabeled data. It does this by iteratively predicting pseudo-labels for the unlabeled data and adding them to the training set.
+  This [metaestimator](../../glossary.html#term-metaestimator) allows a given supervised classifier to function as a semi-supervised classifier, allowing it to learn from unlabeled data. It does this by iteratively predicting pseudo-labels for the unlabeled data and adding them to the training set.
 
-  The classifier will continue iterating until either max_iter is reached, or no pseudo-labels were added to the training set in the previous iteration.
+  The classifier will continue iterating until either max\_iter is reached, or no pseudo-labels were added to the training set in the previous iteration.
+
+  Read more in the [User Guide](../semi_supervised.html#self-training).
 
   @see https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.SelfTrainingClassifier.html
  */
@@ -103,7 +105,7 @@ ctor_SelfTrainingClassifier = {k: v for k, v in ctor_SelfTrainingClassifier.item
   }
 
   /**
-    Call decision function of the base_estimator.
+    Call decision function of the `base\_estimator`.
    */
   async decision_function(
     opts: SelfTrainingClassifierDecisionFunctionOptions
@@ -138,7 +140,7 @@ pms_SelfTrainingClassifier_decision_function = {k: v for k, v in pms_SelfTrainin
   }
 
   /**
-    Fit self-training classifier using X, y as training data.
+    Fit self-training classifier using `X`, `y` as training data.
    */
   async fit(opts: SelfTrainingClassifierFitOptions): Promise<any> {
     if (this._isDisposed) {
@@ -170,7 +172,7 @@ pms_SelfTrainingClassifier_fit = {k: v for k, v in pms_SelfTrainingClassifier_fi
   }
 
   /**
-    Predict the classes of X.
+    Predict the classes of `X`.
    */
   async predict(opts: SelfTrainingClassifierPredictOptions): Promise<NDArray> {
     if (this._isDisposed) {
@@ -272,7 +274,7 @@ pms_SelfTrainingClassifier_predict_proba = {k: v for k, v in pms_SelfTrainingCla
   }
 
   /**
-    Call score on the base_estimator.
+    Call score on the `base\_estimator`.
    */
   async score(opts: SelfTrainingClassifierScoreOptions): Promise<number> {
     if (this._isDisposed) {
@@ -331,7 +333,7 @@ pms_SelfTrainingClassifier_score = {k: v for k, v in pms_SelfTrainingClassifier_
   }
 
   /**
-    Class labels for each output. (Taken from the trained base_estimator_).
+    Class labels for each output. (Taken from the trained `base\_estimator\_`).
    */
   get classes_(): Promise<NDArray | any[]> {
     if (this._isDisposed) {
@@ -412,7 +414,7 @@ pms_SelfTrainingClassifier_score = {k: v for k, v in pms_SelfTrainingClassifier_
   }
 
   /**
-    Number of features seen during fit.
+    Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
     if (this._isDisposed) {
@@ -439,7 +441,7 @@ pms_SelfTrainingClassifier_score = {k: v for k, v in pms_SelfTrainingClassifier_
   }
 
   /**
-    Names of features seen during fit. Defined only when X has feature names that are all strings.
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
    */
   get feature_names_in_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -524,33 +526,33 @@ pms_SelfTrainingClassifier_score = {k: v for k, v in pms_SelfTrainingClassifier_
 
 export interface SelfTrainingClassifierOptions {
   /**
-    An estimator object implementing fit and predict_proba. Invoking the fit method will fit a clone of the passed estimator, which will be stored in the base_estimator_ attribute.
+    An estimator object implementing `fit` and `predict\_proba`. Invoking the `fit` method will fit a clone of the passed estimator, which will be stored in the `base\_estimator\_` attribute.
    */
   base_estimator?: any
 
   /**
-    The decision threshold for use with criterion='threshold'. Should be in [0, 1). When using the 'threshold' criterion, a well calibrated classifier should be used.
+    The decision threshold for use with `criterion='threshold'`. Should be in \[0, 1). When using the `'threshold'` criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
 
     @defaultValue `0.75`
    */
   threshold?: number
 
   /**
-    The selection criterion used to select which labels to add to the training set. If 'threshold', pseudo-labels with prediction probabilities above threshold are added to the dataset. If 'k_best', the k_best pseudo-labels with highest prediction probabilities are added to the dataset. When using the ‘threshold’ criterion, a well calibrated classifier should be used.
+    The selection criterion used to select which labels to add to the training set. If `'threshold'`, pseudo-labels with prediction probabilities above `threshold` are added to the dataset. If `'k\_best'`, the `k\_best` pseudo-labels with highest prediction probabilities are added to the dataset. When using the ‘threshold’ criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
 
     @defaultValue `'threshold'`
    */
   criterion?: 'threshold' | 'k_best'
 
   /**
-    The amount of samples to add in each iteration. Only used when criterion='k_best'.
+    The amount of samples to add in each iteration. Only used when `criterion='k\_best'`.
 
     @defaultValue `10`
    */
   k_best?: number
 
   /**
-    Maximum number of iterations allowed. Should be greater than or equal to 0. If it is None, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.
+    Maximum number of iterations allowed. Should be greater than or equal to 0. If it is `None`, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.
 
     @defaultValue `10`
    */
