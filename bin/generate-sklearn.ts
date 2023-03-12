@@ -67,10 +67,19 @@ async function main() {
         concurrency: 32
       }
     )
-  ).filter(Boolean)
+  )
+    .filter(Boolean)
+    .filter((doc) => doc.type !== 'function')
 
   console.log(`\nprocessing ${docs.length} docs...\n`)
-  // console.log(JSON.stringify(docs[0], null, 2))
+  // console.log(
+  //   JSON.stringify(
+  //     docs.map((doc) => doc.name.split('.').slice(-1)[0]),
+  //     null,
+  //     2
+  //   )
+  // )
+  // // console.log(JSON.stringify(docs[0], null, 2))
 
   const errors: string[] = []
   const generatedDirs: any = {}
@@ -81,12 +90,6 @@ async function main() {
       async (doc) => {
         try {
           if (!doc) {
-            return
-          }
-
-          if (doc.type === 'function') {
-            // TODO
-            // console.log('skipping function', `${doc.namespace}.${doc.name}`)
             return
           }
 
