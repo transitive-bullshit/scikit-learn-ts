@@ -1,15 +1,22 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
     "type": "page"
+  },
+  "-- More": {
+    "type": "separator",
+    "title": "More"
   },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
     "href": "https://twitter.com/transitive_bs",
+    "newWindow": true
+  },
+  "next.js-link": {
+    "title": "scikit-learn docs ↗",
+    "href": "https://scikit-learn.org/?utm_source=scikit-learn-ts&utm_medium=referral&utm_campaign=sidebar",
     "newWindow": true
   }
 }
