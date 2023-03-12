@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../manifold.html#locally-linear-embedding).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html)
  */
 export class LocallyLinearEmbedding {
   id: string

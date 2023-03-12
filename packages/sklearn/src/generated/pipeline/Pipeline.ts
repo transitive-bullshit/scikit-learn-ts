@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../compose.html#pipeline).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
  */
 export class Pipeline {
   id: string

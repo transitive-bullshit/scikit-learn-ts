@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../kernel_approximation.html#rbf-kernel-approx).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.RBFSampler.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.RBFSampler.html)
  */
 export class RBFSampler {
   id: string

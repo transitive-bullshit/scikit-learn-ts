@@ -1,348 +1,320 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / MLPClassifier
-
-# Class: MLPClassifier
+# MLPClassifier
 
 Multi-layer Perceptron classifier.
 
 This model optimizes the log-loss function using LBFGS or stochastic gradient descent.
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MLPClassifier.md#constructor)
-
-### Properties
-
-- [\_isDisposed](MLPClassifier.md#_isdisposed)
-- [\_isInitialized](MLPClassifier.md#_isinitialized)
-- [\_py](MLPClassifier.md#_py)
-- [id](MLPClassifier.md#id)
-- [opts](MLPClassifier.md#opts)
-
-### Accessors
-
-- [best\_loss\_](MLPClassifier.md#best_loss_)
-- [best\_validation\_score\_](MLPClassifier.md#best_validation_score_)
-- [classes\_](MLPClassifier.md#classes_)
-- [coefs\_](MLPClassifier.md#coefs_)
-- [feature\_names\_in\_](MLPClassifier.md#feature_names_in_)
-- [intercepts\_](MLPClassifier.md#intercepts_)
-- [loss\_](MLPClassifier.md#loss_)
-- [loss\_curve\_](MLPClassifier.md#loss_curve_)
-- [n\_features\_in\_](MLPClassifier.md#n_features_in_)
-- [n\_iter\_](MLPClassifier.md#n_iter_)
-- [n\_layers\_](MLPClassifier.md#n_layers_)
-- [n\_outputs\_](MLPClassifier.md#n_outputs_)
-- [out\_activation\_](MLPClassifier.md#out_activation_)
-- [py](MLPClassifier.md#py)
-- [t\_](MLPClassifier.md#t_)
-- [validation\_scores\_](MLPClassifier.md#validation_scores_)
-
-### Methods
-
-- [dispose](MLPClassifier.md#dispose)
-- [fit](MLPClassifier.md#fit)
-- [init](MLPClassifier.md#init)
-- [partial\_fit](MLPClassifier.md#partial_fit)
-- [predict](MLPClassifier.md#predict)
-- [predict\_log\_proba](MLPClassifier.md#predict_log_proba)
-- [predict\_proba](MLPClassifier.md#predict_proba)
-- [score](MLPClassifier.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new MLPClassifier**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new MLPClassifier(opts?: MLPClassifierOptions): MLPClassifier;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`MLPClassifierOptions`](../interfaces/MLPClassifierOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/neural_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
+[`MLPClassifier`](MLPClassifier.md)
+
+Defined in:  [generated/neural\_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/neural_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/neural_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/neural_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/neural_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/neural_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17)
 
 ## Accessors
 
 ### best\_loss\_
 
-• `get` **best_loss_**(): `Promise`<`number`\>
-
 The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set ot `undefined`. Refer to the `best\_validation\_score\_` fitted attribute instead.
+
+#### Signature
+
+```ts
+best_loss_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L362)
 
-[generated/neural_network/MLPClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L362)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L362)
 
 ### best\_validation\_score\_
 
-• `get` **best_validation_score_**(): `Promise`<`number`\>
-
 The best validation score (i.e. accuracy score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`.
+
+#### Signature
+
+```ts
+best_validation_score_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L437)
 
-[generated/neural_network/MLPClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L437)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L437)
 
 ### classes\_
 
-• `get` **classes_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Class labels for each output.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L314)
 
-[generated/neural_network/MLPClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L314)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L314)
 
 ### coefs\_
 
-• `get` **coefs_**(): `Promise`<`any`[]\>
-
 The ith element in the list represents the weight matrix corresponding to layer i.
+
+#### Signature
+
+```ts
+coefs_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L485)
 
-[generated/neural_network/MLPClassifier.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L485)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L485)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L558)
 
-[generated/neural_network/MLPClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L558)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L558)
 
 ### intercepts\_
 
-• `get` **intercepts_**(): `Promise`<`any`[]\>
-
 The ith element in the list represents the bias vector corresponding to layer i + 1.
+
+#### Signature
+
+```ts
+intercepts_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L508)
 
-[generated/neural_network/MLPClassifier.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L508)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L508)
 
 ### loss\_
 
-• `get` **loss_**(): `Promise`<`number`\>
-
 The current loss computed with the loss function.
+
+#### Signature
+
+```ts
+loss_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L339)
 
-[generated/neural_network/MLPClassifier.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L339)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L339)
 
 ### loss\_curve\_
 
-• `get` **loss_curve_**(): `Promise`<`any`[]\>
-
 The ith element in the list represents the loss at the ith iteration.
+
+#### Signature
+
+```ts
+loss_curve_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L387)
 
-[generated/neural_network/MLPClassifier.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L387)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L387)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L533)
 
-[generated/neural_network/MLPClassifier.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L533)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L533)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 The number of iterations the solver has run.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L583)
 
-[generated/neural_network/MLPClassifier.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L583)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L583)
 
 ### n\_layers\_
 
-• `get` **n_layers_**(): `Promise`<`number`\>
-
 Number of layers.
+
+#### Signature
+
+```ts
+n_layers_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L606)
 
-[generated/neural_network/MLPClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L606)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L606)
 
 ### n\_outputs\_
 
-• `get` **n_outputs_**(): `Promise`<`number`\>
-
 Number of outputs.
+
+#### Signature
+
+```ts
+n_outputs_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L631)
 
-[generated/neural_network/MLPClassifier.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L631)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L631)
 
 ### out\_activation\_
 
-• `get` **out_activation_**(): `Promise`<`string`\>
-
 Name of the output activation function.
+
+#### Signature
+
+```ts
+out_activation_(): Promise<string>;
+```
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L656)
 
-[generated/neural_network/MLPClassifier.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L656)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L656)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L28)
 
-[generated/neural_network/MLPClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L28)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -354,67 +326,75 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L32)
 
-[generated/neural_network/MLPClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L32)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L28) [generated/neural\_network/MLPClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L32)
 
 ### t\_
 
-• `get` **t_**(): `Promise`<`number`\>
-
 The number of training samples seen by the solver during fitting.
+
+#### Signature
+
+```ts
+t_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L462)
 
-[generated/neural_network/MLPClassifier.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L462)
-
-___
+Defined in:  [generated/neural\_network/MLPClassifier.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L462)
 
 ### validation\_scores\_
 
-• `get` **validation_scores_**(): `Promise`<`any`[]\>
-
 The score at each iteration on a held-out validation set. The score reported is the accuracy score. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`.
+
+#### Signature
+
+```ts
+validation_scores_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L412)
 
-[generated/neural_network/MLPClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L412)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L412)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L111)
 
-[generated/neural_network/MLPClassifier.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L111)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model to data matrix X and target(s) y.
+
+#### Signature
+
+```ts
+fit(opts: MLPClassifierFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -424,21 +404,21 @@ Fit the model to data matrix X and target(s) y.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L128)
 
-[generated/neural_network/MLPClassifier.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L128)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -448,19 +428,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L41)
 
-[generated/neural_network/MLPClassifier.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L41)
-
-___
-
-### partial\_fit
-
-▸ **partial_fit**(`opts`): `Promise`<`any`\>
+### partial\_fit()
 
 Update the model with a single iteration over the given data.
+
+#### Signature
+
+```ts
+partial_fit(opts: MLPClassifierPartialFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -470,19 +450,19 @@ Update the model with a single iteration over the given data.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L158)
 
-[generated/neural_network/MLPClassifier.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L158)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### predict()
 
 Predict using the multi-layer perceptron classifier.
+
+#### Signature
+
+```ts
+predict(opts: MLPClassifierPredictOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -492,19 +472,19 @@ Predict using the multi-layer perceptron classifier.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L190)
 
-[generated/neural_network/MLPClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L190)
-
-___
-
-### predict\_log\_proba
-
-▸ **predict_log_proba**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### predict\_log\_proba()
 
 Return the log of probability estimates.
+
+#### Signature
+
+```ts
+predict_log_proba(opts: MLPClassifierPredictLogProbaOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -514,19 +494,19 @@ Return the log of probability estimates.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L218)
 
-[generated/neural_network/MLPClassifier.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L218)
-
-___
-
-### predict\_proba
-
-▸ **predict_proba**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### predict\_proba()
 
 Probability estimates.
+
+#### Signature
+
+```ts
+predict_proba(opts: MLPClassifierPredictProbaOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -536,21 +516,21 @@ Probability estimates.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L250)
 
-[generated/neural_network/MLPClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L250)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
+
+#### Signature
+
+```ts
+score(opts: MLPClassifierScoreOptions): Promise<number>;
+```
 
 #### Parameters
 
@@ -560,8 +540,6 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/neural_network/MLPClassifier.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L282)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L282)

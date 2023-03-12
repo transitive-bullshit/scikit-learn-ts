@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Meta-transformer for selecting features based on importance weights.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html)
  */
 export class SelectFromModel {
   id: string

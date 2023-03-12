@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../kernel_approximation.html#nystroem-kernel-approx).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html)
  */
 export class Nystroem {
   id: string

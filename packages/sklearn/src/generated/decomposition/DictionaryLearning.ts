@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Solves the optimization problem:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.DictionaryLearning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.DictionaryLearning.html)
  */
 export class DictionaryLearning {
   id: string

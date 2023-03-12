@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This strategy consists of fitting one regressor per target. This is a simple strategy for extending regressors that do not natively support multi-target regression.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputRegressor.html)
  */
 export class MultiOutputRegressor {
   id: string

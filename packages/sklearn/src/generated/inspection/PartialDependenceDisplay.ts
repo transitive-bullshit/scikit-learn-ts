@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in [Advanced Plotting With Partial Dependence](../../auto_examples/miscellaneous/plot_partial_dependence_visualization_api.html#sphx-glr-auto-examples-miscellaneous-plot-partial-dependence-visualization-api-py) and the [User Guide](../partial_dependence.html#partial-dependence).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.inspection.PartialDependenceDisplay.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.PartialDependenceDisplay.html)
  */
 export class PartialDependenceDisplay {
   id: string

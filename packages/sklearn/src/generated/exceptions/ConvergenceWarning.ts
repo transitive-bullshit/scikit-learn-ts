@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Custom warning to capture convergence problems
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.ConvergenceWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.ConvergenceWarning.html)
  */
 export class ConvergenceWarning {
   id: string

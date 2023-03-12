@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../outlier_detection.html#outlier-detection).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html)
  */
 export class OneClassSVM {
   id: string

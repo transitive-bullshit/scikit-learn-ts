@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / OneClassSVM
-
-# Class: OneClassSVM
+# OneClassSVM
 
 Unsupervised Outlier Detection.
 
@@ -10,258 +8,227 @@ The implementation is based on libsvm.
 
 Read more in the [User Guide](../outlier_detection.html#outlier-detection).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](OneClassSVM.md#constructor)
-
-### Properties
-
-- [\_isDisposed](OneClassSVM.md#_isdisposed)
-- [\_isInitialized](OneClassSVM.md#_isinitialized)
-- [\_py](OneClassSVM.md#_py)
-- [id](OneClassSVM.md#id)
-- [opts](OneClassSVM.md#opts)
-
-### Accessors
-
-- [class\_weight\_](OneClassSVM.md#class_weight_)
-- [dual\_coef\_](OneClassSVM.md#dual_coef_)
-- [feature\_names\_in\_](OneClassSVM.md#feature_names_in_)
-- [fit\_status\_](OneClassSVM.md#fit_status_)
-- [intercept\_](OneClassSVM.md#intercept_)
-- [n\_features\_in\_](OneClassSVM.md#n_features_in_)
-- [n\_iter\_](OneClassSVM.md#n_iter_)
-- [offset\_](OneClassSVM.md#offset_)
-- [py](OneClassSVM.md#py)
-- [shape\_fit\_](OneClassSVM.md#shape_fit_)
-- [support\_](OneClassSVM.md#support_)
-- [support\_vectors\_](OneClassSVM.md#support_vectors_)
-
-### Methods
-
-- [decision\_function](OneClassSVM.md#decision_function)
-- [dispose](OneClassSVM.md#dispose)
-- [fit](OneClassSVM.md#fit)
-- [fit\_predict](OneClassSVM.md#fit_predict)
-- [init](OneClassSVM.md#init)
-- [predict](OneClassSVM.md#predict)
-- [score\_samples](OneClassSVM.md#score_samples)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new OneClassSVM**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new OneClassSVM(opts?: OneClassSVMOptions): OneClassSVM;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`OneClassSVMOptions`](../interfaces/OneClassSVMOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/svm/OneClassSVM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L27)
+[`OneClassSVM`](OneClassSVM.md)
+
+Defined in:  [generated/svm/OneClassSVM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L27)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/svm/OneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L25)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L25)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/svm/OneClassSVM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L24)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L24)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/svm/OneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L23)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L23)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/svm/OneClassSVM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L20)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L20)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/svm/OneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L21)
+Defined in:  [generated/svm/OneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L21)
 
 ## Accessors
 
 ### class\_weight\_
 
-• `get` **class_weight_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Multipliers of parameter C for each class. Computed based on the `class\_weight` parameter.
+
+#### Signature
+
+```ts
+class_weight_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L262)
 
-[generated/svm/OneClassSVM.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L262)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L262)
 
 ### dual\_coef\_
 
-• `get` **dual_coef_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Coefficients of the support vectors in the decision function.
+
+#### Signature
+
+```ts
+dual_coef_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L287)
 
-[generated/svm/OneClassSVM.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L287)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L287)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L387)
 
-[generated/svm/OneClassSVM.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L387)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L387)
 
 ### fit\_status\_
 
-• `get` **fit_status_**(): `Promise`<`number`\>
-
 0 if correctly fitted, 1 otherwise (will raise warning)
+
+#### Signature
+
+```ts
+fit_status_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L312)
 
-[generated/svm/OneClassSVM.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L312)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L312)
 
 ### intercept\_
 
-• `get` **intercept_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Constant in the decision function.
+
+#### Signature
+
+```ts
+intercept_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L337)
 
-[generated/svm/OneClassSVM.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L337)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L337)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L362)
 
-[generated/svm/OneClassSVM.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L362)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L362)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 Number of iterations run by the optimization routine to fit the model.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L412)
 
-[generated/svm/OneClassSVM.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L412)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L412)
 
 ### offset\_
 
-• `get` **offset_**(): `Promise`<`number`\>
-
 Offset used to define the decision function from the raw scores. We have the relation: decision\_function = score\_samples - `offset\_`. The offset is the opposite of `intercept\_` and is provided for consistency with other outlier detection algorithms.
+
+#### Signature
+
+```ts
+offset_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L435)
 
-[generated/svm/OneClassSVM.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L435)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L435)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L32)
 
-[generated/svm/OneClassSVM.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L32)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -273,67 +240,77 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L36)
 
-[generated/svm/OneClassSVM.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L36)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L32) [generated/svm/OneClassSVM.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L36)
 
 ### shape\_fit\_
 
-• `get` **shape_fit_**(): `Promise`<`any`[]\>
-
 Array dimensions of training vector `X`.
+
+#### Signature
+
+```ts
+shape_fit_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L458)
 
-[generated/svm/OneClassSVM.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L458)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L458)
 
 ### support\_
 
-• `get` **support_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Indices of support vectors.
+
+#### Signature
+
+```ts
+support_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L483)
 
-[generated/svm/OneClassSVM.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L483)
-
-___
+Defined in:  [generated/svm/OneClassSVM.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L483)
 
 ### support\_vectors\_
 
-• `get` **support_vectors_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Support vectors.
+
+#### Signature
+
+```ts
+support_vectors_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L506)
 
-[generated/svm/OneClassSVM.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L506)
+Defined in:  [generated/svm/OneClassSVM.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L506)
 
 ## Methods
 
-### decision\_function
-
-▸ **decision_function**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### decision\_function()
 
 Signed distance to the separating hyperplane.
 
 Signed distance is positive for an inlier and negative for an outlier.
+
+#### Signature
+
+```ts
+decision_function(opts: OneClassSVMDecisionFunctionOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -343,37 +320,37 @@ Signed distance is positive for an inlier and negative for an outlier.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L112)
 
-[generated/svm/OneClassSVM.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L112)
-
-___
-
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L93)
 
-[generated/svm/OneClassSVM.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L93)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Detect the soft boundary of the set of samples X.
+
+#### Signature
+
+```ts
+fit(opts: OneClassSVMFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -383,21 +360,21 @@ Detect the soft boundary of the set of samples X.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L142)
 
-[generated/svm/OneClassSVM.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L142)
-
-___
-
-### fit\_predict
-
-▸ **fit_predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### fit\_predict()
 
 Perform fit on X and returns labels for X.
 
 Returns -1 for outliers and 1 for inliers.
+
+#### Signature
+
+```ts
+fit_predict(opts: OneClassSVMFitPredictOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -407,21 +384,21 @@ Returns -1 for outliers and 1 for inliers.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L176)
 
-[generated/svm/OneClassSVM.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L176)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -431,21 +408,21 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L45)
 
-[generated/svm/OneClassSVM.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L45)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### predict()
 
 Perform classification on samples in X.
 
 For a one-class model, +1 or -1 is returned.
+
+#### Signature
+
+```ts
+predict(opts: OneClassSVMPredictOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -455,19 +432,19 @@ For a one-class model, +1 or -1 is returned.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/svm/OneClassSVM.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L206)
 
-[generated/svm/OneClassSVM.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L206)
-
-___
-
-### score\_samples
-
-▸ **score_samples**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### score\_samples()
 
 Raw scoring function of the samples.
+
+#### Signature
+
+```ts
+score_samples(opts: OneClassSVMScoreSamplesOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -477,8 +454,6 @@ Raw scoring function of the samples.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/svm/OneClassSVM.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/svm/OneClassSVM.ts#L234)
+Defined in:  [generated/svm/OneClassSVM.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L234)

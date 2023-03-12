@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / ParameterGrid
-
-# Class: ParameterGrid
+# ParameterGrid
 
 Grid of parameters with a discrete number of values for each.
 
@@ -8,114 +6,83 @@ Can be used to iterate over parameter value combinations with the Python built-i
 
 Read more in the [User Guide](../grid_search.html#grid-search).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterGrid.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ParameterGrid.md#constructor)
-
-### Properties
-
-- [\_isDisposed](ParameterGrid.md#_isdisposed)
-- [\_isInitialized](ParameterGrid.md#_isinitialized)
-- [\_py](ParameterGrid.md#_py)
-- [id](ParameterGrid.md#id)
-- [opts](ParameterGrid.md#opts)
-
-### Accessors
-
-- [py](ParameterGrid.md#py)
-
-### Methods
-
-- [dispose](ParameterGrid.md#dispose)
-- [init](ParameterGrid.md#init)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterGrid.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new ParameterGrid**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new ParameterGrid(opts?: ParameterGridOptions): ParameterGrid;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`ParameterGridOptions`](../interfaces/ParameterGridOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/model_selection/ParameterGrid.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L25)
+[`ParameterGrid`](ParameterGrid.md)
+
+Defined in:  [generated/model\_selection/ParameterGrid.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/ParameterGrid.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L23)
-
-___
+Defined in:  [generated/model\_selection/ParameterGrid.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/ParameterGrid.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L22)
-
-___
+Defined in:  [generated/model\_selection/ParameterGrid.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/model_selection/ParameterGrid.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L21)
-
-___
+Defined in:  [generated/model\_selection/ParameterGrid.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/model_selection/ParameterGrid.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L18)
-
-___
+Defined in:  [generated/model\_selection/ParameterGrid.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/model_selection/ParameterGrid.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L19)
+Defined in:  [generated/model\_selection/ParameterGrid.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L19)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/model\_selection/ParameterGrid.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L30)
 
-[generated/model_selection/ParameterGrid.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -127,37 +94,41 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/model\_selection/ParameterGrid.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L34)
 
-[generated/model_selection/ParameterGrid.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L34)
+Defined in:  [generated/model\_selection/ParameterGrid.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L30) [generated/model\_selection/ParameterGrid.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/ParameterGrid.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L83)
 
-[generated/model_selection/ParameterGrid.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L83)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -167,8 +138,6 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
-
-[generated/model_selection/ParameterGrid.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L43)
+Defined in:  [generated/model\_selection/ParameterGrid.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ParameterGrid.ts#L43)

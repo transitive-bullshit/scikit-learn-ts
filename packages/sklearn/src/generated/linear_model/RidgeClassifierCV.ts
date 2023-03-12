@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#ridge-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifierCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifierCV.html)
  */
 export class RidgeClassifierCV {
   id: string

@@ -1,9 +1,7 @@
 {
-  "index": "Introduction",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "index": "Home",
+  "guide": "Guide",
+  "docs": "Documentation",
   "-- More": {
     "type": "separator",
     "title": "More"

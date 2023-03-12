@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../biclustering.html#spectral-coclustering).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralCoclustering.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralCoclustering.html)
  */
 export class SpectralCoclustering {
   id: string

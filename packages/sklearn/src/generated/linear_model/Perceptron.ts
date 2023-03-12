@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#perceptron).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)
  */
 export class Perceptron {
   id: string

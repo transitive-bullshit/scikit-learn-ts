@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSRegression.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSRegression.html)
  */
 export class PLSRegression {
   id: string

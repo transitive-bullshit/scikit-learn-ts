@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../covariance.html#sparse-inverse-covariance).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.GraphicalLasso.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.GraphicalLasso.html)
  */
 export class GraphicalLasso {
   id: string

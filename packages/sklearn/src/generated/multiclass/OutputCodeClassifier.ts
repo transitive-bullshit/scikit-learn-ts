@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../multiclass.html#ecoc).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OutputCodeClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OutputCodeClassifier.html)
  */
 export class OutputCodeClassifier {
   id: string

@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   The `Product` kernel takes two kernels \\(k\_1\\) and \\(k\_2\\) and combines them via
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Product.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Product.html)
  */
 export class Product {
   id: string

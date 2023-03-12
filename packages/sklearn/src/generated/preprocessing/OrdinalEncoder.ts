@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html)
  */
 export class OrdinalEncoder {
   id: string

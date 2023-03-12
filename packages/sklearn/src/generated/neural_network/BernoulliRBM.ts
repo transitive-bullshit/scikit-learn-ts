@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neural_networks_unsupervised.html#rbm).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html)
  */
 export class BernoulliRBM {
   id: string

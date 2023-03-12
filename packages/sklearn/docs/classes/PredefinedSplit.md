@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / PredefinedSplit
-
-# Class: PredefinedSplit
+# PredefinedSplit
 
 Predefined split cross-validator
 
@@ -8,116 +6,83 @@ Provides train/test indices to split data into train/test sets using a predefine
 
 Read more in the [User Guide](../cross_validation.html#predefined-split).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](PredefinedSplit.md#constructor)
-
-### Properties
-
-- [\_isDisposed](PredefinedSplit.md#_isdisposed)
-- [\_isInitialized](PredefinedSplit.md#_isinitialized)
-- [\_py](PredefinedSplit.md#_py)
-- [id](PredefinedSplit.md#id)
-- [opts](PredefinedSplit.md#opts)
-
-### Accessors
-
-- [py](PredefinedSplit.md#py)
-
-### Methods
-
-- [dispose](PredefinedSplit.md#dispose)
-- [get\_n\_splits](PredefinedSplit.md#get_n_splits)
-- [init](PredefinedSplit.md#init)
-- [split](PredefinedSplit.md#split)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new PredefinedSplit**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new PredefinedSplit(opts?: PredefinedSplitOptions): PredefinedSplit;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`PredefinedSplitOptions`](../interfaces/PredefinedSplitOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/model_selection/PredefinedSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L25)
+[`PredefinedSplit`](PredefinedSplit.md)
+
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/PredefinedSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L23)
-
-___
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/PredefinedSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L22)
-
-___
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/model_selection/PredefinedSplit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L21)
-
-___
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/model_selection/PredefinedSplit.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L18)
-
-___
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/model_selection/PredefinedSplit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L19)
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L19)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L30)
 
-[generated/model_selection/PredefinedSplit.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -129,35 +94,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L34)
 
-[generated/model_selection/PredefinedSplit.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L34)
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L30) [generated/model\_selection/PredefinedSplit.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L83)
 
-[generated/model_selection/PredefinedSplit.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L83)
-
-___
-
-### get\_n\_splits
-
-▸ **get_n_splits**(`opts`): `Promise`<`number`\>
+### get\_n\_splits()
 
 Returns the number of splitting iterations in the cross-validator
+
+#### Signature
+
+```ts
+get_n_splits(opts: PredefinedSplitGetNSplitsOptions): Promise<number>;
+```
 
 #### Parameters
 
@@ -167,21 +136,21 @@ Returns the number of splitting iterations in the cross-validator
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L100)
 
-[generated/model_selection/PredefinedSplit.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L100)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -191,19 +160,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L43)
 
-[generated/model_selection/PredefinedSplit.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L43)
-
-___
-
-### split
-
-▸ **split**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### split()
 
 Generate indices to split data into training and test set.
+
+#### Signature
+
+```ts
+split(opts: PredefinedSplitSplitOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -213,8 +182,6 @@ Generate indices to split data into training and test set.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/model_selection/PredefinedSplit.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L128)
+Defined in:  [generated/model\_selection/PredefinedSplit.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/PredefinedSplit.ts#L128)

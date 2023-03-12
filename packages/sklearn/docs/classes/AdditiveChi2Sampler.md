@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / AdditiveChi2Sampler
-
-# Class: AdditiveChi2Sampler
+# AdditiveChi2Sampler
 
 Approximate feature map for additive chi2 kernel.
 
@@ -12,154 +10,119 @@ Optimal choices for the sampling interval for certain data ranges can be compute
 
 Read more in the [User Guide](../kernel_approximation.html#additive-chi-kernel-approx).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.AdditiveChi2Sampler.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](AdditiveChi2Sampler.md#constructor)
-
-### Properties
-
-- [\_isDisposed](AdditiveChi2Sampler.md#_isdisposed)
-- [\_isInitialized](AdditiveChi2Sampler.md#_isinitialized)
-- [\_py](AdditiveChi2Sampler.md#_py)
-- [id](AdditiveChi2Sampler.md#id)
-- [opts](AdditiveChi2Sampler.md#opts)
-
-### Accessors
-
-- [feature\_names\_in\_](AdditiveChi2Sampler.md#feature_names_in_)
-- [n\_features\_in\_](AdditiveChi2Sampler.md#n_features_in_)
-- [py](AdditiveChi2Sampler.md#py)
-- [sample\_interval\_](AdditiveChi2Sampler.md#sample_interval_)
-
-### Methods
-
-- [dispose](AdditiveChi2Sampler.md#dispose)
-- [fit](AdditiveChi2Sampler.md#fit)
-- [fit\_transform](AdditiveChi2Sampler.md#fit_transform)
-- [get\_feature\_names\_out](AdditiveChi2Sampler.md#get_feature_names_out)
-- [init](AdditiveChi2Sampler.md#init)
-- [set\_output](AdditiveChi2Sampler.md#set_output)
-- [transform](AdditiveChi2Sampler.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.AdditiveChi2Sampler.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new AdditiveChi2Sampler**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new AdditiveChi2Sampler(opts?: AdditiveChi2SamplerOptions): AdditiveChi2Sampler;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`AdditiveChi2SamplerOptions`](../interfaces/AdditiveChi2SamplerOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L29)
+[`AdditiveChi2Sampler`](AdditiveChi2Sampler.md)
+
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L27)
-
-___
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L27)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L26)
-
-___
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L26)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L25)
-
-___
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L25)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L22)
-
-___
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L22)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L23)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L23)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L333)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L333)
-
-___
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L333)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L306)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L306)
-
-___
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L306)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L34)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L34)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -171,51 +134,57 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L38)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L38)
-
-___
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L34) [generated/kernel\_approximation/AdditiveChi2Sampler.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L38)
 
 ### sample\_interval\_
 
-• `get` **sample_interval_**(): `Promise`<`number`\>
-
 Stored sampling interval. Specified as a parameter if `sample\_steps` not in {1,2,3}.
+
+#### Signature
+
+```ts
+sample_interval_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L279)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L279)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L279)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L91)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L91)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Set the parameters.
+
+#### Signature
+
+```ts
+fit(opts: AdditiveChi2SamplerFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -225,21 +194,21 @@ Set the parameters.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L108)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L108)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+
+#### Signature
+
+```ts
+fit_transform(opts: AdditiveChi2SamplerFitTransformOptions): Promise<any[]>;
+```
 
 #### Parameters
 
@@ -249,19 +218,19 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L140)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L140)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: AdditiveChi2SamplerGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -271,21 +240,21 @@ Get output feature names for transformation.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L178)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L178)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -295,21 +264,21 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L47)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L47)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Signature
+
+```ts
+set_output(opts: AdditiveChi2SamplerSetOutputOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -319,19 +288,19 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L215)
 
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L215)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<`any`\>
+### transform()
 
 Apply approximate feature map to X.
+
+#### Signature
+
+```ts
+transform(opts: AdditiveChi2SamplerTransformOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -341,8 +310,6 @@ Apply approximate feature map to X.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/kernel_approximation/AdditiveChi2Sampler.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L247)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L247)

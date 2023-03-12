@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../svm.html#svm-classification).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
  */
 export class LinearSVC {
   id: string

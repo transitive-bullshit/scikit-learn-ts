@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#hierarchical-clustering).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
  */
 export class AgglomerativeClustering {
   id: string

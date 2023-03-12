@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / Isomap
-
-# Class: Isomap
+# Isomap
 
 Isomap Embedding.
 
@@ -8,222 +6,191 @@ Non-linear dimensionality reduction through Isometric Mapping
 
 Read more in the [User Guide](../manifold.html#isomap).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Isomap.md#constructor)
-
-### Properties
-
-- [\_isDisposed](Isomap.md#_isdisposed)
-- [\_isInitialized](Isomap.md#_isinitialized)
-- [\_py](Isomap.md#_py)
-- [id](Isomap.md#id)
-- [opts](Isomap.md#opts)
-
-### Accessors
-
-- [dist\_matrix\_](Isomap.md#dist_matrix_)
-- [embedding\_](Isomap.md#embedding_)
-- [feature\_names\_in\_](Isomap.md#feature_names_in_)
-- [kernel\_pca\_](Isomap.md#kernel_pca_)
-- [n\_features\_in\_](Isomap.md#n_features_in_)
-- [nbrs\_](Isomap.md#nbrs_)
-- [py](Isomap.md#py)
-
-### Methods
-
-- [dispose](Isomap.md#dispose)
-- [fit](Isomap.md#fit)
-- [fit\_transform](Isomap.md#fit_transform)
-- [get\_feature\_names\_out](Isomap.md#get_feature_names_out)
-- [init](Isomap.md#init)
-- [reconstruction\_error](Isomap.md#reconstruction_error)
-- [set\_output](Isomap.md#set_output)
-- [transform](Isomap.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new Isomap**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new Isomap(opts?: IsomapOptions): Isomap;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`IsomapOptions`](../interfaces/IsomapOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/manifold/Isomap.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L25)
+[`Isomap`](Isomap.md)
+
+Defined in:  [generated/manifold/Isomap.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/manifold/Isomap.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L23)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/manifold/Isomap.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L22)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/manifold/Isomap.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L21)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/manifold/Isomap.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L18)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/manifold/Isomap.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L19)
+Defined in:  [generated/manifold/Isomap.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L19)
 
 ## Accessors
 
 ### dist\_matrix\_
 
-• `get` **dist_matrix_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Stores the geodesic distance matrix of training data.
+
+#### Signature
+
+```ts
+dist_matrix_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L356)
 
-[generated/manifold/Isomap.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L356)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L356)
 
 ### embedding\_
 
-• `get` **embedding_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Stores the embedding vectors.
+
+#### Signature
+
+```ts
+embedding_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L288)
 
-[generated/manifold/Isomap.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L288)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L288)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L402)
 
-[generated/manifold/Isomap.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L402)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L402)
 
 ### kernel\_pca\_
 
-• `get` **kernel_pca_**(): `Promise`<`any`\>
-
 [`KernelPCA`](sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA "sklearn.decomposition.KernelPCA") object used to implement the embedding.
+
+#### Signature
+
+```ts
+kernel_pca_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L311)
 
-[generated/manifold/Isomap.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L311)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L311)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L379)
 
-[generated/manifold/Isomap.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L379)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L379)
 
 ### nbrs\_
 
-• `get` **nbrs_**(): `Promise`<`any`\>
-
 Stores nearest neighbors instance, including BallTree or KDtree if applicable.
+
+#### Signature
+
+```ts
+nbrs_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L334)
 
-[generated/manifold/Isomap.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L334)
-
-___
+Defined in:  [generated/manifold/Isomap.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L334)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L30)
 
-[generated/manifold/Isomap.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -235,35 +202,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L34)
 
-[generated/manifold/Isomap.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L34)
+Defined in:  [generated/manifold/Isomap.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L30) [generated/manifold/Isomap.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L94)
 
-[generated/manifold/Isomap.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L94)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Compute the embedding vectors for data X.
+
+#### Signature
+
+```ts
+fit(opts: IsomapFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -273,19 +244,19 @@ Compute the embedding vectors for data X.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L111)
 
-[generated/manifold/Isomap.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L111)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### fit\_transform()
 
 Fit the model from data in X and transform X.
+
+#### Signature
+
+```ts
+fit_transform(opts: IsomapFitTransformOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -295,21 +266,21 @@ Fit the model from data in X and transform X.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L139)
 
-[generated/manifold/Isomap.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L139)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: IsomapGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -319,21 +290,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L169)
 
-[generated/manifold/Isomap.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L169)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -343,19 +314,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L43)
 
-[generated/manifold/Isomap.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L43)
-
-___
-
-### reconstruction\_error
-
-▸ **reconstruction_error**(`opts`): `Promise`<`any`\>
+### reconstruction\_error()
 
 Compute the reconstruction error for the embedding.
+
+#### Signature
+
+```ts
+reconstruction_error(opts: IsomapReconstructionErrorOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -365,21 +336,21 @@ Compute the reconstruction error for the embedding.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L199)
 
-[generated/manifold/Isomap.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L199)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Signature
+
+```ts
+set_output(opts: IsomapSetOutputOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -389,21 +360,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/manifold/Isomap.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L232)
 
-[generated/manifold/Isomap.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L232)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### transform()
 
 Transform X.
 
 This is implemented by linking the points X into the graph of geodesic distances of the training data. First the `n\_neighbors` nearest neighbors of X are found in the training data, and from these the shortest geodesic distances from each point in X to each point in the training data are computed in order to construct the kernel. The embedding of X is the projection of this kernel onto the embedding vectors of the training set.
+
+#### Signature
+
+```ts
+transform(opts: IsomapTransformOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -413,8 +384,6 @@ This is implemented by linking the points X into the graph of geodesic distances
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/manifold/Isomap.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/Isomap.ts#L262)
+Defined in:  [generated/manifold/Isomap.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L262)

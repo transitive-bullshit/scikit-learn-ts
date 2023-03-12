@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / LeavePOut
-
-# Class: LeavePOut
+# LeavePOut
 
 Leave-P-Out cross-validator
 
@@ -12,116 +10,83 @@ Due to the high number of iterations which grows combinatorically with the numbe
 
 Read more in the [User Guide](../cross_validation.html#leave-p-out).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](LeavePOut.md#constructor)
-
-### Properties
-
-- [\_isDisposed](LeavePOut.md#_isdisposed)
-- [\_isInitialized](LeavePOut.md#_isinitialized)
-- [\_py](LeavePOut.md#_py)
-- [id](LeavePOut.md#id)
-- [opts](LeavePOut.md#opts)
-
-### Accessors
-
-- [py](LeavePOut.md#py)
-
-### Methods
-
-- [dispose](LeavePOut.md#dispose)
-- [get\_n\_splits](LeavePOut.md#get_n_splits)
-- [init](LeavePOut.md#init)
-- [split](LeavePOut.md#split)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new LeavePOut**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new LeavePOut(opts?: LeavePOutOptions): LeavePOut;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`LeavePOutOptions`](../interfaces/LeavePOutOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/model_selection/LeavePOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L29)
+[`LeavePOut`](LeavePOut.md)
+
+Defined in:  [generated/model\_selection/LeavePOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/LeavePOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L27)
-
-___
+Defined in:  [generated/model\_selection/LeavePOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L27)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/LeavePOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L26)
-
-___
+Defined in:  [generated/model\_selection/LeavePOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L26)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/model_selection/LeavePOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L25)
-
-___
+Defined in:  [generated/model\_selection/LeavePOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L25)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/model_selection/LeavePOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L22)
-
-___
+Defined in:  [generated/model\_selection/LeavePOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L22)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/model_selection/LeavePOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L23)
+Defined in:  [generated/model\_selection/LeavePOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L23)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePOut.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L34)
 
-[generated/model_selection/LeavePOut.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L34)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -133,35 +98,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePOut.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L38)
 
-[generated/model_selection/LeavePOut.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L38)
+Defined in:  [generated/model\_selection/LeavePOut.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L34) [generated/model\_selection/LeavePOut.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L38)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePOut.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L84)
 
-[generated/model_selection/LeavePOut.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L84)
-
-___
-
-### get\_n\_splits
-
-▸ **get_n_splits**(`opts`): `Promise`<`any`\>
+### get\_n\_splits()
 
 Returns the number of splitting iterations in the cross-validator
+
+#### Signature
+
+```ts
+get_n_splits(opts: LeavePOutGetNSplitsOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -171,21 +140,21 @@ Returns the number of splitting iterations in the cross-validator
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePOut.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L101)
 
-[generated/model_selection/LeavePOut.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L101)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -195,19 +164,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePOut.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L47)
 
-[generated/model_selection/LeavePOut.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L47)
-
-___
-
-### split
-
-▸ **split**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### split()
 
 Generate indices to split data into training and test set.
+
+#### Signature
+
+```ts
+split(opts: LeavePOutSplitOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -217,8 +186,6 @@ Generate indices to split data into training and test set.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/model_selection/LeavePOut.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L131)
+Defined in:  [generated/model\_selection/LeavePOut.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L131)

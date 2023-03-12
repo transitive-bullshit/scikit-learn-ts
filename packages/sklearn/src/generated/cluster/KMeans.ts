@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#k-means).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
  */
 export class KMeans {
   id: string

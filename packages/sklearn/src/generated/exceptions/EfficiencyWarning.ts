@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This warning notifies the user that the efficiency may not be optimal due to some reason which may be included as a part of the warning message. This may be subclassed into a more specific Warning class.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.EfficiencyWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.EfficiencyWarning.html)
  */
 export class EfficiencyWarning {
   id: string

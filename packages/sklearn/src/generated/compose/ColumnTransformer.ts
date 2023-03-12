@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../compose.html#column-transformer).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.compose.ColumnTransformer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.compose.ColumnTransformer.html)
  */
 export class ColumnTransformer {
   id: string

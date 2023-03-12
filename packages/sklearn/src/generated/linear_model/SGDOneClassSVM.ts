@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../sgd.html#sgd-online-one-class-svm).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDOneClassSVM.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDOneClassSVM.html)
  */
 export class SGDOneClassSVM {
   id: string

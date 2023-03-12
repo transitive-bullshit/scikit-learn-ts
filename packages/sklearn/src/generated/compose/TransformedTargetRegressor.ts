@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The computation during [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit") is:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.compose.TransformedTargetRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.compose.TransformedTargetRegressor.html)
  */
 export class TransformedTargetRegressor {
   id: string

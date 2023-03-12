@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../svm.html#svm-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html)
  */
 export class SVR {
   id: string

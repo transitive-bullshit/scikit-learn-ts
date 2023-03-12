@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   For example, in random projection, this warning is raised when the number of components, which quantifies the dimensionality of the target projection space, is higher than the number of features, which quantifies the dimensionality of the original source space, to imply that the dimensionality of the problem will not be reduced.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataDimensionalityWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataDimensionalityWarning.html)
  */
 export class DataDimensionalityWarning {
   id: string

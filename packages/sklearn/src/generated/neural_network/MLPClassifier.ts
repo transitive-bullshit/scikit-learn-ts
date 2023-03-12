@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This model optimizes the log-loss function using LBFGS or stochastic gradient descent.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html)
  */
 export class MLPClassifier {
   id: string

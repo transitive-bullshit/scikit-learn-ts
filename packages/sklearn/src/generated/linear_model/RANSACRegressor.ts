@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#ransac-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html)
  */
 export class RANSACRegressor {
   id: string

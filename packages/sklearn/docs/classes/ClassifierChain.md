@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / ClassifierChain
-
-# Class: ClassifierChain
+# ClassifierChain
 
 A multi-label model that arranges binary classifiers into a chain.
 
@@ -8,204 +6,173 @@ Each model makes a prediction in the order specified by the chain using all of t
 
 Read more in the [User Guide](../multiclass.html#classifierchain).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ClassifierChain.md#constructor)
-
-### Properties
-
-- [\_isDisposed](ClassifierChain.md#_isdisposed)
-- [\_isInitialized](ClassifierChain.md#_isinitialized)
-- [\_py](ClassifierChain.md#_py)
-- [id](ClassifierChain.md#id)
-- [opts](ClassifierChain.md#opts)
-
-### Accessors
-
-- [classes\_](ClassifierChain.md#classes_)
-- [estimators\_](ClassifierChain.md#estimators_)
-- [feature\_names\_in\_](ClassifierChain.md#feature_names_in_)
-- [n\_features\_in\_](ClassifierChain.md#n_features_in_)
-- [order\_](ClassifierChain.md#order_)
-- [py](ClassifierChain.md#py)
-
-### Methods
-
-- [decision\_function](ClassifierChain.md#decision_function)
-- [dispose](ClassifierChain.md#dispose)
-- [fit](ClassifierChain.md#fit)
-- [init](ClassifierChain.md#init)
-- [predict](ClassifierChain.md#predict)
-- [predict\_proba](ClassifierChain.md#predict_proba)
-- [score](ClassifierChain.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new ClassifierChain**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new ClassifierChain(opts?: ClassifierChainOptions): ClassifierChain;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`ClassifierChainOptions`](../interfaces/ClassifierChainOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/multioutput/ClassifierChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L25)
+[`ClassifierChain`](ClassifierChain.md)
+
+Defined in:  [generated/multioutput/ClassifierChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/multioutput/ClassifierChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L23)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/multioutput/ClassifierChain.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L22)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/multioutput/ClassifierChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L21)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/multioutput/ClassifierChain.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L18)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/multioutput/ClassifierChain.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L19)
+Defined in:  [generated/multioutput/ClassifierChain.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L19)
 
 ## Accessors
 
 ### classes\_
 
-• `get` **classes_**(): `Promise`<`any`[]\>
-
 A list of arrays of length `len(estimators\_)` containing the class labels for each estimator in the chain.
+
+#### Signature
+
+```ts
+classes_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L258)
 
-[generated/multioutput/ClassifierChain.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L258)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L258)
 
 ### estimators\_
 
-• `get` **estimators_**(): `Promise`<`any`[]\>
-
 A list of clones of base\_estimator.
+
+#### Signature
+
+```ts
+estimators_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L283)
 
-[generated/multioutput/ClassifierChain.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L283)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L283)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L358)
 
-[generated/multioutput/ClassifierChain.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L358)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L358)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `base\_estimator` exposes such an attribute when fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L333)
 
-[generated/multioutput/ClassifierChain.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L333)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L333)
 
 ### order\_
 
-• `get` **order_**(): `Promise`<`any`[]\>
-
 The order of labels in the classifier chain.
+
+#### Signature
+
+```ts
+order_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L308)
 
-[generated/multioutput/ClassifierChain.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L308)
-
-___
+Defined in:  [generated/multioutput/ClassifierChain.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L308)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L30)
 
-[generated/multioutput/ClassifierChain.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -217,17 +184,21 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L34)
 
-[generated/multioutput/ClassifierChain.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L34)
+Defined in:  [generated/multioutput/ClassifierChain.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L30) [generated/multioutput/ClassifierChain.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L34)
 
 ## Methods
 
-### decision\_function
-
-▸ **decision_function**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### decision\_function()
 
 Evaluate the decision\_function of the models in the chain.
+
+#### Signature
+
+```ts
+decision_function(opts: ClassifierChainDecisionFunctionOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -237,37 +208,37 @@ Evaluate the decision\_function of the models in the chain.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L104)
 
-[generated/multioutput/ClassifierChain.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L104)
-
-___
-
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L87)
 
-[generated/multioutput/ClassifierChain.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L87)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model to data matrix X and targets Y.
+
+#### Signature
+
+```ts
+fit(opts: ClassifierChainFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -277,21 +248,21 @@ Fit the model to data matrix X and targets Y.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L136)
 
-[generated/multioutput/ClassifierChain.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L136)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -301,19 +272,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L43)
 
-[generated/multioutput/ClassifierChain.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L43)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### predict()
 
 Predict on the data matrix X using the ClassifierChain model.
+
+#### Signature
+
+```ts
+predict(opts: ClassifierChainPredictOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -323,19 +294,19 @@ Predict on the data matrix X using the ClassifierChain model.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L166)
 
-[generated/multioutput/ClassifierChain.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L166)
-
-___
-
-### predict\_proba
-
-▸ **predict_proba**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### predict\_proba()
 
 Predict probability estimates.
+
+#### Signature
+
+```ts
+predict_proba(opts: ClassifierChainPredictProbaOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -345,21 +316,21 @@ Predict probability estimates.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/multioutput/ClassifierChain.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L194)
 
-[generated/multioutput/ClassifierChain.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L194)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
+
+#### Signature
+
+```ts
+score(opts: ClassifierChainScoreOptions): Promise<number>;
+```
 
 #### Parameters
 
@@ -369,8 +340,6 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/multioutput/ClassifierChain.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L226)
+Defined in:  [generated/multioutput/ClassifierChain.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L226)

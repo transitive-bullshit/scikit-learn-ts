@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#birch).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.Birch.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.Birch.html)
  */
 export class Birch {
   id: string

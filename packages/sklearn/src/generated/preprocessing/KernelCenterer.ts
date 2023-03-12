@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Let define a kernel \\(K\\) such that:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KernelCenterer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KernelCenterer.html)
  */
 export class KernelCenterer {
   id: string

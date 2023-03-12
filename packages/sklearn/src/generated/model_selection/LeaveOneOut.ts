@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#leave-one-out).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html)
  */
 export class LeaveOneOut {
   id: string

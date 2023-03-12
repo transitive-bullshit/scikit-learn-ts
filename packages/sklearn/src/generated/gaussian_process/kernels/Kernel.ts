@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Base class for all kernels.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Kernel.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Kernel.html)
  */
 export class Kernel {
   id: string

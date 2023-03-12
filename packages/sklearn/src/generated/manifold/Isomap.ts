@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../manifold.html#isomap).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html)
  */
 export class Isomap {
   id: string

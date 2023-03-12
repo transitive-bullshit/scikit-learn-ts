@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#leave-one-group-out).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneGroupOut.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneGroupOut.html)
  */
 export class LeaveOneGroupOut {
   id: string

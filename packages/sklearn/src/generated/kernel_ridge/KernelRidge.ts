@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../kernel_ridge.html#kernel-ridge).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html)
  */
 export class KernelRidge {
   id: string

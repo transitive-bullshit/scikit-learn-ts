@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../decomposition.html#ica).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html)
  */
 export class FastICA {
   id: string

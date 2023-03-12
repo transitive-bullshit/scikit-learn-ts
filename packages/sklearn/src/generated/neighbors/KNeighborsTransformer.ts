@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neighbors.html#neighbors-transformer).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsTransformer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsTransformer.html)
  */
 export class KNeighborsTransformer {
   id: string

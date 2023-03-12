@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note: If a lambda is used as the function, then the resulting transformer will not be pickleable.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html)
  */
 export class FunctionTransformer {
   id: string

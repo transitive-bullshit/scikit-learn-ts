@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#generalized-linear-models).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PoissonRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PoissonRegressor.html)
  */
 export class PoissonRegressor {
   id: string

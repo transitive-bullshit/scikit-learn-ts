@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_selection.html#variance-threshold).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html)
  */
 export class VarianceThreshold {
   id: string

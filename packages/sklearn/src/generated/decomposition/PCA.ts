@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../decomposition.html#pca).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
  */
 export class PCA {
   id: string

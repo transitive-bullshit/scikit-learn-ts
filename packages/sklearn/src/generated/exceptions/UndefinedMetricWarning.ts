@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Warning used when the metric is invalid
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.UndefinedMetricWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.UndefinedMetricWarning.html)
  */
 export class UndefinedMetricWarning {
   id: string

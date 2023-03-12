@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#mean-shift).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html)
  */
 export class MeanShift {
   id: string

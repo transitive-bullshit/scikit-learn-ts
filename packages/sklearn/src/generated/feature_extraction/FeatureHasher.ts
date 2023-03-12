@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_extraction.html#feature-hashing).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html)
  */
 export class FeatureHasher {
   id: string

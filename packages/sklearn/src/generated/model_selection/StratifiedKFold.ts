@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#stratified-k-fold).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html)
  */
 export class StratifiedKFold {
   id: string

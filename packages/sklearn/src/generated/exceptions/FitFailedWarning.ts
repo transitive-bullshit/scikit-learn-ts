@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This Warning is used in meta estimators GridSearchCV and RandomizedSearchCV and the cross-validation helper function cross\_val\_score to warn when there is an error while fitting the estimator.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.FitFailedWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.FitFailedWarning.html)
  */
 export class FitFailedWarning {
   id: string

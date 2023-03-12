@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-binarization).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html)
  */
 export class Binarizer {
   id: string

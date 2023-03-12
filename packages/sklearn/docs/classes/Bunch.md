@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / Bunch
-
-# Class: Bunch
+# Bunch
 
 Container object exposing keys as attributes.
 
@@ -8,125 +6,83 @@ Bunch objects are sometimes used as an output for functions and methods. They ex
 
 Examples
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Bunch.md#constructor)
-
-### Properties
-
-- [\_isDisposed](Bunch.md#_isdisposed)
-- [\_isInitialized](Bunch.md#_isinitialized)
-- [\_py](Bunch.md#_py)
-- [id](Bunch.md#id)
-- [opts](Bunch.md#opts)
-
-### Accessors
-
-- [py](Bunch.md#py)
-
-### Methods
-
-- [clear](Bunch.md#clear)
-- [copy](Bunch.md#copy)
-- [dispose](Bunch.md#dispose)
-- [fromkeys](Bunch.md#fromkeys)
-- [get](Bunch.md#get)
-- [init](Bunch.md#init)
-- [items](Bunch.md#items)
-- [keys](Bunch.md#keys)
-- [pop](Bunch.md#pop)
-- [popitem](Bunch.md#popitem)
-- [setdefault](Bunch.md#setdefault)
-- [update](Bunch.md#update)
-- [values](Bunch.md#values)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new Bunch**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new Bunch(opts?: BunchOptions): Bunch;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`BunchOptions`](../interfaces/BunchOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/utils/Bunch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L25)
+[`Bunch`](Bunch.md)
+
+Defined in:  [generated/utils/Bunch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/utils/Bunch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L23)
-
-___
+Defined in:  [generated/utils/Bunch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/utils/Bunch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L22)
-
-___
+Defined in:  [generated/utils/Bunch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/utils/Bunch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L21)
-
-___
+Defined in:  [generated/utils/Bunch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/utils/Bunch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L18)
-
-___
+Defined in:  [generated/utils/Bunch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/utils/Bunch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L19)
+Defined in:  [generated/utils/Bunch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L19)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L30)
 
-[generated/utils/Bunch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -138,15 +94,19 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L34)
 
-[generated/utils/Bunch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L34)
+Defined in:  [generated/utils/Bunch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L30) [generated/utils/Bunch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L34)
 
 ## Methods
 
-### clear
+### clear()
 
-▸ **clear**(`opts`): `Promise`<`any`\>
+#### Signature
+
+```ts
+clear(opts: BunchClearOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -156,17 +116,17 @@ ___
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L94)
 
-[generated/utils/Bunch.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L94)
+### copy()
 
-___
+#### Signature
 
-### copy
-
-▸ **copy**(`opts`): `Promise`<`any`\>
+```ts
+copy(opts: BunchCopyOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -176,37 +136,37 @@ ___
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L117)
 
-[generated/utils/Bunch.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L117)
-
-___
-
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L80)
 
-[generated/utils/Bunch.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L80)
-
-___
-
-### fromkeys
-
-▸ **fromkeys**(`opts`): `Promise`<`any`\>
+### fromkeys()
 
 Create a new dictionary with keys from iterable and values set to value.
+
+#### Signature
+
+```ts
+fromkeys(opts: BunchFromkeysOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -216,19 +176,19 @@ Create a new dictionary with keys from iterable and values set to value.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L143)
 
-[generated/utils/Bunch.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L143)
-
-___
-
-### get
-
-▸ **get**(`opts`): `Promise`<`any`\>
+### get()
 
 Return the value for key if key is in the dictionary, else default.
+
+#### Signature
+
+```ts
+get(opts: BunchGetOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -238,21 +198,21 @@ Return the value for key if key is in the dictionary, else default.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L169)
 
-[generated/utils/Bunch.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L169)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -262,17 +222,17 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L43)
 
-[generated/utils/Bunch.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L43)
+### items()
 
-___
+#### Signature
 
-### items
-
-▸ **items**(`opts`): `Promise`<`any`\>
+```ts
+items(opts: BunchItemsOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -282,17 +242,17 @@ ___
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L192)
 
-[generated/utils/Bunch.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L192)
+### keys()
 
-___
+#### Signature
 
-### keys
-
-▸ **keys**(`opts`): `Promise`<`any`\>
+```ts
+keys(opts: BunchKeysOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -302,19 +262,19 @@ ___
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L215)
 
-[generated/utils/Bunch.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L215)
-
-___
-
-### pop
-
-▸ **pop**(`opts`): `Promise`<`any`\>
+### pop()
 
 If key is not found, default is returned if given, otherwise KeyError is raised
+
+#### Signature
+
+```ts
+pop(opts: BunchPopOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -324,21 +284,21 @@ If key is not found, default is returned if given, otherwise KeyError is raised
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L241)
 
-[generated/utils/Bunch.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L241)
-
-___
-
-### popitem
-
-▸ **popitem**(`opts`): `Promise`<`any`\>
+### popitem()
 
 Remove and return a (key, value) pair as a 2-tuple.
 
 Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if the dict is empty.
+
+#### Signature
+
+```ts
+popitem(opts: BunchPopitemOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -348,21 +308,21 @@ Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if the di
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L269)
 
-[generated/utils/Bunch.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L269)
-
-___
-
-### setdefault
-
-▸ **setdefault**(`opts`): `Promise`<`any`\>
+### setdefault()
 
 Insert key with a value of default if key is not in the dictionary.
 
 Return the value for key if key is in the dictionary, else default.
+
+#### Signature
+
+```ts
+setdefault(opts: BunchSetdefaultOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -372,19 +332,19 @@ Return the value for key if key is in the dictionary, else default.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L297)
 
-[generated/utils/Bunch.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L297)
-
-___
-
-### update
-
-▸ **update**(`opts`): `Promise`<`any`\>
+### update()
 
 If E is present and has a .keys() method, then does: for k in E: D\[k\] = E\[k\] If E is present and lacks a .keys() method, then does: for k, v in E: D\[k\] = v In either case, this is followed by: for k in F: D\[k\] = F\[k\]
+
+#### Signature
+
+```ts
+update(opts: BunchUpdateOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -394,17 +354,17 @@ If E is present and has a .keys() method, then does: for k in E: D\[k\] = E\[k\]
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/utils/Bunch.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L323)
 
-[generated/utils/Bunch.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L323)
+### values()
 
-___
+#### Signature
 
-### values
-
-▸ **values**(`opts`): `Promise`<`any`\>
+```ts
+values(opts: BunchValuesOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -414,8 +374,6 @@ ___
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/utils/Bunch.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/utils/Bunch.ts#L346)
+Defined in:  [generated/utils/Bunch.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/utils/Bunch.ts#L346)

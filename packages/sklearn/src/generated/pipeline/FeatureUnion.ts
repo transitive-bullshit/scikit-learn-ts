@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../compose.html#feature-union).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.FeatureUnion.html)
  */
 export class FeatureUnion {
   id: string

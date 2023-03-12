@@ -20,7 +20,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#group-shuffle-split).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html)
  */
 export class GroupShuffleSplit {
   id: string

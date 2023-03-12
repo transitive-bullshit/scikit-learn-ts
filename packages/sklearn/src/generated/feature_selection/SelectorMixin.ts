@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Methods
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectorMixin.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectorMixin.html)
  */
 export class SelectorMixin {
   id: string

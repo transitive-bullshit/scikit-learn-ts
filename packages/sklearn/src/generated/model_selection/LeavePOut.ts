@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#leave-p-out).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html)
  */
 export class LeavePOut {
   id: string

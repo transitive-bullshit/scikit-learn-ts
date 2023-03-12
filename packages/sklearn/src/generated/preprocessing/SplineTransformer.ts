@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#spline-transformer).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.SplineTransformer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.SplineTransformer.html)
  */
 export class SplineTransformer {
   id: string

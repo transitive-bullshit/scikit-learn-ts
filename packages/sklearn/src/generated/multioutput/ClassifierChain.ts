@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../multiclass.html#classifierchain).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html)
  */
 export class ClassifierChain {
   id: string

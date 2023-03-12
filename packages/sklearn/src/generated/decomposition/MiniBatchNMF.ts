@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Mini-Batch Non-Negative Matrix Factorization (NMF).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchNMF.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchNMF.html)
  */
 export class MiniBatchNMF {
   id: string

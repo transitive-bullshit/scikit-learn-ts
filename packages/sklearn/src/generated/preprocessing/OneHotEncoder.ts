@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
  */
 export class OneHotEncoder {
   id: string

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../tree.html#tree).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
  */
 export class DecisionTreeRegressor {
   id: string

@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   If we note `s \= 1 / density` the components of the random matrix are drawn from:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.random_projection.SparseRandomProjection.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.random_projection.SparseRandomProjection.html)
  */
 export class SparseRandomProjection {
   id: string

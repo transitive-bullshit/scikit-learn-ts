@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#affinity-propagation).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html)
  */
 export class AffinityPropagation {
   id: string

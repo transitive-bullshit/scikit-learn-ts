@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#least-angle-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lars.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lars.html)
  */
 export class Lars {
   id: string

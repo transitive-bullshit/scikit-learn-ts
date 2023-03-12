@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../calibration.html#calibration).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html)
  */
 export class CalibratedClassifierCV {
   id: string

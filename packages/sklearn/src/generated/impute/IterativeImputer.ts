@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../impute.html#iterative-imputer).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html)
  */
 export class IterativeImputer {
   id: string

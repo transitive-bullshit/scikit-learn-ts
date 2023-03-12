@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / BayesianGaussianMixture
-
-# Class: BayesianGaussianMixture
+# BayesianGaussianMixture
 
 Variational Bayesian estimation of a Gaussian mixture.
 
@@ -8,379 +6,353 @@ This class allows to infer an approximate posterior distribution over the parame
 
 This class implements two types of prior for the weights distribution: a finite mixture model with Dirichlet distribution and an infinite mixture model with the Dirichlet Process. In practice Dirichlet Process inference algorithm is approximated and uses a truncated distribution with a fixed maximum number of components (called the Stick-breaking representation). The number of components actually used almost always depends on the data.
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.mixture.BayesianGaussianMixture.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](BayesianGaussianMixture.md#constructor)
-
-### Properties
-
-- [\_isDisposed](BayesianGaussianMixture.md#_isdisposed)
-- [\_isInitialized](BayesianGaussianMixture.md#_isinitialized)
-- [\_py](BayesianGaussianMixture.md#_py)
-- [id](BayesianGaussianMixture.md#id)
-- [opts](BayesianGaussianMixture.md#opts)
-
-### Accessors
-
-- [converged\_](BayesianGaussianMixture.md#converged_)
-- [covariance\_prior\_](BayesianGaussianMixture.md#covariance_prior_)
-- [covariances\_](BayesianGaussianMixture.md#covariances_)
-- [degrees\_of\_freedom\_](BayesianGaussianMixture.md#degrees_of_freedom_)
-- [degrees\_of\_freedom\_prior\_](BayesianGaussianMixture.md#degrees_of_freedom_prior_)
-- [feature\_names\_in\_](BayesianGaussianMixture.md#feature_names_in_)
-- [lower\_bound\_](BayesianGaussianMixture.md#lower_bound_)
-- [mean\_precision\_](BayesianGaussianMixture.md#mean_precision_)
-- [mean\_precision\_prior\_](BayesianGaussianMixture.md#mean_precision_prior_)
-- [mean\_prior\_](BayesianGaussianMixture.md#mean_prior_)
-- [means\_](BayesianGaussianMixture.md#means_)
-- [n\_features\_in\_](BayesianGaussianMixture.md#n_features_in_)
-- [n\_iter\_](BayesianGaussianMixture.md#n_iter_)
-- [precisions\_](BayesianGaussianMixture.md#precisions_)
-- [precisions\_cholesky\_](BayesianGaussianMixture.md#precisions_cholesky_)
-- [py](BayesianGaussianMixture.md#py)
-- [weight\_concentration\_](BayesianGaussianMixture.md#weight_concentration_)
-- [weight\_concentration\_prior\_](BayesianGaussianMixture.md#weight_concentration_prior_)
-- [weights\_](BayesianGaussianMixture.md#weights_)
-
-### Methods
-
-- [dispose](BayesianGaussianMixture.md#dispose)
-- [fit](BayesianGaussianMixture.md#fit)
-- [fit\_predict](BayesianGaussianMixture.md#fit_predict)
-- [init](BayesianGaussianMixture.md#init)
-- [predict](BayesianGaussianMixture.md#predict)
-- [predict\_proba](BayesianGaussianMixture.md#predict_proba)
-- [sample](BayesianGaussianMixture.md#sample)
-- [score](BayesianGaussianMixture.md#score)
-- [score\_samples](BayesianGaussianMixture.md#score_samples)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.BayesianGaussianMixture.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new BayesianGaussianMixture**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new BayesianGaussianMixture(opts?: BayesianGaussianMixtureOptions): BayesianGaussianMixture;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`BayesianGaussianMixtureOptions`](../interfaces/BayesianGaussianMixtureOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/mixture/BayesianGaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L25)
+[`BayesianGaussianMixture`](BayesianGaussianMixture.md)
+
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/mixture/BayesianGaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L23)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/mixture/BayesianGaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L22)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/mixture/BayesianGaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L21)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/mixture/BayesianGaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L18)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/mixture/BayesianGaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L19)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L19)
 
 ## Accessors
 
 ### converged\_
 
-• `get` **converged_**(): `Promise`<`boolean`\>
-
 True when convergence was reached in fit(), `false` otherwise.
+
+#### Signature
+
+```ts
+converged_(): Promise<boolean>;
+```
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L496)
 
-[generated/mixture/BayesianGaussianMixture.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L496)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L496)
 
 ### covariance\_prior\_
 
-• `get` **covariance_prior_**(): `Promise`<`number` \| [`ArrayLike`](../modules.md#arraylike)\>
-
 The prior on the covariance distribution (Wishart). The shape depends on `covariance\_type`:
+
+#### Signature
+
+```ts
+covariance_prior_(): Promise<number | ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<`number` \| [`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<`number` \| [`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L766)
 
-[generated/mixture/BayesianGaussianMixture.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L766)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L766)
 
 ### covariances\_
 
-• `get` **covariances_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The covariance of each mixture component. The shape depends on `covariance\_type`:
+
+#### Signature
+
+```ts
+covariances_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L415)
 
-[generated/mixture/BayesianGaussianMixture.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L415)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L415)
 
 ### degrees\_of\_freedom\_
 
-• `get` **degrees_of_freedom_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The number of degrees of freedom of each components in the model.
+
+#### Signature
+
+```ts
+degrees_of_freedom_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L739)
 
-[generated/mixture/BayesianGaussianMixture.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L739)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L739)
 
 ### degrees\_of\_freedom\_prior\_
 
-• `get` **degrees_of_freedom_prior_**(): `Promise`<`number`\>
-
 The prior of the number of degrees of freedom on the covariance distributions (Wishart).
+
+#### Signature
+
+```ts
+degrees_of_freedom_prior_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L712)
 
-[generated/mixture/BayesianGaussianMixture.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L712)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L712)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L820)
 
-[generated/mixture/BayesianGaussianMixture.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L820)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L820)
 
 ### lower\_bound\_
 
-• `get` **lower_bound_**(): `Promise`<`number`\>
-
 Lower bound value on the model evidence (of the training data) of the best fit of inference.
+
+#### Signature
+
+```ts
+lower_bound_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L550)
 
-[generated/mixture/BayesianGaussianMixture.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L550)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L550)
 
 ### mean\_precision\_
 
-• `get` **mean_precision_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The precision of each components on the mean distribution (Gaussian).
+
+#### Signature
+
+```ts
+mean_precision_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L658)
 
-[generated/mixture/BayesianGaussianMixture.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L658)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L658)
 
 ### mean\_precision\_prior\_
 
-• `get` **mean_precision_prior_**(): `Promise`<`number`\>
-
 The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. If mean\_precision\_prior is set to `undefined`, `mean\_precision\_prior\_` is set to 1.
+
+#### Signature
+
+```ts
+mean_precision_prior_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L631)
 
-[generated/mixture/BayesianGaussianMixture.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L631)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L631)
 
 ### mean\_prior\_
 
-• `get` **mean_prior_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The prior on the mean distribution (Gaussian).
+
+#### Signature
+
+```ts
+mean_prior_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L685)
 
-[generated/mixture/BayesianGaussianMixture.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L685)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L685)
 
 ### means\_
 
-• `get` **means_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 The mean of each mixture component.
+
+#### Signature
+
+```ts
+means_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L388)
 
-[generated/mixture/BayesianGaussianMixture.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L388)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L388)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L793)
 
-[generated/mixture/BayesianGaussianMixture.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L793)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L793)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 Number of step used by the best fit of inference to reach the convergence.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L523)
 
-[generated/mixture/BayesianGaussianMixture.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L523)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L523)
 
 ### precisions\_
 
-• `get` **precisions_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The precision matrices for each component in the mixture. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
+
+#### Signature
+
+```ts
+precisions_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L442)
 
-[generated/mixture/BayesianGaussianMixture.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L442)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L442)
 
 ### precisions\_cholesky\_
 
-• `get` **precisions_cholesky_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The cholesky decomposition of the precision matrices of each mixture component. A precision matrix is the inverse of a covariance matrix. A covariance matrix is symmetric positive definite so the mixture of Gaussian can be equivalently parameterized by the precision matrices. Storing the precision matrices instead of the covariance matrices makes it more efficient to compute the log-likelihood of new samples at test time. The shape depends on `covariance\_type`:
+
+#### Signature
+
+```ts
+precisions_cholesky_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L469)
 
-[generated/mixture/BayesianGaussianMixture.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L469)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L469)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L30)
 
-[generated/mixture/BayesianGaussianMixture.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -392,85 +364,95 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L34)
 
-[generated/mixture/BayesianGaussianMixture.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L34)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L30) [generated/mixture/BayesianGaussianMixture.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L34)
 
 ### weight\_concentration\_
 
-• `get` **weight_concentration_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The dirichlet concentration of each component on the weight distribution (Dirichlet).
+
+#### Signature
+
+```ts
+weight_concentration_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L604)
 
-[generated/mixture/BayesianGaussianMixture.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L604)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L604)
 
 ### weight\_concentration\_prior\_
 
-• `get` **weight_concentration_prior_**(): `Promise`<`number`\>
-
 The dirichlet concentration of each component on the weight distribution (Dirichlet). The type depends on `weight\_concentration\_prior\_type`:
+
+#### Signature
+
+```ts
+weight_concentration_prior_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L577)
 
-[generated/mixture/BayesianGaussianMixture.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L577)
-
-___
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L577)
 
 ### weights\_
 
-• `get` **weights_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The weights of each mixture components.
+
+#### Signature
+
+```ts
+weights_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L361)
 
-[generated/mixture/BayesianGaussianMixture.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L361)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L361)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L111)
 
-[generated/mixture/BayesianGaussianMixture.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L111)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Estimate model parameters with the EM algorithm.
 
 The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `true`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
+
+#### Signature
+
+```ts
+fit(opts: BayesianGaussianMixtureFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -480,21 +462,21 @@ The method fits the model `n\_init` times and sets the parameters with which the
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L130)
 
-[generated/mixture/BayesianGaussianMixture.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L130)
-
-___
-
-### fit\_predict
-
-▸ **fit_predict**(`opts`): `Promise`<`any`\>
+### fit\_predict()
 
 Estimate model parameters using X and predict the labels for X.
 
 The method fits the model n\_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
+
+#### Signature
+
+```ts
+fit_predict(opts: BayesianGaussianMixtureFitPredictOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -504,21 +486,21 @@ The method fits the model n\_init times and sets the parameters with which the m
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L162)
 
-[generated/mixture/BayesianGaussianMixture.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L162)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -528,19 +510,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L43)
 
-[generated/mixture/BayesianGaussianMixture.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L43)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<`any`\>
+### predict()
 
 Predict the labels for the data samples in X using trained model.
+
+#### Signature
+
+```ts
+predict(opts: BayesianGaussianMixturePredictOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -550,19 +532,19 @@ Predict the labels for the data samples in X using trained model.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L197)
 
-[generated/mixture/BayesianGaussianMixture.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L197)
-
-___
-
-### predict\_proba
-
-▸ **predict_proba**(`opts`): `Promise`<`any`\>
+### predict\_proba()
 
 Evaluate the components’ density for each sample.
+
+#### Signature
+
+```ts
+predict_proba(opts: BayesianGaussianMixturePredictProbaOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -572,19 +554,19 @@ Evaluate the components’ density for each sample.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L229)
 
-[generated/mixture/BayesianGaussianMixture.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L229)
-
-___
-
-### sample
-
-▸ **sample**(`opts`): `Promise`<`any`\>
+### sample()
 
 Generate random samples from the fitted Gaussian distribution.
+
+#### Signature
+
+```ts
+sample(opts: BayesianGaussianMixtureSampleOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -594,19 +576,19 @@ Generate random samples from the fitted Gaussian distribution.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L264)
 
-[generated/mixture/BayesianGaussianMixture.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L264)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Compute the per-sample average log-likelihood of the given data X.
+
+#### Signature
+
+```ts
+score(opts: BayesianGaussianMixtureScoreOptions): Promise<number>;
+```
 
 #### Parameters
 
@@ -616,19 +598,19 @@ Compute the per-sample average log-likelihood of the given data X.
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L296)
 
-[generated/mixture/BayesianGaussianMixture.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L296)
-
-___
-
-### score\_samples
-
-▸ **score_samples**(`opts`): `Promise`<`any`\>
+### score\_samples()
 
 Compute the log-likelihood of each sample.
+
+#### Signature
+
+```ts
+score_samples(opts: BayesianGaussianMixtureScoreSamplesOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -638,8 +620,6 @@ Compute the log-likelihood of each sample.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/mixture/BayesianGaussianMixture.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L326)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L326)

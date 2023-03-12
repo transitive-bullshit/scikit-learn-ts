@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / Nystroem
-
-# Class: Nystroem
+# Nystroem
 
 Approximate a kernel map using a subset of the training data.
 
@@ -8,204 +6,173 @@ Constructs an approximate feature map for an arbitrary kernel using a subset of 
 
 Read more in the [User Guide](../kernel_approximation.html#nystroem-kernel-approx).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Nystroem.md#constructor)
-
-### Properties
-
-- [\_isDisposed](Nystroem.md#_isdisposed)
-- [\_isInitialized](Nystroem.md#_isinitialized)
-- [\_py](Nystroem.md#_py)
-- [id](Nystroem.md#id)
-- [opts](Nystroem.md#opts)
-
-### Accessors
-
-- [component\_indices\_](Nystroem.md#component_indices_)
-- [components\_](Nystroem.md#components_)
-- [feature\_names\_in\_](Nystroem.md#feature_names_in_)
-- [n\_features\_in\_](Nystroem.md#n_features_in_)
-- [normalization\_](Nystroem.md#normalization_)
-- [py](Nystroem.md#py)
-
-### Methods
-
-- [dispose](Nystroem.md#dispose)
-- [fit](Nystroem.md#fit)
-- [fit\_transform](Nystroem.md#fit_transform)
-- [get\_feature\_names\_out](Nystroem.md#get_feature_names_out)
-- [init](Nystroem.md#init)
-- [set\_output](Nystroem.md#set_output)
-- [transform](Nystroem.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new Nystroem**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new Nystroem(opts?: NystroemOptions): Nystroem;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`NystroemOptions`](../interfaces/NystroemOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/kernel_approximation/Nystroem.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L25)
+[`Nystroem`](Nystroem.md)
+
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/kernel_approximation/Nystroem.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L23)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/kernel_approximation/Nystroem.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L22)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/kernel_approximation/Nystroem.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L21)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/kernel_approximation/Nystroem.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L18)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/kernel_approximation/Nystroem.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L19)
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L19)
 
 ## Accessors
 
 ### component\_indices\_
 
-• `get` **component_indices_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Indices of `components\_` in the training set.
+
+#### Signature
+
+```ts
+component_indices_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L288)
 
-[generated/kernel_approximation/Nystroem.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L288)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L288)
 
 ### components\_
 
-• `get` **components_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Subset of training points used to construct the feature map.
+
+#### Signature
+
+```ts
+components_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L265)
 
-[generated/kernel_approximation/Nystroem.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L265)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L265)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L363)
 
-[generated/kernel_approximation/Nystroem.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L363)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L363)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L338)
 
-[generated/kernel_approximation/Nystroem.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L338)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L338)
 
 ### normalization\_
 
-• `get` **normalization_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Normalization matrix needed for embedding. Square root of the kernel matrix on `components\_`.
+
+#### Signature
+
+```ts
+normalization_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L313)
 
-[generated/kernel_approximation/Nystroem.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L313)
-
-___
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L313)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L30)
 
-[generated/kernel_approximation/Nystroem.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -217,37 +184,41 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L34)
 
-[generated/kernel_approximation/Nystroem.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L34)
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L30) [generated/kernel\_approximation/Nystroem.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L90)
 
-[generated/kernel_approximation/Nystroem.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L90)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit estimator to data.
 
 Samples a subset of training points, computes kernel on these and computes normalization matrix.
+
+#### Signature
+
+```ts
+fit(opts: NystroemFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -257,21 +228,21 @@ Samples a subset of training points, computes kernel on these and computes norma
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L109)
 
-[generated/kernel_approximation/Nystroem.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L109)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+
+#### Signature
+
+```ts
+fit_transform(opts: NystroemFitTransformOptions): Promise<any[]>;
+```
 
 #### Parameters
 
@@ -281,21 +252,21 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L139)
 
-[generated/kernel_approximation/Nystroem.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L139)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: NystroemGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -305,21 +276,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L173)
 
-[generated/kernel_approximation/Nystroem.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L173)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -329,21 +300,21 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L43)
 
-[generated/kernel_approximation/Nystroem.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L43)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Signature
+
+```ts
+set_output(opts: NystroemSetOutputOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -353,21 +324,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L207)
 
-[generated/kernel_approximation/Nystroem.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L207)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### transform()
 
 Apply feature map to X.
 
 Computes an approximate feature map using the kernel between some training points and X.
+
+#### Signature
+
+```ts
+transform(opts: NystroemTransformOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -377,8 +348,6 @@ Computes an approximate feature map using the kernel between some training point
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
-
-[generated/kernel_approximation/Nystroem.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L237)
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L237)

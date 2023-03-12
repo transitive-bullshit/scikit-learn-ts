@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The kernel is given by:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Matern.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Matern.html)
  */
 export class Matern {
   id: string

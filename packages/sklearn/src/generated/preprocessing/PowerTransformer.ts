@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-transformer).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PowerTransformer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PowerTransformer.html)
  */
 export class PowerTransformer {
   id: string

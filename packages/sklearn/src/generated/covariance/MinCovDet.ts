@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../covariance.html#robust-covariance).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.MinCovDet.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.MinCovDet.html)
  */
 export class MinCovDet {
   id: string

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This class inherits from both ValueError and AttributeError to help with exception handling and backward compatibility.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.NotFittedError.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.NotFittedError.html)
  */
 export class NotFittedError {
   id: string

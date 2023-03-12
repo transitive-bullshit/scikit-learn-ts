@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This model optimizes the squared error using LBFGS or stochastic gradient descent.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
  */
 export class MLPRegressor {
   id: string

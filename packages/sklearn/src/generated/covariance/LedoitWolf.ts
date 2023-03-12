@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../covariance.html#shrunk-covariance).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html)
  */
 export class LedoitWolf {
   id: string

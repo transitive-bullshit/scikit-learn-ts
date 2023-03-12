@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../manifold.html#spectral-embedding).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html)
  */
 export class SpectralEmbedding {
   id: string

@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#predefined-split).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html)
  */
 export class PredefinedSplit {
   id: string

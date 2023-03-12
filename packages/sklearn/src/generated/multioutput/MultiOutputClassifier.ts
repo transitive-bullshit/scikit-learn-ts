@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This strategy consists of fitting one classifier per target. This is a simple strategy for extending classifiers that do not natively support multi-target classification.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputClassifier.html)
  */
 export class MultiOutputClassifier {
   id: string

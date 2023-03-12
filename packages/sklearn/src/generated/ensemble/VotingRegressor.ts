@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../ensemble.html#voting-regressor).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingRegressor.html)
  */
 export class VotingRegressor {
   id: string

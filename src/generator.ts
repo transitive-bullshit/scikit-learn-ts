@@ -199,9 +199,12 @@ export interface ${pyDocClass.name}${
 
   const pyConstructorParamsIdentifier = `ctor_${pyDocClass.name}`
 
-  const preClass = indentComment([pyDocClass.desc, `@see ${pyDocClass.url}`], {
-    indent: 2
-  })
+  const preClass = indentComment(
+    [pyDocClass.desc, `[Python Reference](${pyDocClass.url})`],
+    {
+      indent: 2
+    }
+  )
 
   const source = `
 /* eslint-disable */

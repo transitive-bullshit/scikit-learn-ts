@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#logistic-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html)
  */
 export class LogisticRegressionCV {
   id: string

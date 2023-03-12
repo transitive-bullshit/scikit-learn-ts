@@ -20,7 +20,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../outlier_detection.html#isolation-forest).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
  */
 export class IsolationForest {
   id: string

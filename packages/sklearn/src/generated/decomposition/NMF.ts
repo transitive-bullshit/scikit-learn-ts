@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The objective function is:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html)
  */
 export class NMF {
   id: string

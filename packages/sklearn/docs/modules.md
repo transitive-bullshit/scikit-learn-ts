@@ -1,8 +1,8 @@
-[sklearn](readme.md) / Exports
+[Readme](readme.md)
 
 # sklearn
 
-## Table of contents
+## Index
 
 ### Classes
 
@@ -1850,100 +1850,15 @@
 
 ### Type Aliases
 
-- [ArrayLike](modules.md#arraylike)
-- [NDArray](modules.md#ndarray)
-- [SparseMatrix](modules.md#sparsematrix)
+- [ArrayLike](types/ArrayLike.md)
+- [NDArray](types/NDArray.md)
+- [SparseMatrix](types/SparseMatrix.md)
 
 ### Variables
 
-- [SCIKIT\_LEARN\_VERSION](modules.md#scikit_learn_version)
+- [SCIKIT\_LEARN\_VERSION](variables/SCIKIT_LEARN_VERSION.md)
 
 ### Functions
 
-- [createPythonBridge](modules.md#createpythonbridge)
-- [validatePythonBridge](modules.md#validatepythonbridge)
-
-## Type Aliases
-
-### ArrayLike
-
-Ƭ **ArrayLike**: `number`[] \| `any`[] \| `Float32Array` \| `Float64Array` \| `Int8Array` \| `Int16Array` \| `Int32Array` \| `Uint8Array` \| `Uint16Array` \| `Uint32Array` \| `Uint8ClampedArray`
-
-#### Defined in
-
-[types.ts:3](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/types.ts#L3)
-
-___
-
-### NDArray
-
-Ƭ **NDArray**: [`ArrayLike`](modules.md#arraylike)
-
-#### Defined in
-
-[types.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/types.ts#L16)
-
-___
-
-### SparseMatrix
-
-Ƭ **SparseMatrix**: `any`
-
-#### Defined in
-
-[types.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/types.ts#L18)
-
-## Variables
-
-### SCIKIT\_LEARN\_VERSION
-
-• `Const` **SCIKIT\_LEARN\_VERSION**: ``"1.2.1"``
-
-The version of the python `scikit-learn` module this package was built with.
-
-Other versions may work, but there may be minor differences in the generated
-types. We recommend against using other major versions.
-
-#### Defined in
-
-[python.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/python.ts#L14)
-
-## Functions
-
-### createPythonBridge
-
-▸ **createPythonBridge**(`opts?`): `Promise`<`PythonBridge`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opts` | `PythonBridgeOptions` |
-
-#### Returns
-
-`Promise`<`PythonBridge`\>
-
-#### Defined in
-
-[python.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/python.ts#L20)
-
-___
-
-### validatePythonBridge
-
-▸ **validatePythonBridge**(`py`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `py` | `PythonBridge` |
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Defined in
-
-[python.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/python.ts#L33)
+- [createPythonBridge](functions/createPythonBridge.md)
+- [validatePythonBridge](functions/validatePythonBridge.md)

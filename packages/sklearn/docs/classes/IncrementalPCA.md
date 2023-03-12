@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / IncrementalPCA
-
-# Class: IncrementalPCA
+# IncrementalPCA
 
 Incremental principal components analysis (IPCA).
 
@@ -14,295 +12,263 @@ The computational overhead of each SVD is `O(batch\_size \* n\_features \*\* 2)`
 
 Read more in the [User Guide](../decomposition.html#incrementalpca).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IncrementalPCA.md#constructor)
-
-### Properties
-
-- [\_isDisposed](IncrementalPCA.md#_isdisposed)
-- [\_isInitialized](IncrementalPCA.md#_isinitialized)
-- [\_py](IncrementalPCA.md#_py)
-- [id](IncrementalPCA.md#id)
-- [opts](IncrementalPCA.md#opts)
-
-### Accessors
-
-- [batch\_size\_](IncrementalPCA.md#batch_size_)
-- [components\_](IncrementalPCA.md#components_)
-- [explained\_variance\_](IncrementalPCA.md#explained_variance_)
-- [explained\_variance\_ratio\_](IncrementalPCA.md#explained_variance_ratio_)
-- [feature\_names\_in\_](IncrementalPCA.md#feature_names_in_)
-- [mean\_](IncrementalPCA.md#mean_)
-- [n\_components\_](IncrementalPCA.md#n_components_)
-- [n\_features\_in\_](IncrementalPCA.md#n_features_in_)
-- [n\_samples\_seen\_](IncrementalPCA.md#n_samples_seen_)
-- [noise\_variance\_](IncrementalPCA.md#noise_variance_)
-- [py](IncrementalPCA.md#py)
-- [singular\_values\_](IncrementalPCA.md#singular_values_)
-- [var\_](IncrementalPCA.md#var_)
-
-### Methods
-
-- [dispose](IncrementalPCA.md#dispose)
-- [fit](IncrementalPCA.md#fit)
-- [fit\_transform](IncrementalPCA.md#fit_transform)
-- [get\_covariance](IncrementalPCA.md#get_covariance)
-- [get\_feature\_names\_out](IncrementalPCA.md#get_feature_names_out)
-- [get\_precision](IncrementalPCA.md#get_precision)
-- [init](IncrementalPCA.md#init)
-- [inverse\_transform](IncrementalPCA.md#inverse_transform)
-- [partial\_fit](IncrementalPCA.md#partial_fit)
-- [set\_output](IncrementalPCA.md#set_output)
-- [transform](IncrementalPCA.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new IncrementalPCA**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new IncrementalPCA(opts?: IncrementalPCAOptions): IncrementalPCA;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`IncrementalPCAOptions`](../interfaces/IncrementalPCAOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/decomposition/IncrementalPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L31)
+[`IncrementalPCA`](IncrementalPCA.md)
+
+Defined in:  [generated/decomposition/IncrementalPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L31)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/IncrementalPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L29)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L29)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/IncrementalPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L28)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L28)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/decomposition/IncrementalPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L27)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L27)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/decomposition/IncrementalPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L24)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L24)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/decomposition/IncrementalPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L25)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L25)
 
 ## Accessors
 
 ### batch\_size\_
 
-• `get` **batch_size_**(): `Promise`<`number`\>
-
 Inferred batch size from `batch\_size`.
+
+#### Signature
+
+```ts
+batch_size_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L610)
 
-[generated/decomposition/IncrementalPCA.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L610)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L610)
 
 ### components\_
 
-• `get` **components_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing `explained\_variance\_`.
+
+#### Signature
+
+```ts
+components_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L389)
 
-[generated/decomposition/IncrementalPCA.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L389)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L389)
 
 ### explained\_variance\_
 
-• `get` **explained_variance_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Variance explained by each of the selected components.
+
+#### Signature
+
+```ts
+explained_variance_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L414)
 
-[generated/decomposition/IncrementalPCA.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L414)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L414)
 
 ### explained\_variance\_ratio\_
 
-• `get` **explained_variance_ratio_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Percentage of variance explained by each of the selected components. If all components are stored, the sum of explained variances is equal to 1.0.
+
+#### Signature
+
+```ts
+explained_variance_ratio_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L439)
 
-[generated/decomposition/IncrementalPCA.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L439)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L439)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L660)
 
-[generated/decomposition/IncrementalPCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L660)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L660)
 
 ### mean\_
 
-• `get` **mean_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per-feature empirical mean, aggregate over calls to `partial\_fit`.
+
+#### Signature
+
+```ts
+mean_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L489)
 
-[generated/decomposition/IncrementalPCA.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L489)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L489)
 
 ### n\_components\_
 
-• `get` **n_components_**(): `Promise`<`number`\>
-
 The estimated number of components. Relevant when `n\_components=None`.
+
+#### Signature
+
+```ts
+n_components_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L560)
 
-[generated/decomposition/IncrementalPCA.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L560)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L560)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L635)
 
-[generated/decomposition/IncrementalPCA.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L635)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L635)
 
 ### n\_samples\_seen\_
 
-• `get` **n_samples_seen_**(): `Promise`<`number`\>
-
 The number of samples processed by the estimator. Will be reset on new calls to fit, but increments across `partial\_fit` calls.
+
+#### Signature
+
+```ts
+n_samples_seen_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L585)
 
-[generated/decomposition/IncrementalPCA.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L585)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L585)
 
 ### noise\_variance\_
 
-• `get` **noise_variance_**(): `Promise`<`number`\>
-
 The estimated noise covariance following the Probabilistic PCA model from Tipping and Bishop 1999. See “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf).
+
+#### Signature
+
+```ts
+noise_variance_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L535)
 
-[generated/decomposition/IncrementalPCA.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L535)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L535)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L36)
 
-[generated/decomposition/IncrementalPCA.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L36)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -314,67 +280,75 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L40)
 
-[generated/decomposition/IncrementalPCA.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L40)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L36) [generated/decomposition/IncrementalPCA.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L40)
 
 ### singular\_values\_
 
-• `get` **singular_values_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n\_components` variables in the lower-dimensional space.
+
+#### Signature
+
+```ts
+singular_values_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L464)
 
-[generated/decomposition/IncrementalPCA.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L464)
-
-___
+Defined in:  [generated/decomposition/IncrementalPCA.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L464)
 
 ### var\_
 
-• `get` **var_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per-feature empirical variance, aggregate over calls to `partial\_fit`.
+
+#### Signature
+
+```ts
+var_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L512)
 
-[generated/decomposition/IncrementalPCA.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L512)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L512)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L91)
 
-[generated/decomposition/IncrementalPCA.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L91)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model with X, using minibatches of size batch\_size.
+
+#### Signature
+
+```ts
+fit(opts: IncrementalPCAFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -384,21 +358,21 @@ Fit the model with X, using minibatches of size batch\_size.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L108)
 
-[generated/decomposition/IncrementalPCA.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L108)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+
+#### Signature
+
+```ts
+fit_transform(opts: IncrementalPCAFitTransformOptions): Promise<any[]>;
+```
 
 #### Parameters
 
@@ -408,21 +382,21 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L138)
 
-[generated/decomposition/IncrementalPCA.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L138)
-
-___
-
-### get\_covariance
-
-▸ **get_covariance**(`opts`): `Promise`<`any`\>
+### get\_covariance()
 
 Compute data covariance with the generative model.
 
 `cov \= components\_.T \* S\*\*2 \* components\_ + sigma2 \* eye(n\_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
+
+#### Signature
+
+```ts
+get_covariance(opts: IncrementalPCAGetCovarianceOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -432,21 +406,21 @@ Compute data covariance with the generative model.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L172)
 
-[generated/decomposition/IncrementalPCA.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L172)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: IncrementalPCAGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -456,21 +430,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L202)
 
-[generated/decomposition/IncrementalPCA.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L202)
-
-___
-
-### get\_precision
-
-▸ **get_precision**(`opts`): `Promise`<`any`\>
+### get\_precision()
 
 Compute data precision matrix with the generative model.
 
 Equals the inverse of the covariance but computed with the matrix inversion lemma for efficiency.
+
+#### Signature
+
+```ts
+get_precision(opts: IncrementalPCAGetPrecisionOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -480,21 +454,21 @@ Equals the inverse of the covariance but computed with the matrix inversion lemm
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L237)
 
-[generated/decomposition/IncrementalPCA.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L237)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -504,21 +478,21 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L49)
 
-[generated/decomposition/IncrementalPCA.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L49)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<`any`\>
+### inverse\_transform()
 
 Transform data back to its original space.
 
 In other words, return an input `X\_original` whose transform would be X.
+
+#### Signature
+
+```ts
+inverse_transform(opts: IncrementalPCAInverseTransformOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -528,19 +502,19 @@ In other words, return an input `X\_original` whose transform would be X.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L267)
 
-[generated/decomposition/IncrementalPCA.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L267)
-
-___
-
-### partial\_fit
-
-▸ **partial_fit**(`opts`): `Promise`<`any`\>
+### partial\_fit()
 
 Incremental fit with X. All of X is processed as a single batch.
+
+#### Signature
+
+```ts
+partial_fit(opts: IncrementalPCAPartialFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -550,21 +524,21 @@ Incremental fit with X. All of X is processed as a single batch.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L299)
 
-[generated/decomposition/IncrementalPCA.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L299)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Signature
+
+```ts
+set_output(opts: IncrementalPCASetOutputOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -574,21 +548,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/IncrementalPCA.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L331)
 
-[generated/decomposition/IncrementalPCA.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L331)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### transform()
 
 Apply dimensionality reduction to X.
 
 X is projected on the first principal components previously extracted from a training set, using minibatches of size batch\_size if X is sparse.
+
+#### Signature
+
+```ts
+transform(opts: IncrementalPCATransformOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -598,8 +572,6 @@ X is projected on the first principal components previously extracted from a tra
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
-
-[generated/decomposition/IncrementalPCA.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L361)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L361)

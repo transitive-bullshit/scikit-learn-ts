@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Examples
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html)
  */
 export class Bunch {
   id: string

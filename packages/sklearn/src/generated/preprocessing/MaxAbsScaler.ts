@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This scaler can also be applied to sparse CSR or CSC matrices.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MaxAbsScaler.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MaxAbsScaler.html)
  */
 export class MaxAbsScaler {
   id: string

@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / PrecisionRecallDisplay
-
-# Class: PrecisionRecallDisplay
+# PrecisionRecallDisplay
 
 Precision Recall visualization.
 
@@ -8,168 +6,137 @@ It is recommend to use [`from\_estimator`](#sklearn.metrics.PrecisionRecallDispl
 
 Read more in the [User Guide](../../visualizations.html#visualizations).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](PrecisionRecallDisplay.md#constructor)
-
-### Properties
-
-- [\_isDisposed](PrecisionRecallDisplay.md#_isdisposed)
-- [\_isInitialized](PrecisionRecallDisplay.md#_isinitialized)
-- [\_py](PrecisionRecallDisplay.md#_py)
-- [id](PrecisionRecallDisplay.md#id)
-- [opts](PrecisionRecallDisplay.md#opts)
-
-### Accessors
-
-- [ax\_](PrecisionRecallDisplay.md#ax_)
-- [figure\_](PrecisionRecallDisplay.md#figure_)
-- [line\_](PrecisionRecallDisplay.md#line_)
-- [py](PrecisionRecallDisplay.md#py)
-
-### Methods
-
-- [dispose](PrecisionRecallDisplay.md#dispose)
-- [from\_estimator](PrecisionRecallDisplay.md#from_estimator)
-- [from\_predictions](PrecisionRecallDisplay.md#from_predictions)
-- [init](PrecisionRecallDisplay.md#init)
-- [plot](PrecisionRecallDisplay.md#plot)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new PrecisionRecallDisplay**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new PrecisionRecallDisplay(opts?: PrecisionRecallDisplayOptions): PrecisionRecallDisplay;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`PrecisionRecallDisplayOptions`](../interfaces/PrecisionRecallDisplayOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
+[`PrecisionRecallDisplay`](PrecisionRecallDisplay.md)
+
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19)
 
 ## Accessors
 
 ### ax\_
 
-• `get` **ax_**(): `Promise`<`any`\>
-
 Axes with precision recall curve.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L265)
 
-[generated/metrics/PrecisionRecallDisplay.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L265)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L265)
 
 ### figure\_
 
-• `get` **figure_**(): `Promise`<`any`\>
-
 Figure containing the curve.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L292)
 
-[generated/metrics/PrecisionRecallDisplay.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L292)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L292)
 
 ### line\_
 
-• `get` **line_**(): `Promise`<`any`\>
-
 Precision recall curve.
+
+#### Signature
+
+```ts
+line_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L238)
 
-[generated/metrics/PrecisionRecallDisplay.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L238)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L238)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L30)
 
-[generated/metrics/PrecisionRecallDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -181,35 +148,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L34)
 
-[generated/metrics/PrecisionRecallDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L34)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L30) [generated/metrics/PrecisionRecallDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L95)
 
-[generated/metrics/PrecisionRecallDisplay.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L95)
-
-___
-
-### from\_estimator
-
-▸ **from_estimator**(`opts`): `Promise`<`any`\>
+### from\_estimator()
 
 Plot precision-recall curve given an estimator and some data.
+
+#### Signature
+
+```ts
+from_estimator(opts: PrecisionRecallDisplayFromEstimatorOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -219,19 +190,19 @@ Plot precision-recall curve given an estimator and some data.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L112)
 
-[generated/metrics/PrecisionRecallDisplay.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L112)
-
-___
-
-### from\_predictions
-
-▸ **from_predictions**(`opts`): `Promise`<`any`\>
+### from\_predictions()
 
 Plot precision-recall curve given binary class predictions.
+
+#### Signature
+
+```ts
+from_predictions(opts: PrecisionRecallDisplayFromPredictionsOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -241,21 +212,21 @@ Plot precision-recall curve given binary class predictions.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L159)
 
-[generated/metrics/PrecisionRecallDisplay.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L159)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -265,21 +236,21 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L43)
 
-[generated/metrics/PrecisionRecallDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L43)
-
-___
-
-### plot
-
-▸ **plot**(`opts`): `Promise`<`any`\>
+### plot()
 
 Plot visualization.
 
 Extra keyword arguments will be passed to matplotlib’s `plot`.
+
+#### Signature
+
+```ts
+plot(opts: PrecisionRecallDisplayPlotOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -289,8 +260,6 @@ Extra keyword arguments will be passed to matplotlib’s `plot`.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L206)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L206)

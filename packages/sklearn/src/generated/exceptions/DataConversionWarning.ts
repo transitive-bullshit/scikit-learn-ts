@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This warning occurs when some input data needs to be converted or interpreted in a way that may not match the user’s expectations.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataConversionWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataConversionWarning.html)
  */
 export class DataConversionWarning {
   id: string

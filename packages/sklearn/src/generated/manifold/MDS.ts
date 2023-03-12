@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../manifold.html#multidimensional-scaling).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html)
  */
 export class MDS {
   id: string

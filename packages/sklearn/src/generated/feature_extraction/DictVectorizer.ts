@@ -20,7 +20,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_extraction.html#dict-feature-extraction).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html)
  */
 export class DictVectorizer {
   id: string

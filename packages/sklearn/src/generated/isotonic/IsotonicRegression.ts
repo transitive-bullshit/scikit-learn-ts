@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../isotonic.html#isotonic).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html)
  */
 export class IsotonicRegression {
   id: string

@@ -1,120 +1,86 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / DataConversionWarning
-
-# Class: DataConversionWarning
+# DataConversionWarning
 
 Warning used to notify implicit data conversions happening in the code.
 
 This warning occurs when some input data needs to be converted or interpreted in a way that may not match the user’s expectations.
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataConversionWarning.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](DataConversionWarning.md#constructor)
-
-### Properties
-
-- [\_isDisposed](DataConversionWarning.md#_isdisposed)
-- [\_isInitialized](DataConversionWarning.md#_isinitialized)
-- [\_py](DataConversionWarning.md#_py)
-- [id](DataConversionWarning.md#id)
-- [opts](DataConversionWarning.md#opts)
-
-### Accessors
-
-- [py](DataConversionWarning.md#py)
-
-### Methods
-
-- [dispose](DataConversionWarning.md#dispose)
-- [init](DataConversionWarning.md#init)
-- [with\_traceback](DataConversionWarning.md#with_traceback)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataConversionWarning.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new DataConversionWarning**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new DataConversionWarning(opts?: DataConversionWarningOptions): DataConversionWarning;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`DataConversionWarningOptions`](../interfaces/DataConversionWarningOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/exceptions/DataConversionWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L23)
+[`DataConversionWarning`](DataConversionWarning.md)
+
+Defined in:  [generated/exceptions/DataConversionWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L23)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/exceptions/DataConversionWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L21)
-
-___
+Defined in:  [generated/exceptions/DataConversionWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L21)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/exceptions/DataConversionWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L20)
-
-___
+Defined in:  [generated/exceptions/DataConversionWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L20)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/exceptions/DataConversionWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L19)
-
-___
+Defined in:  [generated/exceptions/DataConversionWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L19)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/exceptions/DataConversionWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L16)
-
-___
+Defined in:  [generated/exceptions/DataConversionWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L16)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/exceptions/DataConversionWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L17)
+Defined in:  [generated/exceptions/DataConversionWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L17)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/exceptions/DataConversionWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L28)
 
-[generated/exceptions/DataConversionWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L28)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -126,37 +92,41 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/exceptions/DataConversionWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L32)
 
-[generated/exceptions/DataConversionWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L32)
+Defined in:  [generated/exceptions/DataConversionWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L28) [generated/exceptions/DataConversionWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L32)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/exceptions/DataConversionWarning.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L85)
 
-[generated/exceptions/DataConversionWarning.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L85)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -166,19 +136,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/exceptions/DataConversionWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L41)
 
-[generated/exceptions/DataConversionWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L41)
-
-___
-
-### with\_traceback
-
-▸ **with_traceback**(`opts`): `Promise`<`any`\>
+### with\_traceback()
 
 Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
+
+#### Signature
+
+```ts
+with_traceback(opts: DataConversionWarningWithTracebackOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -188,8 +158,6 @@ Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return se
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/exceptions/DataConversionWarning.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L102)
+Defined in:  [generated/exceptions/DataConversionWarning.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/exceptions/DataConversionWarning.ts#L102)

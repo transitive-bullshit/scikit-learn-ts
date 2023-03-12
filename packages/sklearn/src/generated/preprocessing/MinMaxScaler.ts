@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The transformation is given by:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html)
  */
 export class MinMaxScaler {
   id: string

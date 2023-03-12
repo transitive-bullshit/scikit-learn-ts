@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / FunctionTransformer
-
-# Class: FunctionTransformer
+# FunctionTransformer
 
 Constructs a transformer from an arbitrary callable.
 
@@ -8,154 +6,119 @@ A FunctionTransformer forwards its X (and optionally y) arguments to a user-defi
 
 Note: If a lambda is used as the function, then the resulting transformer will not be pickleable.
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](FunctionTransformer.md#constructor)
-
-### Properties
-
-- [\_isDisposed](FunctionTransformer.md#_isdisposed)
-- [\_isInitialized](FunctionTransformer.md#_isinitialized)
-- [\_py](FunctionTransformer.md#_py)
-- [id](FunctionTransformer.md#id)
-- [opts](FunctionTransformer.md#opts)
-
-### Accessors
-
-- [feature\_names\_in\_](FunctionTransformer.md#feature_names_in_)
-- [n\_features\_in\_](FunctionTransformer.md#n_features_in_)
-- [py](FunctionTransformer.md#py)
-
-### Methods
-
-- [dispose](FunctionTransformer.md#dispose)
-- [fit](FunctionTransformer.md#fit)
-- [fit\_transform](FunctionTransformer.md#fit_transform)
-- [get\_feature\_names\_out](FunctionTransformer.md#get_feature_names_out)
-- [init](FunctionTransformer.md#init)
-- [inverse\_transform](FunctionTransformer.md#inverse_transform)
-- [set\_output](FunctionTransformer.md#set_output)
-- [transform](FunctionTransformer.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new FunctionTransformer**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new FunctionTransformer(opts?: FunctionTransformerOptions): FunctionTransformer;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`FunctionTransformerOptions`](../interfaces/FunctionTransformerOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/preprocessing/FunctionTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L25)
+[`FunctionTransformer`](FunctionTransformer.md)
+
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/FunctionTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L23)
-
-___
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/FunctionTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L22)
-
-___
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/preprocessing/FunctionTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L21)
-
-___
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/preprocessing/FunctionTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L18)
-
-___
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/preprocessing/FunctionTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L19)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L19)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L351)
 
-[generated/preprocessing/FunctionTransformer.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L351)
-
-___
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L351)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L324)
 
-[generated/preprocessing/FunctionTransformer.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L324)
-
-___
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L324)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L30)
 
-[generated/preprocessing/FunctionTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -167,37 +130,41 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L34)
 
-[generated/preprocessing/FunctionTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L34)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L30) [generated/preprocessing/FunctionTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L97)
 
-[generated/preprocessing/FunctionTransformer.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L97)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit transformer by checking X.
 
 If `validate` is `true`, `X` will be checked.
+
+#### Signature
+
+```ts
+fit(opts: FunctionTransformerFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -207,21 +174,21 @@ If `validate` is `true`, `X` will be checked.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L116)
 
-[generated/preprocessing/FunctionTransformer.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L116)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+
+#### Signature
+
+```ts
+fit_transform(opts: FunctionTransformerFitTransformOptions): Promise<any[]>;
+```
 
 #### Parameters
 
@@ -231,21 +198,21 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L148)
 
-[generated/preprocessing/FunctionTransformer.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L148)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 This method is only defined if `feature\_names\_out` is not `undefined`.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: FunctionTransformerGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -255,21 +222,21 @@ This method is only defined if `feature\_names\_out` is not `undefined`.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L188)
 
-[generated/preprocessing/FunctionTransformer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L188)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -279,19 +246,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L43)
 
-[generated/preprocessing/FunctionTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L43)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### inverse\_transform()
 
 Transform X using the inverse function.
+
+#### Signature
+
+```ts
+inverse_transform(opts: FunctionTransformerInverseTransformOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -301,21 +268,21 @@ Transform X using the inverse function.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L223)
 
-[generated/preprocessing/FunctionTransformer.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L223)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Signature
+
+```ts
+set_output(opts: FunctionTransformerSetOutputOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -325,19 +292,19 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L260)
 
-[generated/preprocessing/FunctionTransformer.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L260)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### transform()
 
 Transform X using the forward function.
+
+#### Signature
+
+```ts
+transform(opts: FunctionTransformerTransformOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -347,8 +314,6 @@ Transform X using the forward function.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/preprocessing/FunctionTransformer.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L292)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L292)

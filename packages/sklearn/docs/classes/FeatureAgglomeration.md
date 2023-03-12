@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / FeatureAgglomeration
-
-# Class: FeatureAgglomeration
+# FeatureAgglomeration
 
 Agglomerate features.
 
@@ -8,256 +6,227 @@ Recursively merges pair of clusters of features.
 
 Read more in the [User Guide](../clustering.html#hierarchical-clustering).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.cluster.FeatureAgglomeration.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](FeatureAgglomeration.md#constructor)
-
-### Properties
-
-- [\_isDisposed](FeatureAgglomeration.md#_isdisposed)
-- [\_isInitialized](FeatureAgglomeration.md#_isinitialized)
-- [\_py](FeatureAgglomeration.md#_py)
-- [id](FeatureAgglomeration.md#id)
-- [opts](FeatureAgglomeration.md#opts)
-
-### Accessors
-
-- [children\_](FeatureAgglomeration.md#children_)
-- [distances\_](FeatureAgglomeration.md#distances_)
-- [feature\_names\_in\_](FeatureAgglomeration.md#feature_names_in_)
-- [labels\_](FeatureAgglomeration.md#labels_)
-- [n\_clusters\_](FeatureAgglomeration.md#n_clusters_)
-- [n\_connected\_components\_](FeatureAgglomeration.md#n_connected_components_)
-- [n\_features\_in\_](FeatureAgglomeration.md#n_features_in_)
-- [n\_leaves\_](FeatureAgglomeration.md#n_leaves_)
-- [py](FeatureAgglomeration.md#py)
-
-### Methods
-
-- [dispose](FeatureAgglomeration.md#dispose)
-- [fit](FeatureAgglomeration.md#fit)
-- [fit\_transform](FeatureAgglomeration.md#fit_transform)
-- [get\_feature\_names\_out](FeatureAgglomeration.md#get_feature_names_out)
-- [init](FeatureAgglomeration.md#init)
-- [inverse\_transform](FeatureAgglomeration.md#inverse_transform)
-- [set\_output](FeatureAgglomeration.md#set_output)
-- [transform](FeatureAgglomeration.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.FeatureAgglomeration.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new FeatureAgglomeration**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new FeatureAgglomeration(opts?: FeatureAgglomerationOptions): FeatureAgglomeration;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`FeatureAgglomerationOptions`](../interfaces/FeatureAgglomerationOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/cluster/FeatureAgglomeration.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L25)
+[`FeatureAgglomeration`](FeatureAgglomeration.md)
+
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/cluster/FeatureAgglomeration.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L23)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/cluster/FeatureAgglomeration.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L22)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/cluster/FeatureAgglomeration.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L21)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/cluster/FeatureAgglomeration.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L18)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/cluster/FeatureAgglomeration.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L19)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L19)
 
 ## Accessors
 
 ### children\_
 
-• `get` **children_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 The children of each non-leaf node. Values less than `n\_features` correspond to leaves of the tree which are the original samples. A node `i` greater than or equal to `n\_features` is a non-leaf node and has children `children\_\[i \- n\_features\]`. Alternatively at the i-th iteration, children\[i\]\[0\] and children\[i\]\[1\] are merged to form node `n\_features + i`.
+
+#### Signature
+
+```ts
+children_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L486)
 
-[generated/cluster/FeatureAgglomeration.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L486)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L486)
 
 ### distances\_
 
-• `get` **distances_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Distances between nodes in the corresponding place in `children\_`. Only computed if `distance\_threshold` is used or `compute\_distances` is set to `true`.
+
+#### Signature
+
+```ts
+distances_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L513)
 
-[generated/cluster/FeatureAgglomeration.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L513)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L513)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L459)
 
-[generated/cluster/FeatureAgglomeration.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L459)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L459)
 
 ### labels\_
 
-• `get` **labels_**(): `Promise`<`any`\>
-
 Cluster labels for each feature.
+
+#### Signature
+
+```ts
+labels_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L351)
 
-[generated/cluster/FeatureAgglomeration.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L351)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L351)
 
 ### n\_clusters\_
 
-• `get` **n_clusters_**(): `Promise`<`number`\>
-
 The number of clusters found by the algorithm. If `distance\_threshold=None`, it will be equal to the given `n\_clusters`.
+
+#### Signature
+
+```ts
+n_clusters_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L324)
 
-[generated/cluster/FeatureAgglomeration.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L324)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L324)
 
 ### n\_connected\_components\_
 
-• `get` **n_connected_components_**(): `Promise`<`number`\>
-
 The estimated number of connected components in the graph.
+
+#### Signature
+
+```ts
+n_connected_components_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L405)
 
-[generated/cluster/FeatureAgglomeration.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L405)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L405)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L432)
 
-[generated/cluster/FeatureAgglomeration.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L432)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L432)
 
 ### n\_leaves\_
 
-• `get` **n_leaves_**(): `Promise`<`number`\>
-
 Number of leaves in the hierarchical tree.
+
+#### Signature
+
+```ts
+n_leaves_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L378)
 
-[generated/cluster/FeatureAgglomeration.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L378)
-
-___
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L378)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L30)
 
-[generated/cluster/FeatureAgglomeration.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -269,35 +238,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L34)
 
-[generated/cluster/FeatureAgglomeration.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L34)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L30) [generated/cluster/FeatureAgglomeration.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L97)
 
-[generated/cluster/FeatureAgglomeration.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L97)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the hierarchical clustering on the data.
+
+#### Signature
+
+```ts
+fit(opts: FeatureAgglomerationFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -307,21 +280,21 @@ Fit the hierarchical clustering on the data.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L114)
 
-[generated/cluster/FeatureAgglomeration.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L114)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+
+#### Signature
+
+```ts
+fit_transform(opts: FeatureAgglomerationFitTransformOptions): Promise<any[]>;
+```
 
 #### Parameters
 
@@ -331,21 +304,21 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L146)
 
-[generated/cluster/FeatureAgglomeration.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L146)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: FeatureAgglomerationGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -355,21 +328,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L186)
 
-[generated/cluster/FeatureAgglomeration.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L186)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -379,19 +352,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L43)
 
-[generated/cluster/FeatureAgglomeration.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L43)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### inverse\_transform()
 
 Inverse the transformation and return a vector of size `n\_features`.
+
+#### Signature
+
+```ts
+inverse_transform(opts: FeatureAgglomerationInverseTransformOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -401,21 +374,21 @@ Inverse the transformation and return a vector of size `n\_features`.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L221)
 
-[generated/cluster/FeatureAgglomeration.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L221)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Signature
+
+```ts
+set_output(opts: FeatureAgglomerationSetOutputOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -425,19 +398,19 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L258)
 
-[generated/cluster/FeatureAgglomeration.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L258)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### transform()
 
 Transform a new matrix using the built clustering.
+
+#### Signature
+
+```ts
+transform(opts: FeatureAgglomerationTransformOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -447,8 +420,6 @@ Transform a new matrix using the built clustering.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
-
-[generated/cluster/FeatureAgglomeration.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L290)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L290)

@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / ARDRegression
-
-# Class: ARDRegression
+# ARDRegression
 
 Bayesian ARD regression.
 
@@ -8,255 +6,227 @@ Fit the weights of a regression model, using an ARD prior. The weights of the re
 
 Read more in the [User Guide](../linear_model.html#bayesian-regression).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ARDRegression.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ARDRegression.md#constructor)
-
-### Properties
-
-- [\_isDisposed](ARDRegression.md#_isdisposed)
-- [\_isInitialized](ARDRegression.md#_isinitialized)
-- [\_py](ARDRegression.md#_py)
-- [id](ARDRegression.md#id)
-- [opts](ARDRegression.md#opts)
-
-### Accessors
-
-- [X\_offset\_](ARDRegression.md#x_offset_)
-- [X\_scale\_](ARDRegression.md#x_scale_)
-- [alpha\_](ARDRegression.md#alpha_)
-- [coef\_](ARDRegression.md#coef_)
-- [feature\_names\_in\_](ARDRegression.md#feature_names_in_)
-- [intercept\_](ARDRegression.md#intercept_)
-- [lambda\_](ARDRegression.md#lambda_)
-- [n\_features\_in\_](ARDRegression.md#n_features_in_)
-- [py](ARDRegression.md#py)
-- [scores\_](ARDRegression.md#scores_)
-- [sigma\_](ARDRegression.md#sigma_)
-
-### Methods
-
-- [dispose](ARDRegression.md#dispose)
-- [fit](ARDRegression.md#fit)
-- [init](ARDRegression.md#init)
-- [predict](ARDRegression.md#predict)
-- [score](ARDRegression.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ARDRegression.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new ARDRegression**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new ARDRegression(opts?: ARDRegressionOptions): ARDRegression;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`ARDRegressionOptions`](../interfaces/ARDRegressionOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/linear_model/ARDRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L25)
+[`ARDRegression`](ARDRegression.md)
+
+Defined in:  [generated/linear\_model/ARDRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/linear_model/ARDRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L23)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/linear_model/ARDRegression.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L22)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/linear_model/ARDRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L21)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/linear_model/ARDRegression.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L18)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/linear_model/ARDRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L19)
+Defined in:  [generated/linear\_model/ARDRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L19)
 
 ## Accessors
 
 ### X\_offset\_
 
-• `get` **X_offset_**(): `Promise`<`number`\>
-
 If `fit\_intercept=True`, offset subtracted for centering data to a zero mean. Set to np.zeros(n\_features) otherwise.
+
+#### Signature
+
+```ts
+X_offset_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L348)
 
-[generated/linear_model/ARDRegression.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L348)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L348)
 
 ### X\_scale\_
 
-• `get` **X_scale_**(): `Promise`<`number`\>
-
 Set to np.ones(n\_features).
+
+#### Signature
+
+```ts
+X_scale_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L373)
 
-[generated/linear_model/ARDRegression.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L373)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L373)
 
 ### alpha\_
 
-• `get` **alpha_**(): `Promise`<`number`\>
-
 estimated precision of the noise.
+
+#### Signature
+
+```ts
+alpha_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L231)
 
-[generated/linear_model/ARDRegression.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L231)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L231)
 
 ### coef\_
 
-• `get` **coef_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Coefficients of the regression model (mean of distribution)
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L208)
 
-[generated/linear_model/ARDRegression.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L208)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L208)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L423)
 
-[generated/linear_model/ARDRegression.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L423)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L423)
 
 ### intercept\_
 
-• `get` **intercept_**(): `Promise`<`number`\>
-
 Independent term in decision function. Set to 0.0 if `fit\_intercept \= False`.
+
+#### Signature
+
+```ts
+intercept_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L323)
 
-[generated/linear_model/ARDRegression.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L323)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L323)
 
 ### lambda\_
 
-• `get` **lambda_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 estimated precisions of the weights.
+
+#### Signature
+
+```ts
+lambda_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L254)
 
-[generated/linear_model/ARDRegression.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L254)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L254)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L398)
 
-[generated/linear_model/ARDRegression.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L398)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L398)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L30)
 
-[generated/linear_model/ARDRegression.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -268,69 +238,77 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L34)
 
-[generated/linear_model/ARDRegression.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L34)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L30) [generated/linear\_model/ARDRegression.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L34)
 
 ### scores\_
 
-• `get` **scores_**(): `Promise`<`number`\>
-
 if computed, value of the objective function (to be maximized)
+
+#### Signature
+
+```ts
+scores_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L300)
 
-[generated/linear_model/ARDRegression.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L300)
-
-___
+Defined in:  [generated/linear\_model/ARDRegression.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L300)
 
 ### sigma\_
 
-• `get` **sigma_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 estimated variance-covariance matrix of the weights
+
+#### Signature
+
+```ts
+sigma_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L277)
 
-[generated/linear_model/ARDRegression.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L277)
+Defined in:  [generated/linear\_model/ARDRegression.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L277)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L93)
 
-[generated/linear_model/ARDRegression.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L93)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model according to the given training data and parameters.
 
 Iterative procedure to maximize the evidence
+
+#### Signature
+
+```ts
+fit(opts: ARDRegressionFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -340,21 +318,21 @@ Iterative procedure to maximize the evidence
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L112)
 
-[generated/linear_model/ARDRegression.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L112)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -364,21 +342,21 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L43)
 
-[generated/linear_model/ARDRegression.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L43)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### predict()
 
 Predict using the linear model.
 
 In addition to the mean of the predictive distribution, also its standard deviation can be returned.
+
+#### Signature
+
+```ts
+predict(opts: ARDRegressionPredictOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -388,21 +366,21 @@ In addition to the mean of the predictive distribution, also its standard deviat
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ARDRegression.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L144)
 
-[generated/linear_model/ARDRegression.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L144)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+
+#### Signature
+
+```ts
+score(opts: ARDRegressionScoreOptions): Promise<number>;
+```
 
 #### Parameters
 
@@ -412,8 +390,6 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/linear_model/ARDRegression.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L176)
+Defined in:  [generated/linear\_model/ARDRegression.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L176)

@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / LassoLarsCV
-
-# Class: LassoLarsCV
+# LassoLarsCV
 
 Cross-validated Lasso, using the LARS algorithm.
 
@@ -8,304 +6,281 @@ See glossary entry for [cross-validation estimator](../../glossary.html#term-cro
 
 The optimization objective for Lasso is:
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoLarsCV.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](LassoLarsCV.md#constructor)
-
-### Properties
-
-- [\_isDisposed](LassoLarsCV.md#_isdisposed)
-- [\_isInitialized](LassoLarsCV.md#_isinitialized)
-- [\_py](LassoLarsCV.md#_py)
-- [id](LassoLarsCV.md#id)
-- [opts](LassoLarsCV.md#opts)
-
-### Accessors
-
-- [active\_](LassoLarsCV.md#active_)
-- [alpha\_](LassoLarsCV.md#alpha_)
-- [alphas\_](LassoLarsCV.md#alphas_)
-- [coef\_](LassoLarsCV.md#coef_)
-- [coef\_path\_](LassoLarsCV.md#coef_path_)
-- [cv\_alphas\_](LassoLarsCV.md#cv_alphas_)
-- [feature\_names\_in\_](LassoLarsCV.md#feature_names_in_)
-- [intercept\_](LassoLarsCV.md#intercept_)
-- [mse\_path\_](LassoLarsCV.md#mse_path_)
-- [n\_features\_in\_](LassoLarsCV.md#n_features_in_)
-- [n\_iter\_](LassoLarsCV.md#n_iter_)
-- [py](LassoLarsCV.md#py)
-
-### Methods
-
-- [dispose](LassoLarsCV.md#dispose)
-- [fit](LassoLarsCV.md#fit)
-- [init](LassoLarsCV.md#init)
-- [predict](LassoLarsCV.md#predict)
-- [score](LassoLarsCV.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoLarsCV.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new LassoLarsCV**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new LassoLarsCV(opts?: LassoLarsCVOptions): LassoLarsCV;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`LassoLarsCVOptions`](../interfaces/LassoLarsCVOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/linear_model/LassoLarsCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L25)
+[`LassoLarsCV`](LassoLarsCV.md)
+
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/linear_model/LassoLarsCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L23)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/linear_model/LassoLarsCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L22)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/linear_model/LassoLarsCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L21)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/linear_model/LassoLarsCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L18)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/linear_model/LassoLarsCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L19)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L19)
 
 ## Accessors
 
 ### active\_
 
-• `get` **active_**(): `Promise`<`any`\>
-
 Indices of active variables at the end of the path.
+
+#### Signature
+
+```ts
+active_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L390)
 
-[generated/linear_model/LassoLarsCV.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L390)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L390)
 
 ### alpha\_
 
-• `get` **alpha_**(): `Promise`<`number`\>
-
 the estimated regularization parameter alpha
+
+#### Signature
+
+```ts
+alpha_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L273)
 
-[generated/linear_model/LassoLarsCV.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L273)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L273)
 
 ### alphas\_
 
-• `get` **alphas_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 the different values of alpha along the path
+
+#### Signature
+
+```ts
+alphas_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L296)
 
-[generated/linear_model/LassoLarsCV.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L296)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L296)
 
 ### coef\_
 
-• `get` **coef_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 parameter vector (w in the formulation formula)
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L200)
 
-[generated/linear_model/LassoLarsCV.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L200)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L200)
 
 ### coef\_path\_
 
-• `get` **coef_path_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 the varying values of the coefficients along the path
+
+#### Signature
+
+```ts
+coef_path_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L248)
 
-[generated/linear_model/LassoLarsCV.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L248)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L248)
 
 ### cv\_alphas\_
 
-• `get` **cv_alphas_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 all the values of alpha along the path for the different folds
+
+#### Signature
+
+```ts
+cv_alphas_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L319)
 
-[generated/linear_model/LassoLarsCV.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L319)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L319)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L438)
 
-[generated/linear_model/LassoLarsCV.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L438)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L438)
 
 ### intercept\_
 
-• `get` **intercept_**(): `Promise`<`number`\>
-
 independent term in decision function.
+
+#### Signature
+
+```ts
+intercept_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L223)
 
-[generated/linear_model/LassoLarsCV.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L223)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L223)
 
 ### mse\_path\_
 
-• `get` **mse_path_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 the mean square error on left-out for each fold along the path (alpha values given by `cv\_alphas`)
+
+#### Signature
+
+```ts
+mse_path_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L344)
 
-[generated/linear_model/LassoLarsCV.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L344)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L344)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L413)
 
-[generated/linear_model/LassoLarsCV.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L413)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L413)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number` \| [`ArrayLike`](../modules.md#arraylike)\>
-
 the number of iterations run by Lars with the optimal alpha.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number | ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<`number` \| [`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<`number` \| [`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L367)
 
-[generated/linear_model/LassoLarsCV.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L367)
-
-___
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L367)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L30)
 
-[generated/linear_model/LassoLarsCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -317,35 +292,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L34)
 
-[generated/linear_model/LassoLarsCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L34)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L30) [generated/linear\_model/LassoLarsCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L93)
 
-[generated/linear_model/LassoLarsCV.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L93)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model using X, y as training data.
+
+#### Signature
+
+```ts
+fit(opts: LassoLarsCVFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -355,21 +334,21 @@ Fit the model using X, y as training data.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L110)
 
-[generated/linear_model/LassoLarsCV.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L110)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -379,19 +358,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L43)
 
-[generated/linear_model/LassoLarsCV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L43)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<`any`\>
+### predict()
 
 Predict using the linear model.
+
+#### Signature
+
+```ts
+predict(opts: LassoLarsCVPredictOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -401,21 +380,21 @@ Predict using the linear model.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L140)
 
-[generated/linear_model/LassoLarsCV.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L140)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
+
+#### Signature
+
+```ts
+score(opts: LassoLarsCVScoreOptions): Promise<number>;
+```
 
 #### Parameters
 
@@ -425,8 +404,6 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/linear_model/LassoLarsCV.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L168)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L168)

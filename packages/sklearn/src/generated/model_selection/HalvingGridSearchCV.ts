@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User guide](../grid_search.html#successive-halving-user-guide).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.HalvingGridSearchCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.HalvingGridSearchCV.html)
  */
 export class HalvingGridSearchCV {
   id: string

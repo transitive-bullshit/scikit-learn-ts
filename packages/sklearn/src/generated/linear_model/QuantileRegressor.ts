@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#quantile-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.QuantileRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.QuantileRegressor.html)
  */
 export class QuantileRegressor {
   id: string

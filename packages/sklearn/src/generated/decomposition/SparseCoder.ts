@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each row of the result is the solution to a sparse coding problem. The goal is to find a sparse array `code` such that:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparseCoder.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparseCoder.html)
  */
 export class SparseCoder {
   id: string

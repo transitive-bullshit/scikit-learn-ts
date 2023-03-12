@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Minimizes the objective function:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html)
  */
 export class ElasticNet {
   id: string

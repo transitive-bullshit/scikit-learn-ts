@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / FactorAnalysis
-
-# Class: FactorAnalysis
+# FactorAnalysis
 
 Factor Analysis (FA).
 
@@ -14,242 +12,209 @@ FactorAnalysis performs a maximum likelihood estimate of the so-called `loading`
 
 Read more in the [User Guide](../decomposition.html#fa).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FactorAnalysis.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](FactorAnalysis.md#constructor)
-
-### Properties
-
-- [\_isDisposed](FactorAnalysis.md#_isdisposed)
-- [\_isInitialized](FactorAnalysis.md#_isinitialized)
-- [\_py](FactorAnalysis.md#_py)
-- [id](FactorAnalysis.md#id)
-- [opts](FactorAnalysis.md#opts)
-
-### Accessors
-
-- [components\_](FactorAnalysis.md#components_)
-- [feature\_names\_in\_](FactorAnalysis.md#feature_names_in_)
-- [loglike\_](FactorAnalysis.md#loglike_)
-- [mean\_](FactorAnalysis.md#mean_)
-- [n\_features\_in\_](FactorAnalysis.md#n_features_in_)
-- [n\_iter\_](FactorAnalysis.md#n_iter_)
-- [noise\_variance\_](FactorAnalysis.md#noise_variance_)
-- [py](FactorAnalysis.md#py)
-
-### Methods
-
-- [dispose](FactorAnalysis.md#dispose)
-- [fit](FactorAnalysis.md#fit)
-- [fit\_transform](FactorAnalysis.md#fit_transform)
-- [get\_covariance](FactorAnalysis.md#get_covariance)
-- [get\_feature\_names\_out](FactorAnalysis.md#get_feature_names_out)
-- [get\_precision](FactorAnalysis.md#get_precision)
-- [init](FactorAnalysis.md#init)
-- [score](FactorAnalysis.md#score)
-- [score\_samples](FactorAnalysis.md#score_samples)
-- [set\_output](FactorAnalysis.md#set_output)
-- [transform](FactorAnalysis.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FactorAnalysis.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new FactorAnalysis**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new FactorAnalysis(opts?: FactorAnalysisOptions): FactorAnalysis;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`FactorAnalysisOptions`](../interfaces/FactorAnalysisOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/decomposition/FactorAnalysis.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L31)
+[`FactorAnalysis`](FactorAnalysis.md)
+
+Defined in:  [generated/decomposition/FactorAnalysis.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L31)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/FactorAnalysis.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L29)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L29)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/FactorAnalysis.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L28)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L28)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/decomposition/FactorAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L27)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L27)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/decomposition/FactorAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L24)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L24)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/decomposition/FactorAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L25)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L25)
 
 ## Accessors
 
 ### components\_
 
-• `get` **components_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Components with maximum variance.
+
+#### Signature
+
+```ts
+components_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L394)
 
-[generated/decomposition/FactorAnalysis.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L394)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L394)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L542)
 
-[generated/decomposition/FactorAnalysis.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L542)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L542)
 
 ### loglike\_
 
-• `get` **loglike_**(): `Promise`<`any`[]\>
-
 The log likelihood at each iteration.
+
+#### Signature
+
+```ts
+loglike_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L419)
 
-[generated/decomposition/FactorAnalysis.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L419)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L419)
 
 ### mean\_
 
-• `get` **mean_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per-feature empirical mean, estimated from the training set.
+
+#### Signature
+
+```ts
+mean_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L494)
 
-[generated/decomposition/FactorAnalysis.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L494)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L494)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L517)
 
-[generated/decomposition/FactorAnalysis.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L517)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L517)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 Number of iterations run.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L469)
 
-[generated/decomposition/FactorAnalysis.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L469)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L469)
 
 ### noise\_variance\_
 
-• `get` **noise_variance_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The estimated noise variance for each feature.
+
+#### Signature
+
+```ts
+noise_variance_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L444)
 
-[generated/decomposition/FactorAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L444)
-
-___
+Defined in:  [generated/decomposition/FactorAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L444)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L36)
 
-[generated/decomposition/FactorAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L36)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -261,35 +226,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L40)
 
-[generated/decomposition/FactorAnalysis.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L40)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L36) [generated/decomposition/FactorAnalysis.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L40)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L103)
 
-[generated/decomposition/FactorAnalysis.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L103)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the FactorAnalysis model to X using SVD based approach.
+
+#### Signature
+
+```ts
+fit(opts: FactorAnalysisFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -299,21 +268,21 @@ Fit the FactorAnalysis model to X using SVD based approach.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L120)
 
-[generated/decomposition/FactorAnalysis.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L120)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+
+#### Signature
+
+```ts
+fit_transform(opts: FactorAnalysisFitTransformOptions): Promise<any[]>;
+```
 
 #### Parameters
 
@@ -323,21 +292,21 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L150)
 
-[generated/decomposition/FactorAnalysis.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L150)
-
-___
-
-### get\_covariance
-
-▸ **get_covariance**(`opts`): `Promise`<`any`\>
+### get\_covariance()
 
 Compute data covariance with the FactorAnalysis model.
 
 `cov \= components\_.T \* components\_ + diag(noise\_variance)`
+
+#### Signature
+
+```ts
+get_covariance(opts: FactorAnalysisGetCovarianceOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -347,21 +316,21 @@ Compute data covariance with the FactorAnalysis model.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L184)
 
-[generated/decomposition/FactorAnalysis.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L184)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: FactorAnalysisGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -371,19 +340,19 @@ The feature names out will prefixed by the lowercased class name. For example, i
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L214)
 
-[generated/decomposition/FactorAnalysis.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L214)
-
-___
-
-### get\_precision
-
-▸ **get_precision**(`opts`): `Promise`<`any`\>
+### get\_precision()
 
 Compute data precision matrix with the FactorAnalysis model.
+
+#### Signature
+
+```ts
+get_precision(opts: FactorAnalysisGetPrecisionOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -393,21 +362,21 @@ Compute data precision matrix with the FactorAnalysis model.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L247)
 
-[generated/decomposition/FactorAnalysis.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L247)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -417,19 +386,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L49)
 
-[generated/decomposition/FactorAnalysis.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L49)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Compute the average log-likelihood of the samples.
+
+#### Signature
+
+```ts
+score(opts: FactorAnalysisScoreOptions): Promise<number>;
+```
 
 #### Parameters
 
@@ -439,19 +408,19 @@ Compute the average log-likelihood of the samples.
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L276)
 
-[generated/decomposition/FactorAnalysis.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L276)
-
-___
-
-### score\_samples
-
-▸ **score_samples**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### score\_samples()
 
 Compute the log-likelihood of each sample.
+
+#### Signature
+
+```ts
+score_samples(opts: FactorAnalysisScoreSamplesOptions): Promise<ArrayLike>;
+```
 
 #### Parameters
 
@@ -461,21 +430,21 @@ Compute the log-likelihood of each sample.
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L304)
 
-[generated/decomposition/FactorAnalysis.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L304)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+
+#### Signature
+
+```ts
+set_output(opts: FactorAnalysisSetOutputOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -485,21 +454,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/FactorAnalysis.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L336)
 
-[generated/decomposition/FactorAnalysis.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L336)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### transform()
 
 Apply dimensionality reduction to X using the model.
 
 Compute the expected mean of the latent variables. See Barber, 21.2.33 (or Bishop, 12.66).
+
+#### Signature
+
+```ts
+transform(opts: FactorAnalysisTransformOptions): Promise<ArrayLike[]>;
+```
 
 #### Parameters
 
@@ -509,8 +478,6 @@ Compute the expected mean of the latent variables. See Barber, 21.2.33 (or Bisho
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
-
-[generated/decomposition/FactorAnalysis.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L366)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L366)

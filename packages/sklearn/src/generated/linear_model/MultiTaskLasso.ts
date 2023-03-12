@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The optimization objective for Lasso is:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskLasso.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskLasso.html)
  */
 export class MultiTaskLasso {
   id: string

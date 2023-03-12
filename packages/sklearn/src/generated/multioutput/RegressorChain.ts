@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../multiclass.html#regressorchain).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.RegressorChain.html)
  */
 export class RegressorChain {
   id: string

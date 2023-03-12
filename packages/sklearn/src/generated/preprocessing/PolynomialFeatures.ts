@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#polynomial-features).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
  */
 export class PolynomialFeatures {
   id: string

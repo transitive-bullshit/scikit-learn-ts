@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / DecisionBoundaryDisplay
-
-# Class: DecisionBoundaryDisplay
+# DecisionBoundaryDisplay
 
 Decisions boundary visualization.
 
@@ -8,151 +6,119 @@ It is recommended to use [`from\_estimator`](#sklearn.inspection.DecisionBoundar
 
 Read more in the [User Guide](../../visualizations.html#visualizations).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.inspection.DecisionBoundaryDisplay.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](DecisionBoundaryDisplay.md#constructor)
-
-### Properties
-
-- [\_isDisposed](DecisionBoundaryDisplay.md#_isdisposed)
-- [\_isInitialized](DecisionBoundaryDisplay.md#_isinitialized)
-- [\_py](DecisionBoundaryDisplay.md#_py)
-- [id](DecisionBoundaryDisplay.md#id)
-- [opts](DecisionBoundaryDisplay.md#opts)
-
-### Accessors
-
-- [ax\_](DecisionBoundaryDisplay.md#ax_)
-- [figure\_](DecisionBoundaryDisplay.md#figure_)
-- [py](DecisionBoundaryDisplay.md#py)
-- [surface\_](DecisionBoundaryDisplay.md#surface_)
-
-### Methods
-
-- [dispose](DecisionBoundaryDisplay.md#dispose)
-- [from\_estimator](DecisionBoundaryDisplay.md#from_estimator)
-- [init](DecisionBoundaryDisplay.md#init)
-- [plot](DecisionBoundaryDisplay.md#plot)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.DecisionBoundaryDisplay.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new DecisionBoundaryDisplay**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new DecisionBoundaryDisplay(opts?: DecisionBoundaryDisplayOptions): DecisionBoundaryDisplay;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`DecisionBoundaryDisplayOptions`](../interfaces/DecisionBoundaryDisplayOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
+[`DecisionBoundaryDisplay`](DecisionBoundaryDisplay.md)
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
-
-___
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
-
-___
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
-
-___
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
-
-___
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
 
 ## Accessors
 
 ### ax\_
 
-• `get` **ax_**(): `Promise`<`any`\>
-
 Axes with confusion matrix.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L218)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L218)
-
-___
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L218)
 
 ### figure\_
 
-• `get` **figure_**(): `Promise`<`any`\>
-
 Figure containing the confusion matrix.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L245)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L245)
-
-___
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L245)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L30)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -164,53 +130,59 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L34)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L34)
-
-___
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L30) [generated/inspection/DecisionBoundaryDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L34)
 
 ### surface\_
 
-• `get` **surface_**(): `Promise`<`any`\>
-
 If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.7.1)"). If `plot\_method` is ‘pcolormesh’, `surface\_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.7.1)").
+
+#### Signature
+
+```ts
+surface_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L191)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L191)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L191)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L93)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L93)
-
-___
-
-### from\_estimator
-
-▸ **from_estimator**(`opts`): `Promise`<`any`\>
+### from\_estimator()
 
 Plot decision boundary given an estimator.
 
 Read more in the [User Guide](../../visualizations.html#visualizations).
+
+#### Signature
+
+```ts
+from_estimator(opts: DecisionBoundaryDisplayFromEstimatorOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -220,21 +192,21 @@ Read more in the [User Guide](../../visualizations.html#visualizations).
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L112)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L112)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -244,19 +216,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L43)
 
-[generated/inspection/DecisionBoundaryDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L43)
-
-___
-
-### plot
-
-▸ **plot**(`opts`): `Promise`<`any`\>
+### plot()
 
 Plot visualization.
+
+#### Signature
+
+```ts
+plot(opts: DecisionBoundaryDisplayPlotOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -266,8 +238,6 @@ Plot visualization.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/inspection/DecisionBoundaryDisplay.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L157)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L157)

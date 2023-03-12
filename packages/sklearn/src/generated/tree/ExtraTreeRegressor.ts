@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../tree.html#tree).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.tree.ExtraTreeRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.tree.ExtraTreeRegressor.html)
  */
 export class ExtraTreeRegressor {
   id: string

@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../ensemble.html#stacking).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingClassifier.html)
  */
 export class StackingClassifier {
   id: string

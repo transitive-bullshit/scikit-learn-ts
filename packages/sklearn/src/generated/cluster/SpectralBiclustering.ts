@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../biclustering.html#spectral-biclustering).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralBiclustering.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralBiclustering.html)
  */
 export class SpectralBiclustering {
   id: string

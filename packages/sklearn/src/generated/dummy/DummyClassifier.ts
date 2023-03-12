@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../model_evaluation.html#dummy-estimators).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html)
  */
 export class DummyClassifier {
   id: string

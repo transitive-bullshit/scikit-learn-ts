@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../semi_supervised.html#label-propagation).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelSpreading.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelSpreading.html)
  */
 export class LabelSpreading {
   id: string

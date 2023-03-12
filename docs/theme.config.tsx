@@ -9,7 +9,7 @@ const siteDesc = `Use Python's #1 machine learning library from Node.js`
 const siteTitle = 'sklearn'
 
 const config: DocsThemeConfig = {
-  logo: <span>scikit-learn-ts</span>,
+  logo: <img src='/sklearn-logo.png' alt='sklearn' className='logo' />,
   project: {
     link: 'https://github.com/transitive-bullshit/scikit-learn-ts'
   },
@@ -51,7 +51,12 @@ const config: DocsThemeConfig = {
         <meta name='apple-mobile-web-app-title' content='sklearn' />
 
         <link rel='shortcut icon' href='/favicon.ico' />
-        <link rel='icon' type='image/png' sizes='32x32' href='favicon-32.png' />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon-32.png'
+        />
       </>
     )
   },

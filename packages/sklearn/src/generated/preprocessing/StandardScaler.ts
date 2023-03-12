@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The standard score of a sample `x` is calculated as:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)
  */
 export class StandardScaler {
   id: string

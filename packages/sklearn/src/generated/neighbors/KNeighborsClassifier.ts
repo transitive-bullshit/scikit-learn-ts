@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neighbors.html#classification).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
  */
 export class KNeighborsClassifier {
   id: string

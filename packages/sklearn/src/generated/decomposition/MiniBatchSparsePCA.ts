@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../decomposition.html#sparsepca).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchSparsePCA.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchSparsePCA.html)
  */
 export class MiniBatchSparsePCA {
   id: string

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../covariance.html#shrunk-covariance).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.covariance.ShrunkCovariance.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.ShrunkCovariance.html)
  */
 export class ShrunkCovariance {
   id: string

@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_selection.html#rfe).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html)
  */
 export class RFE {
   id: string

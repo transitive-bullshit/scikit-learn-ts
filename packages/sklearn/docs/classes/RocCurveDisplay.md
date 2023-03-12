@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / RocCurveDisplay
-
-# Class: RocCurveDisplay
+# RocCurveDisplay
 
 ROC Curve visualization.
 
@@ -8,168 +6,137 @@ It is recommend to use [`from\_estimator`](#sklearn.metrics.RocCurveDisplay.from
 
 Read more in the [User Guide](../../visualizations.html#visualizations).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.metrics.RocCurveDisplay.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](RocCurveDisplay.md#constructor)
-
-### Properties
-
-- [\_isDisposed](RocCurveDisplay.md#_isdisposed)
-- [\_isInitialized](RocCurveDisplay.md#_isinitialized)
-- [\_py](RocCurveDisplay.md#_py)
-- [id](RocCurveDisplay.md#id)
-- [opts](RocCurveDisplay.md#opts)
-
-### Accessors
-
-- [ax\_](RocCurveDisplay.md#ax_)
-- [figure\_](RocCurveDisplay.md#figure_)
-- [line\_](RocCurveDisplay.md#line_)
-- [py](RocCurveDisplay.md#py)
-
-### Methods
-
-- [dispose](RocCurveDisplay.md#dispose)
-- [from\_estimator](RocCurveDisplay.md#from_estimator)
-- [from\_predictions](RocCurveDisplay.md#from_predictions)
-- [init](RocCurveDisplay.md#init)
-- [plot](RocCurveDisplay.md#plot)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.RocCurveDisplay.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new RocCurveDisplay**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new RocCurveDisplay(opts?: RocCurveDisplayOptions): RocCurveDisplay;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`RocCurveDisplayOptions`](../interfaces/RocCurveDisplayOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
+[`RocCurveDisplay`](RocCurveDisplay.md)
+
+Defined in:  [generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
-
-___
+Defined in:  [generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
-
-___
+Defined in:  [generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
-
-___
+Defined in:  [generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
-
-___
+Defined in:  [generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
 
 ## Accessors
 
 ### ax\_
 
-• `get` **ax_**(): `Promise`<`any`\>
-
 Axes with ROC Curve.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L258)
 
-[generated/metrics/RocCurveDisplay.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L258)
-
-___
+Defined in:  [generated/metrics/RocCurveDisplay.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L258)
 
 ### figure\_
 
-• `get` **figure_**(): `Promise`<`any`\>
-
 Figure containing the curve.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L281)
 
-[generated/metrics/RocCurveDisplay.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L281)
-
-___
+Defined in:  [generated/metrics/RocCurveDisplay.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L281)
 
 ### line\_
 
-• `get` **line_**(): `Promise`<`any`\>
-
 ROC Curve.
+
+#### Signature
+
+```ts
+line_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L235)
 
-[generated/metrics/RocCurveDisplay.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L235)
-
-___
+Defined in:  [generated/metrics/RocCurveDisplay.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L235)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L30)
 
-[generated/metrics/RocCurveDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -181,35 +148,39 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L34)
 
-[generated/metrics/RocCurveDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L34)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L30) [generated/metrics/RocCurveDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L34)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L89)
 
-[generated/metrics/RocCurveDisplay.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L89)
-
-___
-
-### from\_estimator
-
-▸ **from_estimator**(`opts`): `Promise`<`any`\>
+### from\_estimator()
 
 Create a ROC Curve display from an estimator.
+
+#### Signature
+
+```ts
+from_estimator(opts: RocCurveDisplayFromEstimatorOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -219,21 +190,21 @@ Create a ROC Curve display from an estimator.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L106)
 
-[generated/metrics/RocCurveDisplay.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L106)
-
-___
-
-### from\_predictions
-
-▸ **from_predictions**(`opts`): `Promise`<`any`\>
+### from\_predictions()
 
 Plot ROC curve given the true and predicted values.
 
 Read more in the [User Guide](../../visualizations.html#visualizations).
+
+#### Signature
+
+```ts
+from_predictions(opts: RocCurveDisplayFromPredictionsOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -243,21 +214,21 @@ Read more in the [User Guide](../../visualizations.html#visualizations).
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L156)
 
-[generated/metrics/RocCurveDisplay.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L156)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -267,21 +238,21 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/metrics/RocCurveDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L43)
 
-[generated/metrics/RocCurveDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L43)
-
-___
-
-### plot
-
-▸ **plot**(`opts`): `Promise`<`any`\>
+### plot()
 
 Plot visualization.
 
 Extra keyword arguments will be passed to matplotlib’s `plot`.
+
+#### Signature
+
+```ts
+plot(opts: RocCurveDisplayPlotOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -291,8 +262,6 @@ Extra keyword arguments will be passed to matplotlib’s `plot`.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/metrics/RocCurveDisplay.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L205)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L205)

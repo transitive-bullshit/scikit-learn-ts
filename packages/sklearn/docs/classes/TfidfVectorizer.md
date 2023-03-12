@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / TfidfVectorizer
-
-# Class: TfidfVectorizer
+# TfidfVectorizer
 
 Convert a collection of raw documents to a matrix of TF-IDF features.
 
@@ -8,143 +6,101 @@ Equivalent to [`CountVectorizer`](sklearn.feature_extraction.text.CountVectorize
 
 Read more in the [User Guide](../feature_extraction.html#text-feature-extraction).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TfidfVectorizer.md#constructor)
-
-### Properties
-
-- [\_isDisposed](TfidfVectorizer.md#_isdisposed)
-- [\_isInitialized](TfidfVectorizer.md#_isinitialized)
-- [\_py](TfidfVectorizer.md#_py)
-- [id](TfidfVectorizer.md#id)
-- [opts](TfidfVectorizer.md#opts)
-
-### Accessors
-
-- [fixed\_vocabulary\_](TfidfVectorizer.md#fixed_vocabulary_)
-- [py](TfidfVectorizer.md#py)
-- [stop\_words\_](TfidfVectorizer.md#stop_words_)
-- [vocabulary\_](TfidfVectorizer.md#vocabulary_)
-
-### Methods
-
-- [build\_analyzer](TfidfVectorizer.md#build_analyzer)
-- [build\_preprocessor](TfidfVectorizer.md#build_preprocessor)
-- [build\_tokenizer](TfidfVectorizer.md#build_tokenizer)
-- [decode](TfidfVectorizer.md#decode)
-- [dispose](TfidfVectorizer.md#dispose)
-- [fit](TfidfVectorizer.md#fit)
-- [fit\_transform](TfidfVectorizer.md#fit_transform)
-- [get\_feature\_names\_out](TfidfVectorizer.md#get_feature_names_out)
-- [get\_stop\_words](TfidfVectorizer.md#get_stop_words)
-- [init](TfidfVectorizer.md#init)
-- [inverse\_transform](TfidfVectorizer.md#inverse_transform)
-- [transform](TfidfVectorizer.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new TfidfVectorizer**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new TfidfVectorizer(opts?: TfidfVectorizerOptions): TfidfVectorizer;
+```
+
+### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opts?` | [`TfidfVectorizerOptions`](../interfaces/TfidfVectorizerOptions.md) |
 
-#### Defined in
+### Returns
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L25)
+[`TfidfVectorizer`](TfidfVectorizer.md)
+
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/feature_extraction/text/TfidfVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L23)
-
-___
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/feature_extraction/text/TfidfVectorizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L22)
-
-___
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/feature_extraction/text/TfidfVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L21)
-
-___
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/feature_extraction/text/TfidfVectorizer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L18)
-
-___
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/feature_extraction/text/TfidfVectorizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L19)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L19)
 
 ## Accessors
 
 ### fixed\_vocabulary\_
 
-• `get` **fixed_vocabulary_**(): `Promise`<`boolean`\>
-
 True if a fixed vocabulary of term to indices mapping is provided by the user.
+
+#### Signature
+
+```ts
+fixed_vocabulary_(): Promise<boolean>;
+```
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L450)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L450)
-
-___
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L450)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L30)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -156,51 +112,59 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L34)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L34)
-
-___
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L30) [generated/feature\_extraction/text/TfidfVectorizer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L34)
 
 ### stop\_words\_
 
-• `get` **stop_words_**(): `Promise`<`any`\>
-
 Terms that were ignored because they either:
+
+#### Signature
+
+```ts
+stop_words_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L475)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L475)
-
-___
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L475)
 
 ### vocabulary\_
 
-• `get` **vocabulary_**(): `Promise`<`any`\>
-
 A mapping of terms to feature indices.
+
+#### Signature
+
+```ts
+vocabulary_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L425)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L425)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L425)
 
 ## Methods
 
-### build\_analyzer
-
-▸ **build_analyzer**(`opts`): `Promise`<`any`\>
+### build\_analyzer()
 
 Return a callable to process input data.
 
 The callable handles preprocessing, tokenization, and n-grams generation.
+
+#### Signature
+
+```ts
+build_analyzer(opts: TfidfVectorizerBuildAnalyzerOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -210,19 +174,19 @@ The callable handles preprocessing, tokenization, and n-grams generation.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L124)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L124)
-
-___
-
-### build\_preprocessor
-
-▸ **build_preprocessor**(`opts`): `Promise`<`any`\>
+### build\_preprocessor()
 
 Return a function to preprocess the text before tokenization.
+
+#### Signature
+
+```ts
+build_preprocessor(opts: TfidfVectorizerBuildPreprocessorOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -232,19 +196,19 @@ Return a function to preprocess the text before tokenization.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L154)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L154)
-
-___
-
-### build\_tokenizer
-
-▸ **build_tokenizer**(`opts`): `Promise`<`any`\>
+### build\_tokenizer()
 
 Return a function that splits a string into a sequence of tokens.
+
+#### Signature
+
+```ts
+build_tokenizer(opts: TfidfVectorizerBuildTokenizerOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -254,21 +218,21 @@ Return a function that splits a string into a sequence of tokens.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L184)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L184)
-
-___
-
-### decode
-
-▸ **decode**(`opts`): `Promise`<`any`\>
+### decode()
 
 Decode the input into a string of unicode symbols.
 
 The decoding strategy depends on the vectorizer parameters.
+
+#### Signature
+
+```ts
+decode(opts: TfidfVectorizerDecodeOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -278,37 +242,37 @@ The decoding strategy depends on the vectorizer parameters.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L216)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L216)
-
-___
-
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L105)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L105)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Learn vocabulary and idf from training set.
+
+#### Signature
+
+```ts
+fit(opts: TfidfVectorizerFitOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -318,21 +282,21 @@ Learn vocabulary and idf from training set.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L244)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L244)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`\>
+### fit\_transform()
 
 Learn vocabulary and idf, return document-term matrix.
 
 This is equivalent to fit followed by transform, but more efficiently implemented.
+
+#### Signature
+
+```ts
+fit_transform(opts: TfidfVectorizerFitTransformOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -342,19 +306,19 @@ This is equivalent to fit followed by transform, but more efficiently implemente
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L274)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L274)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
+
+#### Signature
+
+```ts
+get_feature_names_out(opts: TfidfVectorizerGetFeatureNamesOutOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -364,19 +328,19 @@ Get output feature names for transformation.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L302)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L302)
-
-___
-
-### get\_stop\_words
-
-▸ **get_stop_words**(`opts`): `Promise`<`any`\>
+### get\_stop\_words()
 
 Build or fetch the effective stop words list.
+
+#### Signature
+
+```ts
+get_stop_words(opts: TfidfVectorizerGetStopWordsOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -386,21 +350,21 @@ Build or fetch the effective stop words list.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L335)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L335)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -410,19 +374,19 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L43)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L43)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<`any`[]\>
+### inverse\_transform()
 
 Return terms per document with nonzero entries in X.
+
+#### Signature
+
+```ts
+inverse_transform(opts: TfidfVectorizerInverseTransformOptions): Promise<any[]>;
+```
 
 #### Parameters
 
@@ -432,21 +396,21 @@ Return terms per document with nonzero entries in X.
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L363)
 
-[generated/feature_extraction/text/TfidfVectorizer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L363)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<`any`\>
+### transform()
 
 Transform documents to document-term matrix.
 
 Uses the vocabulary and document frequencies (df) learned by fit (or fit\_transform).
+
+#### Signature
+
+```ts
+transform(opts: TfidfVectorizerTransformOptions): Promise<any>;
+```
 
 #### Parameters
 
@@ -456,8 +420,6 @@ Uses the vocabulary and document frequencies (df) learned by fit (or fit\_transf
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/feature_extraction/text/TfidfVectorizer.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L397)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L397)

@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../sgd.html#sgd).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)
  */
 export class SGDClassifier {
   id: string

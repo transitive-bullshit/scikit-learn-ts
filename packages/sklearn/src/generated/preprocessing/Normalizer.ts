@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-normalization).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html)
  */
 export class Normalizer {
   id: string

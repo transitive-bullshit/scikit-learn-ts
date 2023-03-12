@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Examples
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DistanceMetric.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DistanceMetric.html)
  */
 export class DistanceMetric {
   id: string

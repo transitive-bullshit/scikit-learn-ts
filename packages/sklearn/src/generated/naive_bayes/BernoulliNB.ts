@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../naive_bayes.html#bernoulli-naive-bayes).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html)
  */
 export class BernoulliNB {
   id: string
