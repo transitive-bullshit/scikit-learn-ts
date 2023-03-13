@@ -18,6 +18,7 @@ const config: DocsThemeConfig = {
       width='1638'
       height='675'
       style={{
+        height: 48,
         maxHeight: 48
       }}
     />
