@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import React from 'react'
 
-const siteHost = 'scikit-learn-ts.vercel.app'
+const siteHost = 'sklearn.vercel.app'
 const siteUrl = `https://${siteHost}`
 const siteSocialUrl = `${siteUrl}/social.png`
 const siteDesc = `Use Python's #1 machine learning library from Node.js`
