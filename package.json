@@ -33,7 +33,8 @@
     "test": "run-p test:*",
     "test:unit": "ava",
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check",
-    "test:sklearn": "lerna run test --scope sklearn --stream"
+    "test:sklearn": "lerna run test --scope sklearn --stream",
+    "release": "run-s build docs && lerna publish"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
