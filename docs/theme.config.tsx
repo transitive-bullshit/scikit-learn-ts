@@ -5,7 +5,8 @@ import React from 'react'
 const siteHost = 'sklearn.vercel.app'
 const siteUrl = `https://${siteHost}`
 const siteSocialUrl = `${siteUrl}/social.png`
-const siteDesc = `Use Python's #1 machine learning library from Node.js`
+// const siteDesc = `Use Python's #1 machine learning library from Node.js`
+const siteDesc = `An open source TS package which enables Node.js devs to use Python's powerful scikit-learn machine learning library – without having to know any Python. 🤯`
 const siteTitle = 'sklearn'
 
 const config: DocsThemeConfig = {
