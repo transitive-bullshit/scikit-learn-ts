@@ -15,6 +15,8 @@ const config: DocsThemeConfig = {
       src='/sklearn-logo.png'
       alt='sklearn'
       className='logo'
+      width='1638'
+      height='675'
       style={{
         maxHeight: 48
       }}
