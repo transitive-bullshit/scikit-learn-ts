@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.11",
     "next": "13.2.0",
     "nextra": "latest",
     "nextra-theme-docs": "latest",

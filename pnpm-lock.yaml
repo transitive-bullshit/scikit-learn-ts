@@ -63,6 +63,7 @@ importers:
   docs:
     specifiers:
       '@types/node': 18.15.0
+      '@vercel/analytics': ^0.1.11
       next: 13.2.0
       nextra: latest
       nextra-theme-docs: latest
@@ -70,6 +71,7 @@ importers:
       react-dom: ^18.2.0
       typescript: ^4.9.3
     dependencies:
+      '@vercel/analytics': 0.1.11_react@18.2.0
       next: 13.2.0_biqbaboplfbrettd7655fr4n2y
       nextra: 2.2.19_f4d7icgk4i3oippbo5yzyh5rhq
       nextra-theme-docs: 2.2.19_kquk4xnqy5t63frx7mnl67qrze
@@ -1347,6 +1349,14 @@ packages:
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: false
+
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@yarnpkg/lockfile/1.1.0:
@@ -2891,9 +2901,9 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       cross-spawn: 7.0.3
-      get-stream: 6.0.0
+      get-stream: 6.0.1
       human-signals: 2.1.0
-      is-stream: 2.0.0
+      is-stream: 2.0.1
       merge-stream: 2.0.0
       npm-run-path: 4.0.1
       onetime: 5.1.2
