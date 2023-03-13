@@ -83,6 +83,14 @@ const config: DocsThemeConfig = {
           sizes='32x32'
           href='/favicon-32.png'
         />
+
+        <style>
+          {`
+          ul.nx-mt-6 {
+            margin-top: 0;
+          }
+          `}
+        </style>
       </>
     )
   },
