@@ -34,7 +34,7 @@ new KNeighborsClassifier(opts?: object): KNeighborsClassifier;
 
 [`KNeighborsClassifier`](KNeighborsClassifier.md)
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L23)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L23)
 
 ## Properties
 
@@ -42,31 +42,31 @@ Defined in:  [generated/neighbors/KNeighborsClassifier.ts:23](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L21)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L20)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L19)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L16)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L17)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L17)
 
 ## Accessors
 
@@ -84,7 +84,7 @@ classes_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L434)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L434)
 
 ### effective\_metric\_
 
@@ -100,7 +100,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L461)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L461)
 
 ### effective\_metric\_params\_
 
@@ -116,7 +116,7 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L488)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L488)
 
 ### feature\_names\_in\_
 
@@ -132,7 +132,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L542)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L542)
 
 ### n\_features\_in\_
 
@@ -148,7 +148,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L515)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L515)
 
 ### n\_samples\_fit\_
 
@@ -164,7 +164,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L569)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L569)
 
 ### outputs\_2d\_
 
@@ -180,7 +180,7 @@ outputs_2d_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L596)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L596)
 
 ### py
 
@@ -194,7 +194,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L84)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L84)
 
 #### Signature
 
@@ -212,7 +212,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L88)
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L88)
 
 ## Methods
 
@@ -232,7 +232,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L147)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L147)
 
 ### fit()
 
@@ -256,7 +256,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L164)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L164)
 
 ### init()
 
@@ -280,7 +280,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L97)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L97)
 
 ### kneighbors()
 
@@ -307,7 +307,7 @@ kneighbors(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L208)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L208)
 
 ### kneighbors\_graph()
 
@@ -332,7 +332,7 @@ kneighbors_graph(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L259)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L259)
 
 ### predict()
 
@@ -355,7 +355,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L311)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L311)
 
 ### predict\_proba()
 
@@ -378,7 +378,7 @@ predict_proba(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L346)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L346)
 
 ### score()
 
@@ -405,4 +405,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L385)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L385)

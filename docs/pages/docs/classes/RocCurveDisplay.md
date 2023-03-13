@@ -33,7 +33,7 @@ new RocCurveDisplay(opts?: object): RocCurveDisplay;
 
 [`RocCurveDisplay`](RocCurveDisplay.md)
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
 
 ## Properties
 
@@ -41,31 +41,31 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:25](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -83,7 +83,7 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/metrics/RocCurveDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L388)
+Defined in: [generated/metrics/RocCurveDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L388)
 
 ### figure\_
 
@@ -99,7 +99,7 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/metrics/RocCurveDisplay.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L411)
+Defined in: [generated/metrics/RocCurveDisplay.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L411)
 
 ### line\_
 
@@ -115,7 +115,7 @@ line_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/metrics/RocCurveDisplay.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L365)
+Defined in: [generated/metrics/RocCurveDisplay.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L365)
 
 ### py
 
@@ -129,7 +129,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55)
 
 #### Signature
 
@@ -147,7 +147,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/metrics/RocCurveDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L59)
+Defined in: [generated/metrics/RocCurveDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L59)
 
 ## Methods
 
@@ -167,7 +167,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L114)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L114)
 
 ### from\_estimator()
 
@@ -199,7 +199,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L131)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L131)
 
 ### from\_predictions()
 
@@ -231,7 +231,7 @@ from_predictions(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L231)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L231)
 
 ### init()
 
@@ -255,7 +255,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L68)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L68)
 
 ### plot()
 
@@ -282,4 +282,4 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L320)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L320)

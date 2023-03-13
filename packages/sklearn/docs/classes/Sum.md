@@ -26,7 +26,7 @@ new Sum(opts?: object): Sum;
 
 [`Sum`](Sum.md)
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L21)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/gaussian\_process/kernels/Sum.ts:21](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L18)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L14)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L15)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L15)
 
 ## Accessors
 
@@ -74,7 +74,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L36)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L36)
 
 #### Signature
 
@@ -92,9 +92,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L40)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L40)
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L36) [generated/gaussian\_process/kernels/Sum.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L40)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L36) [generated/gaussian\_process/kernels/Sum.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L40)
 
 ## Methods
 
@@ -121,7 +121,7 @@ __call__(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L105)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L105)
 
 ### clone\_with\_theta()
 
@@ -144,7 +144,7 @@ clone_with_theta(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L154)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L154)
 
 ### diag()
 
@@ -169,7 +169,7 @@ diag(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L189)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L189)
 
 ### dispose()
 
@@ -187,7 +187,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L88)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L88)
 
 ### init()
 
@@ -211,7 +211,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L49)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L49)
 
 ### is\_stationary()
 
@@ -233,4 +233,4 @@ is_stationary(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L221)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L221)

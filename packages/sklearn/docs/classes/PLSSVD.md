@@ -31,7 +31,7 @@ new PLSSVD(opts?: object): PLSSVD;
 
 [`PLSSVD`](PLSSVD.md)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L25)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L25)
 
 ## Properties
 
@@ -39,31 +39,31 @@ Defined in:  [generated/cross\_decomposition/PLSSVD.ts:25](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L23)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L22)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L21)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L18)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L19)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L19)
 
 ## Accessors
 
@@ -81,9 +81,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L381)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L381)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L381)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L381)
 
 ### n\_features\_in\_
 
@@ -99,9 +99,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L358)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L358)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L358)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L358)
 
 ### py
 
@@ -115,7 +115,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51)
 
 #### Signature
 
@@ -133,9 +133,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L55)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L55)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51) [generated/cross\_decomposition/PLSSVD.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L55)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L51) [generated/cross\_decomposition/PLSSVD.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L55)
 
 ### x\_weights\_
 
@@ -151,9 +151,9 @@ x_weights_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L312)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L312)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L312)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L312)
 
 ### y\_weights\_
 
@@ -169,9 +169,9 @@ y_weights_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L335)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L335)
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L335)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L335)
 
 ## Methods
 
@@ -191,7 +191,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L105)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L105)
 
 ### fit()
 
@@ -215,7 +215,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L122)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L122)
 
 ### fit\_transform()
 
@@ -239,7 +239,7 @@ fit_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L162)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L162)
 
 ### get\_feature\_names\_out()
 
@@ -264,7 +264,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L204)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L204)
 
 ### init()
 
@@ -288,7 +288,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L64)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L64)
 
 ### set\_output()
 
@@ -313,7 +313,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L239)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L239)
 
 ### transform()
 
@@ -337,4 +337,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L272)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L272)

@@ -42,7 +42,7 @@ new BaggingClassifier(opts?: object): BaggingClassifier;
 
 [`BaggingClassifier`](BaggingClassifier.md)
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L27)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L27)
 
 ## Properties
 
@@ -50,31 +50,31 @@ Defined in:  [generated/ensemble/BaggingClassifier.ts:27](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L25)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L24)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L23)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L20)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L21)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L21)
 
 ## Accessors
 
@@ -92,7 +92,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L587)
+Defined in: [generated/ensemble/BaggingClassifier.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L587)
 
 ### estimator\_
 
@@ -108,7 +108,7 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L452)
+Defined in: [generated/ensemble/BaggingClassifier.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L452)
 
 ### estimators\_
 
@@ -124,7 +124,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L533)
+Defined in: [generated/ensemble/BaggingClassifier.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L533)
 
 ### estimators\_features\_
 
@@ -140,7 +140,7 @@ estimators_features_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L560)
+Defined in: [generated/ensemble/BaggingClassifier.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L560)
 
 ### feature\_names\_in\_
 
@@ -156,7 +156,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L506)
+Defined in: [generated/ensemble/BaggingClassifier.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L506)
 
 ### n\_classes\_
 
@@ -172,7 +172,7 @@ n_classes_(): Promise<number | any[]>;
 
 `Promise`\<`number` \| `any`[]\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L614)
+Defined in: [generated/ensemble/BaggingClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L614)
 
 ### n\_features\_in\_
 
@@ -188,7 +188,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L479)
+Defined in: [generated/ensemble/BaggingClassifier.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L479)
 
 ### oob\_decision\_function\_
 
@@ -204,7 +204,7 @@ oob_decision_function_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L668)
+Defined in: [generated/ensemble/BaggingClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L668)
 
 ### oob\_score\_
 
@@ -220,7 +220,7 @@ oob_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L641)
+Defined in: [generated/ensemble/BaggingClassifier.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L641)
 
 ### py
 
@@ -234,7 +234,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L110)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L110)
 
 #### Signature
 
@@ -252,7 +252,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/BaggingClassifier.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L114)
+Defined in: [generated/ensemble/BaggingClassifier.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L114)
 
 ## Methods
 
@@ -277,7 +277,7 @@ decision_function(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L198)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L198)
 
 ### dispose()
 
@@ -295,7 +295,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L181)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L181)
 
 ### fit()
 
@@ -320,7 +320,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L236)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L236)
 
 ### init()
 
@@ -344,7 +344,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L123)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L123)
 
 ### predict()
 
@@ -369,7 +369,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L287)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L287)
 
 ### predict\_log\_proba()
 
@@ -394,7 +394,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L324)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L324)
 
 ### predict\_proba()
 
@@ -419,7 +419,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L364)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L364)
 
 ### score()
 
@@ -446,4 +446,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L403)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L403)

@@ -33,7 +33,7 @@ new OrdinalEncoder(opts?: object): OrdinalEncoder;
 
 [`OrdinalEncoder`](OrdinalEncoder.md)
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L25)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L25)
 
 ## Properties
 
@@ -41,31 +41,31 @@ Defined in:  [generated/preprocessing/OrdinalEncoder.ts:25](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L23)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L22)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L21)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L18)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L19)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L19)
 
 ## Accessors
 
@@ -83,7 +83,7 @@ categories_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/preprocessing/OrdinalEncoder.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L361)
+Defined in: [generated/preprocessing/OrdinalEncoder.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L361)
 
 ### feature\_names\_in\_
 
@@ -99,7 +99,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/OrdinalEncoder.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L411)
+Defined in: [generated/preprocessing/OrdinalEncoder.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L411)
 
 ### n\_features\_in\_
 
@@ -115,7 +115,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/OrdinalEncoder.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L386)
+Defined in: [generated/preprocessing/OrdinalEncoder.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L386)
 
 ### py
 
@@ -129,7 +129,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L59)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L59)
 
 #### Signature
 
@@ -147,7 +147,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/OrdinalEncoder.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L63)
+Defined in: [generated/preprocessing/OrdinalEncoder.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L63)
 
 ## Methods
 
@@ -167,7 +167,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L118)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L118)
 
 ### fit()
 
@@ -191,7 +191,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L135)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L135)
 
 ### fit\_transform()
 
@@ -218,7 +218,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L175)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L175)
 
 ### get\_feature\_names\_out()
 
@@ -241,7 +241,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L222)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L222)
 
 ### init()
 
@@ -265,7 +265,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L72)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L72)
 
 ### inverse\_transform()
 
@@ -288,7 +288,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L258)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L258)
 
 ### set\_output()
 
@@ -313,7 +313,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L295)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L295)
 
 ### transform()
 
@@ -336,4 +336,4 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L328)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L328)

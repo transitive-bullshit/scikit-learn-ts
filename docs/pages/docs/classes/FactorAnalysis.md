@@ -43,7 +43,7 @@ new FactorAnalysis(opts?: object): FactorAnalysis;
 
 [`FactorAnalysis`](FactorAnalysis.md)
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L31)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L31)
 
 ## Properties
 
@@ -51,31 +51,31 @@ Defined in:  [generated/decomposition/FactorAnalysis.ts:31](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L29)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L29)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L28)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L28)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L27)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L27)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L24)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L24)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L25)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L25)
 
 ## Accessors
 
@@ -93,7 +93,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L512)
+Defined in: [generated/decomposition/FactorAnalysis.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L512)
 
 ### feature\_names\_in\_
 
@@ -109,7 +109,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L660)
+Defined in: [generated/decomposition/FactorAnalysis.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L660)
 
 ### loglike\_
 
@@ -125,7 +125,7 @@ loglike_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L537)
+Defined in: [generated/decomposition/FactorAnalysis.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L537)
 
 ### mean\_
 
@@ -141,7 +141,7 @@ mean_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L612)
+Defined in: [generated/decomposition/FactorAnalysis.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L612)
 
 ### n\_features\_in\_
 
@@ -157,7 +157,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L635)
+Defined in: [generated/decomposition/FactorAnalysis.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L635)
 
 ### n\_iter\_
 
@@ -173,7 +173,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L587)
+Defined in: [generated/decomposition/FactorAnalysis.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L587)
 
 ### noise\_variance\_
 
@@ -189,7 +189,7 @@ noise_variance_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L562)
+Defined in: [generated/decomposition/FactorAnalysis.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L562)
 
 ### py
 
@@ -203,7 +203,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L93)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L93)
 
 #### Signature
 
@@ -221,7 +221,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/FactorAnalysis.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L97)
+Defined in: [generated/decomposition/FactorAnalysis.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L97)
 
 ## Methods
 
@@ -241,7 +241,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L160)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L160)
 
 ### fit()
 
@@ -265,7 +265,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L177)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L177)
 
 ### fit\_transform()
 
@@ -292,7 +292,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L217)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L217)
 
 ### get\_covariance()
 
@@ -317,7 +317,7 @@ get_covariance(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L266)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L266)
 
 ### get\_feature\_names\_out()
 
@@ -342,7 +342,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L301)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L301)
 
 ### get\_precision()
 
@@ -365,7 +365,7 @@ get_precision(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L337)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L337)
 
 ### init()
 
@@ -389,7 +389,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L106)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L106)
 
 ### score()
 
@@ -413,7 +413,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L371)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L371)
 
 ### score\_samples()
 
@@ -436,7 +436,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L409)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L409)
 
 ### set\_output()
 
@@ -461,7 +461,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L444)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L444)
 
 ### transform()
 
@@ -486,4 +486,4 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L479)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L479)

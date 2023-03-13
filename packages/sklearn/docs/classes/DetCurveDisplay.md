@@ -32,7 +32,7 @@ new DetCurveDisplay(opts?: object): DetCurveDisplay;
 
 [`DetCurveDisplay`](DetCurveDisplay.md)
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L25)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L25)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:25](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L23)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L22)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L21)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L18)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L19)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -82,9 +82,9 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L361)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L361)
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L361)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L361)
 
 ### figure\_
 
@@ -100,9 +100,9 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L384)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L384)
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L384)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L384)
 
 ### line\_
 
@@ -118,9 +118,9 @@ line_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L338)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L338)
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L338)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L338)
 
 ### py
 
@@ -134,7 +134,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L50)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L50)
 
 #### Signature
 
@@ -152,9 +152,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L54)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L54)
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L50) [generated/metrics/DetCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L54)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L50) [generated/metrics/DetCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L54)
 
 ## Methods
 
@@ -174,7 +174,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L107)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L107)
 
 ### from\_estimator()
 
@@ -207,7 +207,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L126)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L126)
 
 ### from\_predictions()
 
@@ -238,7 +238,7 @@ from_predictions(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L217)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L217)
 
 ### init()
 
@@ -262,7 +262,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L63)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L63)
 
 ### plot()
 
@@ -287,4 +287,4 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L293)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L293)

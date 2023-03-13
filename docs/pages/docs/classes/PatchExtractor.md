@@ -29,7 +29,7 @@ new PatchExtractor(opts?: object): PatchExtractor;
 
 [`PatchExtractor`](PatchExtractor.md)
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L23)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L23)
 
 ## Properties
 
@@ -37,31 +37,31 @@ Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:23](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L21)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L20)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L19)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L16)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L17)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L17)
 
 ## Accessors
 
@@ -77,7 +77,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L43)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L43)
 
 #### Signature
 
@@ -95,7 +95,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_extraction/image/PatchExtractor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L47)
+Defined in: [generated/feature\_extraction/image/PatchExtractor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L47)
 
 ## Methods
 
@@ -115,7 +115,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L98)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L98)
 
 ### fit()
 
@@ -141,7 +141,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L117)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L117)
 
 ### init()
 
@@ -165,7 +165,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L56)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L56)
 
 ### transform()
 
@@ -188,4 +188,4 @@ transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L155)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L155)

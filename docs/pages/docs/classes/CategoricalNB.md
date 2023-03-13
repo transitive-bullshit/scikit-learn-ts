@@ -33,7 +33,7 @@ new CategoricalNB(opts?: object): CategoricalNB;
 
 [`CategoricalNB`](CategoricalNB.md)
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L25)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L25)
 
 ## Properties
 
@@ -41,31 +41,31 @@ Defined in:  [generated/naive\_bayes/CategoricalNB.ts:25](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L23)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L22)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L21)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L18)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L19)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L19)
 
 ## Accessors
 
@@ -83,7 +83,7 @@ category_count_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L436)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L436)
 
 ### class\_count\_
 
@@ -99,7 +99,7 @@ class_count_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L461)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L461)
 
 ### class\_log\_prior\_
 
@@ -115,7 +115,7 @@ class_log_prior_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L486)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L486)
 
 ### classes\_
 
@@ -131,7 +131,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L511)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L511)
 
 ### feature\_log\_prob\_
 
@@ -147,7 +147,7 @@ feature_log_prob_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L536)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L536)
 
 ### feature\_names\_in\_
 
@@ -163,7 +163,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L586)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L586)
 
 ### n\_categories\_
 
@@ -179,7 +179,7 @@ n_categories_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L611)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L611)
 
 ### n\_features\_in\_
 
@@ -195,7 +195,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L561)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L561)
 
 ### py
 
@@ -209,7 +209,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L61)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L61)
 
 #### Signature
 
@@ -227,7 +227,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/naive\_bayes/CategoricalNB.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L65)
+Defined in: [generated/naive\_bayes/CategoricalNB.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L65)
 
 ## Methods
 
@@ -247,7 +247,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L120)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L120)
 
 ### fit()
 
@@ -272,7 +272,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L137)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L137)
 
 ### init()
 
@@ -296,7 +296,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L74)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L74)
 
 ### partial\_fit()
 
@@ -328,7 +328,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L190)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L190)
 
 ### predict()
 
@@ -351,7 +351,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L248)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L248)
 
 ### predict\_joint\_log\_proba()
 
@@ -376,7 +376,7 @@ predict_joint_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L283)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L283)
 
 ### predict\_log\_proba()
 
@@ -399,7 +399,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L319)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L319)
 
 ### predict\_proba()
 
@@ -422,7 +422,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L354)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L354)
 
 ### score()
 
@@ -449,4 +449,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/naive\_bayes/CategoricalNB.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L389)
+Defined in:  [generated/naive\_bayes/CategoricalNB.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/CategoricalNB.ts#L389)

@@ -38,7 +38,7 @@ new SpectralBiclustering(opts?: object): SpectralBiclustering;
 
 [`SpectralBiclustering`](SpectralBiclustering.md)
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L25)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L25)
 
 ## Properties
 
@@ -46,31 +46,31 @@ Defined in:  [generated/cluster/SpectralBiclustering.ts:25](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L23)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L22)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L21)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L18)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L19)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L19)
 
 ## Accessors
 
@@ -88,7 +88,7 @@ column_labels_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/SpectralBiclustering.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L423)
+Defined in: [generated/cluster/SpectralBiclustering.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L423)
 
 ### columns\_
 
@@ -104,7 +104,7 @@ columns_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/cluster/SpectralBiclustering.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L369)
+Defined in: [generated/cluster/SpectralBiclustering.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L369)
 
 ### feature\_names\_in\_
 
@@ -120,7 +120,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/SpectralBiclustering.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L477)
+Defined in: [generated/cluster/SpectralBiclustering.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L477)
 
 ### n\_features\_in\_
 
@@ -136,7 +136,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/SpectralBiclustering.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L450)
+Defined in: [generated/cluster/SpectralBiclustering.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L450)
 
 ### py
 
@@ -150,7 +150,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L98)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L98)
 
 #### Signature
 
@@ -168,7 +168,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/cluster/SpectralBiclustering.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L102)
+Defined in: [generated/cluster/SpectralBiclustering.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L102)
 
 ### row\_labels\_
 
@@ -184,7 +184,7 @@ row_labels_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/SpectralBiclustering.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L396)
+Defined in: [generated/cluster/SpectralBiclustering.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L396)
 
 ### rows\_
 
@@ -200,7 +200,7 @@ rows_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/cluster/SpectralBiclustering.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L342)
+Defined in: [generated/cluster/SpectralBiclustering.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L342)
 
 ## Methods
 
@@ -220,7 +220,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L165)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L165)
 
 ### fit()
 
@@ -244,7 +244,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L182)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L182)
 
 ### get\_indices()
 
@@ -269,7 +269,7 @@ get_indices(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L224)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L224)
 
 ### get\_shape()
 
@@ -292,7 +292,7 @@ get_shape(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L261)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L261)
 
 ### get\_submatrix()
 
@@ -316,7 +316,7 @@ get_submatrix(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L298)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L298)
 
 ### init()
 
@@ -340,4 +340,4 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/SpectralBiclustering.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L111)
+Defined in:  [generated/cluster/SpectralBiclustering.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/cluster/SpectralBiclustering.ts#L111)

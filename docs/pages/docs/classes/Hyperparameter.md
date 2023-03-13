@@ -29,7 +29,7 @@ new Hyperparameter(opts?: object): Hyperparameter;
 
 [`Hyperparameter`](Hyperparameter.md)
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L21)
 
 ## Properties
 
@@ -37,31 +37,31 @@ Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:21](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L18)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L14)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L15)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L15)
 
 ## Accessors
 
@@ -77,7 +77,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L53)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L53)
 
 #### Signature
 
@@ -95,7 +95,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/gaussian\_process/kernels/Hyperparameter.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L57)
+Defined in: [generated/gaussian\_process/kernels/Hyperparameter.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L57)
 
 ## Methods
 
@@ -119,7 +119,7 @@ __call__(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L127)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L127)
 
 ### count()
 
@@ -141,7 +141,7 @@ count(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L153)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L153)
 
 ### dispose()
 
@@ -159,7 +159,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L110)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L110)
 
 ### index()
 
@@ -183,7 +183,7 @@ index(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L181)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L181)
 
 ### init()
 
@@ -207,4 +207,4 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L66)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L66)

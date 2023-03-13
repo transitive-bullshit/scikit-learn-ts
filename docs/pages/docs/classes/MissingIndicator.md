@@ -32,7 +32,7 @@ new MissingIndicator(opts?: object): MissingIndicator;
 
 [`MissingIndicator`](MissingIndicator.md)
 
-Defined in:  [generated/impute/MissingIndicator.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L25)
+Defined in:  [generated/impute/MissingIndicator.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L25)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/impute/MissingIndicator.ts:25](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/MissingIndicator.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L23)
+Defined in:  [generated/impute/MissingIndicator.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/MissingIndicator.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L22)
+Defined in:  [generated/impute/MissingIndicator.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/impute/MissingIndicator.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L21)
+Defined in:  [generated/impute/MissingIndicator.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/impute/MissingIndicator.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L18)
+Defined in:  [generated/impute/MissingIndicator.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/impute/MissingIndicator.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L19)
+Defined in:  [generated/impute/MissingIndicator.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L19)
 
 ## Accessors
 
@@ -82,7 +82,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/impute/MissingIndicator.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L376)
+Defined in: [generated/impute/MissingIndicator.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L376)
 
 ### features\_
 
@@ -98,7 +98,7 @@ features_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/impute/MissingIndicator.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L322)
+Defined in: [generated/impute/MissingIndicator.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L322)
 
 ### n\_features\_in\_
 
@@ -114,7 +114,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/impute/MissingIndicator.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L349)
+Defined in: [generated/impute/MissingIndicator.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L349)
 
 ### py
 
@@ -128,7 +128,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/impute/MissingIndicator.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L56)
+Defined in:  [generated/impute/MissingIndicator.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L56)
 
 #### Signature
 
@@ -146,7 +146,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/impute/MissingIndicator.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L60)
+Defined in: [generated/impute/MissingIndicator.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L60)
 
 ## Methods
 
@@ -166,7 +166,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/MissingIndicator.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L113)
+Defined in:  [generated/impute/MissingIndicator.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L113)
 
 ### fit()
 
@@ -190,7 +190,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/MissingIndicator.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L130)
+Defined in:  [generated/impute/MissingIndicator.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L130)
 
 ### fit\_transform()
 
@@ -214,7 +214,7 @@ fit_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/impute/MissingIndicator.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L170)
+Defined in:  [generated/impute/MissingIndicator.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L170)
 
 ### get\_feature\_names\_out()
 
@@ -237,7 +237,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/MissingIndicator.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L212)
+Defined in:  [generated/impute/MissingIndicator.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L212)
 
 ### init()
 
@@ -261,7 +261,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/MissingIndicator.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L69)
+Defined in:  [generated/impute/MissingIndicator.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L69)
 
 ### set\_output()
 
@@ -286,7 +286,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/MissingIndicator.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L252)
+Defined in:  [generated/impute/MissingIndicator.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L252)
 
 ### transform()
 
@@ -309,4 +309,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/impute/MissingIndicator.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/MissingIndicator.ts#L287)
+Defined in:  [generated/impute/MissingIndicator.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/MissingIndicator.ts#L287)

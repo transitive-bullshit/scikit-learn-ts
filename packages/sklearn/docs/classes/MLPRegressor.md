@@ -49,7 +49,7 @@ new MLPRegressor(opts?: object): MLPRegressor;
 
 [`MLPRegressor`](MLPRegressor.md)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L23)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L23)
 
 ## Properties
 
@@ -57,31 +57,31 @@ Defined in:  [generated/neural\_network/MLPRegressor.ts:23](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L21)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L20)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L19)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L16)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L17)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L17)
 
 ## Accessors
 
@@ -99,9 +99,9 @@ best_loss_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L470)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L470)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L470)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L470)
 
 ### best\_validation\_score\_
 
@@ -117,9 +117,9 @@ best_validation_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L545)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L545)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L545)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L545)
 
 ### coefs\_
 
@@ -135,9 +135,9 @@ coefs_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L593)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L593)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L593)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L593)
 
 ### feature\_names\_in\_
 
@@ -153,9 +153,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L666)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L666)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L666)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L666)
 
 ### intercepts\_
 
@@ -171,9 +171,9 @@ intercepts_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L616)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L616)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L616)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L616)
 
 ### loss\_
 
@@ -189,9 +189,9 @@ loss_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L447)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L447)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L447)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L447)
 
 ### loss\_curve\_
 
@@ -207,9 +207,9 @@ loss_curve_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L495)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L495)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L495)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L495)
 
 ### n\_features\_in\_
 
@@ -225,9 +225,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L641)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L641)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L641)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L641)
 
 ### n\_iter\_
 
@@ -243,9 +243,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L691)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L691)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L691)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L691)
 
 ### n\_layers\_
 
@@ -261,9 +261,9 @@ n_layers_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L714)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L714)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L714)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L714)
 
 ### n\_outputs\_
 
@@ -279,9 +279,9 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
 
 ### out\_activation\_
 
@@ -297,9 +297,9 @@ out_activation_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L764)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L764)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L764)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L764)
 
 ### py
 
@@ -313,7 +313,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185)
 
 #### Signature
 
@@ -331,9 +331,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L189)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L189)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185) [generated/neural\_network/MLPRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L189)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185) [generated/neural\_network/MLPRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L189)
 
 ### t\_
 
@@ -349,9 +349,9 @@ t_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L570)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L570)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L570)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L570)
 
 ### validation\_scores\_
 
@@ -367,9 +367,9 @@ validation_scores_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L520)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L520)
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L520)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L520)
 
 ## Methods
 
@@ -389,7 +389,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L268)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L268)
 
 ### fit()
 
@@ -413,7 +413,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L285)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L285)
 
 ### init()
 
@@ -437,7 +437,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L198)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L198)
 
 ### partial\_fit()
 
@@ -461,7 +461,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L325)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L325)
 
 ### predict()
 
@@ -484,7 +484,7 @@ predict(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L365)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L365)
 
 ### score()
 
@@ -511,4 +511,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L400)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L400)

@@ -26,7 +26,7 @@ new Product(opts?: object): Product;
 
 [`Product`](Product.md)
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L21)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/gaussian\_process/kernels/Product.ts:21](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L18)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L14)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L15)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L15)
 
 ## Accessors
 
@@ -74,7 +74,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L36)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L36)
 
 #### Signature
 
@@ -92,7 +92,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/gaussian\_process/kernels/Product.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L40)
+Defined in: [generated/gaussian\_process/kernels/Product.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L40)
 
 ## Methods
 
@@ -119,7 +119,7 @@ __call__(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L105)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L105)
 
 ### clone\_with\_theta()
 
@@ -142,7 +142,7 @@ clone_with_theta(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L154)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L154)
 
 ### diag()
 
@@ -167,7 +167,7 @@ diag(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L189)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L189)
 
 ### dispose()
 
@@ -185,7 +185,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L88)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L88)
 
 ### init()
 
@@ -209,7 +209,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L49)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L49)
 
 ### is\_stationary()
 
@@ -231,4 +231,4 @@ is_stationary(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L222)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L222)

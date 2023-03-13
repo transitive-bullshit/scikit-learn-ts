@@ -43,7 +43,7 @@ new HalvingGridSearchCV(opts?: object): HalvingGridSearchCV;
 
 [`HalvingGridSearchCV`](HalvingGridSearchCV.md)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L25)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L25)
 
 ## Properties
 
@@ -51,31 +51,31 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:25](https://gith
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L23)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L22)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L21)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L18)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L19)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L19)
 
 ## Accessors
 
@@ -93,9 +93,9 @@ best_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:823](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L823)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:823](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L823)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:823](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L823)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:823](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L823)
 
 ### best\_index\_
 
@@ -113,9 +113,9 @@ best_index_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L906)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L906)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L906)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L906)
 
 ### best\_params\_
 
@@ -131,9 +131,9 @@ best_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:877](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L877)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:877](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L877)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:877](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L877)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:877](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L877)
 
 ### best\_score\_
 
@@ -149,9 +149,9 @@ best_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:850](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L850)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:850](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L850)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:850](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L850)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:850](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L850)
 
 ### cv\_results\_
 
@@ -167,9 +167,9 @@ cv_results_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:796](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L796)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:796](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L796)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:796](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L796)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:796](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L796)
 
 ### feature\_names\_in\_
 
@@ -185,9 +185,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1043](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1043)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1043](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1043)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1043](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1043)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1043](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1043)
 
 ### max\_resources\_
 
@@ -203,9 +203,9 @@ max_resources_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L661)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L661)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L661)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L661)
 
 ### min\_resources\_
 
@@ -221,9 +221,9 @@ min_resources_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L688)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L688)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L688)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L688)
 
 ### multimetric\_
 
@@ -239,9 +239,9 @@ multimetric_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1016](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1016)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1016](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1016)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1016](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1016)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1016](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1016)
 
 ### n\_candidates\_
 
@@ -257,9 +257,9 @@ n_candidates_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L607)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L607)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L607)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L607)
 
 ### n\_iterations\_
 
@@ -275,9 +275,9 @@ n_iterations_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L715)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L715)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L715)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L715)
 
 ### n\_possible\_iterations\_
 
@@ -293,9 +293,9 @@ n_possible_iterations_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:742](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L742)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:742](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L742)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:742](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L742)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:742](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L742)
 
 ### n\_remaining\_candidates\_
 
@@ -311,9 +311,9 @@ n_remaining_candidates_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L634)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L634)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L634)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L634)
 
 ### n\_required\_iterations\_
 
@@ -329,9 +329,9 @@ n_required_iterations_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L769)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L769)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L769)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L769)
 
 ### n\_resources\_
 
@@ -347,9 +347,9 @@ n_resources_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L580)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L580)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L580)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L580)
 
 ### n\_splits\_
 
@@ -365,9 +365,9 @@ n_splits_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:960](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L960)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:960](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L960)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:960](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L960)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:960](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L960)
 
 ### py
 
@@ -381,7 +381,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L123)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L123)
 
 #### Signature
 
@@ -399,9 +399,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L127)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L127)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L123) [generated/model\_selection/HalvingGridSearchCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L127)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L123) [generated/model\_selection/HalvingGridSearchCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L127)
 
 ### refit\_time\_
 
@@ -419,9 +419,9 @@ refit_time_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:989](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L989)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:989](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L989)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:989](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L989)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:989](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L989)
 
 ### scorer\_
 
@@ -437,9 +437,9 @@ scorer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:933](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L933)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:933](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L933)
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:933](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L933)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:933](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L933)
 
 ## Methods
 
@@ -466,7 +466,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L215)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L215)
 
 ### dispose()
 
@@ -484,7 +484,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L196)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L196)
 
 ### fit()
 
@@ -510,7 +510,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L252)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L252)
 
 ### init()
 
@@ -534,7 +534,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L136)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L136)
 
 ### inverse\_transform()
 
@@ -559,7 +559,7 @@ inverse_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L308)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L308)
 
 ### predict()
 
@@ -584,7 +584,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L347)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L347)
 
 ### predict\_log\_proba()
 
@@ -609,7 +609,7 @@ predict_log_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L384)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L384)
 
 ### predict\_proba()
 
@@ -634,7 +634,7 @@ predict_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L423)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L423)
 
 ### score()
 
@@ -660,7 +660,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L462)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L462)
 
 ### score\_samples()
 
@@ -685,7 +685,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L506)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L506)
 
 ### transform()
 
@@ -710,4 +710,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L545)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L545)

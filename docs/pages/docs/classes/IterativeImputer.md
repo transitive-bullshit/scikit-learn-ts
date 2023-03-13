@@ -43,7 +43,7 @@ new IterativeImputer(opts?: object): IterativeImputer;
 
 [`IterativeImputer`](IterativeImputer.md)
 
-Defined in:  [generated/impute/IterativeImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L25)
+Defined in:  [generated/impute/IterativeImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L25)
 
 ## Properties
 
@@ -51,31 +51,31 @@ Defined in:  [generated/impute/IterativeImputer.ts:25](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/IterativeImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L23)
+Defined in:  [generated/impute/IterativeImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/IterativeImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L22)
+Defined in:  [generated/impute/IterativeImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/impute/IterativeImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L21)
+Defined in:  [generated/impute/IterativeImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/impute/IterativeImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L18)
+Defined in:  [generated/impute/IterativeImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/impute/IterativeImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L19)
+Defined in:  [generated/impute/IterativeImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L19)
 
 ## Accessors
 
@@ -93,7 +93,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L526)
+Defined in: [generated/impute/IterativeImputer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L526)
 
 ### imputation\_sequence\_
 
@@ -109,7 +109,7 @@ imputation_sequence_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L445)
+Defined in: [generated/impute/IterativeImputer.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L445)
 
 ### indicator\_
 
@@ -125,7 +125,7 @@ indicator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L580)
+Defined in: [generated/impute/IterativeImputer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L580)
 
 ### initial\_imputer\_
 
@@ -141,7 +141,7 @@ initial_imputer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L418)
+Defined in: [generated/impute/IterativeImputer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L418)
 
 ### n\_features\_in\_
 
@@ -157,7 +157,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L499)
+Defined in: [generated/impute/IterativeImputer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L499)
 
 ### n\_features\_with\_missing\_
 
@@ -173,7 +173,7 @@ n_features_with_missing_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L553)
+Defined in: [generated/impute/IterativeImputer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L553)
 
 ### n\_iter\_
 
@@ -189,7 +189,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L472)
+Defined in: [generated/impute/IterativeImputer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L472)
 
 ### py
 
@@ -203,7 +203,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/impute/IterativeImputer.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L128)
+Defined in:  [generated/impute/IterativeImputer.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L128)
 
 #### Signature
 
@@ -221,7 +221,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/impute/IterativeImputer.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L132)
+Defined in: [generated/impute/IterativeImputer.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L132)
 
 ### random\_state\_
 
@@ -237,7 +237,7 @@ random_state_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/impute/IterativeImputer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L607)
+Defined in: [generated/impute/IterativeImputer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L607)
 
 ## Methods
 
@@ -257,7 +257,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/IterativeImputer.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L207)
+Defined in:  [generated/impute/IterativeImputer.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L207)
 
 ### fit()
 
@@ -281,7 +281,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/IterativeImputer.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L224)
+Defined in:  [generated/impute/IterativeImputer.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L224)
 
 ### fit\_transform()
 
@@ -305,7 +305,7 @@ fit_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/impute/IterativeImputer.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L264)
+Defined in:  [generated/impute/IterativeImputer.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L264)
 
 ### get\_feature\_names\_out()
 
@@ -328,7 +328,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/IterativeImputer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L306)
+Defined in:  [generated/impute/IterativeImputer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L306)
 
 ### init()
 
@@ -352,7 +352,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/IterativeImputer.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L141)
+Defined in:  [generated/impute/IterativeImputer.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L141)
 
 ### set\_output()
 
@@ -377,7 +377,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/IterativeImputer.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L346)
+Defined in:  [generated/impute/IterativeImputer.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L346)
 
 ### transform()
 
@@ -402,4 +402,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/impute/IterativeImputer.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L383)
+Defined in:  [generated/impute/IterativeImputer.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/impute/IterativeImputer.ts#L383)

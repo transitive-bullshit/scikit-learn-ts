@@ -33,7 +33,7 @@ new LeavePGroupsOut(opts?: object): LeavePGroupsOut;
 
 [`LeavePGroupsOut`](LeavePGroupsOut.md)
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L29)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L29)
 
 ## Properties
 
@@ -41,31 +41,31 @@ Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:29](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L27)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L26)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L25)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L22)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L23)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L23)
 
 ## Accessors
 
@@ -81,7 +81,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L39)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L39)
 
 #### Signature
 
@@ -99,7 +99,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/LeavePGroupsOut.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L43)
+Defined in: [generated/model\_selection/LeavePGroupsOut.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L43)
 
 ## Methods
 
@@ -119,7 +119,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L92)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L92)
 
 ### get\_n\_splits()
 
@@ -144,7 +144,7 @@ get_n_splits(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L109)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L109)
 
 ### init()
 
@@ -168,7 +168,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L52)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L52)
 
 ### split()
 
@@ -193,4 +193,4 @@ split(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L154)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L154)

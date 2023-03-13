@@ -36,7 +36,7 @@ new StratifiedShuffleSplit(opts?: object): StratifiedShuffleSplit;
 
 [`StratifiedShuffleSplit`](StratifiedShuffleSplit.md)
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L29)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L29)
 
 ## Properties
 
@@ -44,31 +44,31 @@ Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:29](https://g
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L27)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L26)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L25)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L22)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L23)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L23)
 
 ## Accessors
 
@@ -84,7 +84,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L56)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L56)
 
 #### Signature
 
@@ -102,7 +102,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/StratifiedShuffleSplit.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L60)
+Defined in: [generated/model\_selection/StratifiedShuffleSplit.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L60)
 
 ## Methods
 
@@ -122,7 +122,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L115)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L115)
 
 ### get\_n\_splits()
 
@@ -147,7 +147,7 @@ get_n_splits(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L132)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L132)
 
 ### init()
 
@@ -171,7 +171,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L69)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L69)
 
 ### split()
 
@@ -196,4 +196,4 @@ split(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L179)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L179)

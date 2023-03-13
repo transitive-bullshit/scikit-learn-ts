@@ -35,7 +35,7 @@ new SequentialFeatureSelector(opts?: object): SequentialFeatureSelector;
 
 [`SequentialFeatureSelector`](SequentialFeatureSelector.md)
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L25)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L25)
 
 ## Properties
 
@@ -43,31 +43,31 @@ Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:25](http
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L23)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L22)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L21)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L18)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L19)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L19)
 
 ## Accessors
 
@@ -85,7 +85,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L473)
+Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L473)
 
 ### n\_features\_in\_
 
@@ -101,7 +101,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L446)
+Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L446)
 
 ### n\_features\_to\_select\_
 
@@ -117,7 +117,7 @@ n_features_to_select_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L500)
+Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L500)
 
 ### py
 
@@ -131,7 +131,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L77)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L77)
 
 #### Signature
 
@@ -149,7 +149,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L81)
+Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L81)
 
 ### support\_
 
@@ -165,7 +165,7 @@ support_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L527)
+Defined in: [generated/feature\_selection/SequentialFeatureSelector.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L527)
 
 ## Methods
 
@@ -185,7 +185,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L140)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L140)
 
 ### fit()
 
@@ -209,7 +209,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L157)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L157)
 
 ### fit\_transform()
 
@@ -236,7 +236,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L201)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L201)
 
 ### get\_feature\_names\_out()
 
@@ -259,7 +259,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L253)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L253)
 
 ### get\_support()
 
@@ -282,7 +282,7 @@ get_support(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L291)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L291)
 
 ### init()
 
@@ -306,7 +306,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L90)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L90)
 
 ### inverse\_transform()
 
@@ -329,7 +329,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L330)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L330)
 
 ### set\_output()
 
@@ -354,7 +354,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L370)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L370)
 
 ### transform()
 
@@ -377,4 +377,4 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L408)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L408)

@@ -49,7 +49,7 @@ new MiniBatchDictionaryLearning(opts?: object): MiniBatchDictionaryLearning;
 
 [`MiniBatchDictionaryLearning`](MiniBatchDictionaryLearning.md)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L25)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L25)
 
 ## Properties
 
@@ -57,31 +57,31 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:25](https:/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L23)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L22)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L21)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L18)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L19)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L19)
 
 ## Accessors
 
@@ -99,9 +99,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L538)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L538)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L538)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L538)
 
 ### feature\_names\_in\_
 
@@ -117,9 +117,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L619)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L619)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L619)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L619)
 
 ### inner\_stats\_
 
@@ -135,9 +135,9 @@ inner_stats_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L565)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L565)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L565)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L565)
 
 ### iter\_offset\_
 
@@ -153,9 +153,9 @@ iter_offset_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L673)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L673)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L673)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L673)
 
 ### n\_features\_in\_
 
@@ -171,9 +171,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L592)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L592)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L592)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L592)
 
 ### n\_iter\_
 
@@ -189,9 +189,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L646)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L646)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L646)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L646)
 
 ### n\_steps\_
 
@@ -207,9 +207,9 @@ n_steps_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L727)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L727)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L727)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L727)
 
 ### py
 
@@ -223,7 +223,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L170)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L170)
 
 #### Signature
 
@@ -241,9 +241,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L174)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L174)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L170) [generated/decomposition/MiniBatchDictionaryLearning.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L174)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L170) [generated/decomposition/MiniBatchDictionaryLearning.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L174)
 
 ### random\_state\_
 
@@ -259,9 +259,9 @@ random_state_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L700)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L700)
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L700)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L700)
 
 ## Methods
 
@@ -281,7 +281,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L255)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L255)
 
 ### fit()
 
@@ -305,7 +305,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L272)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L272)
 
 ### fit\_transform()
 
@@ -332,7 +332,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L316)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L316)
 
 ### get\_feature\_names\_out()
 
@@ -357,7 +357,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L370)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L370)
 
 ### init()
 
@@ -381,7 +381,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L183)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L183)
 
 ### partial\_fit()
 
@@ -406,7 +406,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L408)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L408)
 
 ### set\_output()
 
@@ -431,7 +431,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L460)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L460)
 
 ### transform()
 
@@ -456,4 +456,4 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L500)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L500)

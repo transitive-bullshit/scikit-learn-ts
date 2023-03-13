@@ -33,7 +33,7 @@ new KFold(opts?: object): KFold;
 
 [`KFold`](KFold.md)
 
-Defined in:  [generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
+Defined in:  [generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
 
 ## Properties
 
@@ -41,31 +41,31 @@ Defined in:  [generated/model\_selection/KFold.ts:27](https://github.com/transit
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
+Defined in:  [generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/KFold.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L24)
+Defined in:  [generated/model\_selection/KFold.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
+Defined in:  [generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/KFold.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L20)
+Defined in:  [generated/model\_selection/KFold.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/KFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L21)
+Defined in:  [generated/model\_selection/KFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L21)
 
 ## Accessors
 
@@ -81,7 +81,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/KFold.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L51)
+Defined in:  [generated/model\_selection/KFold.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L51)
 
 #### Signature
 
@@ -99,7 +99,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/KFold.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L55)
+Defined in: [generated/model\_selection/KFold.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L55)
 
 ## Methods
 
@@ -119,7 +119,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/KFold.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L105)
+Defined in:  [generated/model\_selection/KFold.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L105)
 
 ### get\_n\_splits()
 
@@ -144,7 +144,7 @@ get_n_splits(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/KFold.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L122)
+Defined in:  [generated/model\_selection/KFold.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L122)
 
 ### init()
 
@@ -168,7 +168,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/KFold.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L64)
+Defined in:  [generated/model\_selection/KFold.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L64)
 
 ### split()
 
@@ -193,4 +193,4 @@ split(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/KFold.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L165)
+Defined in:  [generated/model\_selection/KFold.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/KFold.ts#L165)

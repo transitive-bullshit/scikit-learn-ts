@@ -35,7 +35,7 @@ new KernelDensity(opts?: object): KernelDensity;
 
 [`KernelDensity`](KernelDensity.md)
 
-Defined in:  [generated/neighbors/KernelDensity.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L23)
+Defined in:  [generated/neighbors/KernelDensity.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L23)
 
 ## Properties
 
@@ -43,31 +43,31 @@ Defined in:  [generated/neighbors/KernelDensity.ts:23](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L21)
+Defined in:  [generated/neighbors/KernelDensity.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L20)
+Defined in:  [generated/neighbors/KernelDensity.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L19)
+Defined in:  [generated/neighbors/KernelDensity.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L16)
+Defined in:  [generated/neighbors/KernelDensity.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L17)
+Defined in:  [generated/neighbors/KernelDensity.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L17)
 
 ## Accessors
 
@@ -85,7 +85,7 @@ bandwidth_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KernelDensity.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L408)
+Defined in: [generated/neighbors/KernelDensity.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L408)
 
 ### feature\_names\_in\_
 
@@ -101,7 +101,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/KernelDensity.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L383)
+Defined in: [generated/neighbors/KernelDensity.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L383)
 
 ### n\_features\_in\_
 
@@ -117,7 +117,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KernelDensity.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L335)
+Defined in: [generated/neighbors/KernelDensity.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L335)
 
 ### py
 
@@ -131,7 +131,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L97)
+Defined in:  [generated/neighbors/KernelDensity.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L97)
 
 #### Signature
 
@@ -149,7 +149,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/KernelDensity.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L101)
+Defined in: [generated/neighbors/KernelDensity.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L101)
 
 ### tree\_
 
@@ -165,7 +165,7 @@ tree_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/KernelDensity.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L360)
+Defined in: [generated/neighbors/KernelDensity.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L360)
 
 ## Methods
 
@@ -185,7 +185,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KernelDensity.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L158)
+Defined in:  [generated/neighbors/KernelDensity.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L158)
 
 ### fit()
 
@@ -210,7 +210,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KernelDensity.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L175)
+Defined in:  [generated/neighbors/KernelDensity.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L175)
 
 ### init()
 
@@ -234,7 +234,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KernelDensity.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L110)
+Defined in:  [generated/neighbors/KernelDensity.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L110)
 
 ### sample()
 
@@ -260,7 +260,7 @@ sample(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neighbors/KernelDensity.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L224)
+Defined in:  [generated/neighbors/KernelDensity.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L224)
 
 ### score()
 
@@ -284,7 +284,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/KernelDensity.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L264)
+Defined in:  [generated/neighbors/KernelDensity.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L264)
 
 ### score\_samples()
 
@@ -307,4 +307,4 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neighbors/KernelDensity.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L302)
+Defined in:  [generated/neighbors/KernelDensity.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L302)

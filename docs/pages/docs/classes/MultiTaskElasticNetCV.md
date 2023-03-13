@@ -41,7 +41,7 @@ new MultiTaskElasticNetCV(opts?: object): MultiTaskElasticNetCV;
 
 [`MultiTaskElasticNetCV`](MultiTaskElasticNetCV.md)
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L25)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L25)
 
 ## Properties
 
@@ -49,31 +49,31 @@ Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:25](https://githu
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L23)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L22)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L21)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L18)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L19)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L19)
 
 ## Accessors
 
@@ -91,7 +91,7 @@ alpha_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L530)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L530)
 
 ### alphas\_
 
@@ -107,7 +107,7 @@ alphas_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L584)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L584)
 
 ### coef\_
 
@@ -123,7 +123,7 @@ coef_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L503)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L503)
 
 ### dual\_gap\_
 
@@ -139,7 +139,7 @@ dual_gap_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L665)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L665)
 
 ### feature\_names\_in\_
 
@@ -155,7 +155,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L719)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L719)
 
 ### intercept\_
 
@@ -171,7 +171,7 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L476)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L476)
 
 ### l1\_ratio\_
 
@@ -187,7 +187,7 @@ l1_ratio_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L611)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L611)
 
 ### mse\_path\_
 
@@ -203,7 +203,7 @@ mse_path_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L557)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L557)
 
 ### n\_features\_in\_
 
@@ -219,7 +219,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:692](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L692)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:692](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L692)
 
 ### n\_iter\_
 
@@ -235,7 +235,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L638)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L638)
 
 ### py
 
@@ -249,7 +249,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L113)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L113)
 
 #### Signature
 
@@ -267,7 +267,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L117)
+Defined in: [generated/linear\_model/MultiTaskElasticNetCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L117)
 
 ## Methods
 
@@ -287,7 +287,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L182)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L182)
 
 ### fit()
 
@@ -313,7 +313,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L201)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L201)
 
 ### init()
 
@@ -337,7 +337,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L126)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L126)
 
 ### path()
 
@@ -378,7 +378,7 @@ path(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L247)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L247)
 
 ### predict()
 
@@ -401,7 +401,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L390)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L390)
 
 ### score()
 
@@ -428,4 +428,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L427)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L427)

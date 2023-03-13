@@ -42,7 +42,7 @@ new GaussianMixture(opts?: object): GaussianMixture;
 
 [`GaussianMixture`](GaussianMixture.md)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L25)
+Defined in:  [generated/mixture/GaussianMixture.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L25)
 
 ## Properties
 
@@ -50,31 +50,31 @@ Defined in:  [generated/mixture/GaussianMixture.ts:25](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L23)
+Defined in:  [generated/mixture/GaussianMixture.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L22)
+Defined in:  [generated/mixture/GaussianMixture.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L21)
+Defined in:  [generated/mixture/GaussianMixture.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L18)
+Defined in:  [generated/mixture/GaussianMixture.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L19)
+Defined in:  [generated/mixture/GaussianMixture.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L19)
 
 ## Accessors
 
@@ -92,9 +92,9 @@ converged_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L657)
+Defined in:  [generated/mixture/GaussianMixture.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L657)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L657)
+Defined in:  [generated/mixture/GaussianMixture.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L657)
 
 ### covariances\_
 
@@ -110,9 +110,9 @@ covariances_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L582)
+Defined in:  [generated/mixture/GaussianMixture.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L582)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L582)
+Defined in:  [generated/mixture/GaussianMixture.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L582)
 
 ### feature\_names\_in\_
 
@@ -128,9 +128,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:757](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L757)
+Defined in:  [generated/mixture/GaussianMixture.ts:757](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L757)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:757](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L757)
+Defined in:  [generated/mixture/GaussianMixture.ts:757](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L757)
 
 ### lower\_bound\_
 
@@ -146,9 +146,9 @@ lower_bound_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L707)
+Defined in:  [generated/mixture/GaussianMixture.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L707)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L707)
+Defined in:  [generated/mixture/GaussianMixture.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L707)
 
 ### means\_
 
@@ -164,9 +164,9 @@ means_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L557)
+Defined in:  [generated/mixture/GaussianMixture.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L557)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L557)
+Defined in:  [generated/mixture/GaussianMixture.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L557)
 
 ### n\_features\_in\_
 
@@ -182,9 +182,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L732)
+Defined in:  [generated/mixture/GaussianMixture.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L732)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L732)
+Defined in:  [generated/mixture/GaussianMixture.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L732)
 
 ### n\_iter\_
 
@@ -200,9 +200,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L682)
+Defined in:  [generated/mixture/GaussianMixture.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L682)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L682)
+Defined in:  [generated/mixture/GaussianMixture.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L682)
 
 ### precisions\_
 
@@ -218,9 +218,9 @@ precisions_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L607)
+Defined in:  [generated/mixture/GaussianMixture.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L607)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L607)
+Defined in:  [generated/mixture/GaussianMixture.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L607)
 
 ### precisions\_cholesky\_
 
@@ -236,9 +236,9 @@ precisions_cholesky_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L632)
+Defined in:  [generated/mixture/GaussianMixture.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L632)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L632)
+Defined in:  [generated/mixture/GaussianMixture.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L632)
 
 ### py
 
@@ -252,7 +252,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120)
+Defined in:  [generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120)
 
 #### Signature
 
@@ -270,9 +270,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L124)
+Defined in:  [generated/mixture/GaussianMixture.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L124)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120) [generated/mixture/GaussianMixture.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L124)
+Defined in:  [generated/mixture/GaussianMixture.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L120) [generated/mixture/GaussianMixture.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L124)
 
 ### weights\_
 
@@ -288,9 +288,9 @@ weights_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L532)
+Defined in:  [generated/mixture/GaussianMixture.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L532)
 
-Defined in:  [generated/mixture/GaussianMixture.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L532)
+Defined in:  [generated/mixture/GaussianMixture.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L532)
 
 ## Methods
 
@@ -317,7 +317,7 @@ aic(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L212)
+Defined in:  [generated/mixture/GaussianMixture.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L212)
 
 ### bic()
 
@@ -342,7 +342,7 @@ bic(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L247)
+Defined in:  [generated/mixture/GaussianMixture.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L247)
 
 ### dispose()
 
@@ -360,7 +360,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L193)
+Defined in:  [generated/mixture/GaussianMixture.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L193)
 
 ### fit()
 
@@ -386,7 +386,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L282)
+Defined in:  [generated/mixture/GaussianMixture.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L282)
 
 ### fit\_predict()
 
@@ -412,7 +412,7 @@ fit_predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L322)
+Defined in:  [generated/mixture/GaussianMixture.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L322)
 
 ### init()
 
@@ -436,7 +436,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L133)
+Defined in:  [generated/mixture/GaussianMixture.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L133)
 
 ### predict()
 
@@ -459,7 +459,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L360)
+Defined in:  [generated/mixture/GaussianMixture.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L360)
 
 ### predict\_proba()
 
@@ -482,7 +482,7 @@ predict_proba(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L393)
+Defined in:  [generated/mixture/GaussianMixture.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L393)
 
 ### sample()
 
@@ -505,7 +505,7 @@ sample(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L426)
+Defined in:  [generated/mixture/GaussianMixture.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L426)
 
 ### score()
 
@@ -529,7 +529,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L461)
+Defined in:  [generated/mixture/GaussianMixture.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L461)
 
 ### score\_samples()
 
@@ -552,4 +552,4 @@ score_samples(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/mixture/GaussianMixture.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L499)
+Defined in:  [generated/mixture/GaussianMixture.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L499)

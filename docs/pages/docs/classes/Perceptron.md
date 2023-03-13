@@ -42,7 +42,7 @@ new Perceptron(opts?: object): Perceptron;
 
 [`Perceptron`](Perceptron.md)
 
-Defined in:  [generated/linear\_model/Perceptron.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L23)
+Defined in:  [generated/linear\_model/Perceptron.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L23)
 
 ## Properties
 
@@ -50,31 +50,31 @@ Defined in:  [generated/linear\_model/Perceptron.ts:23](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L21)
+Defined in:  [generated/linear\_model/Perceptron.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L20)
+Defined in:  [generated/linear\_model/Perceptron.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L19)
+Defined in:  [generated/linear\_model/Perceptron.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L16)
+Defined in:  [generated/linear\_model/Perceptron.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L17)
+Defined in:  [generated/linear\_model/Perceptron.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L17)
 
 ## Accessors
 
@@ -92,7 +92,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L518)
+Defined in: [generated/linear\_model/Perceptron.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L518)
 
 ### coef\_
 
@@ -108,7 +108,7 @@ coef_(): Promise<ArrayLike[][]>;
 
 `Promise`\<`ArrayLike`[][]\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L541)
+Defined in: [generated/linear\_model/Perceptron.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L541)
 
 ### feature\_names\_in\_
 
@@ -124,7 +124,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L637)
+Defined in: [generated/linear\_model/Perceptron.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L637)
 
 ### intercept\_
 
@@ -140,7 +140,7 @@ intercept_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L564)
+Defined in: [generated/linear\_model/Perceptron.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L564)
 
 ### loss\_function\_
 
@@ -156,7 +156,7 @@ loss_function_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L587)
+Defined in: [generated/linear\_model/Perceptron.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L587)
 
 ### n\_features\_in\_
 
@@ -172,7 +172,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L612)
+Defined in: [generated/linear\_model/Perceptron.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L612)
 
 ### n\_iter\_
 
@@ -188,7 +188,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L662)
+Defined in: [generated/linear\_model/Perceptron.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L662)
 
 ### py
 
@@ -202,7 +202,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L138)
+Defined in:  [generated/linear\_model/Perceptron.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L138)
 
 #### Signature
 
@@ -220,7 +220,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/Perceptron.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L142)
+Defined in: [generated/linear\_model/Perceptron.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L142)
 
 ### t\_
 
@@ -236,7 +236,7 @@ t_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/Perceptron.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L685)
+Defined in: [generated/linear\_model/Perceptron.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L685)
 
 ## Methods
 
@@ -263,7 +263,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L230)
+Defined in:  [generated/linear\_model/Perceptron.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L230)
 
 ### densify()
 
@@ -287,7 +287,7 @@ densify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L265)
+Defined in:  [generated/linear\_model/Perceptron.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L265)
 
 ### dispose()
 
@@ -305,7 +305,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L211)
+Defined in:  [generated/linear\_model/Perceptron.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L211)
 
 ### fit()
 
@@ -332,7 +332,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L291)
+Defined in:  [generated/linear\_model/Perceptron.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L291)
 
 ### init()
 
@@ -356,7 +356,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L151)
+Defined in:  [generated/linear\_model/Perceptron.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L151)
 
 ### partial\_fit()
 
@@ -384,7 +384,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L354)
+Defined in:  [generated/linear\_model/Perceptron.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L354)
 
 ### predict()
 
@@ -407,7 +407,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L406)
+Defined in:  [generated/linear\_model/Perceptron.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L406)
 
 ### score()
 
@@ -434,7 +434,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L441)
+Defined in:  [generated/linear\_model/Perceptron.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L441)
 
 ### sparsify()
 
@@ -460,4 +460,4 @@ sparsify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Perceptron.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Perceptron.ts#L492)
+Defined in:  [generated/linear\_model/Perceptron.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/Perceptron.ts#L492)

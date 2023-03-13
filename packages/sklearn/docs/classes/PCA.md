@@ -43,7 +43,7 @@ new PCA(opts?: object): PCA;
 
 [`PCA`](PCA.md)
 
-Defined in:  [generated/decomposition/PCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L31)
+Defined in:  [generated/decomposition/PCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L31)
 
 ## Properties
 
@@ -51,31 +51,31 @@ Defined in:  [generated/decomposition/PCA.ts:31](https://github.com/transitive-b
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/PCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L29)
+Defined in:  [generated/decomposition/PCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L29)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/PCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L28)
+Defined in:  [generated/decomposition/PCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L28)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/PCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L27)
+Defined in:  [generated/decomposition/PCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L27)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/PCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L24)
+Defined in:  [generated/decomposition/PCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L24)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/PCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L25)
+Defined in:  [generated/decomposition/PCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L25)
 
 ## Accessors
 
@@ -93,9 +93,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/PCA.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L536)
+Defined in:  [generated/decomposition/PCA.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L536)
 
-Defined in:  [generated/decomposition/PCA.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L536)
+Defined in:  [generated/decomposition/PCA.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L536)
 
 ### explained\_variance\_
 
@@ -113,9 +113,9 @@ explained_variance_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/PCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L561)
+Defined in:  [generated/decomposition/PCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L561)
 
-Defined in:  [generated/decomposition/PCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L561)
+Defined in:  [generated/decomposition/PCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L561)
 
 ### explained\_variance\_ratio\_
 
@@ -133,9 +133,9 @@ explained_variance_ratio_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/PCA.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L588)
+Defined in:  [generated/decomposition/PCA.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L588)
 
-Defined in:  [generated/decomposition/PCA.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L588)
+Defined in:  [generated/decomposition/PCA.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L588)
 
 ### feature\_names\_in\_
 
@@ -151,9 +151,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/PCA.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L776)
+Defined in:  [generated/decomposition/PCA.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L776)
 
-Defined in:  [generated/decomposition/PCA.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L776)
+Defined in:  [generated/decomposition/PCA.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L776)
 
 ### mean\_
 
@@ -171,9 +171,9 @@ mean_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/PCA.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L638)
+Defined in:  [generated/decomposition/PCA.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L638)
 
-Defined in:  [generated/decomposition/PCA.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L638)
+Defined in:  [generated/decomposition/PCA.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L638)
 
 ### n\_components\_
 
@@ -189,9 +189,9 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/PCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L660)
+Defined in:  [generated/decomposition/PCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L660)
 
-Defined in:  [generated/decomposition/PCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L660)
+Defined in:  [generated/decomposition/PCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L660)
 
 ### n\_features\_
 
@@ -207,9 +207,9 @@ n_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/PCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L683)
+Defined in:  [generated/decomposition/PCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L683)
 
-Defined in:  [generated/decomposition/PCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L683)
+Defined in:  [generated/decomposition/PCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L683)
 
 ### n\_features\_in\_
 
@@ -225,9 +225,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/PCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L753)
+Defined in:  [generated/decomposition/PCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L753)
 
-Defined in:  [generated/decomposition/PCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L753)
+Defined in:  [generated/decomposition/PCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L753)
 
 ### n\_samples\_
 
@@ -243,9 +243,9 @@ n_samples_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/PCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L706)
+Defined in:  [generated/decomposition/PCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L706)
 
-Defined in:  [generated/decomposition/PCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L706)
+Defined in:  [generated/decomposition/PCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L706)
 
 ### noise\_variance\_
 
@@ -263,9 +263,9 @@ noise_variance_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/PCA.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L730)
+Defined in:  [generated/decomposition/PCA.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L730)
 
-Defined in:  [generated/decomposition/PCA.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L730)
+Defined in:  [generated/decomposition/PCA.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L730)
 
 ### py
 
@@ -279,7 +279,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/PCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L97)
+Defined in:  [generated/decomposition/PCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L97)
 
 #### Signature
 
@@ -297,9 +297,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/decomposition/PCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L101)
+Defined in:  [generated/decomposition/PCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L101)
 
-Defined in:  [generated/decomposition/PCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L97) [generated/decomposition/PCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L101)
+Defined in:  [generated/decomposition/PCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L97) [generated/decomposition/PCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L101)
 
 ### singular\_values\_
 
@@ -315,9 +315,9 @@ singular_values_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/PCA.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L613)
+Defined in:  [generated/decomposition/PCA.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L613)
 
-Defined in:  [generated/decomposition/PCA.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L613)
+Defined in:  [generated/decomposition/PCA.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L613)
 
 ## Methods
 
@@ -337,7 +337,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/PCA.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L159)
+Defined in:  [generated/decomposition/PCA.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L159)
 
 ### fit()
 
@@ -361,7 +361,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/PCA.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L176)
+Defined in:  [generated/decomposition/PCA.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L176)
 
 ### fit\_transform()
 
@@ -385,7 +385,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/PCA.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L213)
+Defined in:  [generated/decomposition/PCA.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L213)
 
 ### get\_covariance()
 
@@ -410,7 +410,7 @@ get_covariance(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/PCA.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L253)
+Defined in:  [generated/decomposition/PCA.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L253)
 
 ### get\_feature\_names\_out()
 
@@ -435,7 +435,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/PCA.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L288)
+Defined in:  [generated/decomposition/PCA.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L288)
 
 ### get\_precision()
 
@@ -460,7 +460,7 @@ get_precision(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/PCA.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L323)
+Defined in:  [generated/decomposition/PCA.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L323)
 
 ### init()
 
@@ -484,7 +484,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/PCA.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L110)
+Defined in:  [generated/decomposition/PCA.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L110)
 
 ### inverse\_transform()
 
@@ -509,7 +509,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/PCA.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L358)
+Defined in:  [generated/decomposition/PCA.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L358)
 
 ### score()
 
@@ -535,7 +535,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/PCA.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L393)
+Defined in:  [generated/decomposition/PCA.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L393)
 
 ### score\_samples()
 
@@ -560,7 +560,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/PCA.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L433)
+Defined in:  [generated/decomposition/PCA.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L433)
 
 ### set\_output()
 
@@ -585,7 +585,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/PCA.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L468)
+Defined in:  [generated/decomposition/PCA.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L468)
 
 ### transform()
 
@@ -610,4 +610,4 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/PCA.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L503)
+Defined in:  [generated/decomposition/PCA.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/PCA.ts#L503)

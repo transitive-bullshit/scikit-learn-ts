@@ -40,7 +40,7 @@ new DictVectorizer(opts?: object): DictVectorizer;
 
 [`DictVectorizer`](DictVectorizer.md)
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L33)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L33)
 
 ## Properties
 
@@ -48,31 +48,31 @@ Defined in:  [generated/feature\_extraction/DictVectorizer.ts:33](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L31)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L31)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L30)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L30)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L29)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L29)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L26)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L26)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L27)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L27)
 
 ## Accessors
 
@@ -90,9 +90,9 @@ feature_names_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L433)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L433)
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L433)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L433)
 
 ### py
 
@@ -106,7 +106,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L64)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L64)
 
 #### Signature
 
@@ -124,9 +124,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L68)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L68)
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L64) [generated/feature\_extraction/DictVectorizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L68)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L64) [generated/feature\_extraction/DictVectorizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L68)
 
 ### vocabulary\_
 
@@ -142,9 +142,9 @@ vocabulary_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L408)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L408)
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L408)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L408)
 
 ## Methods
 
@@ -164,7 +164,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L119)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L119)
 
 ### fit()
 
@@ -188,7 +188,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L136)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L136)
 
 ### fit\_transform()
 
@@ -214,7 +214,7 @@ fit_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L176)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L176)
 
 ### get\_feature\_names\_out()
 
@@ -237,7 +237,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L214)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L214)
 
 ### init()
 
@@ -261,7 +261,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L77)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L77)
 
 ### inverse\_transform()
 
@@ -289,7 +289,7 @@ inverse_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L254)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L254)
 
 ### restrict()
 
@@ -315,7 +315,7 @@ restrict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L298)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L298)
 
 ### set\_output()
 
@@ -340,7 +340,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L340)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L340)
 
 ### transform()
 
@@ -365,4 +365,4 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L375)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L375)

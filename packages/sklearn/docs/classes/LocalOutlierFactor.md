@@ -35,7 +35,7 @@ new LocalOutlierFactor(opts?: object): LocalOutlierFactor;
 
 [`LocalOutlierFactor`](LocalOutlierFactor.md)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L23)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L23)
 
 ## Properties
 
@@ -43,31 +43,31 @@ Defined in:  [generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L21)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L20)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L19)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L16)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L17)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L17)
 
 ## Accessors
 
@@ -85,9 +85,9 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L565)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L565)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L565)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L565)
 
 ### effective\_metric\_params\_
 
@@ -103,9 +103,9 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L592)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L592)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L592)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L592)
 
 ### feature\_names\_in\_
 
@@ -121,9 +121,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L646)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L646)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L646)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L646)
 
 ### n\_features\_in\_
 
@@ -139,9 +139,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
 
 ### n\_neighbors\_
 
@@ -157,9 +157,9 @@ n_neighbors_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L511)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L511)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L511)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L511)
 
 ### n\_samples\_fit\_
 
@@ -175,9 +175,9 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L673)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L673)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L673)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L673)
 
 ### negative\_outlier\_factor\_
 
@@ -195,9 +195,9 @@ negative_outlier_factor_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L484)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L484)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L484)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L484)
 
 ### offset\_
 
@@ -213,9 +213,9 @@ offset_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L538)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L538)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L538)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L538)
 
 ### py
 
@@ -229,7 +229,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91)
 
 #### Signature
 
@@ -247,9 +247,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L95)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L95)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91) [generated/neighbors/LocalOutlierFactor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L95)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91) [generated/neighbors/LocalOutlierFactor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L95)
 
 ## Methods
 
@@ -278,7 +278,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L179)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L179)
 
 ### dispose()
 
@@ -296,7 +296,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L158)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L158)
 
 ### fit()
 
@@ -320,7 +320,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L217)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L217)
 
 ### fit\_predict()
 
@@ -346,7 +346,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L259)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L259)
 
 ### init()
 
@@ -370,7 +370,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L104)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L104)
 
 ### kneighbors()
 
@@ -397,7 +397,7 @@ kneighbors(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L303)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L303)
 
 ### kneighbors\_graph()
 
@@ -422,7 +422,7 @@ kneighbors_graph(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L352)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L352)
 
 ### predict()
 
@@ -447,7 +447,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L406)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L406)
 
 ### score\_samples()
 
@@ -474,4 +474,4 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L445)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L445)

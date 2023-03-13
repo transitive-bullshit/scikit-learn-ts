@@ -30,7 +30,7 @@ new IsotonicRegression(opts?: object): IsotonicRegression;
 
 [`IsotonicRegression`](IsotonicRegression.md)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L23)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L23)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/isotonic/IsotonicRegression.ts:23](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L21)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L20)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L19)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L16)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L17)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L17)
 
 ## Accessors
 
@@ -80,9 +80,9 @@ X_max_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L453)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L453)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L453)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L453)
 
 ### X\_min\_
 
@@ -98,9 +98,9 @@ X_min_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L426)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L426)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L426)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L426)
 
 ### X\_thresholds\_
 
@@ -116,9 +116,9 @@ X_thresholds_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L480)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L480)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L480)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L480)
 
 ### f\_
 
@@ -134,9 +134,9 @@ f_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L534)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L534)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L534)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L534)
 
 ### increasing\_
 
@@ -152,9 +152,9 @@ increasing_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L559)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L559)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L559)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L559)
 
 ### py
 
@@ -168,7 +168,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L52)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L52)
 
 #### Signature
 
@@ -186,9 +186,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L56)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L56)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L52) [generated/isotonic/IsotonicRegression.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L56)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L52) [generated/isotonic/IsotonicRegression.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L56)
 
 ### y\_thresholds\_
 
@@ -204,9 +204,9 @@ y_thresholds_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L507)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L507)
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L507)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L507)
 
 ## Methods
 
@@ -226,7 +226,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L111)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L111)
 
 ### fit()
 
@@ -251,7 +251,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L128)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L128)
 
 ### fit\_transform()
 
@@ -278,7 +278,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L179)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L179)
 
 ### get\_feature\_names\_out()
 
@@ -301,7 +301,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L230)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L230)
 
 ### init()
 
@@ -325,7 +325,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L65)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L65)
 
 ### predict()
 
@@ -348,7 +348,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L268)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L268)
 
 ### score()
 
@@ -375,7 +375,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L305)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L305)
 
 ### set\_output()
 
@@ -400,7 +400,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L356)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L356)
 
 ### transform()
 
@@ -423,4 +423,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L391)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L391)

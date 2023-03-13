@@ -28,7 +28,7 @@ new OAS(opts?: object): OAS;
 
 [`OAS`](OAS.md)
 
-Defined in:  [generated/covariance/OAS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L23)
+Defined in:  [generated/covariance/OAS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L23)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/covariance/OAS.ts:23](https://github.com/transitive-bull
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/OAS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L21)
+Defined in:  [generated/covariance/OAS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/OAS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L20)
+Defined in:  [generated/covariance/OAS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/OAS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L19)
+Defined in:  [generated/covariance/OAS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/OAS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L16)
+Defined in:  [generated/covariance/OAS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/OAS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L17)
+Defined in:  [generated/covariance/OAS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L17)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/OAS.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L314)
+Defined in: [generated/covariance/OAS.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L314)
 
 ### feature\_names\_in\_
 
@@ -94,7 +94,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/OAS.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L426)
+Defined in: [generated/covariance/OAS.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L426)
 
 ### location\_
 
@@ -110,7 +110,7 @@ location_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/OAS.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L337)
+Defined in: [generated/covariance/OAS.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L337)
 
 ### n\_features\_in\_
 
@@ -126,7 +126,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/OAS.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L403)
+Defined in: [generated/covariance/OAS.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L403)
 
 ### precision\_
 
@@ -142,7 +142,7 @@ precision_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/OAS.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L359)
+Defined in: [generated/covariance/OAS.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L359)
 
 ### py
 
@@ -156,7 +156,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/OAS.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L42)
+Defined in:  [generated/covariance/OAS.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L42)
 
 #### Signature
 
@@ -174,7 +174,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/covariance/OAS.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L46)
+Defined in: [generated/covariance/OAS.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L46)
 
 ### shrinkage\_
 
@@ -190,7 +190,7 @@ shrinkage_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/OAS.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L381)
+Defined in: [generated/covariance/OAS.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L381)
 
 ## Methods
 
@@ -210,7 +210,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/OAS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L94)
+Defined in:  [generated/covariance/OAS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L94)
 
 ### error\_norm()
 
@@ -236,7 +236,7 @@ error_norm(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/OAS.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L111)
+Defined in:  [generated/covariance/OAS.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L111)
 
 ### fit()
 
@@ -260,7 +260,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/OAS.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L169)
+Defined in:  [generated/covariance/OAS.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L169)
 
 ### get\_precision()
 
@@ -283,7 +283,7 @@ get_precision(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/OAS.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L206)
+Defined in:  [generated/covariance/OAS.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L206)
 
 ### init()
 
@@ -307,7 +307,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/OAS.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L55)
+Defined in:  [generated/covariance/OAS.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L55)
 
 ### mahalanobis()
 
@@ -330,7 +330,7 @@ mahalanobis(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/OAS.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L239)
+Defined in:  [generated/covariance/OAS.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L239)
 
 ### score()
 
@@ -356,4 +356,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/OAS.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/OAS.ts#L274)
+Defined in:  [generated/covariance/OAS.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/OAS.ts#L274)

@@ -42,7 +42,7 @@ new GridSearchCV(opts?: object): GridSearchCV;
 
 [`GridSearchCV`](GridSearchCV.md)
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L29)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L29)
 
 ## Properties
 
@@ -50,31 +50,31 @@ Defined in:  [generated/model\_selection/GridSearchCV.ts:29](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L27)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L26)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L25)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L22)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L23)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L23)
 
 ## Accessors
 
@@ -94,7 +94,7 @@ best_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L562)
+Defined in: [generated/model\_selection/GridSearchCV.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L562)
 
 ### best\_index\_
 
@@ -114,7 +114,7 @@ best_index_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L647)
+Defined in: [generated/model\_selection/GridSearchCV.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L647)
 
 ### best\_params\_
 
@@ -132,7 +132,7 @@ best_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L618)
+Defined in: [generated/model\_selection/GridSearchCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L618)
 
 ### best\_score\_
 
@@ -152,7 +152,7 @@ best_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L591)
+Defined in: [generated/model\_selection/GridSearchCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L591)
 
 ### cv\_results\_
 
@@ -170,7 +170,7 @@ cv_results_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L535)
+Defined in: [generated/model\_selection/GridSearchCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L535)
 
 ### feature\_names\_in\_
 
@@ -186,7 +186,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L774)
+Defined in: [generated/model\_selection/GridSearchCV.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L774)
 
 ### multimetric\_
 
@@ -202,7 +202,7 @@ multimetric_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L749)
+Defined in: [generated/model\_selection/GridSearchCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L749)
 
 ### n\_splits\_
 
@@ -218,7 +218,7 @@ n_splits_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L697)
+Defined in: [generated/model\_selection/GridSearchCV.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L697)
 
 ### py
 
@@ -232,7 +232,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L104)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L104)
 
 #### Signature
 
@@ -250,7 +250,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L108)
+Defined in: [generated/model\_selection/GridSearchCV.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L108)
 
 ### refit\_time\_
 
@@ -268,7 +268,7 @@ refit_time_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L724)
+Defined in: [generated/model\_selection/GridSearchCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L724)
 
 ### scorer\_
 
@@ -286,7 +286,7 @@ scorer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/GridSearchCV.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L674)
+Defined in: [generated/model\_selection/GridSearchCV.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L674)
 
 ## Methods
 
@@ -313,7 +313,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L186)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L186)
 
 ### dispose()
 
@@ -331,7 +331,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L167)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L167)
 
 ### fit()
 
@@ -357,7 +357,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L221)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L221)
 
 ### init()
 
@@ -381,7 +381,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L117)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L117)
 
 ### inverse\_transform()
 
@@ -406,7 +406,7 @@ inverse_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L279)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L279)
 
 ### predict()
 
@@ -431,7 +431,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L316)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L316)
 
 ### predict\_log\_proba()
 
@@ -456,7 +456,7 @@ predict_log_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L351)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L351)
 
 ### predict\_proba()
 
@@ -481,7 +481,7 @@ predict_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L388)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L388)
 
 ### score()
 
@@ -507,7 +507,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L423)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L423)
 
 ### score\_samples()
 
@@ -532,7 +532,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L465)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L465)
 
 ### transform()
 
@@ -557,4 +557,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L500)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L500)

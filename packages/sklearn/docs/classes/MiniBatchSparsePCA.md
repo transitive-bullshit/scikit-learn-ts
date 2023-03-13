@@ -42,7 +42,7 @@ new MiniBatchSparsePCA(opts?: object): MiniBatchSparsePCA;
 
 [`MiniBatchSparsePCA`](MiniBatchSparsePCA.md)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L25)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L25)
 
 ## Properties
 
@@ -50,31 +50,31 @@ Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:25](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L23)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L22)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L21)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L18)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L19)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L19)
 
 ## Accessors
 
@@ -92,9 +92,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L457)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L457)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L457)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L457)
 
 ### feature\_names\_in\_
 
@@ -110,9 +110,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L592)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L592)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L592)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L592)
 
 ### mean\_
 
@@ -128,9 +128,9 @@ mean_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L538)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L538)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L538)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L538)
 
 ### n\_components\_
 
@@ -146,9 +146,9 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L484)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L484)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L484)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L484)
 
 ### n\_features\_in\_
 
@@ -164,9 +164,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L565)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L565)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L565)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L565)
 
 ### n\_iter\_
 
@@ -182,9 +182,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L511)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L511)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L511)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L511)
 
 ### py
 
@@ -198,7 +198,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L122)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L122)
 
 #### Signature
 
@@ -216,9 +216,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L126)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L126)
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L122) [generated/decomposition/MiniBatchSparsePCA.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L126)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L122) [generated/decomposition/MiniBatchSparsePCA.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L126)
 
 ## Methods
 
@@ -238,7 +238,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L191)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L191)
 
 ### fit()
 
@@ -262,7 +262,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L208)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L208)
 
 ### fit\_transform()
 
@@ -289,7 +289,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L250)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L250)
 
 ### get\_feature\_names\_out()
 
@@ -314,7 +314,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L303)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L303)
 
 ### init()
 
@@ -338,7 +338,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L135)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L135)
 
 ### inverse\_transform()
 
@@ -363,7 +363,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L343)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L343)
 
 ### set\_output()
 
@@ -388,7 +388,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L383)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L383)
 
 ### transform()
 
@@ -415,4 +415,4 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L422)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L422)

@@ -32,7 +32,7 @@ new VotingRegressor(opts?: object): VotingRegressor;
 
 [`VotingRegressor`](VotingRegressor.md)
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L25)
+Defined in:  [generated/ensemble/VotingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L25)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/ensemble/VotingRegressor.ts:25](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L23)
+Defined in:  [generated/ensemble/VotingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L22)
+Defined in:  [generated/ensemble/VotingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L21)
+Defined in:  [generated/ensemble/VotingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L18)
+Defined in:  [generated/ensemble/VotingRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L19)
+Defined in:  [generated/ensemble/VotingRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L19)
 
 ## Accessors
 
@@ -82,7 +82,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/VotingRegressor.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L410)
+Defined in: [generated/ensemble/VotingRegressor.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L410)
 
 ### feature\_names\_in\_
 
@@ -98,7 +98,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/VotingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L460)
+Defined in: [generated/ensemble/VotingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L460)
 
 ### named\_estimators\_
 
@@ -114,7 +114,7 @@ named_estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/VotingRegressor.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L435)
+Defined in: [generated/ensemble/VotingRegressor.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L435)
 
 ### py
 
@@ -128,7 +128,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L52)
+Defined in:  [generated/ensemble/VotingRegressor.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L52)
 
 #### Signature
 
@@ -146,7 +146,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/VotingRegressor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L56)
+Defined in: [generated/ensemble/VotingRegressor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L56)
 
 ## Methods
 
@@ -166,7 +166,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L109)
+Defined in:  [generated/ensemble/VotingRegressor.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L109)
 
 ### fit()
 
@@ -191,7 +191,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L126)
+Defined in:  [generated/ensemble/VotingRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L126)
 
 ### fit\_transform()
 
@@ -218,7 +218,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L175)
+Defined in:  [generated/ensemble/VotingRegressor.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L175)
 
 ### get\_feature\_names\_out()
 
@@ -241,7 +241,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L222)
+Defined in:  [generated/ensemble/VotingRegressor.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L222)
 
 ### init()
 
@@ -265,7 +265,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L65)
+Defined in:  [generated/ensemble/VotingRegressor.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L65)
 
 ### predict()
 
@@ -290,7 +290,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L260)
+Defined in:  [generated/ensemble/VotingRegressor.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L260)
 
 ### score()
 
@@ -317,7 +317,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L295)
+Defined in:  [generated/ensemble/VotingRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L295)
 
 ### set\_output()
 
@@ -342,7 +342,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L344)
+Defined in:  [generated/ensemble/VotingRegressor.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L344)
 
 ### transform()
 
@@ -365,4 +365,4 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L377)
+Defined in:  [generated/ensemble/VotingRegressor.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L377)

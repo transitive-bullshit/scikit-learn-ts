@@ -30,7 +30,7 @@ new SelectFromModel(opts?: object): SelectFromModel;
 
 [`SelectFromModel`](SelectFromModel.md)
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L21)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L21)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/feature\_selection/SelectFromModel.ts:21](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L19)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L18)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L17)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L14)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L15)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L15)
 
 ## Accessors
 
@@ -80,9 +80,9 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L457)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L457)
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L457)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L457)
 
 ### feature\_names\_in\_
 
@@ -98,9 +98,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L507)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L507)
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L507)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L507)
 
 ### max\_features\_
 
@@ -116,9 +116,9 @@ max_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L482)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L482)
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L482)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L482)
 
 ### py
 
@@ -132,7 +132,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66)
 
 #### Signature
 
@@ -150,9 +150,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L70)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L70)
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66) [generated/feature\_selection/SelectFromModel.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L70)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66) [generated/feature\_selection/SelectFromModel.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L70)
 
 ## Methods
 
@@ -172,7 +172,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L123)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L123)
 
 ### fit()
 
@@ -197,7 +197,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L140)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L140)
 
 ### fit\_transform()
 
@@ -224,7 +224,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L189)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L189)
 
 ### get\_feature\_names\_out()
 
@@ -247,7 +247,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L236)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L236)
 
 ### get\_support()
 
@@ -270,7 +270,7 @@ get_support(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L272)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L272)
 
 ### init()
 
@@ -294,7 +294,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L79)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L79)
 
 ### inverse\_transform()
 
@@ -317,7 +317,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L307)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L307)
 
 ### partial\_fit()
 
@@ -342,7 +342,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L342)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L342)
 
 ### set\_output()
 
@@ -367,7 +367,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L391)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L391)
 
 ### transform()
 
@@ -390,4 +390,4 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L424)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L424)

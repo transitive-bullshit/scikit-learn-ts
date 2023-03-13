@@ -34,7 +34,7 @@ new FeatureUnion(opts?: object): FeatureUnion;
 
 [`FeatureUnion`](FeatureUnion.md)
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L27)
+Defined in:  [generated/pipeline/FeatureUnion.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L27)
 
 ## Properties
 
@@ -42,31 +42,31 @@ Defined in:  [generated/pipeline/FeatureUnion.ts:27](https://github.com/transiti
 
 > `boolean`  = `false`
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L25)
+Defined in:  [generated/pipeline/FeatureUnion.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L24)
+Defined in:  [generated/pipeline/FeatureUnion.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L23)
+Defined in:  [generated/pipeline/FeatureUnion.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L20)
+Defined in:  [generated/pipeline/FeatureUnion.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L21)
+Defined in:  [generated/pipeline/FeatureUnion.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L21)
 
 ## Accessors
 
@@ -84,7 +84,7 @@ named_transformers(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/pipeline/FeatureUnion.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L320)
+Defined in: [generated/pipeline/FeatureUnion.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L320)
 
 ### py
 
@@ -98,7 +98,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L54)
+Defined in:  [generated/pipeline/FeatureUnion.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L54)
 
 #### Signature
 
@@ -116,7 +116,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/pipeline/FeatureUnion.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L58)
+Defined in: [generated/pipeline/FeatureUnion.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L58)
 
 ## Methods
 
@@ -136,7 +136,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L109)
+Defined in:  [generated/pipeline/FeatureUnion.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L109)
 
 ### fit()
 
@@ -161,7 +161,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L126)
+Defined in:  [generated/pipeline/FeatureUnion.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L126)
 
 ### fit\_transform()
 
@@ -186,7 +186,7 @@ fit_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L171)
+Defined in:  [generated/pipeline/FeatureUnion.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L171)
 
 ### get\_feature\_names\_out()
 
@@ -209,7 +209,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L216)
+Defined in:  [generated/pipeline/FeatureUnion.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L216)
 
 ### init()
 
@@ -233,7 +233,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L67)
+Defined in:  [generated/pipeline/FeatureUnion.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L67)
 
 ### set\_output()
 
@@ -258,7 +258,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L254)
+Defined in:  [generated/pipeline/FeatureUnion.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L254)
 
 ### transform()
 
@@ -281,4 +281,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L287)
+Defined in:  [generated/pipeline/FeatureUnion.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L287)

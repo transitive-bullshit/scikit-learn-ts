@@ -31,7 +31,7 @@ new EllipticEnvelope(opts?: object): EllipticEnvelope;
 
 [`EllipticEnvelope`](EllipticEnvelope.md)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L23)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L23)
 
 ## Properties
 
@@ -39,31 +39,31 @@ Defined in:  [generated/covariance/EllipticEnvelope.ts:23](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L21)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L20)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L19)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L16)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L17)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L17)
 
 ## Accessors
 
@@ -81,9 +81,9 @@ covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L619)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L619)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L619)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L619)
 
 ### dist\_
 
@@ -99,9 +99,9 @@ dist_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L808)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L808)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L808)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L808)
 
 ### feature\_names\_in\_
 
@@ -117,9 +117,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L862)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L862)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L862)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L862)
 
 ### location\_
 
@@ -135,9 +135,9 @@ location_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L592)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L592)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L592)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L592)
 
 ### n\_features\_in\_
 
@@ -153,9 +153,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
 
 ### offset\_
 
@@ -171,9 +171,9 @@ offset_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L700)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L700)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L700)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L700)
 
 ### precision\_
 
@@ -189,9 +189,9 @@ precision_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L646)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L646)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L646)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L646)
 
 ### py
 
@@ -205,7 +205,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L59)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L59)
 
 #### Signature
 
@@ -223,9 +223,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L63)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L63)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L59) [generated/covariance/EllipticEnvelope.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L63)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L59) [generated/covariance/EllipticEnvelope.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L63)
 
 ### raw\_covariance\_
 
@@ -241,9 +241,9 @@ raw_covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L754)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L754)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L754)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L754)
 
 ### raw\_location\_
 
@@ -259,9 +259,9 @@ raw_location_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L727)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L727)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L727)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L727)
 
 ### raw\_support\_
 
@@ -277,9 +277,9 @@ raw_support_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L781)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L781)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L781)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L781)
 
 ### support\_
 
@@ -295,9 +295,9 @@ support_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L673)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L673)
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L673)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L673)
 
 ## Methods
 
@@ -324,7 +324,7 @@ correct_covariance(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L139)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L139)
 
 ### decision\_function()
 
@@ -347,7 +347,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L177)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L177)
 
 ### dispose()
 
@@ -365,7 +365,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L120)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L120)
 
 ### error\_norm()
 
@@ -391,7 +391,7 @@ error_norm(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L214)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L214)
 
 ### fit()
 
@@ -415,7 +415,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L274)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L274)
 
 ### fit\_predict()
 
@@ -441,7 +441,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L316)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L316)
 
 ### get\_precision()
 
@@ -464,7 +464,7 @@ get_precision(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L356)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L356)
 
 ### init()
 
@@ -488,7 +488,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L72)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L72)
 
 ### mahalanobis()
 
@@ -511,7 +511,7 @@ mahalanobis(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L394)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L394)
 
 ### predict()
 
@@ -534,7 +534,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L429)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L429)
 
 ### reweight\_covariance()
 
@@ -559,7 +559,7 @@ reweight_covariance(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L466)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L466)
 
 ### score()
 
@@ -586,7 +586,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L506)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L506)
 
 ### score\_samples()
 
@@ -609,4 +609,4 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L555)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L555)

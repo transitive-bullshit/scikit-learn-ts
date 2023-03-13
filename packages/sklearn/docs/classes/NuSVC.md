@@ -45,7 +45,7 @@ new NuSVC(opts?: object): NuSVC;
 
 [`NuSVC`](NuSVC.md)
 
-Defined in:  [generated/svm/NuSVC.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L27)
+Defined in:  [generated/svm/NuSVC.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L27)
 
 ## Properties
 
@@ -53,31 +53,31 @@ Defined in:  [generated/svm/NuSVC.ts:27](https://github.com/transitive-bullshit/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/svm/NuSVC.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L25)
+Defined in:  [generated/svm/NuSVC.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/svm/NuSVC.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L24)
+Defined in:  [generated/svm/NuSVC.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/svm/NuSVC.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L23)
+Defined in:  [generated/svm/NuSVC.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/svm/NuSVC.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L20)
+Defined in:  [generated/svm/NuSVC.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/svm/NuSVC.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L21)
+Defined in:  [generated/svm/NuSVC.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L21)
 
 ## Accessors
 
@@ -95,9 +95,9 @@ class_weight_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/svm/NuSVC.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L452)
+Defined in:  [generated/svm/NuSVC.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L452)
 
-Defined in:  [generated/svm/NuSVC.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L452)
+Defined in:  [generated/svm/NuSVC.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L452)
 
 ### classes\_
 
@@ -113,9 +113,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/svm/NuSVC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L475)
+Defined in:  [generated/svm/NuSVC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L475)
 
-Defined in:  [generated/svm/NuSVC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L475)
+Defined in:  [generated/svm/NuSVC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L475)
 
 ### dual\_coef\_
 
@@ -131,9 +131,9 @@ dual_coef_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/svm/NuSVC.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L497)
+Defined in:  [generated/svm/NuSVC.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L497)
 
-Defined in:  [generated/svm/NuSVC.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L497)
+Defined in:  [generated/svm/NuSVC.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L497)
 
 ### feature\_names\_in\_
 
@@ -149,9 +149,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/svm/NuSVC.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L589)
+Defined in:  [generated/svm/NuSVC.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L589)
 
-Defined in:  [generated/svm/NuSVC.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L589)
+Defined in:  [generated/svm/NuSVC.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L589)
 
 ### fit\_status\_
 
@@ -167,9 +167,9 @@ fit_status_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/svm/NuSVC.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L520)
+Defined in:  [generated/svm/NuSVC.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L520)
 
-Defined in:  [generated/svm/NuSVC.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L520)
+Defined in:  [generated/svm/NuSVC.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L520)
 
 ### intercept\_
 
@@ -185,9 +185,9 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/svm/NuSVC.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L543)
+Defined in:  [generated/svm/NuSVC.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L543)
 
-Defined in:  [generated/svm/NuSVC.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L543)
+Defined in:  [generated/svm/NuSVC.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L543)
 
 ### n\_features\_in\_
 
@@ -203,9 +203,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/svm/NuSVC.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L566)
+Defined in:  [generated/svm/NuSVC.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L566)
 
-Defined in:  [generated/svm/NuSVC.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L566)
+Defined in:  [generated/svm/NuSVC.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L566)
 
 ### n\_iter\_
 
@@ -221,9 +221,9 @@ n_iter_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/svm/NuSVC.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L614)
+Defined in:  [generated/svm/NuSVC.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L614)
 
-Defined in:  [generated/svm/NuSVC.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L614)
+Defined in:  [generated/svm/NuSVC.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L614)
 
 ### py
 
@@ -237,7 +237,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L133)
+Defined in:  [generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L133)
 
 #### Signature
 
@@ -255,9 +255,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/svm/NuSVC.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L137)
+Defined in:  [generated/svm/NuSVC.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L137)
 
-Defined in:  [generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L133) [generated/svm/NuSVC.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L137)
+Defined in:  [generated/svm/NuSVC.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L133) [generated/svm/NuSVC.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L137)
 
 ### shape\_fit\_
 
@@ -273,9 +273,9 @@ shape_fit_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/svm/NuSVC.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L683)
+Defined in:  [generated/svm/NuSVC.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L683)
 
-Defined in:  [generated/svm/NuSVC.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L683)
+Defined in:  [generated/svm/NuSVC.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L683)
 
 ### support\_
 
@@ -291,9 +291,9 @@ support_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/svm/NuSVC.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L636)
+Defined in:  [generated/svm/NuSVC.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L636)
 
-Defined in:  [generated/svm/NuSVC.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L636)
+Defined in:  [generated/svm/NuSVC.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L636)
 
 ### support\_vectors\_
 
@@ -309,9 +309,9 @@ support_vectors_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/svm/NuSVC.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L658)
+Defined in:  [generated/svm/NuSVC.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L658)
 
-Defined in:  [generated/svm/NuSVC.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L658)
+Defined in:  [generated/svm/NuSVC.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L658)
 
 ## Methods
 
@@ -336,7 +336,7 @@ decision_function(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/svm/NuSVC.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L218)
+Defined in:  [generated/svm/NuSVC.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L218)
 
 ### dispose()
 
@@ -354,7 +354,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/svm/NuSVC.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L201)
+Defined in:  [generated/svm/NuSVC.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L201)
 
 ### fit()
 
@@ -379,7 +379,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/svm/NuSVC.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L251)
+Defined in:  [generated/svm/NuSVC.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L251)
 
 ### init()
 
@@ -403,7 +403,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/svm/NuSVC.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L146)
+Defined in:  [generated/svm/NuSVC.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L146)
 
 ### predict()
 
@@ -428,7 +428,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/svm/NuSVC.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L300)
+Defined in:  [generated/svm/NuSVC.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L300)
 
 ### predict\_log\_proba()
 
@@ -453,7 +453,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/svm/NuSVC.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L335)
+Defined in:  [generated/svm/NuSVC.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L335)
 
 ### predict\_proba()
 
@@ -478,7 +478,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/svm/NuSVC.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L370)
+Defined in:  [generated/svm/NuSVC.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L370)
 
 ### score()
 
@@ -505,4 +505,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/svm/NuSVC.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/svm/NuSVC.ts#L405)
+Defined in:  [generated/svm/NuSVC.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/svm/NuSVC.ts#L405)

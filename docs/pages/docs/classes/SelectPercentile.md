@@ -28,7 +28,7 @@ new SelectPercentile(opts?: object): SelectPercentile;
 
 [`SelectPercentile`](SelectPercentile.md)
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L23)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L23)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/feature\_selection/SelectPercentile.ts:23](https://githu
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L21)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L20)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L19)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L16)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L17)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L17)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/SelectPercentile.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L472)
+Defined in: [generated/feature\_selection/SelectPercentile.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L472)
 
 ### n\_features\_in\_
 
@@ -94,7 +94,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_selection/SelectPercentile.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L445)
+Defined in: [generated/feature\_selection/SelectPercentile.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L445)
 
 ### pvalues\_
 
@@ -110,7 +110,7 @@ pvalues_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/SelectPercentile.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L418)
+Defined in: [generated/feature\_selection/SelectPercentile.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L418)
 
 ### py
 
@@ -124,7 +124,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L40)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L40)
 
 #### Signature
 
@@ -142,7 +142,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_selection/SelectPercentile.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L44)
+Defined in: [generated/feature\_selection/SelectPercentile.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L44)
 
 ### scores\_
 
@@ -158,7 +158,7 @@ scores_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/SelectPercentile.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L391)
+Defined in: [generated/feature\_selection/SelectPercentile.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L391)
 
 ## Methods
 
@@ -178,7 +178,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L95)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L95)
 
 ### fit()
 
@@ -202,7 +202,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L112)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L112)
 
 ### fit\_transform()
 
@@ -229,7 +229,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L156)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L156)
 
 ### get\_feature\_names\_out()
 
@@ -252,7 +252,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L207)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L207)
 
 ### get\_support()
 
@@ -275,7 +275,7 @@ get_support(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L245)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L245)
 
 ### init()
 
@@ -299,7 +299,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L53)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L53)
 
 ### inverse\_transform()
 
@@ -322,7 +322,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L282)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L282)
 
 ### set\_output()
 
@@ -347,7 +347,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L321)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L321)
 
 ### transform()
 
@@ -370,4 +370,4 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L356)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L356)

@@ -46,7 +46,7 @@ new HalvingRandomSearchCV(opts?: object): HalvingRandomSearchCV;
 
 [`HalvingRandomSearchCV`](HalvingRandomSearchCV.md)
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L27)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L27)
 
 ## Properties
 
@@ -54,31 +54,31 @@ Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:27](https://gi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L25)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L24)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L23)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L20)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L21)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L21)
 
 ## Accessors
 
@@ -96,7 +96,7 @@ best_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:836](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L836)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:836](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L836)
 
 ### best\_index\_
 
@@ -114,7 +114,7 @@ best_index_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:919](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L919)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:919](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L919)
 
 ### best\_params\_
 
@@ -130,7 +130,7 @@ best_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:890](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L890)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:890](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L890)
 
 ### best\_score\_
 
@@ -146,7 +146,7 @@ best_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:863](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L863)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:863](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L863)
 
 ### cv\_results\_
 
@@ -162,7 +162,7 @@ cv_results_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L809)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L809)
 
 ### feature\_names\_in\_
 
@@ -178,7 +178,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:1056](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1056)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:1056](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1056)
 
 ### max\_resources\_
 
@@ -194,7 +194,7 @@ max_resources_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L674)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L674)
 
 ### min\_resources\_
 
@@ -210,7 +210,7 @@ min_resources_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L701)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L701)
 
 ### multimetric\_
 
@@ -226,7 +226,7 @@ multimetric_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:1029](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1029)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:1029](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1029)
 
 ### n\_candidates\_
 
@@ -242,7 +242,7 @@ n_candidates_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L620)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L620)
 
 ### n\_iterations\_
 
@@ -258,7 +258,7 @@ n_iterations_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L728)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L728)
 
 ### n\_possible\_iterations\_
 
@@ -274,7 +274,7 @@ n_possible_iterations_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:755](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L755)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:755](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L755)
 
 ### n\_remaining\_candidates\_
 
@@ -290,7 +290,7 @@ n_remaining_candidates_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L647)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L647)
 
 ### n\_required\_iterations\_
 
@@ -306,7 +306,7 @@ n_required_iterations_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:782](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L782)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:782](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L782)
 
 ### n\_resources\_
 
@@ -322,7 +322,7 @@ n_resources_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L593)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L593)
 
 ### n\_splits\_
 
@@ -338,7 +338,7 @@ n_splits_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:973](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L973)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:973](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L973)
 
 ### py
 
@@ -352,7 +352,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L132)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L132)
 
 #### Signature
 
@@ -370,7 +370,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L136)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L136)
 
 ### refit\_time\_
 
@@ -388,7 +388,7 @@ refit_time_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:1002](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1002)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:1002](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1002)
 
 ### scorer\_
 
@@ -404,7 +404,7 @@ scorer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:946](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L946)
+Defined in: [generated/model\_selection/HalvingRandomSearchCV.ts:946](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L946)
 
 ## Methods
 
@@ -431,7 +431,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L226)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L226)
 
 ### dispose()
 
@@ -449,7 +449,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L207)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L207)
 
 ### fit()
 
@@ -475,7 +475,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L263)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L263)
 
 ### init()
 
@@ -499,7 +499,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L145)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L145)
 
 ### inverse\_transform()
 
@@ -524,7 +524,7 @@ inverse_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L319)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L319)
 
 ### predict()
 
@@ -549,7 +549,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L358)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L358)
 
 ### predict\_log\_proba()
 
@@ -574,7 +574,7 @@ predict_log_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L395)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L395)
 
 ### predict\_proba()
 
@@ -599,7 +599,7 @@ predict_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L434)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L434)
 
 ### score()
 
@@ -625,7 +625,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L473)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L473)
 
 ### score\_samples()
 
@@ -650,7 +650,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L517)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L517)
 
 ### transform()
 
@@ -675,4 +675,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L556)
+Defined in:  [generated/model\_selection/HalvingRandomSearchCV.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L556)

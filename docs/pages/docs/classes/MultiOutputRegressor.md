@@ -28,7 +28,7 @@ new MultiOutputRegressor(opts?: object): MultiOutputRegressor;
 
 [`MultiOutputRegressor`](MultiOutputRegressor.md)
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L23)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L23)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/multioutput/MultiOutputRegressor.ts:23](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L21)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L20)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L19)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L16)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L17)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L17)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/multioutput/MultiOutputRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L309)
+Defined in: [generated/multioutput/MultiOutputRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L309)
 
 ### feature\_names\_in\_
 
@@ -94,7 +94,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/multioutput/MultiOutputRegressor.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L363)
+Defined in: [generated/multioutput/MultiOutputRegressor.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L363)
 
 ### n\_features\_in\_
 
@@ -110,7 +110,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/multioutput/MultiOutputRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L336)
+Defined in: [generated/multioutput/MultiOutputRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L336)
 
 ### py
 
@@ -124,7 +124,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L42)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L42)
 
 #### Signature
 
@@ -142,7 +142,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/multioutput/MultiOutputRegressor.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L46)
+Defined in: [generated/multioutput/MultiOutputRegressor.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L46)
 
 ## Methods
 
@@ -162,7 +162,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L99)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L99)
 
 ### fit()
 
@@ -188,7 +188,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L116)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L116)
 
 ### init()
 
@@ -212,7 +212,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L55)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L55)
 
 ### partial\_fit()
 
@@ -237,7 +237,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L172)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L172)
 
 ### predict()
 
@@ -260,7 +260,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L223)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L223)
 
 ### score()
 
@@ -287,4 +287,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L260)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L260)

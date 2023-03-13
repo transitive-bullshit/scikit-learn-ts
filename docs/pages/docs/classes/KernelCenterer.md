@@ -30,7 +30,7 @@ new KernelCenterer(opts?: object): KernelCenterer;
 
 [`KernelCenterer`](KernelCenterer.md)
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L23)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L23)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/preprocessing/KernelCenterer.ts:23](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L21)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L20)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L19)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L16)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L17)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L17)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L48)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L48)
 
 #### Signature
 
@@ -96,7 +96,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/KernelCenterer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L52)
+Defined in: [generated/preprocessing/KernelCenterer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L52)
 
 ## Methods
 
@@ -116,7 +116,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L107)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L107)
 
 ### fit()
 
@@ -140,7 +140,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L124)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L124)
 
 ### fit\_transform()
 
@@ -167,7 +167,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L164)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L164)
 
 ### get\_feature\_names\_out()
 
@@ -192,7 +192,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L213)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L213)
 
 ### init()
 
@@ -216,7 +216,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L61)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L61)
 
 ### set\_output()
 
@@ -241,7 +241,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L251)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L251)
 
 ### transform()
 
@@ -265,4 +265,4 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L284)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L284)

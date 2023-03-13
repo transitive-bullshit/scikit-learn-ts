@@ -32,7 +32,7 @@ new LabelPropagation(opts?: object): LabelPropagation;
 
 [`LabelPropagation`](LabelPropagation.md)
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L23)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L23)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/semi\_supervised/LabelPropagation.ts:23](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L21)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L20)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L19)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L16)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L17)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L17)
 
 ## Accessors
 
@@ -82,7 +82,7 @@ X_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L309)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L309)
 
 ### classes\_
 
@@ -98,7 +98,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L334)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L334)
 
 ### feature\_names\_in\_
 
@@ -114,7 +114,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L442)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L442)
 
 ### label\_distributions\_
 
@@ -130,7 +130,7 @@ label_distributions_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L361)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L361)
 
 ### n\_features\_in\_
 
@@ -146,7 +146,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L415)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L415)
 
 ### n\_iter\_
 
@@ -162,7 +162,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L469)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L469)
 
 ### py
 
@@ -176,7 +176,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L66)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L66)
 
 #### Signature
 
@@ -194,7 +194,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L70)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L70)
 
 ### transduction\_
 
@@ -210,7 +210,7 @@ transduction_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/semi\_supervised/LabelPropagation.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L388)
+Defined in: [generated/semi\_supervised/LabelPropagation.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L388)
 
 ## Methods
 
@@ -230,7 +230,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L125)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L125)
 
 ### fit()
 
@@ -254,7 +254,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L142)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L142)
 
 ### init()
 
@@ -278,7 +278,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L79)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L79)
 
 ### predict()
 
@@ -301,7 +301,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L184)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L184)
 
 ### predict\_proba()
 
@@ -326,7 +326,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L221)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L221)
 
 ### score()
 
@@ -353,4 +353,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L260)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L260)

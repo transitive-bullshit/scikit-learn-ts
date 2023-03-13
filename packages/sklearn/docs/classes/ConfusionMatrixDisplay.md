@@ -30,7 +30,7 @@ new ConfusionMatrixDisplay(opts?: object): ConfusionMatrixDisplay;
 
 [`ConfusionMatrixDisplay`](ConfusionMatrixDisplay.md)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L25)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L25)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L23)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L22)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L21)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L18)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L19)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L19)
 
 ## Accessors
 
@@ -80,9 +80,9 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L532)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L532)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L532)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L532)
 
 ### figure\_
 
@@ -98,9 +98,9 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
 
 ### im\_
 
@@ -116,9 +116,9 @@ im_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L478)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L478)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L478)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L478)
 
 ### py
 
@@ -132,7 +132,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40)
 
 #### Signature
 
@@ -150,9 +150,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L44)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L44)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40) [generated/metrics/ConfusionMatrixDisplay.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L44)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40) [generated/metrics/ConfusionMatrixDisplay.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L44)
 
 ### text\_
 
@@ -168,9 +168,9 @@ text_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L505)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L505)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L505)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L505)
 
 ## Methods
 
@@ -190,7 +190,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L102)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L102)
 
 ### from\_estimator()
 
@@ -229,7 +229,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L121)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L121)
 
 ### from\_predictions()
 
@@ -267,7 +267,7 @@ from_predictions(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L261)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L261)
 
 ### init()
 
@@ -291,7 +291,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L53)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L53)
 
 ### plot()
 
@@ -321,4 +321,4 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L394)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L394)

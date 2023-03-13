@@ -36,7 +36,7 @@ new KNeighborsTransformer(opts?: object): KNeighborsTransformer;
 
 [`KNeighborsTransformer`](KNeighborsTransformer.md)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L25)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L25)
 
 ## Properties
 
@@ -44,31 +44,31 @@ Defined in:  [generated/neighbors/KNeighborsTransformer.ts:25](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L23)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L22)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L21)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L18)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L19)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L19)
 
 ## Accessors
 
@@ -86,9 +86,9 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L472)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L472)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L472)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L472)
 
 ### effective\_metric\_params\_
 
@@ -104,9 +104,9 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L499)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L499)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L499)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L499)
 
 ### feature\_names\_in\_
 
@@ -122,9 +122,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L553)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L553)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L553)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L553)
 
 ### n\_features\_in\_
 
@@ -140,9 +140,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L526)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L526)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L526)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L526)
 
 ### n\_samples\_fit\_
 
@@ -158,9 +158,9 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L580)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L580)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L580)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L580)
 
 ### py
 
@@ -174,7 +174,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L86)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L86)
 
 #### Signature
 
@@ -192,9 +192,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L90)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L90)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L86) [generated/neighbors/KNeighborsTransformer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L90)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L86) [generated/neighbors/KNeighborsTransformer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L90)
 
 ## Methods
 
@@ -214,7 +214,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L149)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L149)
 
 ### fit()
 
@@ -238,7 +238,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L166)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L166)
 
 ### fit\_transform()
 
@@ -264,7 +264,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L208)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L208)
 
 ### get\_feature\_names\_out()
 
@@ -289,7 +289,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L253)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L253)
 
 ### init()
 
@@ -313,7 +313,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L99)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L99)
 
 ### kneighbors()
 
@@ -340,7 +340,7 @@ kneighbors(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L293)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L293)
 
 ### kneighbors\_graph()
 
@@ -365,7 +365,7 @@ kneighbors_graph(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L344)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L344)
 
 ### set\_output()
 
@@ -390,7 +390,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L398)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L398)
 
 ### transform()
 
@@ -413,4 +413,4 @@ transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L435)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L435)

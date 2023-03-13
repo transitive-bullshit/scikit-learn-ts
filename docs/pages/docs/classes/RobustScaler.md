@@ -35,7 +35,7 @@ new RobustScaler(opts?: object): RobustScaler;
 
 [`RobustScaler`](RobustScaler.md)
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L27)
+Defined in:  [generated/preprocessing/RobustScaler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L27)
 
 ## Properties
 
@@ -43,31 +43,31 @@ Defined in:  [generated/preprocessing/RobustScaler.ts:27](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L25)
+Defined in:  [generated/preprocessing/RobustScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L24)
+Defined in:  [generated/preprocessing/RobustScaler.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L23)
+Defined in:  [generated/preprocessing/RobustScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L20)
+Defined in:  [generated/preprocessing/RobustScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L21)
+Defined in:  [generated/preprocessing/RobustScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L21)
 
 ## Accessors
 
@@ -85,7 +85,7 @@ center_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/preprocessing/RobustScaler.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L365)
+Defined in: [generated/preprocessing/RobustScaler.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L365)
 
 ### feature\_names\_in\_
 
@@ -101,7 +101,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/RobustScaler.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L436)
+Defined in: [generated/preprocessing/RobustScaler.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L436)
 
 ### n\_features\_in\_
 
@@ -117,7 +117,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/RobustScaler.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L411)
+Defined in: [generated/preprocessing/RobustScaler.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L411)
 
 ### py
 
@@ -131,7 +131,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L65)
+Defined in:  [generated/preprocessing/RobustScaler.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L65)
 
 #### Signature
 
@@ -149,7 +149,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/RobustScaler.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L69)
+Defined in: [generated/preprocessing/RobustScaler.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L69)
 
 ### scale\_
 
@@ -165,7 +165,7 @@ scale_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/preprocessing/RobustScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L388)
+Defined in: [generated/preprocessing/RobustScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L388)
 
 ## Methods
 
@@ -185,7 +185,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L122)
+Defined in:  [generated/preprocessing/RobustScaler.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L122)
 
 ### fit()
 
@@ -209,7 +209,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L139)
+Defined in:  [generated/preprocessing/RobustScaler.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L139)
 
 ### fit\_transform()
 
@@ -236,7 +236,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L179)
+Defined in:  [generated/preprocessing/RobustScaler.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L179)
 
 ### get\_feature\_names\_out()
 
@@ -259,7 +259,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L226)
+Defined in:  [generated/preprocessing/RobustScaler.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L226)
 
 ### init()
 
@@ -283,7 +283,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L78)
+Defined in:  [generated/preprocessing/RobustScaler.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L78)
 
 ### inverse\_transform()
 
@@ -306,7 +306,7 @@ inverse_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L262)
+Defined in:  [generated/preprocessing/RobustScaler.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L262)
 
 ### set\_output()
 
@@ -331,7 +331,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L299)
+Defined in:  [generated/preprocessing/RobustScaler.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L299)
 
 ### transform()
 
@@ -354,4 +354,4 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L332)
+Defined in:  [generated/preprocessing/RobustScaler.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L332)

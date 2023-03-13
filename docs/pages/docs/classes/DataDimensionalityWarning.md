@@ -27,7 +27,7 @@ new DataDimensionalityWarning(opts?: object): DataDimensionalityWarning;
 
 [`DataDimensionalityWarning`](DataDimensionalityWarning.md)
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L23)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L23)
 
 ## Properties
 
@@ -35,31 +35,31 @@ Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:23](https://gith
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L21)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L20)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L19)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L16)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L17)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L17)
 
 ## Accessors
 
@@ -75,7 +75,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L28)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L28)
 
 #### Signature
 
@@ -93,7 +93,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/exceptions/DataDimensionalityWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L32)
+Defined in: [generated/exceptions/DataDimensionalityWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L32)
 
 ## Methods
 
@@ -113,7 +113,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L85)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L85)
 
 ### init()
 
@@ -137,7 +137,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L41)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L41)
 
 ### with\_traceback()
 
@@ -159,4 +159,4 @@ with_traceback(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L102)
+Defined in:  [generated/exceptions/DataDimensionalityWarning.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/exceptions/DataDimensionalityWarning.ts#L102)

@@ -36,7 +36,7 @@ new MDS(opts?: object): MDS;
 
 [`MDS`](MDS.md)
 
-Defined in:  [generated/manifold/MDS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L23)
+Defined in:  [generated/manifold/MDS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L23)
 
 ## Properties
 
@@ -44,31 +44,31 @@ Defined in:  [generated/manifold/MDS.ts:23](https://github.com/transitive-bullsh
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/MDS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L21)
+Defined in:  [generated/manifold/MDS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/MDS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L20)
+Defined in:  [generated/manifold/MDS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/manifold/MDS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L19)
+Defined in:  [generated/manifold/MDS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/manifold/MDS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L16)
+Defined in:  [generated/manifold/MDS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/manifold/MDS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L17)
+Defined in:  [generated/manifold/MDS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L17)
 
 ## Accessors
 
@@ -86,9 +86,9 @@ dissimilarity_matrix_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/manifold/MDS.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L310)
+Defined in:  [generated/manifold/MDS.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L310)
 
-Defined in:  [generated/manifold/MDS.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L310)
+Defined in:  [generated/manifold/MDS.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L310)
 
 ### embedding\_
 
@@ -104,9 +104,9 @@ embedding_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/manifold/MDS.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L266)
+Defined in:  [generated/manifold/MDS.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L266)
 
-Defined in:  [generated/manifold/MDS.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L266)
+Defined in:  [generated/manifold/MDS.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L266)
 
 ### feature\_names\_in\_
 
@@ -122,9 +122,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/manifold/MDS.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L358)
+Defined in:  [generated/manifold/MDS.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L358)
 
-Defined in:  [generated/manifold/MDS.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L358)
+Defined in:  [generated/manifold/MDS.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L358)
 
 ### n\_features\_in\_
 
@@ -140,9 +140,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/manifold/MDS.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L335)
+Defined in:  [generated/manifold/MDS.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L335)
 
-Defined in:  [generated/manifold/MDS.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L335)
+Defined in:  [generated/manifold/MDS.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L335)
 
 ### n\_iter\_
 
@@ -158,9 +158,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/manifold/MDS.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L381)
+Defined in:  [generated/manifold/MDS.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L381)
 
-Defined in:  [generated/manifold/MDS.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L381)
+Defined in:  [generated/manifold/MDS.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L381)
 
 ### py
 
@@ -174,7 +174,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/manifold/MDS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L94)
+Defined in:  [generated/manifold/MDS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L94)
 
 #### Signature
 
@@ -192,9 +192,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/manifold/MDS.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L98)
+Defined in:  [generated/manifold/MDS.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L98)
 
-Defined in:  [generated/manifold/MDS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L94) [generated/manifold/MDS.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L98)
+Defined in:  [generated/manifold/MDS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L94) [generated/manifold/MDS.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L98)
 
 ### stress\_
 
@@ -210,9 +210,9 @@ stress_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/manifold/MDS.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L288)
+Defined in:  [generated/manifold/MDS.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L288)
 
-Defined in:  [generated/manifold/MDS.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L288)
+Defined in:  [generated/manifold/MDS.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L288)
 
 ## Methods
 
@@ -232,7 +232,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/MDS.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L156)
+Defined in:  [generated/manifold/MDS.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L156)
 
 ### fit()
 
@@ -257,7 +257,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/MDS.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L173)
+Defined in:  [generated/manifold/MDS.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L173)
 
 ### fit\_transform()
 
@@ -282,7 +282,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/manifold/MDS.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L219)
+Defined in:  [generated/manifold/MDS.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L219)
 
 ### init()
 
@@ -306,4 +306,4 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/MDS.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L107)
+Defined in:  [generated/manifold/MDS.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/manifold/MDS.ts#L107)

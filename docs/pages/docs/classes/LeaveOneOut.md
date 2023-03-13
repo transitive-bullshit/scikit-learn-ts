@@ -35,7 +35,7 @@ new LeaveOneOut(opts?: object): LeaveOneOut;
 
 [`LeaveOneOut`](LeaveOneOut.md)
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L29)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L29)
 
 ## Properties
 
@@ -43,31 +43,31 @@ Defined in:  [generated/model\_selection/LeaveOneOut.ts:29](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L27)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L26)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L25)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L22)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L23)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L23)
 
 ## Accessors
 
@@ -85,7 +85,7 @@ n_splits(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/LeaveOneOut.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L213)
+Defined in: [generated/model\_selection/LeaveOneOut.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L213)
 
 ### py
 
@@ -99,7 +99,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L49)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L49)
 
 #### Signature
 
@@ -117,7 +117,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/LeaveOneOut.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L53)
+Defined in: [generated/model\_selection/LeaveOneOut.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L53)
 
 ## Methods
 
@@ -137,7 +137,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L104)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L104)
 
 ### get\_n\_splits()
 
@@ -162,7 +162,7 @@ get_n_splits(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L121)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L121)
 
 ### init()
 
@@ -186,7 +186,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L62)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L62)
 
 ### split()
 
@@ -211,4 +211,4 @@ split(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L166)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L166)

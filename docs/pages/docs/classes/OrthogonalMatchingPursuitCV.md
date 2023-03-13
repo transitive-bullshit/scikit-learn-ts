@@ -35,7 +35,7 @@ new OrthogonalMatchingPursuitCV(opts?: object): OrthogonalMatchingPursuitCV;
 
 [`OrthogonalMatchingPursuitCV`](OrthogonalMatchingPursuitCV.md)
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L25)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L25)
 
 ## Properties
 
@@ -43,31 +43,31 @@ Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:25](https:/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L23)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L22)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L21)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L18)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L19)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L19)
 
 ## Accessors
 
@@ -85,7 +85,7 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L314)
+Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L314)
 
 ### feature\_names\_in\_
 
@@ -101,7 +101,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L422)
+Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L422)
 
 ### intercept\_
 
@@ -117,7 +117,7 @@ intercept_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L287)
+Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L287)
 
 ### n\_features\_in\_
 
@@ -133,7 +133,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L395)
+Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L395)
 
 ### n\_iter\_
 
@@ -149,7 +149,7 @@ n_iter_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L368)
+Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L368)
 
 ### n\_nonzero\_coefs\_
 
@@ -165,7 +165,7 @@ n_nonzero_coefs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L341)
+Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L341)
 
 ### py
 
@@ -179,7 +179,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L73)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L73)
 
 #### Signature
 
@@ -197,7 +197,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L77)
+Defined in: [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L77)
 
 ## Methods
 
@@ -217,7 +217,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L136)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L136)
 
 ### fit()
 
@@ -241,7 +241,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L153)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L153)
 
 ### init()
 
@@ -265,7 +265,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L86)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L86)
 
 ### predict()
 
@@ -288,7 +288,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L197)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L197)
 
 ### score()
 
@@ -315,4 +315,4 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L236)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L236)
