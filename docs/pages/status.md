@@ -1,4 +1,4 @@
-# Status
+## Status
 
 > This project is new and _experimental_. It works great for local development, but I wouldn't recommend using it for production just yet. You can follow the progress on Twitter [@transitive_bs](https://twitter.com/transitive_bs)
 
@@ -21,23 +21,19 @@
   - [x] publish `sklearn` package to NPM
   - [x] contact `scikit-learn` for feedback
 - current
-  - [ ] generate docs via tsdoc
+  - docs
     - improve python => TS markdown and type edge cases
     - fix relative markdown links
-    - docs website via `nextra`
 - post-MVP
   - add support for sklearn functions (in addition to classes)
   - add support for accessing the built-in datasets
   - add support for better python exception / error handling
   - add support for positional arguments (in addition to the default keyword-based arguments)
-  - add support for function exports in addition to class exports
-    - "py functions" ([example](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups_vectorized.html))
   - add basic benchmarks
   - add python <> TS unit tests
   - add support for concurrent python requests and multiple python bridges
     - this may work currently, but it's untested and is likely to have race conditions
   - consider changing identifier names from python `snake_case` to JS `camelCase`
-  - add support for `pandas`
   - update fork of `python-bridge` to be more modern
     - update deps
     - replace bluebird with native promises
@@ -45,6 +41,7 @@
     - etc
 - ideas
   - add support for [polars](https://github.com/pola-rs/nodejs-polars) and/or [danfo.js](https://github.com/javascriptdata/danfojs) dataframe formatting
+  - add support for `pandas`
   - explore more efficient serialization formats for IPC
     - explore memory mapping arrays between node.js and python for efficiency
     - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult...

@@ -14,7 +14,7 @@
 
 This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*. 🤯
 
-> See the [official docs](https://github.com/transitive-bullshit/scikit-learn-ts) for more info.
+> See the [official docs](https://sklearn.vercel.app) and [github repo](https://github.com/transitive-bullshit/scikit-learn-ts) for more info.
 
 ## License
 

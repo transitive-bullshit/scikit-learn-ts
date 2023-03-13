@@ -20,13 +20,14 @@
   - [TSNE](#tsne)
 - [Why?](#why)
 - [How it works](#how-it-works)
-- [TODO](#todo)
 - [Credit](#credit)
 - [License](#license)
 
 ## Intro
 
 This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*. 🤯
+
+See the [full docs](https://sklearn.vercel.app/) for more info.
 
 > **Note**
 > This project is new and _experimental_. It works great for local development, but I wouldn't recommend using it for production just yet. You can follow the progress on Twitter [@transitive_bs](https://twitter.com/transitive_bs)
@@ -76,6 +77,8 @@ npm install sklearn
 ```
 
 ## Usage
+
+See the [full docs](https://sklearn.vercel.app/) for more info.
 
 ```ts
 import * as sklearn from 'sklearn'
@@ -317,6 +320,8 @@ const x = await model.fit_transform({ X: data })
 </tr>
 </table>
 
+See the [full docs](https://sklearn.vercel.app/) for more examples.
+
 ## Why?
 
 The Python ML ecosystem is generally a lot more mature than the Node.js ML ecosystem. Most ML research happens in Python, and many common ML tasks that Python devs take for granted are much more difficult to accomplish in Node.js.
@@ -339,57 +344,13 @@ For each `scikit-learn` HTML page that belongs to an exported Python `class` or 
 
 For each `TypeScript` wrapper `class` of `function`, we take special care to handle serializing values back and forth between Node.js and Python as JSON, including converting between primitive arrays and `numpy` arrays where necessary. All `numpy` array conversions should be handled automatically for you since we only support serializing primitive JSON types over the `PythonBridge`. There may be some edge cases where the automatic `numpy` inference fails, but we have a regression test suite for parsing these cases, so as long as the official Python docs are correct for a given type, then our implicit `numpy` conversion logic should "just work".
 
-## TODO
-
-- MVP
-  - [x] e2e working example for MinMaxScaler
-  - [x] e2e working example for TSNE
-  - [x] e2e working example for Kmeans
-  - [x] add support for class attributes
-  - [x] generate all sklearn classes
-  - [x] refactor generated code into namespaces / folders
-  - [x] validate python `scikit-learn` version
-  - [x] generate readme files for each directory
-  - [x] port changes to python-bridge...
-  - [x] validate generated code via `tsc`G
-  - [x] refactor into `packages`
-  - [x] test build via CI
-  - [x] basic readme w/ usage and examples
-  - [x] publish `sklearn` package to NPM
-  - [x] contact `scikit-learn` for feedback
-- current
-  - [ ] generate docs via tsdoc
-    - improve python => TS markdown and type edge cases
-    - fix relative markdown links
-    - docs website via `nextra`
-- post-MVP
-  - add support for sklearn functions (in addition to classes)
-  - add support for accessing the built-in datasets
-  - add support for better python exception / error handling
-  - add support for positional arguments (in addition to the default keyword-based arguments)
-  - add basic benchmarks
-  - add python <> TS unit tests
-  - add support for concurrent python requests and multiple python bridges
-    - this may work currently, but it's untested and is likely to have race conditions
-  - consider changing identifier names from python `snake_case` to JS `camelCase`
-  - update fork of `python-bridge` to be more modern
-    - update deps
-    - replace bluebird with native promises
-    - fix python warnings
-    - etc
-- ideas
-  - add support for [polars](https://github.com/pola-rs/nodejs-polars) and/or [danfo.js](https://github.com/javascriptdata/danfojs) dataframe formatting
-  - add support for `pandas`
-  - explore more efficient serialization formats for IPC
-    - explore memory mapping arrays between node.js and python for efficiency
-    - would need the two serialized array formats to be byte-equivalent between python and node.js which seems difficult...
-  - explore [pyodide](https://github.com/pyodide/pyodide) as a possible alternative to the Python bridge
-
 ## Credit
 
 This project is not affiliated with the [official Python scikit-learn project](https://scikit-learn.org/stable/about.html). Hopefully it will be one day. 😄
 
 All of the difficult machine learning work happens under the hood via the [official Python scikit-learn project](https://scikit-learn.org), with full credit given to their [absolutely amazing team](https://scikit-learn.org/stable/about.html). This project is just a small open source experiment to try and leverage the existing `scikit-learn` ecosystem for the Node.js community.
+
+See the [full docs](https://sklearn.vercel.app/) for more info.
 
 ## License
 
