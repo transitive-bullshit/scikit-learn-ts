@@ -25,75 +25,7 @@ new CompoundKernel(opts?: object): CompoundKernel;
 
 [`CompoundKernel`](CompoundKernel.md)
 
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L21)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L19)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L18)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L17)
-
-### id
-
-> `string`
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L14)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L15)
-
-## Accessors
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L31)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L35)
-
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L31) [generated/gaussian\_process/kernels/CompoundKernel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L35)
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L21)
 
 ## Methods
 
@@ -122,7 +54,7 @@ __call__(opts: object): Promise<ArrayLike[][]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
 
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L103)
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L103)
 
 ### clone\_with\_theta()
 
@@ -145,7 +77,7 @@ clone_with_theta(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L152)
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L152)
 
 ### diag()
 
@@ -170,7 +102,7 @@ diag(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L190)
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L190)
 
 ### dispose()
 
@@ -188,7 +120,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L84)
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L84)
 
 ### init()
 
@@ -212,7 +144,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L44)
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L44)
 
 ### is\_stationary()
 
@@ -234,4 +166,72 @@ is_stationary(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L223)
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L223)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L19)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L18)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L17)
+
+### id
+
+> `string`
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L14)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L15)
+
+## Accessors
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L31)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L35)
+
+Defined in:  [generated/gaussian\_process/kernels/CompoundKernel.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L31) [generated/gaussian\_process/kernels/CompoundKernel.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/CompoundKernel.ts#L35)

@@ -45,185 +45,7 @@ new ExtraTreesRegressor(opts?: object): ExtraTreesRegressor;
 
 [`ExtraTreesRegressor`](ExtraTreesRegressor.md)
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L25)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L19)
-
-## Accessors
-
-### estimator\_
-
-The child estimator template used to create the collection of fitted sub-estimators.
-
-#### Signature
-
-```ts
-estimator_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L446)
-
-### estimators\_
-
-The collection of fitted sub-estimators.
-
-#### Signature
-
-```ts
-estimators_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L473)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L527)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L500)
-
-### n\_outputs\_
-
-The number of outputs.
-
-#### Signature
-
-```ts
-n_outputs_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L554)
-
-### oob\_prediction\_
-
-Prediction computed with out-of-bag estimate on the training set. This attribute exists only when `oob\_score` is `true`.
-
-#### Signature
-
-```ts
-oob_prediction_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L608)
-
-### oob\_score\_
-
-Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
-
-#### Signature
-
-```ts
-oob_score_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L581)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L141)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/ensemble/ExtraTreesRegressor.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L145)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L25)
 
 ## Methods
 
@@ -248,7 +70,7 @@ apply(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L237)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L237)
 
 ### decision\_path()
 
@@ -271,7 +93,7 @@ decision_path(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L272)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L272)
 
 ### dispose()
 
@@ -289,7 +111,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L220)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L220)
 
 ### fit()
 
@@ -314,7 +136,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L309)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L309)
 
 ### init()
 
@@ -338,7 +160,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L154)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L154)
 
 ### predict()
 
@@ -363,7 +185,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L360)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L360)
 
 ### score()
 
@@ -390,4 +212,182 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L397)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L397)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L23)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L22)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L21)
+
+### id
+
+> `string`
+
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L18)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L19)
+
+## Accessors
+
+### estimator\_
+
+The child estimator template used to create the collection of fitted sub-estimators.
+
+#### Signature
+
+```ts
+estimator_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L446)
+
+### estimators\_
+
+The collection of fitted sub-estimators.
+
+#### Signature
+
+```ts
+estimators_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L473)
+
+### feature\_names\_in\_
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L527)
+
+### n\_features\_in\_
+
+Number of features seen during fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L500)
+
+### n\_outputs\_
+
+The number of outputs.
+
+#### Signature
+
+```ts
+n_outputs_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L554)
+
+### oob\_prediction\_
+
+Prediction computed with out-of-bag estimate on the training set. This attribute exists only when `oob\_score` is `true`.
+
+#### Signature
+
+```ts
+oob_prediction_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L608)
+
+### oob\_score\_
+
+Score of the training dataset obtained using an out-of-bag estimate. This attribute exists only when `oob\_score` is `true`.
+
+#### Signature
+
+```ts
+oob_score_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L581)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L141)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/ensemble/ExtraTreesRegressor.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L145)

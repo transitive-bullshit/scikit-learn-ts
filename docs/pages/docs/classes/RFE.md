@@ -33,169 +33,7 @@ new RFE(opts?: object): RFE;
 
 [`RFE`](RFE.md)
 
-Defined in:  [generated/feature\_selection/RFE.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L25)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/feature\_selection/RFE.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/feature\_selection/RFE.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/feature\_selection/RFE.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/feature\_selection/RFE.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/feature\_selection/RFE.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L19)
-
-## Accessors
-
-### estimator\_
-
-The fitted estimator used to select features.
-
-#### Signature
-
-```ts
-estimator_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/feature\_selection/RFE.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L581)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/feature\_selection/RFE.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L649)
-
-### n\_features\_
-
-The number of selected features.
-
-#### Signature
-
-```ts
-n_features_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/feature\_selection/RFE.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L603)
-
-### n\_features\_in\_
-
-Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/feature\_selection/RFE.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L626)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/feature\_selection/RFE.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L65)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/feature\_selection/RFE.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L69)
-
-### ranking\_
-
-The feature ranking, such that `ranking\_\[i\]` corresponds to the ranking position of the i-th feature. Selected (i.e., estimated best) features are assigned rank 1.
-
-#### Signature
-
-```ts
-ranking_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/feature\_selection/RFE.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L672)
-
-### support\_
-
-The mask of selected features.
-
-#### Signature
-
-```ts
-support_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/feature\_selection/RFE.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L694)
+Defined in:  [generated/feature\_selection/RFE.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L25)
 
 ## Methods
 
@@ -220,7 +58,7 @@ decision_function(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L138)
+Defined in:  [generated/feature\_selection/RFE.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L138)
 
 ### dispose()
 
@@ -238,7 +76,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L121)
+Defined in:  [generated/feature\_selection/RFE.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L121)
 
 ### fit()
 
@@ -263,7 +101,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L171)
+Defined in:  [generated/feature\_selection/RFE.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L171)
 
 ### fit\_transform()
 
@@ -290,7 +128,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L219)
+Defined in:  [generated/feature\_selection/RFE.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L219)
 
 ### get\_feature\_names\_out()
 
@@ -313,7 +151,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L266)
+Defined in:  [generated/feature\_selection/RFE.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L266)
 
 ### get\_support()
 
@@ -336,7 +174,7 @@ get_support(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L299)
+Defined in:  [generated/feature\_selection/RFE.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L299)
 
 ### init()
 
@@ -360,7 +198,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L78)
+Defined in:  [generated/feature\_selection/RFE.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L78)
 
 ### inverse\_transform()
 
@@ -383,7 +221,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L334)
+Defined in:  [generated/feature\_selection/RFE.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L334)
 
 ### predict()
 
@@ -406,7 +244,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L367)
+Defined in:  [generated/feature\_selection/RFE.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L367)
 
 ### predict\_log\_proba()
 
@@ -429,7 +267,7 @@ predict_log_proba(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L400)
+Defined in:  [generated/feature\_selection/RFE.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L400)
 
 ### predict\_proba()
 
@@ -452,7 +290,7 @@ predict_proba(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L433)
+Defined in:  [generated/feature\_selection/RFE.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L433)
 
 ### score()
 
@@ -477,7 +315,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L466)
+Defined in:  [generated/feature\_selection/RFE.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L466)
 
 ### set\_output()
 
@@ -502,7 +340,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L515)
+Defined in:  [generated/feature\_selection/RFE.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L515)
 
 ### transform()
 
@@ -525,4 +363,166 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFE.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/feature_selection/RFE.ts#L548)
+Defined in:  [generated/feature\_selection/RFE.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L548)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/feature\_selection/RFE.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L23)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/feature\_selection/RFE.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L22)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/feature\_selection/RFE.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L21)
+
+### id
+
+> `string`
+
+Defined in:  [generated/feature\_selection/RFE.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L18)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/feature\_selection/RFE.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L19)
+
+## Accessors
+
+### estimator\_
+
+The fitted estimator used to select features.
+
+#### Signature
+
+```ts
+estimator_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/feature\_selection/RFE.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L581)
+
+### feature\_names\_in\_
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/feature\_selection/RFE.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L649)
+
+### n\_features\_
+
+The number of selected features.
+
+#### Signature
+
+```ts
+n_features_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/feature\_selection/RFE.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L603)
+
+### n\_features\_in\_
+
+Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/feature\_selection/RFE.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L626)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/feature\_selection/RFE.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L65)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/feature\_selection/RFE.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L69)
+
+### ranking\_
+
+The feature ranking, such that `ranking\_\[i\]` corresponds to the ranking position of the i-th feature. Selected (i.e., estimated best) features are assigned rank 1.
+
+#### Signature
+
+```ts
+ranking_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/feature\_selection/RFE.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L672)
+
+### support\_
+
+The mask of selected features.
+
+#### Signature
+
+```ts
+support_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/feature\_selection/RFE.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/feature_selection/RFE.ts#L694)

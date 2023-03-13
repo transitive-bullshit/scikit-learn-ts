@@ -33,75 +33,7 @@ new Pipeline(opts?: object): Pipeline;
 
 [`Pipeline`](Pipeline.md)
 
-Defined in:  [generated/pipeline/Pipeline.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L27)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/pipeline/Pipeline.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L25)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/pipeline/Pipeline.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L24)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/pipeline/Pipeline.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L23)
-
-### id
-
-> `string`
-
-Defined in:  [generated/pipeline/Pipeline.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L20)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/pipeline/Pipeline.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L21)
-
-## Accessors
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/pipeline/Pipeline.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L49)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/pipeline/Pipeline.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L53)
-
-Defined in:  [generated/pipeline/Pipeline.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L49) [generated/pipeline/Pipeline.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L53)
+Defined in:  [generated/pipeline/Pipeline.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L27)
 
 ## Methods
 
@@ -128,7 +60,7 @@ decision_function(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L122)
+Defined in:  [generated/pipeline/Pipeline.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L122)
 
 ### dispose()
 
@@ -146,7 +78,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L103)
+Defined in:  [generated/pipeline/Pipeline.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L103)
 
 ### fit()
 
@@ -173,7 +105,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L157)
+Defined in:  [generated/pipeline/Pipeline.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L157)
 
 ### fit\_predict()
 
@@ -200,7 +132,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L204)
+Defined in:  [generated/pipeline/Pipeline.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L204)
 
 ### fit\_transform()
 
@@ -227,7 +159,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L251)
+Defined in:  [generated/pipeline/Pipeline.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L251)
 
 ### get\_feature\_names\_out()
 
@@ -252,7 +184,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L298)
+Defined in:  [generated/pipeline/Pipeline.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L298)
 
 ### init()
 
@@ -276,7 +208,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L62)
+Defined in:  [generated/pipeline/Pipeline.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L62)
 
 ### inverse\_transform()
 
@@ -301,7 +233,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L335)
+Defined in:  [generated/pipeline/Pipeline.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L335)
 
 ### predict()
 
@@ -327,7 +259,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L370)
+Defined in:  [generated/pipeline/Pipeline.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L370)
 
 ### predict\_log\_proba()
 
@@ -353,7 +285,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L410)
+Defined in:  [generated/pipeline/Pipeline.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L410)
 
 ### predict\_proba()
 
@@ -379,7 +311,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L452)
+Defined in:  [generated/pipeline/Pipeline.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L452)
 
 ### score()
 
@@ -406,7 +338,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L492)
+Defined in:  [generated/pipeline/Pipeline.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L492)
 
 ### score\_samples()
 
@@ -431,7 +363,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L539)
+Defined in:  [generated/pipeline/Pipeline.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L539)
 
 ### set\_output()
 
@@ -456,7 +388,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L574)
+Defined in:  [generated/pipeline/Pipeline.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L574)
 
 ### transform()
 
@@ -483,4 +415,72 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/pipeline/Pipeline.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/pipeline/Pipeline.ts#L611)
+Defined in:  [generated/pipeline/Pipeline.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L611)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/pipeline/Pipeline.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L25)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/pipeline/Pipeline.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L24)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/pipeline/Pipeline.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L23)
+
+### id
+
+> `string`
+
+Defined in:  [generated/pipeline/Pipeline.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L20)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/pipeline/Pipeline.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L21)
+
+## Accessors
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/pipeline/Pipeline.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L49)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/pipeline/Pipeline.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L53)
+
+Defined in:  [generated/pipeline/Pipeline.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L49) [generated/pipeline/Pipeline.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/pipeline/Pipeline.ts#L53)

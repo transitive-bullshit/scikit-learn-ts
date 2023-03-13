@@ -37,169 +37,7 @@ new ElasticNet(opts?: object): ElasticNet;
 
 [`ElasticNet`](ElasticNet.md)
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/ElasticNet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/ElasticNet.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/linear\_model/ElasticNet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/linear\_model/ElasticNet.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/linear\_model/ElasticNet.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L17)
-
-## Accessors
-
-### coef\_
-
-Parameter vector (w in the cost function formula).
-
-#### Signature
-
-```ts
-coef_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/linear\_model/ElasticNet.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L464)
-
-### dual\_gap\_
-
-Given param alpha, the dual gaps at the end of the optimization, same shape as each observation of y.
-
-#### Signature
-
-```ts
-dual_gap_(): Promise<number | ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`number` \| `ArrayLike`\>
-
-Defined in: [generated/linear\_model/ElasticNet.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L533)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/linear\_model/ElasticNet.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L581)
-
-### intercept\_
-
-Independent term in decision function.
-
-#### Signature
-
-```ts
-intercept_(): Promise<number | ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`number` \| `ArrayLike`\>
-
-Defined in: [generated/linear\_model/ElasticNet.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L487)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/linear\_model/ElasticNet.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L556)
-
-### n\_iter\_
-
-Number of iterations run by the coordinate descent solver to reach the specified tolerance.
-
-#### Signature
-
-```ts
-n_iter_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/linear\_model/ElasticNet.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L510)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/linear\_model/ElasticNet.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L103)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/linear\_model/ElasticNet.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L107)
+Defined in:  [generated/linear\_model/ElasticNet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L23)
 
 ## Methods
 
@@ -219,7 +57,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L166)
+Defined in:  [generated/linear\_model/ElasticNet.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L166)
 
 ### fit()
 
@@ -245,7 +83,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L183)
+Defined in:  [generated/linear\_model/ElasticNet.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L183)
 
 ### init()
 
@@ -269,7 +107,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L116)
+Defined in:  [generated/linear\_model/ElasticNet.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L116)
 
 ### path()
 
@@ -310,7 +148,7 @@ path(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L243)
+Defined in:  [generated/linear\_model/ElasticNet.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L243)
 
 ### predict()
 
@@ -333,7 +171,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L384)
+Defined in:  [generated/linear\_model/ElasticNet.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L384)
 
 ### score()
 
@@ -360,4 +198,166 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L417)
+Defined in:  [generated/linear\_model/ElasticNet.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L417)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/ElasticNet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/ElasticNet.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/linear\_model/ElasticNet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/linear\_model/ElasticNet.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/linear\_model/ElasticNet.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L17)
+
+## Accessors
+
+### coef\_
+
+Parameter vector (w in the cost function formula).
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/linear\_model/ElasticNet.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L464)
+
+### dual\_gap\_
+
+Given param alpha, the dual gaps at the end of the optimization, same shape as each observation of y.
+
+#### Signature
+
+```ts
+dual_gap_(): Promise<number | ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`number` \| `ArrayLike`\>
+
+Defined in: [generated/linear\_model/ElasticNet.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L533)
+
+### feature\_names\_in\_
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/linear\_model/ElasticNet.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L581)
+
+### intercept\_
+
+Independent term in decision function.
+
+#### Signature
+
+```ts
+intercept_(): Promise<number | ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`number` \| `ArrayLike`\>
+
+Defined in: [generated/linear\_model/ElasticNet.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L487)
+
+### n\_features\_in\_
+
+Number of features seen during fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/linear\_model/ElasticNet.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L556)
+
+### n\_iter\_
+
+Number of iterations run by the coordinate descent solver to reach the specified tolerance.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/linear\_model/ElasticNet.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L510)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/linear\_model/ElasticNet.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L103)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/linear\_model/ElasticNet.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L107)

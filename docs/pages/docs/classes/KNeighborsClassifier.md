@@ -34,185 +34,7 @@ new KNeighborsClassifier(opts?: object): KNeighborsClassifier;
 
 [`KNeighborsClassifier`](KNeighborsClassifier.md)
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L17)
-
-## Accessors
-
-### classes\_
-
-Class labels known to the classifier
-
-#### Signature
-
-```ts
-classes_(): Promise<any[]>;
-```
-
-#### Returns
-
-`Promise`\<`any`[]\>
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L434)
-
-### effective\_metric\_
-
-The distance metric used. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
-
-#### Signature
-
-```ts
-effective_metric_(): Promise<string>;
-```
-
-#### Returns
-
-`Promise`\<`string`\>
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L461)
-
-### effective\_metric\_params\_
-
-Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
-
-#### Signature
-
-```ts
-effective_metric_params_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L488)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L542)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L515)
-
-### n\_samples\_fit\_
-
-Number of samples in the fitted data.
-
-#### Signature
-
-```ts
-n_samples_fit_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L569)
-
-### outputs\_2d\_
-
-False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise `true`.
-
-#### Signature
-
-```ts
-outputs_2d_(): Promise<boolean>;
-```
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L596)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L84)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/neighbors/KNeighborsClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L88)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L23)
 
 ## Methods
 
@@ -232,7 +54,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L147)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L147)
 
 ### fit()
 
@@ -256,7 +78,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L164)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L164)
 
 ### init()
 
@@ -280,7 +102,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L97)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L97)
 
 ### kneighbors()
 
@@ -307,7 +129,7 @@ kneighbors(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L208)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L208)
 
 ### kneighbors\_graph()
 
@@ -332,7 +154,7 @@ kneighbors_graph(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L259)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L259)
 
 ### predict()
 
@@ -355,7 +177,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L311)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L311)
 
 ### predict\_proba()
 
@@ -378,7 +200,7 @@ predict_proba(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L346)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L346)
 
 ### score()
 
@@ -405,4 +227,182 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L385)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L385)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L17)
+
+## Accessors
+
+### classes\_
+
+Class labels known to the classifier
+
+#### Signature
+
+```ts
+classes_(): Promise<any[]>;
+```
+
+#### Returns
+
+`Promise`\<`any`[]\>
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L434)
+
+### effective\_metric\_
+
+The distance metric used. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
+
+#### Signature
+
+```ts
+effective_metric_(): Promise<string>;
+```
+
+#### Returns
+
+`Promise`\<`string`\>
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L461)
+
+### effective\_metric\_params\_
+
+Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
+
+#### Signature
+
+```ts
+effective_metric_params_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L488)
+
+### feature\_names\_in\_
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L542)
+
+### n\_features\_in\_
+
+Number of features seen during fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L515)
+
+### n\_samples\_fit\_
+
+Number of samples in the fitted data.
+
+#### Signature
+
+```ts
+n_samples_fit_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L569)
+
+### outputs\_2d\_
+
+False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise `true`.
+
+#### Signature
+
+```ts
+outputs_2d_(): Promise<boolean>;
+```
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L596)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L84)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/neighbors/KNeighborsClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L88)

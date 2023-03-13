@@ -32,165 +32,7 @@ new LearningCurveDisplay(opts?: object): LearningCurveDisplay;
 
 [`LearningCurveDisplay`](LearningCurveDisplay.md)
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L25)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L19)
-
-## Accessors
-
-### ax\_
-
-Axes with the learning curve.
-
-#### Signature
-
-```ts
-ax_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L423)
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L423)
-
-### errorbar\_
-
-When the `std\_display\_style` is `"errorbar"`, this is a list of `matplotlib.container.ErrorbarContainer` objects. If another style is used, `errorbar\_` is `undefined`.
-
-#### Signature
-
-```ts
-errorbar_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L477)
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L477)
-
-### figure\_
-
-Figure containing the learning curve.
-
-#### Signature
-
-```ts
-figure_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L450)
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L450)
-
-### fill\_between\_
-
-When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.collections.PolyCollection` objects. If another style is used, `fill\_between\_` is `undefined`.
-
-#### Signature
-
-```ts
-fill_between_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L531)
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L531)
-
-### lines\_
-
-When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.lines.Line2D` objects corresponding to the mean train and test scores. If another style is used, `line\_` is `undefined`.
-
-#### Signature
-
-```ts
-lines_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L504)
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L504)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L54)
-
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50) [generated/model\_selection/LearningCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L54)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L25)
 
 ## Methods
 
@@ -210,7 +52,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L117)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L117)
 
 ### from\_estimator()
 
@@ -256,7 +98,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L134)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L134)
 
 ### init()
 
@@ -280,7 +122,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L63)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L63)
 
 ### plot()
 
@@ -311,4 +153,162 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L332)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L332)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L23)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L22)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L21)
+
+### id
+
+> `string`
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L18)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L19)
+
+## Accessors
+
+### ax\_
+
+Axes with the learning curve.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L423)
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L423)
+
+### errorbar\_
+
+When the `std\_display\_style` is `"errorbar"`, this is a list of `matplotlib.container.ErrorbarContainer` objects. If another style is used, `errorbar\_` is `undefined`.
+
+#### Signature
+
+```ts
+errorbar_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L477)
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L477)
+
+### figure\_
+
+Figure containing the learning curve.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L450)
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L450)
+
+### fill\_between\_
+
+When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.collections.PolyCollection` objects. If another style is used, `fill\_between\_` is `undefined`.
+
+#### Signature
+
+```ts
+fill_between_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L531)
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L531)
+
+### lines\_
+
+When the `std\_display\_style` is `"fill\_between"`, this is a list of `matplotlib.lines.Line2D` objects corresponding to the mean train and test scores. If another style is used, `line\_` is `undefined`.
+
+#### Signature
+
+```ts
+lines_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L504)
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L504)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L54)
+
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50) [generated/model\_selection/LearningCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L54)

@@ -40,199 +40,7 @@ new SGDOneClassSVM(opts?: object): SGDOneClassSVM;
 
 [`SGDOneClassSVM`](SGDOneClassSVM.md)
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L25)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L19)
-
-## Accessors
-
-### coef\_
-
-Weights assigned to the features.
-
-#### Signature
-
-```ts
-coef_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L501)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L501)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:644](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L644)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:644](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L644)
-
-### loss\_function\_
-
-#### Signature
-
-```ts
-loss_function_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L594)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L594)
-
-### n\_features\_in\_
-
-Number of features seen during [fit](../../glossary.html#term-fit).
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L619)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L619)
-
-### n\_iter\_
-
-The actual number of iterations to reach the stopping criterion.
-
-#### Signature
-
-```ts
-n_iter_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L549)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L549)
-
-### offset\_
-
-Offset used to define the decision function from the raw scores. We have the relation: decision\_function = score\_samples - offset.
-
-#### Signature
-
-```ts
-offset_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L524)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L524)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L114)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L118)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L114) [generated/linear\_model/SGDOneClassSVM.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L118)
-
-### t\_
-
-Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
-
-#### Signature
-
-```ts
-t_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L574)
-
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L574)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L25)
 
 ## Methods
 
@@ -259,7 +67,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L198)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L198)
 
 ### densify()
 
@@ -283,7 +91,7 @@ densify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L235)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L235)
 
 ### dispose()
 
@@ -301,7 +109,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L179)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L179)
 
 ### fit()
 
@@ -330,7 +138,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L263)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L263)
 
 ### fit\_predict()
 
@@ -356,7 +164,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L322)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L322)
 
 ### init()
 
@@ -380,7 +188,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L127)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L127)
 
 ### partial\_fit()
 
@@ -405,7 +213,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L360)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L360)
 
 ### predict()
 
@@ -428,7 +236,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L405)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L405)
 
 ### score\_samples()
 
@@ -451,7 +259,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L438)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L438)
 
 ### sparsify()
 
@@ -477,4 +285,196 @@ sparsify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L475)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L475)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L23)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L22)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L21)
+
+### id
+
+> `string`
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L18)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L19)
+
+## Accessors
+
+### coef\_
+
+Weights assigned to the features.
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike[]>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L501)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L501)
+
+### feature\_names\_in\_
+
+Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:644](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L644)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:644](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L644)
+
+### loss\_function\_
+
+#### Signature
+
+```ts
+loss_function_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L594)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L594)
+
+### n\_features\_in\_
+
+Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L619)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L619)
+
+### n\_iter\_
+
+The actual number of iterations to reach the stopping criterion.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L549)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L549)
+
+### offset\_
+
+Offset used to define the decision function from the raw scores. We have the relation: decision\_function = score\_samples - offset.
+
+#### Signature
+
+```ts
+offset_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L524)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L524)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L114)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L118)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L114) [generated/linear\_model/SGDOneClassSVM.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L118)
+
+### t\_
+
+Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
+
+#### Signature
+
+```ts
+t_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L574)
+
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L574)

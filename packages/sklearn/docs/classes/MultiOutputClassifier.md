@@ -28,147 +28,7 @@ new MultiOutputClassifier(opts?: object): MultiOutputClassifier;
 
 [`MultiOutputClassifier`](MultiOutputClassifier.md)
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L17)
-
-## Accessors
-
-### classes\_
-
-Class labels.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L349)
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L349)
-
-### estimators\_
-
-Estimators used for predictions.
-
-#### Signature
-
-```ts
-estimators_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L376)
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L376)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L430)
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L430)
-
-### n\_features\_in\_
-
-Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `estimator` exposes such an attribute when fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L403)
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L403)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L42)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L46)
-
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L42) [generated/multioutput/MultiOutputClassifier.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L46)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L23)
 
 ## Methods
 
@@ -188,7 +48,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L99)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L99)
 
 ### fit()
 
@@ -214,7 +74,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L116)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L116)
 
 ### init()
 
@@ -238,7 +98,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L55)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L55)
 
 ### partial\_fit()
 
@@ -264,7 +124,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L172)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L172)
 
 ### predict()
 
@@ -287,7 +147,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L232)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L232)
 
 ### predict\_proba()
 
@@ -312,7 +172,7 @@ predict_proba(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L269)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L269)
 
 ### score()
 
@@ -336,4 +196,144 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L307)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L307)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L17)
+
+## Accessors
+
+### classes\_
+
+Class labels.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L349)
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L349)
+
+### estimators\_
+
+Estimators used for predictions.
+
+#### Signature
+
+```ts
+estimators_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L376)
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L376)
+
+### feature\_names\_in\_
+
+Names of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimators expose such an attribute when fit.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L430)
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L430)
+
+### n\_features\_in\_
+
+Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying `estimator` exposes such an attribute when fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L403)
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L403)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L42)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L46)
+
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L42) [generated/multioutput/MultiOutputClassifier.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L46)

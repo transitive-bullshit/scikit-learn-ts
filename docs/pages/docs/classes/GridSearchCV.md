@@ -42,251 +42,7 @@ new GridSearchCV(opts?: object): GridSearchCV;
 
 [`GridSearchCV`](GridSearchCV.md)
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L29)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/model\_selection/GridSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L27)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/model\_selection/GridSearchCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L26)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/model\_selection/GridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L25)
-
-### id
-
-> `string`
-
-Defined in:  [generated/model\_selection/GridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L22)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/model\_selection/GridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L23)
-
-## Accessors
-
-### best\_estimator\_
-
-Estimator that was chosen by the search, i.e. estimator which gave highest score (or smallest loss if specified) on the left out data. Not available if `refit=False`.
-
-See `refit` parameter for more information on allowed values.
-
-#### Signature
-
-```ts
-best_estimator_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L562)
-
-### best\_index\_
-
-The index (of the `cv\_results\_` arrays) which corresponds to the best candidate parameter setting.
-
-The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best\_score\_`).
-
-For multi-metric evaluation, this is present only if `refit` is specified.
-
-#### Signature
-
-```ts
-best_index_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L647)
-
-### best\_params\_
-
-Parameter setting that gave the best results on the hold out data.
-
-For multi-metric evaluation, this is present only if `refit` is specified.
-
-#### Signature
-
-```ts
-best_params_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L618)
-
-### best\_score\_
-
-Mean cross-validated score of the best\_estimator
-
-For multi-metric evaluation, this is present only if `refit` is specified.
-
-This attribute is not available if `refit` is a function.
-
-#### Signature
-
-```ts
-best_score_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L591)
-
-### cv\_results\_
-
-A dict with keys as column headers and values as columns, that can be imported into a pandas `DataFrame`.
-
-For instance the below given table
-
-#### Signature
-
-```ts
-cv_results_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L535)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L774)
-
-### multimetric\_
-
-Whether or not the scorers compute several metrics.
-
-#### Signature
-
-```ts
-multimetric_(): Promise<boolean>;
-```
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L749)
-
-### n\_splits\_
-
-The number of cross-validation splits (folds/iterations).
-
-#### Signature
-
-```ts
-n_splits_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L697)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/model\_selection/GridSearchCV.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L104)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L108)
-
-### refit\_time\_
-
-Seconds used for refitting the best model on the whole dataset.
-
-This is present only if `refit` is not `false`.
-
-#### Signature
-
-```ts
-refit_time_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L724)
-
-### scorer\_
-
-Scorer function used on the held out data to choose the best parameters for the model.
-
-For multi-metric evaluation, this attribute holds the validated `scoring` dict which maps the scorer key to the scorer callable.
-
-#### Signature
-
-```ts
-scorer_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/model\_selection/GridSearchCV.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L674)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L29)
 
 ## Methods
 
@@ -313,7 +69,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L186)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L186)
 
 ### dispose()
 
@@ -331,7 +87,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L167)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L167)
 
 ### fit()
 
@@ -357,7 +113,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L221)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L221)
 
 ### init()
 
@@ -381,7 +137,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L117)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L117)
 
 ### inverse\_transform()
 
@@ -406,7 +162,7 @@ inverse_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L279)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L279)
 
 ### predict()
 
@@ -431,7 +187,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L316)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L316)
 
 ### predict\_log\_proba()
 
@@ -456,7 +212,7 @@ predict_log_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L351)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L351)
 
 ### predict\_proba()
 
@@ -481,7 +237,7 @@ predict_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L388)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L388)
 
 ### score()
 
@@ -507,7 +263,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L423)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L423)
 
 ### score\_samples()
 
@@ -532,7 +288,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L465)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L465)
 
 ### transform()
 
@@ -557,4 +313,248 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L500)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L500)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/model\_selection/GridSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L27)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/model\_selection/GridSearchCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L26)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/model\_selection/GridSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L25)
+
+### id
+
+> `string`
+
+Defined in:  [generated/model\_selection/GridSearchCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L22)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/model\_selection/GridSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L23)
+
+## Accessors
+
+### best\_estimator\_
+
+Estimator that was chosen by the search, i.e. estimator which gave highest score (or smallest loss if specified) on the left out data. Not available if `refit=False`.
+
+See `refit` parameter for more information on allowed values.
+
+#### Signature
+
+```ts
+best_estimator_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L562)
+
+### best\_index\_
+
+The index (of the `cv\_results\_` arrays) which corresponds to the best candidate parameter setting.
+
+The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the parameter setting for the best model, that gives the highest mean score (`search.best\_score\_`).
+
+For multi-metric evaluation, this is present only if `refit` is specified.
+
+#### Signature
+
+```ts
+best_index_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L647)
+
+### best\_params\_
+
+Parameter setting that gave the best results on the hold out data.
+
+For multi-metric evaluation, this is present only if `refit` is specified.
+
+#### Signature
+
+```ts
+best_params_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L618)
+
+### best\_score\_
+
+Mean cross-validated score of the best\_estimator
+
+For multi-metric evaluation, this is present only if `refit` is specified.
+
+This attribute is not available if `refit` is a function.
+
+#### Signature
+
+```ts
+best_score_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L591)
+
+### cv\_results\_
+
+A dict with keys as column headers and values as columns, that can be imported into a pandas `DataFrame`.
+
+For instance the below given table
+
+#### Signature
+
+```ts
+cv_results_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L535)
+
+### feature\_names\_in\_
+
+Names of features seen during fit. Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:774](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L774)
+
+### multimetric\_
+
+Whether or not the scorers compute several metrics.
+
+#### Signature
+
+```ts
+multimetric_(): Promise<boolean>;
+```
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L749)
+
+### n\_splits\_
+
+The number of cross-validation splits (folds/iterations).
+
+#### Signature
+
+```ts
+n_splits_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L697)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/model\_selection/GridSearchCV.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L104)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L108)
+
+### refit\_time\_
+
+Seconds used for refitting the best model on the whole dataset.
+
+This is present only if `refit` is not `false`.
+
+#### Signature
+
+```ts
+refit_time_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L724)
+
+### scorer\_
+
+Scorer function used on the held out data to choose the best parameters for the model.
+
+For multi-metric evaluation, this attribute holds the validated `scoring` dict which maps the scorer key to the scorer callable.
+
+#### Signature
+
+```ts
+scorer_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/model\_selection/GridSearchCV.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L674)

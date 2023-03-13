@@ -28,87 +28,7 @@ new WhiteKernel(opts?: object): WhiteKernel;
 
 [`WhiteKernel`](WhiteKernel.md)
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L17)
-
-## Accessors
-
-### hyperparameter\_noise\_level
-
-#### Signature
-
-```ts
-hyperparameter_noise_level(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L250)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L40)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L44)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L23)
 
 ## Methods
 
@@ -135,7 +55,7 @@ __call__(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L110)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L110)
 
 ### clone\_with\_theta()
 
@@ -158,7 +78,7 @@ clone_with_theta(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L159)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L159)
 
 ### diag()
 
@@ -183,7 +103,7 @@ diag(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L194)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L194)
 
 ### dispose()
 
@@ -201,7 +121,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L93)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L93)
 
 ### init()
 
@@ -225,7 +145,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L53)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L53)
 
 ### is\_stationary()
 
@@ -247,4 +167,84 @@ is_stationary(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L227)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L227)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L17)
+
+## Accessors
+
+### hyperparameter\_noise\_level
+
+#### Signature
+
+```ts
+hyperparameter_noise_level(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L250)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L40)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L44)

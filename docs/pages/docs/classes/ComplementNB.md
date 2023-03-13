@@ -33,201 +33,7 @@ new ComplementNB(opts?: object): ComplementNB;
 
 [`ComplementNB`](ComplementNB.md)
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L25)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L19)
-
-## Accessors
-
-### class\_count\_
-
-Number of samples encountered for each class during fitting. This value is weighted by the sample weight when provided.
-
-#### Signature
-
-```ts
-class_count_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L438)
-
-### class\_log\_prior\_
-
-Smoothed empirical log probability for each class. Only used in edge case with a single class in the training set.
-
-#### Signature
-
-```ts
-class_log_prior_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L463)
-
-### classes\_
-
-Class labels known to the classifier
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L488)
-
-### feature\_all\_
-
-Number of samples encountered for each feature during fitting. This value is weighted by the sample weight when provided.
-
-#### Signature
-
-```ts
-feature_all_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L511)
-
-### feature\_count\_
-
-Number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
-
-#### Signature
-
-```ts
-feature_count_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L536)
-
-### feature\_log\_prob\_
-
-Empirical weights for class complements.
-
-#### Signature
-
-```ts
-feature_log_prob_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L561)
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L611)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L586)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L63)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/naive\_bayes/ComplementNB.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L67)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L25)
 
 ## Methods
 
@@ -247,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L122)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L122)
 
 ### fit()
 
@@ -272,7 +78,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L139)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L139)
 
 ### init()
 
@@ -296,7 +102,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L76)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L76)
 
 ### partial\_fit()
 
@@ -328,7 +134,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L192)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L192)
 
 ### predict()
 
@@ -351,7 +157,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L250)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L250)
 
 ### predict\_joint\_log\_proba()
 
@@ -376,7 +182,7 @@ predict_joint_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L285)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L285)
 
 ### predict\_log\_proba()
 
@@ -399,7 +205,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L321)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L321)
 
 ### predict\_proba()
 
@@ -422,7 +228,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L356)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L356)
 
 ### score()
 
@@ -449,4 +255,198 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L391)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L391)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L23)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L22)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L21)
+
+### id
+
+> `string`
+
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L18)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L19)
+
+## Accessors
+
+### class\_count\_
+
+Number of samples encountered for each class during fitting. This value is weighted by the sample weight when provided.
+
+#### Signature
+
+```ts
+class_count_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L438)
+
+### class\_log\_prior\_
+
+Smoothed empirical log probability for each class. Only used in edge case with a single class in the training set.
+
+#### Signature
+
+```ts
+class_log_prior_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L463)
+
+### classes\_
+
+Class labels known to the classifier
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L488)
+
+### feature\_all\_
+
+Number of samples encountered for each feature during fitting. This value is weighted by the sample weight when provided.
+
+#### Signature
+
+```ts
+feature_all_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L511)
+
+### feature\_count\_
+
+Number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+
+#### Signature
+
+```ts
+feature_count_(): Promise<ArrayLike[]>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L536)
+
+### feature\_log\_prob\_
+
+Empirical weights for class complements.
+
+#### Signature
+
+```ts
+feature_log_prob_(): Promise<ArrayLike[]>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`[]\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L561)
+
+### feature\_names\_in\_
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L611)
+
+### n\_features\_in\_
+
+Number of features seen during fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L586)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L63)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/naive\_bayes/ComplementNB.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L67)

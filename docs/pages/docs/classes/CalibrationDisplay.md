@@ -33,121 +33,7 @@ new CalibrationDisplay(opts?: object): CalibrationDisplay;
 
 [`CalibrationDisplay`](CalibrationDisplay.md)
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L25)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/calibration/CalibrationDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/calibration/CalibrationDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/calibration/CalibrationDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/calibration/CalibrationDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/calibration/CalibrationDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L19)
-
-## Accessors
-
-### ax\_
-
-Axes with calibration curve.
-
-#### Signature
-
-```ts
-ax_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/calibration/CalibrationDisplay.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L426)
-
-### figure\_
-
-Figure containing the curve.
-
-#### Signature
-
-```ts
-figure_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/calibration/CalibrationDisplay.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L453)
-
-### line\_
-
-Calibration curve.
-
-#### Signature
-
-```ts
-line_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/calibration/CalibrationDisplay.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L399)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/calibration/CalibrationDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L55)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/calibration/CalibrationDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L59)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L25)
 
 ## Methods
 
@@ -167,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L122)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L122)
 
 ### from\_estimator()
 
@@ -205,7 +91,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L145)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L145)
 
 ### from\_predictions()
 
@@ -242,7 +128,7 @@ from_predictions(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L249)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L249)
 
 ### init()
 
@@ -266,7 +152,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L68)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L68)
 
 ### plot()
 
@@ -294,4 +180,118 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L345)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L345)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/calibration/CalibrationDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L23)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/calibration/CalibrationDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L22)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/calibration/CalibrationDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L21)
+
+### id
+
+> `string`
+
+Defined in:  [generated/calibration/CalibrationDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L18)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/calibration/CalibrationDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L19)
+
+## Accessors
+
+### ax\_
+
+Axes with calibration curve.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/calibration/CalibrationDisplay.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L426)
+
+### figure\_
+
+Figure containing the curve.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/calibration/CalibrationDisplay.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L453)
+
+### line\_
+
+Calibration curve.
+
+#### Signature
+
+```ts
+line_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/calibration/CalibrationDisplay.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L399)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/calibration/CalibrationDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L55)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/calibration/CalibrationDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L59)

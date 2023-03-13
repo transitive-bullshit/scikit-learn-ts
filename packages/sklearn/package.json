@@ -4,6 +4,7 @@
   "description": "Use Python's #1 machine learning library from Node.js",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "repository": "transitive-bullshit/scikit-learn-ts",
+  "homepage": "https://sklearn.vercel.app",
   "license": "MIT",
   "type": "module",
   "source": "./src/index.ts",

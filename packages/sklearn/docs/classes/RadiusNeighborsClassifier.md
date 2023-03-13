@@ -35,219 +35,7 @@ new RadiusNeighborsClassifier(opts?: object): RadiusNeighborsClassifier;
 
 [`RadiusNeighborsClassifier`](RadiusNeighborsClassifier.md)
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L17)
-
-## Accessors
-
-### classes\_
-
-Class labels known to the classifier.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L466)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L466)
-
-### effective\_metric\_
-
-The distance metric used. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
-
-#### Signature
-
-```ts
-effective_metric_(): Promise<string>;
-```
-
-#### Returns
-
-`Promise`\<`string`\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L493)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L493)
-
-### effective\_metric\_params\_
-
-Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
-
-#### Signature
-
-```ts
-effective_metric_params_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L520)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L520)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L574)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L574)
-
-### n\_features\_in\_
-
-Number of features seen during [fit](../../glossary.html#term-fit).
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L547)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L547)
-
-### n\_samples\_fit\_
-
-Number of samples in the fitted data.
-
-#### Signature
-
-```ts
-n_samples_fit_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L601)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L601)
-
-### outlier\_label\_
-
-Label which is given for outlier samples (samples with no neighbors on given radius).
-
-#### Signature
-
-```ts
-outlier_label_(): Promise<number | ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`number` \| [`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L628)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L628)
-
-### outputs\_2d\_
-
-False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise `true`.
-
-#### Signature
-
-```ts
-outputs_2d_(): Promise<boolean>;
-```
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L655)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L655)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L93)
-
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89) [generated/neighbors/RadiusNeighborsClassifier.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L93)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L23)
 
 ## Methods
 
@@ -267,7 +55,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L154)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L154)
 
 ### fit()
 
@@ -291,7 +79,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L171)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L171)
 
 ### init()
 
@@ -315,7 +103,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L102)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L102)
 
 ### predict()
 
@@ -338,7 +126,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L213)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L213)
 
 ### predict\_proba()
 
@@ -361,7 +149,7 @@ predict_proba(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L250)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L250)
 
 ### radius\_neighbors()
 
@@ -391,7 +179,7 @@ radius_neighbors(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L292)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L292)
 
 ### radius\_neighbors\_graph()
 
@@ -419,7 +207,7 @@ radius_neighbors_graph(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L352)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L352)
 
 ### score()
 
@@ -446,4 +234,216 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L415)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L415)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L17)
+
+## Accessors
+
+### classes\_
+
+Class labels known to the classifier.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L466)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L466)
+
+### effective\_metric\_
+
+The distance metric used. It will be same as the `metric` parameter or a synonym of it, e.g. ‘euclidean’ if the `metric` parameter set to ‘minkowski’ and `p` parameter set to 2.
+
+#### Signature
+
+```ts
+effective_metric_(): Promise<string>;
+```
+
+#### Returns
+
+`Promise`\<`string`\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L493)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L493)
+
+### effective\_metric\_params\_
+
+Additional keyword arguments for the metric function. For most metrics will be same with `metric\_params` parameter, but may also contain the `p` parameter value if the `effective\_metric\_` attribute is set to ‘minkowski’.
+
+#### Signature
+
+```ts
+effective_metric_params_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L520)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L520)
+
+### feature\_names\_in\_
+
+Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L574)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L574)
+
+### n\_features\_in\_
+
+Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L547)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L547)
+
+### n\_samples\_fit\_
+
+Number of samples in the fitted data.
+
+#### Signature
+
+```ts
+n_samples_fit_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L601)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L601)
+
+### outlier\_label\_
+
+Label which is given for outlier samples (samples with no neighbors on given radius).
+
+#### Signature
+
+```ts
+outlier_label_(): Promise<number | ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`number` \| [`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L628)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L628)
+
+### outputs\_2d\_
+
+False when `y`’s shape is (n\_samples, ) or (n\_samples, 1) during fit otherwise `true`.
+
+#### Signature
+
+```ts
+outputs_2d_(): Promise<boolean>;
+```
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L655)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L655)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L93)
+
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L89) [generated/neighbors/RadiusNeighborsClassifier.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L93)

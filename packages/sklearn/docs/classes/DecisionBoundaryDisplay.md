@@ -33,129 +33,7 @@ new DecisionBoundaryDisplay(opts?: object): DecisionBoundaryDisplay;
 
 [`DecisionBoundaryDisplay`](DecisionBoundaryDisplay.md)
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
-
-### id
-
-> `string`
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
-
-## Accessors
-
-### ax\_
-
-Axes with confusion matrix.
-
-#### Signature
-
-```ts
-ax_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L326)
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L326)
-
-### figure\_
-
-Figure containing the confusion matrix.
-
-#### Signature
-
-```ts
-figure_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L353)
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L353)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L59)
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55) [generated/inspection/DecisionBoundaryDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L59)
-
-### surface\_
-
-If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.7.1)"). If `plot\_method` is ‘pcolormesh’, `surface\_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.7.1)").
-
-#### Signature
-
-```ts
-surface_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L299)
-
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L299)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
 
 ## Methods
 
@@ -175,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L118)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L118)
 
 ### from\_estimator()
 
@@ -209,7 +87,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L137)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L137)
 
 ### init()
 
@@ -233,7 +111,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L68)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L68)
 
 ### plot()
 
@@ -260,4 +138,126 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L238)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L238)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
+
+### id
+
+> `string`
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
+
+## Accessors
+
+### ax\_
+
+Axes with confusion matrix.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L326)
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L326)
+
+### figure\_
+
+Figure containing the confusion matrix.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L353)
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L353)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L59)
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55) [generated/inspection/DecisionBoundaryDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L59)
+
+### surface\_
+
+If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadContourSet`](https://matplotlib.org/stable/api/contour_api.html#matplotlib.contour.QuadContourSet "(in Matplotlib v3.7.1)"). If `plot\_method` is ‘pcolormesh’, `surface\_` is a [`QuadMesh`](https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.QuadMesh "(in Matplotlib v3.7.1)").
+
+#### Signature
+
+```ts
+surface_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L299)
+
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L299)

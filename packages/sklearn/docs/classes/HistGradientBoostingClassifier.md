@@ -52,219 +52,7 @@ new HistGradientBoostingClassifier(opts?: object): HistGradientBoostingClassifie
 
 [`HistGradientBoostingClassifier`](HistGradientBoostingClassifier.md)
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L29)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L27)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L26)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L25)
-
-### id
-
-> `string`
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L22)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L23)
-
-## Accessors
-
-### classes\_
-
-Class labels.
-
-#### Signature
-
-```ts
-classes_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L626)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L626)
-
-### do\_early\_stopping\_
-
-Indicates whether early stopping is used during training.
-
-#### Signature
-
-```ts
-do_early_stopping_(): Promise<boolean>;
-```
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L653)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L653)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:815](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L815)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:815](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L815)
-
-### is\_categorical\_
-
-Boolean mask for the categorical features. `undefined` if there are no categorical features.
-
-#### Signature
-
-```ts
-is_categorical_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L761)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L761)
-
-### n\_features\_in\_
-
-Number of features seen during [fit](../../glossary.html#term-fit).
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L788)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L788)
-
-### n\_trees\_per\_iteration\_
-
-The number of tree that are built at each iteration. This is equal to 1 for binary classification, and to `n\_classes` for multiclass classification.
-
-#### Signature
-
-```ts
-n_trees_per_iteration_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L680)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L680)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L178)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L182)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L178) [generated/ensemble/HistGradientBoostingClassifier.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L182)
-
-### train\_score\_
-
-The scores at each iteration on the training data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. If `scoring` is not ‘loss’, scores are computed on a subset of at most 10 000 samples. Empty if no early stopping.
-
-#### Signature
-
-```ts
-train_score_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L707)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L707)
-
-### validation\_score\_
-
-The scores at each iteration on the held-out validation data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. Empty if no early stopping or if `validation\_fraction` is `undefined`.
-
-#### Signature
-
-```ts
-validation_score_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L734)
-
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L734)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L29)
 
 ## Methods
 
@@ -289,7 +77,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L288)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L288)
 
 ### dispose()
 
@@ -307,7 +95,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L271)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L271)
 
 ### fit()
 
@@ -332,7 +120,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L326)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L326)
 
 ### init()
 
@@ -356,7 +144,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L191)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L191)
 
 ### predict()
 
@@ -379,7 +167,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L377)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L377)
 
 ### predict\_proba()
 
@@ -402,7 +190,7 @@ predict_proba(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L414)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L414)
 
 ### score()
 
@@ -429,7 +217,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L454)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L454)
 
 ### staged\_decision\_function()
 
@@ -454,7 +242,7 @@ staged_decision_function(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L508)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L508)
 
 ### staged\_predict()
 
@@ -479,7 +267,7 @@ staged_predict(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L548)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L548)
 
 ### staged\_predict\_proba()
 
@@ -504,4 +292,216 @@ staged_predict_proba(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L588)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L588)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L27)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L26)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L25)
+
+### id
+
+> `string`
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L22)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L23)
+
+## Accessors
+
+### classes\_
+
+Class labels.
+
+#### Signature
+
+```ts
+classes_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L626)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L626)
+
+### do\_early\_stopping\_
+
+Indicates whether early stopping is used during training.
+
+#### Signature
+
+```ts
+do_early_stopping_(): Promise<boolean>;
+```
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L653)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L653)
+
+### feature\_names\_in\_
+
+Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:815](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L815)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:815](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L815)
+
+### is\_categorical\_
+
+Boolean mask for the categorical features. `undefined` if there are no categorical features.
+
+#### Signature
+
+```ts
+is_categorical_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L761)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L761)
+
+### n\_features\_in\_
+
+Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L788)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L788)
+
+### n\_trees\_per\_iteration\_
+
+The number of tree that are built at each iteration. This is equal to 1 for binary classification, and to `n\_classes` for multiclass classification.
+
+#### Signature
+
+```ts
+n_trees_per_iteration_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L680)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L680)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L178)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L182)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L178) [generated/ensemble/HistGradientBoostingClassifier.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L182)
+
+### train\_score\_
+
+The scores at each iteration on the training data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. If `scoring` is not ‘loss’, scores are computed on a subset of at most 10 000 samples. Empty if no early stopping.
+
+#### Signature
+
+```ts
+train_score_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L707)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L707)
+
+### validation\_score\_
+
+The scores at each iteration on the held-out validation data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. Empty if no early stopping or if `validation\_fraction` is `undefined`.
+
+#### Signature
+
+```ts
+validation_score_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L734)
+
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L734)

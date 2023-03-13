@@ -37,153 +37,7 @@ new DecisionTreeRegressor(opts?: object): DecisionTreeRegressor;
 
 [`DecisionTreeRegressor`](DecisionTreeRegressor.md)
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L17)
-
-## Accessors
-
-### feature\_names\_in\_
-
-Names of features seen during fit. Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<`ArrayLike`\>
-
-Defined in: [generated/tree/DecisionTreeRegressor.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L605)
-
-### max\_features\_
-
-The inferred value of max\_features.
-
-#### Signature
-
-```ts
-max_features_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/tree/DecisionTreeRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L551)
-
-### n\_features\_in\_
-
-Number of features seen during fit.
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/tree/DecisionTreeRegressor.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L578)
-
-### n\_outputs\_
-
-The number of outputs when `fit` is performed.
-
-#### Signature
-
-```ts
-n_outputs_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in: [generated/tree/DecisionTreeRegressor.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L632)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L99)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in: [generated/tree/DecisionTreeRegressor.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L103)
-
-### tree\_
-
-The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and Understanding the decision tree structure for basic usage of these attributes.
-
-#### Signature
-
-```ts
-tree_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in: [generated/tree/DecisionTreeRegressor.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L659)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L23)
 
 ## Methods
 
@@ -209,7 +63,7 @@ apply(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L189)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L189)
 
 ### cost\_complexity\_pruning\_path()
 
@@ -236,7 +90,7 @@ cost_complexity_pruning_path(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L235)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L235)
 
 ### decision\_path()
 
@@ -260,7 +114,7 @@ decision_path(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L287)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L287)
 
 ### dispose()
 
@@ -278,7 +132,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L172)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L172)
 
 ### fit()
 
@@ -304,7 +158,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L334)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L334)
 
 ### get\_depth()
 
@@ -328,7 +182,7 @@ get_depth(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L394)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L394)
 
 ### get\_n\_leaves()
 
@@ -350,7 +204,7 @@ get_n_leaves(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L424)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L424)
 
 ### init()
 
@@ -374,7 +228,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L112)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L112)
 
 ### predict()
 
@@ -400,7 +254,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L456)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L456)
 
 ### score()
 
@@ -427,4 +281,150 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L502)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L502)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L17)
+
+## Accessors
+
+### feature\_names\_in\_
+
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<`ArrayLike`\>
+
+Defined in: [generated/tree/DecisionTreeRegressor.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L605)
+
+### max\_features\_
+
+The inferred value of max\_features.
+
+#### Signature
+
+```ts
+max_features_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/tree/DecisionTreeRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L551)
+
+### n\_features\_in\_
+
+Number of features seen during fit.
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/tree/DecisionTreeRegressor.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L578)
+
+### n\_outputs\_
+
+The number of outputs when `fit` is performed.
+
+#### Signature
+
+```ts
+n_outputs_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in: [generated/tree/DecisionTreeRegressor.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L632)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L99)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in: [generated/tree/DecisionTreeRegressor.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L103)
+
+### tree\_
+
+The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and Understanding the decision tree structure for basic usage of these attributes.
+
+#### Signature
+
+```ts
+tree_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/tree/DecisionTreeRegressor.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L659)

@@ -32,165 +32,7 @@ new PredictionErrorDisplay(opts?: object): PredictionErrorDisplay;
 
 [`PredictionErrorDisplay`](PredictionErrorDisplay.md)
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L27)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L25)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L24)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L23)
-
-### id
-
-> `string`
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L20)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L21)
-
-## Accessors
-
-### ax\_
-
-Axes with the different matplotlib axis.
-
-#### Signature
-
-```ts
-ax_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L436)
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L436)
-
-### errors\_lines\_
-
-Residual lines. If `with\_errors=False`, then it is set to `undefined`.
-
-#### Signature
-
-```ts
-errors_lines_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L382)
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L382)
-
-### figure\_
-
-Figure containing the scatter and lines.
-
-#### Signature
-
-```ts
-figure_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L463)
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L463)
-
-### line\_
-
-Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal line for `kind="predictions"` and a horizontal line for `kind="residuals"`.
-
-#### Signature
-
-```ts
-line_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L355)
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L355)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L46)
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42) [generated/metrics/PredictionErrorDisplay.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L46)
-
-### scatter\_
-
-Scatter data points.
-
-#### Signature
-
-```ts
-scatter_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L409)
-
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L409)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L27)
 
 ## Methods
 
@@ -210,7 +52,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L101)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L101)
 
 ### from\_estimator()
 
@@ -243,7 +85,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L120)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L120)
 
 ### from\_predictions()
 
@@ -275,7 +117,7 @@ from_predictions(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L214)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L214)
 
 ### init()
 
@@ -299,7 +141,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L55)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L55)
 
 ### plot()
 
@@ -327,4 +169,162 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L301)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L301)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L25)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L24)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L23)
+
+### id
+
+> `string`
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L20)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L21)
+
+## Accessors
+
+### ax\_
+
+Axes with the different matplotlib axis.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L436)
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L436)
+
+### errors\_lines\_
+
+Residual lines. If `with\_errors=False`, then it is set to `undefined`.
+
+#### Signature
+
+```ts
+errors_lines_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L382)
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L382)
+
+### figure\_
+
+Figure containing the scatter and lines.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L463)
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L463)
+
+### line\_
+
+Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal line for `kind="predictions"` and a horizontal line for `kind="residuals"`.
+
+#### Signature
+
+```ts
+line_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L355)
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L355)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L46)
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42) [generated/metrics/PredictionErrorDisplay.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L46)
+
+### scatter\_
+
+Scatter data points.
+
+#### Signature
+
+```ts
+scatter_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L409)
+
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L409)

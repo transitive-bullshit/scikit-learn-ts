@@ -12,5 +12,31 @@
   "excludeExternals": true,
   "excludeInternal": true,
   "preserveAnchorCasing": true,
-  "entryDocument": "readme.md"
+  "entryDocument": "readme.md",
+  "kindSortOrder": [
+    "Reference",
+    "Project",
+    "Module",
+    "Namespace",
+    "Enum",
+    "EnumMember",
+    "Class",
+    "Interface",
+    "TypeAlias",
+    "Constructor",
+    "Method",
+    "Property",
+    "Variable",
+    "Function",
+    "Accessor",
+    "ObjectLiteral",
+    "Parameter",
+    "TypeParameter",
+    "TypeLiteral",
+    "CallSignature",
+    "ConstructorSignature",
+    "IndexSignature",
+    "GetSignature",
+    "SetSignature"
+  ]
 }

@@ -7,4 +7,4 @@ The version of the python `scikit-learn` module this package was built with.
 Other versions may work, but there may be minor differences in the generated
 types. We recommend against using other major versions.
 
-Defined in:  [python.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/python.ts#L14)
+Defined in:  [python.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/python.ts#L14)

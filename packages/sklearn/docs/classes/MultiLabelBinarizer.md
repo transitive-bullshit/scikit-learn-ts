@@ -28,93 +28,7 @@ new MultiLabelBinarizer(opts?: object): MultiLabelBinarizer;
 
 [`MultiLabelBinarizer`](MultiLabelBinarizer.md)
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17)
-
-## Accessors
-
-### classes\_
-
-A copy of the `classes` parameter when provided. Otherwise it corresponds to the sorted set of classes found when fitting.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L300)
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L300)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L44)
-
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40) [generated/preprocessing/MultiLabelBinarizer.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L44)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
 
 ## Methods
 
@@ -134,7 +48,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L99)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L99)
 
 ### fit()
 
@@ -157,7 +71,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L116)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L116)
 
 ### fit\_transform()
 
@@ -180,7 +94,7 @@ fit_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L151)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L151)
 
 ### init()
 
@@ -204,7 +118,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L53)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L53)
 
 ### inverse\_transform()
 
@@ -227,7 +141,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L188)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L188)
 
 ### set\_output()
 
@@ -252,7 +166,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L228)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L228)
 
 ### transform()
 
@@ -275,4 +189,90 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L265)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L265)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17)
+
+## Accessors
+
+### classes\_
+
+A copy of the `classes` parameter when provided. Otherwise it corresponds to the sorted set of classes found when fitting.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L300)
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L300)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L44)
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40) [generated/preprocessing/MultiLabelBinarizer.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L44)

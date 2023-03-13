@@ -41,219 +41,7 @@ new PassiveAggressiveClassifier(opts?: object): PassiveAggressiveClassifier;
 
 [`PassiveAggressiveClassifier`](PassiveAggressiveClassifier.md)
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L23)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L21)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L20)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L19)
-
-### id
-
-> `string`
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L16)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L17)
-
-## Accessors
-
-### classes\_
-
-The unique classes labels.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L669)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L669)
-
-### coef\_
-
-Weights assigned to the features.
-
-#### Signature
-
-```ts
-coef_(): Promise<ArrayLike[][]>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L534)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L534)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L615)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L615)
-
-### intercept\_
-
-Constants in decision function.
-
-#### Signature
-
-```ts
-intercept_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L561)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L561)
-
-### loss\_function\_
-
-Loss function used by the algorithm.
-
-#### Signature
-
-```ts
-loss_function_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L723)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L723)
-
-### n\_features\_in\_
-
-Number of features seen during [fit](../../glossary.html#term-fit).
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L588)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L588)
-
-### n\_iter\_
-
-The actual number of iterations to reach the stopping criterion. For multiclass fits, it is the maximum over every binary fit.
-
-#### Signature
-
-```ts
-n_iter_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L642)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L642)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L133)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L137)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L133) [generated/linear\_model/PassiveAggressiveClassifier.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L137)
-
-### t\_
-
-Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
-
-#### Signature
-
-```ts
-t_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L696)
-
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L696)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L23)
 
 ## Methods
 
@@ -280,7 +68,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L227)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L227)
 
 ### densify()
 
@@ -304,7 +92,7 @@ densify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L267)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L267)
 
 ### dispose()
 
@@ -322,7 +110,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L208)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L208)
 
 ### fit()
 
@@ -348,7 +136,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L297)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L297)
 
 ### init()
 
@@ -372,7 +160,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L146)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L146)
 
 ### partial\_fit()
 
@@ -397,7 +185,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L357)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L357)
 
 ### predict()
 
@@ -420,7 +208,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L409)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L409)
 
 ### score()
 
@@ -447,7 +235,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L449)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L449)
 
 ### sparsify()
 
@@ -473,4 +261,216 @@ sparsify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L504)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L504)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L21)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L20)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L19)
+
+### id
+
+> `string`
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L16)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L17)
+
+## Accessors
+
+### classes\_
+
+The unique classes labels.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L669)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L669)
+
+### coef\_
+
+Weights assigned to the features.
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike[][]>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L534)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L534)
+
+### feature\_names\_in\_
+
+Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L615)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L615)
+
+### intercept\_
+
+Constants in decision function.
+
+#### Signature
+
+```ts
+intercept_(): Promise<ArrayLike[]>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L561)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L561)
+
+### loss\_function\_
+
+Loss function used by the algorithm.
+
+#### Signature
+
+```ts
+loss_function_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L723)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L723)
+
+### n\_features\_in\_
+
+Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L588)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L588)
+
+### n\_iter\_
+
+The actual number of iterations to reach the stopping criterion. For multiclass fits, it is the maximum over every binary fit.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L642)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L642)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L133)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L137)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L133) [generated/linear\_model/PassiveAggressiveClassifier.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L137)
+
+### t\_
+
+Number of weight updates performed during training. Same as `(n\_iter\_ \* n\_samples + 1)`.
+
+#### Signature
+
+```ts
+t_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L696)
+
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L696)

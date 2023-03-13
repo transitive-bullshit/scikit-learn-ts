@@ -49,295 +49,7 @@ new LogisticRegressionCV(opts?: object): LogisticRegressionCV;
 
 [`LogisticRegressionCV`](LogisticRegressionCV.md)
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25)
-
-### id
-
-> `string`
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23)
-
-## Accessors
-
-### C\_
-
-Array of C that maps to the best scores across every class. If refit is set to `false`, then for each class, the best C is the average of the C’s that correspond to the best scores for each fold. `C\_` is of shape(n\_classes,) when the problem is binary.
-
-#### Signature
-
-```ts
-C_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L754)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L754)
-
-### Cs\_
-
-Array of C i.e. inverse of regularization parameter values used for cross-validation.
-
-#### Signature
-
-```ts
-Cs_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L646)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L646)
-
-### classes\_
-
-A list of class labels known to the classifier.
-
-#### Signature
-
-```ts
-classes_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L561)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L561)
-
-### coef\_
-
-Coefficient of the features in the decision function.
-
-`coef\_` is of shape (1, n\_features) when the given problem is binary.
-
-#### Signature
-
-```ts
-coef_(): Promise<ArrayLike[]>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L590)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L590)
-
-### coefs\_paths\_
-
-dict with classes as the keys, and the path of coefficients obtained during cross-validating across each fold and then across each Cs after doing an OvR for the corresponding class as values. If the ‘multi\_class’ option is set to ‘multinomial’, then the coefs\_paths are the coefficients corresponding to each class. Each dict value has shape `(n\_folds, n\_cs, n\_features)` or `(n\_folds, n\_cs, n\_features + 1)` depending on whether the intercept is fit or not. If `penalty='elasticnet'`, the shape is `(n\_folds, n\_cs, n\_l1\_ratios\_, n\_features)` or `(n\_folds, n\_cs, n\_l1\_ratios\_, n\_features + 1)`.
-
-#### Signature
-
-```ts
-coefs_paths_(): Promise<ArrayLike[][]>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L700)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L700)
-
-### feature\_names\_in\_
-
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
-
-#### Signature
-
-```ts
-feature_names_in_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L862)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L862)
-
-### intercept\_
-
-Intercept (a.k.a. bias) added to the decision function.
-
-If `fit\_intercept` is set to `false`, the intercept is set to zero. `intercept\_` is of shape(1,) when the problem is binary.
-
-#### Signature
-
-```ts
-intercept_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L619)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L619)
-
-### l1\_ratio\_
-
-Array of l1\_ratio that maps to the best scores across every class. If refit is set to `false`, then for each class, the best l1\_ratio is the average of the l1\_ratio’s that correspond to the best scores for each fold. `l1\_ratio\_` is of shape(n\_classes,) when the problem is binary.
-
-#### Signature
-
-```ts
-l1_ratio_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L781)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L781)
-
-### l1\_ratios\_
-
-Array of l1\_ratios used for cross-validation. If no l1\_ratio is used (i.e. penalty is not ‘elasticnet’), this is set to `\[`undefined`\]`
-
-#### Signature
-
-```ts
-l1_ratios_(): Promise<ArrayLike>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L673)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L673)
-
-### n\_features\_in\_
-
-Number of features seen during [fit](../../glossary.html#term-fit).
-
-#### Signature
-
-```ts
-n_features_in_(): Promise<number>;
-```
-
-#### Returns
-
-`Promise`\<`number`\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L835)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L835)
-
-### n\_iter\_
-
-Actual number of iterations for all classes, folds and Cs. In the binary or multinomial cases, the first dimension is equal to 1. If `penalty='elasticnet'`, the shape is `(n\_classes, n\_folds, n\_cs, n\_l1\_ratios)` or `(1, n\_folds, n\_cs, n\_l1\_ratios)`.
-
-#### Signature
-
-```ts
-n_iter_(): Promise<ArrayLike[][]>;
-```
-
-#### Returns
-
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L808)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L808)
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L157)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153) [generated/linear\_model/LogisticRegressionCV.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L157)
-
-### scores\_
-
-dict with classes as the keys, and the values as the grid of scores obtained during cross-validating each fold, after doing an OvR for the corresponding class. If the ‘multi\_class’ option given is ‘multinomial’ then the same scores are repeated across all classes, since this is the multinomial class. Each dict value has shape `(n\_folds, n\_cs)` or `(n\_folds, n\_cs, n\_l1\_ratios)` if `penalty='elasticnet'`.
-
-#### Signature
-
-```ts
-scores_(): Promise<any>;
-```
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L727)
-
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L727)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
 
 ## Methods
 
@@ -364,7 +76,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L247)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L247)
 
 ### densify()
 
@@ -388,7 +100,7 @@ densify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L287)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L287)
 
 ### dispose()
 
@@ -406,7 +118,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L228)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L228)
 
 ### fit()
 
@@ -431,7 +143,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L315)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L315)
 
 ### init()
 
@@ -455,7 +167,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L166)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L166)
 
 ### predict()
 
@@ -478,7 +190,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L364)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L364)
 
 ### predict\_log\_proba()
 
@@ -503,7 +215,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L401)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L401)
 
 ### predict\_proba()
 
@@ -530,7 +242,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L443)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L443)
 
 ### score()
 
@@ -555,7 +267,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L480)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L480)
 
 ### sparsify()
 
@@ -581,4 +293,292 @@ sparsify(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L533)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L533)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25)
+
+### id
+
+> `string`
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23)
+
+## Accessors
+
+### C\_
+
+Array of C that maps to the best scores across every class. If refit is set to `false`, then for each class, the best C is the average of the C’s that correspond to the best scores for each fold. `C\_` is of shape(n\_classes,) when the problem is binary.
+
+#### Signature
+
+```ts
+C_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L754)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L754)
+
+### Cs\_
+
+Array of C i.e. inverse of regularization parameter values used for cross-validation.
+
+#### Signature
+
+```ts
+Cs_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L646)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L646)
+
+### classes\_
+
+A list of class labels known to the classifier.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L561)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L561)
+
+### coef\_
+
+Coefficient of the features in the decision function.
+
+`coef\_` is of shape (1, n\_features) when the given problem is binary.
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike[]>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L590)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L590)
+
+### coefs\_paths\_
+
+dict with classes as the keys, and the path of coefficients obtained during cross-validating across each fold and then across each Cs after doing an OvR for the corresponding class as values. If the ‘multi\_class’ option is set to ‘multinomial’, then the coefs\_paths are the coefficients corresponding to each class. Each dict value has shape `(n\_folds, n\_cs, n\_features)` or `(n\_folds, n\_cs, n\_features + 1)` depending on whether the intercept is fit or not. If `penalty='elasticnet'`, the shape is `(n\_folds, n\_cs, n\_l1\_ratios\_, n\_features)` or `(n\_folds, n\_cs, n\_l1\_ratios\_, n\_features + 1)`.
+
+#### Signature
+
+```ts
+coefs_paths_(): Promise<ArrayLike[][]>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L700)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L700)
+
+### feature\_names\_in\_
+
+Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L862)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L862)
+
+### intercept\_
+
+Intercept (a.k.a. bias) added to the decision function.
+
+If `fit\_intercept` is set to `false`, the intercept is set to zero. `intercept\_` is of shape(1,) when the problem is binary.
+
+#### Signature
+
+```ts
+intercept_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L619)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L619)
+
+### l1\_ratio\_
+
+Array of l1\_ratio that maps to the best scores across every class. If refit is set to `false`, then for each class, the best l1\_ratio is the average of the l1\_ratio’s that correspond to the best scores for each fold. `l1\_ratio\_` is of shape(n\_classes,) when the problem is binary.
+
+#### Signature
+
+```ts
+l1_ratio_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L781)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L781)
+
+### l1\_ratios\_
+
+Array of l1\_ratios used for cross-validation. If no l1\_ratio is used (i.e. penalty is not ‘elasticnet’), this is set to `\[`undefined`\]`
+
+#### Signature
+
+```ts
+l1_ratios_(): Promise<ArrayLike>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L673)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L673)
+
+### n\_features\_in\_
+
+Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
+
+#### Returns
+
+`Promise`\<`number`\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L835)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L835)
+
+### n\_iter\_
+
+Actual number of iterations for all classes, folds and Cs. In the binary or multinomial cases, the first dimension is equal to 1. If `penalty='elasticnet'`, the shape is `(n\_classes, n\_folds, n\_cs, n\_l1\_ratios)` or `(1, n\_folds, n\_cs, n\_l1\_ratios)`.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<ArrayLike[][]>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L808)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L808)
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L157)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L153) [generated/linear\_model/LogisticRegressionCV.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L157)
+
+### scores\_
+
+dict with classes as the keys, and the values as the grid of scores obtained during cross-validating each fold, after doing an OvR for the corresponding class. If the ‘multi\_class’ option given is ‘multinomial’ then the same scores are repeated across all classes, since this is the multinomial class. Each dict value has shape `(n\_folds, n\_cs)` or `(n\_folds, n\_cs, n\_l1\_ratios)` if `penalty='elasticnet'`.
+
+#### Signature
+
+```ts
+scores_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L727)
+
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L727)

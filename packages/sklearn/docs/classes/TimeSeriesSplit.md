@@ -36,75 +36,7 @@ new TimeSeriesSplit(opts?: object): TimeSeriesSplit;
 
 [`TimeSeriesSplit`](TimeSeriesSplit.md)
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L29)
-
-## Properties
-
-### \_isDisposed
-
-> `boolean`  = `false`
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L27)
-
-### \_isInitialized
-
-> `boolean`  = `false`
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L26)
-
-### \_py
-
-> `PythonBridge`
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L25)
-
-### id
-
-> `string`
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L22)
-
-### opts
-
-> `any`
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L23)
-
-## Accessors
-
-### py
-
-#### Signature
-
-```ts
-py(): PythonBridge;
-```
-
-#### Returns
-
-`PythonBridge`
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L58)
-
-#### Signature
-
-```ts
-py(pythonBridge: PythonBridge): void;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pythonBridge` | `PythonBridge` |
-
-#### Returns
-
-`void`
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L62)
-
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L58) [generated/model\_selection/TimeSeriesSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L62)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L29)
 
 ## Methods
 
@@ -124,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L115)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L115)
 
 ### get\_n\_splits()
 
@@ -149,7 +81,7 @@ get_n_splits(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L132)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L132)
 
 ### init()
 
@@ -173,7 +105,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L71)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L71)
 
 ### split()
 
@@ -198,4 +130,72 @@ split(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/2fdf83f/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L175)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L175)
+
+## Properties
+
+### \_isDisposed
+
+> `boolean`  = `false`
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L27)
+
+### \_isInitialized
+
+> `boolean`  = `false`
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L26)
+
+### \_py
+
+> `PythonBridge`
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L25)
+
+### id
+
+> `string`
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L22)
+
+### opts
+
+> `any`
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L23)
+
+## Accessors
+
+### py
+
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
+
+#### Returns
+
+`PythonBridge`
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L58)
+
+#### Signature
+
+```ts
+py(pythonBridge: PythonBridge): void;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pythonBridge` | `PythonBridge` |
+
+#### Returns
+
+`void`
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L62)
+
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L58) [generated/model\_selection/TimeSeriesSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L62)
