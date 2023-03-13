@@ -8,7 +8,7 @@
 
 Training samples.
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L372)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L372)
 
 ### Y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/cross\_decomposition/PLSSVD.ts:372](https://github.com/t
 
 Targets.
 
-Defined in:  [generated/cross\_decomposition/PLSSVD.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L377)
+Defined in:  [generated/cross\_decomposition/PLSSVD.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSSVD.ts#L377)

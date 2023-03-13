@@ -8,7 +8,7 @@
 
 An array of points to query
 
-Defined in:  [generated/neighbors/KDTree.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L435)
+Defined in:  [generated/neighbors/KDTree.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L435)
 
 ### breadth\_first?
 
@@ -20,7 +20,7 @@ if `true`, then query the nodes in a breadth-first manner. Otherwise, query the 
 
 `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L463)
+Defined in:  [generated/neighbors/KDTree.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L463)
 
 ### dualtree?
 
@@ -32,7 +32,7 @@ if `true`, use the dual tree formalism for the query: a tree is built for the qu
 
 `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L456)
+Defined in:  [generated/neighbors/KDTree.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L456)
 
 ### k?
 
@@ -44,7 +44,7 @@ The number of nearest neighbors to return
 
 `1`
 
-Defined in:  [generated/neighbors/KDTree.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L442)
+Defined in:  [generated/neighbors/KDTree.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L442)
 
 ### return\_distance?
 
@@ -56,7 +56,7 @@ if `true`, return a tuple (d, i) of distances and indices if `false`, return arr
 
 `true`
 
-Defined in:  [generated/neighbors/KDTree.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L449)
+Defined in:  [generated/neighbors/KDTree.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L449)
 
 ### sort\_results?
 
@@ -68,4 +68,4 @@ if `true`, then distances and indices of each point are sorted on return, so tha
 
 `true`
 
-Defined in:  [generated/neighbors/KDTree.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L470)
+Defined in:  [generated/neighbors/KDTree.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L470)

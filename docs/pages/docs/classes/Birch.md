@@ -4,7 +4,7 @@ Implements the BIRCH clustering algorithm.
 
 It is a memory-efficient, online-learning algorithm provided as an alternative to [`MiniBatchKMeans`](sklearn.cluster.MiniBatchKMeans.html#sklearn.cluster.MiniBatchKMeans "sklearn.cluster.MiniBatchKMeans"). It constructs a tree data structure with the cluster centroids being read off the leaf. These can be either the final cluster centroids or can be provided as input to another clustering algorithm such as [`AgglomerativeClustering`](sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering "sklearn.cluster.AgglomerativeClustering").
 
-Read more in the [User Guide](../clustering.html#birch).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.Birch.html)
 
@@ -22,13 +22,13 @@ new Birch(opts?: BirchOptions): Birch;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`BirchOptions`](../interfaces/BirchOptions.md) |
+| `opts?` | `BirchOptions` |
 
 ### Returns
 
 [`Birch`](Birch.md)
 
-Defined in:  [generated/cluster/Birch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L25)
+Defined in:  [generated/cluster/Birch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/cluster/Birch.ts:25](https://github.com/transitive-bulls
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/Birch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L23)
+Defined in:  [generated/cluster/Birch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/Birch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L22)
+Defined in:  [generated/cluster/Birch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/Birch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L21)
+Defined in:  [generated/cluster/Birch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/Birch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L18)
+Defined in:  [generated/cluster/Birch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/Birch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L19)
+Defined in:  [generated/cluster/Birch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L19)
 
 ## Accessors
 
@@ -78,11 +78,11 @@ dummy_leaf_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/cluster/Birch.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L369)
+Defined in: [generated/cluster/Birch.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L369)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -92,9 +92,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L487)
+Defined in: [generated/cluster/Birch.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L487)
 
 ### labels\_
 
@@ -108,13 +108,13 @@ labels_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L442)
+Defined in: [generated/cluster/Birch.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L442)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -126,7 +126,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/Birch.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L464)
+Defined in: [generated/cluster/Birch.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L464)
 
 ### py
 
@@ -140,7 +140,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/Birch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L30)
+Defined in:  [generated/cluster/Birch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L30)
 
 #### Signature
 
@@ -158,7 +158,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/cluster/Birch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L34)
+Defined in: [generated/cluster/Birch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L34)
 
 ### root\_
 
@@ -174,7 +174,7 @@ root_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/cluster/Birch.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L347)
+Defined in: [generated/cluster/Birch.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L347)
 
 ### subcluster\_centers\_
 
@@ -188,9 +188,9 @@ subcluster_centers_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L392)
+Defined in: [generated/cluster/Birch.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L392)
 
 ### subcluster\_labels\_
 
@@ -204,9 +204,9 @@ subcluster_labels_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/Birch.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L417)
+Defined in: [generated/cluster/Birch.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L417)
 
 ## Methods
 
@@ -226,7 +226,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/Birch.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L88)
+Defined in:  [generated/cluster/Birch.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L88)
 
 ### fit()
 
@@ -242,13 +242,13 @@ fit(opts: BirchFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchFitOptions`](../interfaces/BirchFitOptions.md) |
+| `opts` | `BirchFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/Birch.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L105)
+Defined in:  [generated/cluster/Birch.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L105)
 
 ### fit\_predict()
 
@@ -264,13 +264,13 @@ fit_predict(opts: BirchFitPredictOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchFitPredictOptions`](../interfaces/BirchFitPredictOptions.md) |
+| `opts` | `BirchFitPredictOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/cluster/Birch.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L133)
+Defined in:  [generated/cluster/Birch.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L133)
 
 ### fit\_transform()
 
@@ -288,13 +288,13 @@ fit_transform(opts: BirchFitTransformOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchFitTransformOptions`](../interfaces/BirchFitTransformOptions.md) |
+| `opts` | `BirchFitTransformOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/cluster/Birch.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L163)
+Defined in:  [generated/cluster/Birch.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L163)
 
 ### get\_feature\_names\_out()
 
@@ -312,13 +312,13 @@ get_feature_names_out(opts: BirchGetFeatureNamesOutOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchGetFeatureNamesOutOptions`](../interfaces/BirchGetFeatureNamesOutOptions.md) |
+| `opts` | `BirchGetFeatureNamesOutOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/Birch.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L197)
+Defined in:  [generated/cluster/Birch.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L197)
 
 ### init()
 
@@ -342,7 +342,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/Birch.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L43)
+Defined in:  [generated/cluster/Birch.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L43)
 
 ### partial\_fit()
 
@@ -358,13 +358,13 @@ partial_fit(opts: BirchPartialFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchPartialFitOptions`](../interfaces/BirchPartialFitOptions.md) |
+| `opts` | `BirchPartialFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/Birch.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L227)
+Defined in:  [generated/cluster/Birch.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L227)
 
 ### predict()
 
@@ -382,19 +382,19 @@ predict(opts: BirchPredictOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchPredictOptions`](../interfaces/BirchPredictOptions.md) |
+| `opts` | `BirchPredictOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/Birch.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L257)
+Defined in:  [generated/cluster/Birch.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L257)
 
 ### set\_output()
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See Introducing the set\_output API for an example on how to use the API.
 
 #### Signature
 
@@ -406,13 +406,13 @@ set_output(opts: BirchSetOutputOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchSetOutputOptions`](../interfaces/BirchSetOutputOptions.md) |
+| `opts` | `BirchSetOutputOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/Birch.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L287)
+Defined in:  [generated/cluster/Birch.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L287)
 
 ### transform()
 
@@ -430,10 +430,10 @@ transform(opts: BirchTransformOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`BirchTransformOptions`](../interfaces/BirchTransformOptions.md) |
+| `opts` | `BirchTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/cluster/Birch.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L317)
+Defined in:  [generated/cluster/Birch.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L317)

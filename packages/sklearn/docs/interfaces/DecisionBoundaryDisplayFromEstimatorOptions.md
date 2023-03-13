@@ -8,7 +8,7 @@
 
 Input data that should be only 2-dimensional.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L306)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L306)
 
 ### ax?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:306](https://githu
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L349)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L349)
 
 ### eps?
 
@@ -28,7 +28,7 @@ Extends the minimum and maximum values of X for evaluating the response function
 
 `1`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L320)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L320)
 
 ### estimator?
 
@@ -36,7 +36,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:320](https://githu
 
 Trained estimator used to plot the decision boundary.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L301)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L301)
 
 ### grid\_resolution?
 
@@ -48,7 +48,7 @@ Number of grid points to use for plotting decision boundary. Higher values will 
 
 `100`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L313)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L313)
 
 ### kwargs?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:313](https://githu
 
 Additional keyword arguments to be passed to the `plot\_method`.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L354)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L354)
 
 ### plot\_method?
 
@@ -68,7 +68,7 @@ Plotting method to call when plotting the response. Please refer to the followin
 
 `'contourf'`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L327)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L327)
 
 ### response\_method?
 
@@ -80,7 +80,7 @@ Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba
 
 `'auto'`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L334)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L334)
 
 ### xlabel?
 
@@ -88,7 +88,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:334](https://githu
 
 The label used for the x-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L339)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L339)
 
 ### ylabel?
 
@@ -96,4 +96,4 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:339](https://githu
 
 The label used for the y-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L344)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L344)

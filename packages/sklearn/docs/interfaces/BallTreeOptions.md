@@ -8,7 +8,7 @@
 
 n\_samples is the number of points in the data set, and n\_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
 
-Defined in:  [generated/neighbors/BallTree.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L363)
+Defined in:  [generated/neighbors/BallTree.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L363)
 
 ### leaf\_size?
 
@@ -20,7 +20,7 @@ Number of points at which to switch to brute-force. Changing leaf\_size will not
 
 `40`
 
-Defined in:  [generated/neighbors/BallTree.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L370)
+Defined in:  [generated/neighbors/BallTree.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L370)
 
 ### metric?
 
@@ -32,4 +32,4 @@ Metric to use for distance computation. Default is “minkowski”, which result
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/BallTree.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L377)
+Defined in:  [generated/neighbors/BallTree.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L377)

@@ -8,7 +8,7 @@
 
 Deciles for feature indices in `features`.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L484)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L484)
 
 ### feature\_names?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:484](https://gith
 
 Feature names corresponding to the indices in `features`.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L474)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L474)
 
 ### features?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:474](https://gith
 
 Indices of features for a given plot. A tuple of one integer will plot a partial dependence curve of one feature. A tuple of two integers will plot a two-way partial dependence curve as a contour plot.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L469)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L469)
 
 ### is\_categorical?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:469](https://gith
 
 Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `undefined`, all features are assumed to be continuous.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L515)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L515)
 
 ### kind?
 
@@ -44,7 +44,7 @@ Whether to plot the partial dependence averaged across all the samples in the da
 
 `'average'`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L496)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L496)
 
 ### pd\_results?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:496](https://gith
 
 Results of [`partial\_dependence`](sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L464)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L464)
 
 ### pdp\_lim?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:464](https://gith
 
 Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined`, the limit will be inferred from the global minimum and maximum of all predictions.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L489)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L489)
 
 ### random\_state?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:489](https://gith
 
 Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L510)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L510)
 
 ### subsample?
 
@@ -82,7 +82,7 @@ Note that the full dataset is still used to calculate partial dependence when `k
 
 `1000`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L505)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L505)
 
 ### target\_idx?
 
@@ -90,4 +90,4 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:505](https://gith
 
 In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used.
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L479)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L479)

@@ -8,7 +8,7 @@
 
 A supervised learning estimator with a `fit` method that provides information about feature importance (e.g. `coef\_`, `feature\_importances\_`).
 
-Defined in:  [generated/feature\_selection/RFE.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFE.ts#L593)
+Defined in:  [generated/feature\_selection/RFE.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L593)
 
 ### importance\_getter?
 
@@ -24,7 +24,7 @@ If `callable`, overrides the default feature importance getter. The callable is 
 
 `'auto'`
 
-Defined in:  [generated/feature\_selection/RFE.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFE.ts#L623)
+Defined in:  [generated/feature\_selection/RFE.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L623)
 
 ### n\_features\_to\_select?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/feature\_selection/RFE.ts:623](https://github.com/transi
 
 The number of features to select. If `undefined`, half of the features are selected. If integer, the parameter is the absolute number of features to select. If float between 0 and 1, it is the fraction of features to select.
 
-Defined in:  [generated/feature\_selection/RFE.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFE.ts#L598)
+Defined in:  [generated/feature\_selection/RFE.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L598)
 
 ### step?
 
@@ -44,7 +44,7 @@ If greater than or equal to 1, then `step` corresponds to the (integer) number o
 
 `1`
 
-Defined in:  [generated/feature\_selection/RFE.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFE.ts#L605)
+Defined in:  [generated/feature\_selection/RFE.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L605)
 
 ### verbose?
 
@@ -56,4 +56,4 @@ Controls verbosity of output.
 
 `0`
 
-Defined in:  [generated/feature\_selection/RFE.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFE.ts#L612)
+Defined in:  [generated/feature\_selection/RFE.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L612)

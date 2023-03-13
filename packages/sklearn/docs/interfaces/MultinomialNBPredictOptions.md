@@ -8,4 +8,4 @@
 
 The input samples.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L585)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L585)

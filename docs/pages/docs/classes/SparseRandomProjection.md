@@ -22,13 +22,13 @@ new SparseRandomProjection(opts?: SparseRandomProjectionOptions): SparseRandomPr
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`SparseRandomProjectionOptions`](../interfaces/SparseRandomProjectionOptions.md) |
+| `opts?` | `SparseRandomProjectionOptions` |
 
 ### Returns
 
 [`SparseRandomProjection`](SparseRandomProjection.md)
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L25)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/random\_projection/SparseRandomProjection.ts:25](https:/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L23)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L22)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L21)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L18)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L19)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ components_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/random\_projection/SparseRandomProjection.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L352)
+Defined in: [generated/random\_projection/SparseRandomProjection.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L352)
 
 ### density\_
 
@@ -94,11 +94,11 @@ density_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/random\_projection/SparseRandomProjection.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L406)
+Defined in: [generated/random\_projection/SparseRandomProjection.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L406)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -108,9 +108,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/random\_projection/SparseRandomProjection.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L460)
+Defined in: [generated/random\_projection/SparseRandomProjection.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L460)
 
 ### inverse\_components\_
 
@@ -124,9 +124,9 @@ inverse_components_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/random\_projection/SparseRandomProjection.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L379)
+Defined in: [generated/random\_projection/SparseRandomProjection.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L379)
 
 ### n\_components\_
 
@@ -142,11 +142,11 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/random\_projection/SparseRandomProjection.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L325)
+Defined in: [generated/random\_projection/SparseRandomProjection.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L325)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -158,7 +158,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/random\_projection/SparseRandomProjection.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L433)
+Defined in: [generated/random\_projection/SparseRandomProjection.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L433)
 
 ### py
 
@@ -172,7 +172,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L30)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L30)
 
 #### Signature
 
@@ -190,7 +190,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/random\_projection/SparseRandomProjection.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L34)
+Defined in: [generated/random\_projection/SparseRandomProjection.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L34)
 
 ## Methods
 
@@ -210,7 +210,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L93)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L93)
 
 ### fit()
 
@@ -226,13 +226,13 @@ fit(opts: SparseRandomProjectionFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`SparseRandomProjectionFitOptions`](../interfaces/SparseRandomProjectionFitOptions.md) |
+| `opts` | `SparseRandomProjectionFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L110)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L110)
 
 ### fit\_transform()
 
@@ -250,13 +250,13 @@ fit_transform(opts: SparseRandomProjectionFitTransformOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`SparseRandomProjectionFitTransformOptions`](../interfaces/SparseRandomProjectionFitTransformOptions.md) |
+| `opts` | `SparseRandomProjectionFitTransformOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L142)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L142)
 
 ### get\_feature\_names\_out()
 
@@ -274,13 +274,13 @@ get_feature_names_out(opts: SparseRandomProjectionGetFeatureNamesOutOptions): Pr
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`SparseRandomProjectionGetFeatureNamesOutOptions`](../interfaces/SparseRandomProjectionGetFeatureNamesOutOptions.md) |
+| `opts` | `SparseRandomProjectionGetFeatureNamesOutOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L183)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L183)
 
 ### init()
 
@@ -304,7 +304,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L43)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L43)
 
 ### inverse\_transform()
 
@@ -324,19 +324,19 @@ inverse_transform(opts: SparseRandomProjectionInverseTransformOptions): Promise<
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`SparseRandomProjectionInverseTransformOptions`](../interfaces/SparseRandomProjectionInverseTransformOptions.md) |
+| `opts` | `SparseRandomProjectionInverseTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L222)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L222)
 
 ### set\_output()
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See Introducing the set\_output API for an example on how to use the API.
 
 #### Signature
 
@@ -348,13 +348,13 @@ set_output(opts: SparseRandomProjectionSetOutputOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`SparseRandomProjectionSetOutputOptions`](../interfaces/SparseRandomProjectionSetOutputOptions.md) |
+| `opts` | `SparseRandomProjectionSetOutputOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L259)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L259)
 
 ### transform()
 
@@ -370,10 +370,10 @@ transform(opts: SparseRandomProjectionTransformOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`SparseRandomProjectionTransformOptions`](../interfaces/SparseRandomProjectionTransformOptions.md) |
+| `opts` | `SparseRandomProjectionTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L291)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L291)

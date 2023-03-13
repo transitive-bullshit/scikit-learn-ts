@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/Binarizer.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L342)
+Defined in:  [generated/preprocessing/Binarizer.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L342)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/Binarizer.ts:342](https://github.com/trans
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/Binarizer.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L352)
+Defined in:  [generated/preprocessing/Binarizer.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L352)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/Binarizer.ts:352](https://github.com/trans
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/Binarizer.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L347)
+Defined in:  [generated/preprocessing/Binarizer.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L347)

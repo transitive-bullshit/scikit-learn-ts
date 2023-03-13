@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L522)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L522)
 
 ### leaf\_size?
 
@@ -24,7 +24,7 @@ Leaf size passed to BallTree or KDTree. This can affect the speed of the constru
 
 `30`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L529)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L529)
 
 ### metric?
 
@@ -40,7 +40,7 @@ Distance matrices are not supported.
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L540)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L540)
 
 ### metric\_params?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:540](https://git
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L552)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L552)
 
 ### mode?
 
@@ -60,7 +60,7 @@ Type of returned matrix: ‘connectivity’ will return the connectivity matrix 
 
 `'distance'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L508)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L508)
 
 ### n\_jobs?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:508](https://git
 
 The number of parallel jobs to run for neighbors search. If `\-1`, then the number of jobs is set to the number of CPU cores.
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L557)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L557)
 
 ### p?
 
@@ -80,7 +80,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 `2`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L547)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L547)
 
 ### radius?
 
@@ -92,4 +92,4 @@ Radius of neighborhood in the transformed sparse graph.
 
 `1`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L515)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L515)

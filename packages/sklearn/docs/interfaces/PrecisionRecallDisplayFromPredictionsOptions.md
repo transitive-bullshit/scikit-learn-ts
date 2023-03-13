@@ -8,7 +8,7 @@
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L422)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L422)
 
 ### kwargs?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:422](https://github.co
 
 Keyword arguments to be passed to matplotlib’s `plot`.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L427)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L427)
 
 ### name?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:427](https://github.co
 
 Name for labeling curve. If `undefined`, name will be set to `"Classifier"`.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L417)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L417)
 
 ### pos\_label?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:417](https://github.co
 
 The class considered as the positive class when computing the precision and recall metrics.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L412)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L412)
 
 ### sample\_weight?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:412](https://github.co
 
 Sample weights.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L407)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L407)
 
 ### y\_pred?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:407](https://github.co
 
 Estimated probabilities or output of decision function.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L402)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L402)
 
 ### y\_true?
 
@@ -56,4 +56,4 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:402](https://github.co
 
 True binary labels.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L397)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L397)

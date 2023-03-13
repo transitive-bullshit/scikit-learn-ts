@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:792](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L792)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:792](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L792)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:792](https://github.com
 
 Sample weights.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:802](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L802)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:802](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L802)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:802](https://github.com
 
 True labels for `X`.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L797)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L797)

@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L394)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L394)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/kernel\_approximation/RBFSampler.ts:394](https://github.
 
 Additional fit parameters.
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L404)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L404)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/kernel\_approximation/RBFSampler.ts:404](https://github.
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L399)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L399)

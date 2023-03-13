@@ -12,7 +12,7 @@ Inner K-means algorithm used in bisection. The classical EM-style algorithm is `
 
 `'lloyd'`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L556)
+Defined in:  [generated/cluster/BisectingKMeans.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L556)
 
 ### bisecting\_strategy?
 
@@ -24,7 +24,7 @@ Defines how bisection should be performed:
 
 `'biggest_inertia'`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L563)
+Defined in:  [generated/cluster/BisectingKMeans.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L563)
 
 ### copy\_x?
 
@@ -36,7 +36,7 @@ When pre-computing distances it is more numerically accurate to center the data 
 
 `true`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L549)
+Defined in:  [generated/cluster/BisectingKMeans.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L549)
 
 ### init?
 
@@ -54,7 +54,7 @@ If a callable is passed, it should take arguments X, n\_clusters and a random st
 
 `'random'`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L509)
+Defined in:  [generated/cluster/BisectingKMeans.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L509)
 
 ### max\_iter?
 
@@ -66,7 +66,7 @@ Maximum number of iterations of the inner k-means algorithm at each bisection.
 
 `300`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L528)
+Defined in:  [generated/cluster/BisectingKMeans.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L528)
 
 ### n\_clusters?
 
@@ -78,7 +78,7 @@ The number of clusters to form as well as the number of centroids to generate.
 
 `8`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L496)
+Defined in:  [generated/cluster/BisectingKMeans.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L496)
 
 ### n\_init?
 
@@ -90,7 +90,7 @@ Number of time the inner k-means algorithm will be run with different centroid s
 
 `1`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L516)
+Defined in:  [generated/cluster/BisectingKMeans.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L516)
 
 ### random\_state?
 
@@ -98,7 +98,7 @@ Defined in:  [generated/cluster/BisectingKMeans.ts:516](https://github.com/trans
 
 Determines random number generation for centroid initialization in inner K-Means. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L521)
+Defined in:  [generated/cluster/BisectingKMeans.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L521)
 
 ### tol?
 
@@ -110,7 +110,7 @@ Relative tolerance with regards to Frobenius norm of the difference in the clust
 
 `0.0001`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L542)
+Defined in:  [generated/cluster/BisectingKMeans.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L542)
 
 ### verbose?
 
@@ -122,4 +122,4 @@ Verbosity mode.
 
 `0`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L535)
+Defined in:  [generated/cluster/BisectingKMeans.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L535)

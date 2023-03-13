@@ -8,7 +8,7 @@
 
 An array of points to query. Last dimension should match dimension of training data.
 
-Defined in:  [generated/neighbors/KDTree.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L388)
+Defined in:  [generated/neighbors/KDTree.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L388)
 
 ### atol?
 
@@ -20,7 +20,7 @@ Specify the desired absolute tolerance of the result. If the true result is `K\_
 
 `0`
 
-Defined in:  [generated/neighbors/KDTree.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L407)
+Defined in:  [generated/neighbors/KDTree.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L407)
 
 ### breadth\_first?
 
@@ -32,7 +32,7 @@ If `true`, use a breadth-first search. If `false` (default) use a depth-first se
 
 `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L421)
+Defined in:  [generated/neighbors/KDTree.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L421)
 
 ### h?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/neighbors/KDTree.ts:421](https://github.com/transitive-b
 
 the bandwidth of the kernel
 
-Defined in:  [generated/neighbors/KDTree.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L393)
+Defined in:  [generated/neighbors/KDTree.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L393)
 
 ### kernel?
 
@@ -52,7 +52,7 @@ specify the kernel to use. Options are - ‘gaussian’ - ‘tophat’ - ‘epan
 
 `'gaussian'`
 
-Defined in:  [generated/neighbors/KDTree.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L400)
+Defined in:  [generated/neighbors/KDTree.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L400)
 
 ### return\_log?
 
@@ -64,7 +64,7 @@ Return the logarithm of the result. This can be more accurate than returning the
 
 `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L428)
+Defined in:  [generated/neighbors/KDTree.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L428)
 
 ### rtol?
 
@@ -76,4 +76,4 @@ Specify the desired relative tolerance of the result. If the true result is `K\_
 
 `1e-8`
 
-Defined in:  [generated/neighbors/KDTree.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KDTree.ts#L414)
+Defined in:  [generated/neighbors/KDTree.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L414)

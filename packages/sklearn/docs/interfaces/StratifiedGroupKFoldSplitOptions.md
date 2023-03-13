@@ -8,7 +8,7 @@
 
 Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L218)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L218)
 
 ### groups?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:218](https://gi
 
 Group labels for the samples used while splitting the dataset into train/test set.
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L228)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L228)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:228](https://gi
 
 The target variable for supervised learning problems.
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L223)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L223)

@@ -12,7 +12,7 @@ Set to `false` to perform inplace transformation and avoid a copy (if the input 
 
 `true`
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L490)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L490)
 
 ### ignore\_implicit\_zeros?
 
@@ -24,7 +24,7 @@ Only applies to sparse matrices. If `true`, the sparse entries of the matrix are
 
 `false`
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L471)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L471)
 
 ### n\_quantiles?
 
@@ -36,7 +36,7 @@ Number of quantiles to be computed. It corresponds to the number of landmarks us
 
 `1000`
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L457)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L457)
 
 ### output\_distribution?
 
@@ -48,7 +48,7 @@ Marginal distribution for the transformed data. The choices are ‘uniform’ (d
 
 `'uniform'`
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L464)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L464)
 
 ### random\_state?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/preprocessing/QuantileTransformer.ts:464](https://github
 
 Determines random number generation for subsampling and smoothing noise. Please see `subsample` for more details. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L483)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L483)
 
 ### subsample?
 
@@ -68,4 +68,4 @@ Maximum number of samples used to estimate the quantiles for computational effic
 
 `10`
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L478)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L478)

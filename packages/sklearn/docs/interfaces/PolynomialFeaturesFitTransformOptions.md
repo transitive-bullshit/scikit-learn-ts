@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L402)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L402)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/PolynomialFeatures.ts:402](https://github.
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L412)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L412)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/PolynomialFeatures.ts:412](https://github.
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L407)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L407)

@@ -4,7 +4,7 @@ LedoitWolf Estimator.
 
 Ledoit-Wolf is a particular form of shrinkage, where the shrinkage coefficient is computed using O. Ledoit and M. Wolf’s formula as described in “A Well-Conditioned Estimator for Large-Dimensional Covariance Matrices”, Ledoit and Wolf, Journal of Multivariate Analysis, Volume 88, Issue 2, February 2004, pages 365-411.
 
-Read more in the [User Guide](../covariance.html#shrunk-covariance).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html)
 
@@ -22,13 +22,13 @@ new LedoitWolf(opts?: LedoitWolfOptions): LedoitWolf;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`LedoitWolfOptions`](../interfaces/LedoitWolfOptions.md) |
+| `opts?` | `LedoitWolfOptions` |
 
 ### Returns
 
 [`LedoitWolf`](LedoitWolf.md)
 
-Defined in:  [generated/covariance/LedoitWolf.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L25)
+Defined in:  [generated/covariance/LedoitWolf.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/covariance/LedoitWolf.ts:25](https://github.com/transiti
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L23)
+Defined in:  [generated/covariance/LedoitWolf.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L22)
+Defined in:  [generated/covariance/LedoitWolf.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L21)
+Defined in:  [generated/covariance/LedoitWolf.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L18)
+Defined in:  [generated/covariance/LedoitWolf.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L19)
+Defined in:  [generated/covariance/LedoitWolf.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L19)
 
 ## Accessors
 
@@ -76,13 +76,13 @@ covariance_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/LedoitWolf.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L250)
+Defined in: [generated/covariance/LedoitWolf.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L250)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -92,9 +92,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/LedoitWolf.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L369)
+Defined in: [generated/covariance/LedoitWolf.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L369)
 
 ### location\_
 
@@ -108,13 +108,13 @@ location_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/LedoitWolf.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L275)
+Defined in: [generated/covariance/LedoitWolf.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L275)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -126,7 +126,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/LedoitWolf.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L344)
+Defined in: [generated/covariance/LedoitWolf.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L344)
 
 ### precision\_
 
@@ -140,9 +140,9 @@ precision_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/LedoitWolf.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L298)
+Defined in: [generated/covariance/LedoitWolf.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L298)
 
 ### py
 
@@ -156,7 +156,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L30)
+Defined in:  [generated/covariance/LedoitWolf.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L30)
 
 #### Signature
 
@@ -174,7 +174,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/covariance/LedoitWolf.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L34)
+Defined in: [generated/covariance/LedoitWolf.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L34)
 
 ### shrinkage\_
 
@@ -190,7 +190,7 @@ shrinkage_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/LedoitWolf.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L321)
+Defined in: [generated/covariance/LedoitWolf.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L321)
 
 ## Methods
 
@@ -210,7 +210,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/LedoitWolf.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L85)
+Defined in:  [generated/covariance/LedoitWolf.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L85)
 
 ### error\_norm()
 
@@ -226,13 +226,13 @@ error_norm(opts: LedoitWolfErrorNormOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LedoitWolfErrorNormOptions`](../interfaces/LedoitWolfErrorNormOptions.md) |
+| `opts` | `LedoitWolfErrorNormOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/LedoitWolf.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L102)
+Defined in:  [generated/covariance/LedoitWolf.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L102)
 
 ### fit()
 
@@ -248,13 +248,13 @@ fit(opts: LedoitWolfFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LedoitWolfFitOptions`](../interfaces/LedoitWolfFitOptions.md) |
+| `opts` | `LedoitWolfFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/LedoitWolf.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L134)
+Defined in:  [generated/covariance/LedoitWolf.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L134)
 
 ### get\_precision()
 
@@ -270,13 +270,13 @@ get_precision(opts: LedoitWolfGetPrecisionOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LedoitWolfGetPrecisionOptions`](../interfaces/LedoitWolfGetPrecisionOptions.md) |
+| `opts` | `LedoitWolfGetPrecisionOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/LedoitWolf.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L162)
+Defined in:  [generated/covariance/LedoitWolf.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L162)
 
 ### init()
 
@@ -300,7 +300,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/LedoitWolf.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L43)
+Defined in:  [generated/covariance/LedoitWolf.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L43)
 
 ### mahalanobis()
 
@@ -316,13 +316,13 @@ mahalanobis(opts: LedoitWolfMahalanobisOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LedoitWolfMahalanobisOptions`](../interfaces/LedoitWolfMahalanobisOptions.md) |
+| `opts` | `LedoitWolfMahalanobisOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/LedoitWolf.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L190)
+Defined in:  [generated/covariance/LedoitWolf.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L190)
 
 ### score()
 
@@ -340,10 +340,10 @@ score(opts: LedoitWolfScoreOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LedoitWolfScoreOptions`](../interfaces/LedoitWolfScoreOptions.md) |
+| `opts` | `LedoitWolfScoreOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/LedoitWolf.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L220)
+Defined in:  [generated/covariance/LedoitWolf.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L220)

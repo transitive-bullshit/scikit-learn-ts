@@ -12,7 +12,7 @@ Whether bootstrap samples are used when building trees. If `false`, the whole da
 
 `false`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L675)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L675)
 
 ### ccp\_alpha?
 
@@ -24,7 +24,7 @@ Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with 
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L728)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L728)
 
 ### class\_weight?
 
@@ -42,7 +42,7 @@ For multi-output, the weights of each column of y will be multiplied.
 
 Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L721)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L721)
 
 ### criterion?
 
@@ -54,7 +54,7 @@ The function to measure the quality of a split. Supported criteria are â€œginiâ€
 
 `'gini'`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L621)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L621)
 
 ### max\_depth?
 
@@ -62,7 +62,7 @@ Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:621](https://github.com
 
 The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L626)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L626)
 
 ### max\_features?
 
@@ -74,7 +74,7 @@ The number of features to consider when looking for the best split:
 
 `'sqrt'`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L654)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L654)
 
 ### max\_leaf\_nodes?
 
@@ -82,7 +82,7 @@ Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:654](https://github.com
 
 Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L659)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L659)
 
 ### max\_samples?
 
@@ -90,7 +90,7 @@ Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:659](https://github.com
 
 If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L733)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L733)
 
 ### min\_impurity\_decrease?
 
@@ -104,7 +104,7 @@ The weighted impurity decrease equation is the following:
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L668)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L668)
 
 ### min\_samples\_leaf?
 
@@ -116,7 +116,7 @@ The minimum number of samples required to be at a leaf node. A split point at an
 
 `1`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L640)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L640)
 
 ### min\_samples\_split?
 
@@ -128,7 +128,7 @@ The minimum number of samples required to split an internal node:
 
 `2`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L633)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L633)
 
 ### min\_weight\_fraction\_leaf?
 
@@ -140,7 +140,7 @@ The minimum weighted fraction of the sum total of weights (of all the input samp
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L647)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L647)
 
 ### n\_estimators?
 
@@ -152,7 +152,7 @@ The number of trees in the forest.
 
 `100`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L614)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L614)
 
 ### n\_jobs?
 
@@ -160,7 +160,7 @@ Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:614](https://github.com
 
 The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesClassifier.fit "sklearn.ensemble.ExtraTreesClassifier.fit"), [`predict`](#sklearn.ensemble.ExtraTreesClassifier.predict "sklearn.ensemble.ExtraTreesClassifier.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesClassifier.decision_path "sklearn.ensemble.ExtraTreesClassifier.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesClassifier.apply "sklearn.ensemble.ExtraTreesClassifier.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L687)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L687)
 
 ### oob\_score?
 
@@ -172,7 +172,7 @@ Whether to use out-of-bag samples to estimate the generalization score. Only ava
 
 `false`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L682)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L682)
 
 ### random\_state?
 
@@ -180,7 +180,7 @@ Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:682](https://github.com
 
 Controls 3 sources of randomness:
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:692](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L692)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:692](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L692)
 
 ### verbose?
 
@@ -192,7 +192,7 @@ Controls the verbosity when fitting and predicting.
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L699)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L699)
 
 ### warm\_start?
 
@@ -204,4 +204,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L706)
+Defined in:  [generated/ensemble/ExtraTreesClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesClassifier.ts#L706)

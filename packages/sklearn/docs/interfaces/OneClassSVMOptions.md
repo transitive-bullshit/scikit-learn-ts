@@ -12,7 +12,7 @@ Specify the size of the kernel cache (in MB).
 
 `200`
 
-Defined in:  [generated/svm/OneClassSVM.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L584)
+Defined in:  [generated/svm/OneClassSVM.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L584)
 
 ### coef0?
 
@@ -24,7 +24,7 @@ Independent term in kernel function. It is only significant in ‘poly’ and �
 
 `0`
 
-Defined in:  [generated/svm/OneClassSVM.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L556)
+Defined in:  [generated/svm/OneClassSVM.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L556)
 
 ### degree?
 
@@ -36,7 +36,7 @@ Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ign
 
 `3`
 
-Defined in:  [generated/svm/OneClassSVM.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L542)
+Defined in:  [generated/svm/OneClassSVM.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L542)
 
 ### gamma?
 
@@ -48,7 +48,7 @@ Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
 
 `'scale'`
 
-Defined in:  [generated/svm/OneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L549)
+Defined in:  [generated/svm/OneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L549)
 
 ### kernel?
 
@@ -60,7 +60,7 @@ Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf�
 
 `'rbf'`
 
-Defined in:  [generated/svm/OneClassSVM.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L535)
+Defined in:  [generated/svm/OneClassSVM.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L535)
 
 ### max\_iter?
 
@@ -72,7 +72,7 @@ Hard limit on iterations within solver, or -1 for no limit.
 
 `-1`
 
-Defined in:  [generated/svm/OneClassSVM.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L598)
+Defined in:  [generated/svm/OneClassSVM.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L598)
 
 ### nu?
 
@@ -84,7 +84,7 @@ An upper bound on the fraction of training errors and a lower bound of the fract
 
 `0.5`
 
-Defined in:  [generated/svm/OneClassSVM.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L570)
+Defined in:  [generated/svm/OneClassSVM.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L570)
 
 ### shrinking?
 
@@ -96,7 +96,7 @@ Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinki
 
 `true`
 
-Defined in:  [generated/svm/OneClassSVM.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L577)
+Defined in:  [generated/svm/OneClassSVM.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L577)
 
 ### tol?
 
@@ -108,7 +108,7 @@ Tolerance for stopping criterion.
 
 `0.001`
 
-Defined in:  [generated/svm/OneClassSVM.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L563)
+Defined in:  [generated/svm/OneClassSVM.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L563)
 
 ### verbose?
 
@@ -120,4 +120,4 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 `false`
 
-Defined in:  [generated/svm/OneClassSVM.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L591)
+Defined in:  [generated/svm/OneClassSVM.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L591)

@@ -8,4 +8,4 @@
 
 The precision matrix associated to the current covariance object.
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L601)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L601)

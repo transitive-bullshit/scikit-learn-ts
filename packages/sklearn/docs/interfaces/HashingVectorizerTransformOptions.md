@@ -8,4 +8,4 @@
 
 Samples. Each sample must be a text document (either bytes or unicode strings, file name or file object depending on the constructor argument) which will be tokenized and hashed.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L610)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L610)

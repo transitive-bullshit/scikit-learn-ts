@@ -8,7 +8,7 @@
 
 Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L528)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L528)
 
 ### Xy?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:528](https://github
 
 Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L571)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L571)
 
 ### alphas?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:571](https://github
 
 List of alphas where to compute the models. If `undefined` alphas are set automatically.
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L559)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L559)
 
 ### check\_input?
 
@@ -36,7 +36,7 @@ If set to `false`, the input validation checks are skipped (including the Gram m
 
 `true`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L611)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L611)
 
 ### coef\_init?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:611](https://github
 
 The initial values of the coefficients.
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L583)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L583)
 
 ### copy\_X?
 
@@ -56,7 +56,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L578)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L578)
 
 ### eps?
 
@@ -68,7 +68,7 @@ Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L547)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L547)
 
 ### l1\_ratio?
 
@@ -80,7 +80,7 @@ Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penaltie
 
 `0.5`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L540)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L540)
 
 ### n\_alphas?
 
@@ -92,7 +92,7 @@ Number of alphas along the regularization path.
 
 `100`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L554)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L554)
 
 ### params?
 
@@ -100,7 +100,7 @@ Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:554](https://github
 
 Keyword arguments passed to the coordinate descent solver.
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L616)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L616)
 
 ### positive?
 
@@ -112,7 +112,7 @@ If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim
 
 `false`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L604)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L604)
 
 ### precompute?
 
@@ -124,7 +124,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L566)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L566)
 
 ### return\_n\_iter?
 
@@ -136,7 +136,7 @@ Whether to return the number of iterations or not.
 
 `false`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L597)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L597)
 
 ### verbose?
 
@@ -148,7 +148,7 @@ Amount of verbosity.
 
 `false`
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L590)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L590)
 
 ### y?
 
@@ -156,4 +156,4 @@ Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:590](https://github
 
 Target values.
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L533)
+Defined in:  [generated/linear\_model/MultiTaskElasticNet.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNet.ts#L533)

@@ -8,7 +8,7 @@
 
 The input samples.
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L619)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L619)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:619](https://g
 
 Weights of training data.
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L629)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L629)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:629](https://g
 
 Target values.
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L624)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L624)

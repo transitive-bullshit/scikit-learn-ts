@@ -8,7 +8,7 @@
 
 Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L428)
+Defined in:  [generated/ensemble/VotingRegressor.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L428)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/VotingRegressor.ts:428](https://github.com/tran
 
 Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L438)
+Defined in:  [generated/ensemble/VotingRegressor.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L438)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/VotingRegressor.ts:438](https://github.com/tran
 
 Target values.
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L433)
+Defined in:  [generated/ensemble/VotingRegressor.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L433)

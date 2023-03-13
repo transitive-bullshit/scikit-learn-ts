@@ -12,7 +12,7 @@ The polynomial degree of the spline basis. Must be a non-negative integer.
 
 `3`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L398)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L398)
 
 ### extrapolation?
 
@@ -24,7 +24,7 @@ If ‘error’, values outside the min and max values of the training features r
 
 `'constant'`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L412)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L412)
 
 ### include\_bias?
 
@@ -36,7 +36,7 @@ If `true` (default), then the last spline element inside the data range of a fea
 
 `true`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L419)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L419)
 
 ### knots?
 
@@ -48,7 +48,7 @@ Set knot positions such that first knot <= features <= last knot.
 
 `'uniform'`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L405)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L405)
 
 ### n\_knots?
 
@@ -60,7 +60,7 @@ Number of knots of the splines if `knots` equals one of {‘uniform’, ‘quant
 
 `5`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L391)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L391)
 
 ### order?
 
@@ -72,4 +72,4 @@ Order of output array. ‘F’ order is faster to compute, but may slow down sub
 
 `'C'`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L426)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L426)

@@ -8,7 +8,7 @@
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L406)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L406)
 
 ### kwargs?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:406](https://github.com/trans
 
 Additional keywords arguments passed to matplotlib `plot` function.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L416)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L416)
 
 ### name?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:416](https://github.com/trans
 
 Name of DET curve for labeling. If `undefined`, use `estimator\_name` if it is not `undefined`, otherwise no labeling is shown.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L411)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L411)

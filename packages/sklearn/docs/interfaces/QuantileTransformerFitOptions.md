@@ -8,7 +8,7 @@
 
 The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L497)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L497)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/preprocessing/QuantileTransformer.ts:497](https://github
 
 Ignored.
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L502)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L502)

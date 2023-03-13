@@ -12,7 +12,7 @@ Whether to copy `X` and `Y` in [fit](../../glossary.html#term-fit) before applyi
 
 `true`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L691)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L691)
 
 ### max\_iter?
 
@@ -24,7 +24,7 @@ The maximum number of iterations of the power method when `algorithm='nipals'`. 
 
 `500`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L677)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L677)
 
 ### n\_components?
 
@@ -36,7 +36,7 @@ Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\
 
 `2`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L663)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L663)
 
 ### scale?
 
@@ -48,7 +48,7 @@ Whether to scale `X` and `Y`.
 
 `true`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L670)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L670)
 
 ### tol?
 
@@ -60,4 +60,4 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 `0.000001`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L684)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L684)

@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L557)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L557)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/BayesianRidge.ts:557](https://github.com/t
 
 Individual weights for each sample.
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L567)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L567)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/BayesianRidge.ts:567](https://github.com/t
 
 Target values. Will be cast to X’s dtype if necessary.
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L562)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L562)

@@ -12,7 +12,7 @@ Regularization strength; must be a positive float. Regularization improves the c
 
 `1`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L306)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L306)
 
 ### coef0?
 
@@ -24,7 +24,7 @@ Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.
 
 `1`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L332)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L332)
 
 ### degree?
 
@@ -36,7 +36,7 @@ Degree of the polynomial kernel. Ignored by other kernels.
 
 `3`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L325)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L325)
 
 ### gamma?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/kernel\_ridge/KernelRidge.ts:325](https://github.com/tra
 
 Gamma parameter for the RBF, laplacian, polynomial, exponential chi2 and sigmoid kernels. Interpretation of the default value is left to the kernel; see the documentation for sklearn.metrics.pairwise. Ignored by other kernels.
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L318)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L318)
 
 ### kernel?
 
@@ -56,7 +56,7 @@ Kernel mapping used internally. This parameter is directly passed to `pairwise\_
 
 `'linear'`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L313)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L313)
 
 ### kernel\_params?
 
@@ -64,4 +64,4 @@ Defined in:  [generated/kernel\_ridge/KernelRidge.ts:313](https://github.com/tra
 
 Additional parameters (keyword arguments) for kernel function passed as callable object.
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L337)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L337)

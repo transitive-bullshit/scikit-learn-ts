@@ -8,4 +8,4 @@
 
 Input features.
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L419)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L419)

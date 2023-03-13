@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L689)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L689)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:689](https://github.co
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L699)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L699)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:699](https://github.co
 
 True values for `X`.
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L694)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L694)

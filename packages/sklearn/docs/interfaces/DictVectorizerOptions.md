@@ -8,7 +8,7 @@
 
 The type of feature values. Passed to Numpy array/scipy.sparse matrix constructors as the dtype argument.
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L383)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L383)
 
 ### separator?
 
@@ -20,7 +20,7 @@ Separator string used when constructing new features for one-hot coding.
 
 `'='`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L390)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L390)
 
 ### sort?
 
@@ -32,7 +32,7 @@ Whether `feature\_names\_` and `vocabulary\_` should be sorted when fitting.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L404)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L404)
 
 ### sparse?
 
@@ -44,4 +44,4 @@ Whether transform should produce scipy.sparse matrices.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L397)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L397)

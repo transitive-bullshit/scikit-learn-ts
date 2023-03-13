@@ -12,7 +12,7 @@ The regularization parameter: the higher alpha, the more regularization, the spa
 
 `0.01`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L407)
+Defined in:  [generated/covariance/GraphicalLasso.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L407)
 
 ### assume\_centered?
 
@@ -24,7 +24,7 @@ If `true`, data are not centered before computation. Useful when working with da
 
 `false`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L449)
+Defined in:  [generated/covariance/GraphicalLasso.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L449)
 
 ### enet\_tol?
 
@@ -36,7 +36,7 @@ The tolerance for the elastic net solver used to calculate the descent direction
 
 `0.0001`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L428)
+Defined in:  [generated/covariance/GraphicalLasso.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L428)
 
 ### max\_iter?
 
@@ -48,7 +48,7 @@ The maximum number of iterations.
 
 `100`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L435)
+Defined in:  [generated/covariance/GraphicalLasso.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L435)
 
 ### mode?
 
@@ -60,7 +60,7 @@ The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse un
 
 `'cd'`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L414)
+Defined in:  [generated/covariance/GraphicalLasso.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L414)
 
 ### tol?
 
@@ -72,7 +72,7 @@ The tolerance to declare convergence: if the dual gap goes below this value, ite
 
 `0.0001`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L421)
+Defined in:  [generated/covariance/GraphicalLasso.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L421)
 
 ### verbose?
 
@@ -84,4 +84,4 @@ If verbose is `true`, the objective function and dual gap are plotted at each it
 
 `false`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L442)
+Defined in:  [generated/covariance/GraphicalLasso.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L442)

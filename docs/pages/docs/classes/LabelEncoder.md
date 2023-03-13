@@ -4,7 +4,7 @@ Encode target labels with value between 0 and n\_classes-1.
 
 This transformer should be used to encode target values, *i.e.* `y`, and not the input `X`.
 
-Read more in the [User Guide](../preprocessing_targets.html#preprocessing-targets).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
 
@@ -22,13 +22,13 @@ new LabelEncoder(opts?: LabelEncoderOptions): LabelEncoder;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`LabelEncoderOptions`](../interfaces/LabelEncoderOptions.md) |
+| `opts?` | `LabelEncoderOptions` |
 
 ### Returns
 
 [`LabelEncoder`](LabelEncoder.md)
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L25)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/preprocessing/LabelEncoder.ts:25](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L23)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L22)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L21)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L18)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L19)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L19)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L30)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L30)
 
 #### Signature
 
@@ -94,7 +94,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/LabelEncoder.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L34)
+Defined in: [generated/preprocessing/LabelEncoder.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L34)
 
 ## Methods
 
@@ -114,7 +114,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L83)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L83)
 
 ### fit()
 
@@ -130,13 +130,13 @@ fit(opts: LabelEncoderFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LabelEncoderFitOptions`](../interfaces/LabelEncoderFitOptions.md) |
+| `opts` | `LabelEncoderFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L100)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L100)
 
 ### fit\_transform()
 
@@ -152,13 +152,13 @@ fit_transform(opts: LabelEncoderFitTransformOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LabelEncoderFitTransformOptions`](../interfaces/LabelEncoderFitTransformOptions.md) |
+| `opts` | `LabelEncoderFitTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L128)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L128)
 
 ### init()
 
@@ -182,7 +182,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L43)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L43)
 
 ### inverse\_transform()
 
@@ -198,19 +198,19 @@ inverse_transform(opts: LabelEncoderInverseTransformOptions): Promise<ArrayLike>
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LabelEncoderInverseTransformOptions`](../interfaces/LabelEncoderInverseTransformOptions.md) |
+| `opts` | `LabelEncoderInverseTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L158)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L158)
 
 ### set\_output()
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See Introducing the set\_output API for an example on how to use the API.
 
 #### Signature
 
@@ -222,13 +222,13 @@ set_output(opts: LabelEncoderSetOutputOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LabelEncoderSetOutputOptions`](../interfaces/LabelEncoderSetOutputOptions.md) |
+| `opts` | `LabelEncoderSetOutputOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L192)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L192)
 
 ### transform()
 
@@ -244,10 +244,10 @@ transform(opts: LabelEncoderTransformOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LabelEncoderTransformOptions`](../interfaces/LabelEncoderTransformOptions.md) |
+| `opts` | `LabelEncoderTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/LabelEncoder.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L220)
+Defined in:  [generated/preprocessing/LabelEncoder.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/LabelEncoder.ts#L220)

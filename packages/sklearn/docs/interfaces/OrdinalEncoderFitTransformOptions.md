@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L411)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L411)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/OrdinalEncoder.ts:411](https://github.com/
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L421)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L421)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/OrdinalEncoder.ts:421](https://github.com/
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L416)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L416)

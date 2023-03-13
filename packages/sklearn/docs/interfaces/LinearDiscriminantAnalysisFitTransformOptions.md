@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L842)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L842)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:842
 
 Additional fit parameters.
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:852](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L852)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:852](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L852)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:852
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L847)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L847)

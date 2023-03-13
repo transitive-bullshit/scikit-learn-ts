@@ -12,7 +12,7 @@ If `true`, data will not be centered before computation. Useful when working wit
 
 `false`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L405)
+Defined in:  [generated/covariance/LedoitWolf.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L405)
 
 ### block\_size?
 
@@ -24,7 +24,7 @@ Size of blocks into which the covariance matrix will be split during its Ledoit-
 
 `1000`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L412)
+Defined in:  [generated/covariance/LedoitWolf.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L412)
 
 ### store\_precision?
 
@@ -36,4 +36,4 @@ Specify if the estimated precision is stored.
 
 `true`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L398)
+Defined in:  [generated/covariance/LedoitWolf.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L398)

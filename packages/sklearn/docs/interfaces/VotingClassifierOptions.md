@@ -8,7 +8,7 @@
 
 Invoking the `fit` method on the `VotingClassifier` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingClassifier.set_params "sklearn.ensemble.VotingClassifier.set_params").
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L512)
+Defined in:  [generated/ensemble/VotingClassifier.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L512)
 
 ### flatten\_transform?
 
@@ -20,7 +20,7 @@ Affects shape of transform output only when voting=’soft’ If voting=’soft�
 
 `true`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L536)
+Defined in:  [generated/ensemble/VotingClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L536)
 
 ### n\_jobs?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/ensemble/VotingClassifier.ts:536](https://github.com/tra
 
 The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L529)
+Defined in:  [generated/ensemble/VotingClassifier.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L529)
 
 ### verbose?
 
@@ -40,7 +40,7 @@ If `true`, the time elapsed while fitting will be printed as it is completed.
 
 `false`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L543)
+Defined in:  [generated/ensemble/VotingClassifier.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L543)
 
 ### voting?
 
@@ -52,7 +52,7 @@ If ‘hard’, uses predicted class labels for majority rule voting. Else if ‘
 
 `'hard'`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L519)
+Defined in:  [generated/ensemble/VotingClassifier.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L519)
 
 ### weights?
 
@@ -60,4 +60,4 @@ Defined in:  [generated/ensemble/VotingClassifier.ts:519](https://github.com/tra
 
 Sequence of weights (`float` or `int`) to weight the occurrences of predicted class labels (`hard` voting) or class probabilities before averaging (`soft` voting). Uses uniform weights if `undefined`.
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L524)
+Defined in:  [generated/ensemble/VotingClassifier.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L524)

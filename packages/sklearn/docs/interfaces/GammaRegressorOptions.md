@@ -12,7 +12,7 @@ Constant that multiplies the L2 penalty term and determines the regularization s
 
 `1`
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L329)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L329)
 
 ### fit\_intercept?
 
@@ -24,7 +24,7 @@ Specifies if a constant (a.k.a. bias or intercept) should be added to the linear
 
 `true`
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L336)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L336)
 
 ### max\_iter?
 
@@ -36,7 +36,7 @@ The maximal number of iterations for the solver. Values must be in the range `\[
 
 `100`
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L350)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L350)
 
 ### solver?
 
@@ -48,7 +48,7 @@ Algorithm to use in the optimization problem:
 
 `'lbfgs'`
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L343)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L343)
 
 ### tol?
 
@@ -60,7 +60,7 @@ Stopping criterion. For the lbfgs solver, the iteration will stop when `max{|g\_
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L357)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L357)
 
 ### verbose?
 
@@ -72,7 +72,7 @@ For the lbfgs solver set verbose to any positive number for verbosity. Values mu
 
 `0`
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L371)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L371)
 
 ### warm\_start?
 
@@ -84,4 +84,4 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 `false`
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L364)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L364)

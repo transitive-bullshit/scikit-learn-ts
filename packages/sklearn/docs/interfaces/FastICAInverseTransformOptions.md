@@ -8,7 +8,7 @@
 
 Sources, where `n\_samples` is the number of samples and `n\_components` is the number of components.
 
-Defined in:  [generated/decomposition/FastICA.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L550)
+Defined in:  [generated/decomposition/FastICA.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L550)
 
 ### copy?
 
@@ -20,4 +20,4 @@ If `false`, data passed to fit are overwritten. Defaults to `true`.
 
 `true`
 
-Defined in:  [generated/decomposition/FastICA.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L557)
+Defined in:  [generated/decomposition/FastICA.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L557)

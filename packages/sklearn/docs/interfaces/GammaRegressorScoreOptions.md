@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L402)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L402)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/GammaRegressor.ts:402](https://github.com/
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L412)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L412)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/GammaRegressor.ts:412](https://github.com/
 
 True values of target.
 
-Defined in:  [generated/linear\_model/GammaRegressor.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L407)
+Defined in:  [generated/linear\_model/GammaRegressor.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/GammaRegressor.ts#L407)

@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Perceptron.ts#L652)
+Defined in:  [generated/linear\_model/Perceptron.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L652)
 
 ### coef\_init?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/Perceptron.ts:652](https://github.com/tran
 
 The initial coefficients to warm-start the optimization.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Perceptron.ts#L662)
+Defined in:  [generated/linear\_model/Perceptron.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L662)
 
 ### intercept\_init?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/linear\_model/Perceptron.ts:662](https://github.com/tran
 
 The initial intercept to warm-start the optimization.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:667](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Perceptron.ts#L667)
+Defined in:  [generated/linear\_model/Perceptron.ts:667](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L667)
 
 ### sample\_weight?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/linear\_model/Perceptron.ts:667](https://github.com/tran
 
 Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Perceptron.ts#L672)
+Defined in:  [generated/linear\_model/Perceptron.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L672)
 
 ### y?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/linear\_model/Perceptron.ts:672](https://github.com/tran
 
 Target values.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Perceptron.ts#L657)
+Defined in:  [generated/linear\_model/Perceptron.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L657)

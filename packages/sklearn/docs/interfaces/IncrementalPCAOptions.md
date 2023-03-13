@@ -8,7 +8,7 @@
 
 The number of samples to use for each batch. Only used when calling `fit`. If `batch\_size` is `undefined`, then `batch\_size` is inferred from the data and set to `5 \* n\_features`, to provide a balance between approximation accuracy and memory consumption.
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L708)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L708)
 
 ### copy?
 
@@ -20,7 +20,7 @@ If `false`, X will be overwritten. `copy=False` can be used to save memory but i
 
 `true`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L703)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L703)
 
 ### n\_components?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/decomposition/IncrementalPCA.ts:703](https://github.com/
 
 Number of components to keep. If `n\_components` is `undefined`, then `n\_components` is set to `min(n\_samples, n\_features)`.
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L687)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L687)
 
 ### whiten?
 
@@ -42,4 +42,4 @@ Whitening will remove some information from the transformed signal (the relative
 
 `false`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L696)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L696)

@@ -14,7 +14,7 @@ When `alpha \= 0`, the objective is equivalent to ordinary least squares, solved
 
 `1`
 
-Defined in:  [generated/linear\_model/Lasso.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L397)
+Defined in:  [generated/linear\_model/Lasso.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L397)
 
 ### copy\_X?
 
@@ -26,7 +26,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/Lasso.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L418)
+Defined in:  [generated/linear\_model/Lasso.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L418)
 
 ### fit\_intercept?
 
@@ -38,7 +38,7 @@ Whether to calculate the intercept for this model. If set to `false`, no interce
 
 `true`
 
-Defined in:  [generated/linear\_model/Lasso.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L404)
+Defined in:  [generated/linear\_model/Lasso.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L404)
 
 ### max\_iter?
 
@@ -50,7 +50,7 @@ The maximum number of iterations.
 
 `1000`
 
-Defined in:  [generated/linear\_model/Lasso.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L425)
+Defined in:  [generated/linear\_model/Lasso.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L425)
 
 ### positive?
 
@@ -62,7 +62,7 @@ When set to `true`, forces the coefficients to be positive.
 
 `false`
 
-Defined in:  [generated/linear\_model/Lasso.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L446)
+Defined in:  [generated/linear\_model/Lasso.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L446)
 
 ### precompute?
 
@@ -74,7 +74,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. The Gram matr
 
 `false`
 
-Defined in:  [generated/linear\_model/Lasso.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L411)
+Defined in:  [generated/linear\_model/Lasso.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L411)
 
 ### random\_state?
 
@@ -82,7 +82,7 @@ Defined in:  [generated/linear\_model/Lasso.ts:411](https://github.com/transitiv
 
 The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/linear\_model/Lasso.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L451)
+Defined in:  [generated/linear\_model/Lasso.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L451)
 
 ### selection?
 
@@ -94,7 +94,7 @@ If set to ‘random’, a random coefficient is updated every iteration rather t
 
 `'cyclic'`
 
-Defined in:  [generated/linear\_model/Lasso.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L458)
+Defined in:  [generated/linear\_model/Lasso.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L458)
 
 ### tol?
 
@@ -106,7 +106,7 @@ The tolerance for the optimization: if the updates are smaller than `tol`, the o
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/Lasso.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L432)
+Defined in:  [generated/linear\_model/Lasso.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L432)
 
 ### warm\_start?
 
@@ -118,4 +118,4 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 `false`
 
-Defined in:  [generated/linear\_model/Lasso.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L439)
+Defined in:  [generated/linear\_model/Lasso.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L439)

@@ -12,7 +12,7 @@ Set to `false` to perform inplace row normalization and avoid a copy (if the inp
 
 `true`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L324)
+Defined in:  [generated/preprocessing/Normalizer.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L324)
 
 ### norm?
 
@@ -24,4 +24,4 @@ The norm to use to normalize each non zero sample. If norm=’max’ is used, va
 
 `'l2'`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L317)
+Defined in:  [generated/preprocessing/Normalizer.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L317)

@@ -12,7 +12,7 @@ Indicate that func accepts a sparse matrix as input. If validate is `false`, thi
 
 `false`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L399)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L399)
 
 ### check\_inverse?
 
@@ -24,7 +24,7 @@ Whether to check that or `func` followed by `inverse\_func` leads to the origina
 
 `true`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L406)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L406)
 
 ### feature\_names\_out?
 
@@ -34,7 +34,7 @@ Determines the list of feature names that will be returned by the `get\_feature\
 
 See `get\_feature\_names\_out` for more details.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L413)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L413)
 
 ### func?
 
@@ -42,7 +42,7 @@ Defined in:  [generated/preprocessing/FunctionTransformer.ts:413](https://github
 
 The callable to use for the transformation. This will be passed the same arguments as transform, with args and kwargs forwarded. If func is `undefined`, then func will be the identity function.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L380)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L380)
 
 ### inv\_kw\_args?
 
@@ -50,7 +50,7 @@ Defined in:  [generated/preprocessing/FunctionTransformer.ts:380](https://github
 
 Dictionary of additional keyword arguments to pass to inverse\_func.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L423)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L423)
 
 ### inverse\_func?
 
@@ -58,7 +58,7 @@ Defined in:  [generated/preprocessing/FunctionTransformer.ts:423](https://github
 
 The callable to use for the inverse transformation. This will be passed the same arguments as inverse transform, with args and kwargs forwarded. If inverse\_func is `undefined`, then inverse\_func will be the identity function.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L385)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L385)
 
 ### kw\_args?
 
@@ -66,7 +66,7 @@ Defined in:  [generated/preprocessing/FunctionTransformer.ts:385](https://github
 
 Dictionary of additional keyword arguments to pass to func.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L418)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L418)
 
 ### validate?
 
@@ -78,4 +78,4 @@ Indicate that the input X array should be checked before calling `func`. The pos
 
 `false`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L392)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L392)

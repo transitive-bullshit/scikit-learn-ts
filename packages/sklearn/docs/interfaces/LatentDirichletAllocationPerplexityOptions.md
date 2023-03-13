@@ -8,7 +8,7 @@
 
 Document word matrix.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:840](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L840)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:840](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L840)
 
 ### sub\_sampling?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:840](https://
 
 Do sub-sampling or not.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:845](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L845)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:845](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L845)

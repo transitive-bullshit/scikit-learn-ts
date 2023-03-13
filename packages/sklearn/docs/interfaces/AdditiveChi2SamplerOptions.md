@@ -8,7 +8,7 @@
 
 Sampling interval. Must be specified when sample\_steps not in {1,2,3}.
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L369)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L369)
 
 ### sample\_steps?
 
@@ -20,4 +20,4 @@ Gives the number of (complex) sampling points.
 
 `2`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L364)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L364)

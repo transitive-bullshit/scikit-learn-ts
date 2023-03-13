@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:892](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L892)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:892](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L892)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/neural\_network/MLPClassifier.ts:892](https://github.com
 
 Sample weights.
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:902](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L902)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:902](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L902)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/neural\_network/MLPClassifier.ts:902](https://github.com
 
 True labels for `X`.
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:897](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L897)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:897](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L897)

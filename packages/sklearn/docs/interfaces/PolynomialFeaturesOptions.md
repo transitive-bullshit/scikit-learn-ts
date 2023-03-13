@@ -12,7 +12,7 @@ If a single int is given, it specifies the maximal degree of the polynomial feat
 
 `2`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L362)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L362)
 
 ### include\_bias?
 
@@ -24,7 +24,7 @@ If `true` (default), then include a bias column, the feature in which all polyno
 
 `true`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L376)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L376)
 
 ### interaction\_only?
 
@@ -36,7 +36,7 @@ If `true`, only interaction features are produced: features that are products of
 
 `false`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L369)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L369)
 
 ### order?
 
@@ -48,4 +48,4 @@ Order of output array in the dense case. `'F'` order is faster to compute, but m
 
 `'C'`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L383)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L383)

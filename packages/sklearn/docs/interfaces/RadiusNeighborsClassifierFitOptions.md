@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L611)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L611)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:611](https://gith
 
 Target values.
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L616)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L616)

@@ -8,7 +8,7 @@
 
 The covariance to compare with.
 
-Defined in:  [generated/covariance/MinCovDet.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/MinCovDet.ts#L590)
+Defined in:  [generated/covariance/MinCovDet.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L590)
 
 ### norm?
 
@@ -20,7 +20,7 @@ The type of norm used to compute the error. Available error types: - ‘frobeniu
 
 `'frobenius'`
 
-Defined in:  [generated/covariance/MinCovDet.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/MinCovDet.ts#L597)
+Defined in:  [generated/covariance/MinCovDet.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L597)
 
 ### scaling?
 
@@ -32,7 +32,7 @@ If `true` (default), the squared error norm is divided by n\_features. If `false
 
 `true`
 
-Defined in:  [generated/covariance/MinCovDet.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/MinCovDet.ts#L604)
+Defined in:  [generated/covariance/MinCovDet.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L604)
 
 ### squared?
 
@@ -44,4 +44,4 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 `true`
 
-Defined in:  [generated/covariance/MinCovDet.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/MinCovDet.ts#L611)
+Defined in:  [generated/covariance/MinCovDet.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L611)

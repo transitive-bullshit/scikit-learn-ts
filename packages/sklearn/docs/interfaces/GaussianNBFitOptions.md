@@ -8,7 +8,7 @@
 
 Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L538)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L538)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/naive\_bayes/GaussianNB.ts:538](https://github.com/trans
 
 Weights applied to individual samples (1. for unweighted).
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L548)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L548)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/naive\_bayes/GaussianNB.ts:548](https://github.com/trans
 
 Target values.
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L543)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L543)

@@ -8,7 +8,7 @@
 
 The input samples.
 
-Defined in:  [generated/svm/OneClassSVM.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L629)
+Defined in:  [generated/svm/OneClassSVM.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L629)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/svm/OneClassSVM.ts:629](https://github.com/transitive-bu
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/svm/OneClassSVM.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L634)
+Defined in:  [generated/svm/OneClassSVM.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L634)

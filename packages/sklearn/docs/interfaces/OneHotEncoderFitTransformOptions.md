@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L475)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L475)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/OneHotEncoder.ts:475](https://github.com/t
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L485)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L485)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/OneHotEncoder.ts:485](https://github.com/t
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L480)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L480)

@@ -2,13 +2,13 @@
 
 Logistic Regression CV (aka logit, MaxEnt) classifier.
 
-See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+See glossary entry for cross-validation estimator.
 
 This class implements logistic regression using liblinear, newton-cg, sag of lbfgs optimizer. The newton-cg, sag and lbfgs solvers support only L2 regularization with primal formulation. The liblinear solver supports both L1 and L2 regularization, with a dual formulation only for the L2 penalty. Elastic-Net penalty is only supported by the saga solver.
 
-For the grid of `Cs` values and `l1\_ratios` values, the best hyperparameter is selected by the cross-validator [`StratifiedKFold`](sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold "sklearn.model_selection.StratifiedKFold"), but it can be changed using the [cv](../../glossary.html#term-cv) parameter. The ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ solvers can warm-start the coefficients (see [Glossary](../../glossary.html#term-warm_start)).
+For the grid of `Cs` values and `l1\_ratios` values, the best hyperparameter is selected by the cross-validator [`StratifiedKFold`](sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold "sklearn.model_selection.StratifiedKFold"), but it can be changed using the cv parameter. The ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ solvers can warm-start the coefficients (see Glossary).
 
-Read more in the [User Guide](../linear_model.html#logistic-regression).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html)
 
@@ -26,13 +26,13 @@ new LogisticRegressionCV(opts?: LogisticRegressionCVOptions): LogisticRegression
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`LogisticRegressionCVOptions`](../interfaces/LogisticRegressionCVOptions.md) |
+| `opts?` | `LogisticRegressionCVOptions` |
 
 ### Returns
 
 [`LogisticRegressionCV`](LogisticRegressionCV.md)
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L29)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:29](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L23)
 
 ## Accessors
 
@@ -80,9 +80,9 @@ C_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L591)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L591)
 
 ### Cs\_
 
@@ -96,9 +96,9 @@ Cs_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L483)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L483)
 
 ### classes\_
 
@@ -112,9 +112,9 @@ classes_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L398)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L398)
 
 ### coef\_
 
@@ -130,9 +130,9 @@ coef_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L427)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L427)
 
 ### coefs\_paths\_
 
@@ -146,13 +146,13 @@ coefs_paths_(): Promise<ArrayLike[][]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
+`Promise`\<`ArrayLike`[][]\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L537)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L537)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -162,9 +162,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L699)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L699)
 
 ### intercept\_
 
@@ -180,9 +180,9 @@ intercept_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L456)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L456)
 
 ### l1\_ratio\_
 
@@ -196,9 +196,9 @@ l1_ratio_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L618)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L618)
 
 ### l1\_ratios\_
 
@@ -212,13 +212,13 @@ l1_ratios_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L510)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L510)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -230,7 +230,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L672)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L672)
 
 ### n\_iter\_
 
@@ -244,9 +244,9 @@ n_iter_(): Promise<ArrayLike[][]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
+`Promise`\<`ArrayLike`[][]\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L645)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L645)
 
 ### py
 
@@ -260,7 +260,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L34)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L34)
 
 #### Signature
 
@@ -278,7 +278,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L38)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L38)
 
 ### scores\_
 
@@ -294,7 +294,7 @@ scores_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/linear\_model/LogisticRegressionCV.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L564)
+Defined in: [generated/linear\_model/LogisticRegressionCV.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L564)
 
 ## Methods
 
@@ -314,13 +314,13 @@ decision_function(opts: LogisticRegressionCVDecisionFunctionOptions): Promise<Ar
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVDecisionFunctionOptions`](../interfaces/LogisticRegressionCVDecisionFunctionOptions.md) |
+| `opts` | `LogisticRegressionCVDecisionFunctionOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L128)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L128)
 
 ### densify()
 
@@ -338,13 +338,13 @@ densify(opts: LogisticRegressionCVDensifyOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVDensifyOptions`](../interfaces/LogisticRegressionCVDensifyOptions.md) |
+| `opts` | `LogisticRegressionCVDensifyOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L165)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L165)
 
 ### dispose()
 
@@ -362,7 +362,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L109)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L109)
 
 ### fit()
 
@@ -378,13 +378,13 @@ fit(opts: LogisticRegressionCVFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVFitOptions`](../interfaces/LogisticRegressionCVFitOptions.md) |
+| `opts` | `LogisticRegressionCVFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L193)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L193)
 
 ### init()
 
@@ -408,7 +408,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L47)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L47)
 
 ### predict()
 
@@ -424,13 +424,13 @@ predict(opts: LogisticRegressionCVPredictOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVPredictOptions`](../interfaces/LogisticRegressionCVPredictOptions.md) |
+| `opts` | `LogisticRegressionCVPredictOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L227)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L227)
 
 ### predict\_log\_proba()
 
@@ -448,13 +448,13 @@ predict_log_proba(opts: LogisticRegressionCVPredictLogProbaOptions): Promise<Arr
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVPredictLogProbaOptions`](../interfaces/LogisticRegressionCVPredictLogProbaOptions.md) |
+| `opts` | `LogisticRegressionCVPredictLogProbaOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L259)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L259)
 
 ### predict\_proba()
 
@@ -474,13 +474,13 @@ predict_proba(opts: LogisticRegressionCVPredictProbaOptions): Promise<ArrayLike[
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVPredictProbaOptions`](../interfaces/LogisticRegressionCVPredictProbaOptions.md) |
+| `opts` | `LogisticRegressionCVPredictProbaOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L298)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L298)
 
 ### score()
 
@@ -496,13 +496,13 @@ score(opts: LogisticRegressionCVScoreOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVScoreOptions`](../interfaces/LogisticRegressionCVScoreOptions.md) |
+| `opts` | `LogisticRegressionCVScoreOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L332)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L332)
 
 ### sparsify()
 
@@ -522,10 +522,10 @@ sparsify(opts: LogisticRegressionCVSparsifyOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LogisticRegressionCVSparsifyOptions`](../interfaces/LogisticRegressionCVSparsifyOptions.md) |
+| `opts` | `LogisticRegressionCVSparsifyOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L370)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L370)

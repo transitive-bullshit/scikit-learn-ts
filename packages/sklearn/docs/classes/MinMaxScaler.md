@@ -28,7 +28,7 @@ new MinMaxScaler(opts?: MinMaxScalerOptions): MinMaxScaler;
 
 [`MinMaxScaler`](MinMaxScaler.md)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L25)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/preprocessing/MinMaxScaler.ts:25](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L23)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L22)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L21)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L18)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L19)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ data_max_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L388)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L388)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L388)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L388)
 
 ### data\_min\_
 
@@ -96,9 +96,9 @@ data_min_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L363)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L363)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L363)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L363)
 
 ### data\_range\_
 
@@ -114,9 +114,9 @@ data_range_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L413)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L413)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L413)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L413)
 
 ### feature\_names\_in\_
 
@@ -132,9 +132,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L488)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L488)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L488)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L488)
 
 ### min\_
 
@@ -150,9 +150,9 @@ min_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L317)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L317)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L317)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L317)
 
 ### n\_features\_in\_
 
@@ -168,9 +168,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L438)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L438)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L438)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L438)
 
 ### n\_samples\_seen\_
 
@@ -186,9 +186,9 @@ n_samples_seen_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L463)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L463)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L463)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L463)
 
 ### py
 
@@ -202,7 +202,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L30)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L30)
 
 #### Signature
 
@@ -220,9 +220,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L34)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L34)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L30) [generated/preprocessing/MinMaxScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L34)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L30) [generated/preprocessing/MinMaxScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L34)
 
 ### scale\_
 
@@ -238,9 +238,9 @@ scale_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L340)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L340)
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L340)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L340)
 
 ## Methods
 
@@ -260,7 +260,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L85)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L85)
 
 ### fit()
 
@@ -282,7 +282,7 @@ fit(opts: MinMaxScalerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L102)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L102)
 
 ### fit\_transform()
 
@@ -306,7 +306,7 @@ fit_transform(opts: MinMaxScalerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L132)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L132)
 
 ### get\_feature\_names\_out()
 
@@ -328,7 +328,7 @@ get_feature_names_out(opts: MinMaxScalerGetFeatureNamesOutOptions): Promise<any>
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L164)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L164)
 
 ### init()
 
@@ -352,7 +352,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L43)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L43)
 
 ### inverse\_transform()
 
@@ -374,7 +374,7 @@ inverse_transform(opts: MinMaxScalerInverseTransformOptions): Promise<ArrayLike[
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L197)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L197)
 
 ### partial\_fit()
 
@@ -398,7 +398,7 @@ partial_fit(opts: MinMaxScalerPartialFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L231)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L231)
 
 ### set\_output()
 
@@ -422,7 +422,7 @@ set_output(opts: MinMaxScalerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L261)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L261)
 
 ### transform()
 
@@ -444,4 +444,4 @@ transform(opts: MinMaxScalerTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L289)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L289)

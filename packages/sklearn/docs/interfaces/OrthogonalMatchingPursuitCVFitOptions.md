@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L423)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L423)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:423](https:
 
 Target values. Will be cast to X’s dtype if necessary.
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L428)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L428)

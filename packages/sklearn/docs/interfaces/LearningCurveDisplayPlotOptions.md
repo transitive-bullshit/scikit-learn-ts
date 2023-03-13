@@ -8,7 +8,7 @@
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L513)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L513)
 
 ### errorbar\_kw?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:513](https://gi
 
 Additional keyword arguments passed to the `plt.errorbar` used to draw mean score and standard deviation score.
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L561)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L561)
 
 ### fill\_between\_kw?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:561](https://gi
 
 Additional keyword arguments passed to the `plt.fill\_between` used to draw the score standard deviation.
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L556)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L556)
 
 ### line\_kw?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:556](https://gi
 
 Additional keyword arguments passed to the `plt.plot` used to draw the mean score.
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L551)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L551)
 
 ### log\_scale?
 
@@ -44,7 +44,7 @@ Whether or not to use a logarithmic scale for the x-axis.
 
 `false`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L539)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L539)
 
 ### negate\_score?
 
@@ -56,7 +56,7 @@ Whether or not to negate the scores obtained through [`learning\_curve`](sklearn
 
 `false`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L520)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L520)
 
 ### score\_name?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:520](https://gi
 
 The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic name “Score” will be used.
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L525)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L525)
 
 ### score\_type?
 
@@ -76,7 +76,7 @@ The type of score to plot. Can be one of `"test"`, `"train"`, or `"both"`.
 
 `'test'`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L532)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L532)
 
 ### std\_display\_style?
 
@@ -88,4 +88,4 @@ The style used to display the score standard deviation around the mean score. If
 
 `'fill_between'`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L546)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L546)

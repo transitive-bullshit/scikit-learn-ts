@@ -8,7 +8,7 @@
 
 Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L561)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L561)
 
 ### classes?
 
@@ -18,7 +18,7 @@ List of all the classes that can possibly appear in the y vector.
 
 Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L573)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L573)
 
 ### sample\_weight?
 
@@ -26,7 +26,7 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:573](https://github.com/tr
 
 Weights applied to individual samples (1. for unweighted).
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L578)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L578)
 
 ### y?
 
@@ -34,4 +34,4 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:578](https://github.com/tr
 
 Target values.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L566)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L566)

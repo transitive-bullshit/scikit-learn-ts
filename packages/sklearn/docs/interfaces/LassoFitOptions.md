@@ -8,7 +8,7 @@
 
 Data.
 
-Defined in:  [generated/linear\_model/Lasso.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L465)
+Defined in:  [generated/linear\_model/Lasso.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L465)
 
 ### check\_input?
 
@@ -20,7 +20,7 @@ Allow to bypass several input checking. Don’t use this parameter unless you kn
 
 `true`
 
-Defined in:  [generated/linear\_model/Lasso.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L482)
+Defined in:  [generated/linear\_model/Lasso.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L482)
 
 ### sample\_weight?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/linear\_model/Lasso.ts:482](https://github.com/transitiv
 
 Sample weights. Internally, the `sample\_weight` vector will be rescaled to sum to `n\_samples`.
 
-Defined in:  [generated/linear\_model/Lasso.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L475)
+Defined in:  [generated/linear\_model/Lasso.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L475)
 
 ### y?
 
@@ -36,4 +36,4 @@ Defined in:  [generated/linear\_model/Lasso.ts:475](https://github.com/transitiv
 
 Target. Will be cast to X’s dtype if necessary.
 
-Defined in:  [generated/linear\_model/Lasso.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lasso.ts#L470)
+Defined in:  [generated/linear\_model/Lasso.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lasso.ts#L470)

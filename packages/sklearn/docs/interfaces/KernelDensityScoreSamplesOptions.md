@@ -8,4 +8,4 @@
 
 An array of points to query. Last dimension should match dimension of training data (n\_features).
 
-Defined in:  [generated/neighbors/KernelDensity.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L440)
+Defined in:  [generated/neighbors/KernelDensity.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L440)

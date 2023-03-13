@@ -8,7 +8,7 @@
 
 Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L404)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L404)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:404](https://
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L409)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L409)

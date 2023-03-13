@@ -12,7 +12,7 @@ If ‘SAMME.R’ then use the SAMME.R real boosting algorithm. `estimator` must 
 
 `'SAMME.R'`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L715)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L715)
 
 ### base\_estimator?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:715](https://github.com/t
 
 The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L725)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L725)
 
 ### estimator?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:725](https://github.com/t
 
 The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L694)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L694)
 
 ### learning\_rate?
 
@@ -40,7 +40,7 @@ Weight applied to each classifier at each boosting iteration. A higher learning 
 
 `1`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L708)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L708)
 
 ### n\_estimators?
 
@@ -52,7 +52,7 @@ The maximum number of estimators at which boosting is terminated. In case of per
 
 `50`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L701)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L701)
 
 ### random\_state?
 
@@ -60,4 +60,4 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:701](https://github.com/t
 
 Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L720)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L720)

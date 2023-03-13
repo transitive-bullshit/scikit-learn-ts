@@ -8,4 +8,4 @@
 
 Configure output of `transform` and `fit\_transform`.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L761)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L761)

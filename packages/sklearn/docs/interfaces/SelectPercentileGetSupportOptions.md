@@ -12,4 +12,4 @@ If `true`, the return value will be an array of integers, rather than a boolean 
 
 `false`
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L495)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L495)

@@ -12,7 +12,7 @@ Set to `false` to perform inplace computation during transformation.
 
 `true`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L408)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L408)
 
 ### method?
 
@@ -24,7 +24,7 @@ The power transform method. Available methods are:
 
 `'yeo-johnson'`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L394)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L394)
 
 ### standardize?
 
@@ -36,4 +36,4 @@ Set to `true` to apply zero-mean, unit-variance normalization to the transformed
 
 `true`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L401)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L401)

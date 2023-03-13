@@ -28,7 +28,7 @@ new KNNImputer(opts?: KNNImputerOptions): KNNImputer;
 
 [`KNNImputer`](KNNImputer.md)
 
-Defined in:  [generated/impute/KNNImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L25)
+Defined in:  [generated/impute/KNNImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/impute/KNNImputer.ts:25](https://github.com/transitive-b
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/KNNImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L23)
+Defined in:  [generated/impute/KNNImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/KNNImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L22)
+Defined in:  [generated/impute/KNNImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/impute/KNNImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L21)
+Defined in:  [generated/impute/KNNImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/impute/KNNImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L18)
+Defined in:  [generated/impute/KNNImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/impute/KNNImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L19)
+Defined in:  [generated/impute/KNNImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/impute/KNNImputer.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L307)
+Defined in:  [generated/impute/KNNImputer.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L307)
 
-Defined in:  [generated/impute/KNNImputer.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L307)
+Defined in:  [generated/impute/KNNImputer.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L307)
 
 ### indicator\_
 
@@ -96,9 +96,9 @@ indicator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/KNNImputer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L259)
+Defined in:  [generated/impute/KNNImputer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L259)
 
-Defined in:  [generated/impute/KNNImputer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L259)
+Defined in:  [generated/impute/KNNImputer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L259)
 
 ### n\_features\_in\_
 
@@ -114,9 +114,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/impute/KNNImputer.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L282)
+Defined in:  [generated/impute/KNNImputer.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L282)
 
-Defined in:  [generated/impute/KNNImputer.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L282)
+Defined in:  [generated/impute/KNNImputer.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L282)
 
 ### py
 
@@ -130,7 +130,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/impute/KNNImputer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L30)
+Defined in:  [generated/impute/KNNImputer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L30)
 
 #### Signature
 
@@ -148,9 +148,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/impute/KNNImputer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L34)
+Defined in:  [generated/impute/KNNImputer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L34)
 
-Defined in:  [generated/impute/KNNImputer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L30) [generated/impute/KNNImputer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L34)
+Defined in:  [generated/impute/KNNImputer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L30) [generated/impute/KNNImputer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L34)
 
 ## Methods
 
@@ -170,7 +170,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/KNNImputer.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L89)
+Defined in:  [generated/impute/KNNImputer.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L89)
 
 ### fit()
 
@@ -192,7 +192,7 @@ fit(opts: KNNImputerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/KNNImputer.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L106)
+Defined in:  [generated/impute/KNNImputer.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L106)
 
 ### fit\_transform()
 
@@ -216,7 +216,7 @@ fit_transform(opts: KNNImputerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/impute/KNNImputer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L136)
+Defined in:  [generated/impute/KNNImputer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L136)
 
 ### get\_feature\_names\_out()
 
@@ -238,7 +238,7 @@ get_feature_names_out(opts: KNNImputerGetFeatureNamesOutOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/KNNImputer.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L168)
+Defined in:  [generated/impute/KNNImputer.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L168)
 
 ### init()
 
@@ -262,7 +262,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/KNNImputer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L43)
+Defined in:  [generated/impute/KNNImputer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L43)
 
 ### set\_output()
 
@@ -286,7 +286,7 @@ set_output(opts: KNNImputerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/KNNImputer.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L203)
+Defined in:  [generated/impute/KNNImputer.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L203)
 
 ### transform()
 
@@ -308,4 +308,4 @@ transform(opts: KNNImputerTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/impute/KNNImputer.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L231)
+Defined in:  [generated/impute/KNNImputer.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L231)

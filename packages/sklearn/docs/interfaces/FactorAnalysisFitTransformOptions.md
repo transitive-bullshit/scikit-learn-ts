@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L640)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L640)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/FactorAnalysis.ts:640](https://github.com/
 
 Additional fit parameters.
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L650)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L650)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/FactorAnalysis.ts:650](https://github.com/
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L645)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L645)

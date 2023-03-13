@@ -12,7 +12,7 @@ Which affinity to use. At the moment ‘precomputed’ and `euclidean` are suppo
 
 `'euclidean'`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L430)
+Defined in:  [generated/cluster/AffinityPropagation.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L430)
 
 ### convergence\_iter?
 
@@ -24,7 +24,7 @@ Number of iterations with no change in the number of estimated clusters that sto
 
 `15`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L411)
+Defined in:  [generated/cluster/AffinityPropagation.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L411)
 
 ### copy?
 
@@ -36,7 +36,7 @@ Make a copy of input data.
 
 `true`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L418)
+Defined in:  [generated/cluster/AffinityPropagation.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L418)
 
 ### damping?
 
@@ -48,7 +48,7 @@ Damping factor in the range `\[0.5, 1.0)` is the extent to which the current val
 
 `0.5`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L397)
+Defined in:  [generated/cluster/AffinityPropagation.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L397)
 
 ### max\_iter?
 
@@ -60,7 +60,7 @@ Maximum number of iterations.
 
 `200`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L404)
+Defined in:  [generated/cluster/AffinityPropagation.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L404)
 
 ### preference?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/cluster/AffinityPropagation.ts:404](https://github.com/t
 
 Preferences for each point - points with larger values of preferences are more likely to be chosen as exemplars. The number of exemplars, ie of clusters, is influenced by the input preferences value. If the preferences are not passed as arguments, they will be set to the median of the input similarities.
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L423)
+Defined in:  [generated/cluster/AffinityPropagation.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L423)
 
 ### random\_state?
 
@@ -76,7 +76,7 @@ Defined in:  [generated/cluster/AffinityPropagation.ts:423](https://github.com/t
 
 Pseudo-random number generator to control the starting state. Use an int for reproducible results across function calls. See the [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L442)
+Defined in:  [generated/cluster/AffinityPropagation.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L442)
 
 ### verbose?
 
@@ -88,4 +88,4 @@ Whether to be verbose.
 
 `false`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L437)
+Defined in:  [generated/cluster/AffinityPropagation.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L437)

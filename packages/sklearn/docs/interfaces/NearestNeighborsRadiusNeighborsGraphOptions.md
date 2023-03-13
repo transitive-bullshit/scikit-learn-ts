@@ -8,7 +8,7 @@
 
 The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L560)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L560)
 
 ### mode?
 
@@ -20,7 +20,7 @@ Type of returned matrix: ‘connectivity’ will return the connectivity matrix 
 
 `'connectivity'`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L572)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L572)
 
 ### radius?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/neighbors/NearestNeighbors.ts:572](https://github.com/tr
 
 Radius of neighborhoods. The default is the value passed to the constructor.
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L565)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L565)
 
 ### sort\_results?
 
@@ -40,4 +40,4 @@ If `true`, in each row of the result, the non-zero entries will be sorted by inc
 
 `false`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L579)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L579)

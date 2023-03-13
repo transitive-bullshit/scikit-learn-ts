@@ -8,7 +8,7 @@
 
 The first base-kernel of the sum-kernel
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L212)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L212)
 
 ### k2?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/gaussian\_process/kernels/Sum.ts:212](https://github.com
 
 The second base-kernel of the sum-kernel
 
-Defined in:  [generated/gaussian\_process/kernels/Sum.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L217)
+Defined in:  [generated/gaussian\_process/kernels/Sum.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Sum.ts#L217)

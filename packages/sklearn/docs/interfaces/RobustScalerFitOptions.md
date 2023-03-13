@@ -8,7 +8,7 @@
 
 The data used to compute the median and quantiles used for later scaling along the features axis.
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L426)
+Defined in:  [generated/preprocessing/RobustScaler.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L426)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/preprocessing/RobustScaler.ts:426](https://github.com/tr
 
 Not used, present here for API consistency by convention.
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L431)
+Defined in:  [generated/preprocessing/RobustScaler.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L431)

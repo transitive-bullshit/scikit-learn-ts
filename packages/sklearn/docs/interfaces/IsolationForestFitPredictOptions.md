@@ -8,7 +8,7 @@
 
 The input samples.
 
-Defined in:  [generated/ensemble/IsolationForest.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L542)
+Defined in:  [generated/ensemble/IsolationForest.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L542)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/ensemble/IsolationForest.ts:542](https://github.com/tran
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/ensemble/IsolationForest.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L547)
+Defined in:  [generated/ensemble/IsolationForest.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L547)

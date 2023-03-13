@@ -8,7 +8,7 @@
 
 This parameter is deprecated. Use `estimator` instead.
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L402)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L402)
 
 ### cv?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/calibration/CalibratedClassifierCV.ts:402](https://githu
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L377)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L377)
 
 ### ensemble?
 
@@ -32,7 +32,7 @@ If `false`, `cv` is used to compute unbiased predictions, via [`cross\_val\_pred
 
 `true`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L397)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L397)
 
 ### estimator?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/calibration/CalibratedClassifierCV.ts:397](https://githu
 
 The classifier whose output need to be calibrated to provide more accurate `predict\_proba` outputs. The default classifier is a [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L365)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L365)
 
 ### method?
 
@@ -52,7 +52,7 @@ The method to use for calibration. Can be ‘sigmoid’ which corresponds to Pla
 
 `'sigmoid'`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L372)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L372)
 
 ### n\_jobs?
 
@@ -64,4 +64,4 @@ Base estimator clones are fitted in parallel across cross-validation iterations.
 
 See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L386)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L386)

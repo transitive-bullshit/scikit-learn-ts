@@ -8,7 +8,7 @@
 
 Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L456)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L456)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/semi\_supervised/LabelSpreading.ts:456](https://github.c
 
 Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L461)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L461)

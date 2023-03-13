@@ -8,7 +8,7 @@
 
 Data.
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L437)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L437)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/multiclass/OneVsOneClassifier.ts:437](https://github.com
 
 Multi-class targets.
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L442)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L442)

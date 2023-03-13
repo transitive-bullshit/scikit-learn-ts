@@ -12,7 +12,7 @@ If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.i
 
 `false`
 
-Defined in:  [generated/impute/KNNImputer.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L369)
+Defined in:  [generated/impute/KNNImputer.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L369)
 
 ### copy?
 
@@ -24,7 +24,7 @@ If `true`, a copy of X will be created. If `false`, imputation will be done in-p
 
 `true`
 
-Defined in:  [generated/impute/KNNImputer.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L362)
+Defined in:  [generated/impute/KNNImputer.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L362)
 
 ### keep\_empty\_features?
 
@@ -36,7 +36,7 @@ If `true`, features that consist exclusively of missing values when `fit` is cal
 
 `false`
 
-Defined in:  [generated/impute/KNNImputer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L376)
+Defined in:  [generated/impute/KNNImputer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L376)
 
 ### metric?
 
@@ -48,7 +48,7 @@ Distance metric for searching neighbors. Possible values:
 
 `'nan_euclidean'`
 
-Defined in:  [generated/impute/KNNImputer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L355)
+Defined in:  [generated/impute/KNNImputer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L355)
 
 ### missing\_values?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/impute/KNNImputer.ts:355](https://github.com/transitive-
 
 The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to np.nan, since `pd.NA` will be converted to np.nan.
 
-Defined in:  [generated/impute/KNNImputer.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L334)
+Defined in:  [generated/impute/KNNImputer.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L334)
 
 ### n\_neighbors?
 
@@ -68,7 +68,7 @@ Number of neighboring samples to use for imputation.
 
 `5`
 
-Defined in:  [generated/impute/KNNImputer.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L341)
+Defined in:  [generated/impute/KNNImputer.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L341)
 
 ### weights?
 
@@ -80,4 +80,4 @@ Weight function used in prediction. Possible values:
 
 `'uniform'`
 
-Defined in:  [generated/impute/KNNImputer.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L348)
+Defined in:  [generated/impute/KNNImputer.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L348)

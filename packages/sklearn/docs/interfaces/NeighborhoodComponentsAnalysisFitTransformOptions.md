@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L499)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L499)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:499](https:/
 
 Additional fit parameters.
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L509)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L509)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:509](https:/
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L504)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L504)

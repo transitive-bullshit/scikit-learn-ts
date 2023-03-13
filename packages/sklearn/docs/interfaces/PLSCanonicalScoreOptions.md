@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L710)
+Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L710)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:710](https://github
 
 Sample weights.
 
-Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L720)
+Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L720)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:720](https://github
 
 True values for `X`.
 
-Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L715)
+Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L715)

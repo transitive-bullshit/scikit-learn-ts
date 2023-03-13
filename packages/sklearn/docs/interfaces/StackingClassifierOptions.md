@@ -8,7 +8,7 @@
 
 Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are:
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L598)
+Defined in:  [generated/ensemble/StackingClassifier.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L598)
 
 ### estimators?
 
@@ -18,7 +18,7 @@ Base estimators which will be stacked together. Each element of the list is defi
 
 The type of estimator is generally expected to be a classifier. However, one can pass a regressor for some use case (e.g. ordinal regression).
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L588)
+Defined in:  [generated/ensemble/StackingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L588)
 
 ### final\_estimator?
 
@@ -26,7 +26,7 @@ Defined in:  [generated/ensemble/StackingClassifier.ts:588](https://github.com/t
 
 A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression").
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L593)
+Defined in:  [generated/ensemble/StackingClassifier.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L593)
 
 ### n\_jobs?
 
@@ -34,7 +34,7 @@ Defined in:  [generated/ensemble/StackingClassifier.ts:593](https://github.com/t
 
 The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L610)
+Defined in:  [generated/ensemble/StackingClassifier.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L610)
 
 ### passthrough?
 
@@ -46,7 +46,7 @@ When `false`, only the predictions of estimators will be used as training data f
 
 `false`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L617)
+Defined in:  [generated/ensemble/StackingClassifier.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L617)
 
 ### stack\_method?
 
@@ -58,7 +58,7 @@ Methods called for each base estimator. It can be:
 
 `'auto'`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L605)
+Defined in:  [generated/ensemble/StackingClassifier.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L605)
 
 ### verbose?
 
@@ -70,4 +70,4 @@ Verbosity level.
 
 `0`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L624)
+Defined in:  [generated/ensemble/StackingClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L624)

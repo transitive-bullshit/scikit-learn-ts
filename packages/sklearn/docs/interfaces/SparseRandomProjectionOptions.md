@@ -12,7 +12,7 @@ Learn the inverse transform by computing the pseudo-inverse of the components du
 
 `false`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L531)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L531)
 
 ### dense\_output?
 
@@ -26,7 +26,7 @@ If `false`, the projected data uses a sparse representation if the input is spar
 
 `false`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L524)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L524)
 
 ### density?
 
@@ -42,7 +42,7 @@ Use density = 1 / 3.0 if you want to reproduce the results from Achlioptas, 2001
 
 `'auto'`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L506)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L506)
 
 ### eps?
 
@@ -56,7 +56,7 @@ Smaller values lead to better embedding and higher number of dimensions (n\_comp
 
 `0.1`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L515)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L515)
 
 ### n\_components?
 
@@ -72,7 +72,7 @@ It should be noted that Johnson-Lindenstrauss lemma can yield very conservative 
 
 `'auto'`
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L495)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L495)
 
 ### random\_state?
 
@@ -80,4 +80,4 @@ Defined in:  [generated/random\_projection/SparseRandomProjection.ts:495](https:
 
 Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L536)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L536)

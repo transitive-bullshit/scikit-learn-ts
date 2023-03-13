@@ -12,7 +12,7 @@ Regularization strength; must be a positive float. Regularization improves the c
 
 `1`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L365)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L365)
 
 ### class\_weight?
 
@@ -22,7 +22,7 @@ Weights associated with classes in the form `{class\_label: weight}`. If not giv
 
 The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L398)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L398)
 
 ### copy\_X?
 
@@ -34,7 +34,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L379)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L379)
 
 ### fit\_intercept?
 
@@ -46,7 +46,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L372)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L372)
 
 ### max\_iter?
 
@@ -54,7 +54,7 @@ Defined in:  [generated/linear\_model/RidgeClassifier.ts:372](https://github.com
 
 Maximum number of iterations for conjugate gradient solver. The default value is determined by scipy.sparse.linalg.
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L384)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L384)
 
 ### positive?
 
@@ -66,7 +66,7 @@ When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ sol
 
 `false`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L420)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L420)
 
 ### random\_state?
 
@@ -74,7 +74,7 @@ Defined in:  [generated/linear\_model/RidgeClassifier.ts:420](https://github.com
 
 Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L425)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L425)
 
 ### solver?
 
@@ -86,7 +86,7 @@ Solver to use in the computational routines:
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L405)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L405)
 
 ### tol?
 
@@ -98,4 +98,4 @@ Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ a
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L391)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L391)

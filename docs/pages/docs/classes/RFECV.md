@@ -2,9 +2,9 @@
 
 Recursive feature elimination with cross-validation to select features.
 
-See glossary entry for [cross-validation estimator](../../glossary.html#term-cross-validation-estimator).
+See glossary entry for cross-validation estimator.
 
-Read more in the [User Guide](../feature_selection.html#rfe).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html)
 
@@ -22,13 +22,13 @@ new RFECV(opts?: RFECVOptions): RFECV;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`RFECVOptions`](../interfaces/RFECVOptions.md) |
+| `opts?` | `RFECVOptions` |
 
 ### Returns
 
 [`RFECV`](RFECV.md)
 
-Defined in:  [generated/feature\_selection/RFECV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L25)
+Defined in:  [generated/feature\_selection/RFECV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/feature\_selection/RFECV.ts:25](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L23)
+Defined in:  [generated/feature\_selection/RFECV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L22)
+Defined in:  [generated/feature\_selection/RFECV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L21)
+Defined in:  [generated/feature\_selection/RFECV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L18)
+Defined in:  [generated/feature\_selection/RFECV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L19)
+Defined in:  [generated/feature\_selection/RFECV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ cv_results_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/feature\_selection/RFECV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L482)
+Defined in: [generated/feature\_selection/RFECV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L482)
 
 ### estimator\_
 
@@ -94,11 +94,11 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/feature\_selection/RFECV.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L459)
+Defined in: [generated/feature\_selection/RFECV.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L459)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -108,9 +108,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/RFECV.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L551)
+Defined in: [generated/feature\_selection/RFECV.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L551)
 
 ### n\_features\_
 
@@ -126,11 +126,11 @@ n_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_selection/RFECV.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L505)
+Defined in: [generated/feature\_selection/RFECV.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L505)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit). Only defined if the underlying estimator exposes such an attribute when fit.
+Number of features seen during fit. Only defined if the underlying estimator exposes such an attribute when fit.
 
 #### Signature
 
@@ -142,7 +142,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_selection/RFECV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L528)
+Defined in: [generated/feature\_selection/RFECV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L528)
 
 ### py
 
@@ -156,7 +156,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L30)
+Defined in:  [generated/feature\_selection/RFECV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L30)
 
 #### Signature
 
@@ -174,7 +174,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_selection/RFECV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L34)
+Defined in: [generated/feature\_selection/RFECV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L34)
 
 ### ranking\_
 
@@ -190,7 +190,7 @@ ranking_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/feature\_selection/RFECV.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L576)
+Defined in: [generated/feature\_selection/RFECV.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L576)
 
 ### support\_
 
@@ -204,9 +204,9 @@ support_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/RFECV.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L598)
+Defined in: [generated/feature\_selection/RFECV.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L598)
 
 ## Methods
 
@@ -224,13 +224,13 @@ decision_function(opts: RFECVDecisionFunctionOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVDecisionFunctionOptions`](../interfaces/RFECVDecisionFunctionOptions.md) |
+| `opts` | `RFECVDecisionFunctionOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L105)
+Defined in:  [generated/feature\_selection/RFECV.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L105)
 
 ### dispose()
 
@@ -248,7 +248,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L88)
+Defined in:  [generated/feature\_selection/RFECV.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L88)
 
 ### fit()
 
@@ -264,13 +264,13 @@ fit(opts: RFECVFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVFitOptions`](../interfaces/RFECVFitOptions.md) |
+| `opts` | `RFECVFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L133)
+Defined in:  [generated/feature\_selection/RFECV.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L133)
 
 ### fit\_transform()
 
@@ -288,13 +288,13 @@ fit_transform(opts: RFECVFitTransformOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVFitTransformOptions`](../interfaces/RFECVFitTransformOptions.md) |
+| `opts` | `RFECVFitTransformOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L167)
+Defined in:  [generated/feature\_selection/RFECV.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L167)
 
 ### get\_feature\_names\_out()
 
@@ -310,13 +310,13 @@ get_feature_names_out(opts: RFECVGetFeatureNamesOutOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVGetFeatureNamesOutOptions`](../interfaces/RFECVGetFeatureNamesOutOptions.md) |
+| `opts` | `RFECVGetFeatureNamesOutOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L199)
+Defined in:  [generated/feature\_selection/RFECV.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L199)
 
 ### get\_support()
 
@@ -332,13 +332,13 @@ get_support(opts: RFECVGetSupportOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVGetSupportOptions`](../interfaces/RFECVGetSupportOptions.md) |
+| `opts` | `RFECVGetSupportOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L229)
+Defined in:  [generated/feature\_selection/RFECV.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L229)
 
 ### init()
 
@@ -362,7 +362,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L43)
+Defined in:  [generated/feature\_selection/RFECV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L43)
 
 ### inverse\_transform()
 
@@ -378,13 +378,13 @@ inverse_transform(opts: RFECVInverseTransformOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVInverseTransformOptions`](../interfaces/RFECVInverseTransformOptions.md) |
+| `opts` | `RFECVInverseTransformOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L257)
+Defined in:  [generated/feature\_selection/RFECV.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L257)
 
 ### predict()
 
@@ -400,13 +400,13 @@ predict(opts: RFECVPredictOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVPredictOptions`](../interfaces/RFECVPredictOptions.md) |
+| `opts` | `RFECVPredictOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L285)
+Defined in:  [generated/feature\_selection/RFECV.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L285)
 
 ### predict\_log\_proba()
 
@@ -422,13 +422,13 @@ predict_log_proba(opts: RFECVPredictLogProbaOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVPredictLogProbaOptions`](../interfaces/RFECVPredictLogProbaOptions.md) |
+| `opts` | `RFECVPredictLogProbaOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L313)
+Defined in:  [generated/feature\_selection/RFECV.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L313)
 
 ### predict\_proba()
 
@@ -444,13 +444,13 @@ predict_proba(opts: RFECVPredictProbaOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVPredictProbaOptions`](../interfaces/RFECVPredictProbaOptions.md) |
+| `opts` | `RFECVPredictProbaOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L341)
+Defined in:  [generated/feature\_selection/RFECV.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L341)
 
 ### score()
 
@@ -466,19 +466,19 @@ score(opts: RFECVScoreOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVScoreOptions`](../interfaces/RFECVScoreOptions.md) |
+| `opts` | `RFECVScoreOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L369)
+Defined in:  [generated/feature\_selection/RFECV.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L369)
 
 ### set\_output()
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See Introducing the set\_output API for an example on how to use the API.
 
 #### Signature
 
@@ -490,13 +490,13 @@ set_output(opts: RFECVSetOutputOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVSetOutputOptions`](../interfaces/RFECVSetOutputOptions.md) |
+| `opts` | `RFECVSetOutputOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L403)
+Defined in:  [generated/feature\_selection/RFECV.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L403)
 
 ### transform()
 
@@ -512,10 +512,10 @@ transform(opts: RFECVTransformOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RFECVTransformOptions`](../interfaces/RFECVTransformOptions.md) |
+| `opts` | `RFECVTransformOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/RFECV.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/RFECV.ts#L431)
+Defined in:  [generated/feature\_selection/RFECV.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L431)

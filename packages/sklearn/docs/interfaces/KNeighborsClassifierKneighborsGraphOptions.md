@@ -8,7 +8,7 @@
 
 The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L595)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L595)
 
 ### mode?
 
@@ -20,7 +20,7 @@ Type of returned matrix: ‘connectivity’ will return the connectivity matrix 
 
 `'connectivity'`
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L607)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L607)
 
 ### n\_neighbors?
 
@@ -28,4 +28,4 @@ Defined in:  [generated/neighbors/KNeighborsClassifier.ts:607](https://github.co
 
 Number of neighbors for each sample. The default is the value passed to the constructor.
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L600)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L600)

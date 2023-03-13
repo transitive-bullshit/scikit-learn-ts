@@ -6,7 +6,7 @@ Provides train/test indices to split data such that each training set is compris
 
 For instance the groups could be the year of collection of the samples and thus allow for cross-validation against time-based splits.
 
-Read more in the [User Guide](../cross_validation.html#leave-one-group-out).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneGroupOut.html)
 
@@ -24,13 +24,13 @@ new LeaveOneGroupOut(opts?: LeaveOneGroupOutOptions): LeaveOneGroupOut;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`LeaveOneGroupOutOptions`](../interfaces/LeaveOneGroupOutOptions.md) |
+| `opts?` | `LeaveOneGroupOutOptions` |
 
 ### Returns
 
 [`LeaveOneGroupOut`](LeaveOneGroupOut.md)
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L27)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L27)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:27](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L25)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L24)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L23)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L20)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L21)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L21)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ n_splits(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/LeaveOneGroupOut.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L172)
+Defined in: [generated/model\_selection/LeaveOneGroupOut.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L172)
 
 ### py
 
@@ -94,7 +94,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L32)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L32)
 
 #### Signature
 
@@ -112,7 +112,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/LeaveOneGroupOut.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L36)
+Defined in: [generated/model\_selection/LeaveOneGroupOut.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L36)
 
 ## Methods
 
@@ -132,7 +132,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L89)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L89)
 
 ### get\_n\_splits()
 
@@ -148,13 +148,13 @@ get_n_splits(opts: LeaveOneGroupOutGetNSplitsOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LeaveOneGroupOutGetNSplitsOptions`](../interfaces/LeaveOneGroupOutGetNSplitsOptions.md) |
+| `opts` | `LeaveOneGroupOutGetNSplitsOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L106)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L106)
 
 ### init()
 
@@ -178,7 +178,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L45)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L45)
 
 ### split()
 
@@ -194,10 +194,10 @@ split(opts: LeaveOneGroupOutSplitOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LeaveOneGroupOutSplitOptions`](../interfaces/LeaveOneGroupOutSplitOptions.md) |
+| `opts` | `LeaveOneGroupOutSplitOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L138)
+Defined in:  [generated/model\_selection/LeaveOneGroupOut.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeaveOneGroupOut.ts#L138)

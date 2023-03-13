@@ -8,7 +8,7 @@
 
 The prior on the covariance distribution (Wishart). If it is `undefined`, the emiprical covariance prior is initialized using the covariance of X. The shape depends on `covariance\_type`:
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:927](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L927)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:927](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L927)
 
 ### covariance\_type?
 
@@ -20,7 +20,7 @@ String describing the type of covariance parameters to use. Must be one of:
 
 `'full'`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:858](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L858)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:858](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L858)
 
 ### degrees\_of\_freedom\_prior?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/mixture/BayesianGaussianMixture.ts:858](https://github.c
 
 The prior of the number of degrees of freedom on the covariance distributions (Wishart). If it is `undefined`, it’s set to `n\_features`.
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:922](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L922)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:922](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L922)
 
 ### init\_params?
 
@@ -40,7 +40,7 @@ The method used to initialize the weights, the means and the covariances. String
 
 `'kmeans'`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:893](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L893)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:893](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L893)
 
 ### max\_iter?
 
@@ -52,7 +52,7 @@ The number of EM iterations to perform.
 
 `100`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:879](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L879)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:879](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L879)
 
 ### mean\_precision\_prior?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/mixture/BayesianGaussianMixture.ts:879](https://github.c
 
 The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. The value of the parameter must be greater than 0. If it is `undefined`, it is set to 1.
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:912](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L912)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:912](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L912)
 
 ### mean\_prior?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/mixture/BayesianGaussianMixture.ts:912](https://github.c
 
 The prior on the mean distribution (Gaussian). If it is `undefined`, it is set to the mean of X.
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:917](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L917)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:917](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L917)
 
 ### n\_components?
 
@@ -80,7 +80,7 @@ The number of mixture components. Depending on the data and the value of the `we
 
 `1`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:851](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L851)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:851](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L851)
 
 ### n\_init?
 
@@ -92,7 +92,7 @@ The number of initializations to perform. The result with the highest lower boun
 
 `1`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:886](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L886)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:886](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L886)
 
 ### random\_state?
 
@@ -100,7 +100,7 @@ Defined in:  [generated/mixture/BayesianGaussianMixture.ts:886](https://github.c
 
 Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:932](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L932)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:932](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L932)
 
 ### reg\_covar?
 
@@ -112,7 +112,7 @@ Non-negative regularization added to the diagonal of covariance. Allows to assur
 
 `0.000001`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L872)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L872)
 
 ### tol?
 
@@ -124,7 +124,7 @@ The convergence threshold. EM iterations will stop when the lower bound average 
 
 `0.001`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:865](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L865)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:865](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L865)
 
 ### verbose?
 
@@ -136,7 +136,7 @@ Enable verbose output. If 1 then it prints the current initialization and each i
 
 `0`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:946](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L946)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:946](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L946)
 
 ### verbose\_interval?
 
@@ -148,7 +148,7 @@ Number of iteration done before the next print.
 
 `10`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:953](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L953)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:953](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L953)
 
 ### warm\_start?
 
@@ -160,7 +160,7 @@ If ‘warm\_start’ is `true`, the solution of the last fitting is used as init
 
 `false`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:939](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L939)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:939](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L939)
 
 ### weight\_concentration\_prior?
 
@@ -168,7 +168,7 @@ Defined in:  [generated/mixture/BayesianGaussianMixture.ts:939](https://github.c
 
 The dirichlet concentration of each component on the weight distribution (Dirichlet). This is commonly called gamma in the literature. The higher concentration puts more mass in the center and will lead to more components being active, while a lower concentration parameter will lead to more mass at the edge of the mixture weights simplex. The value of the parameter must be greater than 0. If it is `undefined`, it’s set to `1. / n\_components`.
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:907](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L907)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:907](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L907)
 
 ### weight\_concentration\_prior\_type?
 
@@ -180,4 +180,4 @@ String describing the type of the weight concentration prior.
 
 `'dirichlet_process'`
 
-Defined in:  [generated/mixture/BayesianGaussianMixture.ts:900](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L900)
+Defined in:  [generated/mixture/BayesianGaussianMixture.ts:900](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/BayesianGaussianMixture.ts#L900)

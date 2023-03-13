@@ -8,4 +8,4 @@
 
 Samples.
 
-Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L734)
+Defined in:  [generated/linear\_model/MultiTaskElasticNetCV.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskElasticNetCV.ts#L734)

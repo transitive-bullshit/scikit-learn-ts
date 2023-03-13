@@ -12,7 +12,7 @@ The length scale of the kernel. If a float, an isotropic kernel is used. If an a
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L265)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L265)
 
 ### length\_scale\_bounds?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/gaussian\_process/kernels/Matern.ts:265](https://github.
 
 The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L270)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L270)
 
 ### nu?
 
@@ -32,4 +32,4 @@ The parameter nu controlling the smoothness of the learned function. The smaller
 
 `1.5`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L277)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L277)

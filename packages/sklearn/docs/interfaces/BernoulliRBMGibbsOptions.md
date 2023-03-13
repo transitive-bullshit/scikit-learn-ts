@@ -8,4 +8,4 @@
 
 Values of the visible layer to start from.
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L581)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L581)

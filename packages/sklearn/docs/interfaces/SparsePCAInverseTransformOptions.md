@@ -8,4 +8,4 @@
 
 Data in the latent space.
 
-Defined in:  [generated/decomposition/SparsePCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L576)
+Defined in:  [generated/decomposition/SparsePCA.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L576)

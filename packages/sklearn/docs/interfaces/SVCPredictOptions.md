@@ -8,4 +8,4 @@
 
 For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
 
-Defined in:  [generated/svm/SVC.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/SVC.ts#L680)
+Defined in:  [generated/svm/SVC.ts:680](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVC.ts#L680)

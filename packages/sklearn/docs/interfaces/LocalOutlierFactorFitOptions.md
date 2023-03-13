@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L652)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L652)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/neighbors/LocalOutlierFactor.ts:652](https://github.com/
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L657)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L657)

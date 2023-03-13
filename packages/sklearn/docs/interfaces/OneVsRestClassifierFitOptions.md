@@ -8,7 +8,7 @@
 
 Data.
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L488)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L488)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/multiclass/OneVsRestClassifier.ts:488](https://github.co
 
 Multi-class targets. An indicator matrix turns on multilabel classification.
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L493)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L493)

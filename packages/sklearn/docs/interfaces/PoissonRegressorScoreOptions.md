@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L422)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L422)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/PoissonRegressor.ts:422](https://github.co
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L432)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L432)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/PoissonRegressor.ts:432](https://github.co
 
 True values of target.
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L427)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L427)

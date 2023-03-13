@@ -28,7 +28,7 @@ new NeighborhoodComponentsAnalysis(opts?: NeighborhoodComponentsAnalysisOptions)
 
 [`NeighborhoodComponentsAnalysis`](NeighborhoodComponentsAnalysis.md)
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L25)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:25](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L23)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L22)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L21)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L18)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L19)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L298)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L298)
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L298)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L298)
 
 ### feature\_names\_in\_
 
@@ -96,9 +96,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L406)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L406)
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L406)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L406)
 
 ### n\_features\_in\_
 
@@ -114,9 +114,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L325)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L325)
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L325)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L325)
 
 ### n\_iter\_
 
@@ -132,9 +132,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L352)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L352)
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L352)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L352)
 
 ### py
 
@@ -148,7 +148,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L32)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L32)
 
 #### Signature
 
@@ -166,9 +166,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L36)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L36)
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L32) [generated/neighbors/NeighborhoodComponentsAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L36)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L32) [generated/neighbors/NeighborhoodComponentsAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L36)
 
 ### random\_state\_
 
@@ -184,9 +184,9 @@ random_state_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L379)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L379)
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L379)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L379)
 
 ## Methods
 
@@ -206,7 +206,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L97)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L97)
 
 ### fit()
 
@@ -228,7 +228,7 @@ fit(opts: NeighborhoodComponentsAnalysisFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L114)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L114)
 
 ### fit\_transform()
 
@@ -252,7 +252,7 @@ fit_transform(opts: NeighborhoodComponentsAnalysisFitTransformOptions): Promise<
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L150)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L150)
 
 ### get\_feature\_names\_out()
 
@@ -276,7 +276,7 @@ get_feature_names_out(opts: NeighborhoodComponentsAnalysisGetFeatureNamesOutOpti
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L191)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L191)
 
 ### init()
 
@@ -300,7 +300,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L45)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L45)
 
 ### set\_output()
 
@@ -324,7 +324,7 @@ set_output(opts: NeighborhoodComponentsAnalysisSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L228)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L228)
 
 ### transform()
 
@@ -346,4 +346,4 @@ transform(opts: NeighborhoodComponentsAnalysisTransformOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L263)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L263)

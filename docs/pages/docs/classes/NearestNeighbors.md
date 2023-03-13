@@ -2,7 +2,7 @@
 
 Unsupervised learner for implementing neighbor searches.
 
-Read more in the [User Guide](../neighbors.html#unsupervised-neighbors).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html)
 
@@ -20,13 +20,13 @@ new NearestNeighbors(opts?: NearestNeighborsOptions): NearestNeighbors;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`NearestNeighborsOptions`](../interfaces/NearestNeighborsOptions.md) |
+| `opts?` | `NearestNeighborsOptions` |
 
 ### Returns
 
 [`NearestNeighbors`](NearestNeighbors.md)
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L23)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/neighbors/NearestNeighbors.ts:23](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L21)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L20)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L19)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L16)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L17)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L17)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/NearestNeighbors.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L289)
+Defined in: [generated/neighbors/NearestNeighbors.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L289)
 
 ### effective\_metric\_params\_
 
@@ -92,11 +92,11 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/NearestNeighbors.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L316)
+Defined in: [generated/neighbors/NearestNeighbors.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L316)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -106,13 +106,13 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/NearestNeighbors.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L370)
+Defined in: [generated/neighbors/NearestNeighbors.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L370)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -124,7 +124,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/NearestNeighbors.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L343)
+Defined in: [generated/neighbors/NearestNeighbors.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L343)
 
 ### n\_samples\_fit\_
 
@@ -140,7 +140,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/NearestNeighbors.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L397)
+Defined in: [generated/neighbors/NearestNeighbors.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L397)
 
 ### py
 
@@ -154,7 +154,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L28)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L28)
 
 #### Signature
 
@@ -172,7 +172,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/NearestNeighbors.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L32)
+Defined in: [generated/neighbors/NearestNeighbors.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L32)
 
 ## Methods
 
@@ -192,7 +192,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L89)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L89)
 
 ### fit()
 
@@ -208,13 +208,13 @@ fit(opts: NearestNeighborsFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`NearestNeighborsFitOptions`](../interfaces/NearestNeighborsFitOptions.md) |
+| `opts` | `NearestNeighborsFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L106)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L106)
 
 ### init()
 
@@ -238,7 +238,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L41)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L41)
 
 ### kneighbors()
 
@@ -256,13 +256,13 @@ kneighbors(opts: NearestNeighborsKneighborsOptions): Promise<ArrayLike[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`NearestNeighborsKneighborsOptions`](../interfaces/NearestNeighborsKneighborsOptions.md) |
+| `opts` | `NearestNeighborsKneighborsOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L138)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L138)
 
 ### kneighbors\_graph()
 
@@ -278,13 +278,13 @@ kneighbors_graph(opts: NearestNeighborsKneighborsGraphOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`NearestNeighborsKneighborsGraphOptions`](../interfaces/NearestNeighborsKneighborsGraphOptions.md) |
+| `opts` | `NearestNeighborsKneighborsGraphOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L172)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L172)
 
 ### radius\_neighbors()
 
@@ -304,13 +304,13 @@ radius_neighbors(opts: NearestNeighborsRadiusNeighborsOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`NearestNeighborsRadiusNeighborsOptions`](../interfaces/NearestNeighborsRadiusNeighborsOptions.md) |
+| `opts` | `NearestNeighborsRadiusNeighborsOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L212)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L212)
 
 ### radius\_neighbors\_graph()
 
@@ -328,10 +328,10 @@ radius_neighbors_graph(opts: NearestNeighborsRadiusNeighborsGraphOptions): Promi
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`NearestNeighborsRadiusNeighborsGraphOptions`](../interfaces/NearestNeighborsRadiusNeighborsGraphOptions.md) |
+| `opts` | `NearestNeighborsRadiusNeighborsGraphOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L250)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L250)

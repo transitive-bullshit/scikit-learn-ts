@@ -12,7 +12,7 @@ Hyperparameter of the ridge regression that learns the inverse transform (when f
 
 `1`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L511)
+Defined in:  [generated/decomposition/KernelPCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L511)
 
 ### coef0?
 
@@ -24,7 +24,7 @@ Independent term in poly and sigmoid kernels. Ignored by other kernels.
 
 `1`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L499)
+Defined in:  [generated/decomposition/KernelPCA.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L499)
 
 ### copy\_X?
 
@@ -36,7 +36,7 @@ If `true`, input X is copied and stored by the model in the `X\_fit\_` attribute
 
 `true`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L563)
+Defined in:  [generated/decomposition/KernelPCA.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L563)
 
 ### degree?
 
@@ -48,7 +48,7 @@ Degree for poly kernels. Ignored by other kernels.
 
 `3`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L492)
+Defined in:  [generated/decomposition/KernelPCA.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L492)
 
 ### eigen\_solver?
 
@@ -60,7 +60,7 @@ Select eigensolver to use. If `n\_components` is much less than the number of tr
 
 `'auto'`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L525)
+Defined in:  [generated/decomposition/KernelPCA.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L525)
 
 ### fit\_inverse\_transform?
 
@@ -72,7 +72,7 @@ Learn the inverse transform for non-precomputed kernels (i.e. learn to find the 
 
 `false`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L518)
+Defined in:  [generated/decomposition/KernelPCA.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L518)
 
 ### gamma?
 
@@ -80,7 +80,7 @@ Defined in:  [generated/decomposition/KernelPCA.ts:518](https://github.com/trans
 
 Kernel coefficient for rbf, poly and sigmoid kernels. Ignored by other kernels. If `gamma` is `undefined`, then it is set to `1/n\_features`.
 
-Defined in:  [generated/decomposition/KernelPCA.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L485)
+Defined in:  [generated/decomposition/KernelPCA.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L485)
 
 ### iterated\_power?
 
@@ -92,7 +92,7 @@ Number of iterations for the power method computed by svd\_solver == ‘randomiz
 
 `'auto'`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L544)
+Defined in:  [generated/decomposition/KernelPCA.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L544)
 
 ### kernel?
 
@@ -104,7 +104,7 @@ Kernel used for PCA.
 
 `'linear'`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L480)
+Defined in:  [generated/decomposition/KernelPCA.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L480)
 
 ### kernel\_params?
 
@@ -112,7 +112,7 @@ Defined in:  [generated/decomposition/KernelPCA.ts:480](https://github.com/trans
 
 Parameters (keyword arguments) and values for kernel passed as callable object. Ignored by other kernels.
 
-Defined in:  [generated/decomposition/KernelPCA.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L504)
+Defined in:  [generated/decomposition/KernelPCA.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L504)
 
 ### max\_iter?
 
@@ -120,7 +120,7 @@ Defined in:  [generated/decomposition/KernelPCA.ts:504](https://github.com/trans
 
 Maximum number of iterations for arpack. If `undefined`, optimal value will be chosen by arpack.
 
-Defined in:  [generated/decomposition/KernelPCA.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L537)
+Defined in:  [generated/decomposition/KernelPCA.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L537)
 
 ### n\_components?
 
@@ -128,7 +128,7 @@ Defined in:  [generated/decomposition/KernelPCA.ts:537](https://github.com/trans
 
 Number of components. If `undefined`, all non-zero components are kept.
 
-Defined in:  [generated/decomposition/KernelPCA.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L473)
+Defined in:  [generated/decomposition/KernelPCA.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L473)
 
 ### n\_jobs?
 
@@ -136,7 +136,7 @@ Defined in:  [generated/decomposition/KernelPCA.ts:473](https://github.com/trans
 
 The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/decomposition/KernelPCA.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L568)
+Defined in:  [generated/decomposition/KernelPCA.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L568)
 
 ### random\_state?
 
@@ -144,7 +144,7 @@ Defined in:  [generated/decomposition/KernelPCA.ts:568](https://github.com/trans
 
 Used when `eigen\_solver` == ‘arpack’ or ‘randomized’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/KernelPCA.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L556)
+Defined in:  [generated/decomposition/KernelPCA.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L556)
 
 ### remove\_zero\_eig?
 
@@ -156,7 +156,7 @@ If `true`, then all components with zero eigenvalues are removed, so that the nu
 
 `false`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L551)
+Defined in:  [generated/decomposition/KernelPCA.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L551)
 
 ### tol?
 
@@ -168,4 +168,4 @@ Convergence tolerance for arpack. If 0, optimal value will be chosen by arpack.
 
 `0`
 
-Defined in:  [generated/decomposition/KernelPCA.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L532)
+Defined in:  [generated/decomposition/KernelPCA.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/KernelPCA.ts#L532)

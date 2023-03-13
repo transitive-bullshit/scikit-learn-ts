@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L849)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L849)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/covariance/EllipticEnvelope.ts:849](https://github.com/t
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:854](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L854)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:854](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L854)

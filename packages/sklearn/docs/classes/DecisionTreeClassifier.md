@@ -26,7 +26,7 @@ new DecisionTreeClassifier(opts?: DecisionTreeClassifierOptions): DecisionTreeCl
 
 [`DecisionTreeClassifier`](DecisionTreeClassifier.md)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L23)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/tree/DecisionTreeClassifier.ts:23](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L21)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L20)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L19)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L16)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L17)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L17)
 
 ## Accessors
 
@@ -76,9 +76,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L478)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L478)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L478)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L478)
 
 ### feature\_names\_in\_
 
@@ -94,9 +94,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L586)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L586)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L586)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L586)
 
 ### max\_features\_
 
@@ -112,9 +112,9 @@ max_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L505)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L505)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L505)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L505)
 
 ### n\_classes\_
 
@@ -130,9 +130,9 @@ n_classes_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L532)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L532)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L532)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L532)
 
 ### n\_features\_in\_
 
@@ -148,9 +148,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L559)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L559)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L559)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L559)
 
 ### n\_outputs\_
 
@@ -166,9 +166,9 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L613)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L613)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L613)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L613)
 
 ### py
 
@@ -182,7 +182,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L28)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L28)
 
 #### Signature
 
@@ -200,9 +200,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L32)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L32)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L28) [generated/tree/DecisionTreeClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L32)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L28) [generated/tree/DecisionTreeClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L32)
 
 ### tree\_
 
@@ -218,9 +218,9 @@ tree_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L640)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L640)
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L640)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L640)
 
 ## Methods
 
@@ -244,7 +244,7 @@ apply(opts: DecisionTreeClassifierApplyOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L120)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L120)
 
 ### cost\_complexity\_pruning\_path()
 
@@ -268,7 +268,7 @@ cost_complexity_pruning_path(opts: DecisionTreeClassifierCostComplexityPruningPa
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L154)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L154)
 
 ### decision\_path()
 
@@ -290,7 +290,7 @@ decision_path(opts: DecisionTreeClassifierDecisionPathOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L193)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L193)
 
 ### dispose()
 
@@ -308,7 +308,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L103)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L103)
 
 ### fit()
 
@@ -330,7 +330,7 @@ fit(opts: DecisionTreeClassifierFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L230)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L230)
 
 ### get\_depth()
 
@@ -354,7 +354,7 @@ get_depth(opts: DecisionTreeClassifierGetDepthOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L268)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L268)
 
 ### get\_n\_leaves()
 
@@ -376,7 +376,7 @@ get_n_leaves(opts: DecisionTreeClassifierGetNLeavesOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L298)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L298)
 
 ### init()
 
@@ -400,7 +400,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L41)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L41)
 
 ### predict()
 
@@ -424,7 +424,7 @@ predict(opts: DecisionTreeClassifierPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L332)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L332)
 
 ### predict\_log\_proba()
 
@@ -446,7 +446,7 @@ predict_log_proba(opts: DecisionTreeClassifierPredictLogProbaOptions): Promise<A
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L368)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L368)
 
 ### predict\_proba()
 
@@ -470,7 +470,7 @@ predict_proba(opts: DecisionTreeClassifierPredictProbaOptions): Promise<ArrayLik
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L405)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L405)
 
 ### score()
 
@@ -494,4 +494,4 @@ score(opts: DecisionTreeClassifierScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L444)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L444)

@@ -12,7 +12,7 @@ Parameter controlling the inhomogenity of the kernel. If sigma\_0=0, the kernel 
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/DotProduct.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L240)
+Defined in:  [generated/gaussian\_process/kernels/DotProduct.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L240)
 
 ### sigma\_0\_bounds?
 
@@ -20,4 +20,4 @@ Defined in:  [generated/gaussian\_process/kernels/DotProduct.ts:240](https://git
 
 The lower and upper bound on ‘sigma\_0’. If set to “fixed”, ‘sigma\_0’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/DotProduct.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L245)
+Defined in:  [generated/gaussian\_process/kernels/DotProduct.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/DotProduct.ts#L245)

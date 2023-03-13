@@ -8,7 +8,7 @@
 
 Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L417)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L417)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/HuberRegressor.ts:417](https://github.com/
 
 Weight given to each sample.
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L427)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L427)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/HuberRegressor.ts:427](https://github.com/
 
 Target vector relative to X.
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L422)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L422)

@@ -32,7 +32,7 @@ new SGDClassifier(opts?: SGDClassifierOptions): SGDClassifier;
 
 [`SGDClassifier`](SGDClassifier.md)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L29)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L29)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:29](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L27)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L26)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L25)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L22)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L23)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L23)
 
 ## Accessors
 
@@ -80,9 +80,9 @@ classes_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L514)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L514)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L514)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L514)
 
 ### coef\_
 
@@ -98,9 +98,9 @@ coef_(): Promise<ArrayLike[][]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L424)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L424)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L424)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L424)
 
 ### feature\_names\_in\_
 
@@ -116,9 +116,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L587)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L587)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L587)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L587)
 
 ### intercept\_
 
@@ -134,9 +134,9 @@ intercept_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L447)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L447)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L447)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L447)
 
 ### loss\_function\_
 
@@ -150,9 +150,9 @@ loss_function_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L492)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L492)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L492)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L492)
 
 ### n\_features\_in\_
 
@@ -168,9 +168,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L562)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L562)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L562)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L562)
 
 ### n\_iter\_
 
@@ -186,9 +186,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L472)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L472)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L472)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L472)
 
 ### py
 
@@ -202,7 +202,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L34)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L34)
 
 #### Signature
 
@@ -220,9 +220,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L38)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L38)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L34) [generated/linear\_model/SGDClassifier.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L38)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L34) [generated/linear\_model/SGDClassifier.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L38)
 
 ### t\_
 
@@ -238,9 +238,9 @@ t_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L539)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L539)
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L539)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L539)
 
 ## Methods
 
@@ -266,7 +266,7 @@ decision_function(opts: SGDClassifierDecisionFunctionOptions): Promise<ArrayLike
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L130)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L130)
 
 ### densify()
 
@@ -290,7 +290,7 @@ densify(opts: SGDClassifierDensifyOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L164)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L164)
 
 ### dispose()
 
@@ -308,7 +308,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L111)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L111)
 
 ### fit()
 
@@ -330,7 +330,7 @@ fit(opts: SGDClassifierFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L190)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L190)
 
 ### init()
 
@@ -354,7 +354,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L47)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L47)
 
 ### partial\_fit()
 
@@ -378,7 +378,7 @@ partial_fit(opts: SGDClassifierPartialFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L228)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L228)
 
 ### predict()
 
@@ -400,7 +400,7 @@ predict(opts: SGDClassifierPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L260)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L260)
 
 ### predict\_log\_proba()
 
@@ -428,7 +428,7 @@ predict_log_proba(opts: SGDClassifierPredictLogProbaOptions): Promise<ArrayLike>
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L294)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L294)
 
 ### predict\_proba()
 
@@ -456,7 +456,7 @@ predict_proba(opts: SGDClassifierPredictProbaOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L332)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L332)
 
 ### score()
 
@@ -480,7 +480,7 @@ score(opts: SGDClassifierScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L362)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L362)
 
 ### sparsify()
 
@@ -506,4 +506,4 @@ sparsify(opts: SGDClassifierSparsifyOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L398)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L398)

@@ -10,7 +10,7 @@ Training data, where `n\_samples` is the number of samples and `n\_features` is 
 
 Note that providing `y` is sufficient to generate the splits and hence `np.zeros(n\_samples)` may be used as a placeholder for `X` instead of actual training data.
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L206)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L206)
 
 ### groups?
 
@@ -18,7 +18,7 @@ Defined in:  [generated/model\_selection/StratifiedKFold.ts:206](https://github.
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L216)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L216)
 
 ### y?
 
@@ -26,4 +26,4 @@ Defined in:  [generated/model\_selection/StratifiedKFold.ts:216](https://github.
 
 The target variable for supervised learning problems. Stratification is done based on the y labels.
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L211)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L211)

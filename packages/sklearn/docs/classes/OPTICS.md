@@ -32,7 +32,7 @@ new OPTICS(opts?: OPTICSOptions): OPTICS;
 
 [`OPTICS`](OPTICS.md)
 
-Defined in:  [generated/cluster/OPTICS.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L29)
+Defined in:  [generated/cluster/OPTICS.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L29)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/cluster/OPTICS.ts:29](https://github.com/transitive-bull
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/OPTICS.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L27)
+Defined in:  [generated/cluster/OPTICS.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/OPTICS.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L26)
+Defined in:  [generated/cluster/OPTICS.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/OPTICS.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L25)
+Defined in:  [generated/cluster/OPTICS.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/OPTICS.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L22)
+Defined in:  [generated/cluster/OPTICS.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/OPTICS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L23)
+Defined in:  [generated/cluster/OPTICS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L23)
 
 ## Accessors
 
@@ -82,9 +82,9 @@ cluster_hierarchy_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/OPTICS.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L291)
+Defined in:  [generated/cluster/OPTICS.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L291)
 
-Defined in:  [generated/cluster/OPTICS.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L291)
+Defined in:  [generated/cluster/OPTICS.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L291)
 
 ### core\_distances\_
 
@@ -100,9 +100,9 @@ core_distances_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/OPTICS.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L243)
+Defined in:  [generated/cluster/OPTICS.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L243)
 
-Defined in:  [generated/cluster/OPTICS.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L243)
+Defined in:  [generated/cluster/OPTICS.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L243)
 
 ### feature\_names\_in\_
 
@@ -118,9 +118,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/OPTICS.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L339)
+Defined in:  [generated/cluster/OPTICS.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L339)
 
-Defined in:  [generated/cluster/OPTICS.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L339)
+Defined in:  [generated/cluster/OPTICS.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L339)
 
 ### labels\_
 
@@ -136,9 +136,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
+Defined in:  [generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
 
-Defined in:  [generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
+Defined in:  [generated/cluster/OPTICS.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L175)
 
 ### n\_features\_in\_
 
@@ -154,9 +154,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/OPTICS.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L316)
+Defined in:  [generated/cluster/OPTICS.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L316)
 
-Defined in:  [generated/cluster/OPTICS.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L316)
+Defined in:  [generated/cluster/OPTICS.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L316)
 
 ### ordering\_
 
@@ -172,9 +172,9 @@ ordering_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/OPTICS.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L220)
+Defined in:  [generated/cluster/OPTICS.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L220)
 
-Defined in:  [generated/cluster/OPTICS.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L220)
+Defined in:  [generated/cluster/OPTICS.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L220)
 
 ### predecessor\_
 
@@ -190,9 +190,9 @@ predecessor_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/OPTICS.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L268)
+Defined in:  [generated/cluster/OPTICS.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L268)
 
-Defined in:  [generated/cluster/OPTICS.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L268)
+Defined in:  [generated/cluster/OPTICS.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L268)
 
 ### py
 
@@ -206,7 +206,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/OPTICS.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L34)
+Defined in:  [generated/cluster/OPTICS.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L34)
 
 #### Signature
 
@@ -224,9 +224,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/OPTICS.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L38)
+Defined in:  [generated/cluster/OPTICS.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L38)
 
-Defined in:  [generated/cluster/OPTICS.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L34) [generated/cluster/OPTICS.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L38)
+Defined in:  [generated/cluster/OPTICS.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L34) [generated/cluster/OPTICS.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L38)
 
 ### reachability\_
 
@@ -242,9 +242,9 @@ reachability_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/OPTICS.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L197)
+Defined in:  [generated/cluster/OPTICS.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L197)
 
-Defined in:  [generated/cluster/OPTICS.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L197)
+Defined in:  [generated/cluster/OPTICS.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L197)
 
 ## Methods
 
@@ -264,7 +264,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/OPTICS.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L100)
+Defined in:  [generated/cluster/OPTICS.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L100)
 
 ### fit()
 
@@ -288,7 +288,7 @@ fit(opts: OPTICSFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/OPTICS.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L119)
+Defined in:  [generated/cluster/OPTICS.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L119)
 
 ### fit\_predict()
 
@@ -310,7 +310,7 @@ fit_predict(opts: OPTICSFitPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/OPTICS.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L147)
+Defined in:  [generated/cluster/OPTICS.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L147)
 
 ### init()
 
@@ -334,4 +334,4 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/OPTICS.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L47)
+Defined in:  [generated/cluster/OPTICS.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L47)

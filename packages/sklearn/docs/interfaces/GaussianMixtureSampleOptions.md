@@ -12,4 +12,4 @@ Number of samples to generate.
 
 `1`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:778](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L778)
+Defined in:  [generated/mixture/GaussianMixture.ts:778](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L778)

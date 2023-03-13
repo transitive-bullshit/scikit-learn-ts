@@ -24,13 +24,13 @@ new LinearDiscriminantAnalysis(opts?: LinearDiscriminantAnalysisOptions): Linear
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`LinearDiscriminantAnalysisOptions`](../interfaces/LinearDiscriminantAnalysisOptions.md) |
+| `opts?` | `LinearDiscriminantAnalysisOptions` |
 
 ### Returns
 
 [`LinearDiscriminantAnalysis`](LinearDiscriminantAnalysis.md)
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L27)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L27)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:27]
 
 > `boolean`  = `false`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L25)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L24)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L23)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L20)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L21)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L21)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ classes_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L695)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L695)
 
 ### coef\_
 
@@ -94,9 +94,9 @@ coef_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L479)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L479)
 
 ### covariance\_
 
@@ -110,9 +110,9 @@ covariance_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L533)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L533)
 
 ### explained\_variance\_ratio\_
 
@@ -126,13 +126,13 @@ explained_variance_ratio_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L560)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L560)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -142,9 +142,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L749)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L749)
 
 ### intercept\_
 
@@ -158,9 +158,9 @@ intercept_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L506)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L506)
 
 ### means\_
 
@@ -174,13 +174,13 @@ means_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L587)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L587)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -192,7 +192,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L722)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L722)
 
 ### priors\_
 
@@ -206,9 +206,9 @@ priors_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L614)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L614)
 
 ### py
 
@@ -222,7 +222,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L32)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L32)
 
 #### Signature
 
@@ -240,7 +240,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L36)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L36)
 
 ### scalings\_
 
@@ -254,9 +254,9 @@ scalings_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L641)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L641)
 
 ### xbar\_
 
@@ -270,9 +270,9 @@ xbar_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L668)
+Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L668)
 
 ## Methods
 
@@ -280,7 +280,7 @@ Defined in: [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:668]
 
 Apply decision function to an array of samples.
 
-The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See [Mathematical formulation of the LDA and QDA classifiers](../lda_qda.html#lda-qda-math).
+The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See Mathematical formulation of the LDA and QDA classifiers.
 
 #### Signature
 
@@ -292,13 +292,13 @@ decision_function(opts: LinearDiscriminantAnalysisDecisionFunctionOptions): Prom
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisDecisionFunctionOptions`](../interfaces/LinearDiscriminantAnalysisDecisionFunctionOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisDecisionFunctionOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L118)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L118)
 
 ### dispose()
 
@@ -316,7 +316,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L99)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L99)
 
 ### fit()
 
@@ -332,13 +332,13 @@ fit(opts: LinearDiscriminantAnalysisFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisFitOptions`](../interfaces/LinearDiscriminantAnalysisFitOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L153)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L153)
 
 ### fit\_transform()
 
@@ -356,13 +356,13 @@ fit_transform(opts: LinearDiscriminantAnalysisFitTransformOptions): Promise<any[
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisFitTransformOptions`](../interfaces/LinearDiscriminantAnalysisFitTransformOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisFitTransformOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L189)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L189)
 
 ### get\_feature\_names\_out()
 
@@ -380,13 +380,13 @@ get_feature_names_out(opts: LinearDiscriminantAnalysisGetFeatureNamesOutOptions)
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisGetFeatureNamesOutOptions`](../interfaces/LinearDiscriminantAnalysisGetFeatureNamesOutOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisGetFeatureNamesOutOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L230)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L230)
 
 ### init()
 
@@ -410,7 +410,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L45)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L45)
 
 ### predict()
 
@@ -426,13 +426,13 @@ predict(opts: LinearDiscriminantAnalysisPredictOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisPredictOptions`](../interfaces/LinearDiscriminantAnalysisPredictOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisPredictOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L265)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L265)
 
 ### predict\_log\_proba()
 
@@ -448,13 +448,13 @@ predict_log_proba(opts: LinearDiscriminantAnalysisPredictLogProbaOptions): Promi
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisPredictLogProbaOptions`](../interfaces/LinearDiscriminantAnalysisPredictLogProbaOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisPredictLogProbaOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L299)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L299)
 
 ### predict\_proba()
 
@@ -470,13 +470,13 @@ predict_proba(opts: LinearDiscriminantAnalysisPredictProbaOptions): Promise<Arra
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisPredictProbaOptions`](../interfaces/LinearDiscriminantAnalysisPredictProbaOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisPredictProbaOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L334)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L334)
 
 ### score()
 
@@ -494,19 +494,19 @@ score(opts: LinearDiscriminantAnalysisScoreOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisScoreOptions`](../interfaces/LinearDiscriminantAnalysisScoreOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisScoreOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L371)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L371)
 
 ### set\_output()
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See Introducing the set\_output API for an example on how to use the API.
 
 #### Signature
 
@@ -518,13 +518,13 @@ set_output(opts: LinearDiscriminantAnalysisSetOutputOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisSetOutputOptions`](../interfaces/LinearDiscriminantAnalysisSetOutputOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisSetOutputOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L409)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L409)
 
 ### transform()
 
@@ -540,10 +540,10 @@ transform(opts: LinearDiscriminantAnalysisTransformOptions): Promise<ArrayLike[]
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`LinearDiscriminantAnalysisTransformOptions`](../interfaces/LinearDiscriminantAnalysisTransformOptions.md) |
+| `opts` | `LinearDiscriminantAnalysisTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L444)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L444)

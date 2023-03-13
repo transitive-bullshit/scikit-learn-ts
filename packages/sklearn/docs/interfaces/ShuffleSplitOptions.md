@@ -12,7 +12,7 @@ Number of re-shuffling & splitting iterations.
 
 `10`
 
-Defined in:  [generated/model\_selection/ShuffleSplit.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L168)
+Defined in:  [generated/model\_selection/ShuffleSplit.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L168)
 
 ### random\_state?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/model\_selection/ShuffleSplit.ts:168](https://github.com
 
 Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/model\_selection/ShuffleSplit.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L183)
+Defined in:  [generated/model\_selection/ShuffleSplit.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L183)
 
 ### test\_size?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/model\_selection/ShuffleSplit.ts:183](https://github.com
 
 If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If `undefined`, the value is set to the complement of the train size. If `train\_size` is also `undefined`, it will be set to 0.1.
 
-Defined in:  [generated/model\_selection/ShuffleSplit.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L173)
+Defined in:  [generated/model\_selection/ShuffleSplit.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L173)
 
 ### train\_size?
 
@@ -36,4 +36,4 @@ Defined in:  [generated/model\_selection/ShuffleSplit.ts:173](https://github.com
 
 If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the train split. If int, represents the absolute number of train samples. If `undefined`, the value is automatically set to the complement of the test size.
 
-Defined in:  [generated/model\_selection/ShuffleSplit.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L178)
+Defined in:  [generated/model\_selection/ShuffleSplit.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L178)

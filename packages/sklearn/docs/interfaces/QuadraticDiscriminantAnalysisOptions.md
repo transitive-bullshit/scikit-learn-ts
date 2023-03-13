@@ -8,7 +8,7 @@
 
 Class priors. By default, the class proportions are inferred from the training data.
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L548)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L548)
 
 ### reg\_param?
 
@@ -20,7 +20,7 @@ Regularizes the per-class covariance estimates by transforming S2 as `S2 \= (1 \
 
 `0`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L555)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L555)
 
 ### store\_covariance?
 
@@ -32,7 +32,7 @@ If `true`, the class covariance matrices are explicitly computed and stored in t
 
 `false`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L562)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L562)
 
 ### tol?
 
@@ -44,4 +44,4 @@ Absolute threshold for a singular value to be considered significant, used to es
 
 `0.0001`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L569)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L569)

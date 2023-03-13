@@ -12,7 +12,7 @@ When `true`, an alternating sign is added to the features as to approximately co
 
 `true`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L253)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L253)
 
 ### dtype?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/feature\_extraction/FeatureHasher.ts:253](https://github
 
 The type of feature values. Passed to scipy.sparse matrix constructors as the dtype argument. Do not set this to bool, np.boolean or any unsigned integer type.
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L246)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L246)
 
 ### input\_type?
 
@@ -32,7 +32,7 @@ Choose a string from {‘dict’, ‘pair’, ‘string’}. Either “dict” (
 
 `'dict'`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L241)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L241)
 
 ### n\_features?
 
@@ -44,4 +44,4 @@ The number of features (columns) in the output matrices. Small numbers of featur
 
 `2`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L234)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L234)

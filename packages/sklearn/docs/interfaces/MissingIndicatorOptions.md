@@ -12,7 +12,7 @@ If `true`, [`transform`](#sklearn.impute.MissingIndicator.transform "sklearn.imp
 
 `true`
 
-Defined in:  [generated/impute/MissingIndicator.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/MissingIndicator.ts#L371)
+Defined in:  [generated/impute/MissingIndicator.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/MissingIndicator.ts#L371)
 
 ### features?
 
@@ -24,7 +24,7 @@ Whether the imputer mask should represent all or a subset of features.
 
 `'missing-only'`
 
-Defined in:  [generated/impute/MissingIndicator.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/MissingIndicator.ts#L357)
+Defined in:  [generated/impute/MissingIndicator.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/MissingIndicator.ts#L357)
 
 ### missing\_values?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/impute/MissingIndicator.ts:357](https://github.com/trans
 
 The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
 
-Defined in:  [generated/impute/MissingIndicator.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/MissingIndicator.ts#L350)
+Defined in:  [generated/impute/MissingIndicator.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/MissingIndicator.ts#L350)
 
 ### sparse?
 
@@ -44,4 +44,4 @@ Whether the imputer mask format should be sparse or dense.
 
 `'auto'`
 
-Defined in:  [generated/impute/MissingIndicator.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/MissingIndicator.ts#L364)
+Defined in:  [generated/impute/MissingIndicator.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/MissingIndicator.ts#L364)

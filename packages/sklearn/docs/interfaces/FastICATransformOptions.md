@@ -8,7 +8,7 @@
 
 Data to transform, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/decomposition/FastICA.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L571)
+Defined in:  [generated/decomposition/FastICA.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L571)
 
 ### copy?
 
@@ -20,4 +20,4 @@ If `false`, data passed to fit can be overwritten. Defaults to `true`.
 
 `true`
 
-Defined in:  [generated/decomposition/FastICA.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L578)
+Defined in:  [generated/decomposition/FastICA.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L578)

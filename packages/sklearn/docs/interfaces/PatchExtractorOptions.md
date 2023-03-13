@@ -8,7 +8,7 @@
 
 The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches.
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L165)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L165)
 
 ### patch\_size?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:165](https:/
 
 The dimensions of one patch.
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L160)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L160)
 
 ### random\_state?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:160](https:/
 
 Determines the random number generator used for random sampling when `max\_patches is not None`. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L170)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L170)

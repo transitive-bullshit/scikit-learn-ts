@@ -14,7 +14,7 @@ If a callable is passed it is used to extract the sequence of features out of th
 
 `'word'`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L574)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L574)
 
 ### binary?
 
@@ -26,7 +26,7 @@ If `true`, all non zero counts are set to 1. This is useful for discrete probabi
 
 `false`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L607)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L607)
 
 ### decode\_error?
 
@@ -38,7 +38,7 @@ Instruction on what to do if a byte sequence is given to analyze that contains c
 
 `'strict'`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L520)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L520)
 
 ### dtype?
 
@@ -46,7 +46,7 @@ Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:520](https:/
 
 Type of the matrix returned by fit\_transform() or transform().
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L612)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L612)
 
 ### encoding?
 
@@ -58,7 +58,7 @@ If bytes or files are given to analyze, this encoding is used to decode.
 
 `'utf-8'`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L513)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L513)
 
 ### input?
 
@@ -70,7 +70,7 @@ If `'filename'`, the sequence passed as an argument to fit is expected to be a l
 
 `'content'`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L506)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L506)
 
 ### lowercase?
 
@@ -82,7 +82,7 @@ Convert all characters to lowercase before tokenizing.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L534)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L534)
 
 ### max\_df?
 
@@ -94,7 +94,7 @@ When building the vocabulary ignore terms that have a document frequency strictl
 
 `1`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L581)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L581)
 
 ### max\_features?
 
@@ -104,7 +104,7 @@ If not `undefined`, build a vocabulary that only consider the top `max\_features
 
 This parameter is ignored if vocabulary is not `undefined`.
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L595)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L595)
 
 ### min\_df?
 
@@ -116,7 +116,7 @@ When building the vocabulary ignore terms that have a document frequency strictl
 
 `1`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L588)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L588)
 
 ### ngram\_range?
 
@@ -124,7 +124,7 @@ Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:588](https:/
 
 The lower and upper boundary of the range of n-values for different word n-grams or char n-grams to be extracted. All values of n such such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L565)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L565)
 
 ### preprocessor?
 
@@ -132,7 +132,7 @@ Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:565](https:/
 
 Override the preprocessing (strip\_accents and lowercase) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L539)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L539)
 
 ### stop\_words?
 
@@ -144,7 +144,7 @@ If a list, that list is assumed to contain stop words, all of which will be remo
 
 If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L553)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L553)
 
 ### strip\_accents?
 
@@ -154,7 +154,7 @@ Remove accents and perform other character normalization during the preprocessin
 
 Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L527)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L527)
 
 ### token\_pattern?
 
@@ -164,7 +164,7 @@ Regular expression denoting what constitutes a “token”, only used if `analyz
 
 If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L560)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L560)
 
 ### tokenizer?
 
@@ -172,7 +172,7 @@ Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:560](https:/
 
 Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L544)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L544)
 
 ### vocabulary?
 
@@ -180,4 +180,4 @@ Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:544](https:/
 
 Either a Mapping (e.g., a dict) where keys are terms and values are indices in the feature matrix, or an iterable over terms. If not given, a vocabulary is determined from the input documents. Indices in the mapping should not be repeated and should not have any gap between 0 and the largest index.
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L600)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L600)

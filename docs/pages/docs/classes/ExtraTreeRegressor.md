@@ -6,7 +6,7 @@ Extra-trees differ from classic decision trees in the way they are built. When l
 
 Warning: Extra-trees should only be used within ensemble methods.
 
-Read more in the [User Guide](../tree.html#tree).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.tree.ExtraTreeRegressor.html)
 
@@ -24,13 +24,13 @@ new ExtraTreeRegressor(opts?: ExtraTreeRegressorOptions): ExtraTreeRegressor;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`ExtraTreeRegressorOptions`](../interfaces/ExtraTreeRegressorOptions.md) |
+| `opts?` | `ExtraTreeRegressorOptions` |
 
 ### Returns
 
 [`ExtraTreeRegressor`](ExtraTreeRegressor.md)
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L27)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L27)
 
 ## Properties
 
@@ -38,37 +38,37 @@ Defined in:  [generated/tree/ExtraTreeRegressor.ts:27](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L25)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L24)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L23)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L20)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L21)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L21)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -78,9 +78,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/tree/ExtraTreeRegressor.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L451)
+Defined in: [generated/tree/ExtraTreeRegressor.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L451)
 
 ### max\_features\_
 
@@ -96,11 +96,11 @@ max_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeRegressor.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L397)
+Defined in: [generated/tree/ExtraTreeRegressor.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L397)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -112,7 +112,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeRegressor.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L424)
+Defined in: [generated/tree/ExtraTreeRegressor.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L424)
 
 ### n\_outputs\_
 
@@ -128,7 +128,7 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L478)
+Defined in: [generated/tree/ExtraTreeRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L478)
 
 ### py
 
@@ -142,7 +142,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L32)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L32)
 
 #### Signature
 
@@ -160,11 +160,11 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/tree/ExtraTreeRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L36)
+Defined in: [generated/tree/ExtraTreeRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L36)
 
 ### tree\_
 
-The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and [Understanding the decision tree structure](../../auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py) for basic usage of these attributes.
+The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for attributes of Tree object and Understanding the decision tree structure for basic usage of these attributes.
 
 #### Signature
 
@@ -176,7 +176,7 @@ tree_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/tree/ExtraTreeRegressor.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L505)
+Defined in: [generated/tree/ExtraTreeRegressor.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L505)
 
 ## Methods
 
@@ -194,19 +194,19 @@ apply(opts: ExtraTreeRegressorApplyOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorApplyOptions`](../interfaces/ExtraTreeRegressorApplyOptions.md) |
+| `opts` | `ExtraTreeRegressorApplyOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L122)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L122)
 
 ### cost\_complexity\_pruning\_path()
 
 Compute the pruning path during Minimal Cost-Complexity Pruning.
 
-See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
+See Minimal Cost-Complexity Pruning for details on the pruning process.
 
 #### Signature
 
@@ -218,13 +218,13 @@ cost_complexity_pruning_path(opts: ExtraTreeRegressorCostComplexityPruningPathOp
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorCostComplexityPruningPathOptions`](../interfaces/ExtraTreeRegressorCostComplexityPruningPathOptions.md) |
+| `opts` | `ExtraTreeRegressorCostComplexityPruningPathOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L156)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L156)
 
 ### decision\_path()
 
@@ -240,13 +240,13 @@ decision_path(opts: ExtraTreeRegressorDecisionPathOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorDecisionPathOptions`](../interfaces/ExtraTreeRegressorDecisionPathOptions.md) |
+| `opts` | `ExtraTreeRegressorDecisionPathOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L195)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L195)
 
 ### dispose()
 
@@ -264,7 +264,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L105)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L105)
 
 ### fit()
 
@@ -280,13 +280,13 @@ fit(opts: ExtraTreeRegressorFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorFitOptions`](../interfaces/ExtraTreeRegressorFitOptions.md) |
+| `opts` | `ExtraTreeRegressorFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L231)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L231)
 
 ### get\_depth()
 
@@ -304,13 +304,13 @@ get_depth(opts: ExtraTreeRegressorGetDepthOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorGetDepthOptions`](../interfaces/ExtraTreeRegressorGetDepthOptions.md) |
+| `opts` | `ExtraTreeRegressorGetDepthOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L269)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L269)
 
 ### get\_n\_leaves()
 
@@ -326,13 +326,13 @@ get_n_leaves(opts: ExtraTreeRegressorGetNLeavesOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorGetNLeavesOptions`](../interfaces/ExtraTreeRegressorGetNLeavesOptions.md) |
+| `opts` | `ExtraTreeRegressorGetNLeavesOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L297)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L297)
 
 ### init()
 
@@ -356,7 +356,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L45)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L45)
 
 ### predict()
 
@@ -374,13 +374,13 @@ predict(opts: ExtraTreeRegressorPredictOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorPredictOptions`](../interfaces/ExtraTreeRegressorPredictOptions.md) |
+| `opts` | `ExtraTreeRegressorPredictOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L329)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L329)
 
 ### score()
 
@@ -398,10 +398,10 @@ score(opts: ExtraTreeRegressorScoreOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExtraTreeRegressorScoreOptions`](../interfaces/ExtraTreeRegressorScoreOptions.md) |
+| `opts` | `ExtraTreeRegressorScoreOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L363)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L363)

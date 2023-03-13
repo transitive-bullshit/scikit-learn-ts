@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L655)
+Defined in:  [generated/ensemble/StackingClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L655)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/StackingClassifier.ts:655](https://github.com/t
 
 Additional fit parameters.
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L665)
+Defined in:  [generated/ensemble/StackingClassifier.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L665)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/StackingClassifier.ts:665](https://github.com/t
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L660)
+Defined in:  [generated/ensemble/StackingClassifier.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L660)

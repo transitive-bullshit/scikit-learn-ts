@@ -8,7 +8,7 @@
 
 Input data.
 
-Defined in:  [generated/cluster/OPTICS.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L470)
+Defined in:  [generated/cluster/OPTICS.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L470)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/cluster/OPTICS.ts:470](https://github.com/transitive-bul
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/cluster/OPTICS.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/OPTICS.ts#L475)
+Defined in:  [generated/cluster/OPTICS.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L475)

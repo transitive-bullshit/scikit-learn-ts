@@ -8,7 +8,7 @@
 
 Samples.
 
-Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L696)
+Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L696)
 
 ### copy?
 
@@ -20,4 +20,4 @@ Whether to copy `X` and `Y`, or perform in-place normalization.
 
 `true`
 
-Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L703)
+Defined in:  [generated/cross\_decomposition/PLSCanonical.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/PLSCanonical.ts#L703)

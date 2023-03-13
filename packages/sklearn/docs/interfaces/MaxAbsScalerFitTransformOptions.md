@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L461)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L461)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/MaxAbsScaler.ts:461](https://github.com/tr
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L471)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L471)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/MaxAbsScaler.ts:471](https://github.com/tr
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L466)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L466)

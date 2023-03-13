@@ -8,4 +8,4 @@
 
 Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.Nystroem.fit "sklearn.kernel_approximation.Nystroem.fit").
 
-Defined in:  [generated/kernel\_approximation/Nystroem.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L467)
+Defined in:  [generated/kernel\_approximation/Nystroem.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/Nystroem.ts#L467)

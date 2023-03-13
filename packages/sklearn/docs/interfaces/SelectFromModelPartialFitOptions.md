@@ -8,7 +8,7 @@
 
 The training input samples.
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L527)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L527)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_selection/SelectFromModel.ts:527](https://githu
 
 Other estimator specific parameters.
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L537)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L537)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_selection/SelectFromModel.ts:537](https://githu
 
 The target values (integers that correspond to classes in classification, real numbers in regression).
 
-Defined in:  [generated/feature\_selection/SelectFromModel.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L532)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L532)

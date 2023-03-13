@@ -39,10 +39,12 @@ async function main() {
 
       let out = await fs.readFile(doc.srcPath, 'utf-8')
 
-      out = out.replaceAll(
-        /^Defined in: *(.*)$\n\nDefined in: .*$/gm,
-        'Defined in: $1'
-      )
+      out = out
+        .replaceAll(
+          /^Defined in: *(.*)$\n\nDefined in: .*$/gm,
+          'Defined in: $1'
+        )
+        .replaceAll(/\[([^\]]+)\]\((\.\.[^\)]+)\)/g, '$1')
 
       if (doc.relativePath === 'modules.md') {
         out = out.replaceAll(/### Variables\b/g, '### Constants')

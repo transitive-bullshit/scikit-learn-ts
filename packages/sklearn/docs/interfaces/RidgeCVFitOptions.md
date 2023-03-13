@@ -8,7 +8,7 @@
 
 Training data. If using GCV, will be cast to float64 if necessary.
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L409)
+Defined in:  [generated/linear\_model/RidgeCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L409)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/RidgeCV.ts:409](https://github.com/transit
 
 Individual weights for each sample. If given a float, every sample will have the same weight.
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L419)
+Defined in:  [generated/linear\_model/RidgeCV.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L419)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/RidgeCV.ts:419](https://github.com/transit
 
 Target values. Will be cast to X’s dtype if necessary.
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L414)
+Defined in:  [generated/linear\_model/RidgeCV.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L414)

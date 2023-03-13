@@ -12,7 +12,7 @@ Strength of the squared L2 regularization. Note that the penalty is equal to `al
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L389)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L389)
 
 ### epsilon?
 
@@ -24,7 +24,7 @@ The parameter epsilon controls the number of samples that should be classified a
 
 `1.35`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L375)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L375)
 
 ### fit\_intercept?
 
@@ -36,7 +36,7 @@ Whether or not to fit the intercept. This can be set to `false` if the data is a
 
 `true`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L403)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L403)
 
 ### max\_iter?
 
@@ -48,7 +48,7 @@ Maximum number of iterations that `scipy.optimize.minimize(method="L-BFGS-B")` s
 
 `100`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L382)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L382)
 
 ### tol?
 
@@ -60,7 +60,7 @@ The iteration will stop when `max{|proj g\_i | i \= 1, ..., n}` <= `tol` where p
 
 `0.00001`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L410)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L410)
 
 ### warm\_start?
 
@@ -72,4 +72,4 @@ This is useful if the stored attributes of a previously used model has to be reu
 
 `false`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L396)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L396)

@@ -8,4 +8,4 @@
 
 New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/decomposition/PCA.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L818)
+Defined in:  [generated/decomposition/PCA.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L818)

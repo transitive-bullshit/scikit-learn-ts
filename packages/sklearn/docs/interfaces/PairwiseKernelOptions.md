@@ -12,7 +12,7 @@ Parameter gamma of the pairwise kernel specified by metric. It should be positiv
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L249)
+Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L249)
 
 ### gamma\_bounds?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:249](https:/
 
 The lower and upper bound on ‘gamma’. If set to “fixed”, ‘gamma’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L254)
+Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L254)
 
 ### metric?
 
@@ -32,7 +32,7 @@ The metric to use when calculating kernel between instances in a feature array. 
 
 `'linear'`
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L261)
+Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L261)
 
 ### pairwise\_kernels\_kwargs?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:261](https:/
 
 All entries of this dict (if any) are passed as keyword arguments to the pairwise kernel function.
 
-Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L275)
+Defined in:  [generated/gaussian\_process/kernels/PairwiseKernel.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/PairwiseKernel.ts#L275)

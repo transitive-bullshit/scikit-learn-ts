@@ -28,7 +28,7 @@ new RegressorChain(opts?: RegressorChainOptions): RegressorChain;
 
 [`RegressorChain`](RegressorChain.md)
 
-Defined in:  [generated/multioutput/RegressorChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L25)
+Defined in:  [generated/multioutput/RegressorChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/multioutput/RegressorChain.ts:25](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L23)
+Defined in:  [generated/multioutput/RegressorChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L22)
+Defined in:  [generated/multioutput/RegressorChain.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L21)
+Defined in:  [generated/multioutput/RegressorChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L18)
+Defined in:  [generated/multioutput/RegressorChain.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L19)
+Defined in:  [generated/multioutput/RegressorChain.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ estimators_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L198)
+Defined in:  [generated/multioutput/RegressorChain.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L198)
 
-Defined in:  [generated/multioutput/RegressorChain.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L198)
+Defined in:  [generated/multioutput/RegressorChain.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L198)
 
 ### feature\_names\_in\_
 
@@ -96,9 +96,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L271)
+Defined in:  [generated/multioutput/RegressorChain.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L271)
 
-Defined in:  [generated/multioutput/RegressorChain.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L271)
+Defined in:  [generated/multioutput/RegressorChain.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L271)
 
 ### n\_features\_in\_
 
@@ -114,9 +114,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L246)
+Defined in:  [generated/multioutput/RegressorChain.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L246)
 
-Defined in:  [generated/multioutput/RegressorChain.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L246)
+Defined in:  [generated/multioutput/RegressorChain.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L246)
 
 ### order\_
 
@@ -132,9 +132,9 @@ order_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L223)
+Defined in:  [generated/multioutput/RegressorChain.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L223)
 
-Defined in:  [generated/multioutput/RegressorChain.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L223)
+Defined in:  [generated/multioutput/RegressorChain.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L223)
 
 ### py
 
@@ -148,7 +148,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L30)
+Defined in:  [generated/multioutput/RegressorChain.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L30)
 
 #### Signature
 
@@ -166,9 +166,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L34)
+Defined in:  [generated/multioutput/RegressorChain.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L34)
 
-Defined in:  [generated/multioutput/RegressorChain.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L30) [generated/multioutput/RegressorChain.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L34)
+Defined in:  [generated/multioutput/RegressorChain.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L30) [generated/multioutput/RegressorChain.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L34)
 
 ## Methods
 
@@ -188,7 +188,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L87)
+Defined in:  [generated/multioutput/RegressorChain.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L87)
 
 ### fit()
 
@@ -210,7 +210,7 @@ fit(opts: RegressorChainFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L104)
+Defined in:  [generated/multioutput/RegressorChain.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L104)
 
 ### init()
 
@@ -234,7 +234,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L43)
+Defined in:  [generated/multioutput/RegressorChain.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L43)
 
 ### predict()
 
@@ -256,7 +256,7 @@ predict(opts: RegressorChainPredictOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L136)
+Defined in:  [generated/multioutput/RegressorChain.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L136)
 
 ### score()
 
@@ -280,4 +280,4 @@ score(opts: RegressorChainScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multioutput/RegressorChain.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L166)
+Defined in:  [generated/multioutput/RegressorChain.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L166)

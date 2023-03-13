@@ -12,4 +12,4 @@ If `true`, the return value will be an array of integers, rather than a boolean 
 
 `false`
 
-Defined in:  [generated/feature\_selection/SelectFpr.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L462)
+Defined in:  [generated/feature\_selection/SelectFpr.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L462)

@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L361)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L361)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/compose/TransformedTargetRegressor.ts:361](https://githu
 
 Sample weights.
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L371)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L371)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/compose/TransformedTargetRegressor.ts:371](https://githu
 
 True values for `X`.
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L366)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L366)

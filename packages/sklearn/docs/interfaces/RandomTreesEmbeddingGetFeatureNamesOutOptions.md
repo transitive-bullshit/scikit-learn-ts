@@ -8,4 +8,4 @@
 
 Only used to validate feature names with the names seen in [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit").
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L655)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L655)

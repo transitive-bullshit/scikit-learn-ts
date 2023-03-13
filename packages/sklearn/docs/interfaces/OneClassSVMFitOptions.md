@@ -8,7 +8,7 @@
 
 Set of samples, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/svm/OneClassSVM.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L612)
+Defined in:  [generated/svm/OneClassSVM.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L612)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/svm/OneClassSVM.ts:612](https://github.com/transitive-bu
 
 Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
 
-Defined in:  [generated/svm/OneClassSVM.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L622)
+Defined in:  [generated/svm/OneClassSVM.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L622)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/svm/OneClassSVM.ts:622](https://github.com/transitive-bu
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/svm/OneClassSVM.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/OneClassSVM.ts#L617)
+Defined in:  [generated/svm/OneClassSVM.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/OneClassSVM.ts#L617)

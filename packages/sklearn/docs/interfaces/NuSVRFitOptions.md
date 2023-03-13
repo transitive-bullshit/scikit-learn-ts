@@ -8,7 +8,7 @@
 
 Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
 
-Defined in:  [generated/svm/NuSVR.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/NuSVR.ts#L520)
+Defined in:  [generated/svm/NuSVR.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L520)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/svm/NuSVR.ts:520](https://github.com/transitive-bullshit
 
 Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
 
-Defined in:  [generated/svm/NuSVR.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/NuSVR.ts#L530)
+Defined in:  [generated/svm/NuSVR.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L530)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/svm/NuSVR.ts:530](https://github.com/transitive-bullshit
 
 Target values (class labels in classification, real numbers in regression).
 
-Defined in:  [generated/svm/NuSVR.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/NuSVR.ts#L525)
+Defined in:  [generated/svm/NuSVR.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L525)

@@ -12,7 +12,7 @@ Constant that multiplies the regularization term. The higher the value, the stro
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L640)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L640)
 
 ### average?
 
@@ -24,7 +24,7 @@ When set to `true`, computes the averaged SGD weights across all updates and sto
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L766)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L766)
 
 ### class\_weight?
 
@@ -36,7 +36,7 @@ Weights associated with classes. If not given, all classes are supposed to have 
 
 The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:750](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L750)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:750](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L750)
 
 ### early\_stopping?
 
@@ -48,7 +48,7 @@ Whether to use early stopping to terminate training when validation score is not
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L727)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L727)
 
 ### epsilon?
 
@@ -60,7 +60,7 @@ Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’
 
 `0.1`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L689)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L689)
 
 ### eta0?
 
@@ -72,7 +72,7 @@ The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptiv
 
 `0`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L713)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L713)
 
 ### fit\_intercept?
 
@@ -84,7 +84,7 @@ Whether the intercept should be estimated or not. If `false`, the data is assume
 
 `true`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L654)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L654)
 
 ### l1\_ratio?
 
@@ -96,7 +96,7 @@ The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 correspo
 
 `0.15`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L647)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L647)
 
 ### learning\_rate?
 
@@ -108,7 +108,7 @@ The learning rate schedule:
 
 `'optimal'`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L706)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L706)
 
 ### loss?
 
@@ -120,7 +120,7 @@ The loss function to be used.
 
 `'hinge'`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L616)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L616)
 
 ### max\_iter?
 
@@ -132,7 +132,7 @@ The maximum number of passes over the training data (aka epochs). It only impact
 
 `1000`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L661)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:661](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L661)
 
 ### n\_iter\_no\_change?
 
@@ -144,7 +144,7 @@ Number of iterations with no improvement to wait before stopping fitting. Conver
 
 `5`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L741)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L741)
 
 ### n\_jobs?
 
@@ -152,7 +152,7 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:741](https://github.com/t
 
 The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L694)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:694](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L694)
 
 ### penalty?
 
@@ -164,7 +164,7 @@ The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is 
 
 `'l2'`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L633)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L633)
 
 ### power\_t?
 
@@ -176,7 +176,7 @@ The exponent for inverse scaling learning rate \[default 0.5\]. Values must be i
 
 `0.5`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L720)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L720)
 
 ### random\_state?
 
@@ -184,7 +184,7 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:720](https://github.com/t
 
 Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Integer values must be in the range `\[0, 2\*\*32 \- 1\]`.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L699)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L699)
 
 ### shuffle?
 
@@ -196,7 +196,7 @@ Whether or not the training data should be shuffled after each epoch.
 
 `true`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L675)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L675)
 
 ### tol?
 
@@ -208,7 +208,7 @@ The stopping criterion. If it is not `undefined`, training will stop when (loss 
 
 `0.001`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L668)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L668)
 
 ### validation\_fraction?
 
@@ -220,7 +220,7 @@ The proportion of training data to set aside as validation set for early stoppin
 
 `0.1`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L734)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L734)
 
 ### verbose?
 
@@ -232,7 +232,7 @@ The verbosity level. Values must be in the range `\[0, inf)`.
 
 `0`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L682)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L682)
 
 ### warm\_start?
 
@@ -246,4 +246,4 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:759](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L759)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:759](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L759)

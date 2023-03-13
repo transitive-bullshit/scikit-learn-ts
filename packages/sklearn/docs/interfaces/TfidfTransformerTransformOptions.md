@@ -8,7 +8,7 @@
 
 A matrix of term/token counts.
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L412)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L412)
 
 ### copy?
 
@@ -20,4 +20,4 @@ Whether to copy X and operate on the copy or perform in-place operations.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L419)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L419)

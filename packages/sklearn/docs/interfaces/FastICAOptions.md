@@ -12,7 +12,7 @@ Specify which algorithm to use for FastICA.
 
 `'parallel'`
 
-Defined in:  [generated/decomposition/FastICA.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L462)
+Defined in:  [generated/decomposition/FastICA.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L462)
 
 ### fun?
 
@@ -24,7 +24,7 @@ The functional form of the G function used in the approximation to neg-entropy. 
 
 `'logcosh'`
 
-Defined in:  [generated/decomposition/FastICA.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L476)
+Defined in:  [generated/decomposition/FastICA.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L476)
 
 ### fun\_args?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/decomposition/FastICA.ts:476](https://github.com/transit
 
 Arguments to send to the functional form. If empty or `undefined` and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}.
 
-Defined in:  [generated/decomposition/FastICA.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L481)
+Defined in:  [generated/decomposition/FastICA.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L481)
 
 ### max\_iter?
 
@@ -44,7 +44,7 @@ Maximum number of iterations during fit.
 
 `200`
 
-Defined in:  [generated/decomposition/FastICA.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L488)
+Defined in:  [generated/decomposition/FastICA.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L488)
 
 ### n\_components?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/decomposition/FastICA.ts:488](https://github.com/transit
 
 Number of components to use. If `undefined` is passed, all are used.
 
-Defined in:  [generated/decomposition/FastICA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L455)
+Defined in:  [generated/decomposition/FastICA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L455)
 
 ### random\_state?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/decomposition/FastICA.ts:455](https://github.com/transit
 
 Used to initialize `w\_init` when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/FastICA.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L512)
+Defined in:  [generated/decomposition/FastICA.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L512)
 
 ### tol?
 
@@ -72,7 +72,7 @@ A positive scalar giving the tolerance at which the un-mixing matrix is consider
 
 `0.0001`
 
-Defined in:  [generated/decomposition/FastICA.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L495)
+Defined in:  [generated/decomposition/FastICA.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L495)
 
 ### w\_init?
 
@@ -80,7 +80,7 @@ Defined in:  [generated/decomposition/FastICA.ts:495](https://github.com/transit
 
 Initial un-mixing array. If `w\_init=None`, then an array of values drawn from a normal distribution is used.
 
-Defined in:  [generated/decomposition/FastICA.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L500)
+Defined in:  [generated/decomposition/FastICA.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L500)
 
 ### whiten?
 
@@ -92,7 +92,7 @@ Specify the whitening strategy to use.
 
 `'warn'`
 
-Defined in:  [generated/decomposition/FastICA.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L469)
+Defined in:  [generated/decomposition/FastICA.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L469)
 
 ### whiten\_solver?
 
@@ -104,4 +104,4 @@ The solver to use for whitening.
 
 `'svd'`
 
-Defined in:  [generated/decomposition/FastICA.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/FastICA.ts#L507)
+Defined in:  [generated/decomposition/FastICA.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L507)

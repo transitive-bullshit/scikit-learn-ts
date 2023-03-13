@@ -28,7 +28,7 @@ new MaxAbsScaler(opts?: MaxAbsScalerOptions): MaxAbsScaler;
 
 [`MaxAbsScaler`](MaxAbsScaler.md)
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L25)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/preprocessing/MaxAbsScaler.ts:25](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L23)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L22)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L21)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L18)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L19)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L388)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L388)
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L388)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L388)
 
 ### max\_abs\_
 
@@ -96,9 +96,9 @@ max_abs_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L340)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L340)
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L340)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L340)
 
 ### n\_features\_in\_
 
@@ -114,9 +114,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L363)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L363)
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L363)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L363)
 
 ### n\_samples\_seen\_
 
@@ -132,9 +132,9 @@ n_samples_seen_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L413)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L413)
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L413)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L413)
 
 ### py
 
@@ -148,7 +148,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L30)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L30)
 
 #### Signature
 
@@ -166,9 +166,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L34)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L34)
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L30) [generated/preprocessing/MaxAbsScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L34)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L30) [generated/preprocessing/MaxAbsScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L34)
 
 ### scale\_
 
@@ -184,9 +184,9 @@ scale_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L317)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L317)
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L317)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L317)
 
 ## Methods
 
@@ -206,7 +206,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L83)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L83)
 
 ### fit()
 
@@ -228,7 +228,7 @@ fit(opts: MaxAbsScalerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L100)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L100)
 
 ### fit\_transform()
 
@@ -252,7 +252,7 @@ fit_transform(opts: MaxAbsScalerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L130)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L130)
 
 ### get\_feature\_names\_out()
 
@@ -274,7 +274,7 @@ get_feature_names_out(opts: MaxAbsScalerGetFeatureNamesOutOptions): Promise<any>
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L162)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L162)
 
 ### init()
 
@@ -298,7 +298,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L43)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L43)
 
 ### inverse\_transform()
 
@@ -320,7 +320,7 @@ inverse_transform(opts: MaxAbsScalerInverseTransformOptions): Promise<ArrayLike>
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L195)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L195)
 
 ### partial\_fit()
 
@@ -344,7 +344,7 @@ partial_fit(opts: MaxAbsScalerPartialFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L229)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L229)
 
 ### set\_output()
 
@@ -368,7 +368,7 @@ set_output(opts: MaxAbsScalerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L259)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L259)
 
 ### transform()
 
@@ -390,4 +390,4 @@ transform(opts: MaxAbsScalerTransformOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L287)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L287)

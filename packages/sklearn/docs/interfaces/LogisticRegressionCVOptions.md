@@ -12,7 +12,7 @@ Each of the values in Cs describes the inverse of regularization strength. If Cs
 
 `10`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L730)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L730)
 
 ### class\_weight?
 
@@ -24,7 +24,7 @@ The “balanced” mode uses the values of y to automatically adjust weights inv
 
 Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L797)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L797)
 
 ### cv?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:797](https://githu
 
 The default cross-validation generator used is Stratified K-Folds. If an integer is provided, then it is the number of folds used. See the module [`sklearn.model\_selection`](../classes.html#module-sklearn.model_selection "sklearn.model_selection") module for the list of possible cross-validation objects.
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:742](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L742)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:742](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L742)
 
 ### dual?
 
@@ -44,7 +44,7 @@ Dual or primal formulation. Dual formulation is only implemented for l2 penalty 
 
 `false`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L749)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L749)
 
 ### fit\_intercept?
 
@@ -56,7 +56,7 @@ Specifies if a constant (a.k.a. bias or intercept) should be added to the decisi
 
 `true`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L737)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L737)
 
 ### intercept\_scaling?
 
@@ -70,7 +70,7 @@ Note! the synthetic feature weight is subject to l1/l2 regularization as all oth
 
 `1`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:825](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L825)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:825](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L825)
 
 ### l1\_ratios?
 
@@ -78,7 +78,7 @@ Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:825](https://githu
 
 The list of Elastic-Net mixing parameter, with `0 <= l1\_ratio <= 1`. Only used if `penalty='elasticnet'`. A value of 0 is equivalent to using `penalty='l2'`, while 1 is equivalent to using `penalty='l1'`. For `0 < l1\_ratio <1`, the penalty is a combination of L1 and L2.
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L842)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L842)
 
 ### max\_iter?
 
@@ -90,7 +90,7 @@ Maximum number of iterations of the optimization algorithm.
 
 `100`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L788)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L788)
 
 ### multi\_class?
 
@@ -102,7 +102,7 @@ If the option chosen is ‘ovr’, then a binary problem is fit for each label. 
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:832](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L832)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:832](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L832)
 
 ### n\_jobs?
 
@@ -110,7 +110,7 @@ Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:832](https://githu
 
 Number of CPU cores used during the cross-validation loop. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:802](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L802)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:802](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L802)
 
 ### penalty?
 
@@ -122,7 +122,7 @@ Specify the norm of the penalty:
 
 `'l2'`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L756)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L756)
 
 ### random\_state?
 
@@ -130,7 +130,7 @@ Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:756](https://githu
 
 Used when `solver='sag'`, ‘saga’ or ‘liblinear’ to shuffle the data. Note that this only applies to the solver and not the cross-validation generator. See [Glossary](../../glossary.html#term-random_state) for details.
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L837)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L837)
 
 ### refit?
 
@@ -142,7 +142,7 @@ If set to `true`, the scores are averaged across all folds, and the coefs and th
 
 `true`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L816)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L816)
 
 ### scoring?
 
@@ -150,7 +150,7 @@ Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:816](https://githu
 
 A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. For a list of scoring functions that can be used, look at [`sklearn.metrics`](../classes.html#module-sklearn.metrics "sklearn.metrics"). The default scoring option used is ‘accuracy’.
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L761)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L761)
 
 ### solver?
 
@@ -162,7 +162,7 @@ Algorithm to use in the optimization problem. Default is ‘lbfgs’. To choose 
 
 `'lbfgs'`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L768)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L768)
 
 ### tol?
 
@@ -174,7 +174,7 @@ Tolerance for stopping criteria.
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L781)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L781)
 
 ### verbose?
 
@@ -186,4 +186,4 @@ For the ‘liblinear’, ‘sag’ and ‘lbfgs’ solvers set verbose to any po
 
 `0`
 
-Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L809)
+Defined in:  [generated/linear\_model/LogisticRegressionCV.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegressionCV.ts#L809)

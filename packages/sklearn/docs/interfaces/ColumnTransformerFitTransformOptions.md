@@ -8,7 +8,7 @@
 
 Input data, of which specified subsets are used to fit the transformers.
 
-Defined in:  [generated/compose/ColumnTransformer.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L446)
+Defined in:  [generated/compose/ColumnTransformer.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L446)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/compose/ColumnTransformer.ts:446](https://github.com/tra
 
 Targets for supervised learning.
 
-Defined in:  [generated/compose/ColumnTransformer.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L451)
+Defined in:  [generated/compose/ColumnTransformer.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L451)

@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/dummy/DummyRegressor.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L269)
+Defined in:  [generated/dummy/DummyRegressor.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L269)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/dummy/DummyRegressor.ts:269](https://github.com/transiti
 
 Sample weights.
 
-Defined in:  [generated/dummy/DummyRegressor.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L279)
+Defined in:  [generated/dummy/DummyRegressor.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L279)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/dummy/DummyRegressor.ts:279](https://github.com/transiti
 
 Target values.
 
-Defined in:  [generated/dummy/DummyRegressor.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L274)
+Defined in:  [generated/dummy/DummyRegressor.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L274)

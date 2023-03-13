@@ -8,4 +8,4 @@
 
 The hyperparameters
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L293)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L293)

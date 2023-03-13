@@ -12,7 +12,7 @@ If `false`, try to avoid a copy and do inplace scaling instead. This is not guar
 
 `true`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L479)
+Defined in:  [generated/preprocessing/StandardScaler.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L479)
 
 ### with\_mean?
 
@@ -24,7 +24,7 @@ If `true`, center the data before scaling. This does not work (and will raise an
 
 `true`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L486)
+Defined in:  [generated/preprocessing/StandardScaler.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L486)
 
 ### with\_std?
 
@@ -36,4 +36,4 @@ If `true`, scale the data to unit variance (or equivalently, unit standard devia
 
 `true`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L493)
+Defined in:  [generated/preprocessing/StandardScaler.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L493)

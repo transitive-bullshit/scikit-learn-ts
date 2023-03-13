@@ -8,7 +8,7 @@
 
 Samples. Each sample must be a text document (either bytes or unicode strings, file name or file object depending on the constructor argument) which will be tokenized and hashed.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L577)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L577)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:577](https
 
 Ignored. This parameter exists only for compatibility with sklearn.pipeline.Pipeline.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L582)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L582)

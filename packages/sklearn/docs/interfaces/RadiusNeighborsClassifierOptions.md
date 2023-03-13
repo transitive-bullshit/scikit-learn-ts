@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L564)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L564)
 
 ### leaf\_size?
 
@@ -24,7 +24,7 @@ Leaf size passed to BallTree or KDTree. This can affect the speed of the constru
 
 `30`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L571)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L571)
 
 ### metric?
 
@@ -40,7 +40,7 @@ If metric is a callable function, it takes two arrays representing 1D vectors as
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L589)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L589)
 
 ### metric\_params?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:589](https://gith
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L599)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L599)
 
 ### n\_jobs?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:599](https://gith
 
 The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L604)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L604)
 
 ### outlier\_label?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:604](https://gith
 
 Label for outlier samples (samples with no neighbors in given radius).
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L594)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L594)
 
 ### p?
 
@@ -76,7 +76,7 @@ Power parameter for the Minkowski metric. When p = 1, this is equivalent to usin
 
 `2`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L578)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L578)
 
 ### radius?
 
@@ -88,7 +88,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 `1`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L550)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L550)
 
 ### weights?
 
@@ -100,4 +100,4 @@ Weight function used in prediction. Possible values:
 
 `'uniform'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L557)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L557)

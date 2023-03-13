@@ -12,7 +12,7 @@ Constant that multiplies the L1/L2 term. Defaults to 1.0.
 
 `1`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L423)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L423)
 
 ### copy\_X?
 
@@ -24,7 +24,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L437)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L437)
 
 ### fit\_intercept?
 
@@ -36,7 +36,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L430)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L430)
 
 ### max\_iter?
 
@@ -48,7 +48,7 @@ The maximum number of iterations.
 
 `1000`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L444)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L444)
 
 ### random\_state?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/linear\_model/MultiTaskLasso.ts:444](https://github.com/
 
 The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L463)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L463)
 
 ### selection?
 
@@ -68,7 +68,7 @@ If set to ‘random’, a random coefficient is updated every iteration rather t
 
 `'cyclic'`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L470)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L470)
 
 ### tol?
 
@@ -80,7 +80,7 @@ The tolerance for the optimization: if the updates are smaller than `tol`, the o
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L451)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L451)
 
 ### warm\_start?
 
@@ -92,4 +92,4 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 `false`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L458)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L458)

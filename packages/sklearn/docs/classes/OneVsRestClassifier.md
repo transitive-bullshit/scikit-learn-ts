@@ -30,7 +30,7 @@ new OneVsRestClassifier(opts?: OneVsRestClassifierOptions): OneVsRestClassifier;
 
 [`OneVsRestClassifier`](OneVsRestClassifier.md)
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L27)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L27)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/multiclass/OneVsRestClassifier.ts:27](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L25)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L24)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L23)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L20)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L21)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L21)
 
 ## Accessors
 
@@ -80,9 +80,9 @@ classes_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L350)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L350)
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L350)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L350)
 
 ### estimators\_
 
@@ -98,9 +98,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L323)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L323)
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L323)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L323)
 
 ### feature\_names\_in\_
 
@@ -116,9 +116,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L431)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L431)
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L431)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L431)
 
 ### label\_binarizer\_
 
@@ -134,9 +134,9 @@ label_binarizer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L377)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L377)
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L377)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L377)
 
 ### n\_features\_in\_
 
@@ -152,9 +152,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L404)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L404)
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L404)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L404)
 
 ### py
 
@@ -168,7 +168,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L32)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L32)
 
 #### Signature
 
@@ -186,9 +186,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L36)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L36)
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L32) [generated/multiclass/OneVsRestClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L36)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L32) [generated/multiclass/OneVsRestClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L36)
 
 ## Methods
 
@@ -214,7 +214,7 @@ decision_function(opts: OneVsRestClassifierDecisionFunctionOptions): Promise<Arr
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L110)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L110)
 
 ### dispose()
 
@@ -232,7 +232,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L91)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L91)
 
 ### fit()
 
@@ -254,7 +254,7 @@ fit(opts: OneVsRestClassifierFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L145)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L145)
 
 ### init()
 
@@ -278,7 +278,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L45)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L45)
 
 ### partial\_fit()
 
@@ -302,7 +302,7 @@ partial_fit(opts: OneVsRestClassifierPartialFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L179)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L179)
 
 ### predict()
 
@@ -324,7 +324,7 @@ predict(opts: OneVsRestClassifierPredictOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L215)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L215)
 
 ### predict\_proba()
 
@@ -352,7 +352,7 @@ predict_proba(opts: OneVsRestClassifierPredictProbaOptions): Promise<ArrayLike[]
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L253)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L253)
 
 ### score()
 
@@ -376,4 +376,4 @@ score(opts: OneVsRestClassifierScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L289)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L289)

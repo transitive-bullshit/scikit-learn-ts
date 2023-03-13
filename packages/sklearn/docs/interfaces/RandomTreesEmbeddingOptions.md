@@ -12,7 +12,7 @@ The maximum depth of each tree. If `undefined`, then nodes are expanded until al
 
 `5`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L534)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L534)
 
 ### max\_leaf\_nodes?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:534](https://github.com
 
 Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L560)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L560)
 
 ### min\_impurity\_decrease?
 
@@ -34,7 +34,7 @@ The weighted impurity decrease equation is the following:
 
 `0`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L569)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L569)
 
 ### min\_samples\_leaf?
 
@@ -46,7 +46,7 @@ The minimum number of samples required to be at a leaf node. A split point at an
 
 `1`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L548)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L548)
 
 ### min\_samples\_split?
 
@@ -58,7 +58,7 @@ The minimum number of samples required to split an internal node:
 
 `2`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L541)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L541)
 
 ### min\_weight\_fraction\_leaf?
 
@@ -70,7 +70,7 @@ The minimum weighted fraction of the sum total of weights (of all the input samp
 
 `0`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L555)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L555)
 
 ### n\_estimators?
 
@@ -82,7 +82,7 @@ Number of trees in the forest.
 
 `100`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L527)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L527)
 
 ### n\_jobs?
 
@@ -90,7 +90,7 @@ Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:527](https://github.com
 
 The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L581)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L581)
 
 ### random\_state?
 
@@ -98,7 +98,7 @@ Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:581](https://github.com
 
 Controls the generation of the random `y` used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See [Glossary](../../glossary.html#term-random_state) for details.
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L586)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L586)
 
 ### sparse\_output?
 
@@ -110,7 +110,7 @@ Whether or not to return a sparse CSR matrix, as default behavior, or to return 
 
 `true`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L576)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L576)
 
 ### verbose?
 
@@ -122,7 +122,7 @@ Controls the verbosity when fitting and predicting.
 
 `0`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L593)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L593)
 
 ### warm\_start?
 
@@ -134,4 +134,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L600)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L600)

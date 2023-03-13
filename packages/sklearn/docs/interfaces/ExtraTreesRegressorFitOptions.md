@@ -8,7 +8,7 @@
 
 The training input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`.
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L610)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L610)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:610](https://github.com/
 
 Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L620)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L620)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:620](https://github.com/
 
 The target values (class labels in classification, real numbers in regression).
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L615)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L615)

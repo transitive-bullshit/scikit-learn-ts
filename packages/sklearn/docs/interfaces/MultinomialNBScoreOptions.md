@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L613)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L613)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:613](https://github.com/tr
 
 Sample weights.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L623)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L623)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:623](https://github.com/tr
 
 True labels for `X`.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L618)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L618)

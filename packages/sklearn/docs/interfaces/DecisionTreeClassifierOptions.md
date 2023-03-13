@@ -12,7 +12,7 @@ Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with 
 
 `0`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L748)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L748)
 
 ### class\_weight?
 
@@ -28,7 +28,7 @@ For multi-output, the weights of each column of y will be multiplied.
 
 Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L741)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L741)
 
 ### criterion?
 
@@ -40,7 +40,7 @@ The function to measure the quality of a split. Supported criteria are “gini�
 
 `'gini'`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:671](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L671)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:671](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L671)
 
 ### max\_depth?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/tree/DecisionTreeClassifier.ts:671](https://github.com/t
 
 The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L683)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L683)
 
 ### max\_features?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/tree/DecisionTreeClassifier.ts:683](https://github.com/t
 
 The number of features to consider when looking for the best split:
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L709)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L709)
 
 ### max\_leaf\_nodes?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/tree/DecisionTreeClassifier.ts:709](https://github.com/t
 
 Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L719)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L719)
 
 ### min\_impurity\_decrease?
 
@@ -78,7 +78,7 @@ The weighted impurity decrease equation is the following:
 
 `0`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L728)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L728)
 
 ### min\_samples\_leaf?
 
@@ -90,7 +90,7 @@ The minimum number of samples required to be at a leaf node. A split point at an
 
 `1`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L697)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L697)
 
 ### min\_samples\_split?
 
@@ -102,7 +102,7 @@ The minimum number of samples required to split an internal node:
 
 `2`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L690)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L690)
 
 ### min\_weight\_fraction\_leaf?
 
@@ -114,7 +114,7 @@ The minimum weighted fraction of the sum total of weights (of all the input samp
 
 `0`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L704)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L704)
 
 ### random\_state?
 
@@ -122,7 +122,7 @@ Defined in:  [generated/tree/DecisionTreeClassifier.ts:704](https://github.com/t
 
 Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L714)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L714)
 
 ### splitter?
 
@@ -134,4 +134,4 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 `'best'`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L678)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L678)

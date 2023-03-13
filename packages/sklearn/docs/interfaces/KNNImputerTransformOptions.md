@@ -8,4 +8,4 @@
 
 The input data to complete.
 
-Defined in:  [generated/impute/KNNImputer.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/KNNImputer.ts#L426)
+Defined in:  [generated/impute/KNNImputer.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L426)

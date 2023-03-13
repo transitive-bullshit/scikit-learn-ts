@@ -12,7 +12,7 @@ Whether the design matrix X must be copied by the algorithm. A false value is on
 
 `true`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L380)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L380)
 
 ### cv?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:380](https:
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L404)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L404)
 
 ### fit\_intercept?
 
@@ -32,7 +32,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L387)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L387)
 
 ### max\_iter?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:387](https:
 
 Maximum numbers of iterations to perform, therefore maximum features to include. 10% of `n\_features` but at least 5 if available.
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L399)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L399)
 
 ### n\_jobs?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:399](https:
 
 Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L409)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L409)
 
 ### normalize?
 
@@ -60,7 +60,7 @@ This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, th
 
 `false`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L394)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L394)
 
 ### verbose?
 
@@ -72,4 +72,4 @@ Sets the verbosity amount.
 
 `false`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L416)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuitCV.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuitCV.ts#L416)

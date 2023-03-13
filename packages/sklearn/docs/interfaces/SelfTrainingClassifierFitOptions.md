@@ -8,7 +8,7 @@
 
 Array representing the data.
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L580)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L580)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:580](https://
 
 Array representing the labels. Unlabeled samples should have the label -1.
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L585)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L585)

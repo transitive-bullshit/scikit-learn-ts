@@ -8,7 +8,7 @@
 
 New data to predict.
 
-Defined in:  [generated/cluster/KMeans.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L636)
+Defined in:  [generated/cluster/KMeans.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L636)
 
 ### sample\_weight?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/cluster/KMeans.ts:636](https://github.com/transitive-bul
 
 The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
 
-Defined in:  [generated/cluster/KMeans.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L641)
+Defined in:  [generated/cluster/KMeans.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L641)

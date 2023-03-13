@@ -12,7 +12,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/LarsCV.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L508)
+Defined in:  [generated/linear\_model/LarsCV.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L508)
 
 ### cv?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/linear\_model/LarsCV.ts:508](https://github.com/transiti
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/linear\_model/LarsCV.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L484)
+Defined in:  [generated/linear\_model/LarsCV.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L484)
 
 ### eps?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/linear\_model/LarsCV.ts:484](https://github.com/transiti
 
 The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
 
-Defined in:  [generated/linear\_model/LarsCV.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L501)
+Defined in:  [generated/linear\_model/LarsCV.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L501)
 
 ### fit\_intercept?
 
@@ -40,7 +40,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/LarsCV.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L451)
+Defined in:  [generated/linear\_model/LarsCV.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L451)
 
 ### max\_iter?
 
@@ -52,7 +52,7 @@ Maximum number of iterations to perform.
 
 `500`
 
-Defined in:  [generated/linear\_model/LarsCV.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L465)
+Defined in:  [generated/linear\_model/LarsCV.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L465)
 
 ### max\_n\_alphas?
 
@@ -64,7 +64,7 @@ The maximum number of points on the path used to compute the residuals in the cr
 
 `1000`
 
-Defined in:  [generated/linear\_model/LarsCV.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L491)
+Defined in:  [generated/linear\_model/LarsCV.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L491)
 
 ### n\_jobs?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/linear\_model/LarsCV.ts:491](https://github.com/transiti
 
 Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/LarsCV.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L496)
+Defined in:  [generated/linear\_model/LarsCV.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L496)
 
 ### normalize?
 
@@ -84,7 +84,7 @@ This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, th
 
 `false`
 
-Defined in:  [generated/linear\_model/LarsCV.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L472)
+Defined in:  [generated/linear\_model/LarsCV.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L472)
 
 ### precompute?
 
@@ -96,7 +96,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/LarsCV.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L479)
+Defined in:  [generated/linear\_model/LarsCV.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L479)
 
 ### verbose?
 
@@ -108,4 +108,4 @@ Sets the verbosity amount.
 
 `false`
 
-Defined in:  [generated/linear\_model/LarsCV.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LarsCV.ts#L458)
+Defined in:  [generated/linear\_model/LarsCV.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L458)

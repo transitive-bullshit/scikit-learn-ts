@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L557)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L557)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/LassoLarsCV.ts:557](https://github.com/tra
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L567)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L567)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/LassoLarsCV.ts:567](https://github.com/tra
 
 True values for `X`.
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L562)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L562)

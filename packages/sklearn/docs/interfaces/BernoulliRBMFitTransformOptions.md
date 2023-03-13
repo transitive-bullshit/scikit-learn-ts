@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L557)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L557)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/neural\_network/BernoulliRBM.ts:557](https://github.com/
 
 Additional fit parameters.
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L567)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L567)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/neural\_network/BernoulliRBM.ts:567](https://github.com/
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L562)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L562)

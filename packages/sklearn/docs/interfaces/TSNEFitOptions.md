@@ -8,7 +8,7 @@
 
 If the metric is ‘precomputed’ X must be a square distance matrix. Otherwise it contains a sample per row. If the method is ‘exact’, X may be a sparse matrix of type ‘csr’, ‘csc’ or ‘coo’. If the method is ‘barnes\_hut’ and the metric is ‘precomputed’, X may be a precomputed sparse graph.
 
-Defined in:  [generated/manifold/TSNE.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/TSNE.ts#L425)
+Defined in:  [generated/manifold/TSNE.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L425)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/manifold/TSNE.ts:425](https://github.com/transitive-bull
 
 Ignored.
 
-Defined in:  [generated/manifold/TSNE.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/TSNE.ts#L430)
+Defined in:  [generated/manifold/TSNE.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L430)

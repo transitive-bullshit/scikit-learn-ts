@@ -8,7 +8,7 @@
 
 Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:803](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L803)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:803](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L803)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/model\_selection/GridSearchCV.ts:803](https://github.com
 
 Target relative to X for classification or regression; `undefined` for unsupervised learning.
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L808)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L808)

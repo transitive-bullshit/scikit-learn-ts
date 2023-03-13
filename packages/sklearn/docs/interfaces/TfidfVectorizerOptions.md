@@ -14,7 +14,7 @@ If a callable is passed it is used to extract the sequence of features out of th
 
 `'word'`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L551)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L551)
 
 ### binary?
 
@@ -26,7 +26,7 @@ If `true`, all non-zero term counts are set to 1. This does not mean outputs wil
 
 `false`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L605)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L605)
 
 ### decode\_error?
 
@@ -38,7 +38,7 @@ Instruction on what to do if a byte sequence is given to analyze that contains c
 
 `'strict'`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L518)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L518)
 
 ### dtype?
 
@@ -46,7 +46,7 @@ Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:518](https:/
 
 Type of the matrix returned by fit\_transform() or transform().
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L610)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L610)
 
 ### encoding?
 
@@ -58,7 +58,7 @@ If bytes or files are given to analyze, this encoding is used to decode.
 
 `'utf-8'`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L511)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L511)
 
 ### input?
 
@@ -70,7 +70,7 @@ If `'filename'`, the sequence passed as an argument to fit is expected to be a l
 
 `'content'`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L504)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L504)
 
 ### lowercase?
 
@@ -82,7 +82,7 @@ Convert all characters to lowercase before tokenizing.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L532)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L532)
 
 ### max\_df?
 
@@ -94,7 +94,7 @@ When building the vocabulary ignore terms that have a document frequency strictl
 
 `1`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L579)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L579)
 
 ### max\_features?
 
@@ -104,7 +104,7 @@ If not `undefined`, build a vocabulary that only consider the top `max\_features
 
 This parameter is ignored if vocabulary is not `undefined`.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L593)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L593)
 
 ### min\_df?
 
@@ -116,7 +116,7 @@ When building the vocabulary ignore terms that have a document frequency strictl
 
 `1`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L586)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L586)
 
 ### ngram\_range?
 
@@ -124,7 +124,7 @@ Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:586](https:/
 
 The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L572)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L572)
 
 ### norm?
 
@@ -136,7 +136,7 @@ Each output row will have unit norm, either:
 
 `'l2'`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L617)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L617)
 
 ### preprocessor?
 
@@ -144,7 +144,7 @@ Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:617](https:/
 
 Override the preprocessing (string transformation) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L537)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L537)
 
 ### smooth\_idf?
 
@@ -156,7 +156,7 @@ Smooth idf weights by adding one to document frequencies, as if an extra documen
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L631)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L631)
 
 ### stop\_words?
 
@@ -168,7 +168,7 @@ If a list, that list is assumed to contain stop words, all of which will be remo
 
 If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L560)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L560)
 
 ### strip\_accents?
 
@@ -178,7 +178,7 @@ Remove accents and perform other character normalization during the preprocessin
 
 Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L525)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L525)
 
 ### sublinear\_tf?
 
@@ -190,7 +190,7 @@ Apply sublinear tf scaling, i.e. replace tf with 1 + log(tf).
 
 `false`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L638)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L638)
 
 ### token\_pattern?
 
@@ -200,7 +200,7 @@ Regular expression denoting what constitutes a “token”, only used if `analyz
 
 If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L567)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L567)
 
 ### tokenizer?
 
@@ -208,7 +208,7 @@ Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:567](https:/
 
 Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L542)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L542)
 
 ### use\_idf?
 
@@ -220,7 +220,7 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L624)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L624)
 
 ### vocabulary?
 
@@ -228,4 +228,4 @@ Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:624](https:/
 
 Either a Mapping (e.g., a dict) where keys are terms and values are indices in the feature matrix, or an iterable over terms. If not given, a vocabulary is determined from the input documents.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L598)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L598)

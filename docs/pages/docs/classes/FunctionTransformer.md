@@ -22,13 +22,13 @@ new FunctionTransformer(opts?: FunctionTransformerOptions): FunctionTransformer;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`FunctionTransformerOptions`](../interfaces/FunctionTransformerOptions.md) |
+| `opts?` | `FunctionTransformerOptions` |
 
 ### Returns
 
 [`FunctionTransformer`](FunctionTransformer.md)
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L25)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L25)
 
 ## Properties
 
@@ -36,37 +36,37 @@ Defined in:  [generated/preprocessing/FunctionTransformer.ts:25](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L23)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L22)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L21)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L18)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L19)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L19)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -76,13 +76,13 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/FunctionTransformer.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L351)
+Defined in: [generated/preprocessing/FunctionTransformer.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L351)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -94,7 +94,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/FunctionTransformer.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L324)
+Defined in: [generated/preprocessing/FunctionTransformer.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L324)
 
 ### py
 
@@ -108,7 +108,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L30)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L30)
 
 #### Signature
 
@@ -126,7 +126,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/FunctionTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L34)
+Defined in: [generated/preprocessing/FunctionTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L34)
 
 ## Methods
 
@@ -146,7 +146,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L97)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L97)
 
 ### fit()
 
@@ -164,13 +164,13 @@ fit(opts: FunctionTransformerFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`FunctionTransformerFitOptions`](../interfaces/FunctionTransformerFitOptions.md) |
+| `opts` | `FunctionTransformerFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L116)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L116)
 
 ### fit\_transform()
 
@@ -188,13 +188,13 @@ fit_transform(opts: FunctionTransformerFitTransformOptions): Promise<any[]>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`FunctionTransformerFitTransformOptions`](../interfaces/FunctionTransformerFitTransformOptions.md) |
+| `opts` | `FunctionTransformerFitTransformOptions` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L148)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L148)
 
 ### get\_feature\_names\_out()
 
@@ -212,13 +212,13 @@ get_feature_names_out(opts: FunctionTransformerGetFeatureNamesOutOptions): Promi
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`FunctionTransformerGetFeatureNamesOutOptions`](../interfaces/FunctionTransformerGetFeatureNamesOutOptions.md) |
+| `opts` | `FunctionTransformerGetFeatureNamesOutOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L188)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L188)
 
 ### init()
 
@@ -242,7 +242,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L43)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L43)
 
 ### inverse\_transform()
 
@@ -258,19 +258,19 @@ inverse_transform(opts: FunctionTransformerInverseTransformOptions): Promise<Arr
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`FunctionTransformerInverseTransformOptions`](../interfaces/FunctionTransformerInverseTransformOptions.md) |
+| `opts` | `FunctionTransformerInverseTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L223)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L223)
 
 ### set\_output()
 
 Set output container.
 
-See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+See Introducing the set\_output API for an example on how to use the API.
 
 #### Signature
 
@@ -282,13 +282,13 @@ set_output(opts: FunctionTransformerSetOutputOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`FunctionTransformerSetOutputOptions`](../interfaces/FunctionTransformerSetOutputOptions.md) |
+| `opts` | `FunctionTransformerSetOutputOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L260)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L260)
 
 ### transform()
 
@@ -304,10 +304,10 @@ transform(opts: FunctionTransformerTransformOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`FunctionTransformerTransformOptions`](../interfaces/FunctionTransformerTransformOptions.md) |
+| `opts` | `FunctionTransformerTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L292)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L292)

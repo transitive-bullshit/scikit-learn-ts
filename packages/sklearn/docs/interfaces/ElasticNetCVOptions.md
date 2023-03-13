@@ -8,7 +8,7 @@
 
 List of alphas where to compute the models. If `undefined` alphas are set automatically.
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L527)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L527)
 
 ### copy\_X?
 
@@ -20,7 +20,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L567)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L567)
 
 ### cv?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/linear\_model/ElasticNetCV.ts:567](https://github.com/tr
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L560)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L560)
 
 ### eps?
 
@@ -40,7 +40,7 @@ Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L515)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L515)
 
 ### fit\_intercept?
 
@@ -52,7 +52,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L534)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L534)
 
 ### l1\_ratio?
 
@@ -64,7 +64,7 @@ Float between 0 and 1 passed to ElasticNet (scaling between l1 and l2 penalties)
 
 `0.5`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L508)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L508)
 
 ### max\_iter?
 
@@ -76,7 +76,7 @@ The maximum number of iterations.
 
 `1000`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L548)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L548)
 
 ### n\_alphas?
 
@@ -88,7 +88,7 @@ Number of alphas along the regularization path, used for each l1\_ratio.
 
 `100`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L522)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L522)
 
 ### n\_jobs?
 
@@ -96,7 +96,7 @@ Defined in:  [generated/linear\_model/ElasticNetCV.ts:522](https://github.com/tr
 
 Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L579)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L579)
 
 ### positive?
 
@@ -108,7 +108,7 @@ When set to `true`, forces the coefficients to be positive.
 
 `false`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L586)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L586)
 
 ### precompute?
 
@@ -120,7 +120,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L541)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L541)
 
 ### random\_state?
 
@@ -128,7 +128,7 @@ Defined in:  [generated/linear\_model/ElasticNetCV.ts:541](https://github.com/tr
 
 The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L591)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L591)
 
 ### selection?
 
@@ -140,7 +140,7 @@ If set to ‘random’, a random coefficient is updated every iteration rather t
 
 `'cyclic'`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L598)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L598)
 
 ### tol?
 
@@ -152,7 +152,7 @@ The tolerance for the optimization: if the updates are smaller than `tol`, the o
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L555)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L555)
 
 ### verbose?
 
@@ -164,4 +164,4 @@ Amount of verbosity.
 
 `0`
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L574)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L574)

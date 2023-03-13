@@ -8,7 +8,7 @@
 
 If not `undefined`, this function is called after every iteration of the optimizer, taking as arguments the current solution (flattened transformation matrix) and the number of iterations. This might be useful in case one wants to examine or store the transformation found after each iteration.
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L468)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L468)
 
 ### init?
 
@@ -20,7 +20,7 @@ Initialization of the linear transformation. Possible options are `'auto'`, `'pc
 
 `'auto'`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L442)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L442)
 
 ### max\_iter?
 
@@ -32,7 +32,7 @@ Maximum number of iterations in the optimization.
 
 `50`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L456)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L456)
 
 ### n\_components?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:456](https:/
 
 Preferred dimensionality of the projected space. If `undefined` it will be set to `n\_features`.
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L435)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L435)
 
 ### random\_state?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:435](https:/
 
 A pseudo random number generator object or a seed for it if int. If `init='random'`, `random\_state` is used to initialize the random transformation. If `init='pca'`, `random\_state` is passed as an argument to PCA when initializing the transformation. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L480)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L480)
 
 ### tol?
 
@@ -60,7 +60,7 @@ Convergence tolerance for the optimization.
 
 `0.00001`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L463)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L463)
 
 ### verbose?
 
@@ -72,7 +72,7 @@ If 0, no progress messages will be printed. If 1, progress messages will be prin
 
 `0`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L475)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L475)
 
 ### warm\_start?
 
@@ -84,4 +84,4 @@ If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "skl
 
 `false`
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L449)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L449)

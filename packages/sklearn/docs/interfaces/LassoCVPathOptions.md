@@ -8,7 +8,7 @@
 
 Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
 
-Defined in:  [generated/linear\_model/LassoCV.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L579)
+Defined in:  [generated/linear\_model/LassoCV.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L579)
 
 ### Xy?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/LassoCV.ts:579](https://github.com/transit
 
 Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
 
-Defined in:  [generated/linear\_model/LassoCV.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L615)
+Defined in:  [generated/linear\_model/LassoCV.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L615)
 
 ### alphas?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/linear\_model/LassoCV.ts:615](https://github.com/transit
 
 List of alphas where to compute the models. If `undefined` alphas are set automatically.
 
-Defined in:  [generated/linear\_model/LassoCV.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L603)
+Defined in:  [generated/linear\_model/LassoCV.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L603)
 
 ### coef\_init?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/linear\_model/LassoCV.ts:603](https://github.com/transit
 
 The initial values of the coefficients.
 
-Defined in:  [generated/linear\_model/LassoCV.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L627)
+Defined in:  [generated/linear\_model/LassoCV.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L627)
 
 ### copy\_X?
 
@@ -44,7 +44,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoCV.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L622)
+Defined in:  [generated/linear\_model/LassoCV.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L622)
 
 ### eps?
 
@@ -56,7 +56,7 @@ Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/LassoCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L591)
+Defined in:  [generated/linear\_model/LassoCV.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L591)
 
 ### n\_alphas?
 
@@ -68,7 +68,7 @@ Number of alphas along the regularization path.
 
 `100`
 
-Defined in:  [generated/linear\_model/LassoCV.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L598)
+Defined in:  [generated/linear\_model/LassoCV.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L598)
 
 ### params?
 
@@ -76,7 +76,7 @@ Defined in:  [generated/linear\_model/LassoCV.ts:598](https://github.com/transit
 
 Keyword arguments passed to the coordinate descent solver.
 
-Defined in:  [generated/linear\_model/LassoCV.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L653)
+Defined in:  [generated/linear\_model/LassoCV.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L653)
 
 ### positive?
 
@@ -88,7 +88,7 @@ If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoCV.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L648)
+Defined in:  [generated/linear\_model/LassoCV.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L648)
 
 ### precompute?
 
@@ -100,7 +100,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/LassoCV.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L610)
+Defined in:  [generated/linear\_model/LassoCV.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L610)
 
 ### return\_n\_iter?
 
@@ -112,7 +112,7 @@ Whether to return the number of iterations or not.
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoCV.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L641)
+Defined in:  [generated/linear\_model/LassoCV.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L641)
 
 ### verbose?
 
@@ -124,7 +124,7 @@ Amount of verbosity.
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoCV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L634)
+Defined in:  [generated/linear\_model/LassoCV.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L634)
 
 ### y?
 
@@ -132,4 +132,4 @@ Defined in:  [generated/linear\_model/LassoCV.ts:634](https://github.com/transit
 
 Target values.
 
-Defined in:  [generated/linear\_model/LassoCV.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoCV.ts#L584)
+Defined in:  [generated/linear\_model/LassoCV.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoCV.ts#L584)

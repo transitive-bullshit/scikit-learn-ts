@@ -12,7 +12,7 @@ Number of re-shuffling & splitting iterations.
 
 `5`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L184)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L184)
 
 ### random\_state?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:184](https://githu
 
 Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L201)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L201)
 
 ### test\_size?
 
@@ -32,7 +32,7 @@ If float, should be between 0.0 and 1.0 and represent the proportion of groups t
 
 `0.2`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L191)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L191)
 
 ### train\_size?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:191](https://githu
 
 If float, should be between 0.0 and 1.0 and represent the proportion of the groups to include in the train split. If int, represents the absolute number of train groups. If `undefined`, the value is automatically set to the complement of the test size.
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L196)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L196)

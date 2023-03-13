@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L492)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L492)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:492](https
 
 Additional fit parameters.
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L502)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L502)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:502](https
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L497)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L497)

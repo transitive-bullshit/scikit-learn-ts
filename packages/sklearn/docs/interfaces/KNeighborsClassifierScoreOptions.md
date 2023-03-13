@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L628)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L628)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/neighbors/KNeighborsClassifier.ts:628](https://github.co
 
 Sample weights.
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L638)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L638)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/neighbors/KNeighborsClassifier.ts:638](https://github.co
 
 True labels for `X`.
 
-Defined in:  [generated/neighbors/KNeighborsClassifier.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L633)
+Defined in:  [generated/neighbors/KNeighborsClassifier.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsClassifier.ts#L633)

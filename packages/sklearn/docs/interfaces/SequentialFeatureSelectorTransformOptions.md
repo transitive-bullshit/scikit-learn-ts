@@ -8,4 +8,4 @@
 
 The input samples.
 
-Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L577)
+Defined in:  [generated/feature\_selection/SequentialFeatureSelector.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SequentialFeatureSelector.ts#L577)

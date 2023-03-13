@@ -8,7 +8,7 @@
 
 Name of estimator. If `undefined`, the estimator name is not shown.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L347)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L347)
 
 ### pos\_label?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:347](https://github.co
 
 The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L352)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L352)
 
 ### prob\_pred?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:352](https://github.co
 
 The mean predicted probability in each bin.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L337)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L337)
 
 ### prob\_true?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:337](https://github.co
 
 The proportion of samples whose class is the positive class (fraction of positives), in each bin.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L332)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L332)
 
 ### y\_prob?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:332](https://github.co
 
 Probability estimates for the positive class, for each sample.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L342)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L342)

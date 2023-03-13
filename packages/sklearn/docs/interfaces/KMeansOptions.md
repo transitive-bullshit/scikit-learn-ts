@@ -14,7 +14,7 @@ K-means algorithm to use. The classical EM-style algorithm is `"lloyd"`. The `"e
 
 `'lloyd'`
 
-Defined in:  [generated/cluster/KMeans.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L571)
+Defined in:  [generated/cluster/KMeans.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L571)
 
 ### copy\_x?
 
@@ -26,7 +26,7 @@ When pre-computing distances it is more numerically accurate to center the data 
 
 `true`
 
-Defined in:  [generated/cluster/KMeans.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L562)
+Defined in:  [generated/cluster/KMeans.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L562)
 
 ### init?
 
@@ -46,7 +46,7 @@ If a callable is passed, it should take arguments X, n\_clusters and a random st
 
 `'k-means++'`
 
-Defined in:  [generated/cluster/KMeans.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L520)
+Defined in:  [generated/cluster/KMeans.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L520)
 
 ### max\_iter?
 
@@ -58,7 +58,7 @@ Maximum number of iterations of the k-means algorithm for a single run.
 
 `300`
 
-Defined in:  [generated/cluster/KMeans.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L536)
+Defined in:  [generated/cluster/KMeans.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L536)
 
 ### n\_clusters?
 
@@ -70,7 +70,7 @@ The number of clusters to form as well as the number of centroids to generate.
 
 `8`
 
-Defined in:  [generated/cluster/KMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L505)
+Defined in:  [generated/cluster/KMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L505)
 
 ### n\_init?
 
@@ -84,7 +84,7 @@ When `n\_init='auto'`, the number of runs depends on the value of init: 10 if us
 
 `10`
 
-Defined in:  [generated/cluster/KMeans.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L529)
+Defined in:  [generated/cluster/KMeans.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L529)
 
 ### random\_state?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/cluster/KMeans.ts:529](https://github.com/transitive-bul
 
 Determines random number generation for centroid initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/cluster/KMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L555)
+Defined in:  [generated/cluster/KMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L555)
 
 ### tol?
 
@@ -104,7 +104,7 @@ Relative tolerance with regards to Frobenius norm of the difference in the clust
 
 `0.0001`
 
-Defined in:  [generated/cluster/KMeans.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L543)
+Defined in:  [generated/cluster/KMeans.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L543)
 
 ### verbose?
 
@@ -116,4 +116,4 @@ Verbosity mode.
 
 `0`
 
-Defined in:  [generated/cluster/KMeans.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/KMeans.ts#L550)
+Defined in:  [generated/cluster/KMeans.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L550)

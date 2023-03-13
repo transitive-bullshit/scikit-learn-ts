@@ -10,7 +10,7 @@ In contrast to GridSearchCV, not all parameter values are tried out, but rather 
 
 If all parameters are presented as a list, sampling without replacement is performed. If at least one parameter is given as a distribution, sampling with replacement is used. It is highly recommended to use continuous distributions for continuous parameters.
 
-Read more in the [User Guide](../grid_search.html#randomized-parameter-search).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html)
 
@@ -28,13 +28,13 @@ new RandomizedSearchCV(opts?: RandomizedSearchCVOptions): RandomizedSearchCV;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`RandomizedSearchCVOptions`](../interfaces/RandomizedSearchCVOptions.md) |
+| `opts?` | `RandomizedSearchCVOptions` |
 
 ### Returns
 
 [`RandomizedSearchCV`](RandomizedSearchCV.md)
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L31)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L31)
 
 ## Properties
 
@@ -42,31 +42,31 @@ Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:31](https://githu
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L29)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L29)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L28)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L28)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L27)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L27)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L24)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L24)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L25)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L25)
 
 ## Accessors
 
@@ -88,7 +88,7 @@ best_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L473)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L473)
 
 ### best\_index\_
 
@@ -108,7 +108,7 @@ best_index_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L564)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L564)
 
 ### best\_params\_
 
@@ -126,7 +126,7 @@ best_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L533)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L533)
 
 ### best\_score\_
 
@@ -146,7 +146,7 @@ best_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L504)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L504)
 
 ### cv\_results\_
 
@@ -164,11 +164,11 @@ cv_results_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L442)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L442)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
+Names of features seen during fit. Only defined if `best\_estimator\_` is defined (see the documentation for the `refit` parameter for more details) and that `best\_estimator\_` exposes `feature\_names\_in\_` when fit.
 
 #### Signature
 
@@ -178,9 +178,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L703)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L703)
 
 ### multimetric\_
 
@@ -196,7 +196,7 @@ multimetric_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L676)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L676)
 
 ### n\_splits\_
 
@@ -212,7 +212,7 @@ n_splits_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L620)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L620)
 
 ### py
 
@@ -226,7 +226,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L36)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L36)
 
 #### Signature
 
@@ -244,7 +244,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L40)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L40)
 
 ### refit\_time\_
 
@@ -262,7 +262,7 @@ refit_time_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L649)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L649)
 
 ### scorer\_
 
@@ -280,7 +280,7 @@ scorer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/RandomizedSearchCV.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L593)
+Defined in: [generated/model\_selection/RandomizedSearchCV.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L593)
 
 ## Methods
 
@@ -300,13 +300,13 @@ decision_function(opts: RandomizedSearchCVDecisionFunctionOptions): Promise<Arra
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVDecisionFunctionOptions`](../interfaces/RandomizedSearchCVDecisionFunctionOptions.md) |
+| `opts` | `RandomizedSearchCVDecisionFunctionOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L126)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L126)
 
 ### dispose()
 
@@ -324,7 +324,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L107)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L107)
 
 ### fit()
 
@@ -340,13 +340,13 @@ fit(opts: RandomizedSearchCVFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVFitOptions`](../interfaces/RandomizedSearchCVFitOptions.md) |
+| `opts` | `RandomizedSearchCVFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L160)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L160)
 
 ### init()
 
@@ -370,7 +370,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L49)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L49)
 
 ### inverse\_transform()
 
@@ -388,13 +388,13 @@ inverse_transform(opts: RandomizedSearchCVInverseTransformOptions): Promise<Arra
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVInverseTransformOptions`](../interfaces/RandomizedSearchCVInverseTransformOptions.md) |
+| `opts` | `RandomizedSearchCVInverseTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L198)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L198)
 
 ### predict()
 
@@ -412,13 +412,13 @@ predict(opts: RandomizedSearchCVPredictOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVPredictOptions`](../interfaces/RandomizedSearchCVPredictOptions.md) |
+| `opts` | `RandomizedSearchCVPredictOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L234)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L234)
 
 ### predict\_log\_proba()
 
@@ -436,13 +436,13 @@ predict_log_proba(opts: RandomizedSearchCVPredictLogProbaOptions): Promise<Array
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVPredictLogProbaOptions`](../interfaces/RandomizedSearchCVPredictLogProbaOptions.md) |
+| `opts` | `RandomizedSearchCVPredictLogProbaOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L266)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L266)
 
 ### predict\_proba()
 
@@ -460,13 +460,13 @@ predict_proba(opts: RandomizedSearchCVPredictProbaOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVPredictProbaOptions`](../interfaces/RandomizedSearchCVPredictProbaOptions.md) |
+| `opts` | `RandomizedSearchCVPredictProbaOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L302)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L302)
 
 ### score()
 
@@ -484,13 +484,13 @@ score(opts: RandomizedSearchCVScoreOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVScoreOptions`](../interfaces/RandomizedSearchCVScoreOptions.md) |
+| `opts` | `RandomizedSearchCVScoreOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L338)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L338)
 
 ### score\_samples()
 
@@ -508,13 +508,13 @@ score_samples(opts: RandomizedSearchCVScoreSamplesOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVScoreSamplesOptions`](../interfaces/RandomizedSearchCVScoreSamplesOptions.md) |
+| `opts` | `RandomizedSearchCVScoreSamplesOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L372)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L372)
 
 ### transform()
 
@@ -532,10 +532,10 @@ transform(opts: RandomizedSearchCVTransformOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RandomizedSearchCVTransformOptions`](../interfaces/RandomizedSearchCVTransformOptions.md) |
+| `opts` | `RandomizedSearchCVTransformOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L408)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L408)

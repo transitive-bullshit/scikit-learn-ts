@@ -8,7 +8,7 @@
 
 An estimator object implementing [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict).
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L325)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L325)
 
 ### n\_jobs?
 
@@ -20,4 +20,4 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L334)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L334)

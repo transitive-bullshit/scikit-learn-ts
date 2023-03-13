@@ -12,7 +12,7 @@ Whether support is a list of indices.
 
 `false`
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L461)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L461)
 
 ### support?
 
@@ -20,4 +20,4 @@ Defined in:  [generated/feature\_extraction/DictVectorizer.ts:461](https://githu
 
 Boolean mask or list of indices (as returned by the get\_support member of feature selectors).
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L454)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L454)

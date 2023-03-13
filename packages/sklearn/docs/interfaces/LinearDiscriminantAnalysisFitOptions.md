@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:830](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L830)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:830](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L830)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:830
 
 Target values.
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L835)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L835)

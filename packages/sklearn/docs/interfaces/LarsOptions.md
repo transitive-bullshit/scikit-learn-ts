@@ -12,7 +12,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/Lars.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L424)
+Defined in:  [generated/linear\_model/Lars.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L424)
 
 ### eps?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/linear\_model/Lars.ts:424](https://github.com/transitive
 
 The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
 
-Defined in:  [generated/linear\_model/Lars.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L417)
+Defined in:  [generated/linear\_model/Lars.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L417)
 
 ### fit\_intercept?
 
@@ -32,7 +32,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/Lars.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L384)
+Defined in:  [generated/linear\_model/Lars.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L384)
 
 ### fit\_path?
 
@@ -44,7 +44,7 @@ If `true` the full path is stored in the `coef\_path\_` attribute. If you comput
 
 `true`
 
-Defined in:  [generated/linear\_model/Lars.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L431)
+Defined in:  [generated/linear\_model/Lars.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L431)
 
 ### jitter?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/linear\_model/Lars.ts:431](https://github.com/transitive
 
 Upper bound on a uniform noise parameter to be added to the `y` values, to satisfy the model’s assumption of one-at-a-time computations. Might help with stability.
 
-Defined in:  [generated/linear\_model/Lars.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L436)
+Defined in:  [generated/linear\_model/Lars.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L436)
 
 ### n\_nonzero\_coefs?
 
@@ -64,7 +64,7 @@ Target number of non-zero coefficients. Use `np.inf` for no limit.
 
 `500`
 
-Defined in:  [generated/linear\_model/Lars.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L412)
+Defined in:  [generated/linear\_model/Lars.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L412)
 
 ### normalize?
 
@@ -76,7 +76,7 @@ This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, th
 
 `false`
 
-Defined in:  [generated/linear\_model/Lars.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L398)
+Defined in:  [generated/linear\_model/Lars.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L398)
 
 ### precompute?
 
@@ -88,7 +88,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/Lars.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L405)
+Defined in:  [generated/linear\_model/Lars.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L405)
 
 ### random\_state?
 
@@ -96,7 +96,7 @@ Defined in:  [generated/linear\_model/Lars.ts:405](https://github.com/transitive
 
 Determines random number generation for jittering. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Ignored if `jitter` is `undefined`.
 
-Defined in:  [generated/linear\_model/Lars.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L441)
+Defined in:  [generated/linear\_model/Lars.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L441)
 
 ### verbose?
 
@@ -108,4 +108,4 @@ Sets the verbosity amount.
 
 `false`
 
-Defined in:  [generated/linear\_model/Lars.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/Lars.ts#L391)
+Defined in:  [generated/linear\_model/Lars.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L391)

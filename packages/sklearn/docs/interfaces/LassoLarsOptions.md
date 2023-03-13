@@ -12,7 +12,7 @@ Constant that multiplies the penalty term. Defaults to 1.0. `alpha \= 0` is equi
 
 `1`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L395)
+Defined in:  [generated/linear\_model/LassoLars.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L395)
 
 ### copy\_X?
 
@@ -24,7 +24,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L442)
+Defined in:  [generated/linear\_model/LassoLars.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L442)
 
 ### eps?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/linear\_model/LassoLars.ts:442](https://github.com/trans
 
 The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
 
-Defined in:  [generated/linear\_model/LassoLars.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L435)
+Defined in:  [generated/linear\_model/LassoLars.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L435)
 
 ### fit\_intercept?
 
@@ -44,7 +44,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L402)
+Defined in:  [generated/linear\_model/LassoLars.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L402)
 
 ### fit\_path?
 
@@ -56,7 +56,7 @@ If `true` the full path is stored in the `coef\_path\_` attribute. If you comput
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L449)
+Defined in:  [generated/linear\_model/LassoLars.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L449)
 
 ### jitter?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/linear\_model/LassoLars.ts:449](https://github.com/trans
 
 Upper bound on a uniform noise parameter to be added to the `y` values, to satisfy the model’s assumption of one-at-a-time computations. Might help with stability.
 
-Defined in:  [generated/linear\_model/LassoLars.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L461)
+Defined in:  [generated/linear\_model/LassoLars.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L461)
 
 ### max\_iter?
 
@@ -76,7 +76,7 @@ Maximum number of iterations to perform.
 
 `500`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L430)
+Defined in:  [generated/linear\_model/LassoLars.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L430)
 
 ### normalize?
 
@@ -88,7 +88,7 @@ This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, th
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L416)
+Defined in:  [generated/linear\_model/LassoLars.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L416)
 
 ### positive?
 
@@ -100,7 +100,7 @@ Restrict coefficients to be >= 0. Be aware that you might want to remove fit\_in
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L456)
+Defined in:  [generated/linear\_model/LassoLars.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L456)
 
 ### precompute?
 
@@ -112,7 +112,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L423)
+Defined in:  [generated/linear\_model/LassoLars.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L423)
 
 ### random\_state?
 
@@ -120,7 +120,7 @@ Defined in:  [generated/linear\_model/LassoLars.ts:423](https://github.com/trans
 
 Determines random number generation for jittering. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Ignored if `jitter` is `undefined`.
 
-Defined in:  [generated/linear\_model/LassoLars.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L466)
+Defined in:  [generated/linear\_model/LassoLars.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L466)
 
 ### verbose?
 
@@ -132,4 +132,4 @@ Sets the verbosity amount.
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLars.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L409)
+Defined in:  [generated/linear\_model/LassoLars.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L409)

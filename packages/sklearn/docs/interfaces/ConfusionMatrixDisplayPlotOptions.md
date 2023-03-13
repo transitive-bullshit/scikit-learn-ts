@@ -8,7 +8,7 @@
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L576)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L576)
 
 ### cmap?
 
@@ -20,7 +20,7 @@ Colormap recognized by matplotlib.
 
 `'viridis'`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
 
 ### colorbar?
 
@@ -32,7 +32,7 @@ Whether or not to add a colorbar to the plot.
 
 `true`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L583)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L583)
 
 ### im\_kw?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:583](https://github.co
 
 Dict with keywords passed to `matplotlib.pyplot.imshow` call.
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L588)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L588)
 
 ### include\_values?
 
@@ -52,7 +52,7 @@ Includes values in confusion matrix.
 
 `true`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L552)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L552)
 
 ### text\_kw?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:552](https://github.co
 
 Dict with keywords passed to `matplotlib.pyplot.text` call.
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L593)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L593)
 
 ### values\_format?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:593](https://github.co
 
 Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L571)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L571)
 
 ### xticks\_rotation?
 
@@ -80,4 +80,4 @@ Rotation of xtick labels.
 
 `'horizontal'`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L566)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L566)

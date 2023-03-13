@@ -12,7 +12,7 @@ Set to `false` to perform inplace binarization and avoid a copy (if the input is
 
 `true`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L323)
+Defined in:  [generated/preprocessing/Binarizer.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L323)
 
 ### threshold?
 
@@ -24,4 +24,4 @@ Feature values below or equal to this are replaced by 0, above it by 1. Threshol
 
 `0`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L316)
+Defined in:  [generated/preprocessing/Binarizer.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L316)

@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L482)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L482)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/semi\_supervised/LabelSpreading.ts:482](https://github.c
 
 Sample weights.
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L492)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L492)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/semi\_supervised/LabelSpreading.ts:492](https://github.c
 
 True labels for `X`.
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L487)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L487)

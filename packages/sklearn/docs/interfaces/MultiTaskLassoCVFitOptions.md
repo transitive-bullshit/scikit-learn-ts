@@ -8,7 +8,7 @@
 
 Data.
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L589)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L589)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:589](https://github.co
 
 Target. Will be cast to X’s dtype if necessary.
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L594)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L594)

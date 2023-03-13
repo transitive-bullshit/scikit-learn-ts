@@ -8,7 +8,7 @@
 
 The input data.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L407)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L407)
 
 ### Y?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multioutput/MultiOutputClassifier.ts:407](https://github
 
 The target values.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L412)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L412)
 
 ### fit\_params?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/multioutput/MultiOutputClassifier.ts:412](https://github
 
 Parameters passed to the `estimator.fit` method of each step.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L422)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L422)
 
 ### sample\_weight?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/multioutput/MultiOutputClassifier.ts:422](https://github
 
 Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying classifier supports sample weights.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L417)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L417)

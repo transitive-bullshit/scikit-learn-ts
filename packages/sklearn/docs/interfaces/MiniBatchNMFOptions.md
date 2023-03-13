@@ -12,7 +12,7 @@ Constant that multiplies the regularization terms of `H`. Set it to zero to have
 
 `'same'`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L574)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L574)
 
 ### alpha\_W?
 
@@ -24,7 +24,7 @@ Constant that multiplies the regularization terms of `W`. Set it to zero (defaul
 
 `0`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L567)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L567)
 
 ### batch\_size?
 
@@ -36,7 +36,7 @@ Number of samples in each mini-batch. Large batch sizes give better long-term co
 
 `1024`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L532)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L532)
 
 ### beta\_loss?
 
@@ -48,7 +48,7 @@ Beta divergence to be minimized, measuring the distance between `X` and the dot 
 
 `'frobenius'`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L539)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L539)
 
 ### forget\_factor?
 
@@ -60,7 +60,7 @@ Amount of rescaling of past information. Its value could be 1 with finite datase
 
 `0.7`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L588)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L588)
 
 ### fresh\_restarts?
 
@@ -72,7 +72,7 @@ Whether to completely solve for W at each step. Doing fresh restarts will likely
 
 `false`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L595)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L595)
 
 ### fresh\_restarts\_max\_iter?
 
@@ -84,7 +84,7 @@ Maximum number of iterations when solving for W at each step. Only used when doi
 
 `30`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L602)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L602)
 
 ### init?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/decomposition/MiniBatchNMF.ts:602](https://github.com/tr
 
 Method used to initialize the procedure. Valid options:
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L525)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L525)
 
 ### l1\_ratio?
 
@@ -104,7 +104,7 @@ The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0
 
 `0`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L581)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L581)
 
 ### max\_iter?
 
@@ -116,7 +116,7 @@ Maximum number of iterations over the complete dataset before timing out.
 
 `200`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L560)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L560)
 
 ### max\_no\_improvement?
 
@@ -128,7 +128,7 @@ Control early stopping based on the consecutive number of mini batches that does
 
 `10`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L553)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L553)
 
 ### n\_components?
 
@@ -136,7 +136,7 @@ Defined in:  [generated/decomposition/MiniBatchNMF.ts:553](https://github.com/tr
 
 Number of components, if `n\_components` is not set all features are kept.
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L520)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L520)
 
 ### random\_state?
 
@@ -144,7 +144,7 @@ Defined in:  [generated/decomposition/MiniBatchNMF.ts:520](https://github.com/tr
 
 Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L612)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L612)
 
 ### tol?
 
@@ -156,7 +156,7 @@ Control early stopping based on the norm of the differences in `H` between 2 ste
 
 `0.0001`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L546)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L546)
 
 ### transform\_max\_iter?
 
@@ -164,7 +164,7 @@ Defined in:  [generated/decomposition/MiniBatchNMF.ts:546](https://github.com/tr
 
 Maximum number of iterations when solving for W at transform time. If `undefined`, it defaults to `max\_iter`.
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L607)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L607)
 
 ### verbose?
 
@@ -176,4 +176,4 @@ Whether to be verbose.
 
 `false`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L619)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L619)

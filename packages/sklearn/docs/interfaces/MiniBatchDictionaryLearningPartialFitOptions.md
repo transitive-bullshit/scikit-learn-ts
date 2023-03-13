@@ -8,7 +8,7 @@
 
 Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:744](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L744)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:744](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L744)
 
 ### iter\_offset?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:744](https:
 
 The number of iteration on data batches that has been performed before this call to `partial\_fit`. This is optional: if no number is passed, the memory of the object is used.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L754)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L754)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:754](https:
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L749)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:749](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L749)

@@ -26,7 +26,7 @@ new MiniBatchKMeans(opts?: MiniBatchKMeansOptions): MiniBatchKMeans;
 
 [`MiniBatchKMeans`](MiniBatchKMeans.md)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L23)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/cluster/MiniBatchKMeans.ts:23](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L21)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L20)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L19)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L16)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L17)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L17)
 
 ## Accessors
 
@@ -76,9 +76,9 @@ cluster_centers_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L405)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L405)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L405)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L405)
 
 ### feature\_names\_in\_
 
@@ -94,9 +94,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L555)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L555)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L555)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L555)
 
 ### inertia\_
 
@@ -112,9 +112,9 @@ inertia_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L455)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L455)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L455)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L455)
 
 ### labels\_
 
@@ -130,9 +130,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L430)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L430)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L430)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L430)
 
 ### n\_features\_in\_
 
@@ -148,9 +148,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L530)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L530)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L530)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L530)
 
 ### n\_iter\_
 
@@ -166,9 +166,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L480)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L480)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L480)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L480)
 
 ### n\_steps\_
 
@@ -184,9 +184,9 @@ n_steps_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L505)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L505)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L505)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L505)
 
 ### py
 
@@ -200,7 +200,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L28)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L28)
 
 #### Signature
 
@@ -218,9 +218,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L32)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L32)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L28) [generated/cluster/MiniBatchKMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L32)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L28) [generated/cluster/MiniBatchKMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L32)
 
 ## Methods
 
@@ -240,7 +240,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L95)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L95)
 
 ### fit()
 
@@ -262,7 +262,7 @@ fit(opts: MiniBatchKMeansFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L112)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L112)
 
 ### fit\_predict()
 
@@ -286,7 +286,7 @@ fit_predict(opts: MiniBatchKMeansFitPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L146)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L146)
 
 ### fit\_transform()
 
@@ -310,7 +310,7 @@ fit_transform(opts: MiniBatchKMeansFitTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L180)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L180)
 
 ### get\_feature\_names\_out()
 
@@ -334,7 +334,7 @@ get_feature_names_out(opts: MiniBatchKMeansGetFeatureNamesOutOptions): Promise<a
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L216)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L216)
 
 ### init()
 
@@ -358,7 +358,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L41)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L41)
 
 ### partial\_fit()
 
@@ -380,7 +380,7 @@ partial_fit(opts: MiniBatchKMeansPartialFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L249)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L249)
 
 ### predict()
 
@@ -404,7 +404,7 @@ predict(opts: MiniBatchKMeansPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L283)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L283)
 
 ### score()
 
@@ -426,7 +426,7 @@ score(opts: MiniBatchKMeansScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L313)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L313)
 
 ### set\_output()
 
@@ -450,7 +450,7 @@ set_output(opts: MiniBatchKMeansSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L347)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L347)
 
 ### transform()
 
@@ -474,4 +474,4 @@ transform(opts: MiniBatchKMeansTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L377)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L377)

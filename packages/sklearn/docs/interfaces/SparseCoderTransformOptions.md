@@ -8,7 +8,7 @@
 
 Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/decomposition/SparseCoder.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L391)
+Defined in:  [generated/decomposition/SparseCoder.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L391)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/decomposition/SparseCoder.ts:391](https://github.com/tra
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/decomposition/SparseCoder.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L396)
+Defined in:  [generated/decomposition/SparseCoder.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L396)

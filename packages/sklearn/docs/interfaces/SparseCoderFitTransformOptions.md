@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/decomposition/SparseCoder.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L360)
+Defined in:  [generated/decomposition/SparseCoder.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L360)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/SparseCoder.ts:360](https://github.com/tra
 
 Additional fit parameters.
 
-Defined in:  [generated/decomposition/SparseCoder.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L370)
+Defined in:  [generated/decomposition/SparseCoder.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L370)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/SparseCoder.ts:370](https://github.com/tra
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/decomposition/SparseCoder.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L365)
+Defined in:  [generated/decomposition/SparseCoder.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L365)

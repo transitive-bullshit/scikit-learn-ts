@@ -8,7 +8,7 @@
 
 An array of points to query
 
-Defined in:  [generated/neighbors/BallTree.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L479)
+Defined in:  [generated/neighbors/BallTree.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L479)
 
 ### count\_only?
 
@@ -20,7 +20,7 @@ if `true`, return only the count of points within distance r if `false`, return 
 
 `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L498)
+Defined in:  [generated/neighbors/BallTree.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L498)
 
 ### r?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/neighbors/BallTree.ts:498](https://github.com/transitive
 
 r can be a single value, or an array of values of shape x.shape\[:-1\] if different radii are desired for each point.
 
-Defined in:  [generated/neighbors/BallTree.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L484)
+Defined in:  [generated/neighbors/BallTree.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L484)
 
 ### return\_distance?
 
@@ -40,7 +40,7 @@ if `true`, return distances to neighbors of each point if `false`, return only n
 
 `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L491)
+Defined in:  [generated/neighbors/BallTree.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L491)
 
 ### sort\_results?
 
@@ -52,4 +52,4 @@ if `true`, the distances and indices will be sorted before being returned. If `f
 
 `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/BallTree.ts#L505)
+Defined in:  [generated/neighbors/BallTree.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L505)

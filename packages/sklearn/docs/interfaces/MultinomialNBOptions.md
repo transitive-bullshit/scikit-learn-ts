@@ -12,7 +12,7 @@ Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`t
 
 `1`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L518)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L518)
 
 ### class\_prior?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:518](https://github.com/tr
 
 Prior probabilities of the classes. If specified, the priors are not adjusted according to the data.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L537)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L537)
 
 ### fit\_prior?
 
@@ -32,7 +32,7 @@ Whether to learn class prior probabilities or not. If false, a uniform prior wil
 
 `true`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L532)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L532)
 
 ### force\_alpha?
 
@@ -44,4 +44,4 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 `false`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L525)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L525)

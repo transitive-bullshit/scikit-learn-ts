@@ -8,7 +8,7 @@
 
 Sample data, shape = (n\_samples, n\_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
 
-Defined in:  [generated/manifold/Isomap.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L517)
+Defined in:  [generated/manifold/Isomap.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L517)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/manifold/Isomap.ts:517](https://github.com/transitive-bu
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/manifold/Isomap.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/manifold/Isomap.ts#L522)
+Defined in:  [generated/manifold/Isomap.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L522)

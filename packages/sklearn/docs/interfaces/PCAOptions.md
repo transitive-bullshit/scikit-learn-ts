@@ -12,7 +12,7 @@ If `false`, data passed to fit are overwritten and running fit(X).transform(X) w
 
 `true`
 
-Defined in:  [generated/decomposition/PCA.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L684)
+Defined in:  [generated/decomposition/PCA.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L684)
 
 ### iterated\_power?
 
@@ -24,7 +24,7 @@ Number of iterations for the power method computed by svd\_solver == ‘randomiz
 
 `'auto'`
 
-Defined in:  [generated/decomposition/PCA.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L714)
+Defined in:  [generated/decomposition/PCA.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L714)
 
 ### n\_components?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/decomposition/PCA.ts:714](https://github.com/transitive-
 
 Number of components to keep. if n\_components is not set all components are kept:
 
-Defined in:  [generated/decomposition/PCA.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L677)
+Defined in:  [generated/decomposition/PCA.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L677)
 
 ### n\_oversamples?
 
@@ -44,7 +44,7 @@ This parameter is only relevant when `svd\_solver="randomized"`. It corresponds 
 
 `10`
 
-Defined in:  [generated/decomposition/PCA.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L721)
+Defined in:  [generated/decomposition/PCA.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L721)
 
 ### power\_iteration\_normalizer?
 
@@ -56,7 +56,7 @@ Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`
 
 `'auto'`
 
-Defined in:  [generated/decomposition/PCA.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L728)
+Defined in:  [generated/decomposition/PCA.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L728)
 
 ### random\_state?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/decomposition/PCA.ts:728](https://github.com/transitive-
 
 Used when the ‘arpack’ or ‘randomized’ solvers are used. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/PCA.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L733)
+Defined in:  [generated/decomposition/PCA.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L733)
 
 ### svd\_solver?
 
@@ -76,7 +76,7 @@ The solver is selected by a default policy based on `X.shape` and `n\_components
 
 `'auto'`
 
-Defined in:  [generated/decomposition/PCA.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L700)
+Defined in:  [generated/decomposition/PCA.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L700)
 
 ### tol?
 
@@ -88,7 +88,7 @@ Tolerance for singular values computed by svd\_solver == ‘arpack’. Must be o
 
 `0`
 
-Defined in:  [generated/decomposition/PCA.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L707)
+Defined in:  [generated/decomposition/PCA.ts:707](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L707)
 
 ### whiten?
 
@@ -102,4 +102,4 @@ Whitening will remove some information from the transformed signal (the relative
 
 `false`
 
-Defined in:  [generated/decomposition/PCA.ts:693](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/PCA.ts#L693)
+Defined in:  [generated/decomposition/PCA.ts:693](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L693)

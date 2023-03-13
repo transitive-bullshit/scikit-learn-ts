@@ -8,7 +8,7 @@
 
 The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L664)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L664)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/neighbors/LocalOutlierFactor.ts:664](https://github.com/
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L669)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L669)

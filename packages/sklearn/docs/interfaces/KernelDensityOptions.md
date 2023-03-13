@@ -12,7 +12,7 @@ The tree algorithm to use.
 
 `'auto'`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L335)
+Defined in:  [generated/neighbors/KernelDensity.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L335)
 
 ### atol?
 
@@ -24,7 +24,7 @@ The desired absolute tolerance of the result. A larger tolerance will generally 
 
 `0`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L364)
+Defined in:  [generated/neighbors/KernelDensity.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L364)
 
 ### bandwidth?
 
@@ -36,7 +36,7 @@ The bandwidth of the kernel. If bandwidth is a float, it defines the bandwidth o
 
 `1`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L328)
+Defined in:  [generated/neighbors/KernelDensity.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L328)
 
 ### breadth\_first?
 
@@ -48,7 +48,7 @@ If true (default), use a breadth-first approach to the problem. Otherwise use a 
 
 `true`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L378)
+Defined in:  [generated/neighbors/KernelDensity.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L378)
 
 ### kernel?
 
@@ -60,7 +60,7 @@ The kernel to use.
 
 `'gaussian'`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L342)
+Defined in:  [generated/neighbors/KernelDensity.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L342)
 
 ### leaf\_size?
 
@@ -72,7 +72,7 @@ Specify the leaf size of the underlying tree. See [`BallTree`](sklearn.neighbors
 
 `40`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L385)
+Defined in:  [generated/neighbors/KernelDensity.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L385)
 
 ### metric?
 
@@ -86,7 +86,7 @@ Not all metrics are valid with all algorithms: refer to the documentation of [`B
 
 `'euclidean'`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L357)
+Defined in:  [generated/neighbors/KernelDensity.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L357)
 
 ### metric\_params?
 
@@ -94,7 +94,7 @@ Defined in:  [generated/neighbors/KernelDensity.ts:357](https://github.com/trans
 
 Additional parameters to be passed to the tree for use with the metric. For more information, see the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree").
 
-Defined in:  [generated/neighbors/KernelDensity.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L390)
+Defined in:  [generated/neighbors/KernelDensity.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L390)
 
 ### rtol?
 
@@ -106,4 +106,4 @@ The desired relative tolerance of the result. A larger tolerance will generally 
 
 `0`
 
-Defined in:  [generated/neighbors/KernelDensity.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L371)
+Defined in:  [generated/neighbors/KernelDensity.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L371)

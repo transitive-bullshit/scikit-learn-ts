@@ -12,7 +12,7 @@ Categories (unique values) per feature:
 
 `'auto'`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L370)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L370)
 
 ### dtype?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/preprocessing/OrdinalEncoder.ts:370](https://github.com/
 
 Desired dtype of output.
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L375)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L375)
 
 ### encoded\_missing\_value?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/preprocessing/OrdinalEncoder.ts:375](https://github.com/
 
 Encoded value of missing categories. If set to `np.nan`, then the `dtype` parameter must be a float dtype.
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L392)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L392)
 
 ### handle\_unknown?
 
@@ -40,7 +40,7 @@ When set to ‘error’ an error will be raised in case an unknown categorical f
 
 `'error'`
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L382)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L382)
 
 ### unknown\_value?
 
@@ -48,4 +48,4 @@ Defined in:  [generated/preprocessing/OrdinalEncoder.ts:382](https://github.com/
 
 When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this parameter is required and will set the encoded value of unknown categories. It has to be distinct from the values used to encode any of the categories in `fit`. If set to np.nan, the `dtype` parameter must be a float dtype.
 
-Defined in:  [generated/preprocessing/OrdinalEncoder.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L387)
+Defined in:  [generated/preprocessing/OrdinalEncoder.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OrdinalEncoder.ts#L387)

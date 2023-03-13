@@ -8,7 +8,7 @@
 
 Document word matrix.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:852](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L852)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:852](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L852)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:852](https://
 
 Not used, present here for API consistency by convention.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:857](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L857)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:857](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L857)

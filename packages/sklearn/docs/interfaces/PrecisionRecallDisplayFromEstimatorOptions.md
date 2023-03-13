@@ -8,7 +8,7 @@
 
 Input values.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L353)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L353)
 
 ### ax?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:353](https://github.co
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L385)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L385)
 
 ### estimator?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:385](https://github.co
 
 Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L348)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L348)
 
 ### kwargs?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:348](https://github.co
 
 Keyword arguments to be passed to matplotlib’s `plot`.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L390)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L390)
 
 ### name?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:390](https://github.co
 
 Name for labeling curve. If `undefined`, no name is used.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L380)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L380)
 
 ### pos\_label?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:380](https://github.co
 
 The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L368)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L368)
 
 ### response\_method?
 
@@ -60,7 +60,7 @@ Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba
 
 `'auto'`
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L375)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L375)
 
 ### sample\_weight?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:375](https://github.co
 
 Sample weights.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L363)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L363)
 
 ### y?
 
@@ -76,4 +76,4 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:363](https://github.co
 
 Target values.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L358)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L358)

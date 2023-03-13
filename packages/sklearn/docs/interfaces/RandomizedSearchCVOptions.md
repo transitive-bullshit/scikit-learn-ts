@@ -8,7 +8,7 @@
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:778](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L778)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:778](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L778)
 
 ### error\_score?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:778](https://gith
 
 Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error.
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:800](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L800)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:800](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L800)
 
 ### estimator?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:800](https://gith
 
 An object of that type is instantiated for each grid point. This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L732)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L732)
 
 ### n\_iter?
 
@@ -36,7 +36,7 @@ Number of parameter settings that are sampled. n\_iter trades off runtime vs qua
 
 `10`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:744](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L744)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:744](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L744)
 
 ### n\_jobs?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:744](https://gith
 
 Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L756)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L756)
 
 ### param\_distributions?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:756](https://gith
 
 Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L737)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L737)
 
 ### pre\_dispatch?
 
@@ -64,7 +64,7 @@ Controls the number of jobs that get dispatched during parallel execution. Reduc
 
 `'2*n_jobs'`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L790)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L790)
 
 ### random\_state?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:790](https://gith
 
 Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L795)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L795)
 
 ### refit?
 
@@ -94,7 +94,7 @@ See `scoring` parameter to know more about multiple metric evaluation.
 
 `true`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L773)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L773)
 
 ### return\_train\_score?
 
@@ -106,7 +106,7 @@ If `false`, the `cv\_results\_` attribute will not include training scores. Comp
 
 `false`
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L807)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L807)
 
 ### scoring?
 
@@ -116,7 +116,7 @@ Strategy to evaluate the performance of the cross-validated model on the test se
 
 If `scoring` represents a single score, one can use:
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L751)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L751)
 
 ### verbose?
 
@@ -124,4 +124,4 @@ Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:751](https://gith
 
 Controls the verbosity: the higher, the more messages.
 
-Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L783)
+Defined in:  [generated/model\_selection/RandomizedSearchCV.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L783)

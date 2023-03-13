@@ -12,7 +12,7 @@ Hyper-parameter : shape parameter for the Gamma distribution prior over the alph
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L491)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L491)
 
 ### alpha\_2?
 
@@ -24,7 +24,7 @@ Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distrib
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L498)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L498)
 
 ### alpha\_init?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/linear\_model/BayesianRidge.ts:498](https://github.com/t
 
 Initial value for alpha (precision of the noise). If not set, alpha\_init is 1/Var(y).
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L517)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L517)
 
 ### compute\_score?
 
@@ -44,7 +44,7 @@ If `true`, compute the log marginal likelihood at each iteration of the optimiza
 
 `false`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L529)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L529)
 
 ### copy\_X?
 
@@ -56,7 +56,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L543)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L543)
 
 ### fit\_intercept?
 
@@ -68,7 +68,7 @@ Whether to calculate the intercept for this model. The intercept is not treated 
 
 `true`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L536)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L536)
 
 ### lambda\_1?
 
@@ -80,7 +80,7 @@ Hyper-parameter : shape parameter for the Gamma distribution prior over the lamb
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L505)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L505)
 
 ### lambda\_2?
 
@@ -92,7 +92,7 @@ Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distrib
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L512)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L512)
 
 ### lambda\_init?
 
@@ -100,7 +100,7 @@ Defined in:  [generated/linear\_model/BayesianRidge.ts:512](https://github.com/t
 
 Initial value for lambda (precision of the weights). If not set, lambda\_init is 1.
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L522)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L522)
 
 ### n\_iter?
 
@@ -112,7 +112,7 @@ Maximum number of iterations. Should be greater than or equal to 1.
 
 `300`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L477)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L477)
 
 ### tol?
 
@@ -124,7 +124,7 @@ Stop the algorithm if w has converged.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L484)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L484)
 
 ### verbose?
 
@@ -136,4 +136,4 @@ Verbose mode when fitting the model.
 
 `false`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L550)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L550)

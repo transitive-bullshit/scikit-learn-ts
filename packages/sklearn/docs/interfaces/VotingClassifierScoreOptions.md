@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L605)
+Defined in:  [generated/ensemble/VotingClassifier.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L605)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/VotingClassifier.ts:605](https://github.com/tra
 
 Sample weights.
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L615)
+Defined in:  [generated/ensemble/VotingClassifier.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L615)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/VotingClassifier.ts:615](https://github.com/tra
 
 True labels for `X`.
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L610)
+Defined in:  [generated/ensemble/VotingClassifier.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L610)

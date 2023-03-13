@@ -8,7 +8,7 @@
 
 Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L431)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L431)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:431](http
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L436)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L436)

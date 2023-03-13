@@ -8,7 +8,7 @@
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L713)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L713)
 
 ### error\_score?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/GridSearchCV.ts:713](https://github.com
 
 Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error.
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L730)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L730)
 
 ### estimator?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/model\_selection/GridSearchCV.ts:730](https://github.com
 
 This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L672)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L672)
 
 ### n\_jobs?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/model\_selection/GridSearchCV.ts:672](https://github.com
 
 Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L689)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L689)
 
 ### param\_grid?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/model\_selection/GridSearchCV.ts:689](https://github.com
 
 Dictionary with parameters names (`str`) as keys and lists of parameter settings to try as values, or a list of such dictionaries, in which case the grids spanned by each dictionary in the list are explored. This enables searching over any sequence of parameter settings.
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L677)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L677)
 
 ### pre\_dispatch?
 
@@ -52,7 +52,7 @@ Controls the number of jobs that get dispatched during parallel execution. Reduc
 
 `'2*n_jobs'`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L725)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L725)
 
 ### refit?
 
@@ -76,7 +76,7 @@ See [Custom refit strategy of a grid search with cross-validation](../../auto_ex
 
 `true`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L708)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L708)
 
 ### return\_train\_score?
 
@@ -88,7 +88,7 @@ If `false`, the `cv\_results\_` attribute will not include training scores. Comp
 
 `false`
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L737)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L737)
 
 ### scoring?
 
@@ -98,7 +98,7 @@ Strategy to evaluate the performance of the cross-validated model on the test se
 
 If `scoring` represents a single score, one can use:
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L684)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L684)
 
 ### verbose?
 
@@ -106,4 +106,4 @@ Defined in:  [generated/model\_selection/GridSearchCV.ts:684](https://github.com
 
 Controls the verbosity: the higher, the more messages.
 
-Defined in:  [generated/model\_selection/GridSearchCV.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L718)
+Defined in:  [generated/model\_selection/GridSearchCV.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GridSearchCV.ts#L718)

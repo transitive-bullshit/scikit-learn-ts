@@ -2,7 +2,7 @@
 
 Covariance estimator with shrinkage.
 
-Read more in the [User Guide](../covariance.html#shrunk-covariance).
+Read more in the User Guide.
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.ShrunkCovariance.html)
 
@@ -20,13 +20,13 @@ new ShrunkCovariance(opts?: ShrunkCovarianceOptions): ShrunkCovariance;
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`ShrunkCovarianceOptions`](../interfaces/ShrunkCovarianceOptions.md) |
+| `opts?` | `ShrunkCovarianceOptions` |
 
 ### Returns
 
 [`ShrunkCovariance`](ShrunkCovariance.md)
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L23)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/covariance/ShrunkCovariance.ts:23](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L21)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L20)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L19)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L16)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L17)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L17)
 
 ## Accessors
 
@@ -74,13 +74,13 @@ covariance_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/ShrunkCovariance.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L265)
+Defined in: [generated/covariance/ShrunkCovariance.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L265)
 
 ### feature\_names\_in\_
 
-Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+Names of features seen during fit. Defined only when `X` has feature names that are all strings.
 
 #### Signature
 
@@ -90,9 +90,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/ShrunkCovariance.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L373)
+Defined in: [generated/covariance/ShrunkCovariance.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L373)
 
 ### location\_
 
@@ -106,13 +106,13 @@ location_(): Promise<ArrayLike>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/ShrunkCovariance.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L292)
+Defined in: [generated/covariance/ShrunkCovariance.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L292)
 
 ### n\_features\_in\_
 
-Number of features seen during [fit](../../glossary.html#term-fit).
+Number of features seen during fit.
 
 #### Signature
 
@@ -124,7 +124,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/ShrunkCovariance.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L346)
+Defined in: [generated/covariance/ShrunkCovariance.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L346)
 
 ### precision\_
 
@@ -138,9 +138,9 @@ precision_(): Promise<ArrayLike[]>;
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+`Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/ShrunkCovariance.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L319)
+Defined in: [generated/covariance/ShrunkCovariance.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L319)
 
 ### py
 
@@ -154,7 +154,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L28)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L28)
 
 #### Signature
 
@@ -172,7 +172,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/covariance/ShrunkCovariance.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L32)
+Defined in: [generated/covariance/ShrunkCovariance.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L32)
 
 ## Methods
 
@@ -192,7 +192,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L85)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L85)
 
 ### error\_norm()
 
@@ -208,13 +208,13 @@ error_norm(opts: ShrunkCovarianceErrorNormOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ShrunkCovarianceErrorNormOptions`](../interfaces/ShrunkCovarianceErrorNormOptions.md) |
+| `opts` | `ShrunkCovarianceErrorNormOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L102)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L102)
 
 ### fit()
 
@@ -230,13 +230,13 @@ fit(opts: ShrunkCovarianceFitOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ShrunkCovarianceFitOptions`](../interfaces/ShrunkCovarianceFitOptions.md) |
+| `opts` | `ShrunkCovarianceFitOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L136)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L136)
 
 ### get\_precision()
 
@@ -252,13 +252,13 @@ get_precision(opts: ShrunkCovarianceGetPrecisionOptions): Promise<any>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ShrunkCovarianceGetPrecisionOptions`](../interfaces/ShrunkCovarianceGetPrecisionOptions.md) |
+| `opts` | `ShrunkCovarianceGetPrecisionOptions` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L166)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L166)
 
 ### init()
 
@@ -282,7 +282,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L41)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L41)
 
 ### mahalanobis()
 
@@ -298,13 +298,13 @@ mahalanobis(opts: ShrunkCovarianceMahalanobisOptions): Promise<ArrayLike>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ShrunkCovarianceMahalanobisOptions`](../interfaces/ShrunkCovarianceMahalanobisOptions.md) |
+| `opts` | `ShrunkCovarianceMahalanobisOptions` |
 
 #### Returns
 
-`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
+`Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L199)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L199)
 
 ### score()
 
@@ -322,10 +322,10 @@ score(opts: ShrunkCovarianceScoreOptions): Promise<number>;
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ShrunkCovarianceScoreOptions`](../interfaces/ShrunkCovarianceScoreOptions.md) |
+| `opts` | `ShrunkCovarianceScoreOptions` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L233)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L233)

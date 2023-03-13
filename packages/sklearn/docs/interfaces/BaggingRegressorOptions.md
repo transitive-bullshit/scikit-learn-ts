@@ -12,7 +12,7 @@ Use `estimator` instead.
 
 `'deprecated'`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L486)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L486)
 
 ### bootstrap?
 
@@ -24,7 +24,7 @@ Whether samples are drawn with replacement. If `false`, sampling without replace
 
 `true`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L441)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L441)
 
 ### bootstrap\_features?
 
@@ -36,7 +36,7 @@ Whether features are drawn with replacement.
 
 `false`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L448)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L448)
 
 ### estimator?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/ensemble/BaggingRegressor.ts:448](https://github.com/tra
 
 The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor").
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L413)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L413)
 
 ### max\_features?
 
@@ -56,7 +56,7 @@ The number of features to draw from X to train each base estimator ( without rep
 
 `1`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L434)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L434)
 
 ### max\_samples?
 
@@ -68,7 +68,7 @@ The number of samples to draw from X to train each base estimator (with replacem
 
 `1`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L427)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L427)
 
 ### n\_estimators?
 
@@ -80,7 +80,7 @@ The number of base estimators in the ensemble.
 
 `10`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L420)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L420)
 
 ### n\_jobs?
 
@@ -88,7 +88,7 @@ Defined in:  [generated/ensemble/BaggingRegressor.ts:420](https://github.com/tra
 
 The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L467)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L467)
 
 ### oob\_score?
 
@@ -100,7 +100,7 @@ Whether to use out-of-bag samples to estimate the generalization error. Only ava
 
 `false`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L455)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L455)
 
 ### random\_state?
 
@@ -108,7 +108,7 @@ Defined in:  [generated/ensemble/BaggingRegressor.ts:455](https://github.com/tra
 
 Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L472)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L472)
 
 ### verbose?
 
@@ -120,7 +120,7 @@ Controls the verbosity when fitting and predicting.
 
 `0`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L479)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L479)
 
 ### warm\_start?
 
@@ -132,4 +132,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L462)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L462)

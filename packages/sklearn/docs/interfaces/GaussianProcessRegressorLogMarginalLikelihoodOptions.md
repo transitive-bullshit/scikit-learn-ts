@@ -12,7 +12,7 @@ If `true`, the kernel attribute is copied. If `false`, the kernel attribute is m
 
 `true`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L584)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L584)
 
 ### eval\_gradient?
 
@@ -24,7 +24,7 @@ If `true`, the gradient of the log-marginal likelihood with respect to the kerne
 
 `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L577)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L577)
 
 ### theta?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:577](https
 
 Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L570)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L570)

@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L700)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:700](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L700)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/BaggingClassifier.ts:700](https://github.com/tr
 
 Sample weights.
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L710)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L710)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/BaggingClassifier.ts:710](https://github.com/tr
 
 True labels for `X`.
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L705)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L705)

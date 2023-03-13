@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L478)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L478)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/neighbors/KNeighborsRegressor.ts:478](https://github.com
 
 Target values.
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L483)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L483)

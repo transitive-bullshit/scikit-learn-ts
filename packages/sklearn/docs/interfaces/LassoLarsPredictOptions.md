@@ -8,4 +8,4 @@
 
 Samples.
 
-Defined in:  [generated/linear\_model/LassoLars.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLars.ts#L490)
+Defined in:  [generated/linear\_model/LassoLars.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLars.ts#L490)

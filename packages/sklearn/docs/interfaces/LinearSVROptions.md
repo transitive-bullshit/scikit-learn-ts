@@ -12,7 +12,7 @@ Regularization parameter. The strength of the regularization is inversely propor
 
 `1`
 
-Defined in:  [generated/svm/LinearSVR.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L342)
+Defined in:  [generated/svm/LinearSVR.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L342)
 
 ### dual?
 
@@ -24,7 +24,7 @@ Select the algorithm to either solve the dual or primal optimization problem. Pr
 
 `true`
 
-Defined in:  [generated/svm/LinearSVR.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L370)
+Defined in:  [generated/svm/LinearSVR.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L370)
 
 ### epsilon?
 
@@ -36,7 +36,7 @@ Epsilon parameter in the epsilon-insensitive loss function. Note that the value 
 
 `0`
 
-Defined in:  [generated/svm/LinearSVR.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L328)
+Defined in:  [generated/svm/LinearSVR.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L328)
 
 ### fit\_intercept?
 
@@ -48,7 +48,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/svm/LinearSVR.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L356)
+Defined in:  [generated/svm/LinearSVR.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L356)
 
 ### intercept\_scaling?
 
@@ -60,7 +60,7 @@ When self.fit\_intercept is `true`, instance vector x becomes \[x, self.intercep
 
 `1`
 
-Defined in:  [generated/svm/LinearSVR.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L363)
+Defined in:  [generated/svm/LinearSVR.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L363)
 
 ### loss?
 
@@ -72,7 +72,7 @@ Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the 
 
 `'epsilon_insensitive'`
 
-Defined in:  [generated/svm/LinearSVR.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L349)
+Defined in:  [generated/svm/LinearSVR.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L349)
 
 ### max\_iter?
 
@@ -84,7 +84,7 @@ The maximum number of iterations to be run.
 
 `1000`
 
-Defined in:  [generated/svm/LinearSVR.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L389)
+Defined in:  [generated/svm/LinearSVR.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L389)
 
 ### random\_state?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/svm/LinearSVR.ts:389](https://github.com/transitive-bull
 
 Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/svm/LinearSVR.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L382)
+Defined in:  [generated/svm/LinearSVR.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L382)
 
 ### tol?
 
@@ -104,7 +104,7 @@ Tolerance for stopping criteria.
 
 `0.0001`
 
-Defined in:  [generated/svm/LinearSVR.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L335)
+Defined in:  [generated/svm/LinearSVR.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L335)
 
 ### verbose?
 
@@ -116,4 +116,4 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 `0`
 
-Defined in:  [generated/svm/LinearSVR.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/svm/LinearSVR.ts#L377)
+Defined in:  [generated/svm/LinearSVR.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVR.ts#L377)

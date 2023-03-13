@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/Normalizer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L343)
+Defined in:  [generated/preprocessing/Normalizer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L343)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/Normalizer.ts:343](https://github.com/tran
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/Normalizer.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L353)
+Defined in:  [generated/preprocessing/Normalizer.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L353)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/Normalizer.ts:353](https://github.com/tran
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/Normalizer.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L348)
+Defined in:  [generated/preprocessing/Normalizer.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L348)

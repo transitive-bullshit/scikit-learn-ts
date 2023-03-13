@@ -12,7 +12,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L408)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L408)
 
 ### fit\_intercept?
 
@@ -24,7 +24,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L401)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L401)
 
 ### max\_iter?
 
@@ -36,7 +36,7 @@ Maximum number of iterations for the calculation of spatial median.
 
 `300`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L427)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L427)
 
 ### max\_subpopulation?
 
@@ -48,7 +48,7 @@ Instead of computing with a set of cardinality ‘n choose k’, where n is the 
 
 `10000`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L415)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L415)
 
 ### n\_jobs?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/linear\_model/TheilSenRegressor.ts:415](https://github.c
 
 Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L444)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L444)
 
 ### n\_subsamples?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/linear\_model/TheilSenRegressor.ts:444](https://github.c
 
 Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit\_intercept=`true`) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If `undefined`, take the minimum number of subsamples leading to maximal robustness. If n\_subsamples is set to n\_samples, Theil-Sen is identical to least squares.
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L420)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L420)
 
 ### random\_state?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/linear\_model/TheilSenRegressor.ts:420](https://github.c
 
 A random number generator instance to define the state of the random permutations generator. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L439)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L439)
 
 ### tol?
 
@@ -84,7 +84,7 @@ Tolerance when calculating spatial median.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L434)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L434)
 
 ### verbose?
 
@@ -96,4 +96,4 @@ Verbose mode when fitting the model.
 
 `false`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L451)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L451)

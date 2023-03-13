@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/cluster/Birch.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L575)
+Defined in:  [generated/cluster/Birch.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L575)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cluster/Birch.ts:575](https://github.com/transitive-bull
 
 Additional fit parameters.
 
-Defined in:  [generated/cluster/Birch.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L585)
+Defined in:  [generated/cluster/Birch.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L585)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/cluster/Birch.ts:585](https://github.com/transitive-bull
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/cluster/Birch.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/cluster/Birch.ts#L580)
+Defined in:  [generated/cluster/Birch.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L580)

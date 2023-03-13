@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L448)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L448)
 
 ### leaf\_size?
 
@@ -24,7 +24,7 @@ Leaf size passed to BallTree or KDTree. This can affect the speed of the constru
 
 `30`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L455)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L455)
 
 ### metric?
 
@@ -40,7 +40,7 @@ If metric is a callable function, it takes two arrays representing 1D vectors as
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L473)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L473)
 
 ### metric\_params?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:473](https://githu
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L478)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L478)
 
 ### n\_jobs?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:478](https://githu
 
 The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L483)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L483)
 
 ### p?
 
@@ -68,7 +68,7 @@ Power parameter for the Minkowski metric. When p = 1, this is equivalent to usin
 
 `2`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L462)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L462)
 
 ### radius?
 
@@ -80,7 +80,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 `1`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L434)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L434)
 
 ### weights?
 
@@ -92,4 +92,4 @@ Weight function used in prediction. Possible values:
 
 `'uniform'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L441)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L441)

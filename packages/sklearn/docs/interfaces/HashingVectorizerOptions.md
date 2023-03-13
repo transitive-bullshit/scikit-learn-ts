@@ -12,7 +12,7 @@ When `true`, an alternating sign is added to the features as to approximately co
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L540)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L540)
 
 ### analyzer?
 
@@ -26,7 +26,7 @@ If a callable is passed it is used to extract the sequence of features out of th
 
 `'word'`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L514)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L514)
 
 ### binary?
 
@@ -38,7 +38,7 @@ If `true`, all non zero counts are set to 1. This is useful for discrete probabi
 
 `false`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L526)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L526)
 
 ### decode\_error?
 
@@ -50,7 +50,7 @@ Instruction on what to do if a byte sequence is given to analyze that contains c
 
 `'strict'`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L462)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L462)
 
 ### dtype?
 
@@ -58,7 +58,7 @@ Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:462](https
 
 Type of the matrix returned by fit\_transform() or transform().
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L545)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L545)
 
 ### encoding?
 
@@ -70,7 +70,7 @@ If bytes or files are given to analyze, this encoding is used to decode.
 
 `'utf-8'`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L455)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L455)
 
 ### input?
 
@@ -82,7 +82,7 @@ If `'filename'`, the sequence passed as an argument to fit is expected to be a l
 
 `'content'`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L448)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L448)
 
 ### lowercase?
 
@@ -94,7 +94,7 @@ Convert all characters to lowercase before tokenizing.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L476)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L476)
 
 ### n\_features?
 
@@ -102,7 +102,7 @@ Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:476](https
 
 The number of features (columns) in the output matrices. Small numbers of features are likely to cause hash collisions, but large numbers will cause larger coefficient dimensions in linear learners.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L519)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L519)
 
 ### ngram\_range?
 
@@ -110,7 +110,7 @@ Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:519](https
 
 The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L505)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L505)
 
 ### norm?
 
@@ -122,7 +122,7 @@ Norm used to normalize term vectors. `undefined` for no normalization.
 
 `'l2'`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L533)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L533)
 
 ### preprocessor?
 
@@ -130,7 +130,7 @@ Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:533](https
 
 Override the preprocessing (string transformation) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L481)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L481)
 
 ### stop\_words?
 
@@ -140,7 +140,7 @@ If ‘english’, a built-in stop word list for English is used. There are sever
 
 If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L493)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L493)
 
 ### strip\_accents?
 
@@ -150,7 +150,7 @@ Remove accents and perform other character normalization during the preprocessin
 
 Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L469)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L469)
 
 ### token\_pattern?
 
@@ -160,7 +160,7 @@ Regular expression denoting what constitutes a “token”, only used if `analyz
 
 If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L500)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L500)
 
 ### tokenizer?
 
@@ -168,4 +168,4 @@ Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:500](https
 
 Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L486)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L486)

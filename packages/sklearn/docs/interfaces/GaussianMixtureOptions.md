@@ -12,7 +12,7 @@ String describing the type of covariance parameters to use. Must be one of:
 
 `'full'`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L641)
+Defined in:  [generated/mixture/GaussianMixture.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L641)
 
 ### init\_params?
 
@@ -24,7 +24,7 @@ The method used to initialize the weights, the means and the precisions. String 
 
 `'kmeans'`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L676)
+Defined in:  [generated/mixture/GaussianMixture.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L676)
 
 ### max\_iter?
 
@@ -36,7 +36,7 @@ The number of EM iterations to perform.
 
 `100`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L662)
+Defined in:  [generated/mixture/GaussianMixture.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L662)
 
 ### means\_init?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/mixture/GaussianMixture.ts:662](https://github.com/trans
 
 The user-provided initial means, If it is `undefined`, means are initialized using the `init\_params` method.
 
-Defined in:  [generated/mixture/GaussianMixture.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L686)
+Defined in:  [generated/mixture/GaussianMixture.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L686)
 
 ### n\_components?
 
@@ -56,7 +56,7 @@ The number of mixture components.
 
 `1`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L634)
+Defined in:  [generated/mixture/GaussianMixture.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L634)
 
 ### n\_init?
 
@@ -68,7 +68,7 @@ The number of initializations to perform. The best results are kept.
 
 `1`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L669)
+Defined in:  [generated/mixture/GaussianMixture.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L669)
 
 ### precisions\_init?
 
@@ -76,7 +76,7 @@ Defined in:  [generated/mixture/GaussianMixture.ts:669](https://github.com/trans
 
 The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init\_params’ method. The shape depends on ‘covariance\_type’:
 
-Defined in:  [generated/mixture/GaussianMixture.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L691)
+Defined in:  [generated/mixture/GaussianMixture.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L691)
 
 ### random\_state?
 
@@ -84,7 +84,7 @@ Defined in:  [generated/mixture/GaussianMixture.ts:691](https://github.com/trans
 
 Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/mixture/GaussianMixture.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L696)
+Defined in:  [generated/mixture/GaussianMixture.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L696)
 
 ### reg\_covar?
 
@@ -96,7 +96,7 @@ Non-negative regularization added to the diagonal of covariance. Allows to assur
 
 `0.000001`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L655)
+Defined in:  [generated/mixture/GaussianMixture.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L655)
 
 ### tol?
 
@@ -108,7 +108,7 @@ The convergence threshold. EM iterations will stop when the lower bound average 
 
 `0.001`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L648)
+Defined in:  [generated/mixture/GaussianMixture.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L648)
 
 ### verbose?
 
@@ -120,7 +120,7 @@ Enable verbose output. If 1 then it prints the current initialization and each i
 
 `0`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L710)
+Defined in:  [generated/mixture/GaussianMixture.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L710)
 
 ### verbose\_interval?
 
@@ -132,7 +132,7 @@ Number of iteration done before the next print.
 
 `10`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:717](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L717)
+Defined in:  [generated/mixture/GaussianMixture.ts:717](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L717)
 
 ### warm\_start?
 
@@ -144,7 +144,7 @@ If ‘warm\_start’ is `true`, the solution of the last fitting is used as init
 
 `false`
 
-Defined in:  [generated/mixture/GaussianMixture.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L703)
+Defined in:  [generated/mixture/GaussianMixture.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L703)
 
 ### weights\_init?
 
@@ -152,4 +152,4 @@ Defined in:  [generated/mixture/GaussianMixture.ts:703](https://github.com/trans
 
 The user-provided initial weights. If it is `undefined`, weights are initialized using the `init\_params` method.
 
-Defined in:  [generated/mixture/GaussianMixture.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L681)
+Defined in:  [generated/mixture/GaussianMixture.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L681)

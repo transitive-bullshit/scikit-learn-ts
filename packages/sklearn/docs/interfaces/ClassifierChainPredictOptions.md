@@ -8,4 +8,4 @@
 
 The input data.
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L433)
+Defined in:  [generated/multioutput/ClassifierChain.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L433)

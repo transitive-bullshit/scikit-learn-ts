@@ -8,7 +8,7 @@
 
 The training input samples.
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L457)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L457)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/feature\_selection/SelectPercentile.ts:457](https://gith
 
 The target values (class labels in classification, real numbers in regression).
 
-Defined in:  [generated/feature\_selection/SelectPercentile.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L462)
+Defined in:  [generated/feature\_selection/SelectPercentile.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectPercentile.ts#L462)

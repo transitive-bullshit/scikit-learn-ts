@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L538)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L538)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/linear\_model/LassoLarsCV.ts:538](https://github.com/tra
 
 Target values.
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L543)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L543)

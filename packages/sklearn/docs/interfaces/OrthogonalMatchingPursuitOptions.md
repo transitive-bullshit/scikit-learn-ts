@@ -12,7 +12,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L384)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L384)
 
 ### n\_nonzero\_coefs?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:384](https://
 
 Desired number of non-zero entries in the solution. If `undefined` (by default) this value is set to 10% of n\_features.
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L372)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L372)
 
 ### normalize?
 
@@ -32,7 +32,7 @@ This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, th
 
 `false`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L391)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L391)
 
 ### precompute?
 
@@ -44,7 +44,7 @@ Whether to use a precomputed Gram and Xy matrix to speed up calculations. Improv
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L398)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L398)
 
 ### tol?
 
@@ -52,4 +52,4 @@ Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:398](https://
 
 Maximum norm of the residual. If not `undefined`, overrides n\_nonzero\_coefs.
 
-Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L377)
+Defined in:  [generated/linear\_model/OrthogonalMatchingPursuit.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/OrthogonalMatchingPursuit.ts#L377)

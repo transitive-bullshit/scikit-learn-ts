@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:804](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L804)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:804](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L804)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:804](https://
 
 Additional fit parameters.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L814)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L814)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:814](https://
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L809)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L809)

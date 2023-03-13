@@ -8,7 +8,7 @@
 
 The input data.
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L421)
+Defined in:  [generated/multioutput/ClassifierChain.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L421)
 
 ### Y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/multioutput/ClassifierChain.ts:421](https://github.com/t
 
 The target values.
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L426)
+Defined in:  [generated/multioutput/ClassifierChain.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L426)

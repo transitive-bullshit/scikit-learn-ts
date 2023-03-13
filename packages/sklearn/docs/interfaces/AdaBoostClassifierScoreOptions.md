@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:777](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L777)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:777](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L777)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:777](https://github.com/t
 
 Sample weights.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L787)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:787](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L787)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:787](https://github.com/t
 
 True labels for `X`.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:782](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L782)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:782](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L782)

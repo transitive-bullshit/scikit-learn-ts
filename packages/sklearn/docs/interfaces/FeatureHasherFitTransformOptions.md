@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L272)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L272)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_extraction/FeatureHasher.ts:272](https://github
 
 Additional fit parameters.
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L282)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L282)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_extraction/FeatureHasher.ts:282](https://github
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L277)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L277)

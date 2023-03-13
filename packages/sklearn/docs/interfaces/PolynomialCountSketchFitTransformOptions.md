@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L443)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L443)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:443](http
 
 Additional fit parameters.
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L453)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L453)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:453](http
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L448)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L448)

@@ -8,7 +8,7 @@
 
 Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L453)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L453)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/covariance/ShrunkCovariance.ts:453](https://github.com/t
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/covariance/ShrunkCovariance.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L458)
+Defined in:  [generated/covariance/ShrunkCovariance.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/ShrunkCovariance.ts#L458)

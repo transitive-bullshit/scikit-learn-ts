@@ -8,7 +8,7 @@
 
 The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L621)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L621)
 
 ### mode?
 
@@ -20,7 +20,7 @@ Type of returned matrix: ‘connectivity’ will return the connectivity matrix 
 
 `'connectivity'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L633)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L633)
 
 ### radius?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:633](https://git
 
 Radius of neighborhoods. The default is the value passed to the constructor.
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L626)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L626)
 
 ### sort\_results?
 
@@ -40,4 +40,4 @@ If `true`, in each row of the result, the non-zero entries will be sorted by inc
 
 `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L640)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L640)

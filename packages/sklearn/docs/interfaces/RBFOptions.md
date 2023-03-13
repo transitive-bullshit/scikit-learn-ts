@@ -12,7 +12,7 @@ The length scale of the kernel. If a float, an isotropic kernel is used. If an a
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L262)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L262)
 
 ### length\_scale\_bounds?
 
@@ -20,4 +20,4 @@ Defined in:  [generated/gaussian\_process/kernels/RBF.ts:262](https://github.com
 
 The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L267)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L267)

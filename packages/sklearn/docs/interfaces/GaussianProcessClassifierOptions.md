@@ -12,7 +12,7 @@ If `true`, a persistent copy of the training data is stored in the object. Other
 
 `true`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L497)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L497)
 
 ### kernel?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:497](http
 
 The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel “1.0 \* RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a `CompoundKernel`.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L462)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L462)
 
 ### max\_iter\_predict?
 
@@ -32,7 +32,7 @@ The maximum number of iterations in Newton’s method for approximating the post
 
 `100`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L483)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L483)
 
 ### multi\_class?
 
@@ -44,7 +44,7 @@ Specifies how multi-class classification problems are handled. Supported are ‘
 
 `'one_vs_rest'`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L509)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L509)
 
 ### n\_jobs?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:509](http
 
 The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L514)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L514)
 
 ### n\_restarts\_optimizer?
 
@@ -64,7 +64,7 @@ The number of restarts of the optimizer for finding the kernel’s parameters wh
 
 `0`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L476)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L476)
 
 ### optimizer?
 
@@ -76,7 +76,7 @@ Can either be one of the internally supported optimizers for optimizing the kern
 
 `'fmin_l_bfgs_b'`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L469)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L469)
 
 ### random\_state?
 
@@ -84,7 +84,7 @@ Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:469](http
 
 Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L502)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L502)
 
 ### warm\_start?
 
@@ -96,4 +96,4 @@ If warm-starts are enabled, the solution of the last Newton iteration on the Lap
 
 `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L490)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L490)

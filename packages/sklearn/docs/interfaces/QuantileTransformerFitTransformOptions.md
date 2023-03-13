@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L509)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L509)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/QuantileTransformer.ts:509](https://github
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L519)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L519)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/QuantileTransformer.ts:519](https://github
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/QuantileTransformer.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L514)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L514)

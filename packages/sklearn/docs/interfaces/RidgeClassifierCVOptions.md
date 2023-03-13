@@ -8,7 +8,7 @@
 
 Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L440)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L440)
 
 ### class\_weight?
 
@@ -18,7 +18,7 @@ Weights associated with classes in the form `{class\_label: weight}`. If not giv
 
 The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L464)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L464)
 
 ### cv?
 
@@ -26,7 +26,7 @@ Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:464](https://github.c
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L457)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L457)
 
 ### fit\_intercept?
 
@@ -38,7 +38,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L447)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L447)
 
 ### scoring?
 
@@ -46,7 +46,7 @@ Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:447](https://github.c
 
 A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L452)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L452)
 
 ### store\_cv\_values?
 
@@ -58,4 +58,4 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 `false`
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L471)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L471)

@@ -8,7 +8,7 @@
 
 Query points where the GP is evaluated.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L612)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L612)
 
 ### n\_samples?
 
@@ -20,7 +20,7 @@ Number of samples drawn from the Gaussian process per query point.
 
 `1`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L619)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L619)
 
 ### random\_state?
 
@@ -32,4 +32,4 @@ Determines random number generation to randomly draw samples. Pass an int for re
 
 `0`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L626)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L626)

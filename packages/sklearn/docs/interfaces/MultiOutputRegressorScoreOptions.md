@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L387)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L387)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multioutput/MultiOutputRegressor.ts:387](https://github.
 
 Sample weights.
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L397)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L397)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/multioutput/MultiOutputRegressor.ts:397](https://github.
 
 True values for `X`.
 
-Defined in:  [generated/multioutput/MultiOutputRegressor.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L392)
+Defined in:  [generated/multioutput/MultiOutputRegressor.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L392)

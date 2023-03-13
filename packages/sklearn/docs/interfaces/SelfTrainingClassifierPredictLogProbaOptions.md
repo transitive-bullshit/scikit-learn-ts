@@ -8,4 +8,4 @@
 
 Array representing the data.
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L599)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L599)

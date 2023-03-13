@@ -12,4 +12,4 @@ Set to `false` to perform inplace scaling and avoid a copy (if the input is alre
 
 `true`
 
-Defined in:  [generated/preprocessing/MaxAbsScaler.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L442)
+Defined in:  [generated/preprocessing/MaxAbsScaler.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MaxAbsScaler.ts#L442)

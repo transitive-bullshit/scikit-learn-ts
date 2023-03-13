@@ -8,7 +8,7 @@
 
 Indicates the categorical features.
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L542)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L542)
 
 ### early\_stopping?
 
@@ -20,7 +20,7 @@ If ‘auto’, early stopping is enabled if the sample size is larger than 10000
 
 `'auto'`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L572)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L572)
 
 ### interaction\_cst?
 
@@ -34,7 +34,7 @@ The strings “pairwise” and “no\_interactions” are shorthands for allowin
 
 For instance, with 5 features in total, `interaction\_cst=\[{0, 1}\]` is equivalent to `interaction\_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4.
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L558)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L558)
 
 ### l2\_regularization?
 
@@ -46,7 +46,7 @@ The L2 regularization parameter. Use `0` for no regularization (default).
 
 `0`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L530)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L530)
 
 ### learning\_rate?
 
@@ -58,7 +58,7 @@ The learning rate, also known as *shrinkage*. This is used as a multiplicative f
 
 `0.1`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L497)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L497)
 
 ### loss?
 
@@ -70,7 +70,7 @@ The loss function to use in the boosting process. Note that the “squared error
 
 `'squared_error'`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L485)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L485)
 
 ### max\_bins?
 
@@ -82,7 +82,7 @@ The maximum number of bins to use for non-missing values. Before training, each 
 
 `255`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L537)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L537)
 
 ### max\_depth?
 
@@ -90,7 +90,7 @@ Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:537](https://g
 
 The maximum depth of each tree. The depth of a tree is the number of edges to go from the root to the deepest leaf. Depth isn’t constrained by default.
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L516)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L516)
 
 ### max\_iter?
 
@@ -102,7 +102,7 @@ The maximum number of iterations of the boosting process, i.e. the maximum numbe
 
 `100`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L504)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L504)
 
 ### max\_leaf\_nodes?
 
@@ -114,7 +114,7 @@ The maximum number of leaves for each tree. Must be strictly greater than 1. If 
 
 `31`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L511)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L511)
 
 ### min\_samples\_leaf?
 
@@ -126,7 +126,7 @@ The minimum number of samples per leaf. For small datasets with less than a few 
 
 `20`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L523)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L523)
 
 ### monotonic\_cst?
 
@@ -134,7 +134,7 @@ Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:523](https://g
 
 Monotonic constraint to enforce on each feature are specified using the following integer values:
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L547)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L547)
 
 ### n\_iter\_no\_change?
 
@@ -146,7 +146,7 @@ Used to determine when to “early stop”. The fitting process is stopped when 
 
 `10`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L593)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L593)
 
 ### quantile?
 
@@ -154,7 +154,7 @@ Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:593](https://g
 
 If loss is “quantile”, this parameter specifies which quantile to be estimated and must be between 0 and 1.
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L490)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L490)
 
 ### random\_state?
 
@@ -162,7 +162,7 @@ Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:490](https://g
 
 Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L612)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L612)
 
 ### scoring?
 
@@ -174,7 +174,7 @@ Scoring parameter to use for early stopping. It can be a single string (see [The
 
 `'loss'`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L579)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L579)
 
 ### tol?
 
@@ -186,7 +186,7 @@ The absolute tolerance to use when comparing scores during early stopping. The h
 
 `1e-7`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L600)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L600)
 
 ### validation\_fraction?
 
@@ -198,7 +198,7 @@ Proportion (or absolute size) of training data to set aside as validation data f
 
 `0.1`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L586)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L586)
 
 ### verbose?
 
@@ -210,7 +210,7 @@ The verbosity level. If not zero, print some information about the fitting proce
 
 `0`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L607)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L607)
 
 ### warm\_start?
 
@@ -222,4 +222,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L565)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L565)

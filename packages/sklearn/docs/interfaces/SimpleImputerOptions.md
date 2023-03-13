@@ -12,7 +12,7 @@ If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.i
 
 `false`
 
-Defined in:  [generated/impute/SimpleImputer.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/SimpleImputer.ts#L432)
+Defined in:  [generated/impute/SimpleImputer.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/SimpleImputer.ts#L432)
 
 ### copy?
 
@@ -24,7 +24,7 @@ If `true`, a copy of X will be created. If `false`, imputation will be done in-p
 
 `true`
 
-Defined in:  [generated/impute/SimpleImputer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/SimpleImputer.ts#L425)
+Defined in:  [generated/impute/SimpleImputer.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/SimpleImputer.ts#L425)
 
 ### fill\_value?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/impute/SimpleImputer.ts:425](https://github.com/transiti
 
 When strategy == “constant”, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `undefined`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types.
 
-Defined in:  [generated/impute/SimpleImputer.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/SimpleImputer.ts#L411)
+Defined in:  [generated/impute/SimpleImputer.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/SimpleImputer.ts#L411)
 
 ### keep\_empty\_features?
 
@@ -44,7 +44,7 @@ If `true`, features that consist exclusively of missing values when `fit` is cal
 
 `false`
 
-Defined in:  [generated/impute/SimpleImputer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/SimpleImputer.ts#L439)
+Defined in:  [generated/impute/SimpleImputer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/SimpleImputer.ts#L439)
 
 ### missing\_values?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/impute/SimpleImputer.ts:439](https://github.com/transiti
 
 The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` can be set to either `np.nan` or `pd.NA`.
 
-Defined in:  [generated/impute/SimpleImputer.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/SimpleImputer.ts#L399)
+Defined in:  [generated/impute/SimpleImputer.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/SimpleImputer.ts#L399)
 
 ### strategy?
 
@@ -64,7 +64,7 @@ The imputation strategy.
 
 `'mean'`
 
-Defined in:  [generated/impute/SimpleImputer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/SimpleImputer.ts#L406)
+Defined in:  [generated/impute/SimpleImputer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/SimpleImputer.ts#L406)
 
 ### verbose?
 
@@ -76,4 +76,4 @@ Controls the verbosity of the imputer.
 
 `0`
 
-Defined in:  [generated/impute/SimpleImputer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/impute/SimpleImputer.ts#L418)
+Defined in:  [generated/impute/SimpleImputer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/SimpleImputer.ts#L418)

@@ -8,4 +8,4 @@
 
 An iterable which generates either str, unicode or file objects.
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:698](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L698)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:698](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L698)

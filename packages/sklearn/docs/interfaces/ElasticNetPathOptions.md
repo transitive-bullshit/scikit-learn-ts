@@ -8,7 +8,7 @@
 
 Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L499)
+Defined in:  [generated/linear\_model/ElasticNet.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L499)
 
 ### Xy?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:499](https://github.com/tran
 
 Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L542)
+Defined in:  [generated/linear\_model/ElasticNet.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L542)
 
 ### alphas?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:542](https://github.com/tran
 
 List of alphas where to compute the models. If `undefined` alphas are set automatically.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L530)
+Defined in:  [generated/linear\_model/ElasticNet.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L530)
 
 ### check\_input?
 
@@ -36,7 +36,7 @@ If set to `false`, the input validation checks are skipped (including the Gram m
 
 `true`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L582)
+Defined in:  [generated/linear\_model/ElasticNet.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L582)
 
 ### coef\_init?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:582](https://github.com/tran
 
 The initial values of the coefficients.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L554)
+Defined in:  [generated/linear\_model/ElasticNet.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L554)
 
 ### copy\_X?
 
@@ -56,7 +56,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L549)
+Defined in:  [generated/linear\_model/ElasticNet.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L549)
 
 ### eps?
 
@@ -68,7 +68,7 @@ Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L518)
+Defined in:  [generated/linear\_model/ElasticNet.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L518)
 
 ### l1\_ratio?
 
@@ -80,7 +80,7 @@ Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penaltie
 
 `0.5`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L511)
+Defined in:  [generated/linear\_model/ElasticNet.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L511)
 
 ### n\_alphas?
 
@@ -92,7 +92,7 @@ Number of alphas along the regularization path.
 
 `100`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L525)
+Defined in:  [generated/linear\_model/ElasticNet.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L525)
 
 ### params?
 
@@ -100,7 +100,7 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:525](https://github.com/tran
 
 Keyword arguments passed to the coordinate descent solver.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L587)
+Defined in:  [generated/linear\_model/ElasticNet.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L587)
 
 ### positive?
 
@@ -112,7 +112,7 @@ If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim
 
 `false`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L575)
+Defined in:  [generated/linear\_model/ElasticNet.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L575)
 
 ### precompute?
 
@@ -124,7 +124,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L537)
+Defined in:  [generated/linear\_model/ElasticNet.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L537)
 
 ### return\_n\_iter?
 
@@ -136,7 +136,7 @@ Whether to return the number of iterations or not.
 
 `false`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L568)
+Defined in:  [generated/linear\_model/ElasticNet.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L568)
 
 ### verbose?
 
@@ -148,7 +148,7 @@ Amount of verbosity.
 
 `false`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L561)
+Defined in:  [generated/linear\_model/ElasticNet.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L561)
 
 ### y?
 
@@ -156,4 +156,4 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:561](https://github.com/tran
 
 Target values.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L504)
+Defined in:  [generated/linear\_model/ElasticNet.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L504)

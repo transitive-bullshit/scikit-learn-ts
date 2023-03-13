@@ -8,7 +8,7 @@
 
 The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L849)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L849)
 
 ### check\_input?
 
@@ -20,4 +20,4 @@ Allow to bypass several input checking. Don’t use this parameter unless you kn
 
 `true`
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:856](https://github.com/transitive-bullshit/scikit-learn-ts/blob/122b3c0/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L856)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:856](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L856)
