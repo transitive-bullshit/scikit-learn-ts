@@ -30,7 +30,11 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     const { asPath } = useRouter()
-    if (asPath !== '/') {
+    if (asPath === '/') {
+      return {
+        titleTemplate: siteTitle
+      }
+    } else {
       return {
         titleTemplate: `%s – ${siteTitle}`
       }
@@ -41,8 +45,10 @@ const config: DocsThemeConfig = {
   },
   head: function useHead() {
     const config = useConfig()
-    // const { route } = useRouter()
-    const title = config?.title ? `${config.title} - ${siteTitle}` : siteTitle
+    const { asPath } = useRouter()
+    const isIndex = asPath === '/'
+    const title =
+      config?.title && !isIndex ? `${config.title} - ${siteTitle}` : siteTitle
 
     return (
       <>
