@@ -19,6 +19,7 @@ const config: DocsThemeConfig = {
       }}
     />
   ),
+
   project: {
     link: 'https://github.com/transitive-bullshit/scikit-learn-ts'
   },
@@ -39,28 +40,35 @@ const config: DocsThemeConfig = {
     titleComponent
   },
   head: function useHead() {
-    const { title } = useConfig()
+    const config = useConfig()
     // const { route } = useRouter()
+    const title = config?.title ? `${config.title} - ${siteTitle}` : siteTitle
 
     return (
       <>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-
         <meta httpEquiv='Content-Language' content='en' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='robots' content='index,follow' />
+
         <meta name='description' content={siteDesc} />
-        <meta name='og:description' content={siteDesc} />
+        <meta property='og:description' content={siteDesc} />
+        <meta name='twitter:description' content={siteDesc} />
+
+        <meta property='og:site_name' content={siteTitle} />
+        <meta name='apple-mobile-web-app-title' content={siteTitle} />
 
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:image' content={siteSocialUrl} />
+        <meta name='og:image' content={siteSocialUrl} />
+
+        <meta property='twitter:domain' content={siteHost} />
         <meta name='twitter:site:domain' content={siteHost} />
+
         <meta name='twitter:url' content={siteUrl} />
 
-        <meta
-          name='og:title'
-          content={title ? `${title} – ${siteTitle}` : siteTitle}
-        />
-        <meta name='og:image' content={siteSocialUrl} />
-        <meta name='apple-mobile-web-app-title' content='sklearn' />
+        <meta property='og:title' content={title} />
+        <meta name='twitter:title' content={title} />
+        <title>{title}</title>
 
         <link rel='shortcut icon' href='/favicon.ico' />
         <link
