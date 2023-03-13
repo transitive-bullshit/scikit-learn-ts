@@ -7,7 +7,7 @@
   <a href="https://prettier.io"><img alt="Prettier Code Formatting" src="https://img.shields.io/badge/code_style-prettier-brightgreen.svg" /></a>
 </p>
 
-# Intro
+## Intro
 
 This project enables Node.js devs to use Python's powerful [scikit-learn](https://scikit-learn.org/) machine learning library – *without having to know any Python*. 🤯
 
