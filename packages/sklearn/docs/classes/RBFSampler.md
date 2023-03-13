@@ -28,7 +28,7 @@ new RBFSampler(opts?: RBFSamplerOptions): RBFSampler;
 
 [`RBFSampler`](RBFSampler.md)
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L25)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/kernel\_approximation/RBFSampler.ts:25](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L23)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L22)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L21)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L18)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L19)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L334)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L334)
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L334)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L334)
 
 ### n\_features\_in\_
 
@@ -96,9 +96,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L309)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L309)
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L309)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L309)
 
 ### py
 
@@ -112,7 +112,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L30)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L30)
 
 #### Signature
 
@@ -130,9 +130,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L34)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L34)
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L30) [generated/kernel\_approximation/RBFSampler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L34)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L30) [generated/kernel\_approximation/RBFSampler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L34)
 
 ### random\_offset\_
 
@@ -148,9 +148,9 @@ random_offset_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L259)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L259)
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L259)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L259)
 
 ### random\_weights\_
 
@@ -166,9 +166,9 @@ random_weights_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L284)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L284)
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L284)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L284)
 
 ## Methods
 
@@ -188,7 +188,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L85)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L85)
 
 ### fit()
 
@@ -212,7 +212,7 @@ fit(opts: RBFSamplerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L104)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L104)
 
 ### fit\_transform()
 
@@ -236,7 +236,7 @@ fit_transform(opts: RBFSamplerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L134)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L134)
 
 ### get\_feature\_names\_out()
 
@@ -260,7 +260,7 @@ get_feature_names_out(opts: RBFSamplerGetFeatureNamesOutOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L168)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L168)
 
 ### init()
 
@@ -284,7 +284,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L43)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L43)
 
 ### set\_output()
 
@@ -308,7 +308,7 @@ set_output(opts: RBFSamplerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L203)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L203)
 
 ### transform()
 
@@ -330,4 +330,4 @@ transform(opts: RBFSamplerTransformOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L231)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L231)

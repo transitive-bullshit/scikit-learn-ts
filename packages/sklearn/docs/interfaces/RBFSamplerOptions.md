@@ -12,7 +12,7 @@ Parameter of RBF kernel: exp(-gamma \* x^2). If `gamma='scale'` is passed then i
 
 `1`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L363)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L363)
 
 ### n\_components?
 
@@ -24,7 +24,7 @@ Number of Monte Carlo samples per original feature. Equals the dimensionality of
 
 `100`
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L370)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L370)
 
 ### random\_state?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/kernel\_approximation/RBFSampler.ts:370](https://github.
 
 Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/kernel\_approximation/RBFSampler.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L375)
+Defined in:  [generated/kernel\_approximation/RBFSampler.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L375)

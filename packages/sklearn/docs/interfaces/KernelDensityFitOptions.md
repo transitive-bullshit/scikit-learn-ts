@@ -8,7 +8,7 @@
 
 List of n\_features-dimensional data points. Each row corresponds to a single data point.
 
-Defined in:  [generated/neighbors/KernelDensity.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L397)
+Defined in:  [generated/neighbors/KernelDensity.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L397)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/neighbors/KernelDensity.ts:397](https://github.com/trans
 
 List of sample weights attached to the data X.
 
-Defined in:  [generated/neighbors/KernelDensity.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L407)
+Defined in:  [generated/neighbors/KernelDensity.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L407)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/neighbors/KernelDensity.ts:407](https://github.com/trans
 
 Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
 
-Defined in:  [generated/neighbors/KernelDensity.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L402)
+Defined in:  [generated/neighbors/KernelDensity.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KernelDensity.ts#L402)

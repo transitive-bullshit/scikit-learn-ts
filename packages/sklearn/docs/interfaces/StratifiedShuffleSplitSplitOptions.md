@@ -10,7 +10,7 @@ Training data, where `n\_samples` is the number of samples and `n\_features` is 
 
 Note that providing `y` is sufficient to generate the splits and hence `np.zeros(n\_samples)` may be used as a placeholder for `X` instead of actual training data.
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L223)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L223)
 
 ### groups?
 
@@ -18,7 +18,7 @@ Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:223](https://
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L233)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L233)
 
 ### y?
 
@@ -26,4 +26,4 @@ Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:233](https://
 
 The target variable for supervised learning problems. Stratification is done based on the y labels.
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L228)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L228)

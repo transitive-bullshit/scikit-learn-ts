@@ -8,4 +8,4 @@
 
 The data matrix for which we want to get the confidence scores.
 
-Defined in:  [generated/linear\_model/LogisticRegression.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L677)
+Defined in:  [generated/linear\_model/LogisticRegression.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LogisticRegression.ts#L677)

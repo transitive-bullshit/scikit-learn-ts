@@ -12,7 +12,7 @@ The metric to use when calculating distance between instances in a feature array
 
 `'euclidean'`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L551)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L551)
 
 ### compute\_distances?
 
@@ -24,7 +24,7 @@ Computes distances between clusters even if `distance\_threshold` is not used. T
 
 `false`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L597)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L597)
 
 ### compute\_full\_tree?
 
@@ -36,7 +36,7 @@ Stop early the construction of the tree at `n\_clusters`. This is useful to decr
 
 `'auto'`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L573)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L573)
 
 ### connectivity?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:573](https://github.com/
 
 Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L566)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L566)
 
 ### distance\_threshold?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:566](https://github.com/
 
 The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L590)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L590)
 
 ### linkage?
 
@@ -64,7 +64,7 @@ Which linkage criterion to use. The linkage criterion determines which distance 
 
 `'ward'`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L580)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L580)
 
 ### memory?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:580](https://github.com/
 
 Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L561)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L561)
 
 ### metric?
 
@@ -80,7 +80,7 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:561](https://github.com/
 
 Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L556)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L556)
 
 ### n\_clusters?
 
@@ -92,7 +92,7 @@ The number of clusters to find. It must be `undefined` if `distance\_threshold` 
 
 `2`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L544)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L544)
 
 ### pooling\_func?
 
@@ -100,4 +100,4 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:544](https://github.com/
 
 This combines the values of agglomerated features into a single value, and should accept an array of shape \[M, N\] and the keyword argument `axis=1`, and reduce it to an array of size \[M\].
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L585)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L585)

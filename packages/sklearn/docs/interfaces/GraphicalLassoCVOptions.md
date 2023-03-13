@@ -12,7 +12,7 @@ If an integer is given, it fixes the number of points on the grids of alpha to b
 
 `4`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L495)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L495)
 
 ### assume\_centered?
 
@@ -24,7 +24,7 @@ If `true`, data are not centered before computation. Useful when working with da
 
 `false`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L554)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L554)
 
 ### cv?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/covariance/GraphicalLassoCV.ts:554](https://github.com/t
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L507)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L507)
 
 ### enet\_tol?
 
@@ -44,7 +44,7 @@ The tolerance for the elastic net solver used to calculate the descent direction
 
 `0.0001`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L521)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L521)
 
 ### max\_iter?
 
@@ -56,7 +56,7 @@ Maximum number of iterations.
 
 `100`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L528)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L528)
 
 ### mode?
 
@@ -68,7 +68,7 @@ The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse un
 
 `'cd'`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L535)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L535)
 
 ### n\_jobs?
 
@@ -76,7 +76,7 @@ Defined in:  [generated/covariance/GraphicalLassoCV.ts:535](https://github.com/t
 
 Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L540)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L540)
 
 ### n\_refinements?
 
@@ -88,7 +88,7 @@ The number of times the grid is refined. Not used if explicit values of alphas a
 
 `4`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L502)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L502)
 
 ### tol?
 
@@ -100,7 +100,7 @@ The tolerance to declare convergence: if the dual gap goes below this value, ite
 
 `0.0001`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L514)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L514)
 
 ### verbose?
 
@@ -112,4 +112,4 @@ If verbose is `true`, the objective function and duality gap are printed at each
 
 `false`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L547)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L547)

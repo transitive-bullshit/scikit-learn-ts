@@ -8,4 +8,4 @@
 
 Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit").
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L516)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L516)

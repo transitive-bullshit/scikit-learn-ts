@@ -12,7 +12,7 @@ Learn the inverse transform by computing the pseudo-inverse of the components du
 
 `false`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L482)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L482)
 
 ### eps?
 
@@ -26,7 +26,7 @@ Smaller values lead to better embedding and higher number of dimensions (n\_comp
 
 `0.1`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L475)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L475)
 
 ### n\_components?
 
@@ -42,7 +42,7 @@ It should be noted that Johnson-Lindenstrauss lemma can yield very conservative 
 
 `'auto'`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L466)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L466)
 
 ### random\_state?
 
@@ -50,4 +50,4 @@ Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:466](http
 
 Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L487)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L487)

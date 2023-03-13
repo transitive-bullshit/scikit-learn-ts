@@ -12,7 +12,7 @@ Number of folds. Must be at least 2.
 
 `5`
 
-Defined in:  [generated/model\_selection/KFold.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/KFold.ts#L167)
+Defined in:  [generated/model\_selection/KFold.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L167)
 
 ### random\_state?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/model\_selection/KFold.ts:167](https://github.com/transi
 
 When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/model\_selection/KFold.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/KFold.ts#L179)
+Defined in:  [generated/model\_selection/KFold.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L179)
 
 ### shuffle?
 
@@ -32,4 +32,4 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 `false`
 
-Defined in:  [generated/model\_selection/KFold.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/KFold.ts#L174)
+Defined in:  [generated/model\_selection/KFold.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L174)

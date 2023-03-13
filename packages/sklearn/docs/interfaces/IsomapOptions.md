@@ -16,7 +16,7 @@
 
 `'auto'`
 
-Defined in:  [generated/manifold/Isomap.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L454)
+Defined in:  [generated/manifold/Isomap.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L454)
 
 ### max\_iter?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/manifold/Isomap.ts:454](https://github.com/transitive-bu
 
 Maximum number of iterations for the arpack solver. not used if eigen\_solver == ‘dense’.
 
-Defined in:  [generated/manifold/Isomap.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L466)
+Defined in:  [generated/manifold/Isomap.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L466)
 
 ### metric?
 
@@ -36,7 +36,7 @@ The metric to use when calculating distance between instances in a feature array
 
 `'minkowski'`
 
-Defined in:  [generated/manifold/Isomap.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L498)
+Defined in:  [generated/manifold/Isomap.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L498)
 
 ### metric\_params?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/manifold/Isomap.ts:498](https://github.com/transitive-bu
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/manifold/Isomap.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L510)
+Defined in:  [generated/manifold/Isomap.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L510)
 
 ### n\_components?
 
@@ -56,7 +56,7 @@ Number of coordinates for the manifold.
 
 `2`
 
-Defined in:  [generated/manifold/Isomap.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L443)
+Defined in:  [generated/manifold/Isomap.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L443)
 
 ### n\_jobs?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/manifold/Isomap.ts:443](https://github.com/transitive-bu
 
 The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/manifold/Isomap.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L491)
+Defined in:  [generated/manifold/Isomap.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L491)
 
 ### n\_neighbors?
 
@@ -76,7 +76,7 @@ Number of neighbors to consider for each point. If `n\_neighbors` is an int, the
 
 `5`
 
-Defined in:  [generated/manifold/Isomap.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L431)
+Defined in:  [generated/manifold/Isomap.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L431)
 
 ### neighbors\_algorithm?
 
@@ -88,7 +88,7 @@ Algorithm to use for nearest neighbors search, passed to neighbors.NearestNeighb
 
 `'auto'`
 
-Defined in:  [generated/manifold/Isomap.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L486)
+Defined in:  [generated/manifold/Isomap.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L486)
 
 ### p?
 
@@ -100,7 +100,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 `2`
 
-Defined in:  [generated/manifold/Isomap.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L505)
+Defined in:  [generated/manifold/Isomap.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L505)
 
 ### path\_method?
 
@@ -118,7 +118,7 @@ Method to use in finding shortest path.
 
 `'auto'`
 
-Defined in:  [generated/manifold/Isomap.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L479)
+Defined in:  [generated/manifold/Isomap.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L479)
 
 ### radius?
 
@@ -126,7 +126,7 @@ Defined in:  [generated/manifold/Isomap.ts:479](https://github.com/transitive-bu
 
 Limiting distance of neighbors to return. If `radius` is a float, then `n\_neighbors` must be set to `undefined`.
 
-Defined in:  [generated/manifold/Isomap.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L436)
+Defined in:  [generated/manifold/Isomap.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L436)
 
 ### tol?
 
@@ -138,4 +138,4 @@ Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == �
 
 `0`
 
-Defined in:  [generated/manifold/Isomap.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/Isomap.ts#L461)
+Defined in:  [generated/manifold/Isomap.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/Isomap.ts#L461)

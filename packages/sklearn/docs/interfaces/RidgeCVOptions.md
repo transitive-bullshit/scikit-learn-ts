@@ -12,7 +12,7 @@ Flag indicating whether to optimize the alpha value (picked from the `alphas` pa
 
 `false`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L402)
+Defined in:  [generated/linear\_model/RidgeCV.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L402)
 
 ### alphas?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/linear\_model/RidgeCV.ts:402](https://github.com/transit
 
 Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If using Leave-One-Out cross-validation, alphas must be positive.
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L364)
+Defined in:  [generated/linear\_model/RidgeCV.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L364)
 
 ### cv?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/linear\_model/RidgeCV.ts:364](https://github.com/transit
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L381)
+Defined in:  [generated/linear\_model/RidgeCV.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L381)
 
 ### fit\_intercept?
 
@@ -40,7 +40,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L371)
+Defined in:  [generated/linear\_model/RidgeCV.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L371)
 
 ### gcv\_mode?
 
@@ -52,7 +52,7 @@ Flag indicating which strategy to use when performing Leave-One-Out Cross-Valida
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L388)
+Defined in:  [generated/linear\_model/RidgeCV.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L388)
 
 ### scoring?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/linear\_model/RidgeCV.ts:388](https://github.com/transit
 
 A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If `undefined`, the negative mean squared error if cv is ‘auto’ or `undefined` (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L376)
+Defined in:  [generated/linear\_model/RidgeCV.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L376)
 
 ### store\_cv\_values?
 
@@ -72,4 +72,4 @@ Flag indicating if the cross-validation values corresponding to each alpha shoul
 
 `false`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L395)
+Defined in:  [generated/linear\_model/RidgeCV.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L395)

@@ -8,7 +8,7 @@
 
 Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/model\_selection/LeavePOut.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L189)
+Defined in:  [generated/model\_selection/LeavePOut.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L189)
 
 ### groups?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/LeavePOut.ts:189](https://github.com/tr
 
 Group labels for the samples used while splitting the dataset into train/test set.
 
-Defined in:  [generated/model\_selection/LeavePOut.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L199)
+Defined in:  [generated/model\_selection/LeavePOut.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L199)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/model\_selection/LeavePOut.ts:199](https://github.com/tr
 
 The target variable for supervised learning problems.
 
-Defined in:  [generated/model\_selection/LeavePOut.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L194)
+Defined in:  [generated/model\_selection/LeavePOut.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePOut.ts#L194)

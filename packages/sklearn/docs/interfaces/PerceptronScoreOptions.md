@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L708)
+Defined in:  [generated/linear\_model/Perceptron.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L708)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/Perceptron.ts:708](https://github.com/tran
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L718)
+Defined in:  [generated/linear\_model/Perceptron.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L718)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/Perceptron.ts:718](https://github.com/tran
 
 True labels for `X`.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L713)
+Defined in:  [generated/linear\_model/Perceptron.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L713)

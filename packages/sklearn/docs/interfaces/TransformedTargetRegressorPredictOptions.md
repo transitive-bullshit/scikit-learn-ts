@@ -8,7 +8,7 @@
 
 Samples.
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L349)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L349)
 
 ### predict\_params?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/compose/TransformedTargetRegressor.ts:349](https://githu
 
 Parameters passed to the `predict` method of the underlying regressor.
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L354)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L354)

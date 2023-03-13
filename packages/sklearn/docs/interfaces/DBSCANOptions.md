@@ -12,7 +12,7 @@ The algorithm to be used by the NearestNeighbors module to compute pointwise dis
 
 `'auto'`
 
-Defined in:  [generated/cluster/DBSCAN.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L319)
+Defined in:  [generated/cluster/DBSCAN.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L319)
 
 ### eps?
 
@@ -24,7 +24,7 @@ The maximum distance between two samples for one to be considered as in the neig
 
 `0.5`
 
-Defined in:  [generated/cluster/DBSCAN.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L293)
+Defined in:  [generated/cluster/DBSCAN.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L293)
 
 ### leaf\_size?
 
@@ -36,7 +36,7 @@ Leaf size passed to BallTree or cKDTree. This can affect the speed of the constr
 
 `30`
 
-Defined in:  [generated/cluster/DBSCAN.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L326)
+Defined in:  [generated/cluster/DBSCAN.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L326)
 
 ### metric?
 
@@ -48,7 +48,7 @@ The metric to use when calculating distance between instances in a feature array
 
 `'euclidean'`
 
-Defined in:  [generated/cluster/DBSCAN.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L307)
+Defined in:  [generated/cluster/DBSCAN.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L307)
 
 ### metric\_params?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/cluster/DBSCAN.ts:307](https://github.com/transitive-bul
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/cluster/DBSCAN.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L312)
+Defined in:  [generated/cluster/DBSCAN.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L312)
 
 ### min\_samples?
 
@@ -68,7 +68,7 @@ The number of samples (or total weight) in a neighborhood for a point to be cons
 
 `5`
 
-Defined in:  [generated/cluster/DBSCAN.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L300)
+Defined in:  [generated/cluster/DBSCAN.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L300)
 
 ### n\_jobs?
 
@@ -76,7 +76,7 @@ Defined in:  [generated/cluster/DBSCAN.ts:300](https://github.com/transitive-bul
 
 The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/cluster/DBSCAN.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L336)
+Defined in:  [generated/cluster/DBSCAN.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L336)
 
 ### p?
 
@@ -84,4 +84,4 @@ Defined in:  [generated/cluster/DBSCAN.ts:336](https://github.com/transitive-bul
 
 The power of the Minkowski metric to be used to calculate distance between points. If `undefined`, then `p=2` (equivalent to the Euclidean distance).
 
-Defined in:  [generated/cluster/DBSCAN.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/DBSCAN.ts#L331)
+Defined in:  [generated/cluster/DBSCAN.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L331)

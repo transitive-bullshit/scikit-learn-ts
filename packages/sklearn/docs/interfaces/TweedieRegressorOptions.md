@@ -12,7 +12,7 @@ Constant that multiplies the L2 penalty term and determines the regularization s
 
 `1`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L358)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L358)
 
 ### fit\_intercept?
 
@@ -24,7 +24,7 @@ Specifies if a constant (a.k.a. bias or intercept) should be added to the linear
 
 `true`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L365)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L365)
 
 ### link?
 
@@ -36,7 +36,7 @@ The link function of the GLM, i.e. mapping from linear predictor `X @ coeff + in
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L372)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L372)
 
 ### max\_iter?
 
@@ -48,7 +48,7 @@ The maximal number of iterations for the solver. Values must be in the range `\[
 
 `100`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L386)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L386)
 
 ### power?
 
@@ -60,7 +60,7 @@ The power determines the underlying target distribution according to the followi
 
 `0`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L351)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L351)
 
 ### solver?
 
@@ -72,7 +72,7 @@ Algorithm to use in the optimization problem:
 
 `'lbfgs'`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L379)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L379)
 
 ### tol?
 
@@ -84,7 +84,7 @@ Stopping criterion. For the lbfgs solver, the iteration will stop when `max{|g\_
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L393)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L393)
 
 ### verbose?
 
@@ -96,7 +96,7 @@ For the lbfgs solver set verbose to any positive number for verbosity. Values mu
 
 `0`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L407)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L407)
 
 ### warm\_start?
 
@@ -108,4 +108,4 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 `false`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L400)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L400)

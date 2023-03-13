@@ -8,7 +8,7 @@
 
 The covariance to compare with.
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L456)
+Defined in:  [generated/covariance/GraphicalLasso.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L456)
 
 ### norm?
 
@@ -20,7 +20,7 @@ The type of norm used to compute the error. Available error types: - ‘frobeniu
 
 `'frobenius'`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L463)
+Defined in:  [generated/covariance/GraphicalLasso.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L463)
 
 ### scaling?
 
@@ -32,7 +32,7 @@ If `true` (default), the squared error norm is divided by n\_features. If `false
 
 `true`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L470)
+Defined in:  [generated/covariance/GraphicalLasso.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L470)
 
 ### squared?
 
@@ -44,4 +44,4 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 `true`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L477)
+Defined in:  [generated/covariance/GraphicalLasso.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L477)

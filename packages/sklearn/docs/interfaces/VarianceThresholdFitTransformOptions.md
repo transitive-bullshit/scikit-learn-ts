@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L438)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L438)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_selection/VarianceThreshold.ts:438](https://git
 
 Additional fit parameters.
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L448)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L448)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_selection/VarianceThreshold.ts:448](https://git
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L443)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L443)

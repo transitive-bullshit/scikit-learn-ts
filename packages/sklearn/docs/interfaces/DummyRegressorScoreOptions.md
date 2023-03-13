@@ -8,7 +8,7 @@
 
 Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since `DummyRegressor` operates independently of the sampled observations.
 
-Defined in:  [generated/dummy/DummyRegressor.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L300)
+Defined in:  [generated/dummy/DummyRegressor.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L300)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/dummy/DummyRegressor.ts:300](https://github.com/transiti
 
 Sample weights.
 
-Defined in:  [generated/dummy/DummyRegressor.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L310)
+Defined in:  [generated/dummy/DummyRegressor.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L310)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/dummy/DummyRegressor.ts:310](https://github.com/transiti
 
 True values for X.
 
-Defined in:  [generated/dummy/DummyRegressor.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L305)
+Defined in:  [generated/dummy/DummyRegressor.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L305)

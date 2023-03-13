@@ -8,7 +8,7 @@
 
 Training instances to cluster.
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L570)
+Defined in:  [generated/cluster/BisectingKMeans.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L570)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cluster/BisectingKMeans.ts:570](https://github.com/trans
 
 The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L580)
+Defined in:  [generated/cluster/BisectingKMeans.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L580)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/cluster/BisectingKMeans.ts:580](https://github.com/trans
 
 Not used, present here for API consistency by convention.
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L575)
+Defined in:  [generated/cluster/BisectingKMeans.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L575)

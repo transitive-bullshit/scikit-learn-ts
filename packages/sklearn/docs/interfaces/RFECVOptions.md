@@ -8,7 +8,7 @@
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/feature\_selection/RFECV.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L641)
+Defined in:  [generated/feature\_selection/RFECV.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L641)
 
 ### estimator?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_selection/RFECV.ts:641](https://github.com/tran
 
 A supervised learning estimator with a `fit` method that provides information about feature importance either through a `coef\_` attribute or through a `feature\_importances\_` attribute.
 
-Defined in:  [generated/feature\_selection/RFECV.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L622)
+Defined in:  [generated/feature\_selection/RFECV.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L622)
 
 ### importance\_getter?
 
@@ -32,7 +32,7 @@ If `callable`, overrides the default feature importance getter. The callable is 
 
 `'auto'`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L669)
+Defined in:  [generated/feature\_selection/RFECV.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L669)
 
 ### min\_features\_to\_select?
 
@@ -44,7 +44,7 @@ The minimum number of features to be selected. This number of features will alwa
 
 `1`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L636)
+Defined in:  [generated/feature\_selection/RFECV.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L636)
 
 ### n\_jobs?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/feature\_selection/RFECV.ts:636](https://github.com/tran
 
 Number of cores to run in parallel while fitting across folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/feature\_selection/RFECV.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L658)
+Defined in:  [generated/feature\_selection/RFECV.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L658)
 
 ### scoring?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/feature\_selection/RFECV.ts:658](https://github.com/tran
 
 A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
 
-Defined in:  [generated/feature\_selection/RFECV.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L646)
+Defined in:  [generated/feature\_selection/RFECV.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L646)
 
 ### step?
 
@@ -72,7 +72,7 @@ If greater than or equal to 1, then `step` corresponds to the (integer) number o
 
 `1`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L629)
+Defined in:  [generated/feature\_selection/RFECV.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L629)
 
 ### verbose?
 
@@ -84,4 +84,4 @@ Controls verbosity of output.
 
 `0`
 
-Defined in:  [generated/feature\_selection/RFECV.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFECV.ts#L653)
+Defined in:  [generated/feature\_selection/RFECV.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFECV.ts#L653)

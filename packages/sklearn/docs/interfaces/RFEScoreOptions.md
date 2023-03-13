@@ -8,7 +8,7 @@
 
 The input samples.
 
-Defined in:  [generated/feature\_selection/RFE.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L715)
+Defined in:  [generated/feature\_selection/RFE.ts:715](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFE.ts#L715)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_selection/RFE.ts:715](https://github.com/transi
 
 Parameters to pass to the `score` method of the underlying estimator.
 
-Defined in:  [generated/feature\_selection/RFE.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L725)
+Defined in:  [generated/feature\_selection/RFE.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFE.ts#L725)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_selection/RFE.ts:725](https://github.com/transi
 
 The target values.
 
-Defined in:  [generated/feature\_selection/RFE.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L720)
+Defined in:  [generated/feature\_selection/RFE.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFE.ts#L720)

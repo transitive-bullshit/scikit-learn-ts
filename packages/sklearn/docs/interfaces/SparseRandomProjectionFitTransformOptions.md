@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L555)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L555)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/random\_projection/SparseRandomProjection.ts:555](https:
 
 Additional fit parameters.
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L565)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L565)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/random\_projection/SparseRandomProjection.ts:565](https:
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/random\_projection/SparseRandomProjection.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L560)
+Defined in:  [generated/random\_projection/SparseRandomProjection.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/SparseRandomProjection.ts#L560)

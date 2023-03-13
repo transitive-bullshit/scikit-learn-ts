@@ -12,7 +12,7 @@ Regularization constant that multiplies the L1 penalty term.
 
 `1`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L354)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L354)
 
 ### fit\_intercept?
 
@@ -24,7 +24,7 @@ Whether or not to fit the intercept.
 
 `true`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L361)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L361)
 
 ### quantile?
 
@@ -36,7 +36,7 @@ The quantile that the model tries to predict. It must be strictly between 0 and 
 
 `0.5`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L347)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L347)
 
 ### solver?
 
@@ -52,7 +52,7 @@ From `scipy>=1.11.0`, “interior-point” is not available anymore.
 
 `'interior-point'`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L372)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L372)
 
 ### solver\_options?
 
@@ -60,4 +60,4 @@ Defined in:  [generated/linear\_model/QuantileRegressor.ts:372](https://github.c
 
 Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") as options. If `undefined` and if `solver='interior-point'`, then `{"lstsq": `true`}` is passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") for the sake of stability.
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L382)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L382)

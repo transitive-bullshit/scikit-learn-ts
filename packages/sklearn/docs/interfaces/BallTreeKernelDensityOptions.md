@@ -8,7 +8,7 @@
 
 An array of points to query. Last dimension should match dimension of training data.
 
-Defined in:  [generated/neighbors/BallTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L390)
+Defined in:  [generated/neighbors/BallTree.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L390)
 
 ### atol?
 
@@ -20,7 +20,7 @@ Specify the desired absolute tolerance of the result. If the true result is `K\_
 
 `0`
 
-Defined in:  [generated/neighbors/BallTree.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L409)
+Defined in:  [generated/neighbors/BallTree.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L409)
 
 ### breadth\_first?
 
@@ -32,7 +32,7 @@ If `true`, use a breadth-first search. If `false` (default) use a depth-first se
 
 `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L423)
+Defined in:  [generated/neighbors/BallTree.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L423)
 
 ### h?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/neighbors/BallTree.ts:423](https://github.com/transitive
 
 the bandwidth of the kernel
 
-Defined in:  [generated/neighbors/BallTree.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L395)
+Defined in:  [generated/neighbors/BallTree.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L395)
 
 ### kernel?
 
@@ -52,7 +52,7 @@ specify the kernel to use. Options are - ‘gaussian’ - ‘tophat’ - ‘epan
 
 `'gaussian'`
 
-Defined in:  [generated/neighbors/BallTree.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L402)
+Defined in:  [generated/neighbors/BallTree.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L402)
 
 ### return\_log?
 
@@ -64,7 +64,7 @@ Return the logarithm of the result. This can be more accurate than returning the
 
 `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L430)
+Defined in:  [generated/neighbors/BallTree.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L430)
 
 ### rtol?
 
@@ -76,4 +76,4 @@ Specify the desired relative tolerance of the result. If the true result is `K\_
 
 `1e-8`
 
-Defined in:  [generated/neighbors/BallTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L416)
+Defined in:  [generated/neighbors/BallTree.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L416)

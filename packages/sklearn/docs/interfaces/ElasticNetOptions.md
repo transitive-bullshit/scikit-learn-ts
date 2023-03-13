@@ -12,7 +12,7 @@ Constant that multiplies the penalty terms. Defaults to 1.0. See the notes for t
 
 `1`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L400)
+Defined in:  [generated/linear\_model/ElasticNet.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L400)
 
 ### copy\_X?
 
@@ -24,7 +24,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L435)
+Defined in:  [generated/linear\_model/ElasticNet.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L435)
 
 ### fit\_intercept?
 
@@ -36,7 +36,7 @@ Whether the intercept should be estimated or not. If `false`, the data is assume
 
 `true`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L414)
+Defined in:  [generated/linear\_model/ElasticNet.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L414)
 
 ### l1\_ratio?
 
@@ -48,7 +48,7 @@ The ElasticNet mixing parameter, with `0 <= l1\_ratio <= 1`. For `l1\_ratio \= 0
 
 `0.5`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L407)
+Defined in:  [generated/linear\_model/ElasticNet.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L407)
 
 ### max\_iter?
 
@@ -60,7 +60,7 @@ The maximum number of iterations.
 
 `1000`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L428)
+Defined in:  [generated/linear\_model/ElasticNet.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L428)
 
 ### positive?
 
@@ -72,7 +72,7 @@ When set to `true`, forces the coefficients to be positive.
 
 `false`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L456)
+Defined in:  [generated/linear\_model/ElasticNet.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L456)
 
 ### precompute?
 
@@ -84,7 +84,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. The Gram matr
 
 `false`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L421)
+Defined in:  [generated/linear\_model/ElasticNet.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L421)
 
 ### random\_state?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:421](https://github.com/tran
 
 The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L461)
+Defined in:  [generated/linear\_model/ElasticNet.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L461)
 
 ### selection?
 
@@ -104,7 +104,7 @@ If set to ‘random’, a random coefficient is updated every iteration rather t
 
 `'cyclic'`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L468)
+Defined in:  [generated/linear\_model/ElasticNet.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L468)
 
 ### tol?
 
@@ -116,7 +116,7 @@ The tolerance for the optimization: if the updates are smaller than `tol`, the o
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L442)
+Defined in:  [generated/linear\_model/ElasticNet.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L442)
 
 ### warm\_start?
 
@@ -128,4 +128,4 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 `false`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L449)
+Defined in:  [generated/linear\_model/ElasticNet.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L449)

@@ -12,7 +12,7 @@ Features with p-values less than `alpha` are selected.
 
 `0.05`
 
-Defined in:  [generated/feature\_selection/SelectFpr.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L417)
+Defined in:  [generated/feature\_selection/SelectFpr.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L417)
 
 ### score\_func?
 
@@ -20,4 +20,4 @@ Defined in:  [generated/feature\_selection/SelectFpr.ts:417](https://github.com/
 
 Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
 
-Defined in:  [generated/feature\_selection/SelectFpr.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L410)
+Defined in:  [generated/feature\_selection/SelectFpr.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L410)

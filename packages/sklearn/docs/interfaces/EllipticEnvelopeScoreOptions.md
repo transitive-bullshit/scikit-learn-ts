@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:901](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L901)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:901](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L901)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/covariance/EllipticEnvelope.ts:901](https://github.com/t
 
 Sample weights.
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:911](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L911)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:911](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L911)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/covariance/EllipticEnvelope.ts:911](https://github.com/t
 
 True labels for X.
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L906)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L906)

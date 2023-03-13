@@ -8,7 +8,7 @@
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/decomposition/SparseCoder.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L348)
+Defined in:  [generated/decomposition/SparseCoder.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L348)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/decomposition/SparseCoder.ts:348](https://github.com/tra
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/decomposition/SparseCoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L353)
+Defined in:  [generated/decomposition/SparseCoder.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparseCoder.ts#L353)

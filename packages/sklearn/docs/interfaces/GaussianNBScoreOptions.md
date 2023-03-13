@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L607)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L607)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/naive\_bayes/GaussianNB.ts:607](https://github.com/trans
 
 Sample weights.
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L617)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L617)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/naive\_bayes/GaussianNB.ts:617](https://github.com/trans
 
 True labels for `X`.
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L612)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L612)

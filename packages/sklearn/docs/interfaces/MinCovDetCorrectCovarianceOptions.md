@@ -8,4 +8,4 @@
 
 The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
 
-Defined in:  [generated/covariance/MinCovDet.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L583)
+Defined in:  [generated/covariance/MinCovDet.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L583)

@@ -8,7 +8,7 @@
 
 Data from which to compute the covariance estimate.
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L484)
+Defined in:  [generated/covariance/GraphicalLasso.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L484)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/covariance/GraphicalLasso.ts:484](https://github.com/tra
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L489)
+Defined in:  [generated/covariance/GraphicalLasso.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L489)

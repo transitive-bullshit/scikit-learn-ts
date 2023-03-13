@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/Ridge.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L380)
+Defined in:  [generated/linear\_model/Ridge.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L380)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/Ridge.ts:380](https://github.com/transitiv
 
 Individual weights for each sample. If given a float, every sample will have the same weight.
 
-Defined in:  [generated/linear\_model/Ridge.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L390)
+Defined in:  [generated/linear\_model/Ridge.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L390)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/Ridge.ts:390](https://github.com/transitiv
 
 Target values.
 
-Defined in:  [generated/linear\_model/Ridge.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L385)
+Defined in:  [generated/linear\_model/Ridge.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L385)

@@ -28,7 +28,7 @@ new MinCovDet(opts?: MinCovDetOptions): MinCovDet;
 
 [`MinCovDet`](MinCovDet.md)
 
-Defined in:  [generated/covariance/MinCovDet.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L25)
+Defined in:  [generated/covariance/MinCovDet.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/covariance/MinCovDet.ts:25](https://github.com/transitiv
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/MinCovDet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L23)
+Defined in:  [generated/covariance/MinCovDet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/MinCovDet.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L22)
+Defined in:  [generated/covariance/MinCovDet.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/MinCovDet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L21)
+Defined in:  [generated/covariance/MinCovDet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/MinCovDet.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L18)
+Defined in:  [generated/covariance/MinCovDet.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/MinCovDet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L19)
+Defined in:  [generated/covariance/MinCovDet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/MinCovDet.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L413)
+Defined in: [generated/covariance/MinCovDet.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L413)
 
 ### dist\_
 
@@ -94,7 +94,7 @@ dist_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L482)
+Defined in: [generated/covariance/MinCovDet.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L482)
 
 ### feature\_names\_in\_
 
@@ -110,7 +110,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L530)
+Defined in: [generated/covariance/MinCovDet.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L530)
 
 ### location\_
 
@@ -126,7 +126,7 @@ location_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L390)
+Defined in: [generated/covariance/MinCovDet.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L390)
 
 ### n\_features\_in\_
 
@@ -142,7 +142,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L505)
+Defined in: [generated/covariance/MinCovDet.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L505)
 
 ### precision\_
 
@@ -158,7 +158,7 @@ precision_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/MinCovDet.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L436)
+Defined in: [generated/covariance/MinCovDet.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L436)
 
 ### py
 
@@ -172,7 +172,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/MinCovDet.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L30)
+Defined in:  [generated/covariance/MinCovDet.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L30)
 
 #### Signature
 
@@ -190,7 +190,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/covariance/MinCovDet.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L34)
+Defined in: [generated/covariance/MinCovDet.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L34)
 
 ### raw\_covariance\_
 
@@ -206,7 +206,7 @@ raw_covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/MinCovDet.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L340)
+Defined in: [generated/covariance/MinCovDet.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L340)
 
 ### raw\_location\_
 
@@ -222,7 +222,7 @@ raw_location_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L315)
+Defined in: [generated/covariance/MinCovDet.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L315)
 
 ### raw\_support\_
 
@@ -238,7 +238,7 @@ raw_support_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L365)
+Defined in: [generated/covariance/MinCovDet.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L365)
 
 ### support\_
 
@@ -254,7 +254,7 @@ support_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L459)
+Defined in: [generated/covariance/MinCovDet.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L459)
 
 ## Methods
 
@@ -280,7 +280,7 @@ correct_covariance(opts: MinCovDetCorrectCovarianceOptions): Promise<ArrayLike[]
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L105)
+Defined in:  [generated/covariance/MinCovDet.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L105)
 
 ### dispose()
 
@@ -298,7 +298,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L86)
+Defined in:  [generated/covariance/MinCovDet.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L86)
 
 ### error\_norm()
 
@@ -320,7 +320,7 @@ error_norm(opts: MinCovDetErrorNormOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L135)
+Defined in:  [generated/covariance/MinCovDet.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L135)
 
 ### fit()
 
@@ -342,7 +342,7 @@ fit(opts: MinCovDetFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L167)
+Defined in:  [generated/covariance/MinCovDet.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L167)
 
 ### get\_precision()
 
@@ -364,7 +364,7 @@ get_precision(opts: MinCovDetGetPrecisionOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L195)
+Defined in:  [generated/covariance/MinCovDet.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L195)
 
 ### init()
 
@@ -388,7 +388,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L43)
+Defined in:  [generated/covariance/MinCovDet.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L43)
 
 ### mahalanobis()
 
@@ -410,7 +410,7 @@ mahalanobis(opts: MinCovDetMahalanobisOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L223)
+Defined in:  [generated/covariance/MinCovDet.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L223)
 
 ### reweight\_covariance()
 
@@ -434,7 +434,7 @@ reweight_covariance(opts: MinCovDetReweightCovarianceOptions): Promise<ArrayLike
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L253)
+Defined in:  [generated/covariance/MinCovDet.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L253)
 
 ### score()
 
@@ -458,4 +458,4 @@ score(opts: MinCovDetScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L285)
+Defined in:  [generated/covariance/MinCovDet.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L285)

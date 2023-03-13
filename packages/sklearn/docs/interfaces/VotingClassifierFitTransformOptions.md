@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L567)
+Defined in:  [generated/ensemble/VotingClassifier.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L567)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/VotingClassifier.ts:567](https://github.com/tra
 
 Additional fit parameters.
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L577)
+Defined in:  [generated/ensemble/VotingClassifier.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L577)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/VotingClassifier.ts:577](https://github.com/tra
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L572)
+Defined in:  [generated/ensemble/VotingClassifier.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L572)

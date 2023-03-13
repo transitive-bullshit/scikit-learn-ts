@@ -12,7 +12,7 @@ Activation function for the hidden layer.
 
 `'relu'`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L690)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L690)
 
 ### alpha?
 
@@ -24,7 +24,7 @@ Strength of the L2 regularization term. The L2 regularization term is divided by
 
 `0.0001`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L704)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L704)
 
 ### batch\_size?
 
@@ -36,7 +36,7 @@ Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the
 
 `'auto'`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L711)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L711)
 
 ### beta\_1?
 
@@ -48,7 +48,7 @@ Exponential decay rate for estimates of first moment vector in adam, should be i
 
 `0.9`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L807)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L807)
 
 ### beta\_2?
 
@@ -60,7 +60,7 @@ Exponential decay rate for estimates of second moment vector in adam, should be 
 
 `0.999`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L814)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L814)
 
 ### early\_stopping?
 
@@ -72,7 +72,7 @@ Whether to use early stopping to terminate training when validation score is not
 
 `false`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L793)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:793](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L793)
 
 ### epsilon?
 
@@ -84,7 +84,7 @@ Value for numerical stability in adam. Only used when solver=’adam’.
 
 `1e-8`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L821)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L821)
 
 ### hidden\_layer\_sizes?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/neural\_network/MLPClassifier.ts:821](https://github.com
 
 The ith element represents the number of neurons in the ith hidden layer.
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L683)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L683)
 
 ### learning\_rate?
 
@@ -104,7 +104,7 @@ Learning rate schedule for weight updates.
 
 `'constant'`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L718)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L718)
 
 ### learning\_rate\_init?
 
@@ -116,7 +116,7 @@ The initial learning rate used. It controls the step-size in updating the weight
 
 `0.001`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L725)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L725)
 
 ### max\_fun?
 
@@ -128,7 +128,7 @@ Only used when solver=’lbfgs’. Maximum number of loss function calls. The so
 
 `15000`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L835)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L835)
 
 ### max\_iter?
 
@@ -140,7 +140,7 @@ Maximum number of iterations. The solver iterates until convergence (determined 
 
 `200`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L739)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L739)
 
 ### momentum?
 
@@ -152,7 +152,7 @@ Momentum for gradient descent update. Should be between 0 and 1. Only used when 
 
 `0.9`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:779](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L779)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:779](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L779)
 
 ### n\_iter\_no\_change?
 
@@ -164,7 +164,7 @@ Maximum number of epochs to not meet `tol` improvement. Only effective when solv
 
 `10`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:828](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L828)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:828](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L828)
 
 ### nesterovs\_momentum?
 
@@ -176,7 +176,7 @@ Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and moment
 
 `true`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L786)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L786)
 
 ### power\_t?
 
@@ -188,7 +188,7 @@ The exponent for inverse scaling learning rate. It is used in updating effective
 
 `0.5`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L732)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L732)
 
 ### random\_state?
 
@@ -196,7 +196,7 @@ Defined in:  [generated/neural\_network/MLPClassifier.ts:732](https://github.com
 
 Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L751)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L751)
 
 ### shuffle?
 
@@ -208,7 +208,7 @@ Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or
 
 `true`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:746](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L746)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:746](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L746)
 
 ### solver?
 
@@ -220,7 +220,7 @@ The solver for weight optimization.
 
 `'adam'`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L697)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L697)
 
 ### tol?
 
@@ -232,7 +232,7 @@ Tolerance for the optimization. When the loss or score is not improving by at le
 
 `0.0001`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:758](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L758)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:758](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L758)
 
 ### validation\_fraction?
 
@@ -244,7 +244,7 @@ The proportion of training data to set aside as validation set for early stoppin
 
 `0.1`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:800](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L800)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:800](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L800)
 
 ### verbose?
 
@@ -256,7 +256,7 @@ Whether to print progress messages to stdout.
 
 `false`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:765](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L765)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:765](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L765)
 
 ### warm\_start?
 
@@ -268,4 +268,4 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 `false`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:772](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L772)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:772](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L772)

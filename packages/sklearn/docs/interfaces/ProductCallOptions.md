@@ -8,7 +8,7 @@
 
 Left argument of the returned kernel k(X, Y)
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L225)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L225)
 
 ### Y?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/gaussian\_process/kernels/Product.ts:225](https://github
 
 Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L230)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L230)
 
 ### eval\_gradient?
 
@@ -28,4 +28,4 @@ Determines whether the gradient with respect to the log of the kernel hyperparam
 
 `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Product.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L237)
+Defined in:  [generated/gaussian\_process/kernels/Product.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Product.ts#L237)

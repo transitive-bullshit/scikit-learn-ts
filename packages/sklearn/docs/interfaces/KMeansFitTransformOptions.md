@@ -8,7 +8,7 @@
 
 New data to transform.
 
-Defined in:  [generated/cluster/KMeans.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L612)
+Defined in:  [generated/cluster/KMeans.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L612)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cluster/KMeans.ts:612](https://github.com/transitive-bul
 
 The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
 
-Defined in:  [generated/cluster/KMeans.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L622)
+Defined in:  [generated/cluster/KMeans.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L622)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/cluster/KMeans.ts:622](https://github.com/transitive-bul
 
 Not used, present here for API consistency by convention.
 
-Defined in:  [generated/cluster/KMeans.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L617)
+Defined in:  [generated/cluster/KMeans.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L617)

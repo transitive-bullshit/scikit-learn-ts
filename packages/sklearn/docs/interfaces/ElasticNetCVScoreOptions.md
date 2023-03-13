@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L724)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L724)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/ElasticNetCV.ts:724](https://github.com/tr
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L734)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:734](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L734)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/ElasticNetCV.ts:734](https://github.com/tr
 
 True values for `X`.
 
-Defined in:  [generated/linear\_model/ElasticNetCV.ts:729](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L729)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:729](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L729)

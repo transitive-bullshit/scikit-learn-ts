@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/decomposition/SparsePCA.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L552)
+Defined in:  [generated/decomposition/SparsePCA.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L552)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/SparsePCA.ts:552](https://github.com/trans
 
 Additional fit parameters.
 
-Defined in:  [generated/decomposition/SparsePCA.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L562)
+Defined in:  [generated/decomposition/SparsePCA.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L562)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/SparsePCA.ts:562](https://github.com/trans
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/decomposition/SparsePCA.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L557)
+Defined in:  [generated/decomposition/SparsePCA.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L557)

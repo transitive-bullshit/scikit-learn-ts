@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L720)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:720](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L720)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:720](https:
 
 Additional fit parameters.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L730)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L730)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:730](https:
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L725)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L725)

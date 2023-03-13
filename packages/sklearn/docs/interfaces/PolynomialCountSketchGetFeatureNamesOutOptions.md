@@ -8,4 +8,4 @@
 
 Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.PolynomialCountSketch.fit "sklearn.kernel_approximation.PolynomialCountSketch.fit").
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L460)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L460)

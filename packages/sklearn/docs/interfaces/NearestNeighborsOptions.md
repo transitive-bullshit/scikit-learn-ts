@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L442)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L442)
 
 ### leaf\_size?
 
@@ -24,7 +24,7 @@ Leaf size passed to BallTree or KDTree. This can affect the speed of the constru
 
 `30`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L449)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L449)
 
 ### metric?
 
@@ -40,7 +40,7 @@ If metric is a callable function, it takes two arrays representing 1D vectors as
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L460)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L460)
 
 ### metric\_params?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/neighbors/NearestNeighbors.ts:460](https://github.com/tr
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L472)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L472)
 
 ### n\_jobs?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/neighbors/NearestNeighbors.ts:472](https://github.com/tr
 
 The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L477)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L477)
 
 ### n\_neighbors?
 
@@ -68,7 +68,7 @@ Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.Near
 
 `5`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L428)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L428)
 
 ### p?
 
@@ -80,7 +80,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 `2`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L467)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L467)
 
 ### radius?
 
@@ -92,4 +92,4 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 `1`
 
-Defined in:  [generated/neighbors/NearestNeighbors.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L435)
+Defined in:  [generated/neighbors/NearestNeighbors.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L435)

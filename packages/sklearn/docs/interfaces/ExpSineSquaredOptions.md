@@ -12,7 +12,7 @@ The length scale of the kernel.
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L249)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L249)
 
 ### length\_scale\_bounds?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:249](https:/
 
 The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L261)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L261)
 
 ### periodicity?
 
@@ -32,7 +32,7 @@ The periodicity of the kernel.
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L256)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L256)
 
 ### periodicity\_bounds?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:256](https:/
 
 The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘periodicity’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L266)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L266)

@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L589)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L589)
 
 ### contamination?
 
@@ -24,7 +24,7 @@ The amount of contamination of the data set, i.e. the proportion of outliers in 
 
 `'auto'`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L626)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L626)
 
 ### leaf\_size?
 
@@ -36,7 +36,7 @@ Leaf is size passed to [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neig
 
 `30`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L596)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L596)
 
 ### metric?
 
@@ -52,7 +52,7 @@ If metric is a callable function, it takes two arrays representing 1D vectors as
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L607)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L607)
 
 ### metric\_params?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/neighbors/LocalOutlierFactor.ts:607](https://github.com/
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
 
 ### n\_jobs?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/
 
 The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L638)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L638)
 
 ### n\_neighbors?
 
@@ -80,7 +80,7 @@ Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.Loca
 
 `20`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L582)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L582)
 
 ### novelty?
 
@@ -92,7 +92,7 @@ By default, LocalOutlierFactor is only meant to be used for outlier detection (n
 
 `false`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L633)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L633)
 
 ### p?
 
@@ -104,4 +104,4 @@ Parameter for the Minkowski metric from `sklearn.metrics.pairwise.pairwise\_dist
 
 `2`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L614)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L614)

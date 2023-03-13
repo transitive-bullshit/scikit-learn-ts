@@ -8,7 +8,7 @@
 
 Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L529)
+Defined in:  [generated/linear\_model/ARDRegression.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L529)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/linear\_model/ARDRegression.ts:529](https://github.com/t
 
 Target values (integers). Will be cast to X’s dtype if necessary.
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L534)
+Defined in:  [generated/linear\_model/ARDRegression.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L534)

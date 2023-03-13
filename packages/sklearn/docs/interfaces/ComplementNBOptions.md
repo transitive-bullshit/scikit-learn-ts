@@ -12,7 +12,7 @@ Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`t
 
 `1`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L541)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L541)
 
 ### class\_prior?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/naive\_bayes/ComplementNB.ts:541](https://github.com/tra
 
 Prior probabilities of the classes. Not used.
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L560)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L560)
 
 ### fit\_prior?
 
@@ -32,7 +32,7 @@ Only used in edge case with a single class in the training set.
 
 `true`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L555)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L555)
 
 ### force\_alpha?
 
@@ -44,7 +44,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 `false`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L548)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L548)
 
 ### norm?
 
@@ -56,4 +56,4 @@ Whether or not a second normalization of the weights is performed. The default b
 
 `false`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L567)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L567)

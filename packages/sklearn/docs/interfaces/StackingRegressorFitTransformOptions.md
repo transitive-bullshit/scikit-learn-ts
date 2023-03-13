@@ -8,7 +8,7 @@
 
 Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L535)
+Defined in:  [generated/ensemble/StackingRegressor.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L535)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/StackingRegressor.ts:535](https://github.com/tr
 
 Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L545)
+Defined in:  [generated/ensemble/StackingRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L545)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/StackingRegressor.ts:545](https://github.com/tr
 
 Target values.
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L540)
+Defined in:  [generated/ensemble/StackingRegressor.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L540)

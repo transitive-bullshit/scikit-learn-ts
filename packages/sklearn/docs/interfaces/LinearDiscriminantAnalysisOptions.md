@@ -10,7 +10,7 @@ If not `undefined`, `covariance\_estimator` is used to estimate the covariance m
 
 This should be left to `undefined` if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L816)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:816](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L816)
 
 ### n\_components?
 
@@ -18,7 +18,7 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:816
 
 Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If `undefined`, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L795)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L795)
 
 ### priors?
 
@@ -26,7 +26,7 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:795
 
 The class prior probabilities. By default, the class proportions are inferred from the training data.
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L790)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L790)
 
 ### shrinkage?
 
@@ -34,7 +34,7 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:790
 
 None: no shrinkage (default).
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L785)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L785)
 
 ### solver?
 
@@ -46,7 +46,7 @@ Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:785
 
 `'svd'`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L780)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L780)
 
 ### store\_covariance?
 
@@ -58,7 +58,7 @@ If `true`, explicitly compute the weighted within-class covariance matrix when s
 
 `false`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:802](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L802)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:802](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L802)
 
 ### tol?
 
@@ -70,4 +70,4 @@ Absolute threshold for a singular value of X to be considered significant, used 
 
 `0.0001`
 
-Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L809)
+Defined in:  [generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L809)

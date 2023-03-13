@@ -8,4 +8,4 @@
 
 Configure output of `transform` and `fit\_transform`.
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L697)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L697)

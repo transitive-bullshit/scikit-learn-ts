@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L711)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L711)
 
 ### coef\_init?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:711](https:
 
 The initial coefficients to warm-start the optimization.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L721)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L721)
 
 ### intercept\_init?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:721](https:
 
 The initial intercept to warm-start the optimization.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L726)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L726)
 
 ### y?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:726](https:
 
 Target values.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L716)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L716)

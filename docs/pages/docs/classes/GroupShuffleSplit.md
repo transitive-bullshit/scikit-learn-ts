@@ -36,7 +36,7 @@ new GroupShuffleSplit(opts?: GroupShuffleSplitOptions): GroupShuffleSplit;
 
 [`GroupShuffleSplit`](GroupShuffleSplit.md)
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L33)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L33)
 
 ## Properties
 
@@ -44,31 +44,31 @@ Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:33](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L31)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L31)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L30)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L30)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L29)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L29)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L26)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L26)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L27)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L27)
 
 ## Accessors
 
@@ -84,7 +84,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L38)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L38)
 
 #### Signature
 
@@ -102,7 +102,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/GroupShuffleSplit.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L42)
+Defined in: [generated/model\_selection/GroupShuffleSplit.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L42)
 
 ## Methods
 
@@ -122,7 +122,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L95)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L95)
 
 ### get\_n\_splits()
 
@@ -144,7 +144,7 @@ get_n_splits(opts: GroupShuffleSplitGetNSplitsOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L112)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L112)
 
 ### init()
 
@@ -168,7 +168,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L51)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L51)
 
 ### split()
 
@@ -190,4 +190,4 @@ split(opts: GroupShuffleSplitSplitOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L146)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L146)

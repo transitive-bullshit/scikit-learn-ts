@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L445)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L445)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/calibration/CalibratedClassifierCV.ts:445](https://githu
 
 Sample weights.
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L455)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L455)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/calibration/CalibratedClassifierCV.ts:455](https://githu
 
 True labels for `X`.
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L450)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L450)

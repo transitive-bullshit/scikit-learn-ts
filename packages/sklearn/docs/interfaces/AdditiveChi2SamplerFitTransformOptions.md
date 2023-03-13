@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L388)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L388)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:388](https:
 
 Additional fit parameters.
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L398)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L398)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:398](https:
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L393)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L393)

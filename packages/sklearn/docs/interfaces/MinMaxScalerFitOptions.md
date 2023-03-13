@@ -8,7 +8,7 @@
 
 The data used to compute the per-feature minimum and maximum used for later scaling along the features axis.
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L536)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L536)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/preprocessing/MinMaxScaler.ts:536](https://github.com/tr
 
 Ignored.
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L541)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L541)

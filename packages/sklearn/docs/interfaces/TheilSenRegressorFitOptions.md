@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L458)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L458)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/linear\_model/TheilSenRegressor.ts:458](https://github.c
 
 Target values.
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L463)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L463)

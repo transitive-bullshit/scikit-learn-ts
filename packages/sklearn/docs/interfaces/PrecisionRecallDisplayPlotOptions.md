@@ -8,7 +8,7 @@
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L434)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L434)
 
 ### kwargs?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:434](https://github.co
 
 Keyword arguments to be passed to matplotlib’s `plot`.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L444)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L444)
 
 ### name?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:444](https://github.co
 
 Name of precision recall curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
 
-Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L439)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L439)

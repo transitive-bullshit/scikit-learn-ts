@@ -28,7 +28,7 @@ new RidgeClassifier(opts?: RidgeClassifierOptions): RidgeClassifier;
 
 [`RidgeClassifier`](RidgeClassifier.md)
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L25)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/linear\_model/RidgeClassifier.ts:25](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L23)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L22)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L21)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L18)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L19)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L19)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ coef_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/linear\_model/RidgeClassifier.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L238)
+Defined in: [generated/linear\_model/RidgeClassifier.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L238)
 
 ### feature\_names\_in\_
 
@@ -96,7 +96,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeClassifier.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L336)
+Defined in: [generated/linear\_model/RidgeClassifier.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L336)
 
 ### intercept\_
 
@@ -112,7 +112,7 @@ intercept_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeClassifier.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L261)
+Defined in: [generated/linear\_model/RidgeClassifier.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L261)
 
 ### n\_features\_in\_
 
@@ -128,7 +128,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/RidgeClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L311)
+Defined in: [generated/linear\_model/RidgeClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L311)
 
 ### n\_iter\_
 
@@ -144,7 +144,7 @@ n_iter_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeClassifier.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L286)
+Defined in: [generated/linear\_model/RidgeClassifier.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L286)
 
 ### py
 
@@ -158,7 +158,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L30)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L30)
 
 #### Signature
 
@@ -176,7 +176,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/RidgeClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L34)
+Defined in: [generated/linear\_model/RidgeClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L34)
 
 ## Methods
 
@@ -202,7 +202,7 @@ decision_function(opts: RidgeClassifierDecisionFunctionOptions): Promise<ArrayLi
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L110)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L110)
 
 ### dispose()
 
@@ -220,7 +220,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L91)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L91)
 
 ### fit()
 
@@ -242,7 +242,7 @@ fit(opts: RidgeClassifierFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L142)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L142)
 
 ### init()
 
@@ -266,7 +266,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L43)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L43)
 
 ### predict()
 
@@ -288,7 +288,7 @@ predict(opts: RidgeClassifierPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L174)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L174)
 
 ### score()
 
@@ -312,4 +312,4 @@ score(opts: RidgeClassifierScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RidgeClassifier.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L204)
+Defined in:  [generated/linear\_model/RidgeClassifier.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifier.ts#L204)

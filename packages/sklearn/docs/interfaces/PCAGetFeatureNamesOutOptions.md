@@ -8,4 +8,4 @@
 
 Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.PCA.fit "sklearn.decomposition.PCA.fit").
 
-Defined in:  [generated/decomposition/PCA.ts:771](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L771)
+Defined in:  [generated/decomposition/PCA.ts:771](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/PCA.ts#L771)

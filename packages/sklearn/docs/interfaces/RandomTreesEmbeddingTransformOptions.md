@@ -8,4 +8,4 @@
 
 Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csr\_matrix` for maximum efficiency.
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L669)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L669)

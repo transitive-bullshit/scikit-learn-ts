@@ -28,7 +28,7 @@ new RadiusNeighborsTransformer(opts?: RadiusNeighborsTransformerOptions): Radius
 
 [`RadiusNeighborsTransformer`](RadiusNeighborsTransformer.md)
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L25)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:25](https://gith
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L23)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L22)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L21)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L18)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L19)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L369)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L369)
 
 ### effective\_metric\_params\_
 
@@ -94,7 +94,7 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L396)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L396)
 
 ### feature\_names\_in\_
 
@@ -110,7 +110,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L450)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L450)
 
 ### n\_features\_in\_
 
@@ -126,7 +126,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L423)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L423)
 
 ### n\_samples\_fit\_
 
@@ -142,7 +142,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L477)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L477)
 
 ### py
 
@@ -156,7 +156,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L30)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L30)
 
 #### Signature
 
@@ -174,7 +174,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L34)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L34)
 
 ## Methods
 
@@ -194,7 +194,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L93)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L93)
 
 ### fit()
 
@@ -216,7 +216,7 @@ fit(opts: RadiusNeighborsTransformerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L110)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L110)
 
 ### fit\_transform()
 
@@ -240,7 +240,7 @@ fit_transform(opts: RadiusNeighborsTransformerFitTransformOptions): Promise<any[
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L144)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L144)
 
 ### get\_feature\_names\_out()
 
@@ -264,7 +264,7 @@ get_feature_names_out(opts: RadiusNeighborsTransformerGetFeatureNamesOutOptions)
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L181)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L181)
 
 ### init()
 
@@ -288,7 +288,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L43)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L43)
 
 ### radius\_neighbors()
 
@@ -314,7 +314,7 @@ radius_neighbors(opts: RadiusNeighborsTransformerRadiusNeighborsOptions): Promis
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L220)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L220)
 
 ### radius\_neighbors\_graph()
 
@@ -338,7 +338,7 @@ radius_neighbors_graph(opts: RadiusNeighborsTransformerRadiusNeighborsGraphOptio
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L258)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L258)
 
 ### set\_output()
 
@@ -362,7 +362,7 @@ set_output(opts: RadiusNeighborsTransformerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L299)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L299)
 
 ### transform()
 
@@ -384,4 +384,4 @@ transform(opts: RadiusNeighborsTransformerTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L334)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L334)

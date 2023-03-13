@@ -12,7 +12,7 @@ Hyper-parameter : shape parameter for the Gamma distribution prior over the alph
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L466)
+Defined in:  [generated/linear\_model/ARDRegression.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L466)
 
 ### alpha\_2?
 
@@ -24,7 +24,7 @@ Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distrib
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L473)
+Defined in:  [generated/linear\_model/ARDRegression.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L473)
 
 ### compute\_score?
 
@@ -36,7 +36,7 @@ If `true`, compute the objective function at each step of the model.
 
 `false`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L494)
+Defined in:  [generated/linear\_model/ARDRegression.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L494)
 
 ### copy\_X?
 
@@ -48,7 +48,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L515)
+Defined in:  [generated/linear\_model/ARDRegression.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L515)
 
 ### fit\_intercept?
 
@@ -60,7 +60,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L508)
+Defined in:  [generated/linear\_model/ARDRegression.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L508)
 
 ### lambda\_1?
 
@@ -72,7 +72,7 @@ Hyper-parameter : shape parameter for the Gamma distribution prior over the lamb
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L480)
+Defined in:  [generated/linear\_model/ARDRegression.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L480)
 
 ### lambda\_2?
 
@@ -84,7 +84,7 @@ Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distrib
 
 `0.000001`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L487)
+Defined in:  [generated/linear\_model/ARDRegression.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L487)
 
 ### n\_iter?
 
@@ -96,7 +96,7 @@ Maximum number of iterations.
 
 `300`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L452)
+Defined in:  [generated/linear\_model/ARDRegression.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L452)
 
 ### threshold\_lambda?
 
@@ -108,7 +108,7 @@ Threshold for removing (pruning) weights with high precision from the computatio
 
 `10`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L501)
+Defined in:  [generated/linear\_model/ARDRegression.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L501)
 
 ### tol?
 
@@ -120,7 +120,7 @@ Stop the algorithm if w has converged.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L459)
+Defined in:  [generated/linear\_model/ARDRegression.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L459)
 
 ### verbose?
 
@@ -132,4 +132,4 @@ Verbose mode when fitting the model.
 
 `false`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L522)
+Defined in:  [generated/linear\_model/ARDRegression.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L522)

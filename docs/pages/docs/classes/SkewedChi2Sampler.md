@@ -26,7 +26,7 @@ new SkewedChi2Sampler(opts?: SkewedChi2SamplerOptions): SkewedChi2Sampler;
 
 [`SkewedChi2Sampler`](SkewedChi2Sampler.md)
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L23)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:23](https://g
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L21)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L20)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L19)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L16)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L17)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L17)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L354)
+Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L354)
 
 ### n\_features\_in\_
 
@@ -92,7 +92,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L327)
+Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L327)
 
 ### py
 
@@ -106,7 +106,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L28)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L28)
 
 #### Signature
 
@@ -124,7 +124,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L32)
+Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L32)
 
 ### random\_offset\_
 
@@ -140,7 +140,7 @@ random_offset_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L300)
+Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L300)
 
 ### random\_weights\_
 
@@ -156,7 +156,7 @@ random_weights_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L273)
+Defined in: [generated/kernel\_approximation/SkewedChi2Sampler.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L273)
 
 ## Methods
 
@@ -176,7 +176,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L85)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L85)
 
 ### fit()
 
@@ -200,7 +200,7 @@ fit(opts: SkewedChi2SamplerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L104)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L104)
 
 ### fit\_transform()
 
@@ -224,7 +224,7 @@ fit_transform(opts: SkewedChi2SamplerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L136)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L136)
 
 ### get\_feature\_names\_out()
 
@@ -248,7 +248,7 @@ get_feature_names_out(opts: SkewedChi2SamplerGetFeatureNamesOutOptions): Promise
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L176)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L176)
 
 ### init()
 
@@ -272,7 +272,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L41)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L41)
 
 ### set\_output()
 
@@ -296,7 +296,7 @@ set_output(opts: SkewedChi2SamplerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L213)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L213)
 
 ### transform()
 
@@ -318,4 +318,4 @@ transform(opts: SkewedChi2SamplerTransformOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L243)
+Defined in:  [generated/kernel\_approximation/SkewedChi2Sampler.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/SkewedChi2Sampler.ts#L243)

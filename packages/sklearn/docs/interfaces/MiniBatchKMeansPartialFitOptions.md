@@ -8,7 +8,7 @@
 
 Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format.
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L738)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L738)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cluster/MiniBatchKMeans.ts:738](https://github.com/trans
 
 The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L748)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L748)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/cluster/MiniBatchKMeans.ts:748](https://github.com/trans
 
 Not used, present here for API consistency by convention.
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:743](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L743)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:743](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L743)

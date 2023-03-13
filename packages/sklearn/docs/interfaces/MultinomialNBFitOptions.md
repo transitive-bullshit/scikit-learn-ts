@@ -8,7 +8,7 @@
 
 Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L544)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L544)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:544](https://github.com/tr
 
 Weights applied to individual samples (1. for unweighted).
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L554)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L554)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:554](https://github.com/tr
 
 Target values.
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L549)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L549)

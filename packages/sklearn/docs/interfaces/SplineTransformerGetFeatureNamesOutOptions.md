@@ -8,4 +8,4 @@
 
 Input features.
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L467)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L467)

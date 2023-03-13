@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:838](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L838)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:838](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L838)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:838](https://
 
 Sample weights.
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:848](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L848)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:848](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L848)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:848](https://
 
 True labels for `X`.
 
-Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:843](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L843)
+Defined in:  [generated/ensemble/HistGradientBoostingClassifier.ts:843](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/HistGradientBoostingClassifier.ts#L843)

@@ -8,7 +8,7 @@
 
 The data.
 
-Defined in:  [generated/decomposition/PCA.ts:792](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L792)
+Defined in:  [generated/decomposition/PCA.ts:792](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/PCA.ts#L792)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/decomposition/PCA.ts:792](https://github.com/transitive-
 
 Ignored.
 
-Defined in:  [generated/decomposition/PCA.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/PCA.ts#L797)
+Defined in:  [generated/decomposition/PCA.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/PCA.ts#L797)

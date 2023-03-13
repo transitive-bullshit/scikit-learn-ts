@@ -8,7 +8,7 @@
 
 The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L663)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L663)
 
 ### mode?
 
@@ -20,7 +20,7 @@ Type of returned matrix: ‘connectivity’ will return the connectivity matrix 
 
 `'connectivity'`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L675)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L675)
 
 ### radius?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:675](https://gith
 
 Radius of neighborhoods. The default is the value passed to the constructor.
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L668)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L668)
 
 ### sort\_results?
 
@@ -40,4 +40,4 @@ If `true`, in each row of the result, the non-zero entries will be sorted by inc
 
 `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L682)
+Defined in:  [generated/neighbors/RadiusNeighborsClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsClassifier.ts#L682)

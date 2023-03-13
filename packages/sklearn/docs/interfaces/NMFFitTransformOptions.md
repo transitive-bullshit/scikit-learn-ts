@@ -8,7 +8,7 @@
 
 If init=’custom’, it is used as initial guess for the solution.
 
-Defined in:  [generated/decomposition/NMF.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/NMF.ts#L547)
+Defined in:  [generated/decomposition/NMF.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/NMF.ts#L547)
 
 ### W?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/NMF.ts:547](https://github.com/transitive-
 
 If init=’custom’, it is used as initial guess for the solution.
 
-Defined in:  [generated/decomposition/NMF.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/NMF.ts#L542)
+Defined in:  [generated/decomposition/NMF.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/NMF.ts#L542)
 
 ### X?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/decomposition/NMF.ts:542](https://github.com/transitive-
 
 Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/decomposition/NMF.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/NMF.ts#L532)
+Defined in:  [generated/decomposition/NMF.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/NMF.ts#L532)
 
 ### y?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/decomposition/NMF.ts:532](https://github.com/transitive-
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/decomposition/NMF.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/NMF.ts#L537)
+Defined in:  [generated/decomposition/NMF.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/NMF.ts#L537)

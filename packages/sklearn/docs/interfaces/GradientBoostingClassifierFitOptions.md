@@ -8,7 +8,7 @@
 
 The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:943](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L943)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:943](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L943)
 
 ### monitor?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:943](https://gith
 
 The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `\_fit\_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshoting.
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:958](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L958)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:958](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L958)
 
 ### sample\_weight?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:958](https://gith
 
 Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:953](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L953)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:953](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L953)
 
 ### y?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:953](https://gith
 
 Target values (strings or integers in classification, real numbers in regression) For classification, labels must correspond to classes.
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:948](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L948)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:948](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L948)

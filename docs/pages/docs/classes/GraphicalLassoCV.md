@@ -28,7 +28,7 @@ new GraphicalLassoCV(opts?: GraphicalLassoCVOptions): GraphicalLassoCV;
 
 [`GraphicalLassoCV`](GraphicalLassoCV.md)
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L25)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/covariance/GraphicalLassoCV.ts:25](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L23)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L22)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L21)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L18)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L19)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ alpha_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L356)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L356)
 
 ### covariance\_
 
@@ -94,7 +94,7 @@ covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L302)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L302)
 
 ### cv\_results\_
 
@@ -110,7 +110,7 @@ cv_results_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L383)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L383)
 
 ### feature\_names\_in\_
 
@@ -126,7 +126,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L464)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L464)
 
 ### location\_
 
@@ -142,7 +142,7 @@ location_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L275)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L275)
 
 ### n\_features\_in\_
 
@@ -158,7 +158,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L437)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L437)
 
 ### n\_iter\_
 
@@ -174,7 +174,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L410)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L410)
 
 ### precision\_
 
@@ -190,7 +190,7 @@ precision_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L329)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L329)
 
 ### py
 
@@ -204,7 +204,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L30)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L30)
 
 #### Signature
 
@@ -222,7 +222,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/covariance/GraphicalLassoCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L34)
+Defined in: [generated/covariance/GraphicalLassoCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L34)
 
 ## Methods
 
@@ -242,7 +242,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L95)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L95)
 
 ### error\_norm()
 
@@ -264,7 +264,7 @@ error_norm(opts: GraphicalLassoCVErrorNormOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L112)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L112)
 
 ### fit()
 
@@ -286,7 +286,7 @@ fit(opts: GraphicalLassoCVFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L146)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L146)
 
 ### get\_precision()
 
@@ -308,7 +308,7 @@ get_precision(opts: GraphicalLassoCVGetPrecisionOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L176)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L176)
 
 ### init()
 
@@ -332,7 +332,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L43)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L43)
 
 ### mahalanobis()
 
@@ -354,7 +354,7 @@ mahalanobis(opts: GraphicalLassoCVMahalanobisOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L209)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L209)
 
 ### score()
 
@@ -378,4 +378,4 @@ score(opts: GraphicalLassoCVScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/GraphicalLassoCV.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L243)
+Defined in:  [generated/covariance/GraphicalLassoCV.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLassoCV.ts#L243)

@@ -32,7 +32,7 @@ new FeatureHasher(opts?: FeatureHasherOptions): FeatureHasher;
 
 [`FeatureHasher`](FeatureHasher.md)
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L29)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L29)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/feature\_extraction/FeatureHasher.ts:29](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L27)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L26)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L25)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L22)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L23)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L23)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L34)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L34)
 
 #### Signature
 
@@ -98,9 +98,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L38)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L38)
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L34) [generated/feature\_extraction/FeatureHasher.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L38)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L34) [generated/feature\_extraction/FeatureHasher.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L38)
 
 ## Methods
 
@@ -120,7 +120,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L89)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L89)
 
 ### fit()
 
@@ -144,7 +144,7 @@ fit(opts: FeatureHasherFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L108)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L108)
 
 ### fit\_transform()
 
@@ -168,7 +168,7 @@ fit_transform(opts: FeatureHasherFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L138)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L138)
 
 ### init()
 
@@ -192,7 +192,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L47)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L47)
 
 ### set\_output()
 
@@ -216,7 +216,7 @@ set_output(opts: FeatureHasherSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L172)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L172)
 
 ### transform()
 
@@ -238,4 +238,4 @@ transform(opts: FeatureHasherTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L200)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L200)

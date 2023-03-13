@@ -8,7 +8,7 @@
 
 The data used to estimate the optimal transformation parameters.
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L415)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L415)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/preprocessing/PowerTransformer.ts:415](https://github.co
 
 Ignored.
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L420)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L420)

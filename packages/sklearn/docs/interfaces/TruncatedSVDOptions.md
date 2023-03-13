@@ -12,7 +12,7 @@ SVD solver to use. Either “arpack” for the ARPACK wrapper in SciPy (scipy.sp
 
 `'randomized'`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L458)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L458)
 
 ### n\_components?
 
@@ -24,7 +24,7 @@ Desired dimensionality of output data. If algorithm=’arpack’, must be strict
 
 `2`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L451)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L451)
 
 ### n\_iter?
 
@@ -36,7 +36,7 @@ Number of iterations for randomized SVD solver. Not used by ARPACK. The default 
 
 `5`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L465)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L465)
 
 ### n\_oversamples?
 
@@ -48,7 +48,7 @@ Number of oversamples for randomized SVD solver. Not used by ARPACK. See [`rando
 
 `10`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L472)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L472)
 
 ### power\_iteration\_normalizer?
 
@@ -60,7 +60,7 @@ Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`
 
 `'auto'`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L479)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L479)
 
 ### random\_state?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/decomposition/TruncatedSVD.ts:479](https://github.com/tr
 
 Used during randomized svd. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L484)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L484)
 
 ### tol?
 
@@ -80,4 +80,4 @@ Tolerance for ARPACK. 0 means machine precision. Ignored by randomized SVD solve
 
 `0`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L491)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L491)

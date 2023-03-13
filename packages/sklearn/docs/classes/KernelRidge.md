@@ -32,7 +32,7 @@ new KernelRidge(opts?: KernelRidgeOptions): KernelRidge;
 
 [`KernelRidge`](KernelRidge.md)
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L29)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L29)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/kernel\_ridge/KernelRidge.ts:29](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L27)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L26)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L25)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L22)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L23)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L23)
 
 ## Accessors
 
@@ -82,9 +82,9 @@ X_fit_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L229)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L229)
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L229)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L229)
 
 ### dual\_coef\_
 
@@ -100,9 +100,9 @@ dual_coef_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L204)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L204)
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L204)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L204)
 
 ### feature\_names\_in\_
 
@@ -118,9 +118,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L277)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L277)
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L277)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L277)
 
 ### n\_features\_in\_
 
@@ -136,9 +136,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L252)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L252)
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L252)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L252)
 
 ### py
 
@@ -152,7 +152,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L34)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L34)
 
 #### Signature
 
@@ -170,9 +170,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L38)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L38)
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L34) [generated/kernel\_ridge/KernelRidge.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L38)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L34) [generated/kernel\_ridge/KernelRidge.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L38)
 
 ## Methods
 
@@ -192,7 +192,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L93)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L93)
 
 ### fit()
 
@@ -214,7 +214,7 @@ fit(opts: KernelRidgeFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L110)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L110)
 
 ### init()
 
@@ -238,7 +238,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L47)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L47)
 
 ### predict()
 
@@ -260,7 +260,7 @@ predict(opts: KernelRidgePredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L142)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L142)
 
 ### score()
 
@@ -284,4 +284,4 @@ score(opts: KernelRidgeScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L172)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L172)

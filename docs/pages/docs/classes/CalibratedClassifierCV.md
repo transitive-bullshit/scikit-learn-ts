@@ -32,7 +32,7 @@ new CalibratedClassifierCV(opts?: CalibratedClassifierCVOptions): CalibratedClas
 
 [`CalibratedClassifierCV`](CalibratedClassifierCV.md)
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L29)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L29)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/calibration/CalibratedClassifierCV.ts:29](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L27)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L26)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L25)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L22)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L23)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L23)
 
 ## Accessors
 
@@ -82,7 +82,7 @@ calibrated_classifiers_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/calibration/CalibratedClassifierCV.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L336)
+Defined in: [generated/calibration/CalibratedClassifierCV.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L336)
 
 ### classes\_
 
@@ -98,7 +98,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/calibration/CalibratedClassifierCV.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L255)
+Defined in: [generated/calibration/CalibratedClassifierCV.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L255)
 
 ### feature\_names\_in\_
 
@@ -114,7 +114,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/calibration/CalibratedClassifierCV.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L309)
+Defined in: [generated/calibration/CalibratedClassifierCV.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L309)
 
 ### n\_features\_in\_
 
@@ -130,7 +130,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/calibration/CalibratedClassifierCV.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L282)
+Defined in: [generated/calibration/CalibratedClassifierCV.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L282)
 
 ### py
 
@@ -144,7 +144,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L34)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L34)
 
 #### Signature
 
@@ -162,7 +162,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/calibration/CalibratedClassifierCV.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L38)
+Defined in: [generated/calibration/CalibratedClassifierCV.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L38)
 
 ## Methods
 
@@ -182,7 +182,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L95)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L95)
 
 ### fit()
 
@@ -204,7 +204,7 @@ fit(opts: CalibratedClassifierCVFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L112)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L112)
 
 ### init()
 
@@ -228,7 +228,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L47)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L47)
 
 ### predict()
 
@@ -252,7 +252,7 @@ predict(opts: CalibratedClassifierCVPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L150)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L150)
 
 ### predict\_proba()
 
@@ -276,7 +276,7 @@ predict_proba(opts: CalibratedClassifierCVPredictProbaOptions): Promise<ArrayLik
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L184)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L184)
 
 ### score()
 
@@ -300,4 +300,4 @@ score(opts: CalibratedClassifierCVScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/calibration/CalibratedClassifierCV.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L221)
+Defined in:  [generated/calibration/CalibratedClassifierCV.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibratedClassifierCV.ts#L221)

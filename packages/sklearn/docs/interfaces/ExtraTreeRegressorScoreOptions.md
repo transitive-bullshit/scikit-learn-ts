@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L696)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L696)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/tree/ExtraTreeRegressor.ts:696](https://github.com/trans
 
 Sample weights.
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L706)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L706)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/tree/ExtraTreeRegressor.ts:706](https://github.com/trans
 
 True values for `X`.
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L701)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L701)

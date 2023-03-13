@@ -8,7 +8,7 @@
 
 An array of points to query
 
-Defined in:  [generated/neighbors/BallTree.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L437)
+Defined in:  [generated/neighbors/BallTree.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L437)
 
 ### breadth\_first?
 
@@ -20,7 +20,7 @@ if `true`, then query the nodes in a breadth-first manner. Otherwise, query the 
 
 `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L465)
+Defined in:  [generated/neighbors/BallTree.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L465)
 
 ### dualtree?
 
@@ -32,7 +32,7 @@ if `true`, use the dual tree formalism for the query: a tree is built for the qu
 
 `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L458)
+Defined in:  [generated/neighbors/BallTree.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L458)
 
 ### k?
 
@@ -44,7 +44,7 @@ The number of nearest neighbors to return
 
 `1`
 
-Defined in:  [generated/neighbors/BallTree.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L444)
+Defined in:  [generated/neighbors/BallTree.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L444)
 
 ### return\_distance?
 
@@ -56,7 +56,7 @@ if `true`, return a tuple (d, i) of distances and indices if `false`, return arr
 
 `true`
 
-Defined in:  [generated/neighbors/BallTree.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L451)
+Defined in:  [generated/neighbors/BallTree.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L451)
 
 ### sort\_results?
 
@@ -68,4 +68,4 @@ if `true`, then distances and indices of each point are sorted on return, so tha
 
 `true`
 
-Defined in:  [generated/neighbors/BallTree.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L472)
+Defined in:  [generated/neighbors/BallTree.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L472)

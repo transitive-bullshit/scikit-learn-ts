@@ -12,7 +12,7 @@ If true, `decision\_function\_shape='ovr'`, and number of classes > 2, [predict]
 
 `false`
 
-Defined in:  [generated/svm/NuSVC.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L652)
+Defined in:  [generated/svm/NuSVC.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L652)
 
 ### cache\_size?
 
@@ -24,7 +24,7 @@ Specify the size of the kernel cache (in MB).
 
 `200`
 
-Defined in:  [generated/svm/NuSVC.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L619)
+Defined in:  [generated/svm/NuSVC.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L619)
 
 ### class\_weight?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/svm/NuSVC.ts:619](https://github.com/transitive-bullshit
 
 Set the parameter C of class i to class\_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-Defined in:  [generated/svm/NuSVC.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L624)
+Defined in:  [generated/svm/NuSVC.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L624)
 
 ### coef0?
 
@@ -44,7 +44,7 @@ Independent term in kernel function. It is only significant in ‘poly’ and �
 
 `0`
 
-Defined in:  [generated/svm/NuSVC.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L591)
+Defined in:  [generated/svm/NuSVC.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L591)
 
 ### decision\_function\_shape?
 
@@ -56,7 +56,7 @@ Whether to return a one-vs-rest (‘ovr’) decision function of shape (n\_sampl
 
 `'ovr'`
 
-Defined in:  [generated/svm/NuSVC.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L645)
+Defined in:  [generated/svm/NuSVC.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L645)
 
 ### degree?
 
@@ -68,7 +68,7 @@ Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ign
 
 `3`
 
-Defined in:  [generated/svm/NuSVC.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L577)
+Defined in:  [generated/svm/NuSVC.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L577)
 
 ### gamma?
 
@@ -80,7 +80,7 @@ Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
 
 `'scale'`
 
-Defined in:  [generated/svm/NuSVC.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L584)
+Defined in:  [generated/svm/NuSVC.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L584)
 
 ### kernel?
 
@@ -92,7 +92,7 @@ Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf�
 
 `'rbf'`
 
-Defined in:  [generated/svm/NuSVC.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L570)
+Defined in:  [generated/svm/NuSVC.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L570)
 
 ### max\_iter?
 
@@ -104,7 +104,7 @@ Hard limit on iterations within solver, or -1 for no limit.
 
 `-1`
 
-Defined in:  [generated/svm/NuSVC.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L638)
+Defined in:  [generated/svm/NuSVC.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L638)
 
 ### nu?
 
@@ -116,7 +116,7 @@ An upper bound on the fraction of margin errors (see [User Guide](../svm.html#nu
 
 `0.5`
 
-Defined in:  [generated/svm/NuSVC.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L563)
+Defined in:  [generated/svm/NuSVC.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L563)
 
 ### probability?
 
@@ -128,7 +128,7 @@ Whether to enable probability estimates. This must be enabled prior to calling `
 
 `false`
 
-Defined in:  [generated/svm/NuSVC.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L605)
+Defined in:  [generated/svm/NuSVC.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L605)
 
 ### random\_state?
 
@@ -136,7 +136,7 @@ Defined in:  [generated/svm/NuSVC.ts:605](https://github.com/transitive-bullshit
 
 Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/svm/NuSVC.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L657)
+Defined in:  [generated/svm/NuSVC.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L657)
 
 ### shrinking?
 
@@ -148,7 +148,7 @@ Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinki
 
 `true`
 
-Defined in:  [generated/svm/NuSVC.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L598)
+Defined in:  [generated/svm/NuSVC.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L598)
 
 ### tol?
 
@@ -160,7 +160,7 @@ Tolerance for stopping criterion.
 
 `0.001`
 
-Defined in:  [generated/svm/NuSVC.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L612)
+Defined in:  [generated/svm/NuSVC.ts:612](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L612)
 
 ### verbose?
 
@@ -172,4 +172,4 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 `false`
 
-Defined in:  [generated/svm/NuSVC.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L631)
+Defined in:  [generated/svm/NuSVC.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L631)

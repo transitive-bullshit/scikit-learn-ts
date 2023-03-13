@@ -8,7 +8,7 @@
 
 Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L489)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L489)
 
 ### Xy?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/MultiTaskLasso.ts:489](https://github.com/
 
 Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L532)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L532)
 
 ### alphas?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/linear\_model/MultiTaskLasso.ts:532](https://github.com/
 
 List of alphas where to compute the models. If `undefined` alphas are set automatically.
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L520)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L520)
 
 ### check\_input?
 
@@ -36,7 +36,7 @@ If set to `false`, the input validation checks are skipped (including the Gram m
 
 `true`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L572)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L572)
 
 ### coef\_init?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/linear\_model/MultiTaskLasso.ts:572](https://github.com/
 
 The initial values of the coefficients.
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L544)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L544)
 
 ### copy\_X?
 
@@ -56,7 +56,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L539)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L539)
 
 ### eps?
 
@@ -68,7 +68,7 @@ Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
 
 `0.001`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L508)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L508)
 
 ### l1\_ratio?
 
@@ -80,7 +80,7 @@ Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penaltie
 
 `0.5`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L501)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L501)
 
 ### n\_alphas?
 
@@ -92,7 +92,7 @@ Number of alphas along the regularization path.
 
 `100`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L515)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L515)
 
 ### params?
 
@@ -100,7 +100,7 @@ Defined in:  [generated/linear\_model/MultiTaskLasso.ts:515](https://github.com/
 
 Keyword arguments passed to the coordinate descent solver.
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L577)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L577)
 
 ### positive?
 
@@ -112,7 +112,7 @@ If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim
 
 `false`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L565)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L565)
 
 ### precompute?
 
@@ -124,7 +124,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L527)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L527)
 
 ### return\_n\_iter?
 
@@ -136,7 +136,7 @@ Whether to return the number of iterations or not.
 
 `false`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L558)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L558)
 
 ### verbose?
 
@@ -148,7 +148,7 @@ Amount of verbosity.
 
 `false`
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L551)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L551)
 
 ### y?
 
@@ -156,4 +156,4 @@ Defined in:  [generated/linear\_model/MultiTaskLasso.ts:551](https://github.com/
 
 Target values.
 
-Defined in:  [generated/linear\_model/MultiTaskLasso.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L494)
+Defined in:  [generated/linear\_model/MultiTaskLasso.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLasso.ts#L494)

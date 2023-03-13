@@ -8,7 +8,7 @@
 
 Values of the response function.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L284)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L284)
 
 ### xlabel?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:284](https://githu
 
 Default label to place on x axis.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L289)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L289)
 
 ### xx0?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:289](https://githu
 
 First output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L274)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L274)
 
 ### xx1?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:274](https://githu
 
 Second output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L279)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L279)
 
 ### ylabel?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:279](https://githu
 
 Default label to place on y axis.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L294)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L294)

@@ -12,7 +12,7 @@ Maximum number of CF subclusters in each node. If a new samples enters such that
 
 `50`
 
-Defined in:  [generated/cluster/Birch.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L523)
+Defined in:  [generated/cluster/Birch.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/Birch.ts#L523)
 
 ### compute\_labels?
 
@@ -24,7 +24,7 @@ Whether or not to compute labels for each fit.
 
 `true`
 
-Defined in:  [generated/cluster/Birch.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L537)
+Defined in:  [generated/cluster/Birch.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/Birch.ts#L537)
 
 ### copy?
 
@@ -36,7 +36,7 @@ Whether or not to make a copy of the given data. If set to `false`, the initial 
 
 `true`
 
-Defined in:  [generated/cluster/Birch.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L544)
+Defined in:  [generated/cluster/Birch.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/Birch.ts#L544)
 
 ### n\_clusters?
 
@@ -48,7 +48,7 @@ Number of clusters after the final clustering step, which treats the subclusters
 
 `3`
 
-Defined in:  [generated/cluster/Birch.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L530)
+Defined in:  [generated/cluster/Birch.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/Birch.ts#L530)
 
 ### threshold?
 
@@ -60,4 +60,4 @@ The radius of the subcluster obtained by merging a new sample and the closest su
 
 `0.5`
 
-Defined in:  [generated/cluster/Birch.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/Birch.ts#L516)
+Defined in:  [generated/cluster/Birch.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/Birch.ts#L516)

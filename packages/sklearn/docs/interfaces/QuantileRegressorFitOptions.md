@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L389)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L389)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/QuantileRegressor.ts:389](https://github.c
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L399)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L399)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/QuantileRegressor.ts:399](https://github.c
 
 Target values.
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L394)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L394)

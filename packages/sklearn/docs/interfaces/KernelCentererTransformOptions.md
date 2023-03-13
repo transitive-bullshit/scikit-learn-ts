@@ -8,7 +8,7 @@
 
 Kernel matrix.
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L328)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L328)
 
 ### copy?
 
@@ -20,4 +20,4 @@ Set to `false` to perform inplace computation.
 
 `true`
 
-Defined in:  [generated/preprocessing/KernelCenterer.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L335)
+Defined in:  [generated/preprocessing/KernelCenterer.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/KernelCenterer.ts#L335)

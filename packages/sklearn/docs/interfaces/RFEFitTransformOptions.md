@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/feature\_selection/RFE.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L654)
+Defined in:  [generated/feature\_selection/RFE.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFE.ts#L654)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_selection/RFE.ts:654](https://github.com/transi
 
 Additional fit parameters.
 
-Defined in:  [generated/feature\_selection/RFE.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L664)
+Defined in:  [generated/feature\_selection/RFE.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFE.ts#L664)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_selection/RFE.ts:664](https://github.com/transi
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/feature\_selection/RFE.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/RFE.ts#L659)
+Defined in:  [generated/feature\_selection/RFE.ts:659](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/RFE.ts#L659)

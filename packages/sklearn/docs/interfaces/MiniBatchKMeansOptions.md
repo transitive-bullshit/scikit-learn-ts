@@ -12,7 +12,7 @@ Size of the mini batches. For faster computations, you can set the `batch\_size`
 
 `1024`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L613)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L613)
 
 ### compute\_labels?
 
@@ -24,7 +24,7 @@ Compute label assignment and inertia for the complete dataset once the minibatch
 
 `true`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L627)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L627)
 
 ### init?
 
@@ -44,7 +44,7 @@ If a callable is passed, it should take arguments X, n\_clusters and a random st
 
 `'k-means++'`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L599)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L599)
 
 ### init\_size?
 
@@ -54,7 +54,7 @@ Number of samples to randomly sample for speeding up the initialization (sometim
 
 If `undefined`, the heuristic is `init\_size \= 3 \* batch\_size` if `3 \* batch\_size < n\_clusters`, else `init\_size \= 3 \* n\_clusters`.
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L657)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L657)
 
 ### max\_iter?
 
@@ -66,7 +66,7 @@ Maximum number of iterations over the complete dataset before stopping independe
 
 `100`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L606)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L606)
 
 ### max\_no\_improvement?
 
@@ -80,7 +80,7 @@ To disable convergence detection based on inertia, set max\_no\_improvement to `
 
 `10`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L650)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L650)
 
 ### n\_clusters?
 
@@ -92,7 +92,7 @@ The number of clusters to form as well as the number of centroids to generate.
 
 `8`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L584)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L584)
 
 ### n\_init?
 
@@ -106,7 +106,7 @@ When `n\_init='auto'`, the number of runs depends on the value of init: 3 if usi
 
 `3`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L666)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L666)
 
 ### random\_state?
 
@@ -114,7 +114,7 @@ Defined in:  [generated/cluster/MiniBatchKMeans.ts:666](https://github.com/trans
 
 Determines random number generation for centroid initialization and random reassignment. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L632)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L632)
 
 ### reassignment\_ratio?
 
@@ -126,7 +126,7 @@ Control the fraction of the maximum number of counts for a center to be reassign
 
 `0.01`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L673)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L673)
 
 ### tol?
 
@@ -140,7 +140,7 @@ To disable convergence detection based on normalized center change, set tol to 0
 
 `0`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L641)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L641)
 
 ### verbose?
 
@@ -152,4 +152,4 @@ Verbosity mode.
 
 `0`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L620)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L620)

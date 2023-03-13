@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L473)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L473)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multiclass/OneVsOneClassifier.ts:473](https://github.com
 
 Sample weights.
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L483)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L483)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/multiclass/OneVsOneClassifier.ts:483](https://github.com
 
 True labels for `X`.
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L478)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L478)

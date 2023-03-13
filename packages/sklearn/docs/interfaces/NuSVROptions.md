@@ -12,7 +12,7 @@ Penalty parameter C of the error term.
 
 `1`
 
-Defined in:  [generated/svm/NuSVR.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L450)
+Defined in:  [generated/svm/NuSVR.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L450)
 
 ### cache\_size?
 
@@ -24,7 +24,7 @@ Specify the size of the kernel cache (in MB).
 
 `200`
 
-Defined in:  [generated/svm/NuSVR.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L499)
+Defined in:  [generated/svm/NuSVR.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L499)
 
 ### coef0?
 
@@ -36,7 +36,7 @@ Independent term in kernel function. It is only significant in ‘poly’ and �
 
 `0`
 
-Defined in:  [generated/svm/NuSVR.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L478)
+Defined in:  [generated/svm/NuSVR.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L478)
 
 ### degree?
 
@@ -48,7 +48,7 @@ Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ign
 
 `3`
 
-Defined in:  [generated/svm/NuSVR.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L464)
+Defined in:  [generated/svm/NuSVR.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L464)
 
 ### gamma?
 
@@ -60,7 +60,7 @@ Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
 
 `'scale'`
 
-Defined in:  [generated/svm/NuSVR.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L471)
+Defined in:  [generated/svm/NuSVR.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L471)
 
 ### kernel?
 
@@ -72,7 +72,7 @@ Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf�
 
 `'rbf'`
 
-Defined in:  [generated/svm/NuSVR.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L457)
+Defined in:  [generated/svm/NuSVR.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L457)
 
 ### max\_iter?
 
@@ -84,7 +84,7 @@ Hard limit on iterations within solver, or -1 for no limit.
 
 `-1`
 
-Defined in:  [generated/svm/NuSVR.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L513)
+Defined in:  [generated/svm/NuSVR.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L513)
 
 ### nu?
 
@@ -96,7 +96,7 @@ An upper bound on the fraction of training errors and a lower bound of the fract
 
 `0.5`
 
-Defined in:  [generated/svm/NuSVR.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L443)
+Defined in:  [generated/svm/NuSVR.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L443)
 
 ### shrinking?
 
@@ -108,7 +108,7 @@ Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinki
 
 `true`
 
-Defined in:  [generated/svm/NuSVR.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L485)
+Defined in:  [generated/svm/NuSVR.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L485)
 
 ### tol?
 
@@ -120,7 +120,7 @@ Tolerance for stopping criterion.
 
 `0.001`
 
-Defined in:  [generated/svm/NuSVR.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L492)
+Defined in:  [generated/svm/NuSVR.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L492)
 
 ### verbose?
 
@@ -132,4 +132,4 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 `false`
 
-Defined in:  [generated/svm/NuSVR.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVR.ts#L506)
+Defined in:  [generated/svm/NuSVR.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVR.ts#L506)

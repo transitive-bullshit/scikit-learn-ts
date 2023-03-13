@@ -16,7 +16,7 @@ If an array is passed, penalties are assumed to be specific to the targets. Henc
 
 `1`
 
-Defined in:  [generated/linear\_model/Ridge.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L320)
+Defined in:  [generated/linear\_model/Ridge.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L320)
 
 ### copy\_X?
 
@@ -28,7 +28,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/Ridge.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L334)
+Defined in:  [generated/linear\_model/Ridge.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L334)
 
 ### fit\_intercept?
 
@@ -40,7 +40,7 @@ Whether to fit the intercept for this model. If set to false, no intercept will 
 
 `true`
 
-Defined in:  [generated/linear\_model/Ridge.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L327)
+Defined in:  [generated/linear\_model/Ridge.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L327)
 
 ### max\_iter?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/linear\_model/Ridge.ts:327](https://github.com/transitiv
 
 Maximum number of iterations for conjugate gradient solver. For ‘sparse\_cg’ and ‘lsqr’ solvers, the default value is determined by scipy.sparse.linalg. For ‘sag’ solver, the default value is 1000. For ‘lbfgs’ solver, the default value is 15000.
 
-Defined in:  [generated/linear\_model/Ridge.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L339)
+Defined in:  [generated/linear\_model/Ridge.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L339)
 
 ### positive?
 
@@ -60,7 +60,7 @@ When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ sol
 
 `false`
 
-Defined in:  [generated/linear\_model/Ridge.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L368)
+Defined in:  [generated/linear\_model/Ridge.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L368)
 
 ### random\_state?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/linear\_model/Ridge.ts:368](https://github.com/transitiv
 
 Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
 
-Defined in:  [generated/linear\_model/Ridge.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L373)
+Defined in:  [generated/linear\_model/Ridge.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L373)
 
 ### solver?
 
@@ -80,7 +80,7 @@ Solver to use in the computational routines:
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/Ridge.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L353)
+Defined in:  [generated/linear\_model/Ridge.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L353)
 
 ### tol?
 
@@ -92,4 +92,4 @@ Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ a
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/Ridge.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Ridge.ts#L346)
+Defined in:  [generated/linear\_model/Ridge.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L346)

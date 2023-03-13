@@ -8,7 +8,7 @@
 
 An estimator object implementing [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). A [predict\_proba](../../glossary.html#term-predict_proba) method will be exposed only if `estimator` implements it.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L391)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L391)
 
 ### n\_jobs?
 
@@ -20,4 +20,4 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L400)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L400)

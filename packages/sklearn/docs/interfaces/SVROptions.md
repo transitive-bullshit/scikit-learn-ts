@@ -12,7 +12,7 @@ Regularization parameter. The strength of the regularization is inversely propor
 
 `1`
 
-Defined in:  [generated/svm/SVR.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L470)
+Defined in:  [generated/svm/SVR.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L470)
 
 ### cache\_size?
 
@@ -24,7 +24,7 @@ Specify the size of the kernel cache (in MB).
 
 `200`
 
-Defined in:  [generated/svm/SVR.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L491)
+Defined in:  [generated/svm/SVR.ts:491](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L491)
 
 ### coef0?
 
@@ -36,7 +36,7 @@ Independent term in kernel function. It is only significant in ‘poly’ and �
 
 `0`
 
-Defined in:  [generated/svm/SVR.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L456)
+Defined in:  [generated/svm/SVR.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L456)
 
 ### degree?
 
@@ -48,7 +48,7 @@ Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ign
 
 `3`
 
-Defined in:  [generated/svm/SVR.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L442)
+Defined in:  [generated/svm/SVR.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L442)
 
 ### epsilon?
 
@@ -60,7 +60,7 @@ Epsilon in the epsilon-SVR model. It specifies the epsilon-tube within which no 
 
 `0.1`
 
-Defined in:  [generated/svm/SVR.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L477)
+Defined in:  [generated/svm/SVR.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L477)
 
 ### gamma?
 
@@ -72,7 +72,7 @@ Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
 
 `'scale'`
 
-Defined in:  [generated/svm/SVR.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L449)
+Defined in:  [generated/svm/SVR.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L449)
 
 ### kernel?
 
@@ -84,7 +84,7 @@ Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf�
 
 `'rbf'`
 
-Defined in:  [generated/svm/SVR.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L435)
+Defined in:  [generated/svm/SVR.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L435)
 
 ### max\_iter?
 
@@ -96,7 +96,7 @@ Hard limit on iterations within solver, or -1 for no limit.
 
 `-1`
 
-Defined in:  [generated/svm/SVR.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L505)
+Defined in:  [generated/svm/SVR.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L505)
 
 ### shrinking?
 
@@ -108,7 +108,7 @@ Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinki
 
 `true`
 
-Defined in:  [generated/svm/SVR.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L484)
+Defined in:  [generated/svm/SVR.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L484)
 
 ### tol?
 
@@ -120,7 +120,7 @@ Tolerance for stopping criterion.
 
 `0.001`
 
-Defined in:  [generated/svm/SVR.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L463)
+Defined in:  [generated/svm/SVR.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L463)
 
 ### verbose?
 
@@ -132,4 +132,4 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 `false`
 
-Defined in:  [generated/svm/SVR.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/SVR.ts#L498)
+Defined in:  [generated/svm/SVR.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/SVR.ts#L498)

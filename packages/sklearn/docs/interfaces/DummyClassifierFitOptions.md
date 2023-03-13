@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/dummy/DummyClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L412)
+Defined in:  [generated/dummy/DummyClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L412)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/dummy/DummyClassifier.ts:412](https://github.com/transit
 
 Sample weights.
 
-Defined in:  [generated/dummy/DummyClassifier.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L422)
+Defined in:  [generated/dummy/DummyClassifier.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L422)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/dummy/DummyClassifier.ts:422](https://github.com/transit
 
 Target values.
 
-Defined in:  [generated/dummy/DummyClassifier.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L417)
+Defined in:  [generated/dummy/DummyClassifier.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L417)

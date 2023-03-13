@@ -12,7 +12,7 @@ Method for initialization of k-means algorithm; defaults to ‘k-means++’.
 
 `'k-means++'`
 
-Defined in:  [generated/cluster/SpectralCoclustering.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L442)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L442)
 
 ### mini\_batch?
 
@@ -24,7 +24,7 @@ Whether to use mini-batch k-means, which is faster but may get different results
 
 `false`
 
-Defined in:  [generated/cluster/SpectralCoclustering.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L435)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L435)
 
 ### n\_clusters?
 
@@ -36,7 +36,7 @@ The number of biclusters to find.
 
 `3`
 
-Defined in:  [generated/cluster/SpectralCoclustering.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L416)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L416)
 
 ### n\_init?
 
@@ -50,7 +50,7 @@ If mini-batch k-means is used, the best initialization is chosen and the algorit
 
 `10`
 
-Defined in:  [generated/cluster/SpectralCoclustering.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L451)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L451)
 
 ### n\_svd\_vecs?
 
@@ -58,7 +58,7 @@ Defined in:  [generated/cluster/SpectralCoclustering.ts:451](https://github.com/
 
 Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized`.
 
-Defined in:  [generated/cluster/SpectralCoclustering.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L428)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L428)
 
 ### random\_state?
 
@@ -66,7 +66,7 @@ Defined in:  [generated/cluster/SpectralCoclustering.ts:428](https://github.com/
 
 Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/cluster/SpectralCoclustering.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L456)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L456)
 
 ### svd\_method?
 
@@ -78,4 +78,4 @@ Selects the algorithm for finding singular vectors. May be ‘randomized’ or �
 
 `'randomized'`
 
-Defined in:  [generated/cluster/SpectralCoclustering.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L423)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L423)

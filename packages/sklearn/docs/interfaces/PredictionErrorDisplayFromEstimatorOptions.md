@@ -8,7 +8,7 @@
 
 Input values.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L388)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L388)
 
 ### ax?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/PredictionErrorDisplay.ts:388](https://github.co
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L417)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L417)
 
 ### estimator?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/metrics/PredictionErrorDisplay.ts:417](https://github.co
 
 Fitted regressor or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L383)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L383)
 
 ### kind?
 
@@ -36,7 +36,7 @@ The type of plot to draw:
 
 `'residual_vs_predicted'`
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L400)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L400)
 
 ### line\_kwargs?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/metrics/PredictionErrorDisplay.ts:400](https://github.co
 
 Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L427)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L427)
 
 ### random\_state?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/metrics/PredictionErrorDisplay.ts:427](https://github.co
 
 Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L412)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L412)
 
 ### scatter\_kwargs?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/metrics/PredictionErrorDisplay.ts:412](https://github.co
 
 Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L422)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L422)
 
 ### subsample?
 
@@ -72,7 +72,7 @@ Sampling the samples to be shown on the scatter plot. If `float`, it should be b
 
 `1`
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L407)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L407)
 
 ### y?
 
@@ -80,4 +80,4 @@ Defined in:  [generated/metrics/PredictionErrorDisplay.ts:407](https://github.co
 
 Target values.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L393)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L393)

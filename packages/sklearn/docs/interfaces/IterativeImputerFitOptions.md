@@ -8,7 +8,7 @@
 
 Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/impute/IterativeImputer.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L602)
+Defined in:  [generated/impute/IterativeImputer.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L602)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/impute/IterativeImputer.ts:602](https://github.com/trans
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/impute/IterativeImputer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L607)
+Defined in:  [generated/impute/IterativeImputer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L607)

@@ -12,7 +12,7 @@ Regularization parameter. The strength of the regularization is inversely propor
 
 `1`
 
-Defined in:  [generated/svm/LinearSVC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L475)
+Defined in:  [generated/svm/LinearSVC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L475)
 
 ### class\_weight?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/svm/LinearSVC.ts:475](https://github.com/transitive-bull
 
 Set the parameter C of class i to `class\_weight\[i\]\*C` for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-Defined in:  [generated/svm/LinearSVC.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L501)
+Defined in:  [generated/svm/LinearSVC.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L501)
 
 ### dual?
 
@@ -32,7 +32,7 @@ Select the algorithm to either solve the dual or primal optimization problem. Pr
 
 `true`
 
-Defined in:  [generated/svm/LinearSVC.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L461)
+Defined in:  [generated/svm/LinearSVC.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L461)
 
 ### fit\_intercept?
 
@@ -44,7 +44,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/svm/LinearSVC.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L489)
+Defined in:  [generated/svm/LinearSVC.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L489)
 
 ### intercept\_scaling?
 
@@ -56,7 +56,7 @@ When self.fit\_intercept is `true`, instance vector x becomes `\[x, self.interce
 
 `1`
 
-Defined in:  [generated/svm/LinearSVC.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L496)
+Defined in:  [generated/svm/LinearSVC.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L496)
 
 ### loss?
 
@@ -68,7 +68,7 @@ Specifies the loss function. ‘hinge’ is the standard SVM loss (used e.g. by 
 
 `'squared_hinge'`
 
-Defined in:  [generated/svm/LinearSVC.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L454)
+Defined in:  [generated/svm/LinearSVC.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L454)
 
 ### max\_iter?
 
@@ -80,7 +80,7 @@ The maximum number of iterations to be run.
 
 `1000`
 
-Defined in:  [generated/svm/LinearSVC.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L520)
+Defined in:  [generated/svm/LinearSVC.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L520)
 
 ### multi\_class?
 
@@ -92,7 +92,7 @@ Determines the multi-class strategy if `y` contains more than two classes. `"ovr
 
 `'ovr'`
 
-Defined in:  [generated/svm/LinearSVC.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L482)
+Defined in:  [generated/svm/LinearSVC.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L482)
 
 ### penalty?
 
@@ -104,7 +104,7 @@ Specifies the norm used in the penalization. The ‘l2’ penalty is the standar
 
 `'l2'`
 
-Defined in:  [generated/svm/LinearSVC.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L447)
+Defined in:  [generated/svm/LinearSVC.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L447)
 
 ### random\_state?
 
@@ -112,7 +112,7 @@ Defined in:  [generated/svm/LinearSVC.ts:447](https://github.com/transitive-bull
 
 Controls the pseudo random number generation for shuffling the data for the dual coordinate descent (if `dual=True`). When `dual=False` the underlying implementation of [`LinearSVC`](#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC") is not random and `random\_state` has no effect on the results. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/svm/LinearSVC.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L513)
+Defined in:  [generated/svm/LinearSVC.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L513)
 
 ### tol?
 
@@ -124,7 +124,7 @@ Tolerance for stopping criteria.
 
 `0.0001`
 
-Defined in:  [generated/svm/LinearSVC.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L468)
+Defined in:  [generated/svm/LinearSVC.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L468)
 
 ### verbose?
 
@@ -136,4 +136,4 @@ Enable verbose output. Note that this setting takes advantage of a per-process r
 
 `0`
 
-Defined in:  [generated/svm/LinearSVC.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/LinearSVC.ts#L508)
+Defined in:  [generated/svm/LinearSVC.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/LinearSVC.ts#L508)

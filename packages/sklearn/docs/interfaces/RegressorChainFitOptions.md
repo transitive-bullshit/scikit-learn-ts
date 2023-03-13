@@ -8,7 +8,7 @@
 
 The input data.
 
-Defined in:  [generated/multioutput/RegressorChain.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L327)
+Defined in:  [generated/multioutput/RegressorChain.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L327)
 
 ### Y?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multioutput/RegressorChain.ts:327](https://github.com/tr
 
 The target values.
 
-Defined in:  [generated/multioutput/RegressorChain.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L332)
+Defined in:  [generated/multioutput/RegressorChain.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L332)
 
 ### fit\_params?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/multioutput/RegressorChain.ts:332](https://github.com/tr
 
 Parameters passed to the `fit` method at each step of the regressor chain.
 
-Defined in:  [generated/multioutput/RegressorChain.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L337)
+Defined in:  [generated/multioutput/RegressorChain.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L337)

@@ -12,7 +12,7 @@ If `true`, individual trees are fit on random subsets of the training data sampl
 
 `false`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L485)
+Defined in:  [generated/ensemble/IsolationForest.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L485)
 
 ### contamination?
 
@@ -24,7 +24,7 @@ The amount of contamination of the data set, i.e. the proportion of outliers in 
 
 `'auto'`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L471)
+Defined in:  [generated/ensemble/IsolationForest.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L471)
 
 ### max\_features?
 
@@ -36,7 +36,7 @@ The number of features to draw from X to train each base estimator.
 
 `1`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L478)
+Defined in:  [generated/ensemble/IsolationForest.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L478)
 
 ### max\_samples?
 
@@ -48,7 +48,7 @@ If int, then draw `max\_samples` samples.
 
 `'auto'`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L464)
+Defined in:  [generated/ensemble/IsolationForest.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L464)
 
 ### n\_estimators?
 
@@ -60,7 +60,7 @@ The number of base estimators in the ensemble.
 
 `100`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L457)
+Defined in:  [generated/ensemble/IsolationForest.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L457)
 
 ### n\_jobs?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/ensemble/IsolationForest.ts:457](https://github.com/tran
 
 The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/ensemble/IsolationForest.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L490)
+Defined in:  [generated/ensemble/IsolationForest.ts:490](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L490)
 
 ### random\_state?
 
@@ -78,7 +78,7 @@ Controls the pseudo-randomness of the selection of the feature and split values 
 
 Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/ensemble/IsolationForest.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L497)
+Defined in:  [generated/ensemble/IsolationForest.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L497)
 
 ### verbose?
 
@@ -90,7 +90,7 @@ Controls the verbosity of the tree building process.
 
 `0`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L504)
+Defined in:  [generated/ensemble/IsolationForest.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L504)
 
 ### warm\_start?
 
@@ -102,4 +102,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L511)
+Defined in:  [generated/ensemble/IsolationForest.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L511)

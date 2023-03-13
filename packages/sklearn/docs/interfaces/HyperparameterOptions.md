@@ -8,7 +8,7 @@
 
 The lower and upper bound on the parameter. If n\_elements>1, a pair of 1d array with n\_elements each may be given alternatively. If the string “fixed” is passed as bounds, the hyperparameter’s value cannot be changed.
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L192)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L192)
 
 ### fixed?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:192](https:/
 
 Whether the value of this hyperparameter is fixed, i.e., cannot be changed during hyperparameter tuning. If `undefined` is passed, the “fixed” is derived based on the given bounds.
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L204)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L204)
 
 ### n\_elements?
 
@@ -28,7 +28,7 @@ The number of elements of the hyperparameter value. Defaults to 1, which corresp
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L199)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L199)
 
 ### name?
 
@@ -36,7 +36,7 @@ Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:199](https:/
 
 The name of the hyperparameter. Note that a kernel using a hyperparameter with name “x” must have the attributes self.x and self.x\_bounds
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L182)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L182)
 
 ### value\_type?
 
@@ -44,4 +44,4 @@ Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:182](https:/
 
 The type of the hyperparameter. Currently, only “numeric” hyperparameters are supported.
 
-Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L187)
+Defined in:  [generated/gaussian\_process/kernels/Hyperparameter.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L187)

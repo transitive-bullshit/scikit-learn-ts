@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L331)
+Defined in:  [generated/neighbors/NearestCentroid.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L331)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/neighbors/NearestCentroid.ts:331](https://github.com/tra
 
 Sample weights.
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L341)
+Defined in:  [generated/neighbors/NearestCentroid.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L341)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/neighbors/NearestCentroid.ts:341](https://github.com/tra
 
 True labels for `X`.
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L336)
+Defined in:  [generated/neighbors/NearestCentroid.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L336)

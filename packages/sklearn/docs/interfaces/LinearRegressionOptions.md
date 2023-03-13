@@ -12,7 +12,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L375)
+Defined in:  [generated/linear\_model/LinearRegression.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L375)
 
 ### fit\_intercept?
 
@@ -24,7 +24,7 @@ Whether to calculate the intercept for this model. If set to `false`, no interce
 
 `true`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L368)
+Defined in:  [generated/linear\_model/LinearRegression.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L368)
 
 ### n\_jobs?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/linear\_model/LinearRegression.ts:368](https://github.co
 
 The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L380)
+Defined in:  [generated/linear\_model/LinearRegression.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L380)
 
 ### positive?
 
@@ -44,4 +44,4 @@ When set to `true`, forces the coefficients to be positive. This option is only 
 
 `false`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L387)
+Defined in:  [generated/linear\_model/LinearRegression.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L387)

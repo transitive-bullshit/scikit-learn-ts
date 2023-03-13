@@ -8,7 +8,7 @@
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L368)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L368)
 
 ### kwargs?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:368](https://githu
 
 Additional keyword arguments to be passed to the `plot\_method`.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L383)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L383)
 
 ### plot\_method?
 
@@ -28,7 +28,7 @@ Plotting method to call when plotting the response. Please refer to the followin
 
 `'contourf'`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L363)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L363)
 
 ### xlabel?
 
@@ -36,7 +36,7 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:363](https://githu
 
 Overwrite the x-axis label.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L373)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L373)
 
 ### ylabel?
 
@@ -44,4 +44,4 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:373](https://githu
 
 Overwrite the y-axis label.
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L378)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L378)

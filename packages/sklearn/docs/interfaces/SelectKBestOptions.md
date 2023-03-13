@@ -12,7 +12,7 @@ Number of top features to select. The “all” option bypasses selection, for u
 
 `10`
 
-Defined in:  [generated/feature\_selection/SelectKBest.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L416)
+Defined in:  [generated/feature\_selection/SelectKBest.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L416)
 
 ### score\_func?
 
@@ -20,4 +20,4 @@ Defined in:  [generated/feature\_selection/SelectKBest.ts:416](https://github.co
 
 Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
 
-Defined in:  [generated/feature\_selection/SelectKBest.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L409)
+Defined in:  [generated/feature\_selection/SelectKBest.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectKBest.ts#L409)

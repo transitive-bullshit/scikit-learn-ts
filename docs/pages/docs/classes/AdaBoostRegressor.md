@@ -30,7 +30,7 @@ new AdaBoostRegressor(opts?: AdaBoostRegressorOptions): AdaBoostRegressor;
 
 [`AdaBoostRegressor`](AdaBoostRegressor.md)
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L27)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L27)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/ensemble/AdaBoostRegressor.ts:27](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L25)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L24)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L23)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L20)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L21)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L21)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/AdaBoostRegressor.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L290)
+Defined in: [generated/ensemble/AdaBoostRegressor.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L290)
 
 ### estimator\_errors\_
 
@@ -96,7 +96,7 @@ estimator_errors_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/AdaBoostRegressor.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L371)
+Defined in: [generated/ensemble/AdaBoostRegressor.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L371)
 
 ### estimator\_weights\_
 
@@ -112,7 +112,7 @@ estimator_weights_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/AdaBoostRegressor.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L344)
+Defined in: [generated/ensemble/AdaBoostRegressor.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L344)
 
 ### estimators\_
 
@@ -128,7 +128,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/AdaBoostRegressor.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L317)
+Defined in: [generated/ensemble/AdaBoostRegressor.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L317)
 
 ### feature\_names\_in\_
 
@@ -144,7 +144,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/AdaBoostRegressor.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L425)
+Defined in: [generated/ensemble/AdaBoostRegressor.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L425)
 
 ### n\_features\_in\_
 
@@ -160,7 +160,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/AdaBoostRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L398)
+Defined in: [generated/ensemble/AdaBoostRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L398)
 
 ### py
 
@@ -174,7 +174,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L32)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L32)
 
 #### Signature
 
@@ -192,7 +192,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/AdaBoostRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L36)
+Defined in: [generated/ensemble/AdaBoostRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L36)
 
 ## Methods
 
@@ -212,7 +212,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L93)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L93)
 
 ### fit()
 
@@ -234,7 +234,7 @@ fit(opts: AdaBoostRegressorFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L110)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L110)
 
 ### init()
 
@@ -258,7 +258,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L45)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L45)
 
 ### predict()
 
@@ -282,7 +282,7 @@ predict(opts: AdaBoostRegressorPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L146)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L146)
 
 ### score()
 
@@ -306,7 +306,7 @@ score(opts: AdaBoostRegressorScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L178)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L178)
 
 ### staged\_predict()
 
@@ -332,7 +332,7 @@ staged_predict(opts: AdaBoostRegressorStagedPredictOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L216)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L216)
 
 ### staged\_score()
 
@@ -356,4 +356,4 @@ staged_score(opts: AdaBoostRegressorStagedScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L252)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L252)

@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L510)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L510)
 
 ### leaf\_size?
 
@@ -24,7 +24,7 @@ Leaf size passed to BallTree or KDTree. This can affect the speed of the constru
 
 `30`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L517)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L517)
 
 ### metric?
 
@@ -40,7 +40,7 @@ Distance matrices are not supported.
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L528)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L528)
 
 ### metric\_params?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/neighbors/KNeighborsTransformer.ts:528](https://github.c
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L540)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L540)
 
 ### mode?
 
@@ -60,7 +60,7 @@ Type of returned matrix: ‘connectivity’ will return the connectivity matrix 
 
 `'distance'`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L496)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L496)
 
 ### n\_jobs?
 
@@ -68,7 +68,7 @@ Defined in:  [generated/neighbors/KNeighborsTransformer.ts:496](https://github.c
 
 The number of parallel jobs to run for neighbors search. If `\-1`, then the number of jobs is set to the number of CPU cores.
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L545)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L545)
 
 ### n\_neighbors?
 
@@ -80,7 +80,7 @@ Number of neighbors for each sample in the transformed sparse graph. For compati
 
 `5`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L503)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L503)
 
 ### p?
 
@@ -92,4 +92,4 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 `2`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L535)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L535)

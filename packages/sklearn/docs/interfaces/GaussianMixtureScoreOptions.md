@@ -8,7 +8,7 @@
 
 List of n\_features-dimensional data points. Each row corresponds to a single data point.
 
-Defined in:  [generated/mixture/GaussianMixture.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L785)
+Defined in:  [generated/mixture/GaussianMixture.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L785)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/mixture/GaussianMixture.ts:785](https://github.com/trans
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/mixture/GaussianMixture.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L790)
+Defined in:  [generated/mixture/GaussianMixture.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L790)

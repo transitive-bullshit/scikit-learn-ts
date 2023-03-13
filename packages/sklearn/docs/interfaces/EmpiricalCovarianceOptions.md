@@ -12,7 +12,7 @@ If `true`, data are not centered before computation. Useful when working with da
 
 `false`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L418)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L418)
 
 ### store\_precision?
 
@@ -24,4 +24,4 @@ Specifies if the estimated precision is stored.
 
 `true`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L411)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L411)

@@ -8,7 +8,7 @@
 
 Query points where the GP is evaluated.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L591)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L591)
 
 ### return\_cov?
 
@@ -20,7 +20,7 @@ If `true`, the covariance of the joint predictive distribution at the query poin
 
 `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L605)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L605)
 
 ### return\_std?
 
@@ -32,4 +32,4 @@ If `true`, the standard-deviation of the predictive distribution at the query po
 
 `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L598)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L598)

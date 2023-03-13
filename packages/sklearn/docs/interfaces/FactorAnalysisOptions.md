@@ -12,7 +12,7 @@ Whether to make a copy of X. If `false`, the input X gets overwritten during fit
 
 `true`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L583)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L583)
 
 ### iterated\_power?
 
@@ -24,7 +24,7 @@ Number of iterations for the power method. 3 by default. Only used if `svd\_meth
 
 `3`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L609)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L609)
 
 ### max\_iter?
 
@@ -36,7 +36,7 @@ Maximum number of iterations.
 
 `1000`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L590)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L590)
 
 ### n\_components?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/decomposition/FactorAnalysis.ts:590](https://github.com/
 
 Dimensionality of latent space, the number of components of `X` that are obtained after `transform`. If `undefined`, n\_components is set to the number of features.
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L569)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L569)
 
 ### noise\_variance\_init?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/decomposition/FactorAnalysis.ts:569](https://github.com/
 
 The initial guess of the noise variance for each feature. If `undefined`, it defaults to np.ones(n\_features).
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L595)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L595)
 
 ### random\_state?
 
@@ -64,7 +64,7 @@ Only used when `svd\_method` equals ‘randomized’. Pass an int for reproducib
 
 `0`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L621)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L621)
 
 ### rotation?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/decomposition/FactorAnalysis.ts:621](https://github.com/
 
 If not `undefined`, apply the indicated rotation. Currently, varimax and quartimax are implemented. See [“The varimax criterion for analytic rotation in factor analysis”](https://link.springer.com/article/10.1007%2FBF02289233) H. F. Kaiser, 1958.
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L614)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:614](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L614)
 
 ### svd\_method?
 
@@ -84,7 +84,7 @@ Which SVD method to use. If ‘lapack’ use standard SVD from scipy.linalg, if 
 
 `'randomized'`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L602)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L602)
 
 ### tol?
 
@@ -96,4 +96,4 @@ Stopping tolerance for log-likelihood increase.
 
 `0.01`
 
-Defined in:  [generated/decomposition/FactorAnalysis.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L576)
+Defined in:  [generated/decomposition/FactorAnalysis.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FactorAnalysis.ts#L576)

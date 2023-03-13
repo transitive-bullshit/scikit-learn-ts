@@ -28,7 +28,7 @@ new FastICA(opts?: FastICAOptions): FastICA;
 
 [`FastICA`](FastICA.md)
 
-Defined in:  [generated/decomposition/FastICA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L25)
+Defined in:  [generated/decomposition/FastICA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/decomposition/FastICA.ts:25](https://github.com/transiti
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/FastICA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L23)
+Defined in:  [generated/decomposition/FastICA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/FastICA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L22)
+Defined in:  [generated/decomposition/FastICA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/FastICA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L21)
+Defined in:  [generated/decomposition/FastICA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/FastICA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L18)
+Defined in:  [generated/decomposition/FastICA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/FastICA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L19)
+Defined in:  [generated/decomposition/FastICA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/FastICA.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L289)
+Defined in: [generated/decomposition/FastICA.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L289)
 
 ### feature\_names\_in\_
 
@@ -94,7 +94,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/FastICA.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L382)
+Defined in: [generated/decomposition/FastICA.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L382)
 
 ### mean\_
 
@@ -110,7 +110,7 @@ mean_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/decomposition/FastICA.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L335)
+Defined in: [generated/decomposition/FastICA.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L335)
 
 ### mixing\_
 
@@ -126,7 +126,7 @@ mixing_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/FastICA.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L312)
+Defined in: [generated/decomposition/FastICA.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L312)
 
 ### n\_features\_in\_
 
@@ -142,7 +142,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/FastICA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L357)
+Defined in: [generated/decomposition/FastICA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L357)
 
 ### n\_iter\_
 
@@ -158,7 +158,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/FastICA.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L407)
+Defined in: [generated/decomposition/FastICA.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L407)
 
 ### py
 
@@ -172,7 +172,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/FastICA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L30)
+Defined in:  [generated/decomposition/FastICA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L30)
 
 #### Signature
 
@@ -190,7 +190,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/FastICA.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L34)
+Defined in: [generated/decomposition/FastICA.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L34)
 
 ### whitening\_
 
@@ -206,7 +206,7 @@ whitening_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/FastICA.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L430)
+Defined in: [generated/decomposition/FastICA.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L430)
 
 ## Methods
 
@@ -226,7 +226,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L92)
+Defined in:  [generated/decomposition/FastICA.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L92)
 
 ### fit()
 
@@ -248,7 +248,7 @@ fit(opts: FastICAFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L109)
+Defined in:  [generated/decomposition/FastICA.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L109)
 
 ### fit\_transform()
 
@@ -270,7 +270,7 @@ fit_transform(opts: FastICAFitTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/FastICA.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L137)
+Defined in:  [generated/decomposition/FastICA.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L137)
 
 ### get\_feature\_names\_out()
 
@@ -294,7 +294,7 @@ get_feature_names_out(opts: FastICAGetFeatureNamesOutOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L167)
+Defined in:  [generated/decomposition/FastICA.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L167)
 
 ### init()
 
@@ -318,7 +318,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L43)
+Defined in:  [generated/decomposition/FastICA.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L43)
 
 ### inverse\_transform()
 
@@ -340,7 +340,7 @@ inverse_transform(opts: FastICAInverseTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/FastICA.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L197)
+Defined in:  [generated/decomposition/FastICA.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L197)
 
 ### set\_output()
 
@@ -364,7 +364,7 @@ set_output(opts: FastICASetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L231)
+Defined in:  [generated/decomposition/FastICA.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L231)
 
 ### transform()
 
@@ -386,4 +386,4 @@ transform(opts: FastICATransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/FastICA.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/FastICA.ts#L259)
+Defined in:  [generated/decomposition/FastICA.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L259)

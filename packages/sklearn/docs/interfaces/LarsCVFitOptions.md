@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/LarsCV.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L515)
+Defined in:  [generated/linear\_model/LarsCV.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LarsCV.ts#L515)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/linear\_model/LarsCV.ts:515](https://github.com/transiti
 
 Target values.
 
-Defined in:  [generated/linear\_model/LarsCV.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LarsCV.ts#L520)
+Defined in:  [generated/linear\_model/LarsCV.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LarsCV.ts#L520)

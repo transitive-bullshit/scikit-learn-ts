@@ -8,7 +8,7 @@
 
 Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format.
 
-Defined in:  [generated/cluster/KMeans.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L578)
+Defined in:  [generated/cluster/KMeans.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L578)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cluster/KMeans.ts:578](https://github.com/transitive-bul
 
 The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
 
-Defined in:  [generated/cluster/KMeans.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L588)
+Defined in:  [generated/cluster/KMeans.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L588)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/cluster/KMeans.ts:588](https://github.com/transitive-bul
 
 Not used, present here for API consistency by convention.
 
-Defined in:  [generated/cluster/KMeans.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L583)
+Defined in:  [generated/cluster/KMeans.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L583)

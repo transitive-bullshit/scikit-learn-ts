@@ -26,7 +26,7 @@ new KMeans(opts?: KMeansOptions): KMeans;
 
 [`KMeans`](KMeans.md)
 
-Defined in:  [generated/cluster/KMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L23)
+Defined in:  [generated/cluster/KMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/cluster/KMeans.ts:23](https://github.com/transitive-bull
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/KMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L21)
+Defined in:  [generated/cluster/KMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/KMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L20)
+Defined in:  [generated/cluster/KMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/KMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L19)
+Defined in:  [generated/cluster/KMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/KMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L16)
+Defined in:  [generated/cluster/KMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/KMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L17)
+Defined in:  [generated/cluster/KMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L17)
 
 ## Accessors
 
@@ -76,9 +76,9 @@ cluster_centers_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
+Defined in:  [generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
 
-Defined in:  [generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
+Defined in:  [generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
 
 ### feature\_names\_in\_
 
@@ -94,9 +94,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L476)
+Defined in:  [generated/cluster/KMeans.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L476)
 
-Defined in:  [generated/cluster/KMeans.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L476)
+Defined in:  [generated/cluster/KMeans.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L476)
 
 ### inertia\_
 
@@ -112,9 +112,9 @@ inertia_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L408)
+Defined in:  [generated/cluster/KMeans.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L408)
 
-Defined in:  [generated/cluster/KMeans.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L408)
+Defined in:  [generated/cluster/KMeans.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L408)
 
 ### labels\_
 
@@ -130,9 +130,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L386)
+Defined in:  [generated/cluster/KMeans.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L386)
 
-Defined in:  [generated/cluster/KMeans.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L386)
+Defined in:  [generated/cluster/KMeans.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L386)
 
 ### n\_features\_in\_
 
@@ -148,9 +148,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L453)
+Defined in:  [generated/cluster/KMeans.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L453)
 
-Defined in:  [generated/cluster/KMeans.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L453)
+Defined in:  [generated/cluster/KMeans.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L453)
 
 ### n\_iter\_
 
@@ -166,9 +166,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L431)
+Defined in:  [generated/cluster/KMeans.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L431)
 
-Defined in:  [generated/cluster/KMeans.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L431)
+Defined in:  [generated/cluster/KMeans.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L431)
 
 ### py
 
@@ -182,7 +182,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/KMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L28)
+Defined in:  [generated/cluster/KMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L28)
 
 #### Signature
 
@@ -200,9 +200,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/KMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L32)
+Defined in:  [generated/cluster/KMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L32)
 
-Defined in:  [generated/cluster/KMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L28) [generated/cluster/KMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L32)
+Defined in:  [generated/cluster/KMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L28) [generated/cluster/KMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L32)
 
 ## Methods
 
@@ -222,7 +222,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/KMeans.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L88)
+Defined in:  [generated/cluster/KMeans.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L88)
 
 ### fit()
 
@@ -244,7 +244,7 @@ fit(opts: KMeansFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/KMeans.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L105)
+Defined in:  [generated/cluster/KMeans.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L105)
 
 ### fit\_predict()
 
@@ -268,7 +268,7 @@ fit_predict(opts: KMeansFitPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L139)
+Defined in:  [generated/cluster/KMeans.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L139)
 
 ### fit\_transform()
 
@@ -292,7 +292,7 @@ fit_transform(opts: KMeansFitTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/KMeans.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L173)
+Defined in:  [generated/cluster/KMeans.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L173)
 
 ### get\_feature\_names\_out()
 
@@ -316,7 +316,7 @@ get_feature_names_out(opts: KMeansGetFeatureNamesOutOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/KMeans.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L207)
+Defined in:  [generated/cluster/KMeans.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L207)
 
 ### init()
 
@@ -340,7 +340,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/KMeans.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L41)
+Defined in:  [generated/cluster/KMeans.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L41)
 
 ### predict()
 
@@ -364,7 +364,7 @@ predict(opts: KMeansPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L239)
+Defined in:  [generated/cluster/KMeans.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L239)
 
 ### score()
 
@@ -386,7 +386,7 @@ score(opts: KMeansScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L269)
+Defined in:  [generated/cluster/KMeans.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L269)
 
 ### set\_output()
 
@@ -410,7 +410,7 @@ set_output(opts: KMeansSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/KMeans.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L303)
+Defined in:  [generated/cluster/KMeans.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L303)
 
 ### transform()
 
@@ -434,4 +434,4 @@ transform(opts: KMeansTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/KMeans.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/KMeans.ts#L333)
+Defined in:  [generated/cluster/KMeans.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L333)

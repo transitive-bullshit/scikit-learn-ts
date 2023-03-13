@@ -12,7 +12,7 @@ If `true`, the support of robust location and covariance estimates is computed, 
 
 `false`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L783)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L783)
 
 ### contamination?
 
@@ -24,7 +24,7 @@ The amount of contamination of the data set, i.e. the proportion of outliers in 
 
 `0.1`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L795)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L795)
 
 ### random\_state?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/covariance/EllipticEnvelope.ts:795](https://github.com/t
 
 Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:800](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L800)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:800](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L800)
 
 ### store\_precision?
 
@@ -44,7 +44,7 @@ Specify if the estimated precision is stored.
 
 `true`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L776)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L776)
 
 ### support\_fraction?
 
@@ -52,4 +52,4 @@ Defined in:  [generated/covariance/EllipticEnvelope.ts:776](https://github.com/t
 
 The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support\_fraction will be used within the algorithm: `\[n\_sample + n\_features + 1\] / 2`. Range is (0, 1).
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L788)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L788)

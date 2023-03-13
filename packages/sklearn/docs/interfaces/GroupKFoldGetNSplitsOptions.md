@@ -8,7 +8,7 @@
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L173)
+Defined in:  [generated/model\_selection/GroupKFold.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L173)
 
 ### groups?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/GroupKFold.ts:173](https://github.com/t
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L183)
+Defined in:  [generated/model\_selection/GroupKFold.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L183)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/model\_selection/GroupKFold.ts:183](https://github.com/t
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L178)
+Defined in:  [generated/model\_selection/GroupKFold.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L178)

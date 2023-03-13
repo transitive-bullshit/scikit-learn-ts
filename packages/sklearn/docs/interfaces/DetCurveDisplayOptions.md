@@ -8,7 +8,7 @@
 
 Name of estimator. If `undefined`, the estimator name is not shown.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L310)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L310)
 
 ### fnr?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:310](https://github.com/trans
 
 False negative rate.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L305)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L305)
 
 ### fpr?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:305](https://github.com/trans
 
 False positive rate.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L300)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L300)
 
 ### pos\_label?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:300](https://github.com/trans
 
 The label of the positive class.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L315)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L315)

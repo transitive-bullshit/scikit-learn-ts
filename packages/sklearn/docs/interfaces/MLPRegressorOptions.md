@@ -12,7 +12,7 @@ Activation function for the hidden layer.
 
 `'relu'`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L601)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L601)
 
 ### alpha?
 
@@ -24,7 +24,7 @@ Strength of the L2 regularization term. The L2 regularization term is divided by
 
 `0.0001`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L615)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L615)
 
 ### batch\_size?
 
@@ -36,7 +36,7 @@ Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the
 
 `'auto'`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L622)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L622)
 
 ### beta\_1?
 
@@ -48,7 +48,7 @@ Exponential decay rate for estimates of first moment vector in adam, should be i
 
 `0.9`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L718)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L718)
 
 ### beta\_2?
 
@@ -60,7 +60,7 @@ Exponential decay rate for estimates of second moment vector in adam, should be 
 
 `0.999`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L725)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:725](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L725)
 
 ### early\_stopping?
 
@@ -72,7 +72,7 @@ Whether to use early stopping to terminate training when validation score is not
 
 `false`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L704)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L704)
 
 ### epsilon?
 
@@ -84,7 +84,7 @@ Value for numerical stability in adam. Only used when solver=’adam’.
 
 `1e-8`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L732)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L732)
 
 ### hidden\_layer\_sizes?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/neural\_network/MLPRegressor.ts:732](https://github.com/
 
 The ith element represents the number of neurons in the ith hidden layer.
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L594)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L594)
 
 ### learning\_rate?
 
@@ -104,7 +104,7 @@ Learning rate schedule for weight updates.
 
 `'constant'`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L629)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L629)
 
 ### learning\_rate\_init?
 
@@ -116,7 +116,7 @@ The initial learning rate used. It controls the step-size in updating the weight
 
 `0.001`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L636)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L636)
 
 ### max\_fun?
 
@@ -128,7 +128,7 @@ Only used when solver=’lbfgs’. Maximum number of function calls. The solver 
 
 `15000`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:746](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L746)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:746](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L746)
 
 ### max\_iter?
 
@@ -140,7 +140,7 @@ Maximum number of iterations. The solver iterates until convergence (determined 
 
 `200`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L650)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L650)
 
 ### momentum?
 
@@ -152,7 +152,7 @@ Momentum for gradient descent update. Should be between 0 and 1. Only used when 
 
 `0.9`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L690)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:690](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L690)
 
 ### n\_iter\_no\_change?
 
@@ -164,7 +164,7 @@ Maximum number of epochs to not meet `tol` improvement. Only effective when solv
 
 `10`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
 
 ### nesterovs\_momentum?
 
@@ -176,7 +176,7 @@ Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and moment
 
 `true`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L697)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L697)
 
 ### power\_t?
 
@@ -188,7 +188,7 @@ The exponent for inverse scaling learning rate. It is used in updating effective
 
 `0.5`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L643)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L643)
 
 ### random\_state?
 
@@ -196,7 +196,7 @@ Defined in:  [generated/neural\_network/MLPRegressor.ts:643](https://github.com/
 
 Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L662)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L662)
 
 ### shuffle?
 
@@ -208,7 +208,7 @@ Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or
 
 `true`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L657)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L657)
 
 ### solver?
 
@@ -220,7 +220,7 @@ The solver for weight optimization.
 
 `'adam'`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L608)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L608)
 
 ### tol?
 
@@ -232,7 +232,7 @@ Tolerance for the optimization. When the loss or score is not improving by at le
 
 `0.0001`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L669)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:669](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L669)
 
 ### validation\_fraction?
 
@@ -244,7 +244,7 @@ The proportion of training data to set aside as validation set for early stoppin
 
 `0.1`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L711)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L711)
 
 ### verbose?
 
@@ -256,7 +256,7 @@ Whether to print progress messages to stdout.
 
 `false`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L676)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:676](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L676)
 
 ### warm\_start?
 
@@ -268,4 +268,4 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 `false`
 
-Defined in:  [generated/neural\_network/MLPRegressor.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L683)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L683)

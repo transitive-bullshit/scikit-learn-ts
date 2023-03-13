@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:863](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L863)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:863](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L863)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/tree/DecisionTreeClassifier.ts:863](https://github.com/t
 
 Sample weights.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:873](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L873)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:873](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L873)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/tree/DecisionTreeClassifier.ts:873](https://github.com/t
 
 True labels for `X`.
 
-Defined in:  [generated/tree/DecisionTreeClassifier.ts:868](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L868)
+Defined in:  [generated/tree/DecisionTreeClassifier.ts:868](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeClassifier.ts#L868)

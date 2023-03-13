@@ -12,7 +12,7 @@ Constant that multiplies the regularization term. The higher the value, the stro
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L478)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L478)
 
 ### average?
 
@@ -24,7 +24,7 @@ When set to `true`, computes the averaged SGD weights across all updates and sto
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L590)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L590)
 
 ### early\_stopping?
 
@@ -36,7 +36,7 @@ Whether to use early stopping to terminate training when validation score is not
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L560)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L560)
 
 ### epsilon?
 
@@ -48,7 +48,7 @@ Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’
 
 `0.1`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L527)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L527)
 
 ### eta0?
 
@@ -60,7 +60,7 @@ The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptiv
 
 `0.01`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L546)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L546)
 
 ### fit\_intercept?
 
@@ -72,7 +72,7 @@ Whether the intercept should be estimated or not. If `false`, the data is assume
 
 `true`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L492)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L492)
 
 ### l1\_ratio?
 
@@ -84,7 +84,7 @@ The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 correspo
 
 `0.15`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L485)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L485)
 
 ### learning\_rate?
 
@@ -96,7 +96,7 @@ The learning rate schedule:
 
 `'invscaling'`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L539)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L539)
 
 ### loss?
 
@@ -112,7 +112,7 @@ More details about the losses formulas can be found in the [User Guide](../sgd.h
 
 `'squared_error'`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L464)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L464)
 
 ### max\_iter?
 
@@ -124,7 +124,7 @@ The maximum number of passes over the training data (aka epochs). It only impact
 
 `1000`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L499)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L499)
 
 ### n\_iter\_no\_change?
 
@@ -136,7 +136,7 @@ Number of iterations with no improvement to wait before stopping fitting. Conver
 
 `5`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L574)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L574)
 
 ### penalty?
 
@@ -148,7 +148,7 @@ The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is 
 
 `'l2'`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L471)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L471)
 
 ### power\_t?
 
@@ -160,7 +160,7 @@ The exponent for inverse scaling learning rate.
 
 `0.25`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L553)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L553)
 
 ### random\_state?
 
@@ -168,7 +168,7 @@ Defined in:  [generated/linear\_model/SGDRegressor.ts:553](https://github.com/tr
 
 Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L532)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L532)
 
 ### shuffle?
 
@@ -180,7 +180,7 @@ Whether or not the training data should be shuffled after each epoch.
 
 `true`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L513)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L513)
 
 ### tol?
 
@@ -192,7 +192,7 @@ The stopping criterion. If it is not `undefined`, training will stop when (loss 
 
 `0.001`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L506)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L506)
 
 ### validation\_fraction?
 
@@ -204,7 +204,7 @@ The proportion of training data to set aside as validation set for early stoppin
 
 `0.1`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L567)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L567)
 
 ### verbose?
 
@@ -216,7 +216,7 @@ The verbosity level.
 
 `0`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L520)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L520)
 
 ### warm\_start?
 
@@ -230,4 +230,4 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L583)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L583)

@@ -8,7 +8,7 @@
 
 The covariance to compare with.
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L821)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:821](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L821)
 
 ### norm?
 
@@ -20,7 +20,7 @@ The type of norm used to compute the error. Available error types: - ‘frobeniu
 
 `'frobenius'`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:828](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L828)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:828](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L828)
 
 ### scaling?
 
@@ -32,7 +32,7 @@ If `true` (default), the squared error norm is divided by n\_features. If `false
 
 `true`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:835](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L835)
 
 ### squared?
 
@@ -44,4 +44,4 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 `true`
 
-Defined in:  [generated/covariance/EllipticEnvelope.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L842)
+Defined in:  [generated/covariance/EllipticEnvelope.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EllipticEnvelope.ts#L842)

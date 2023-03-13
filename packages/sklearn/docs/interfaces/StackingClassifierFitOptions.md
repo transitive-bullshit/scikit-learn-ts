@@ -8,7 +8,7 @@
 
 Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L638)
+Defined in:  [generated/ensemble/StackingClassifier.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L638)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/StackingClassifier.ts:638](https://github.com/t
 
 Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L648)
+Defined in:  [generated/ensemble/StackingClassifier.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L648)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/StackingClassifier.ts:648](https://github.com/t
 
 Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](../../glossary.html#term-fit).
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L643)
+Defined in:  [generated/ensemble/StackingClassifier.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L643)

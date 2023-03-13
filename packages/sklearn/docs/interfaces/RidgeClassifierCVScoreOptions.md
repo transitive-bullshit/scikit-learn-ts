@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L509)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L509)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:509](https://github.c
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L519)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L519)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:519](https://github.c
 
 True labels for `X`.
 
-Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L514)
+Defined in:  [generated/linear\_model/RidgeClassifierCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RidgeClassifierCV.ts#L514)

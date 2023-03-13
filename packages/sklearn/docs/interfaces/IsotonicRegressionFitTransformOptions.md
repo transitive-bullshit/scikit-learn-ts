@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L546)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L546)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/isotonic/IsotonicRegression.ts:546](https://github.com/t
 
 Additional fit parameters.
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L556)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L556)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/isotonic/IsotonicRegression.ts:556](https://github.com/t
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L551)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L551)

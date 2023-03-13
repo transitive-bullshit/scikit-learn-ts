@@ -12,7 +12,7 @@ Dissimilarity measure to use:
 
 `'euclidean'`
 
-Defined in:  [generated/manifold/MDS.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L365)
+Defined in:  [generated/manifold/MDS.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L365)
 
 ### eps?
 
@@ -24,7 +24,7 @@ Relative tolerance with respect to stress at which to declare convergence. The v
 
 `0.001`
 
-Defined in:  [generated/manifold/MDS.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L346)
+Defined in:  [generated/manifold/MDS.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L346)
 
 ### max\_iter?
 
@@ -36,7 +36,7 @@ Maximum number of iterations of the SMACOF algorithm for a single run.
 
 `300`
 
-Defined in:  [generated/manifold/MDS.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L332)
+Defined in:  [generated/manifold/MDS.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L332)
 
 ### metric?
 
@@ -48,7 +48,7 @@ If `true`, perform metric MDS; otherwise, perform nonmetric MDS. When `false` (i
 
 `true`
 
-Defined in:  [generated/manifold/MDS.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L318)
+Defined in:  [generated/manifold/MDS.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L318)
 
 ### n\_components?
 
@@ -60,7 +60,7 @@ Number of dimensions in which to immerse the dissimilarities.
 
 `2`
 
-Defined in:  [generated/manifold/MDS.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L311)
+Defined in:  [generated/manifold/MDS.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L311)
 
 ### n\_init?
 
@@ -72,7 +72,7 @@ Number of times the SMACOF algorithm will be run with different initializations.
 
 `4`
 
-Defined in:  [generated/manifold/MDS.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L325)
+Defined in:  [generated/manifold/MDS.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L325)
 
 ### n\_jobs?
 
@@ -82,7 +82,7 @@ The number of jobs to use for the computation. If multiple initializations are u
 
 `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/manifold/MDS.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L353)
+Defined in:  [generated/manifold/MDS.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L353)
 
 ### normalized\_stress?
 
@@ -90,7 +90,7 @@ Defined in:  [generated/manifold/MDS.ts:353](https://github.com/transitive-bulls
 
 Whether use and return normed stress value (Stress-1) instead of raw stress calculated by default. Only supported in non-metric MDS.
 
-Defined in:  [generated/manifold/MDS.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L370)
+Defined in:  [generated/manifold/MDS.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L370)
 
 ### random\_state?
 
@@ -98,7 +98,7 @@ Defined in:  [generated/manifold/MDS.ts:370](https://github.com/transitive-bulls
 
 Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/manifold/MDS.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L358)
+Defined in:  [generated/manifold/MDS.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L358)
 
 ### verbose?
 
@@ -110,4 +110,4 @@ Level of verbosity.
 
 `0`
 
-Defined in:  [generated/manifold/MDS.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/MDS.ts#L339)
+Defined in:  [generated/manifold/MDS.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L339)

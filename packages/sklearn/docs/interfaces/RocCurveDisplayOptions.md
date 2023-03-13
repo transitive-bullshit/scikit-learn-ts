@@ -8,7 +8,7 @@
 
 Name of estimator. If `undefined`, the estimator name is not shown.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L323)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L323)
 
 ### fpr?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:323](https://github.com/trans
 
 False positive rate.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L308)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L308)
 
 ### pos\_label?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:308](https://github.com/trans
 
 The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L328)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L328)
 
 ### roc\_auc?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:328](https://github.com/trans
 
 Area under ROC curve. If `undefined`, the roc\_auc score is not shown.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L318)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L318)
 
 ### tpr?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:318](https://github.com/trans
 
 True positive rate.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L313)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L313)

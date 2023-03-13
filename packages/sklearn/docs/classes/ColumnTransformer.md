@@ -28,7 +28,7 @@ new ColumnTransformer(opts?: ColumnTransformerOptions): ColumnTransformer;
 
 [`ColumnTransformer`](ColumnTransformer.md)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L25)
+Defined in:  [generated/compose/ColumnTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/compose/ColumnTransformer.ts:25](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L23)
+Defined in:  [generated/compose/ColumnTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L22)
+Defined in:  [generated/compose/ColumnTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L21)
+Defined in:  [generated/compose/ColumnTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L18)
+Defined in:  [generated/compose/ColumnTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L19)
+Defined in:  [generated/compose/ColumnTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L360)
+Defined in:  [generated/compose/ColumnTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L360)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L360)
+Defined in:  [generated/compose/ColumnTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L360)
 
 ### output\_indices\_
 
@@ -96,9 +96,9 @@ output_indices_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L333)
+Defined in:  [generated/compose/ColumnTransformer.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L333)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L333)
+Defined in:  [generated/compose/ColumnTransformer.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L333)
 
 ### py
 
@@ -112,7 +112,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L30)
+Defined in:  [generated/compose/ColumnTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L30)
 
 #### Signature
 
@@ -130,9 +130,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L34)
+Defined in:  [generated/compose/ColumnTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L34)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L30) [generated/compose/ColumnTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L34)
+Defined in:  [generated/compose/ColumnTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L30) [generated/compose/ColumnTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L34)
 
 ### sparse\_output\_
 
@@ -148,9 +148,9 @@ sparse_output_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L306)
+Defined in:  [generated/compose/ColumnTransformer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L306)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L306)
+Defined in:  [generated/compose/ColumnTransformer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L306)
 
 ### transformers\_
 
@@ -166,9 +166,9 @@ transformers_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L279)
+Defined in:  [generated/compose/ColumnTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L279)
 
-Defined in:  [generated/compose/ColumnTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L279)
+Defined in:  [generated/compose/ColumnTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L279)
 
 ## Methods
 
@@ -188,7 +188,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L95)
+Defined in:  [generated/compose/ColumnTransformer.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L95)
 
 ### fit()
 
@@ -210,7 +210,7 @@ fit(opts: ColumnTransformerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L112)
+Defined in:  [generated/compose/ColumnTransformer.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L112)
 
 ### fit\_transform()
 
@@ -232,7 +232,7 @@ fit_transform(opts: ColumnTransformerFitTransformOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L144)
+Defined in:  [generated/compose/ColumnTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L144)
 
 ### get\_feature\_names\_out()
 
@@ -254,7 +254,7 @@ get_feature_names_out(opts: ColumnTransformerGetFeatureNamesOutOptions): Promise
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L180)
+Defined in:  [generated/compose/ColumnTransformer.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L180)
 
 ### init()
 
@@ -278,7 +278,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L43)
+Defined in:  [generated/compose/ColumnTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L43)
 
 ### set\_output()
 
@@ -302,7 +302,7 @@ set_output(opts: ColumnTransformerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L217)
+Defined in:  [generated/compose/ColumnTransformer.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L217)
 
 ### transform()
 
@@ -324,4 +324,4 @@ transform(opts: ColumnTransformerTransformOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/compose/ColumnTransformer.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L247)
+Defined in:  [generated/compose/ColumnTransformer.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L247)

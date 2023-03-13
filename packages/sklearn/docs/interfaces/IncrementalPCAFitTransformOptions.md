@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L727)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L727)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/IncrementalPCA.ts:727](https://github.com/
 
 Additional fit parameters.
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L737)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L737)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/IncrementalPCA.ts:737](https://github.com/
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L732)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L732)

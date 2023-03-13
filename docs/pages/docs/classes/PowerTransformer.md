@@ -34,7 +34,7 @@ new PowerTransformer(opts?: PowerTransformerOptions): PowerTransformer;
 
 [`PowerTransformer`](PowerTransformer.md)
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L31)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L31)
 
 ## Properties
 
@@ -42,31 +42,31 @@ Defined in:  [generated/preprocessing/PowerTransformer.ts:31](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L29)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L29)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L28)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L28)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L27)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L27)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L24)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L24)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L25)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L25)
 
 ## Accessors
 
@@ -84,7 +84,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/PowerTransformer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L363)
+Defined in: [generated/preprocessing/PowerTransformer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L363)
 
 ### lambdas\_
 
@@ -100,7 +100,7 @@ lambdas_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/preprocessing/PowerTransformer.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L309)
+Defined in: [generated/preprocessing/PowerTransformer.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L309)
 
 ### n\_features\_in\_
 
@@ -116,7 +116,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/PowerTransformer.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L336)
+Defined in: [generated/preprocessing/PowerTransformer.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L336)
 
 ### py
 
@@ -130,7 +130,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L36)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L36)
 
 #### Signature
 
@@ -148,7 +148,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/PowerTransformer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L40)
+Defined in: [generated/preprocessing/PowerTransformer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L40)
 
 ## Methods
 
@@ -168,7 +168,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L93)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L93)
 
 ### fit()
 
@@ -192,7 +192,7 @@ fit(opts: PowerTransformerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L112)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L112)
 
 ### fit\_transform()
 
@@ -214,7 +214,7 @@ fit_transform(opts: PowerTransformerFitTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L142)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L142)
 
 ### get\_feature\_names\_out()
 
@@ -236,7 +236,7 @@ get_feature_names_out(opts: PowerTransformerGetFeatureNamesOutOptions): Promise<
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L176)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L176)
 
 ### init()
 
@@ -260,7 +260,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L49)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L49)
 
 ### inverse\_transform()
 
@@ -284,7 +284,7 @@ inverse_transform(opts: PowerTransformerInverseTransformOptions): Promise<ArrayL
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L213)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L213)
 
 ### set\_output()
 
@@ -308,7 +308,7 @@ set_output(opts: PowerTransformerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L249)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L249)
 
 ### transform()
 
@@ -330,4 +330,4 @@ transform(opts: PowerTransformerTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/preprocessing/PowerTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L279)
+Defined in:  [generated/preprocessing/PowerTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PowerTransformer.ts#L279)

@@ -12,7 +12,7 @@ Use `estimator` instead.
 
 `'deprecated'`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L648)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L648)
 
 ### bootstrap?
 
@@ -24,7 +24,7 @@ Whether samples are drawn with replacement. If `false`, sampling without replace
 
 `true`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L603)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L603)
 
 ### bootstrap\_features?
 
@@ -36,7 +36,7 @@ Whether features are drawn with replacement.
 
 `false`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L610)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L610)
 
 ### estimator?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/ensemble/BaggingClassifier.ts:610](https://github.com/tr
 
 The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier").
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L575)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L575)
 
 ### max\_features?
 
@@ -56,7 +56,7 @@ The number of features to draw from X to train each base estimator ( without rep
 
 `1`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L596)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L596)
 
 ### max\_samples?
 
@@ -68,7 +68,7 @@ The number of samples to draw from X to train each base estimator (with replacem
 
 `1`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L589)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L589)
 
 ### n\_estimators?
 
@@ -80,7 +80,7 @@ The number of base estimators in the ensemble.
 
 `10`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L582)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L582)
 
 ### n\_jobs?
 
@@ -88,7 +88,7 @@ Defined in:  [generated/ensemble/BaggingClassifier.ts:582](https://github.com/tr
 
 The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L629)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L629)
 
 ### oob\_score?
 
@@ -100,7 +100,7 @@ Whether to use out-of-bag samples to estimate the generalization error. Only ava
 
 `false`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L617)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L617)
 
 ### random\_state?
 
@@ -108,7 +108,7 @@ Defined in:  [generated/ensemble/BaggingClassifier.ts:617](https://github.com/tr
 
 Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L634)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L634)
 
 ### verbose?
 
@@ -120,7 +120,7 @@ Controls the verbosity when fitting and predicting.
 
 `0`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L641)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L641)
 
 ### warm\_start?
 
@@ -132,4 +132,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/BaggingClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L624)
+Defined in:  [generated/ensemble/BaggingClassifier.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingClassifier.ts#L624)

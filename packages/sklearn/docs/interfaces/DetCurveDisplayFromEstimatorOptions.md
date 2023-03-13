@@ -8,7 +8,7 @@
 
 Input values.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L327)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L327)
 
 ### ax?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:327](https://github.com/trans
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L357)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L357)
 
 ### estimator?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:357](https://github.com/trans
 
 Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L322)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L322)
 
 ### kwargs?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:322](https://github.com/trans
 
 Additional keywords arguments passed to matplotlib `plot` function.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L362)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L362)
 
 ### name?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:362](https://github.com/trans
 
 Name of DET curve for labeling. If `undefined`, use the name of the estimator.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L352)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L352)
 
 ### pos\_label?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:352](https://github.com/trans
 
 The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L347)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L347)
 
 ### response\_method?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:347](https://github.com/trans
 
 Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the predicted target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L342)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L342)
 
 ### sample\_weight?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:342](https://github.com/trans
 
 Sample weights.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L337)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L337)
 
 ### y?
 
@@ -72,4 +72,4 @@ Defined in:  [generated/metrics/DetCurveDisplay.ts:337](https://github.com/trans
 
 Target values.
 
-Defined in:  [generated/metrics/DetCurveDisplay.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L332)
+Defined in:  [generated/metrics/DetCurveDisplay.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L332)

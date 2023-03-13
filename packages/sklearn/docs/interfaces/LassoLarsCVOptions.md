@@ -12,7 +12,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L524)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L524)
 
 ### cv?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/linear\_model/LassoLarsCV.ts:524](https://github.com/tra
 
 Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L500)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L500)
 
 ### eps?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/linear\_model/LassoLarsCV.ts:500](https://github.com/tra
 
 The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L517)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L517)
 
 ### fit\_intercept?
 
@@ -40,7 +40,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L467)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L467)
 
 ### max\_iter?
 
@@ -52,7 +52,7 @@ Maximum number of iterations to perform.
 
 `500`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L481)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L481)
 
 ### max\_n\_alphas?
 
@@ -64,7 +64,7 @@ The maximum number of points on the path used to compute the residuals in the cr
 
 `1000`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L507)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L507)
 
 ### n\_jobs?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/linear\_model/LassoLarsCV.ts:507](https://github.com/tra
 
 Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L512)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L512)
 
 ### normalize?
 
@@ -84,7 +84,7 @@ This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, th
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L488)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L488)
 
 ### positive?
 
@@ -96,7 +96,7 @@ Restrict coefficients to be >= 0. Be aware that you might want to remove fit\_in
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L531)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L531)
 
 ### precompute?
 
@@ -108,7 +108,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L495)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L495)
 
 ### verbose?
 
@@ -120,4 +120,4 @@ Sets the verbosity amount.
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLarsCV.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L474)
+Defined in:  [generated/linear\_model/LassoLarsCV.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsCV.ts#L474)

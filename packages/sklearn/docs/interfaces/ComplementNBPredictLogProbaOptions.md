@@ -8,4 +8,4 @@
 
 The input samples.
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L629)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L629)

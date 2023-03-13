@@ -28,7 +28,7 @@ new Bunch(opts?: BunchOptions): Bunch;
 
 [`Bunch`](Bunch.md)
 
-Defined in:  [generated/utils/Bunch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L25)
+Defined in:  [generated/utils/Bunch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/utils/Bunch.ts:25](https://github.com/transitive-bullshi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/utils/Bunch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L23)
+Defined in:  [generated/utils/Bunch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/utils/Bunch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L22)
+Defined in:  [generated/utils/Bunch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/utils/Bunch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L21)
+Defined in:  [generated/utils/Bunch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/utils/Bunch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L18)
+Defined in:  [generated/utils/Bunch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/utils/Bunch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L19)
+Defined in:  [generated/utils/Bunch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L19)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/utils/Bunch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L30)
+Defined in:  [generated/utils/Bunch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L30)
 
 #### Signature
 
@@ -94,9 +94,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/utils/Bunch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L34)
+Defined in:  [generated/utils/Bunch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L34)
 
-Defined in:  [generated/utils/Bunch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L30) [generated/utils/Bunch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L34)
+Defined in:  [generated/utils/Bunch.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L30) [generated/utils/Bunch.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L34)
 
 ## Methods
 
@@ -118,7 +118,7 @@ clear(opts: BunchClearOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L94)
+Defined in:  [generated/utils/Bunch.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L94)
 
 ### copy()
 
@@ -138,7 +138,7 @@ copy(opts: BunchCopyOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L117)
+Defined in:  [generated/utils/Bunch.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L117)
 
 ### dispose()
 
@@ -156,7 +156,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/utils/Bunch.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L80)
+Defined in:  [generated/utils/Bunch.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L80)
 
 ### fromkeys()
 
@@ -178,7 +178,7 @@ fromkeys(opts: BunchFromkeysOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L143)
+Defined in:  [generated/utils/Bunch.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L143)
 
 ### get()
 
@@ -200,7 +200,7 @@ get(opts: BunchGetOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L169)
+Defined in:  [generated/utils/Bunch.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L169)
 
 ### init()
 
@@ -224,7 +224,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/utils/Bunch.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L43)
+Defined in:  [generated/utils/Bunch.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L43)
 
 ### items()
 
@@ -244,7 +244,7 @@ items(opts: BunchItemsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L192)
+Defined in:  [generated/utils/Bunch.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L192)
 
 ### keys()
 
@@ -264,7 +264,7 @@ keys(opts: BunchKeysOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L215)
+Defined in:  [generated/utils/Bunch.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L215)
 
 ### pop()
 
@@ -286,7 +286,7 @@ pop(opts: BunchPopOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L241)
+Defined in:  [generated/utils/Bunch.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L241)
 
 ### popitem()
 
@@ -310,7 +310,7 @@ popitem(opts: BunchPopitemOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L269)
+Defined in:  [generated/utils/Bunch.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L269)
 
 ### setdefault()
 
@@ -334,7 +334,7 @@ setdefault(opts: BunchSetdefaultOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L297)
+Defined in:  [generated/utils/Bunch.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L297)
 
 ### update()
 
@@ -356,7 +356,7 @@ update(opts: BunchUpdateOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L323)
+Defined in:  [generated/utils/Bunch.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L323)
 
 ### values()
 
@@ -376,4 +376,4 @@ values(opts: BunchValuesOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/Bunch.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/Bunch.ts#L346)
+Defined in:  [generated/utils/Bunch.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/Bunch.ts#L346)

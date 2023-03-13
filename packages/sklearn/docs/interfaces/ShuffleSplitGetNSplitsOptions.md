@@ -8,7 +8,7 @@
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/ShuffleSplit.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L190)
+Defined in:  [generated/model\_selection/ShuffleSplit.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L190)
 
 ### groups?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/ShuffleSplit.ts:190](https://github.com
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/ShuffleSplit.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L200)
+Defined in:  [generated/model\_selection/ShuffleSplit.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L200)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/model\_selection/ShuffleSplit.ts:200](https://github.com
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/ShuffleSplit.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L195)
+Defined in:  [generated/model\_selection/ShuffleSplit.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/ShuffleSplit.ts#L195)

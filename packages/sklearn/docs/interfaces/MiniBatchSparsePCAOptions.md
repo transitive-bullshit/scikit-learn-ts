@@ -12,7 +12,7 @@ Sparsity controlling parameter. Higher values lead to sparser components.
 
 `1`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L499)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L499)
 
 ### batch\_size?
 
@@ -24,7 +24,7 @@ The number of features to take in each mini batch.
 
 `3`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L530)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L530)
 
 ### callback?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:530](https://github.
 
 Callable that gets invoked every five iterations.
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L523)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L523)
 
 ### max\_iter?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:523](https://github.
 
 Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L518)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L518)
 
 ### max\_no\_improvement?
 
@@ -54,7 +54,7 @@ To disable convergence detection based on cost function, set `max\_no\_improveme
 
 `10`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L579)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L579)
 
 ### method?
 
@@ -66,7 +66,7 @@ Method to be used for optimization. lars: uses the least angle regression method
 
 `'lars'`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L556)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L556)
 
 ### n\_components?
 
@@ -74,7 +74,7 @@ Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:556](https://github.
 
 Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`.
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L492)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L492)
 
 ### n\_iter?
 
@@ -86,7 +86,7 @@ Number of iterations to perform for each mini batch.
 
 `100`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L513)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L513)
 
 ### n\_jobs?
 
@@ -94,7 +94,7 @@ Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:513](https://github.
 
 Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L549)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L549)
 
 ### random\_state?
 
@@ -102,7 +102,7 @@ Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:549](https://github.
 
 Used for random shuffling when `shuffle` is set to `true`, during online dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L561)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L561)
 
 ### ridge\_alpha?
 
@@ -114,7 +114,7 @@ Amount of ridge shrinkage to apply in order to improve conditioning when calling
 
 `0.01`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L506)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L506)
 
 ### shuffle?
 
@@ -126,7 +126,7 @@ Whether to shuffle the data before splitting it in batches.
 
 `true`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L544)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L544)
 
 ### tol?
 
@@ -140,7 +140,7 @@ To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
 
 `0.001`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L570)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L570)
 
 ### verbose?
 
@@ -152,4 +152,4 @@ Controls the verbosity; the higher, the more messages. Defaults to 0.
 
 `false`
 
-Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L537)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L537)

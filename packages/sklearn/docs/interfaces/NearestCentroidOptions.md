@@ -14,7 +14,7 @@ The centroids for the samples corresponding to each class is the point from whic
 
 `'euclidean'`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L300)
+Defined in:  [generated/neighbors/NearestCentroid.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L300)
 
 ### shrink\_threshold?
 
@@ -22,4 +22,4 @@ Defined in:  [generated/neighbors/NearestCentroid.ts:300](https://github.com/tra
 
 Threshold for shrinking centroids to remove features.
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L305)
+Defined in:  [generated/neighbors/NearestCentroid.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L305)

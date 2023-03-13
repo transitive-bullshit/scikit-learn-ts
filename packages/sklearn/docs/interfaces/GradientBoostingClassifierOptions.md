@@ -12,7 +12,7 @@ Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with 
 
 `0`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:922](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L922)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:922](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L922)
 
 ### criterion?
 
@@ -24,7 +24,7 @@ The function to measure the quality of a split. Supported criteria are ‘friedm
 
 `'friedman_mse'`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:825](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L825)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:825](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L825)
 
 ### init?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:825](https://gith
 
 An estimator object that is used to compute the initial predictions. `init` has to provide [`fit`](#sklearn.ensemble.GradientBoostingClassifier.fit "sklearn.ensemble.GradientBoostingClassifier.fit") and [`predict\_proba`](#sklearn.ensemble.GradientBoostingClassifier.predict_proba "sklearn.ensemble.GradientBoostingClassifier.predict_proba"). If ‘zero’, the initial raw predictions are set to zero. By default, a `DummyEstimator` predicting the classes priors is used.
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:867](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L867)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:867](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L867)
 
 ### learning\_rate?
 
@@ -44,7 +44,7 @@ Learning rate shrinks the contribution of each tree by `learning\_rate`. There i
 
 `0.1`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:804](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L804)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:804](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L804)
 
 ### loss?
 
@@ -56,7 +56,7 @@ The loss function to be optimized. ‘log\_loss’ refers to binomial and multin
 
 `'log_loss'`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L797)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L797)
 
 ### max\_depth?
 
@@ -68,7 +68,7 @@ Maximum depth of the individual regression estimators. The maximum depth limits 
 
 `3`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:853](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L853)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:853](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L853)
 
 ### max\_features?
 
@@ -76,7 +76,7 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:853](https://gith
 
 The number of features to consider when looking for the best split:
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:877](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L877)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:877](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L877)
 
 ### max\_leaf\_nodes?
 
@@ -84,7 +84,7 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:877](https://gith
 
 Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. Values must be in the range `\[2, inf)`. If `undefined`, then unlimited number of leaf nodes.
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:889](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L889)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:889](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L889)
 
 ### min\_impurity\_decrease?
 
@@ -98,7 +98,7 @@ The weighted impurity decrease equation is the following:
 
 `0`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L862)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L862)
 
 ### min\_samples\_leaf?
 
@@ -110,7 +110,7 @@ The minimum number of samples required to be at a leaf node. A split point at an
 
 `1`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:839](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L839)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:839](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L839)
 
 ### min\_samples\_split?
 
@@ -122,7 +122,7 @@ The minimum number of samples required to split an internal node:
 
 `2`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:832](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L832)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:832](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L832)
 
 ### min\_weight\_fraction\_leaf?
 
@@ -134,7 +134,7 @@ The minimum weighted fraction of the sum total of weights (of all the input samp
 
 `0`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:846](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L846)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:846](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L846)
 
 ### n\_estimators?
 
@@ -146,7 +146,7 @@ The number of boosting stages to perform. Gradient boosting is fairly robust to 
 
 `100`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:811](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L811)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:811](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L811)
 
 ### n\_iter\_no\_change?
 
@@ -154,7 +154,7 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:811](https://gith
 
 `n\_iter\_no\_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation\_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n\_iter\_no\_change` numbers of iterations. The split is stratified. Values must be in the range `\[1, inf)`.
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:908](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L908)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:908](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L908)
 
 ### random\_state?
 
@@ -162,7 +162,7 @@ Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:908](https://gith
 
 Controls the random seed given to each Tree estimator at each boosting iteration. In addition, it controls the random permutation of the features at each split (see Notes for more details). It also controls the random splitting of the training data to obtain a validation set if `n\_iter\_no\_change` is not `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L872)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L872)
 
 ### subsample?
 
@@ -174,7 +174,7 @@ The fraction of samples to be used for fitting the individual base learners. If 
 
 `1`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L818)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L818)
 
 ### tol?
 
@@ -186,7 +186,7 @@ Tolerance for the early stopping. When the loss is not improving by at least tol
 
 `0.0001`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:915](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L915)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:915](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L915)
 
 ### validation\_fraction?
 
@@ -198,7 +198,7 @@ The proportion of training data to set aside as validation set for early stoppin
 
 `0.1`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:903](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L903)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:903](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L903)
 
 ### verbose?
 
@@ -210,7 +210,7 @@ Enable verbose output. If 1 then it prints progress and performance once in a wh
 
 `0`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:884](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L884)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:884](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L884)
 
 ### warm\_start?
 
@@ -222,4 +222,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:896](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L896)
+Defined in:  [generated/ensemble/GradientBoostingClassifier.ts:896](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/GradientBoostingClassifier.ts#L896)

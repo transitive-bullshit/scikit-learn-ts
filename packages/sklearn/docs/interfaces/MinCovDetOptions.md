@@ -12,7 +12,7 @@ If `true`, the support of the robust location and the covariance estimates is co
 
 `false`
 
-Defined in:  [generated/covariance/MinCovDet.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L566)
+Defined in:  [generated/covariance/MinCovDet.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L566)
 
 ### random\_state?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/covariance/MinCovDet.ts:566](https://github.com/transiti
 
 Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/covariance/MinCovDet.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L576)
+Defined in:  [generated/covariance/MinCovDet.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L576)
 
 ### store\_precision?
 
@@ -32,7 +32,7 @@ Specify if the estimated precision is stored.
 
 `true`
 
-Defined in:  [generated/covariance/MinCovDet.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L559)
+Defined in:  [generated/covariance/MinCovDet.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L559)
 
 ### support\_fraction?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/covariance/MinCovDet.ts:559](https://github.com/transiti
 
 The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_sample + n\_features + 1) / 2`. The parameter must be in the range (0, 1\].
 
-Defined in:  [generated/covariance/MinCovDet.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/MinCovDet.ts#L571)
+Defined in:  [generated/covariance/MinCovDet.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L571)

@@ -32,7 +32,7 @@ new SGDRegressor(opts?: SGDRegressorOptions): SGDRegressor;
 
 [`SGDRegressor`](SGDRegressor.md)
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L29)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L29)
 
 ## Properties
 
@@ -40,31 +40,31 @@ Defined in:  [generated/linear\_model/SGDRegressor.ts:29](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L27)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L26)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L25)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L22)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L23)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L23)
 
 ## Accessors
 
@@ -82,7 +82,7 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L312)
+Defined in: [generated/linear\_model/SGDRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L312)
 
 ### feature\_names\_in\_
 
@@ -98,7 +98,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L431)
+Defined in: [generated/linear\_model/SGDRegressor.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L431)
 
 ### intercept\_
 
@@ -114,7 +114,7 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L335)
+Defined in: [generated/linear\_model/SGDRegressor.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L335)
 
 ### n\_features\_in\_
 
@@ -130,7 +130,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L406)
+Defined in: [generated/linear\_model/SGDRegressor.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L406)
 
 ### n\_iter\_
 
@@ -146,7 +146,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L360)
+Defined in: [generated/linear\_model/SGDRegressor.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L360)
 
 ### py
 
@@ -160,7 +160,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L34)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L34)
 
 #### Signature
 
@@ -178,7 +178,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L38)
+Defined in: [generated/linear\_model/SGDRegressor.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L38)
 
 ### t\_
 
@@ -194,7 +194,7 @@ t_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L383)
+Defined in: [generated/linear\_model/SGDRegressor.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L383)
 
 ## Methods
 
@@ -220,7 +220,7 @@ densify(opts: SGDRegressorDensifyOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L126)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L126)
 
 ### dispose()
 
@@ -238,7 +238,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L107)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L107)
 
 ### fit()
 
@@ -260,7 +260,7 @@ fit(opts: SGDRegressorFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L152)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L152)
 
 ### init()
 
@@ -284,7 +284,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L47)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L47)
 
 ### partial\_fit()
 
@@ -308,7 +308,7 @@ partial_fit(opts: SGDRegressorPartialFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L190)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L190)
 
 ### predict()
 
@@ -330,7 +330,7 @@ predict(opts: SGDRegressorPredictOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L220)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L220)
 
 ### score()
 
@@ -354,7 +354,7 @@ score(opts: SGDRegressorScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L250)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L250)
 
 ### sparsify()
 
@@ -380,4 +380,4 @@ sparsify(opts: SGDRegressorSparsifyOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L286)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L286)

@@ -8,4 +8,4 @@
 
 Input array.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L466)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L466)

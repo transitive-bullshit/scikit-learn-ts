@@ -28,7 +28,7 @@ new SplineTransformer(opts?: SplineTransformerOptions): SplineTransformer;
 
 [`SplineTransformer`](SplineTransformer.md)
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L25)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/preprocessing/SplineTransformer.ts:25](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L23)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L22)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L21)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L18)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L19)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ bsplines_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/preprocessing/SplineTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L279)
+Defined in: [generated/preprocessing/SplineTransformer.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L279)
 
 ### feature\_names\_in\_
 
@@ -94,7 +94,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/SplineTransformer.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L333)
+Defined in: [generated/preprocessing/SplineTransformer.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L333)
 
 ### n\_features\_in\_
 
@@ -110,7 +110,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/SplineTransformer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L306)
+Defined in: [generated/preprocessing/SplineTransformer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L306)
 
 ### n\_features\_out\_
 
@@ -126,7 +126,7 @@ n_features_out_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/SplineTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L360)
+Defined in: [generated/preprocessing/SplineTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L360)
 
 ### py
 
@@ -140,7 +140,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L30)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L30)
 
 #### Signature
 
@@ -158,7 +158,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/SplineTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L34)
+Defined in: [generated/preprocessing/SplineTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L34)
 
 ## Methods
 
@@ -178,7 +178,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L91)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L91)
 
 ### fit()
 
@@ -200,7 +200,7 @@ fit(opts: SplineTransformerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L108)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L108)
 
 ### fit\_transform()
 
@@ -224,7 +224,7 @@ fit_transform(opts: SplineTransformerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L144)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L144)
 
 ### get\_feature\_names\_out()
 
@@ -246,7 +246,7 @@ get_feature_names_out(opts: SplineTransformerGetFeatureNamesOutOptions): Promise
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L182)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L182)
 
 ### init()
 
@@ -270,7 +270,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L43)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L43)
 
 ### set\_output()
 
@@ -294,7 +294,7 @@ set_output(opts: SplineTransformerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L219)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L219)
 
 ### transform()
 
@@ -316,4 +316,4 @@ transform(opts: SplineTransformerTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L249)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L249)

@@ -12,7 +12,7 @@
 
 `'rbf'`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L334)
+Defined in:  [generated/cluster/SpectralClustering.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L334)
 
 ### assign\_labels?
 
@@ -24,7 +24,7 @@ The strategy for assigning labels in the embedding space. There are two ways to 
 
 `'kmeans'`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L355)
+Defined in:  [generated/cluster/SpectralClustering.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L355)
 
 ### coef0?
 
@@ -36,7 +36,7 @@ Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.
 
 `1`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L369)
+Defined in:  [generated/cluster/SpectralClustering.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L369)
 
 ### degree?
 
@@ -48,7 +48,7 @@ Degree of the polynomial kernel. Ignored by other kernels.
 
 `3`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L362)
+Defined in:  [generated/cluster/SpectralClustering.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L362)
 
 ### eigen\_solver?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/cluster/SpectralClustering.ts:362](https://github.com/tr
 
 The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems, but may also lead to instabilities. If `undefined`, then `'arpack'` is used. See [\[4\]](#r5f6cbeb1558e-4) for more details regarding `'lobpcg'`.
 
-Defined in:  [generated/cluster/SpectralClustering.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L303)
+Defined in:  [generated/cluster/SpectralClustering.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L303)
 
 ### eigen\_tol?
 
@@ -68,7 +68,7 @@ Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_to
 
 `'auto'`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L348)
+Defined in:  [generated/cluster/SpectralClustering.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L348)
 
 ### gamma?
 
@@ -80,7 +80,7 @@ Kernel coefficient for rbf, poly, sigmoid, laplacian and chi2 kernels. Ignored f
 
 `1`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L327)
+Defined in:  [generated/cluster/SpectralClustering.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L327)
 
 ### kernel\_params?
 
@@ -88,7 +88,7 @@ Defined in:  [generated/cluster/SpectralClustering.ts:327](https://github.com/tr
 
 Parameters (keyword arguments) and values for kernel passed as callable object. Ignored by other kernels.
 
-Defined in:  [generated/cluster/SpectralClustering.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L374)
+Defined in:  [generated/cluster/SpectralClustering.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L374)
 
 ### n\_clusters?
 
@@ -100,7 +100,7 @@ The dimension of the projection subspace.
 
 `8`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L298)
+Defined in:  [generated/cluster/SpectralClustering.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L298)
 
 ### n\_components?
 
@@ -108,7 +108,7 @@ Defined in:  [generated/cluster/SpectralClustering.ts:298](https://github.com/tr
 
 Number of eigenvectors to use for the spectral embedding. If `undefined`, defaults to `n\_clusters`.
 
-Defined in:  [generated/cluster/SpectralClustering.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L308)
+Defined in:  [generated/cluster/SpectralClustering.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L308)
 
 ### n\_init?
 
@@ -120,7 +120,7 @@ Number of time the k-means algorithm will be run with different centroid seeds. 
 
 `10`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L320)
+Defined in:  [generated/cluster/SpectralClustering.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L320)
 
 ### n\_jobs?
 
@@ -128,7 +128,7 @@ Defined in:  [generated/cluster/SpectralClustering.ts:320](https://github.com/tr
 
 The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/cluster/SpectralClustering.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L379)
+Defined in:  [generated/cluster/SpectralClustering.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L379)
 
 ### n\_neighbors?
 
@@ -140,7 +140,7 @@ Number of neighbors to use when constructing the affinity matrix using the neare
 
 `10`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L341)
+Defined in:  [generated/cluster/SpectralClustering.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L341)
 
 ### random\_state?
 
@@ -148,7 +148,7 @@ Defined in:  [generated/cluster/SpectralClustering.ts:341](https://github.com/tr
 
 A pseudo random number generator used for the initialization of the lobpcg eigenvectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
 
-Defined in:  [generated/cluster/SpectralClustering.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L313)
+Defined in:  [generated/cluster/SpectralClustering.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L313)
 
 ### verbose?
 
@@ -160,4 +160,4 @@ Verbosity mode.
 
 `false`
 
-Defined in:  [generated/cluster/SpectralClustering.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L386)
+Defined in:  [generated/cluster/SpectralClustering.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L386)

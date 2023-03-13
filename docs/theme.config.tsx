@@ -35,9 +35,6 @@ const config: DocsThemeConfig = {
       }
     }
   },
-  sidebar: {
-    titleComponent
-  },
   head: function useHead() {
     const { title } = useConfig()
     // const { route } = useRouter()
@@ -69,48 +66,11 @@ const config: DocsThemeConfig = {
           sizes='32x32'
           href='/favicon-32.png'
         />
-
-        <style>
-          {`
-          footer {
-            display: none;
-          }
-          `}
-        </style>
       </>
     )
   },
   footer: {
-    text: 'scikit-learn-ts'
+    component: null
   }
 }
-
-// TODO: get memoization working here
-function titleComponent({
-  title,
-  type,
-  route
-}: {
-  title: string
-  type: string
-  route: string
-}) {
-  if (type === 'doc' && route.startsWith('/docs/')) {
-    if (
-      route.startsWith('/docs/classes/') ||
-      route.startsWith('/docs/functions/') ||
-      route.startsWith('/docs/interfaces/') ||
-      route.startsWith('/docs/variables/') ||
-      route.startsWith('/docs/types/')
-    ) {
-      const suffix = route.split('/').slice(-1)[0]
-      if (suffix) {
-        return <span>{suffix}</span>
-      }
-    }
-  }
-
-  return <span>{title}</span>
-}
-
 export default config

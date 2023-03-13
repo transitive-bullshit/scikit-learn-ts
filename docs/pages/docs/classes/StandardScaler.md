@@ -26,7 +26,7 @@ new StandardScaler(opts?: StandardScalerOptions): StandardScaler;
 
 [`StandardScaler`](StandardScaler.md)
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L23)
+Defined in:  [generated/preprocessing/StandardScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/preprocessing/StandardScaler.ts:23](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L21)
+Defined in:  [generated/preprocessing/StandardScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L20)
+Defined in:  [generated/preprocessing/StandardScaler.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L19)
+Defined in:  [generated/preprocessing/StandardScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L16)
+Defined in:  [generated/preprocessing/StandardScaler.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L17)
+Defined in:  [generated/preprocessing/StandardScaler.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L17)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/StandardScaler.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L425)
+Defined in: [generated/preprocessing/StandardScaler.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L425)
 
 ### mean\_
 
@@ -92,7 +92,7 @@ mean_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/StandardScaler.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L354)
+Defined in: [generated/preprocessing/StandardScaler.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L354)
 
 ### n\_features\_in\_
 
@@ -108,7 +108,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/StandardScaler.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L400)
+Defined in: [generated/preprocessing/StandardScaler.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L400)
 
 ### n\_samples\_seen\_
 
@@ -124,7 +124,7 @@ n_samples_seen_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/preprocessing/StandardScaler.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L450)
+Defined in: [generated/preprocessing/StandardScaler.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L450)
 
 ### py
 
@@ -138,7 +138,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L28)
+Defined in:  [generated/preprocessing/StandardScaler.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L28)
 
 #### Signature
 
@@ -156,7 +156,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/StandardScaler.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L32)
+Defined in: [generated/preprocessing/StandardScaler.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L32)
 
 ### scale\_
 
@@ -172,7 +172,7 @@ scale_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/StandardScaler.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L331)
+Defined in: [generated/preprocessing/StandardScaler.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L331)
 
 ### var\_
 
@@ -188,7 +188,7 @@ var_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/StandardScaler.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L377)
+Defined in: [generated/preprocessing/StandardScaler.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L377)
 
 ## Methods
 
@@ -208,7 +208,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L83)
+Defined in:  [generated/preprocessing/StandardScaler.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L83)
 
 ### fit()
 
@@ -230,7 +230,7 @@ fit(opts: StandardScalerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L100)
+Defined in:  [generated/preprocessing/StandardScaler.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L100)
 
 ### fit\_transform()
 
@@ -254,7 +254,7 @@ fit_transform(opts: StandardScalerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L134)
+Defined in:  [generated/preprocessing/StandardScaler.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L134)
 
 ### get\_feature\_names\_out()
 
@@ -276,7 +276,7 @@ get_feature_names_out(opts: StandardScalerGetFeatureNamesOutOptions): Promise<an
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L166)
+Defined in:  [generated/preprocessing/StandardScaler.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L166)
 
 ### init()
 
@@ -300,7 +300,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L41)
+Defined in:  [generated/preprocessing/StandardScaler.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L41)
 
 ### inverse\_transform()
 
@@ -322,7 +322,7 @@ inverse_transform(opts: StandardScalerInverseTransformOptions): Promise<ArrayLik
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L199)
+Defined in:  [generated/preprocessing/StandardScaler.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L199)
 
 ### partial\_fit()
 
@@ -348,7 +348,7 @@ partial_fit(opts: StandardScalerPartialFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L237)
+Defined in:  [generated/preprocessing/StandardScaler.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L237)
 
 ### set\_output()
 
@@ -372,7 +372,7 @@ set_output(opts: StandardScalerSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L271)
+Defined in:  [generated/preprocessing/StandardScaler.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L271)
 
 ### transform()
 
@@ -394,4 +394,4 @@ transform(opts: StandardScalerTransformOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L299)
+Defined in:  [generated/preprocessing/StandardScaler.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L299)

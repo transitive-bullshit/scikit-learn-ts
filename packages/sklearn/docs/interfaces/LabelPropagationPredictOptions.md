@@ -8,4 +8,4 @@
 
 The data matrix.
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L479)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L479)

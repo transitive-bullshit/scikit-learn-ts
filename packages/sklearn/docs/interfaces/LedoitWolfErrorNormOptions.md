@@ -8,7 +8,7 @@
 
 The covariance to compare with.
 
-Defined in:  [generated/covariance/LedoitWolf.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L419)
+Defined in:  [generated/covariance/LedoitWolf.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L419)
 
 ### norm?
 
@@ -20,7 +20,7 @@ The type of norm used to compute the error. Available error types: - ‘frobeniu
 
 `'frobenius'`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L426)
+Defined in:  [generated/covariance/LedoitWolf.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L426)
 
 ### scaling?
 
@@ -32,7 +32,7 @@ If `true` (default), the squared error norm is divided by n\_features. If `false
 
 `true`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L433)
+Defined in:  [generated/covariance/LedoitWolf.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L433)
 
 ### squared?
 
@@ -44,4 +44,4 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 `true`
 
-Defined in:  [generated/covariance/LedoitWolf.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L440)
+Defined in:  [generated/covariance/LedoitWolf.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L440)

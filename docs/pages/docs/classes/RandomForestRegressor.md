@@ -28,7 +28,7 @@ new RandomForestRegressor(opts?: RandomForestRegressorOptions): RandomForestRegr
 
 [`RandomForestRegressor`](RandomForestRegressor.md)
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L25)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/ensemble/RandomForestRegressor.ts:25](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L23)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L22)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L21)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L18)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L19)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L293)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L293)
 
 ### estimators\_
 
@@ -94,7 +94,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L320)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L320)
 
 ### feature\_names\_in\_
 
@@ -110,7 +110,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L374)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L374)
 
 ### n\_features\_in\_
 
@@ -126,7 +126,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L347)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L347)
 
 ### n\_outputs\_
 
@@ -142,7 +142,7 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L401)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L401)
 
 ### oob\_prediction\_
 
@@ -158,7 +158,7 @@ oob_prediction_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L455)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L455)
 
 ### oob\_score\_
 
@@ -174,7 +174,7 @@ oob_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L428)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L428)
 
 ### py
 
@@ -188,7 +188,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L30)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L30)
 
 #### Signature
 
@@ -206,7 +206,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/RandomForestRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L34)
+Defined in: [generated/ensemble/RandomForestRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L34)
 
 ## Methods
 
@@ -230,7 +230,7 @@ apply(opts: RandomForestRegressorApplyOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L126)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L126)
 
 ### decision\_path()
 
@@ -252,7 +252,7 @@ decision_path(opts: RandomForestRegressorDecisionPathOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L156)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L156)
 
 ### dispose()
 
@@ -270,7 +270,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L109)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L109)
 
 ### fit()
 
@@ -292,7 +292,7 @@ fit(opts: RandomForestRegressorFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L191)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L191)
 
 ### init()
 
@@ -316,7 +316,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L43)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L43)
 
 ### predict()
 
@@ -340,7 +340,7 @@ predict(opts: RandomForestRegressorPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L227)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L227)
 
 ### score()
 
@@ -364,4 +364,4 @@ score(opts: RandomForestRegressorScoreOptions): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/RandomForestRegressor.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L259)
+Defined in:  [generated/ensemble/RandomForestRegressor.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestRegressor.ts#L259)

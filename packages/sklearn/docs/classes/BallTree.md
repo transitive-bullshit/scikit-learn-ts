@@ -26,7 +26,7 @@ new BallTree(opts?: BallTreeOptions): BallTree;
 
 [`BallTree`](BallTree.md)
 
-Defined in:  [generated/neighbors/BallTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L23)
+Defined in:  [generated/neighbors/BallTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/neighbors/BallTree.ts:23](https://github.com/transitive-
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L21)
+Defined in:  [generated/neighbors/BallTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/BallTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L20)
+Defined in:  [generated/neighbors/BallTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/BallTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L19)
+Defined in:  [generated/neighbors/BallTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/BallTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L16)
+Defined in:  [generated/neighbors/BallTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/BallTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L17)
+Defined in:  [generated/neighbors/BallTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L17)
 
 ## Accessors
 
@@ -76,9 +76,9 @@ data(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L339)
+Defined in:  [generated/neighbors/BallTree.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L339)
 
-Defined in:  [generated/neighbors/BallTree.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L339)
+Defined in:  [generated/neighbors/BallTree.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L339)
 
 ### py
 
@@ -92,7 +92,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/BallTree.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L28)
+Defined in:  [generated/neighbors/BallTree.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L28)
 
 #### Signature
 
@@ -110,9 +110,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neighbors/BallTree.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L32)
+Defined in:  [generated/neighbors/BallTree.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L32)
 
-Defined in:  [generated/neighbors/BallTree.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L28) [generated/neighbors/BallTree.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L32)
+Defined in:  [generated/neighbors/BallTree.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L28) [generated/neighbors/BallTree.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L32)
 
 ## Methods
 
@@ -132,7 +132,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L82)
+Defined in:  [generated/neighbors/BallTree.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L82)
 
 ### get\_arrays()
 
@@ -154,7 +154,7 @@ get_arrays(opts: BallTreeGetArraysOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L99)
+Defined in:  [generated/neighbors/BallTree.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L99)
 
 ### get\_n\_calls()
 
@@ -176,7 +176,7 @@ get_n_calls(opts: BallTreeGetNCallsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L125)
+Defined in:  [generated/neighbors/BallTree.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L125)
 
 ### get\_tree\_stats()
 
@@ -198,7 +198,7 @@ get_tree_stats(opts: BallTreeGetTreeStatsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L151)
+Defined in:  [generated/neighbors/BallTree.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L151)
 
 ### init()
 
@@ -222,7 +222,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L41)
+Defined in:  [generated/neighbors/BallTree.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L41)
 
 ### kernel\_density()
 
@@ -244,7 +244,7 @@ kernel_density(opts: BallTreeKernelDensityOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L177)
+Defined in:  [generated/neighbors/BallTree.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L177)
 
 ### query()
 
@@ -266,7 +266,7 @@ query(opts: BallTreeQueryOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L211)
+Defined in:  [generated/neighbors/BallTree.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L211)
 
 ### query\_radius()
 
@@ -288,7 +288,7 @@ query_radius(opts: BallTreeQueryRadiusOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L245)
+Defined in:  [generated/neighbors/BallTree.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L245)
 
 ### reset\_n\_calls()
 
@@ -310,7 +310,7 @@ reset_n_calls(opts: BallTreeResetNCallsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/BallTree.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L279)
+Defined in:  [generated/neighbors/BallTree.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L279)
 
 ### two\_point\_correlation()
 
@@ -332,4 +332,4 @@ two_point_correlation(opts: BallTreeTwoPointCorrelationOptions): Promise<ArrayLi
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/BallTree.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/BallTree.ts#L305)
+Defined in:  [generated/neighbors/BallTree.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/BallTree.ts#L305)

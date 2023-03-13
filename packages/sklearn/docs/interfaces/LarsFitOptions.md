@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/Lars.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L448)
+Defined in:  [generated/linear\_model/Lars.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Lars.ts#L448)
 
 ### Xy?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/Lars.ts:448](https://github.com/transitive
 
 Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
 
-Defined in:  [generated/linear\_model/Lars.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L458)
+Defined in:  [generated/linear\_model/Lars.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Lars.ts#L458)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/Lars.ts:458](https://github.com/transitive
 
 Target values.
 
-Defined in:  [generated/linear\_model/Lars.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Lars.ts#L453)
+Defined in:  [generated/linear\_model/Lars.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Lars.ts#L453)

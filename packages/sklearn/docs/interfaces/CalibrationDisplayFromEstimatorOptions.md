@@ -8,7 +8,7 @@
 
 Input values.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L364)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L364)
 
 ### ax?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:364](https://github.co
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L405)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L405)
 
 ### estimator?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:405](https://github.co
 
 Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict\_proba](../../glossary.html#term-predict_proba) method.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L359)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L359)
 
 ### kwargs?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:359](https://github.co
 
 Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L410)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L410)
 
 ### n\_bins?
 
@@ -44,7 +44,7 @@ Number of bins to discretize the \[0, 1\] interval into when calculating the cal
 
 `5`
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L376)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L376)
 
 ### name?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:376](https://github.co
 
 Name for labeling curve. If `undefined`, the name of the estimator is used.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L393)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L393)
 
 ### pos\_label?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:393](https://github.co
 
 The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L388)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L388)
 
 ### ref\_line?
 
@@ -72,7 +72,7 @@ If `true`, plots a reference line representing a perfectly calibrated classifier
 
 `true`
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L400)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L400)
 
 ### strategy?
 
@@ -84,7 +84,7 @@ Strategy used to define the widths of the bins.
 
 `'uniform'`
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L383)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L383)
 
 ### y?
 
@@ -92,4 +92,4 @@ Defined in:  [generated/calibration/CalibrationDisplay.ts:383](https://github.co
 
 Binary target values.
 
-Defined in:  [generated/calibration/CalibrationDisplay.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L369)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L369)

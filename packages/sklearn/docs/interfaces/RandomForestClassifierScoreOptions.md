@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:796](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L796)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:796](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L796)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/RandomForestClassifier.ts:796](https://github.c
 
 Sample weights.
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:806](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L806)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:806](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L806)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/RandomForestClassifier.ts:806](https://github.c
 
 True labels for `X`.
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:801](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L801)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:801](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L801)

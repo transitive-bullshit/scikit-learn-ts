@@ -8,7 +8,7 @@
 
 The training input samples.
 
-Defined in:  [generated/feature\_selection/SelectFpr.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L424)
+Defined in:  [generated/feature\_selection/SelectFpr.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L424)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/feature\_selection/SelectFpr.ts:424](https://github.com/
 
 The target values (class labels in classification, real numbers in regression).
 
-Defined in:  [generated/feature\_selection/SelectFpr.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L429)
+Defined in:  [generated/feature\_selection/SelectFpr.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectFpr.ts#L429)

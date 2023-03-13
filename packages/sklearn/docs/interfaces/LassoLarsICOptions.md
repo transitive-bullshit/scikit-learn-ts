@@ -12,7 +12,7 @@ If `true`, X will be copied; else, it may be overwritten.
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L468)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L468)
 
 ### criterion?
 
@@ -24,7 +24,7 @@ The type of criterion to use.
 
 `'aic'`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L421)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L421)
 
 ### eps?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/linear\_model/LassoLarsIC.ts:421](https://github.com/tra
 
 The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L461)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L461)
 
 ### fit\_intercept?
 
@@ -44,7 +44,7 @@ Whether to calculate the intercept for this model. If set to false, no intercept
 
 `true`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L428)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L428)
 
 ### max\_iter?
 
@@ -56,7 +56,7 @@ Maximum number of iterations to perform. Can be used for early stopping.
 
 `500`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L456)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L456)
 
 ### noise\_variance?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/linear\_model/LassoLarsIC.ts:456](https://github.com/tra
 
 The estimated noise variance of the data. If `undefined`, an unbiased estimate is computed by an OLS model. However, it is only possible in the case where `n\_samples > n\_features + fit\_intercept`.
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L480)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L480)
 
 ### normalize?
 
@@ -76,7 +76,7 @@ This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, th
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L442)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L442)
 
 ### positive?
 
@@ -88,7 +88,7 @@ Restrict coefficients to be >= 0. Be aware that you might want to remove fit\_in
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L475)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L475)
 
 ### precompute?
 
@@ -100,7 +100,7 @@ Whether to use a precomputed Gram matrix to speed up calculations. If set to `'a
 
 `'auto'`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L449)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L449)
 
 ### verbose?
 
@@ -112,4 +112,4 @@ Sets the verbosity amount.
 
 `false`
 
-Defined in:  [generated/linear\_model/LassoLarsIC.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L435)
+Defined in:  [generated/linear\_model/LassoLarsIC.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LassoLarsIC.ts#L435)

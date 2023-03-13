@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L442)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L442)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/FunctionTransformer.ts:442](https://github
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L452)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L452)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/FunctionTransformer.ts:452](https://github
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/FunctionTransformer.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L447)
+Defined in:  [generated/preprocessing/FunctionTransformer.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/FunctionTransformer.ts#L447)

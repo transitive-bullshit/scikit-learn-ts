@@ -8,7 +8,7 @@
 
 Feature vectors or other representations of training data.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L558)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L558)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:558](https
 
 Target values.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L563)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L563)

@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L548)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L548)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/MinMaxScaler.ts:548](https://github.com/tr
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L558)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L558)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/MinMaxScaler.ts:558](https://github.com/tr
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L553)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L553)

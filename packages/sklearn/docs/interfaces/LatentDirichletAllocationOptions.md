@@ -12,7 +12,7 @@ Number of documents to use in each EM iteration. Only used in online learning.
 
 `128`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L733)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:733](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L733)
 
 ### doc\_topic\_prior?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:733](https://
 
 Prior of document topic distribution `theta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `alpha`.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L691)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L691)
 
 ### evaluate\_every?
 
@@ -32,7 +32,7 @@ How often to evaluate perplexity. Only used in `fit` method. set it to 0 or nega
 
 `-1`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L740)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:740](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L740)
 
 ### learning\_decay?
 
@@ -44,7 +44,7 @@ It is a parameter that control learning rate in the online learning method. The 
 
 `0.7`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L712)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:712](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L712)
 
 ### learning\_method?
 
@@ -58,7 +58,7 @@ Valid options:
 
 `'batch'`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L705)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L705)
 
 ### learning\_offset?
 
@@ -70,7 +70,7 @@ A (positive) parameter that downweights early iterations in online learning. It 
 
 `10`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L719)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L719)
 
 ### max\_doc\_update\_iter?
 
@@ -82,7 +82,7 @@ Max number of iterations for updating document topic distribution in the E-step.
 
 `100`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L768)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L768)
 
 ### max\_iter?
 
@@ -94,7 +94,7 @@ The maximum number of passes over the training data (aka epochs). It only impact
 
 `10`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L726)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L726)
 
 ### mean\_change\_tol?
 
@@ -106,7 +106,7 @@ Stopping tolerance for updating document topic distribution in E-step.
 
 `0.001`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L761)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L761)
 
 ### n\_components?
 
@@ -118,7 +118,7 @@ Number of topics.
 
 `10`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L686)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L686)
 
 ### n\_jobs?
 
@@ -126,7 +126,7 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:686](https://
 
 The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L773)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L773)
 
 ### perp\_tol?
 
@@ -138,7 +138,7 @@ Perplexity tolerance in batch learning. Only used when `evaluate\_every` is grea
 
 `0.1`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L754)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:754](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L754)
 
 ### random\_state?
 
@@ -146,7 +146,7 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:754](https://
 
 Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L785)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L785)
 
 ### topic\_word\_prior?
 
@@ -154,7 +154,7 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:785](https://
 
 Prior of topic word distribution `beta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `eta`.
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L696)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L696)
 
 ### total\_samples?
 
@@ -166,7 +166,7 @@ Total number of documents. Only used in the [`partial\_fit`](#sklearn.decomposit
 
 `1000000`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L747)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L747)
 
 ### verbose?
 
@@ -178,4 +178,4 @@ Verbosity level.
 
 `0`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L780)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L780)

@@ -8,7 +8,7 @@
 
 Samples.
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L541)
+Defined in:  [generated/linear\_model/ARDRegression.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L541)
 
 ### return\_std?
 
@@ -20,4 +20,4 @@ Whether to return the standard deviation of posterior prediction.
 
 `false`
 
-Defined in:  [generated/linear\_model/ARDRegression.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L548)
+Defined in:  [generated/linear\_model/ARDRegression.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ARDRegression.ts#L548)

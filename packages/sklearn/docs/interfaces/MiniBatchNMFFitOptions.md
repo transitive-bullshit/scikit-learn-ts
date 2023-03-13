@@ -8,7 +8,7 @@
 
 Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L626)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L626)
 
 ### params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/decomposition/MiniBatchNMF.ts:626](https://github.com/tr
 
 Parameters (keyword arguments) and values passed to the fit\_transform instance.
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L636)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L636)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/decomposition/MiniBatchNMF.ts:636](https://github.com/tr
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L631)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L631)

@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L616)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L616)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:616](https://github.com/
 
 Additional fit parameters.
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L626)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L626)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:626](https://github.com/
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L621)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L621)

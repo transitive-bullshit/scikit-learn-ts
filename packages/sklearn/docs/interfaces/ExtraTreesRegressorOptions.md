@@ -12,7 +12,7 @@ Whether bootstrap samples are used when building trees. If `false`, the whole da
 
 `false`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L546)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L546)
 
 ### ccp\_alpha?
 
@@ -24,7 +24,7 @@ Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with 
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L584)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:584](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L584)
 
 ### criterion?
 
@@ -36,7 +36,7 @@ The function to measure the quality of a split. Supported criteria are “square
 
 `'squared_error'`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L492)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L492)
 
 ### max\_depth?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:492](https://github.com/
 
 The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L497)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L497)
 
 ### max\_features?
 
@@ -56,7 +56,7 @@ The number of features to consider when looking for the best split:
 
 `1`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L525)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L525)
 
 ### max\_leaf\_nodes?
 
@@ -64,7 +64,7 @@ Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:525](https://github.com/
 
 Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L530)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L530)
 
 ### max\_samples?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:530](https://github.com/
 
 If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L589)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L589)
 
 ### min\_impurity\_decrease?
 
@@ -86,7 +86,7 @@ The weighted impurity decrease equation is the following:
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L539)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L539)
 
 ### min\_samples\_leaf?
 
@@ -98,7 +98,7 @@ The minimum number of samples required to be at a leaf node. A split point at an
 
 `1`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L511)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L511)
 
 ### min\_samples\_split?
 
@@ -110,7 +110,7 @@ The minimum number of samples required to split an internal node:
 
 `2`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L504)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L504)
 
 ### min\_weight\_fraction\_leaf?
 
@@ -122,7 +122,7 @@ The minimum weighted fraction of the sum total of weights (of all the input samp
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L518)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L518)
 
 ### n\_estimators?
 
@@ -134,7 +134,7 @@ The number of trees in the forest.
 
 `100`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L485)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L485)
 
 ### n\_jobs?
 
@@ -142,7 +142,7 @@ Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:485](https://github.com/
 
 The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesRegressor.fit "sklearn.ensemble.ExtraTreesRegressor.fit"), [`predict`](#sklearn.ensemble.ExtraTreesRegressor.predict "sklearn.ensemble.ExtraTreesRegressor.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesRegressor.decision_path "sklearn.ensemble.ExtraTreesRegressor.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesRegressor.apply "sklearn.ensemble.ExtraTreesRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L558)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L558)
 
 ### oob\_score?
 
@@ -154,7 +154,7 @@ Whether to use out-of-bag samples to estimate the generalization score. Only ava
 
 `false`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L553)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L553)
 
 ### random\_state?
 
@@ -162,7 +162,7 @@ Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:553](https://github.com/
 
 Controls 3 sources of randomness:
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L563)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L563)
 
 ### verbose?
 
@@ -174,7 +174,7 @@ Controls the verbosity when fitting and predicting.
 
 `0`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L570)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L570)
 
 ### warm\_start?
 
@@ -186,4 +186,4 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 `false`
 
-Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L577)
+Defined in:  [generated/ensemble/ExtraTreesRegressor.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/ExtraTreesRegressor.ts#L577)

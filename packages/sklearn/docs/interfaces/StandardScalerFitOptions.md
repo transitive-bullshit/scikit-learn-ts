@@ -8,7 +8,7 @@
 
 The data used to compute the mean and standard deviation used for later scaling along the features axis.
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L500)
+Defined in:  [generated/preprocessing/StandardScaler.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L500)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/StandardScaler.ts:500](https://github.com/
 
 Individual weights for each sample.
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L510)
+Defined in:  [generated/preprocessing/StandardScaler.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L510)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/StandardScaler.ts:510](https://github.com/
 
 Ignored.
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L505)
+Defined in:  [generated/preprocessing/StandardScaler.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L505)

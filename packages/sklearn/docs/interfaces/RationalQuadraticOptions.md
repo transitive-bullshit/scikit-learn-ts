@@ -12,7 +12,7 @@ Scale mixture parameter
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L294)
+Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L294)
 
 ### alpha\_bounds?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:294](http
 
 The lower and upper bound on ‘alpha’. If set to “fixed”, ‘alpha’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L304)
+Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L304)
 
 ### length\_scale?
 
@@ -32,7 +32,7 @@ The length scale of the kernel.
 
 `1`
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L287)
+Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L287)
 
 ### length\_scale\_bounds?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:287](http
 
 The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
 
-Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L299)
+Defined in:  [generated/gaussian\_process/kernels/RationalQuadratic.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RationalQuadratic.ts#L299)

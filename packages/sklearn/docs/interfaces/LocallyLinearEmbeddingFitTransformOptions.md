@@ -8,7 +8,7 @@
 
 Training set.
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L517)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L517)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:517](https://github.c
 
 Not used, present here for API consistency by convention.
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L522)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L522)

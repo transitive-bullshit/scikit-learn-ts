@@ -12,7 +12,7 @@ Maximum step size (regularization). Defaults to 1.0.
 
 `1`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L597)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L597)
 
 ### average?
 
@@ -24,7 +24,7 @@ When set to `true`, computes the averaged SGD weights and stores the result in t
 
 `false`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L695)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:695](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L695)
 
 ### class\_weight?
 
@@ -36,7 +36,7 @@ Weights associated with classes. If not given, all classes are supposed to have 
 
 The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L688)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L688)
 
 ### early\_stopping?
 
@@ -48,7 +48,7 @@ Whether to use early stopping to terminate training when validation. score is no
 
 `false`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L625)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:625](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L625)
 
 ### fit\_intercept?
 
@@ -60,7 +60,7 @@ Whether the intercept should be estimated or not. If `false`, the data is assume
 
 `true`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L604)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L604)
 
 ### loss?
 
@@ -72,7 +72,7 @@ The loss function to be used: hinge: equivalent to PA-I in the reference paper. 
 
 `'hinge'`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L660)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L660)
 
 ### max\_iter?
 
@@ -84,7 +84,7 @@ The maximum number of passes over the training data (aka epochs). It only impact
 
 `1000`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L611)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L611)
 
 ### n\_iter\_no\_change?
 
@@ -96,7 +96,7 @@ Number of iterations with no improvement to wait before early stopping.
 
 `5`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L639)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L639)
 
 ### n\_jobs?
 
@@ -104,7 +104,7 @@ Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:639](https:
 
 The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L665)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L665)
 
 ### random\_state?
 
@@ -112,7 +112,7 @@ Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:665](https:
 
 Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L670)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L670)
 
 ### shuffle?
 
@@ -124,7 +124,7 @@ Whether or not the training data should be shuffled after each epoch.
 
 `true`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L646)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L646)
 
 ### tol?
 
@@ -136,7 +136,7 @@ The stopping criterion. If it is not `undefined`, the iterations will stop when 
 
 `0.001`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L618)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:618](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L618)
 
 ### validation\_fraction?
 
@@ -148,7 +148,7 @@ The proportion of training data to set aside as validation set for early stoppin
 
 `0.1`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L632)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L632)
 
 ### verbose?
 
@@ -160,7 +160,7 @@ The verbosity level.
 
 `0`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L653)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L653)
 
 ### warm\_start?
 
@@ -174,4 +174,4 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 `false`
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L679)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L679)

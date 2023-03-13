@@ -28,7 +28,7 @@ new PolynomialFeatures(opts?: PolynomialFeaturesOptions): PolynomialFeatures;
 
 [`PolynomialFeatures`](PolynomialFeatures.md)
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L25)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/preprocessing/PolynomialFeatures.ts:25](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L23)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L22)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L21)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L18)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L19)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L19)
 
 ## Accessors
 
@@ -78,9 +78,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L304)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L304)
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L304)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L304)
 
 ### n\_features\_in\_
 
@@ -96,9 +96,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L277)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L277)
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L277)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L277)
 
 ### n\_output\_features\_
 
@@ -114,9 +114,9 @@ n_output_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L331)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L331)
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L331)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L331)
 
 ### py
 
@@ -130,7 +130,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L30)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L30)
 
 #### Signature
 
@@ -148,9 +148,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L34)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L34)
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L30) [generated/preprocessing/PolynomialFeatures.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L34)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L30) [generated/preprocessing/PolynomialFeatures.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L34)
 
 ## Methods
 
@@ -170,7 +170,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L91)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L91)
 
 ### fit()
 
@@ -192,7 +192,7 @@ fit(opts: PolynomialFeaturesFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L108)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L108)
 
 ### fit\_transform()
 
@@ -216,7 +216,7 @@ fit_transform(opts: PolynomialFeaturesFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L140)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L140)
 
 ### get\_feature\_names\_out()
 
@@ -238,7 +238,7 @@ get_feature_names_out(opts: PolynomialFeaturesGetFeatureNamesOutOptions): Promis
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L178)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L178)
 
 ### init()
 
@@ -262,7 +262,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L43)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L43)
 
 ### set\_output()
 
@@ -286,7 +286,7 @@ set_output(opts: PolynomialFeaturesSetOutputOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L215)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L215)
 
 ### transform()
 
@@ -308,4 +308,4 @@ transform(opts: PolynomialFeaturesTransformOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L245)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L245)

@@ -8,7 +8,7 @@
 
 The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L493)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L493)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/BaggingRegressor.ts:493](https://github.com/tra
 
 Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L503)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L503)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/BaggingRegressor.ts:503](https://github.com/tra
 
 The target values (class labels in classification, real numbers in regression).
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L498)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L498)

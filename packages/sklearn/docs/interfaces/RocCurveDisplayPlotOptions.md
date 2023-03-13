@@ -8,7 +8,7 @@
 
 Axes object to plot on. If `undefined`, a new figure and axes is created.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L433)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L433)
 
 ### kwargs?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:433](https://github.com/trans
 
 Keyword arguments to be passed to matplotlib’s `plot`.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L443)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L443)
 
 ### name?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:443](https://github.com/trans
 
 Name of ROC Curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L438)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L438)

@@ -12,7 +12,7 @@ Value added to the diagonal of the kernel matrix during fitting. This can preven
 
 `1e-10`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L518)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L518)
 
 ### copy\_X\_train?
 
@@ -24,7 +24,7 @@ If `true`, a persistent copy of the training data is stored in the object. Other
 
 `true`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L546)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L546)
 
 ### kernel?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:546](https
 
 The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L511)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L511)
 
 ### n\_restarts\_optimizer?
 
@@ -44,7 +44,7 @@ The number of restarts of the optimizer for finding the kernel’s parameters wh
 
 `0`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L532)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L532)
 
 ### normalize\_y?
 
@@ -56,7 +56,7 @@ Whether or not to normalize the target values `y` by removing the mean and scali
 
 `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L539)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L539)
 
 ### optimizer?
 
@@ -68,7 +68,7 @@ Can either be one of the internally supported optimizers for optimizing the kern
 
 `'fmin_l_bfgs_b'`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L525)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L525)
 
 ### random\_state?
 
@@ -76,4 +76,4 @@ Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:525](https
 
 Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L551)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L551)

@@ -12,7 +12,7 @@ If `false`, try to avoid a copy and do inplace scaling instead. This is not guar
 
 `true`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L412)
+Defined in:  [generated/preprocessing/RobustScaler.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L412)
 
 ### quantile\_range?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/preprocessing/RobustScaler.ts:412](https://github.com/tr
 
 Quantile range used to calculate `scale\_`. By default this is equal to the IQR, i.e., `q\_min` is the first quantile and `q\_max` is the third quantile.
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L405)
+Defined in:  [generated/preprocessing/RobustScaler.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L405)
 
 ### unit\_variance?
 
@@ -32,7 +32,7 @@ If `true`, scale data so that normally distributed features have a variance of 1
 
 `false`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L419)
+Defined in:  [generated/preprocessing/RobustScaler.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L419)
 
 ### with\_centering?
 
@@ -44,7 +44,7 @@ If `true`, center the data before scaling. This will cause [`transform`](#sklear
 
 `true`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L393)
+Defined in:  [generated/preprocessing/RobustScaler.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L393)
 
 ### with\_scaling?
 
@@ -56,4 +56,4 @@ If `true`, scale the data to interquartile range.
 
 `true`
 
-Defined in:  [generated/preprocessing/RobustScaler.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L400)
+Defined in:  [generated/preprocessing/RobustScaler.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/RobustScaler.ts#L400)

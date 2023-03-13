@@ -8,7 +8,7 @@
 
 Subset of the training data.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L809)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:809](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L809)
 
 ### classes?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:809](https://github.com/t
 
 Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:819](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L819)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:819](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L819)
 
 ### sample\_weight?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:819](https://github.com/t
 
 Weights applied to individual samples. If not provided, uniform weights are assumed.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:824](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L824)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:824](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L824)
 
 ### y?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:824](https://github.com/t
 
 Subset of the target values.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L814)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L814)

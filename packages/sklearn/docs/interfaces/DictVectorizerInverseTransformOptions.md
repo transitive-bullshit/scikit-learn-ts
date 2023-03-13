@@ -8,7 +8,7 @@
 
 Sample matrix.
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L442)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L442)
 
 ### dict\_type?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/feature\_extraction/DictVectorizer.ts:442](https://githu
 
 Constructor for feature mappings. Must conform to the collections.Mapping API.
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L447)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L447)

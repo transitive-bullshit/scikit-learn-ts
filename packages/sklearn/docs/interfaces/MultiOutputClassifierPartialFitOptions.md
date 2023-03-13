@@ -8,7 +8,7 @@
 
 The input data.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L429)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L429)
 
 ### classes?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multioutput/MultiOutputClassifier.ts:429](https://github
 
 Each array is unique classes for one output in str/int. Can be obtained via `\[np.unique(y\[:, i\]) for i in range(y.shape\[1\])\]`, where `y` is the target matrix of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that `y` doesn’t need to contain all labels in `classes`.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L439)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L439)
 
 ### sample\_weight?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/multioutput/MultiOutputClassifier.ts:439](https://github
 
 Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L444)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L444)
 
 ### y?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/multioutput/MultiOutputClassifier.ts:444](https://github
 
 Multi-output targets.
 
-Defined in:  [generated/multioutput/MultiOutputClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L434)
+Defined in:  [generated/multioutput/MultiOutputClassifier.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L434)

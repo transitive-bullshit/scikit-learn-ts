@@ -28,7 +28,7 @@ new DecisionBoundaryDisplay(opts?: DecisionBoundaryDisplayOptions): DecisionBoun
 
 [`DecisionBoundaryDisplay`](DecisionBoundaryDisplay.md)
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:25](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L218)
+Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L218)
 
 ### figure\_
 
@@ -94,7 +94,7 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L245)
+Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L245)
 
 ### py
 
@@ -108,7 +108,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L30)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L30)
 
 #### Signature
 
@@ -126,7 +126,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L34)
+Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L34)
 
 ### surface\_
 
@@ -142,7 +142,7 @@ surface_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L191)
+Defined in: [generated/inspection/DecisionBoundaryDisplay.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L191)
 
 ## Methods
 
@@ -162,7 +162,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L93)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L93)
 
 ### from\_estimator()
 
@@ -186,7 +186,7 @@ from_estimator(opts: DecisionBoundaryDisplayFromEstimatorOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L112)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L112)
 
 ### init()
 
@@ -210,7 +210,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L43)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L43)
 
 ### plot()
 
@@ -232,4 +232,4 @@ plot(opts: DecisionBoundaryDisplayPlotOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L157)
+Defined in:  [generated/inspection/DecisionBoundaryDisplay.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L157)

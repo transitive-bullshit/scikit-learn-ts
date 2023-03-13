@@ -8,7 +8,7 @@
 
 The data used to scale along the features axis.
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L577)
+Defined in:  [generated/preprocessing/StandardScaler.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L577)
 
 ### copy?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/preprocessing/StandardScaler.ts:577](https://github.com/
 
 Copy the input X or not.
 
-Defined in:  [generated/preprocessing/StandardScaler.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L582)
+Defined in:  [generated/preprocessing/StandardScaler.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/StandardScaler.ts#L582)

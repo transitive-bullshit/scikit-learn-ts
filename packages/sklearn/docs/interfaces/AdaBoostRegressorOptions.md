@@ -8,7 +8,7 @@
 
 The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L485)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L485)
 
 ### estimator?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/AdaBoostRegressor.ts:485](https://github.com/tr
 
 The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L454)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L454)
 
 ### learning\_rate?
 
@@ -28,7 +28,7 @@ Weight applied to each regressor at each boosting iteration. A higher learning r
 
 `1`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L468)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L468)
 
 ### loss?
 
@@ -40,7 +40,7 @@ The loss function to use when updating the weights after each boosting iteration
 
 `'linear'`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L475)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L475)
 
 ### n\_estimators?
 
@@ -52,7 +52,7 @@ The maximum number of estimators at which boosting is terminated. In case of per
 
 `50`
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L461)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L461)
 
 ### random\_state?
 
@@ -60,4 +60,4 @@ Defined in:  [generated/ensemble/AdaBoostRegressor.ts:461](https://github.com/tr
 
 Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. In addition, it controls the bootstrap of the weights used to train the `estimator` at each boosting iteration. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/ensemble/AdaBoostRegressor.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L480)
+Defined in:  [generated/ensemble/AdaBoostRegressor.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L480)

@@ -8,7 +8,7 @@
 
 Subset of training data.
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L626)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L626)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/SGDRegressor.ts:626](https://github.com/tr
 
 Weights applied to individual samples. If not provided, uniform weights are assumed.
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L636)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L636)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/SGDRegressor.ts:636](https://github.com/tr
 
 Subset of target values.
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L631)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L631)

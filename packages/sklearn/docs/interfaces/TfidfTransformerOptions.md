@@ -12,7 +12,7 @@ Each output row will have unit norm, either:
 
 `'l2'`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L341)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L341)
 
 ### smooth\_idf?
 
@@ -24,7 +24,7 @@ Smooth idf weights by adding one to document frequencies, as if an extra documen
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L355)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L355)
 
 ### sublinear\_tf?
 
@@ -36,7 +36,7 @@ Apply sublinear tf scaling, i.e. replace tf with 1 + log(tf).
 
 `false`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L362)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L362)
 
 ### use\_idf?
 
@@ -48,4 +48,4 @@ Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
 
 `true`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L348)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L348)

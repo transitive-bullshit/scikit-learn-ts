@@ -8,7 +8,7 @@
 
 Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L368)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L368)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/kernel\_ridge/KernelRidge.ts:368](https://github.com/tra
 
 Sample weights.
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L378)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L378)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/kernel\_ridge/KernelRidge.ts:378](https://github.com/tra
 
 True values for `X`.
 
-Defined in:  [generated/kernel\_ridge/KernelRidge.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L373)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L373)

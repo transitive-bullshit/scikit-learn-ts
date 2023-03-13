@@ -8,7 +8,7 @@
 
 Data.
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L367)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L367)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/multiclass/OutputCodeClassifier.ts:367](https://github.c
 
 Multi-class targets.
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L372)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L372)

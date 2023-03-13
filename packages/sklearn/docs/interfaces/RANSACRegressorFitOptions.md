@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L493)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L493)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/RANSACRegressor.ts:493](https://github.com
 
 Individual weights for each sample raises error if sample\_weight is passed and estimator fit method does not support it.
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L503)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L503)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/RANSACRegressor.ts:503](https://github.com
 
 Target values.
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L498)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L498)

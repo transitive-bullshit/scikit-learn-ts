@@ -8,7 +8,7 @@
 
 Used to cache the fitted transformers of the pipeline. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
 
-Defined in:  [generated/pipeline/Pipeline.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/Pipeline.ts#L520)
+Defined in:  [generated/pipeline/Pipeline.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/Pipeline.ts#L520)
 
 ### steps?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/pipeline/Pipeline.ts:520](https://github.com/transitive-
 
 List of (name, transform) tuples (implementing `fit`/`transform`) that are chained in sequential order. The last transform must be an estimator.
 
-Defined in:  [generated/pipeline/Pipeline.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/Pipeline.ts#L515)
+Defined in:  [generated/pipeline/Pipeline.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/Pipeline.ts#L515)
 
 ### verbose?
 
@@ -28,4 +28,4 @@ If `true`, the time elapsed while fitting each step will be printed as it is com
 
 `false`
 
-Defined in:  [generated/pipeline/Pipeline.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/Pipeline.ts#L527)
+Defined in:  [generated/pipeline/Pipeline.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/Pipeline.ts#L527)

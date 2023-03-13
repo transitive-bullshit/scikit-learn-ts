@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L414)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L414)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/TweedieRegressor.ts:414](https://github.co
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L424)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L424)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/TweedieRegressor.ts:424](https://github.co
 
 Target values.
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L419)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L419)

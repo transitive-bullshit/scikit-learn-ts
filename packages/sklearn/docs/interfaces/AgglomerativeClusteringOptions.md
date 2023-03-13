@@ -12,7 +12,7 @@ The metric to use when calculating distance between instances in a feature array
 
 `'euclidean'`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L406)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L406)
 
 ### compute\_distances?
 
@@ -24,7 +24,7 @@ Computes distances between clusters even if `distance\_threshold` is not used. T
 
 `false`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L447)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L447)
 
 ### compute\_full\_tree?
 
@@ -36,7 +36,7 @@ Stop early the construction of the tree at `n\_clusters`. This is useful to decr
 
 `'auto'`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L428)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L428)
 
 ### connectivity?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/cluster/AgglomerativeClustering.ts:428](https://github.c
 
 Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L421)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L421)
 
 ### distance\_threshold?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/cluster/AgglomerativeClustering.ts:421](https://github.c
 
 The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L440)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L440)
 
 ### linkage?
 
@@ -64,7 +64,7 @@ Which linkage criterion to use. The linkage criterion determines which distance 
 
 `'ward'`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L435)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L435)
 
 ### memory?
 
@@ -72,7 +72,7 @@ Defined in:  [generated/cluster/AgglomerativeClustering.ts:435](https://github.c
 
 Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L416)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L416)
 
 ### metric?
 
@@ -80,7 +80,7 @@ Defined in:  [generated/cluster/AgglomerativeClustering.ts:416](https://github.c
 
 Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L411)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L411)
 
 ### n\_clusters?
 
@@ -92,4 +92,4 @@ The number of clusters to find. It must be `undefined` if `distance\_threshold` 
 
 `2`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L399)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L399)

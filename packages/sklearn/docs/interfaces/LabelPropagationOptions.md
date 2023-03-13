@@ -12,7 +12,7 @@ Parameter for rbf kernel.
 
 `20`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L436)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L436)
 
 ### kernel?
 
@@ -24,7 +24,7 @@ String identifier for kernel function to use or the kernel function itself. Only
 
 `'rbf'`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L429)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L429)
 
 ### max\_iter?
 
@@ -36,7 +36,7 @@ Change maximum number of iterations allowed.
 
 `1000`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L450)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L450)
 
 ### n\_jobs?
 
@@ -44,7 +44,7 @@ Defined in:  [generated/semi\_supervised/LabelPropagation.ts:450](https://github
 
 The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L460)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L460)
 
 ### n\_neighbors?
 
@@ -56,7 +56,7 @@ Parameter for knn kernel which need to be strictly positive.
 
 `7`
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L443)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L443)
 
 ### tol?
 
@@ -64,4 +64,4 @@ Defined in:  [generated/semi\_supervised/LabelPropagation.ts:443](https://github
 
 Convergence tolerance: threshold to consider the system at steady state.
 
-Defined in:  [generated/semi\_supervised/LabelPropagation.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L455)
+Defined in:  [generated/semi\_supervised/LabelPropagation.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelPropagation.ts#L455)

@@ -8,7 +8,7 @@
 
 Input data, used to fit transformers.
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L310)
+Defined in:  [generated/pipeline/FeatureUnion.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L310)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/pipeline/FeatureUnion.ts:310](https://github.com/transit
 
 Parameters to pass to the fit method of the estimator.
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L320)
+Defined in:  [generated/pipeline/FeatureUnion.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L320)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/pipeline/FeatureUnion.ts:320](https://github.com/transit
 
 Targets for supervised learning.
 
-Defined in:  [generated/pipeline/FeatureUnion.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L315)
+Defined in:  [generated/pipeline/FeatureUnion.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L315)

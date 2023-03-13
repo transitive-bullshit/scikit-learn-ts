@@ -12,7 +12,7 @@ Constant that multiplies the regularization term if regularization is used.
 
 `0.0001`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L538)
+Defined in:  [generated/linear\_model/Perceptron.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L538)
 
 ### class\_weight?
 
@@ -24,7 +24,7 @@ Weights associated with classes. If not given, all classes are supposed to have 
 
 The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L629)
+Defined in:  [generated/linear\_model/Perceptron.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L629)
 
 ### early\_stopping?
 
@@ -36,7 +36,7 @@ Whether to use early stopping to terminate training when validation. score is no
 
 `false`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L606)
+Defined in:  [generated/linear\_model/Perceptron.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L606)
 
 ### eta0?
 
@@ -48,7 +48,7 @@ Constant by which the updates are multiplied.
 
 `1`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L587)
+Defined in:  [generated/linear\_model/Perceptron.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L587)
 
 ### fit\_intercept?
 
@@ -60,7 +60,7 @@ Whether the intercept should be estimated or not. If `false`, the data is assume
 
 `true`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L552)
+Defined in:  [generated/linear\_model/Perceptron.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L552)
 
 ### l1\_ratio?
 
@@ -72,7 +72,7 @@ The Elastic Net mixing parameter, with `0 <= l1\_ratio <= 1`. `l1\_ratio=0` corr
 
 `0.15`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L545)
+Defined in:  [generated/linear\_model/Perceptron.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L545)
 
 ### max\_iter?
 
@@ -84,7 +84,7 @@ The maximum number of passes over the training data (aka epochs). It only impact
 
 `1000`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L559)
+Defined in:  [generated/linear\_model/Perceptron.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L559)
 
 ### n\_iter\_no\_change?
 
@@ -96,7 +96,7 @@ Number of iterations with no improvement to wait before early stopping.
 
 `5`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L620)
+Defined in:  [generated/linear\_model/Perceptron.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L620)
 
 ### n\_jobs?
 
@@ -104,7 +104,7 @@ Defined in:  [generated/linear\_model/Perceptron.ts:620](https://github.com/tran
 
 The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L592)
+Defined in:  [generated/linear\_model/Perceptron.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L592)
 
 ### penalty?
 
@@ -112,7 +112,7 @@ Defined in:  [generated/linear\_model/Perceptron.ts:592](https://github.com/tran
 
 The penalty (aka regularization term) to be used.
 
-Defined in:  [generated/linear\_model/Perceptron.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L531)
+Defined in:  [generated/linear\_model/Perceptron.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L531)
 
 ### random\_state?
 
@@ -124,7 +124,7 @@ Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int 
 
 `0`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L599)
+Defined in:  [generated/linear\_model/Perceptron.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L599)
 
 ### shuffle?
 
@@ -136,7 +136,7 @@ Whether or not the training data should be shuffled after each epoch.
 
 `true`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L573)
+Defined in:  [generated/linear\_model/Perceptron.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L573)
 
 ### tol?
 
@@ -148,7 +148,7 @@ The stopping criterion. If it is not `undefined`, the iterations will stop when 
 
 `0.001`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L566)
+Defined in:  [generated/linear\_model/Perceptron.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L566)
 
 ### validation\_fraction?
 
@@ -160,7 +160,7 @@ The proportion of training data to set aside as validation set for early stoppin
 
 `0.1`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L613)
+Defined in:  [generated/linear\_model/Perceptron.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L613)
 
 ### verbose?
 
@@ -172,7 +172,7 @@ The verbosity level.
 
 `0`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L580)
+Defined in:  [generated/linear\_model/Perceptron.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L580)
 
 ### warm\_start?
 
@@ -184,4 +184,4 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 `false`
 
-Defined in:  [generated/linear\_model/Perceptron.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/Perceptron.ts#L636)
+Defined in:  [generated/linear\_model/Perceptron.ts:636](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Perceptron.ts#L636)

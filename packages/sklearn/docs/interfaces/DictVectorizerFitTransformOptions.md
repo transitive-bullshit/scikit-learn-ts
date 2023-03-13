@@ -8,7 +8,7 @@
 
 Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype).
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L423)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L423)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/feature\_extraction/DictVectorizer.ts:423](https://githu
 
 Ignored parameter.
 
-Defined in:  [generated/feature\_extraction/DictVectorizer.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L428)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L428)

@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L450)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L450)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/SplineTransformer.ts:450](https://github.c
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L460)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L460)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/SplineTransformer.ts:460](https://github.c
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/SplineTransformer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L455)
+Defined in:  [generated/preprocessing/SplineTransformer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/SplineTransformer.ts#L455)

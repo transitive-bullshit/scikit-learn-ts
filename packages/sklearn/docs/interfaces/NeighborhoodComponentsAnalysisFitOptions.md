@@ -8,7 +8,7 @@
 
 The training samples.
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L487)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L487)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:487](https:/
 
 The corresponding training labels.
 
-Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L492)
+Defined in:  [generated/neighbors/NeighborhoodComponentsAnalysis.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NeighborhoodComponentsAnalysis.ts#L492)

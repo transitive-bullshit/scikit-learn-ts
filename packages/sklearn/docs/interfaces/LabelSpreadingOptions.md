@@ -12,7 +12,7 @@ Clamping factor. A value in (0, 1) that specifies the relative amount that an in
 
 `0.2`
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L430)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L430)
 
 ### gamma?
 
@@ -24,7 +24,7 @@ Parameter for rbf kernel.
 
 `20`
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L416)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L416)
 
 ### kernel?
 
@@ -36,7 +36,7 @@ String identifier for kernel function to use or the kernel function itself. Only
 
 `'rbf'`
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L409)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L409)
 
 ### max\_iter?
 
@@ -48,7 +48,7 @@ Maximum number of iterations allowed.
 
 `30`
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L437)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L437)
 
 ### n\_jobs?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/semi\_supervised/LabelSpreading.ts:437](https://github.c
 
 The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L449)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L449)
 
 ### n\_neighbors?
 
@@ -68,7 +68,7 @@ Parameter for knn kernel which is a strictly positive integer.
 
 `7`
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L423)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L423)
 
 ### tol?
 
@@ -80,4 +80,4 @@ Convergence tolerance: threshold to consider the system at steady state.
 
 `0.001`
 
-Defined in:  [generated/semi\_supervised/LabelSpreading.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L444)
+Defined in:  [generated/semi\_supervised/LabelSpreading.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/LabelSpreading.ts#L444)

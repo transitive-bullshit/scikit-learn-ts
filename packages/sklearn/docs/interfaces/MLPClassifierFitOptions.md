@@ -8,7 +8,7 @@
 
 The input data.
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L842)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:842](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L842)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/neural\_network/MLPClassifier.ts:842](https://github.com
 
 The target values (class labels in classification, real numbers in regression).
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L847)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:847](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L847)

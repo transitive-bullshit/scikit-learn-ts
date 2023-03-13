@@ -12,7 +12,7 @@ Only used if method=’barnes\_hut’ This is the trade-off between speed and ac
 
 `0.5`
 
-Defined in:  [generated/manifold/TSNE.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L406)
+Defined in:  [generated/manifold/TSNE.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L406)
 
 ### early\_exaggeration?
 
@@ -24,7 +24,7 @@ Controls how tight natural clusters in the original space are in the embedded sp
 
 `12`
 
-Defined in:  [generated/manifold/TSNE.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L333)
+Defined in:  [generated/manifold/TSNE.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L333)
 
 ### init?
 
@@ -36,7 +36,7 @@ Initialization of embedding. PCA initialization cannot be used with precomputed 
 
 `'pca'`
 
-Defined in:  [generated/manifold/TSNE.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L380)
+Defined in:  [generated/manifold/TSNE.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L380)
 
 ### learning\_rate?
 
@@ -48,7 +48,7 @@ The learning rate for t-SNE is usually in the range \[10.0, 1000.0\]. If the lea
 
 `'auto'`
 
-Defined in:  [generated/manifold/TSNE.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L340)
+Defined in:  [generated/manifold/TSNE.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L340)
 
 ### method?
 
@@ -60,7 +60,7 @@ By default the gradient calculation algorithm uses Barnes-Hut approximation runn
 
 `'barnes_hut'`
 
-Defined in:  [generated/manifold/TSNE.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L399)
+Defined in:  [generated/manifold/TSNE.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L399)
 
 ### metric?
 
@@ -72,7 +72,7 @@ The metric to use when calculating distance between instances in a feature array
 
 `'euclidean'`
 
-Defined in:  [generated/manifold/TSNE.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L368)
+Defined in:  [generated/manifold/TSNE.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L368)
 
 ### metric\_params?
 
@@ -80,7 +80,7 @@ Defined in:  [generated/manifold/TSNE.ts:368](https://github.com/transitive-bull
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/manifold/TSNE.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L373)
+Defined in:  [generated/manifold/TSNE.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L373)
 
 ### min\_grad\_norm?
 
@@ -92,7 +92,7 @@ If the gradient norm is below this threshold, the optimization will be stopped.
 
 `1e-7`
 
-Defined in:  [generated/manifold/TSNE.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L361)
+Defined in:  [generated/manifold/TSNE.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L361)
 
 ### n\_components?
 
@@ -104,7 +104,7 @@ Dimension of the embedded space.
 
 `2`
 
-Defined in:  [generated/manifold/TSNE.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L319)
+Defined in:  [generated/manifold/TSNE.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L319)
 
 ### n\_iter?
 
@@ -116,7 +116,7 @@ Maximum number of iterations for the optimization. Should be at least 250.
 
 `1000`
 
-Defined in:  [generated/manifold/TSNE.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L347)
+Defined in:  [generated/manifold/TSNE.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L347)
 
 ### n\_iter\_without\_progress?
 
@@ -128,7 +128,7 @@ Maximum number of iterations without progress before we abort the optimization, 
 
 `300`
 
-Defined in:  [generated/manifold/TSNE.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L354)
+Defined in:  [generated/manifold/TSNE.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L354)
 
 ### n\_jobs?
 
@@ -136,7 +136,7 @@ Defined in:  [generated/manifold/TSNE.ts:354](https://github.com/transitive-bull
 
 The number of parallel jobs to run for neighbors search. This parameter has no impact when `metric="precomputed"` or (`metric="euclidean"` and `method="exact"`). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/manifold/TSNE.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L411)
+Defined in:  [generated/manifold/TSNE.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L411)
 
 ### perplexity?
 
@@ -148,7 +148,7 @@ The perplexity is related to the number of nearest neighbors that is used in oth
 
 `30`
 
-Defined in:  [generated/manifold/TSNE.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L326)
+Defined in:  [generated/manifold/TSNE.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L326)
 
 ### random\_state?
 
@@ -156,7 +156,7 @@ Defined in:  [generated/manifold/TSNE.ts:326](https://github.com/transitive-bull
 
 Determines the random number generator. Pass an int for reproducible results across multiple function calls. Note that different initializations might result in different local minima of the cost function. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/manifold/TSNE.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L392)
+Defined in:  [generated/manifold/TSNE.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L392)
 
 ### square\_distances?
 
@@ -168,7 +168,7 @@ This parameter has no effect since distance values are always squared since 1.1.
 
 `'deprecated'`
 
-Defined in:  [generated/manifold/TSNE.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L418)
+Defined in:  [generated/manifold/TSNE.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L418)
 
 ### verbose?
 
@@ -180,4 +180,4 @@ Verbosity level.
 
 `0`
 
-Defined in:  [generated/manifold/TSNE.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/TSNE.ts#L387)
+Defined in:  [generated/manifold/TSNE.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/TSNE.ts#L387)

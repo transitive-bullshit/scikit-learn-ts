@@ -12,7 +12,7 @@ Categories (unique values) per feature:
 
 `'auto'`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L413)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L413)
 
 ### drop?
 
@@ -22,7 +22,7 @@ Specifies a methodology to use to drop one of the categories per feature. This i
 
 However, dropping one category breaks the symmetry of the original representation and can therefore induce a bias in downstream models, for instance for penalized linear classification or regression models.
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L420)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L420)
 
 ### dtype?
 
@@ -30,7 +30,7 @@ Defined in:  [generated/preprocessing/OneHotEncoder.ts:420](https://github.com/t
 
 Desired dtype of output.
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L439)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L439)
 
 ### handle\_unknown?
 
@@ -42,7 +42,7 @@ Specifies the way unknown categories are handled during [`transform`](#sklearn.p
 
 `'error'`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L446)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L446)
 
 ### max\_categories?
 
@@ -50,7 +50,7 @@ Defined in:  [generated/preprocessing/OneHotEncoder.ts:446](https://github.com/t
 
 Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L456)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L456)
 
 ### min\_frequency?
 
@@ -58,7 +58,7 @@ Defined in:  [generated/preprocessing/OneHotEncoder.ts:456](https://github.com/t
 
 Specifies the minimum frequency below which a category will be considered infrequent.
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L451)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L451)
 
 ### sparse?
 
@@ -70,7 +70,7 @@ Will return sparse matrix if set `true` else will return an array.
 
 `true`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L427)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L427)
 
 ### sparse\_output?
 
@@ -82,4 +82,4 @@ Will return sparse matrix if set `true` else will return an array.
 
 `true`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L434)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L434)

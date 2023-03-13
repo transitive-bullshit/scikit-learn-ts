@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L531)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L531)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multiclass/OneVsRestClassifier.ts:531](https://github.co
 
 Sample weights.
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L541)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L541)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/multiclass/OneVsRestClassifier.ts:541](https://github.co
 
 True labels for `X`.
 
-Defined in:  [generated/multiclass/OneVsRestClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L536)
+Defined in:  [generated/multiclass/OneVsRestClassifier.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsRestClassifier.ts#L536)

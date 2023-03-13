@@ -8,7 +8,7 @@
 
 The base estimator from which the regressor chain is built.
 
-Defined in:  [generated/multioutput/RegressorChain.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L298)
+Defined in:  [generated/multioutput/RegressorChain.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L298)
 
 ### cv?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multioutput/RegressorChain.ts:298](https://github.com/tr
 
 Determines whether to use cross validated predictions or true labels for the results of previous estimators in the chain. Possible inputs for cv are:
 
-Defined in:  [generated/multioutput/RegressorChain.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L308)
+Defined in:  [generated/multioutput/RegressorChain.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L308)
 
 ### order?
 
@@ -24,7 +24,7 @@ Defined in:  [generated/multioutput/RegressorChain.ts:308](https://github.com/tr
 
 If `undefined`, the order will be determined by the order of columns in the label matrix Y.:
 
-Defined in:  [generated/multioutput/RegressorChain.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L303)
+Defined in:  [generated/multioutput/RegressorChain.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L303)
 
 ### random\_state?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/multioutput/RegressorChain.ts:303](https://github.com/tr
 
 If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/multioutput/RegressorChain.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L313)
+Defined in:  [generated/multioutput/RegressorChain.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L313)
 
 ### verbose?
 
@@ -44,4 +44,4 @@ If `true`, chain progress is output as each model is completed.
 
 `false`
 
-Defined in:  [generated/multioutput/RegressorChain.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L320)
+Defined in:  [generated/multioutput/RegressorChain.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/RegressorChain.ts#L320)

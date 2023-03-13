@@ -8,7 +8,7 @@
 
 Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/compose/ColumnTransformer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L408)
+Defined in:  [generated/compose/ColumnTransformer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L408)
 
 ### remainder?
 
@@ -20,7 +20,7 @@ By default, only the specified columns in `transformers` are transformed and com
 
 `'drop'`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L396)
+Defined in:  [generated/compose/ColumnTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L396)
 
 ### sparse\_threshold?
 
@@ -32,7 +32,7 @@ If the output of the different transformers contains sparse matrices, these will
 
 `0.3`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L403)
+Defined in:  [generated/compose/ColumnTransformer.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L403)
 
 ### transformer\_weights?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/compose/ColumnTransformer.ts:403](https://github.com/tra
 
 Multiplicative weights for features per transformer. The output of the transformer is multiplied by these weights. Keys are transformer names, values the weights.
 
-Defined in:  [generated/compose/ColumnTransformer.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L413)
+Defined in:  [generated/compose/ColumnTransformer.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L413)
 
 ### transformers?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/compose/ColumnTransformer.ts:413](https://github.com/tra
 
 List of (name, transformer, columns) tuples specifying the transformer objects to be applied to subsets of the data.
 
-Defined in:  [generated/compose/ColumnTransformer.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L389)
+Defined in:  [generated/compose/ColumnTransformer.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L389)
 
 ### verbose?
 
@@ -60,7 +60,7 @@ If `true`, the time elapsed while fitting each transformer will be printed as it
 
 `false`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L420)
+Defined in:  [generated/compose/ColumnTransformer.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L420)
 
 ### verbose\_feature\_names\_out?
 
@@ -72,4 +72,4 @@ If `true`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_f
 
 `true`
 
-Defined in:  [generated/compose/ColumnTransformer.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L427)
+Defined in:  [generated/compose/ColumnTransformer.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/ColumnTransformer.ts#L427)

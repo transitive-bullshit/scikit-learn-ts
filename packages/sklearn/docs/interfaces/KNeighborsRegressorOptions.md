@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L436)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L436)
 
 ### leaf\_size?
 
@@ -24,7 +24,7 @@ Leaf size passed to BallTree or KDTree. This can affect the speed of the constru
 
 `30`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L443)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L443)
 
 ### metric?
 
@@ -40,7 +40,7 @@ If metric is a callable function, it takes two arrays representing 1D vectors as
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L461)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L461)
 
 ### metric\_params?
 
@@ -48,7 +48,7 @@ Defined in:  [generated/neighbors/KNeighborsRegressor.ts:461](https://github.com
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L466)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L466)
 
 ### n\_jobs?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/neighbors/KNeighborsRegressor.ts:466](https://github.com
 
 The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsRegressor.fit "sklearn.neighbors.KNeighborsRegressor.fit") method.
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L471)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L471)
 
 ### n\_neighbors?
 
@@ -68,7 +68,7 @@ Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.KNei
 
 `5`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L422)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L422)
 
 ### p?
 
@@ -80,7 +80,7 @@ Power parameter for the Minkowski metric. When p = 1, this is equivalent to usin
 
 `2`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L450)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L450)
 
 ### weights?
 
@@ -92,4 +92,4 @@ Weight function used in prediction. Possible values:
 
 `'uniform'`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L429)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L429)

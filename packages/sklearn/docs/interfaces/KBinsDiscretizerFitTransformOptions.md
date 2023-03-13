@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L470)
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L470)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:470](https://github.co
 
 Additional fit parameters.
 
-Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L480)
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L480)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:480](https://github.co
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L475)
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L475)

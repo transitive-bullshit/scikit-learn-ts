@@ -8,4 +8,4 @@
 
 List of n\_features-dimensional data points. Each row corresponds to a single data point.
 
-Defined in:  [generated/mixture/GaussianMixture.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L797)
+Defined in:  [generated/mixture/GaussianMixture.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/mixture/GaussianMixture.ts#L797)

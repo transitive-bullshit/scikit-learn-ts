@@ -26,7 +26,7 @@ new ConstantKernel(opts?: ConstantKernelOptions): ConstantKernel;
 
 [`ConstantKernel`](ConstantKernel.md)
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L23)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:23](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L20)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L16)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L17)
 
 ## Accessors
 
@@ -74,9 +74,9 @@ hyperparameter_constant_value(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L218)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L218)
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L218)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L218)
 
 ### py
 
@@ -90,7 +90,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L28)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L28)
 
 #### Signature
 
@@ -108,9 +108,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L32)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L32)
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L28) [generated/gaussian\_process/kernels/ConstantKernel.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L32)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L28) [generated/gaussian\_process/kernels/ConstantKernel.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L32)
 
 ## Methods
 
@@ -134,7 +134,7 @@ __call__(opts: ConstantKernelCallOptions): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L100)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L100)
 
 ### clone\_with\_theta()
 
@@ -156,7 +156,7 @@ clone_with_theta(opts: ConstantKernelCloneWithThetaOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L132)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L132)
 
 ### diag()
 
@@ -180,7 +180,7 @@ diag(opts: ConstantKernelDiagOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L167)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L167)
 
 ### dispose()
 
@@ -198,7 +198,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L83)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L83)
 
 ### init()
 
@@ -222,7 +222,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L41)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L41)
 
 ### is\_stationary()
 
@@ -244,4 +244,4 @@ is_stationary(opts: ConstantKernelIsStationaryOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L195)
+Defined in:  [generated/gaussian\_process/kernels/ConstantKernel.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ConstantKernel.ts#L195)

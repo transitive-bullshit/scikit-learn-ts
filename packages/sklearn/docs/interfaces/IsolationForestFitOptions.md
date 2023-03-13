@@ -8,7 +8,7 @@
 
 The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
 
-Defined in:  [generated/ensemble/IsolationForest.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L525)
+Defined in:  [generated/ensemble/IsolationForest.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L525)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/IsolationForest.ts:525](https://github.com/tran
 
 Sample weights. If `undefined`, then samples are equally weighted.
 
-Defined in:  [generated/ensemble/IsolationForest.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L535)
+Defined in:  [generated/ensemble/IsolationForest.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L535)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/IsolationForest.ts:535](https://github.com/tran
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/ensemble/IsolationForest.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L530)
+Defined in:  [generated/ensemble/IsolationForest.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L530)

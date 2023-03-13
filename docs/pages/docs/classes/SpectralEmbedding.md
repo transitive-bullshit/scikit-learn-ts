@@ -30,7 +30,7 @@ new SpectralEmbedding(opts?: SpectralEmbeddingOptions): SpectralEmbedding;
 
 [`SpectralEmbedding`](SpectralEmbedding.md)
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L27)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L27)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/manifold/SpectralEmbedding.ts:27](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L25)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L24)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L23)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L20)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L21)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L21)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ affinity_matrix_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/manifold/SpectralEmbedding.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L203)
+Defined in: [generated/manifold/SpectralEmbedding.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L203)
 
 ### embedding\_
 
@@ -96,7 +96,7 @@ embedding_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/manifold/SpectralEmbedding.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L176)
+Defined in: [generated/manifold/SpectralEmbedding.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L176)
 
 ### feature\_names\_in\_
 
@@ -112,7 +112,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/manifold/SpectralEmbedding.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L257)
+Defined in: [generated/manifold/SpectralEmbedding.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L257)
 
 ### n\_features\_in\_
 
@@ -128,7 +128,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/SpectralEmbedding.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L230)
+Defined in: [generated/manifold/SpectralEmbedding.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L230)
 
 ### n\_neighbors\_
 
@@ -144,7 +144,7 @@ n_neighbors_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/SpectralEmbedding.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L284)
+Defined in: [generated/manifold/SpectralEmbedding.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L284)
 
 ### py
 
@@ -158,7 +158,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L32)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L32)
 
 #### Signature
 
@@ -176,7 +176,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/manifold/SpectralEmbedding.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L36)
+Defined in: [generated/manifold/SpectralEmbedding.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L36)
 
 ## Methods
 
@@ -196,7 +196,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L95)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L95)
 
 ### fit()
 
@@ -218,7 +218,7 @@ fit(opts: SpectralEmbeddingFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L112)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L112)
 
 ### fit\_transform()
 
@@ -240,7 +240,7 @@ fit_transform(opts: SpectralEmbeddingFitTransformOptions): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L142)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L142)
 
 ### init()
 
@@ -264,4 +264,4 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/SpectralEmbedding.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L45)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L45)

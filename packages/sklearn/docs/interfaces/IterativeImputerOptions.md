@@ -12,7 +12,7 @@ If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.i
 
 `false`
 
-Defined in:  [generated/impute/IterativeImputer.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L588)
+Defined in:  [generated/impute/IterativeImputer.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L588)
 
 ### estimator?
 
@@ -20,7 +20,7 @@ Defined in:  [generated/impute/IterativeImputer.ts:588](https://github.com/trans
 
 The estimator to use at each step of the round-robin imputation. If `sample\_posterior=True`, the estimator must support `return\_std` in its `predict` method.
 
-Defined in:  [generated/impute/IterativeImputer.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L507)
+Defined in:  [generated/impute/IterativeImputer.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L507)
 
 ### imputation\_order?
 
@@ -32,7 +32,7 @@ The order in which the features will be imputed. Possible values:
 
 `'ascending'`
 
-Defined in:  [generated/impute/IterativeImputer.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L552)
+Defined in:  [generated/impute/IterativeImputer.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L552)
 
 ### initial\_strategy?
 
@@ -44,7 +44,7 @@ Which strategy to use to initialize the missing values. Same as the `strategy` p
 
 `'mean'`
 
-Defined in:  [generated/impute/IterativeImputer.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L545)
+Defined in:  [generated/impute/IterativeImputer.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L545)
 
 ### keep\_empty\_features?
 
@@ -56,7 +56,7 @@ If `true`, features that consist exclusively of missing values when `fit` is cal
 
 `false`
 
-Defined in:  [generated/impute/IterativeImputer.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L595)
+Defined in:  [generated/impute/IterativeImputer.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L595)
 
 ### max\_iter?
 
@@ -68,7 +68,7 @@ Maximum number of imputation rounds to perform before returning the imputations 
 
 `10`
 
-Defined in:  [generated/impute/IterativeImputer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L526)
+Defined in:  [generated/impute/IterativeImputer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L526)
 
 ### max\_value?
 
@@ -76,7 +76,7 @@ Defined in:  [generated/impute/IterativeImputer.ts:526](https://github.com/trans
 
 Maximum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one max value for each feature. The default is `np.inf`.
 
-Defined in:  [generated/impute/IterativeImputer.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L569)
+Defined in:  [generated/impute/IterativeImputer.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L569)
 
 ### min\_value?
 
@@ -84,7 +84,7 @@ Defined in:  [generated/impute/IterativeImputer.ts:569](https://github.com/trans
 
 Minimum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one min value for each feature. The default is `\-np.inf`.
 
-Defined in:  [generated/impute/IterativeImputer.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L564)
+Defined in:  [generated/impute/IterativeImputer.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L564)
 
 ### missing\_values?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/impute/IterativeImputer.ts:564](https://github.com/trans
 
 The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
 
-Defined in:  [generated/impute/IterativeImputer.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L512)
+Defined in:  [generated/impute/IterativeImputer.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L512)
 
 ### n\_nearest\_features?
 
@@ -100,7 +100,7 @@ Defined in:  [generated/impute/IterativeImputer.ts:512](https://github.com/trans
 
 Number of other features to use to estimate the missing values of each feature column. Nearness between features is measured using the absolute correlation coefficient between each feature pair (after initial imputation). To ensure coverage of features throughout the imputation process, the neighbor features are not necessarily nearest, but are drawn with probability proportional to correlation for each imputed target feature. Can provide significant speed-up when the number of features is huge. If `undefined`, all features will be used.
 
-Defined in:  [generated/impute/IterativeImputer.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L538)
+Defined in:  [generated/impute/IterativeImputer.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L538)
 
 ### random\_state?
 
@@ -108,7 +108,7 @@ Defined in:  [generated/impute/IterativeImputer.ts:538](https://github.com/trans
 
 The seed of the pseudo random number generator to use. Randomizes selection of estimator features if `n\_nearest\_features` is not `undefined`, the `imputation\_order` if `random`, and the sampling from posterior if `sample\_posterior=True`. Use an integer for determinism. See [the Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/impute/IterativeImputer.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L581)
+Defined in:  [generated/impute/IterativeImputer.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L581)
 
 ### sample\_posterior?
 
@@ -120,7 +120,7 @@ Whether to sample from the (Gaussian) predictive posterior of the fitted estimat
 
 `false`
 
-Defined in:  [generated/impute/IterativeImputer.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L519)
+Defined in:  [generated/impute/IterativeImputer.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L519)
 
 ### skip\_complete?
 
@@ -132,7 +132,7 @@ If `true` then features with missing values during [`transform`](#sklearn.impute
 
 `false`
 
-Defined in:  [generated/impute/IterativeImputer.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L559)
+Defined in:  [generated/impute/IterativeImputer.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L559)
 
 ### tol?
 
@@ -144,7 +144,7 @@ Tolerance of the stopping condition.
 
 `0.001`
 
-Defined in:  [generated/impute/IterativeImputer.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L533)
+Defined in:  [generated/impute/IterativeImputer.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L533)
 
 ### verbose?
 
@@ -156,4 +156,4 @@ Verbosity flag, controls the debug messages that are issued as functions are eva
 
 `0`
 
-Defined in:  [generated/impute/IterativeImputer.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/IterativeImputer.ts#L576)
+Defined in:  [generated/impute/IterativeImputer.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/IterativeImputer.ts#L576)

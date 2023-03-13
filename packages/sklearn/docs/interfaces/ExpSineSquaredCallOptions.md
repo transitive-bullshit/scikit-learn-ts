@@ -8,7 +8,7 @@
 
 Left argument of the returned kernel k(X, Y)
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L273)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L273)
 
 ### Y?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:273](https:/
 
 Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L278)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L278)
 
 ### eval\_gradient?
 
@@ -28,4 +28,4 @@ Determines whether the gradient with respect to the log of the kernel hyperparam
 
 `false`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L285)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L285)

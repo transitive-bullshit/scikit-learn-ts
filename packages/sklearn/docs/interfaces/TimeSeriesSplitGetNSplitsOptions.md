@@ -8,7 +8,7 @@
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L196)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L196)
 
 ### groups?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:196](https://github.
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L206)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L206)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:206](https://github.
 
 Always ignored, exists for compatibility.
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L201)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L201)

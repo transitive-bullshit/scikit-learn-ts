@@ -8,7 +8,7 @@
 
 Training data.
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L552)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L552)
 
 ### y?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/neighbors/KNeighborsTransformer.ts:552](https://github.c
 
 Not used, present for API consistency by convention.
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L557)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L557)

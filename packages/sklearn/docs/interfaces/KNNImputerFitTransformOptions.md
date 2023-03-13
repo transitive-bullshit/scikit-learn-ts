@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/impute/KNNImputer.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L395)
+Defined in:  [generated/impute/KNNImputer.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/KNNImputer.ts#L395)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/impute/KNNImputer.ts:395](https://github.com/transitive-
 
 Additional fit parameters.
 
-Defined in:  [generated/impute/KNNImputer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L405)
+Defined in:  [generated/impute/KNNImputer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/KNNImputer.ts#L405)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/impute/KNNImputer.ts:405](https://github.com/transitive-
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/impute/KNNImputer.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/impute/KNNImputer.ts#L400)
+Defined in:  [generated/impute/KNNImputer.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/KNNImputer.ts#L400)

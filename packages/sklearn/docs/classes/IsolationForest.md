@@ -36,7 +36,7 @@ new IsolationForest(opts?: IsolationForestOptions): IsolationForest;
 
 [`IsolationForest`](IsolationForest.md)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L33)
+Defined in:  [generated/ensemble/IsolationForest.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L33)
 
 ## Properties
 
@@ -44,31 +44,31 @@ Defined in:  [generated/ensemble/IsolationForest.ts:33](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L31)
+Defined in:  [generated/ensemble/IsolationForest.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L31)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L30)
+Defined in:  [generated/ensemble/IsolationForest.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L30)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L29)
+Defined in:  [generated/ensemble/IsolationForest.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L29)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L26)
+Defined in:  [generated/ensemble/IsolationForest.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L26)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L27)
+Defined in:  [generated/ensemble/IsolationForest.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L27)
 
 ## Accessors
 
@@ -86,9 +86,9 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L278)
+Defined in:  [generated/ensemble/IsolationForest.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L278)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L278)
+Defined in:  [generated/ensemble/IsolationForest.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L278)
 
 ### estimators\_
 
@@ -104,9 +104,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L303)
+Defined in:  [generated/ensemble/IsolationForest.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L303)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L303)
+Defined in:  [generated/ensemble/IsolationForest.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L303)
 
 ### estimators\_features\_
 
@@ -122,9 +122,9 @@ estimators_features_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L328)
+Defined in:  [generated/ensemble/IsolationForest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L328)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L328)
+Defined in:  [generated/ensemble/IsolationForest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L328)
 
 ### feature\_names\_in\_
 
@@ -140,9 +140,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L428)
+Defined in:  [generated/ensemble/IsolationForest.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L428)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L428)
+Defined in:  [generated/ensemble/IsolationForest.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L428)
 
 ### max\_samples\_
 
@@ -158,9 +158,9 @@ max_samples_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L353)
+Defined in:  [generated/ensemble/IsolationForest.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L353)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L353)
+Defined in:  [generated/ensemble/IsolationForest.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L353)
 
 ### n\_features\_in\_
 
@@ -176,9 +176,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L403)
+Defined in:  [generated/ensemble/IsolationForest.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L403)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L403)
+Defined in:  [generated/ensemble/IsolationForest.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L403)
 
 ### offset\_
 
@@ -194,9 +194,9 @@ offset_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L378)
+Defined in:  [generated/ensemble/IsolationForest.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L378)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L378)
+Defined in:  [generated/ensemble/IsolationForest.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L378)
 
 ### py
 
@@ -210,7 +210,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L38)
+Defined in:  [generated/ensemble/IsolationForest.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L38)
 
 #### Signature
 
@@ -228,9 +228,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L42)
+Defined in:  [generated/ensemble/IsolationForest.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L42)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L38) [generated/ensemble/IsolationForest.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L42)
+Defined in:  [generated/ensemble/IsolationForest.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L38) [generated/ensemble/IsolationForest.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L42)
 
 ## Methods
 
@@ -258,7 +258,7 @@ decision_function(opts: IsolationForestDecisionFunctionOptions): Promise<ArrayLi
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L122)
+Defined in:  [generated/ensemble/IsolationForest.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L122)
 
 ### dispose()
 
@@ -276,7 +276,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L101)
+Defined in:  [generated/ensemble/IsolationForest.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L101)
 
 ### fit()
 
@@ -298,7 +298,7 @@ fit(opts: IsolationForestFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L154)
+Defined in:  [generated/ensemble/IsolationForest.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L154)
 
 ### fit\_predict()
 
@@ -322,7 +322,7 @@ fit_predict(opts: IsolationForestFitPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L188)
+Defined in:  [generated/ensemble/IsolationForest.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L188)
 
 ### init()
 
@@ -346,7 +346,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L51)
+Defined in:  [generated/ensemble/IsolationForest.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L51)
 
 ### predict()
 
@@ -368,7 +368,7 @@ predict(opts: IsolationForestPredictOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L216)
+Defined in:  [generated/ensemble/IsolationForest.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L216)
 
 ### score\_samples()
 
@@ -394,4 +394,4 @@ score_samples(opts: IsolationForestScoreSamplesOptions): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L248)
+Defined in:  [generated/ensemble/IsolationForest.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L248)

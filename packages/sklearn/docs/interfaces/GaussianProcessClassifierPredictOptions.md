@@ -8,4 +8,4 @@
 
 Query points where the GP is evaluated for classification.
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L554)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L554)

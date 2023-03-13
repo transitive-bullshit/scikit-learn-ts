@@ -12,7 +12,7 @@ Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`t
 
 `1`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L514)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L514)
 
 ### binarize?
 
@@ -24,7 +24,7 @@ Threshold for binarizing (mapping to booleans) of sample features. If `undefined
 
 `0`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L528)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L528)
 
 ### class\_prior?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/naive\_bayes/BernoulliNB.ts:528](https://github.com/tran
 
 Prior probabilities of the classes. If specified, the priors are not adjusted according to the data.
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L540)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L540)
 
 ### fit\_prior?
 
@@ -44,7 +44,7 @@ Whether to learn class prior probabilities or not. If false, a uniform prior wil
 
 `true`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L535)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L535)
 
 ### force\_alpha?
 
@@ -56,4 +56,4 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 `false`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L521)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:521](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L521)

@@ -8,7 +8,7 @@
 
 The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L640)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L640)
 
 ### check\_input?
 
@@ -20,4 +20,4 @@ Allow to bypass several input checking. Don’t use this parameter unless you kn
 
 `true`
 
-Defined in:  [generated/tree/ExtraTreeRegressor.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L647)
+Defined in:  [generated/tree/ExtraTreeRegressor.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L647)

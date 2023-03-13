@@ -12,7 +12,7 @@ When set to `true`, computes the averaged SGD weights and stores the result in t
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L605)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L605)
 
 ### eta0?
 
@@ -24,7 +24,7 @@ The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptiv
 
 `0`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L582)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L582)
 
 ### fit\_intercept?
 
@@ -36,7 +36,7 @@ Whether the intercept should be estimated or not. Defaults to `true`.
 
 `true`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L535)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L535)
 
 ### learning\_rate?
 
@@ -48,7 +48,7 @@ The learning rate schedule to use with `fit`. (If using `partial\_fit`, learning
 
 `'optimal'`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L575)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:575](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L575)
 
 ### max\_iter?
 
@@ -60,7 +60,7 @@ The maximum number of passes over the training data (aka epochs). It only impact
 
 `1000`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L542)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L542)
 
 ### nu?
 
@@ -72,7 +72,7 @@ The nu parameter of the One Class SVM: an upper bound on the fraction of trainin
 
 `0.5`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L528)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L528)
 
 ### power\_t?
 
@@ -84,7 +84,7 @@ The exponent for inverse scaling learning rate \[default 0.5\].
 
 `0.5`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L589)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L589)
 
 ### random\_state?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:589](https://github.com/
 
 The seed of the pseudo random number generator to use when shuffling the data. If int, random\_state is the seed used by the random number generator; If RandomState instance, random\_state is the random number generator; If `undefined`, the random number generator is the RandomState instance used by `np.random`.
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L568)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L568)
 
 ### shuffle?
 
@@ -104,7 +104,7 @@ Whether or not the training data should be shuffled after each epoch. Defaults t
 
 `true`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L556)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L556)
 
 ### tol?
 
@@ -116,7 +116,7 @@ The stopping criterion. If it is not `undefined`, the iterations will stop when 
 
 `0.001`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L549)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L549)
 
 ### verbose?
 
@@ -128,7 +128,7 @@ The verbosity level.
 
 `0`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L563)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L563)
 
 ### warm\_start?
 
@@ -142,4 +142,4 @@ Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in 
 
 `false`
 
-Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L598)
+Defined in:  [generated/linear\_model/SGDOneClassSVM.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDOneClassSVM.ts#L598)

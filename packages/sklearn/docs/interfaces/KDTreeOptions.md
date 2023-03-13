@@ -8,7 +8,7 @@
 
 n\_samples is the number of points in the data set, and n\_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
 
-Defined in:  [generated/neighbors/KDTree.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L361)
+Defined in:  [generated/neighbors/KDTree.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L361)
 
 ### leaf\_size?
 
@@ -20,7 +20,7 @@ Number of points at which to switch to brute-force. Changing leaf\_size will not
 
 `40`
 
-Defined in:  [generated/neighbors/KDTree.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L368)
+Defined in:  [generated/neighbors/KDTree.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L368)
 
 ### metric?
 
@@ -32,4 +32,4 @@ Metric to use for distance computation. Default is “minkowski”, which result
 
 `'minkowski'`
 
-Defined in:  [generated/neighbors/KDTree.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L375)
+Defined in:  [generated/neighbors/KDTree.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L375)

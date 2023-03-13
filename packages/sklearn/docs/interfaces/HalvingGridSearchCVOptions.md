@@ -12,7 +12,7 @@ This is only relevant in cases where there isn’t enough resources to reduce th
 
 `false`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:966](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L966)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:966](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L966)
 
 ### cv?
 
@@ -24,7 +24,7 @@ Determines the cross-validation splitting strategy. Possible inputs for cv are:
 
 `5`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:973](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L973)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:973](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L973)
 
 ### error\_score?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:973](https://git
 
 Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error. Default is `np.nan`.
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:992](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L992)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:992](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L992)
 
 ### estimator?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:992](https://git
 
 This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:926](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L926)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:926](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L926)
 
 ### factor?
 
@@ -52,7 +52,7 @@ The ‘halving’ parameter, which determines the proportion of candidates that 
 
 `3`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:938](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L938)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:938](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L938)
 
 ### max\_resources?
 
@@ -64,7 +64,7 @@ The maximum amount of resource that any candidate is allowed to use for a given 
 
 `'auto'`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:952](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L952)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:952](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L952)
 
 ### min\_resources?
 
@@ -76,7 +76,7 @@ The minimum amount of resource that any candidate is allowed to use for a given 
 
 `'exhaust'`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:959](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L959)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:959](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L959)
 
 ### n\_jobs?
 
@@ -84,7 +84,7 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:959](https://git
 
 Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1009](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1009)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1009](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1009)
 
 ### param\_grid?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1009](https://gi
 
 Dictionary with parameters names (string) as keys and lists of parameter settings to try as values, or a list of such dictionaries, in which case the grids spanned by each dictionary in the list are explored. This enables searching over any sequence of parameter settings.
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:931](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L931)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:931](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L931)
 
 ### random\_state?
 
@@ -100,7 +100,7 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:931](https://git
 
 Pseudo random number generator state used for subsampling the dataset when `resources != 'n\_samples'`. Ignored otherwise. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1004](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1004)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1004](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1004)
 
 ### refit?
 
@@ -114,7 +114,7 @@ The refitted estimator is made available at the `best\_estimator\_` attribute an
 
 `true`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:987](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L987)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:987](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L987)
 
 ### resource?
 
@@ -126,7 +126,7 @@ Defines the resource that increases with each iteration. By default, the resourc
 
 `'n_samples'`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:945](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L945)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:945](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L945)
 
 ### return\_train\_score?
 
@@ -138,7 +138,7 @@ If `false`, the `cv\_results\_` attribute will not include training scores. Comp
 
 `false`
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:999](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L999)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:999](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L999)
 
 ### scoring?
 
@@ -146,7 +146,7 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:999](https://git
 
 A single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:978](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L978)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:978](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L978)
 
 ### verbose?
 
@@ -154,4 +154,4 @@ Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:978](https://git
 
 Controls the verbosity: the higher, the more messages.
 
-Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1014](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1014)
+Defined in:  [generated/model\_selection/HalvingGridSearchCV.ts:1014](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/HalvingGridSearchCV.ts#L1014)

@@ -8,7 +8,7 @@
 
 Prediction values.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L376)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L376)
 
 ### y\_true?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/metrics/PredictionErrorDisplay.ts:376](https://github.co
 
 True values.
 
-Defined in:  [generated/metrics/PredictionErrorDisplay.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L371)
+Defined in:  [generated/metrics/PredictionErrorDisplay.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L371)

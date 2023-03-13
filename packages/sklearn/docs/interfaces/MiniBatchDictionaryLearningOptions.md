@@ -12,7 +12,7 @@ Sparsity controlling parameter.
 
 `1`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L578)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L578)
 
 ### batch\_size?
 
@@ -24,7 +24,7 @@ Number of samples in each mini-batch.
 
 `3`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L609)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L609)
 
 ### callback?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:609](https:
 
 A callable that gets invoked at the end of each iteration.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L683)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L683)
 
 ### dict\_init?
 
@@ -40,7 +40,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:683](https:
 
 Initial value of the dictionary for warm restart scenarios.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L621)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L621)
 
 ### fit\_algorithm?
 
@@ -52,7 +52,7 @@ The algorithm used:
 
 `'lars'`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L597)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L597)
 
 ### max\_iter?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:597](https:
 
 Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L590)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L590)
 
 ### max\_no\_improvement?
 
@@ -74,7 +74,7 @@ To disable convergence detection based on cost function, set `max\_no\_improveme
 
 `10`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L701)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L701)
 
 ### n\_components?
 
@@ -82,7 +82,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:701](https:
 
 Number of dictionary elements to extract.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L571)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:571](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L571)
 
 ### n\_iter?
 
@@ -94,7 +94,7 @@ Total number of iterations over data batches to perform.
 
 `1000`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L585)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L585)
 
 ### n\_jobs?
 
@@ -102,7 +102,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:585](https:
 
 Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L602)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L602)
 
 ### positive\_code?
 
@@ -114,7 +114,7 @@ Whether to enforce positivity when finding the code.
 
 `false`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L664)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L664)
 
 ### positive\_dict?
 
@@ -126,7 +126,7 @@ Whether to enforce positivity when finding the dictionary.
 
 `false`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:671](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L671)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:671](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L671)
 
 ### random\_state?
 
@@ -134,7 +134,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:671](https:
 
 Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L657)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L657)
 
 ### shuffle?
 
@@ -146,7 +146,7 @@ Whether to shuffle the samples before forming batches.
 
 `true`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L616)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L616)
 
 ### split\_sign?
 
@@ -158,7 +158,7 @@ Whether to split the sparse feature vector into the concatenation of its negativ
 
 `false`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L652)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L652)
 
 ### tol?
 
@@ -172,7 +172,7 @@ To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
 
 `0.001`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:692](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L692)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:692](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L692)
 
 ### transform\_algorithm?
 
@@ -184,7 +184,7 @@ Algorithm used to transform the data:
 
 `'omp'`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L628)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L628)
 
 ### transform\_alpha?
 
@@ -192,7 +192,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:628](https:
 
 If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L638)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L638)
 
 ### transform\_max\_iter?
 
@@ -204,7 +204,7 @@ Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_l
 
 `1000`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L678)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L678)
 
 ### transform\_n\_nonzero\_coefs?
 
@@ -212,7 +212,7 @@ Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:678](https:
 
 Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L633)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L633)
 
 ### verbose?
 
@@ -224,4 +224,4 @@ To control the verbosity of the procedure.
 
 `false`
 
-Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L645)
+Defined in:  [generated/decomposition/MiniBatchDictionaryLearning.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L645)

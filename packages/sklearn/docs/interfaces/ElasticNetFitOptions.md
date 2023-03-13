@@ -8,7 +8,7 @@
 
 Data.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L475)
+Defined in:  [generated/linear\_model/ElasticNet.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L475)
 
 ### check\_input?
 
@@ -20,7 +20,7 @@ Allow to bypass several input checking. Don’t use this parameter unless you kn
 
 `true`
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L492)
+Defined in:  [generated/linear\_model/ElasticNet.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L492)
 
 ### sample\_weight?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:492](https://github.com/tran
 
 Sample weights. Internally, the `sample\_weight` vector will be rescaled to sum to `n\_samples`.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L485)
+Defined in:  [generated/linear\_model/ElasticNet.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L485)
 
 ### y?
 
@@ -36,4 +36,4 @@ Defined in:  [generated/linear\_model/ElasticNet.ts:485](https://github.com/tran
 
 Target. Will be cast to X’s dtype if necessary.
 
-Defined in:  [generated/linear\_model/ElasticNet.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L480)
+Defined in:  [generated/linear\_model/ElasticNet.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/ElasticNet.ts#L480)

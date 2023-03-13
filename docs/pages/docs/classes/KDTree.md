@@ -26,7 +26,7 @@ new KDTree(opts?: KDTreeOptions): KDTree;
 
 [`KDTree`](KDTree.md)
 
-Defined in:  [generated/neighbors/KDTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L23)
+Defined in:  [generated/neighbors/KDTree.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L23)
 
 ## Properties
 
@@ -34,31 +34,31 @@ Defined in:  [generated/neighbors/KDTree.ts:23](https://github.com/transitive-bu
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L21)
+Defined in:  [generated/neighbors/KDTree.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L20)
+Defined in:  [generated/neighbors/KDTree.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/KDTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L19)
+Defined in:  [generated/neighbors/KDTree.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/KDTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L16)
+Defined in:  [generated/neighbors/KDTree.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/KDTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L17)
+Defined in:  [generated/neighbors/KDTree.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L17)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ data(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/KDTree.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L337)
+Defined in: [generated/neighbors/KDTree.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L337)
 
 ### py
 
@@ -90,7 +90,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/KDTree.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L28)
+Defined in:  [generated/neighbors/KDTree.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L28)
 
 #### Signature
 
@@ -108,7 +108,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/KDTree.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L32)
+Defined in: [generated/neighbors/KDTree.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L32)
 
 ## Methods
 
@@ -128,7 +128,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L82)
+Defined in:  [generated/neighbors/KDTree.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L82)
 
 ### get\_arrays()
 
@@ -150,7 +150,7 @@ get_arrays(opts: KDTreeGetArraysOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L99)
+Defined in:  [generated/neighbors/KDTree.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L99)
 
 ### get\_n\_calls()
 
@@ -172,7 +172,7 @@ get_n_calls(opts: KDTreeGetNCallsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L125)
+Defined in:  [generated/neighbors/KDTree.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L125)
 
 ### get\_tree\_stats()
 
@@ -194,7 +194,7 @@ get_tree_stats(opts: KDTreeGetTreeStatsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L151)
+Defined in:  [generated/neighbors/KDTree.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L151)
 
 ### init()
 
@@ -218,7 +218,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L41)
+Defined in:  [generated/neighbors/KDTree.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L41)
 
 ### kernel\_density()
 
@@ -240,7 +240,7 @@ kernel_density(opts: KDTreeKernelDensityOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L177)
+Defined in:  [generated/neighbors/KDTree.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L177)
 
 ### query()
 
@@ -262,7 +262,7 @@ query(opts: KDTreeQueryOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L211)
+Defined in:  [generated/neighbors/KDTree.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L211)
 
 ### query\_radius()
 
@@ -284,7 +284,7 @@ query_radius(opts: KDTreeQueryRadiusOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L245)
+Defined in:  [generated/neighbors/KDTree.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L245)
 
 ### reset\_n\_calls()
 
@@ -306,7 +306,7 @@ reset_n_calls(opts: KDTreeResetNCallsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L279)
+Defined in:  [generated/neighbors/KDTree.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L279)
 
 ### two\_point\_correlation()
 
@@ -328,4 +328,4 @@ two_point_correlation(opts: KDTreeTwoPointCorrelationOptions): Promise<ArrayLike
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neighbors/KDTree.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L305)
+Defined in:  [generated/neighbors/KDTree.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L305)

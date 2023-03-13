@@ -8,4 +8,4 @@
 
 The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L721)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:721](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L721)

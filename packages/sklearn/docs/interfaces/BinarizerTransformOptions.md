@@ -8,7 +8,7 @@
 
 The data to binarize, element by element. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy.
 
-Defined in:  [generated/preprocessing/Binarizer.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L373)
+Defined in:  [generated/preprocessing/Binarizer.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L373)
 
 ### copy?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/preprocessing/Binarizer.ts:373](https://github.com/trans
 
 Copy the input X or not.
 
-Defined in:  [generated/preprocessing/Binarizer.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L378)
+Defined in:  [generated/preprocessing/Binarizer.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L378)

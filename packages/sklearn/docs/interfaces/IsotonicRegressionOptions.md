@@ -12,7 +12,7 @@ Determines whether the predictions should be constrained to increase or decrease
 
 `true`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L515)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L515)
 
 ### out\_of\_bounds?
 
@@ -24,7 +24,7 @@ Handles how `X` values outside of the training domain are handled during predict
 
 `'nan'`
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L522)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L522)
 
 ### y\_max?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/isotonic/IsotonicRegression.ts:522](https://github.com/t
 
 Upper bound on the highest predicted value (the maximum may still be lower). If not set, defaults to +inf.
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L508)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L508)
 
 ### y\_min?
 
@@ -40,4 +40,4 @@ Defined in:  [generated/isotonic/IsotonicRegression.ts:508](https://github.com/t
 
 Lower bound on the lowest predicted value (the minimum value may still be higher). If not set, defaults to -inf.
 
-Defined in:  [generated/isotonic/IsotonicRegression.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L503)
+Defined in:  [generated/isotonic/IsotonicRegression.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/isotonic/IsotonicRegression.ts#L503)

@@ -8,7 +8,7 @@
 
 The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:815](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L815)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:815](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L815)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:815](https://github.com/t
 
 Sample weights.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:825](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L825)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:825](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L825)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:825](https://github.com/t
 
 Labels for X.
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L820)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L820)

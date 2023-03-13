@@ -12,7 +12,7 @@ Set to `true` to clip transformed values of held-out data to provided `feature r
 
 `false`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L529)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L529)
 
 ### copy?
 
@@ -24,7 +24,7 @@ Set to `false` to perform inplace row normalization and avoid a copy (if the inp
 
 `true`
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L522)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L522)
 
 ### feature\_range?
 
@@ -32,4 +32,4 @@ Defined in:  [generated/preprocessing/MinMaxScaler.ts:522](https://github.com/tr
 
 Desired range of transformed data.
 
-Defined in:  [generated/preprocessing/MinMaxScaler.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L515)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L515)

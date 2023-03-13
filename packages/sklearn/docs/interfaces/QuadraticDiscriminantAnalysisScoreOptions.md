@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L616)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L616)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:
 
 Sample weights.
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L626)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:626](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L626)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:
 
 True labels for `X`.
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L621)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L621)

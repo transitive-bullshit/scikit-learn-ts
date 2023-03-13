@@ -8,7 +8,7 @@
 
 An array of points to query
 
-Defined in:  [generated/neighbors/KDTree.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L477)
+Defined in:  [generated/neighbors/KDTree.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L477)
 
 ### count\_only?
 
@@ -20,7 +20,7 @@ if `true`, return only the count of points within distance r if `false`, return 
 
 `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L496)
+Defined in:  [generated/neighbors/KDTree.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L496)
 
 ### r?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/neighbors/KDTree.ts:496](https://github.com/transitive-b
 
 r can be a single value, or an array of values of shape x.shape\[:-1\] if different radii are desired for each point.
 
-Defined in:  [generated/neighbors/KDTree.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L482)
+Defined in:  [generated/neighbors/KDTree.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L482)
 
 ### return\_distance?
 
@@ -40,7 +40,7 @@ if `true`, return distances to neighbors of each point if `false`, return only n
 
 `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L489)
+Defined in:  [generated/neighbors/KDTree.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L489)
 
 ### sort\_results?
 
@@ -52,4 +52,4 @@ if `true`, the distances and indices will be sorted before being returned. If `f
 
 `false`
 
-Defined in:  [generated/neighbors/KDTree.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neighbors/KDTree.ts#L503)
+Defined in:  [generated/neighbors/KDTree.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KDTree.ts#L503)

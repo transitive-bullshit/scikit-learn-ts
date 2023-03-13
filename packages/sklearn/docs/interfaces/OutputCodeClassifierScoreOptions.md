@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L386)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L386)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multiclass/OutputCodeClassifier.ts:386](https://github.c
 
 Sample weights.
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L396)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L396)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/multiclass/OutputCodeClassifier.ts:396](https://github.c
 
 True labels for `X`.
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L391)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L391)

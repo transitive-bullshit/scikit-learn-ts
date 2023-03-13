@@ -30,7 +30,7 @@ new CountVectorizer(opts?: CountVectorizerOptions): CountVectorizer;
 
 [`CountVectorizer`](CountVectorizer.md)
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L27)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L27)
 
 ## Properties
 
@@ -38,31 +38,31 @@ Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:27](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L25)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L24)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L23)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L20)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L21)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L21)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ fixed_vocabulary_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L452)
+Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L452)
 
 ### py
 
@@ -94,7 +94,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L32)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L32)
 
 #### Signature
 
@@ -112,7 +112,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L36)
+Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L36)
 
 ### stop\_words\_
 
@@ -128,7 +128,7 @@ stop_words_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L477)
+Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L477)
 
 ### vocabulary\_
 
@@ -144,7 +144,7 @@ vocabulary_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L427)
+Defined in: [generated/feature\_extraction/text/CountVectorizer.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L427)
 
 ## Methods
 
@@ -170,7 +170,7 @@ build_analyzer(opts: CountVectorizerBuildAnalyzerOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L122)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L122)
 
 ### build\_preprocessor()
 
@@ -192,7 +192,7 @@ build_preprocessor(opts: CountVectorizerBuildPreprocessorOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L152)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L152)
 
 ### build\_tokenizer()
 
@@ -214,7 +214,7 @@ build_tokenizer(opts: CountVectorizerBuildTokenizerOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L182)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L182)
 
 ### decode()
 
@@ -238,7 +238,7 @@ decode(opts: CountVectorizerDecodeOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L214)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L214)
 
 ### dispose()
 
@@ -256,7 +256,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L103)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L103)
 
 ### fit()
 
@@ -278,7 +278,7 @@ fit(opts: CountVectorizerFitOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L242)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L242)
 
 ### fit\_transform()
 
@@ -302,7 +302,7 @@ fit_transform(opts: CountVectorizerFitTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L272)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L272)
 
 ### get\_feature\_names\_out()
 
@@ -324,7 +324,7 @@ get_feature_names_out(opts: CountVectorizerGetFeatureNamesOutOptions): Promise<a
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L302)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L302)
 
 ### get\_stop\_words()
 
@@ -346,7 +346,7 @@ get_stop_words(opts: CountVectorizerGetStopWordsOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L335)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L335)
 
 ### init()
 
@@ -370,7 +370,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L45)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L45)
 
 ### inverse\_transform()
 
@@ -392,7 +392,7 @@ inverse_transform(opts: CountVectorizerInverseTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L363)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L363)
 
 ### transform()
 
@@ -416,4 +416,4 @@ transform(opts: CountVectorizerTransformOptions): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L397)
+Defined in:  [generated/feature\_extraction/text/CountVectorizer.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L397)

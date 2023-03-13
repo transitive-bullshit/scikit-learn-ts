@@ -8,7 +8,7 @@
 
 The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L653)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L653)
 
 ### check\_input?
 
@@ -20,7 +20,7 @@ Allow to bypass several input checking. Don’t use this parameter unless you kn
 
 `true`
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L670)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L670)
 
 ### sample\_weight?
 
@@ -28,7 +28,7 @@ Defined in:  [generated/tree/DecisionTreeRegressor.ts:670](https://github.com/tr
 
 Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node.
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L663)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L663)
 
 ### y?
 
@@ -36,4 +36,4 @@ Defined in:  [generated/tree/DecisionTreeRegressor.ts:663](https://github.com/tr
 
 The target values (real numbers). Use `dtype=np.float64` and `order='C'` for maximum efficiency.
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L658)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:658](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L658)

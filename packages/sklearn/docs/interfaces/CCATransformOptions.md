@@ -8,7 +8,7 @@
 
 Samples to transform.
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L696)
+Defined in:  [generated/cross\_decomposition/CCA.ts:696](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L696)
 
 ### Y?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/cross\_decomposition/CCA.ts:696](https://github.com/tran
 
 Target vectors.
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L701)
+Defined in:  [generated/cross\_decomposition/CCA.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L701)
 
 ### copy?
 
@@ -28,4 +28,4 @@ Whether to copy `X` and `Y`, or perform in-place normalization.
 
 `true`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L708)
+Defined in:  [generated/cross\_decomposition/CCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L708)

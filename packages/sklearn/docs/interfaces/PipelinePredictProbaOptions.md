@@ -8,7 +8,7 @@
 
 Data to predict on. Must fulfill input requirements of first step of the pipeline.
 
-Defined in:  [generated/pipeline/Pipeline.ts:630](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/Pipeline.ts#L630)
+Defined in:  [generated/pipeline/Pipeline.ts:630](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/Pipeline.ts#L630)
 
 ### predict\_proba\_params?
 
@@ -16,4 +16,4 @@ Defined in:  [generated/pipeline/Pipeline.ts:630](https://github.com/transitive-
 
 Parameters to the `predict\_proba` called at the end of all transformations in the pipeline.
 
-Defined in:  [generated/pipeline/Pipeline.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/pipeline/Pipeline.ts#L635)
+Defined in:  [generated/pipeline/Pipeline.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/pipeline/Pipeline.ts#L635)

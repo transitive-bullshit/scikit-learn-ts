@@ -12,4 +12,4 @@ Prefer CSR over CSC for sparse input (for speed), but CSC is required if the deg
 
 If the degree is 2 or 3, the method described in “Leveraging Sparsity to Speed Up Polynomial Feature Expansions of CSR Matrices Using K-Simplex Numbers” by Andrew Nystrom and John Hughes is used, which is much faster than the method used on CSC input. For this reason, a CSC input will be converted to CSR, and the output will be converted back to CSC prior to being returned, hence the preference of CSR.
 
-Defined in:  [generated/preprocessing/PolynomialFeatures.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L437)
+Defined in:  [generated/preprocessing/PolynomialFeatures.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/PolynomialFeatures.ts#L437)

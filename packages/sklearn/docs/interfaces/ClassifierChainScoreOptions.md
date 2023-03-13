@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L447)
+Defined in:  [generated/multioutput/ClassifierChain.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L447)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/multioutput/ClassifierChain.ts:447](https://github.com/t
 
 Sample weights.
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L457)
+Defined in:  [generated/multioutput/ClassifierChain.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L457)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/multioutput/ClassifierChain.ts:457](https://github.com/t
 
 True labels for `X`.
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L452)
+Defined in:  [generated/multioutput/ClassifierChain.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L452)

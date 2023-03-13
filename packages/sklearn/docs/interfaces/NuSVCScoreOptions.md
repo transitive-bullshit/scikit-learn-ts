@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/svm/NuSVC.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L709)
+Defined in:  [generated/svm/NuSVC.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L709)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/svm/NuSVC.ts:709](https://github.com/transitive-bullshit
 
 Sample weights.
 
-Defined in:  [generated/svm/NuSVC.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L719)
+Defined in:  [generated/svm/NuSVC.ts:719](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L719)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/svm/NuSVC.ts:719](https://github.com/transitive-bullshit
 
 True labels for `X`.
 
-Defined in:  [generated/svm/NuSVC.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/svm/NuSVC.ts#L714)
+Defined in:  [generated/svm/NuSVC.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/svm/NuSVC.ts#L714)

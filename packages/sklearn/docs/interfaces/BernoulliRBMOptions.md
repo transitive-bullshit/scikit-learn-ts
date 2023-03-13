@@ -12,7 +12,7 @@ Number of examples per minibatch.
 
 `10`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L519)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L519)
 
 ### learning\_rate?
 
@@ -24,7 +24,7 @@ The learning rate for weight updates. It is *highly* recommended to tune this hy
 
 `0.1`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L512)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L512)
 
 ### n\_components?
 
@@ -36,7 +36,7 @@ Number of binary hidden units.
 
 `256`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L505)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L505)
 
 ### n\_iter?
 
@@ -48,7 +48,7 @@ Number of iterations/sweeps over the training dataset to perform during training
 
 `10`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L526)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L526)
 
 ### random\_state?
 
@@ -56,7 +56,7 @@ Defined in:  [generated/neural\_network/BernoulliRBM.ts:526](https://github.com/
 
 Determines random number generation for:
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L538)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L538)
 
 ### verbose?
 
@@ -68,4 +68,4 @@ The verbosity level. The default, zero, means silent mode. Range of values is \[
 
 `0`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L533)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L533)

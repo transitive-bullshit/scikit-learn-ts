@@ -12,7 +12,7 @@ Algorithm used to compute the nearest neighbors:
 
 `'auto'`
 
-Defined in:  [generated/cluster/OPTICS.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L434)
+Defined in:  [generated/cluster/OPTICS.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L434)
 
 ### cluster\_method?
 
@@ -24,7 +24,7 @@ The extraction method used to extract clusters using the calculated reachability
 
 `'xi'`
 
-Defined in:  [generated/cluster/OPTICS.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L403)
+Defined in:  [generated/cluster/OPTICS.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L403)
 
 ### eps?
 
@@ -32,7 +32,7 @@ Defined in:  [generated/cluster/OPTICS.ts:403](https://github.com/transitive-bul
 
 The maximum distance between two samples for one to be considered as in the neighborhood of the other. By default it assumes the same value as `max\_eps`. Used only when `cluster\_method='dbscan'`.
 
-Defined in:  [generated/cluster/OPTICS.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L408)
+Defined in:  [generated/cluster/OPTICS.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L408)
 
 ### leaf\_size?
 
@@ -44,7 +44,7 @@ Leaf size passed to `BallTree` or `KDTree`. This can affect the speed of the con
 
 `30`
 
-Defined in:  [generated/cluster/OPTICS.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L441)
+Defined in:  [generated/cluster/OPTICS.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L441)
 
 ### max\_eps?
 
@@ -52,7 +52,7 @@ Defined in:  [generated/cluster/OPTICS.ts:441](https://github.com/transitive-bul
 
 The maximum distance between two samples for one to be considered as in the neighborhood of the other. Default value of `np.inf` will identify clusters across all scales; reducing `max\_eps` will result in shorter run times.
 
-Defined in:  [generated/cluster/OPTICS.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L373)
+Defined in:  [generated/cluster/OPTICS.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L373)
 
 ### memory?
 
@@ -60,7 +60,7 @@ Defined in:  [generated/cluster/OPTICS.ts:373](https://github.com/transitive-bul
 
 Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
 
-Defined in:  [generated/cluster/OPTICS.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L446)
+Defined in:  [generated/cluster/OPTICS.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L446)
 
 ### metric?
 
@@ -76,7 +76,7 @@ Valid values for metric are:
 
 `'minkowski'`
 
-Defined in:  [generated/cluster/OPTICS.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L384)
+Defined in:  [generated/cluster/OPTICS.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L384)
 
 ### metric\_params?
 
@@ -84,7 +84,7 @@ Defined in:  [generated/cluster/OPTICS.ts:384](https://github.com/transitive-bul
 
 Additional keyword arguments for the metric function.
 
-Defined in:  [generated/cluster/OPTICS.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L396)
+Defined in:  [generated/cluster/OPTICS.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L396)
 
 ### min\_cluster\_size?
 
@@ -92,7 +92,7 @@ Defined in:  [generated/cluster/OPTICS.ts:396](https://github.com/transitive-bul
 
 Minimum number of samples in an OPTICS cluster, expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). If `undefined`, the value of `min\_samples` is used instead. Used only when `cluster\_method='xi'`.
 
-Defined in:  [generated/cluster/OPTICS.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L427)
+Defined in:  [generated/cluster/OPTICS.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L427)
 
 ### min\_samples?
 
@@ -104,7 +104,7 @@ The number of samples in a neighborhood for a point to be considered as a core p
 
 `5`
 
-Defined in:  [generated/cluster/OPTICS.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L368)
+Defined in:  [generated/cluster/OPTICS.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L368)
 
 ### n\_jobs?
 
@@ -112,7 +112,7 @@ Defined in:  [generated/cluster/OPTICS.ts:368](https://github.com/transitive-bul
 
 The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
 
-Defined in:  [generated/cluster/OPTICS.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L451)
+Defined in:  [generated/cluster/OPTICS.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L451)
 
 ### p?
 
@@ -124,7 +124,7 @@ Parameter for the Minkowski metric from [`pairwise\_distances`](sklearn.metrics.
 
 `2`
 
-Defined in:  [generated/cluster/OPTICS.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L391)
+Defined in:  [generated/cluster/OPTICS.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L391)
 
 ### predecessor\_correction?
 
@@ -136,7 +136,7 @@ Correct clusters according to the predecessors calculated by OPTICS [\[2\]](#r2c
 
 `true`
 
-Defined in:  [generated/cluster/OPTICS.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L422)
+Defined in:  [generated/cluster/OPTICS.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L422)
 
 ### xi?
 
@@ -148,4 +148,4 @@ Determines the minimum steepness on the reachability plot that constitutes a clu
 
 `0.05`
 
-Defined in:  [generated/cluster/OPTICS.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/cluster/OPTICS.ts#L415)
+Defined in:  [generated/cluster/OPTICS.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/OPTICS.ts#L415)

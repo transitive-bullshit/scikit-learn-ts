@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:757](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L757)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:757](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L757)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:757](https:
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L767)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:767](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L767)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:767](https:
 
 True labels for `X`.
 
-Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L762)
+Defined in:  [generated/linear\_model/PassiveAggressiveClassifier.ts:762](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PassiveAggressiveClassifier.ts#L762)

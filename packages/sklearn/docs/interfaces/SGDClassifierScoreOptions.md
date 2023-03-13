@@ -8,7 +8,7 @@
 
 Test samples.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:852](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L852)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:852](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L852)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:852](https://github.com/t
 
 Sample weights.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L862)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:862](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L862)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/linear\_model/SGDClassifier.ts:862](https://github.com/t
 
 True labels for `X`.
 
-Defined in:  [generated/linear\_model/SGDClassifier.ts:857](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L857)
+Defined in:  [generated/linear\_model/SGDClassifier.ts:857](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDClassifier.ts#L857)

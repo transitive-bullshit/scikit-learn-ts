@@ -8,7 +8,7 @@
 
 Input samples.
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L314)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L314)
 
 ### fit\_params?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/feature\_selection/SelectorMixin.ts:314](https://github.
 
 Additional fit parameters.
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L324)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L324)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/feature\_selection/SelectorMixin.ts:324](https://github.
 
 Target values (`undefined` for unsupervised transformations).
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L319)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L319)

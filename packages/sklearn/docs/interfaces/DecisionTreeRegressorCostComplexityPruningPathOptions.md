@@ -8,7 +8,7 @@
 
 The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L622)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L622)
 
 ### sample\_weight?
 
@@ -16,7 +16,7 @@ Defined in:  [generated/tree/DecisionTreeRegressor.ts:622](https://github.com/tr
 
 Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L632)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L632)
 
 ### y?
 
@@ -24,4 +24,4 @@ Defined in:  [generated/tree/DecisionTreeRegressor.ts:632](https://github.com/tr
 
 The target values (class labels) as integers or strings.
 
-Defined in:  [generated/tree/DecisionTreeRegressor.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L627)
+Defined in:  [generated/tree/DecisionTreeRegressor.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/DecisionTreeRegressor.ts#L627)

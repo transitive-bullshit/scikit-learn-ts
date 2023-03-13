@@ -28,7 +28,7 @@ new Parallel(opts?: ParallelOptions): Parallel;
 
 [`Parallel`](Parallel.md)
 
-Defined in:  [generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
+Defined in:  [generated/utils/parallel/Parallel.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L25)
 
 ## Properties
 
@@ -36,31 +36,31 @@ Defined in:  [generated/utils/parallel/Parallel.ts:25](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23)
+Defined in:  [generated/utils/parallel/Parallel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22)
+Defined in:  [generated/utils/parallel/Parallel.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21)
+Defined in:  [generated/utils/parallel/Parallel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18)
+Defined in:  [generated/utils/parallel/Parallel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19)
+Defined in:  [generated/utils/parallel/Parallel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L19)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/utils/parallel/Parallel.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L30)
+Defined in:  [generated/utils/parallel/Parallel.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L30)
 
 #### Signature
 
@@ -94,7 +94,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/utils/parallel/Parallel.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L34)
+Defined in: [generated/utils/parallel/Parallel.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L34)
 
 ## Methods
 
@@ -120,7 +120,7 @@ dispatch_next(opts: ParallelDispatchNextOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L99)
+Defined in:  [generated/utils/parallel/Parallel.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L99)
 
 ### dispatch\_one\_batch()
 
@@ -146,7 +146,7 @@ dispatch_one_batch(opts: ParallelDispatchOneBatchOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L129)
+Defined in:  [generated/utils/parallel/Parallel.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L129)
 
 ### dispose()
 
@@ -164,7 +164,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L80)
+Defined in:  [generated/utils/parallel/Parallel.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L80)
 
 ### format()
 
@@ -186,7 +186,7 @@ format(opts: ParallelFormatOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L157)
+Defined in:  [generated/utils/parallel/Parallel.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L157)
 
 ### init()
 
@@ -210,7 +210,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L43)
+Defined in:  [generated/utils/parallel/Parallel.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L43)
 
 ### print\_progress()
 
@@ -232,4 +232,4 @@ print_progress(opts: ParallelPrintProgressOptions): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/utils/parallel/Parallel.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/92ab806/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L183)
+Defined in:  [generated/utils/parallel/Parallel.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/utils/parallel/Parallel.ts#L183)
