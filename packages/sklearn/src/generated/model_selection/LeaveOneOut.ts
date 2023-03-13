@@ -26,7 +26,22 @@ export class LeaveOneOut {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LeaveOneOutOptions) {
+  constructor(opts?: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }) {
     this.id = `LeaveOneOut${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +118,22 @@ ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(opts: LeaveOneOutGetNSplitsOptions): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LeaveOneOut instance has already been disposed')
     }
@@ -133,7 +163,22 @@ pms_LeaveOneOut_get_n_splits = {k: v for k, v in pms_LeaveOneOut_get_n_splits.it
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: LeaveOneOutSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LeaveOneOut instance has already been disposed')
     }
@@ -184,55 +229,4 @@ pms_LeaveOneOut_split = {k: v for k, v in pms_LeaveOneOut_split.items() if v is 
         ._py`attr_LeaveOneOut_n_splits.tolist() if hasattr(attr_LeaveOneOut_n_splits, 'tolist') else attr_LeaveOneOut_n_splits`
     })()
   }
-}
-
-export interface LeaveOneOutOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface LeaveOneOutGetNSplitsOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface LeaveOneOutSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

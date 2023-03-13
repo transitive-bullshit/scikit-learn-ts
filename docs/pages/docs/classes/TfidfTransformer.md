@@ -25,20 +25,24 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new TfidfTransformer(opts?: TfidfTransformerOptions): TfidfTransformer;
+new TfidfTransformer(opts?: object): TfidfTransformer;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `TfidfTransformerOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.norm?` | `"l1"` \| `"l2"` | Each output row will have unit norm, either:  `Default Value`  `'l2'` |
+| `opts.smooth_idf?` | `boolean` | Smooth idf weights by adding one to document frequencies, as if an extra document was seen containing every term in the collection exactly once. Prevents zero divisions.  `Default Value`  `true` |
+| `opts.sublinear_tf?` | `boolean` | Apply sublinear tf scaling, i.e. replace tf with 1 + log(tf).  `Default Value`  `false` |
+| `opts.use_idf?` | `boolean` | Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.  `Default Value`  `true` |
 
 ### Returns
 
 [`TfidfTransformer`](TfidfTransformer.md)
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L35)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L35)
 
 ## Properties
 
@@ -46,31 +50,31 @@ Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:35](https:/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L33)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L33)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L32)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L32)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L31)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L31)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L28)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L28)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L29)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L29)
 
 ## Accessors
 
@@ -88,7 +92,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_extraction/text/TfidfTransformer.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L310)
+Defined in: [generated/feature\_extraction/text/TfidfTransformer.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L379)
 
 ### n\_features\_in\_
 
@@ -104,7 +108,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_extraction/text/TfidfTransformer.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L283)
+Defined in: [generated/feature\_extraction/text/TfidfTransformer.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L352)
 
 ### py
 
@@ -118,7 +122,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L40)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L68)
 
 #### Signature
 
@@ -136,7 +140,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_extraction/text/TfidfTransformer.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L44)
+Defined in: [generated/feature\_extraction/text/TfidfTransformer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L72)
 
 ## Methods
 
@@ -156,7 +160,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L97)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L125)
 
 ### fit()
 
@@ -165,20 +169,22 @@ Learn the idf vector (global term weights).
 #### Signature
 
 ```ts
-fit(opts: TfidfTransformerFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TfidfTransformerFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | A matrix of term/token counts. |
+| `opts.y?` | `any` | This parameter is not needed to compute tf-idf. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L114)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L142)
 
 ### fit\_transform()
 
@@ -189,20 +195,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: TfidfTransformerFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TfidfTransformerFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L146)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L184)
 
 ### get\_feature\_names\_out()
 
@@ -211,20 +220,21 @@ Get output feature names for transformation.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: TfidfTransformerGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TfidfTransformerGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L184)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L235)
 
 ### init()
 
@@ -248,7 +258,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L53)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L81)
 
 ### set\_output()
 
@@ -259,20 +269,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: TfidfTransformerSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TfidfTransformerSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L221)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L275)
 
 ### transform()
 
@@ -281,17 +292,19 @@ Transform a count matrix to a tf or tf-idf representation.
 #### Signature
 
 ```ts
-transform(opts: TfidfTransformerTransformOptions): Promise<any[]>;
+transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TfidfTransformerTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | A matrix of term/token counts. |
+| `opts.copy?` | `boolean` | Whether to copy X and operate on the copy or perform in-place operations.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L251)
+Defined in:  [generated/feature\_extraction/text/TfidfTransformer.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/text/TfidfTransformer.ts#L310)

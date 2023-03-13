@@ -28,7 +28,28 @@ export class PowerTransformer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PowerTransformerOptions) {
+  constructor(opts?: {
+    /**
+      The power transform method. Available methods are:
+
+      @defaultValue `'yeo-johnson'`
+     */
+    method?: 'yeo-johnson' | 'box-cox'
+
+    /**
+      Set to `true` to apply zero-mean, unit-variance normalization to the transformed output.
+
+      @defaultValue `true`
+     */
+    standardize?: boolean
+
+    /**
+      Set to `false` to perform inplace computation during transformation.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `PowerTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +130,17 @@ ctor_PowerTransformer = {k: v for k, v in ctor_PowerTransformer.items() if v is 
 
     The optimal lambda parameter for minimizing skewness is estimated on each feature independently using maximum likelihood.
    */
-  async fit(opts: PowerTransformerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data used to estimate the optimal transformation parameters.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PowerTransformer instance has already been disposed'
@@ -139,9 +170,17 @@ pms_PowerTransformer_fit = {k: v for k, v in pms_PowerTransformer_fit.items() if
   /**
     Fit `PowerTransformer` to `X`, then transform `X`.
    */
-  async fit_transform(
-    opts: PowerTransformerFitTransformOptions
-  ): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      The data used to estimate the optimal transformation parameters and to be transformed using a power transformation.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This PowerTransformer instance has already been disposed'
@@ -173,9 +212,12 @@ pms_PowerTransformer_fit_transform = {k: v for k, v in pms_PowerTransformer_fit_
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: PowerTransformerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PowerTransformer instance has already been disposed'
@@ -210,9 +252,12 @@ pms_PowerTransformer_get_feature_names_out = {k: v for k, v in pms_PowerTransfor
 
     The inverse of the Box-Cox transformation is given by:
    */
-  async inverse_transform(
-    opts: PowerTransformerInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      The transformed data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This PowerTransformer instance has already been disposed'
@@ -246,7 +291,12 @@ pms_PowerTransformer_inverse_transform = {k: v for k, v in pms_PowerTransformer_
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: PowerTransformerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PowerTransformer instance has already been disposed'
@@ -276,7 +326,12 @@ pms_PowerTransformer_set_output = {k: v for k, v in pms_PowerTransformer_set_out
   /**
     Apply the power transform to each feature using the fitted lambdas.
    */
-  async transform(opts: PowerTransformerTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      The data to be transformed using a power transformation.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This PowerTransformer instance has already been disposed'
@@ -383,79 +438,4 @@ pms_PowerTransformer_transform = {k: v for k, v in pms_PowerTransformer_transfor
         ._py`attr_PowerTransformer_feature_names_in_.tolist() if hasattr(attr_PowerTransformer_feature_names_in_, 'tolist') else attr_PowerTransformer_feature_names_in_`
     })()
   }
-}
-
-export interface PowerTransformerOptions {
-  /**
-    The power transform method. Available methods are:
-
-    @defaultValue `'yeo-johnson'`
-   */
-  method?: 'yeo-johnson' | 'box-cox'
-
-  /**
-    Set to `true` to apply zero-mean, unit-variance normalization to the transformed output.
-
-    @defaultValue `true`
-   */
-  standardize?: boolean
-
-  /**
-    Set to `false` to perform inplace computation during transformation.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface PowerTransformerFitOptions {
-  /**
-    The data used to estimate the optimal transformation parameters.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface PowerTransformerFitTransformOptions {
-  /**
-    The data used to estimate the optimal transformation parameters and to be transformed using a power transformation.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface PowerTransformerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface PowerTransformerInverseTransformOptions {
-  /**
-    The transformed data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface PowerTransformerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface PowerTransformerTransformOptions {
-  /**
-    The data to be transformed using a power transformation.
-   */
-  X?: ArrayLike[]
 }

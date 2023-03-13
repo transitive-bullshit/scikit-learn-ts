@@ -17,20 +17,32 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new ExtraTreeClassifier(opts?: ExtraTreeClassifierOptions): ExtraTreeClassifier;
+new ExtraTreeClassifier(opts?: object): ExtraTreeClassifier;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `ExtraTreeClassifierOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.ccp_alpha?` | `any` | Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See Minimal Cost-Complexity Pruning for details.  `Default Value`  `0` |
+| `opts.class_weight?` | `any` | Weights associated with classes in the form `{class\_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.  Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].  The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`  For multi-output, the weights of each column of y will be multiplied.  Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified. |
+| `opts.criterion?` | `"gini"` \| `"entropy"` \| `"log_loss"` | The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log\_loss” and “entropy” both for the Shannon information gain, see Mathematical formulation.  `Default Value`  `'gini'` |
+| `opts.max_depth?` | `number` | The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples. |
+| `opts.max_features?` | `number` \| `"sqrt"` | The number of features to consider when looking for the best split:  `Default Value`  `'sqrt'` |
+| `opts.max_leaf_nodes?` | `number` | Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes. |
+| `opts.min_impurity_decrease?` | `number` | A node will be split if this split induces a decrease of the impurity greater than or equal to this value.  The weighted impurity decrease equation is the following:  `Default Value`  `0` |
+| `opts.min_samples_leaf?` | `number` | The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.  `Default Value`  `1` |
+| `opts.min_samples_split?` | `number` | The minimum number of samples required to split an internal node:  `Default Value`  `2` |
+| `opts.min_weight_fraction_leaf?` | `number` | The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.  `Default Value`  `0` |
+| `opts.random_state?` | `number` | Used to pick randomly the `max\_features` used at each split. See Glossary for details. |
+| `opts.splitter?` | `"random"` \| `"best"` | The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split and “random” to choose the best random split.  `Default Value`  `'random'` |
 
 ### Returns
 
 [`ExtraTreeClassifier`](ExtraTreeClassifier.md)
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L27)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L27)
 
 ## Properties
 
@@ -38,31 +50,31 @@ Defined in:  [generated/tree/ExtraTreeClassifier.ts:27](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L25)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L24)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L23)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L20)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L21)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L21)
 
 ## Accessors
 
@@ -80,7 +92,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L472)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L655)
 
 ### feature\_names\_in\_
 
@@ -96,7 +108,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L580)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L763)
 
 ### max\_features\_
 
@@ -112,7 +124,7 @@ max_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L499)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L682)
 
 ### n\_classes\_
 
@@ -128,7 +140,7 @@ n_classes_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L526)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L709)
 
 ### n\_features\_in\_
 
@@ -144,7 +156,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L553)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L736)
 
 ### n\_outputs\_
 
@@ -160,7 +172,7 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L607)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L790)
 
 ### py
 
@@ -174,7 +186,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L32)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L118)
 
 #### Signature
 
@@ -192,7 +204,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L36)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L122)
 
 ### tree\_
 
@@ -208,7 +220,7 @@ tree_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L634)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:817](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L817)
 
 ## Methods
 
@@ -219,20 +231,22 @@ Return the index of the leaf that each sample is predicted as.
 #### Signature
 
 ```ts
-apply(opts: ExtraTreeClassifierApplyOptions): Promise<ArrayLike>;
+apply(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierApplyOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
+| `opts.check_input?` | `boolean` | Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L124)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L210)
 
 ### cost\_complexity\_pruning\_path()
 
@@ -243,20 +257,23 @@ See Minimal Cost-Complexity Pruning for details on the pruning process.
 #### Signature
 
 ```ts
-cost_complexity_pruning_path(opts: ExtraTreeClassifierCostComplexityPruningPathOptions): Promise<any>;
+cost_complexity_pruning_path(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierCostComplexityPruningPathOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node. |
+| `opts.y?` | `ArrayLike` | The target values (class labels) as integers or strings. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L158)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L256)
 
 ### decision\_path()
 
@@ -265,20 +282,22 @@ Return the decision path in the tree.
 #### Signature
 
 ```ts
-decision_path(opts: ExtraTreeClassifierDecisionPathOptions): Promise<any[]>;
+decision_path(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierDecisionPathOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
+| `opts.check_input?` | `boolean` | Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L197)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L308)
 
 ### dispose()
 
@@ -296,7 +315,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L107)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L193)
 
 ### fit()
 
@@ -305,20 +324,24 @@ Build a decision tree classifier from the training set (X, y).
 #### Signature
 
 ```ts
-fit(opts: ExtraTreeClassifierFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`. |
+| `opts.check_input?` | `boolean` | Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.  `Default Value`  `true` |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node. |
+| `opts.y?` | `ArrayLike` | The target values (class labels) as integers or strings. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L233)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L354)
 
 ### get\_depth()
 
@@ -329,20 +352,20 @@ The depth of a tree is the maximum distance between the root and any leaf.
 #### Signature
 
 ```ts
-get_depth(opts: ExtraTreeClassifierGetDepthOptions): Promise<any>;
+get_depth(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | `ExtraTreeClassifierGetDepthOptions` |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L271)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L414)
 
 ### get\_n\_leaves()
 
@@ -351,20 +374,20 @@ Return the number of leaves of the decision tree.
 #### Signature
 
 ```ts
-get_n_leaves(opts: ExtraTreeClassifierGetNLeavesOptions): Promise<any>;
+get_n_leaves(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | `ExtraTreeClassifierGetNLeavesOptions` |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L299)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L442)
 
 ### init()
 
@@ -388,7 +411,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L45)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L131)
 
 ### predict()
 
@@ -399,20 +422,22 @@ For a classification model, the predicted class for each sample in X is returned
 #### Signature
 
 ```ts
-predict(opts: ExtraTreeClassifierPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
+| `opts.check_input?` | `boolean` | Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L331)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L474)
 
 ### predict\_log\_proba()
 
@@ -421,20 +446,21 @@ Predict class log-probabilities of the input samples X.
 #### Signature
 
 ```ts
-predict_log_proba(opts: ExtraTreeClassifierPredictLogProbaOptions): Promise<ArrayLike[]>;
+predict_log_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierPredictLogProbaOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L363)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L518)
 
 ### predict\_proba()
 
@@ -445,20 +471,22 @@ The predicted class probability is the fraction of samples of the same class in 
 #### Signature
 
 ```ts
-predict_proba(opts: ExtraTreeClassifierPredictProbaOptions): Promise<ArrayLike[]>;
+predict_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierPredictProbaOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
+| `opts.check_input?` | `boolean` | Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L400)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L558)
 
 ### score()
 
@@ -469,17 +497,20 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: ExtraTreeClassifierScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `ExtraTreeClassifierScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L438)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L606)

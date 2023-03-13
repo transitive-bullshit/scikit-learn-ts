@@ -20,7 +20,63 @@ export class NearestNeighbors {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: NearestNeighborsOptions) {
+  constructor(opts?: {
+    /**
+      Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.NearestNeighbors.kneighbors "sklearn.neighbors.NearestNeighbors.kneighbors") queries.
+
+      @defaultValue `5`
+     */
+    n_neighbors?: number
+
+    /**
+      Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.NearestNeighbors.radius_neighbors "sklearn.neighbors.NearestNeighbors.radius_neighbors") queries.
+
+      @defaultValue `1`
+     */
+    radius?: number
+
+    /**
+      Algorithm used to compute the nearest neighbors:
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
+
+    /**
+      Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+      @defaultValue `30`
+     */
+    leaf_size?: number
+
+    /**
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+
+      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+
+      If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: string
+
+    /**
+      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+
+      @defaultValue `2`
+     */
+    p?: number
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `NearestNeighbors${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +159,17 @@ ctor_NearestNeighbors = {k: v for k, v in ctor_NearestNeighbors.items() if v is 
   /**
     Fit the nearest neighbors estimator from the training dataset.
    */
-  async fit(opts: NearestNeighborsFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This NearestNeighbors instance has already been disposed'
@@ -135,9 +201,24 @@ pms_NearestNeighbors_fit = {k: v for k, v in pms_NearestNeighbors_fit.items() if
 
     Returns indices of and distances to the neighbors of each point.
    */
-  async kneighbors(
-    opts: NearestNeighborsKneighborsOptions
-  ): Promise<NDArray[]> {
+  async kneighbors(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Number of neighbors required for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Whether or not to return the distances.
+
+      @defaultValue `true`
+     */
+    return_distance?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This NearestNeighbors instance has already been disposed'
@@ -169,9 +250,24 @@ pms_NearestNeighbors_kneighbors = {k: v for k, v in pms_NearestNeighbors_kneighb
   /**
     Compute the (weighted) graph of k-Neighbors for points in X.
    */
-  async kneighbors_graph(
-    opts: NearestNeighborsKneighborsGraphOptions
-  ): Promise<any[]> {
+  async kneighbors_graph(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
+     */
+    X?: any
+
+    /**
+      Number of neighbors for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
+
+      @defaultValue `'connectivity'`
+     */
+    mode?: 'connectivity' | 'distance'
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This NearestNeighbors instance has already been disposed'
@@ -209,9 +305,31 @@ pms_NearestNeighbors_kneighbors_graph = {k: v for k, v in pms_NearestNeighbors_k
 
     The result points are *not* necessarily sorted by distance to their query point.
    */
-  async radius_neighbors(
-    opts: NearestNeighborsRadiusNeighborsOptions
-  ): Promise<any> {
+  async radius_neighbors(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: any
+
+    /**
+      Limiting distance of neighbors to return. The default is the value passed to the constructor.
+     */
+    radius?: number
+
+    /**
+      Whether or not to return the distances.
+
+      @defaultValue `true`
+     */
+    return_distance?: boolean
+
+    /**
+      If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
+
+      @defaultValue `false`
+     */
+    sort_results?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This NearestNeighbors instance has already been disposed'
@@ -247,9 +365,31 @@ pms_NearestNeighbors_radius_neighbors = {k: v for k, v in pms_NearestNeighbors_r
 
     Neighborhoods are restricted the points at a distance lower than radius.
    */
-  async radius_neighbors_graph(
-    opts: NearestNeighborsRadiusNeighborsGraphOptions
-  ): Promise<any[]> {
+  async radius_neighbors_graph(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Radius of neighborhoods. The default is the value passed to the constructor.
+     */
+    radius?: number
+
+    /**
+      Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
+
+      @defaultValue `'connectivity'`
+     */
+    mode?: 'connectivity' | 'distance'
+
+    /**
+      If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.
+
+      @defaultValue `false`
+     */
+    sort_results?: boolean
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This NearestNeighbors instance has already been disposed'
@@ -417,164 +557,4 @@ pms_NearestNeighbors_radius_neighbors_graph = {k: v for k, v in pms_NearestNeigh
         ._py`attr_NearestNeighbors_n_samples_fit_.tolist() if hasattr(attr_NearestNeighbors_n_samples_fit_, 'tolist') else attr_NearestNeighbors_n_samples_fit_`
     })()
   }
-}
-
-export interface NearestNeighborsOptions {
-  /**
-    Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.NearestNeighbors.kneighbors "sklearn.neighbors.NearestNeighbors.kneighbors") queries.
-
-    @defaultValue `5`
-   */
-  n_neighbors?: number
-
-  /**
-    Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.NearestNeighbors.radius_neighbors "sklearn.neighbors.NearestNeighbors.radius_neighbors") queries.
-
-    @defaultValue `1`
-   */
-  radius?: number
-
-  /**
-    Algorithm used to compute the nearest neighbors:
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
-
-  /**
-    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-    @defaultValue `30`
-   */
-  leaf_size?: number
-
-  /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
-
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
-
-    If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: string
-
-  /**
-    Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
-
-    @defaultValue `2`
-   */
-  p?: number
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface NearestNeighborsFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface NearestNeighborsKneighborsOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Number of neighbors required for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Whether or not to return the distances.
-
-    @defaultValue `true`
-   */
-  return_distance?: boolean
-}
-
-export interface NearestNeighborsKneighborsGraphOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
-   */
-  X?: any
-
-  /**
-    Number of neighbors for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
-
-    @defaultValue `'connectivity'`
-   */
-  mode?: 'connectivity' | 'distance'
-}
-
-export interface NearestNeighborsRadiusNeighborsOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: any
-
-  /**
-    Limiting distance of neighbors to return. The default is the value passed to the constructor.
-   */
-  radius?: number
-
-  /**
-    Whether or not to return the distances.
-
-    @defaultValue `true`
-   */
-  return_distance?: boolean
-
-  /**
-    If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
-
-    @defaultValue `false`
-   */
-  sort_results?: boolean
-}
-
-export interface NearestNeighborsRadiusNeighborsGraphOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Radius of neighborhoods. The default is the value passed to the constructor.
-   */
-  radius?: number
-
-  /**
-    Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
-
-    @defaultValue `'connectivity'`
-   */
-  mode?: 'connectivity' | 'distance'
-
-  /**
-    If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.
-
-    @defaultValue `false`
-   */
-  sort_results?: boolean
 }

@@ -24,7 +24,50 @@ export class StackingClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: StackingClassifierOptions) {
+  constructor(opts?: {
+    /**
+      Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.
+
+      The type of estimator is generally expected to be a classifier. However, one can pass a regressor for some use case (e.g. ordinal regression).
+     */
+    estimators?: any
+
+    /**
+      A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression").
+     */
+    final_estimator?: any
+
+    /**
+      Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are:
+     */
+    cv?: number | 'prefit'
+
+    /**
+      Methods called for each base estimator. It can be:
+
+      @defaultValue `'auto'`
+     */
+    stack_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
+
+    /**
+      The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
+     */
+    n_jobs?: number
+
+    /**
+      When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.
+
+      @defaultValue `false`
+     */
+    passthrough?: boolean
+
+    /**
+      Verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+  }) {
     this.id = `StackingClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,9 +152,12 @@ ctor_StackingClassifier = {k: v for k, v in ctor_StackingClassifier.items() if v
   /**
     Decision function for samples in `X` using the final estimator.
    */
-  async decision_function(
-    opts: StackingClassifierDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -144,7 +190,22 @@ pms_StackingClassifier_decision_function = {k: v for k, v in pms_StackingClassif
   /**
     Fit the estimators.
    */
-  async fit(opts: StackingClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](../../glossary.html#term-fit).
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -180,9 +241,22 @@ pms_StackingClassifier_fit = {k: v for k, v in pms_StackingClassifier_fit.items(
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: StackingClassifierFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -218,9 +292,12 @@ pms_StackingClassifier_fit_transform = {k: v for k, v in pms_StackingClassifier_
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: StackingClassifierGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features. The input feature names are only used when `passthrough` is `true`.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -253,7 +330,17 @@ pms_StackingClassifier_get_feature_names_out = {k: v for k, v in pms_StackingCla
   /**
     Predict target for X.
    */
-  async predict(opts: StackingClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator.
+     */
+    predict_params?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -285,9 +372,12 @@ pms_StackingClassifier_predict = {k: v for k, v in pms_StackingClassifier_predic
   /**
     Predict class probabilities for `X` using the final estimator.
    */
-  async predict_proba(
-    opts: StackingClassifierPredictProbaOptions
-  ): Promise<NDArray[] | any[]> {
+  async predict_proba(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[] | any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -321,7 +411,22 @@ pms_StackingClassifier_predict_proba = {k: v for k, v in pms_StackingClassifier_
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: StackingClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -357,7 +462,12 @@ pms_StackingClassifier_score = {k: v for k, v in pms_StackingClassifier_score.it
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: StackingClassifierSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -387,9 +497,12 @@ pms_StackingClassifier_set_output = {k: v for k, v in pms_StackingClassifier_set
   /**
     Return class labels or probabilities for X for each estimator.
    */
-  async transform(
-    opts: StackingClassifierTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingClassifier instance has already been disposed'
@@ -577,147 +690,4 @@ pms_StackingClassifier_transform = {k: v for k, v in pms_StackingClassifier_tran
         ._py`attr_StackingClassifier_stack_method_.tolist() if hasattr(attr_StackingClassifier_stack_method_, 'tolist') else attr_StackingClassifier_stack_method_`
     })()
   }
-}
-
-export interface StackingClassifierOptions {
-  /**
-    Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.
-
-    The type of estimator is generally expected to be a classifier. However, one can pass a regressor for some use case (e.g. ordinal regression).
-   */
-  estimators?: any
-
-  /**
-    A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression").
-   */
-  final_estimator?: any
-
-  /**
-    Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are:
-   */
-  cv?: number | 'prefit'
-
-  /**
-    Methods called for each base estimator. It can be:
-
-    @defaultValue `'auto'`
-   */
-  stack_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
-
-  /**
-    The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
-   */
-  n_jobs?: number
-
-  /**
-    When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.
-
-    @defaultValue `false`
-   */
-  passthrough?: boolean
-
-  /**
-    Verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-}
-
-export interface StackingClassifierDecisionFunctionOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface StackingClassifierFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](../../glossary.html#term-fit).
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface StackingClassifierFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface StackingClassifierGetFeatureNamesOutOptions {
-  /**
-    Input features. The input feature names are only used when `passthrough` is `true`.
-   */
-  input_features?: any
-}
-
-export interface StackingClassifierPredictOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator.
-   */
-  predict_params?: any
-}
-
-export interface StackingClassifierPredictProbaOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface StackingClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface StackingClassifierSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface StackingClassifierTransformOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

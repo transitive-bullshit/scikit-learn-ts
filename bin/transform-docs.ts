@@ -47,12 +47,16 @@ async function main() {
 
       let out = await fs.readFile(doc.srcPath, 'utf-8')
 
-      out = out
-        .replaceAll(
-          /^Defined in: *(.*)$\n\nDefined in: .*$/gm,
-          'Defined in: $1'
-        )
-        .replaceAll(/\[([^\]]+)\]\((\.\.[^\)]+)\)/g, '$1')
+      out =
+        out
+          .replaceAll(
+            /^Defined in: *(.*)$\n\nDefined in: .*$/gm,
+            'Defined in: $1'
+          )
+          // TODO: handle relative links
+          .replaceAll(/\[([^\]]+)\]\((\.\.[^\)]+)\)/g, '$1')
+          .replaceAll('[Readme](readme.md)', '')
+          .trim() + '\n'
 
       if (doc.relativePath === 'modules.md') {
         out = out.replaceAll(/### Variables\b/g, '### Constants')
@@ -107,6 +111,10 @@ async function main() {
         .map((value) => value.split('/').slice(-1)[0].split('.')[0].trim())
         .filter(Boolean)
         .sort((a, b) => a.localeCompare(b))
+
+      if (!values.length) {
+        return
+      }
 
       const meta = values.reduce(
         (acc, value) => ({

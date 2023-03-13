@@ -15,20 +15,23 @@ Read more in the [User Guide](../model_evaluation.html#dummy-estimators).
 ### Signature
 
 ```ts
-new DummyRegressor(opts?: DummyRegressorOptions): DummyRegressor;
+new DummyRegressor(opts?: object): DummyRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`DummyRegressorOptions`](../interfaces/DummyRegressorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.constant?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | The explicit constant as predicted by the “constant” strategy. This parameter is useful only for the “constant” strategy. |
+| `opts.quantile?` | `number` | The quantile to predict using the “quantile” strategy. A quantile of 0.5 corresponds to the median, while 0.0 to the minimum and 1.0 to the maximum. |
+| `opts.strategy?` | `"quantile"` \| `"constant"` \| `"mean"` \| `"median"` | Strategy to use to generate predictions.  `Default Value`  `'mean'` |
 
 ### Returns
 
 [`DummyRegressor`](DummyRegressor.md)
 
-Defined in:  [generated/dummy/DummyRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L25)
+Defined in:  [generated/dummy/DummyRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +39,31 @@ Defined in:  [generated/dummy/DummyRegressor.ts:25](https://github.com/transitiv
 
 > `boolean`  = `false`
 
-Defined in:  [generated/dummy/DummyRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L23)
+Defined in:  [generated/dummy/DummyRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/dummy/DummyRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L22)
+Defined in:  [generated/dummy/DummyRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/dummy/DummyRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L21)
+Defined in:  [generated/dummy/DummyRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/dummy/DummyRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L18)
+Defined in:  [generated/dummy/DummyRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/dummy/DummyRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L19)
+Defined in:  [generated/dummy/DummyRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,9 +81,9 @@ constant_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/dummy/DummyRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L198)
+Defined in:  [generated/dummy/DummyRegressor.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L257)
 
-Defined in:  [generated/dummy/DummyRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L198)
+Defined in:  [generated/dummy/DummyRegressor.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L257)
 
 ### n\_outputs\_
 
@@ -96,9 +99,9 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/dummy/DummyRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L223)
+Defined in:  [generated/dummy/DummyRegressor.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L282)
 
-Defined in:  [generated/dummy/DummyRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L223)
+Defined in:  [generated/dummy/DummyRegressor.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L282)
 
 ### py
 
@@ -112,7 +115,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/dummy/DummyRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L30)
+Defined in:  [generated/dummy/DummyRegressor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L47)
 
 #### Signature
 
@@ -130,9 +133,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/dummy/DummyRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L34)
+Defined in:  [generated/dummy/DummyRegressor.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L51)
 
-Defined in:  [generated/dummy/DummyRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L30) [generated/dummy/DummyRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L34)
+Defined in:  [generated/dummy/DummyRegressor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L47) [generated/dummy/DummyRegressor.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L51)
 
 ## Methods
 
@@ -152,7 +155,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/dummy/DummyRegressor.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L85)
+Defined in:  [generated/dummy/DummyRegressor.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L102)
 
 ### fit()
 
@@ -161,20 +164,23 @@ Fit the random regressor.
 #### Signature
 
 ```ts
-fit(opts: DummyRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyRegressorFitOptions`](../interfaces/DummyRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/dummy/DummyRegressor.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L102)
+Defined in:  [generated/dummy/DummyRegressor.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L119)
 
 ### init()
 
@@ -198,7 +204,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/dummy/DummyRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L43)
+Defined in:  [generated/dummy/DummyRegressor.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L60)
 
 ### predict()
 
@@ -207,20 +213,22 @@ Perform classification on test vectors X.
 #### Signature
 
 ```ts
-predict(opts: DummyRegressorPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyRegressorPredictOptions`](../interfaces/DummyRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test data. |
+| `opts.return_std?` | `boolean` | Whether to return the standard deviation of posterior prediction. All zeros in this case.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/dummy/DummyRegressor.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L134)
+Defined in:  [generated/dummy/DummyRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L166)
 
 ### score()
 
@@ -231,17 +239,20 @@ The coefficient R^2 is defined as `(1 \- u/v)`, where `u` is the residual sum of
 #### Signature
 
 ```ts
-score(opts: DummyRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyRegressorScoreOptions`](../interfaces/DummyRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since `DummyRegressor` operates independently of the sampled observations. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for X. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/dummy/DummyRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L166)
+Defined in:  [generated/dummy/DummyRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyRegressor.ts#L210)

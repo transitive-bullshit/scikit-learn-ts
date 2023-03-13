@@ -22,7 +22,67 @@ export class FeatureAgglomeration {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: FeatureAgglomerationOptions) {
+  constructor(opts?: {
+    /**
+      The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.
+
+      @defaultValue `2`
+     */
+    n_clusters?: number
+
+    /**
+      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
+
+      @defaultValue `'euclidean'`
+     */
+    affinity?: string
+
+    /**
+      Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
+     */
+    metric?: string
+
+    /**
+      Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
+     */
+    memory?: string
+
+    /**
+      Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
+     */
+    connectivity?: ArrayLike
+
+    /**
+      Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.
+
+      @defaultValue `'auto'`
+     */
+    compute_full_tree?: 'auto' | boolean
+
+    /**
+      Which linkage criterion to use. The linkage criterion determines which distance to use between sets of features. The algorithm will merge the pairs of cluster that minimize this criterion.
+
+      @defaultValue `'ward'`
+     */
+    linkage?: 'ward' | 'complete' | 'average' | 'single'
+
+    /**
+      This combines the values of agglomerated features into a single value, and should accept an array of shape \[M, N\] and the keyword argument `axis=1`, and reduce it to an array of size \[M\].
+     */
+    pooling_func?: any
+
+    /**
+      The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
+     */
+    distance_threshold?: number
+
+    /**
+      Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
+
+      @defaultValue `false`
+     */
+    compute_distances?: boolean
+  }) {
     this.id = `FeatureAgglomeration${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -111,7 +171,17 @@ ctor_FeatureAgglomeration = {k: v for k, v in ctor_FeatureAgglomeration.items() 
   /**
     Fit the hierarchical clustering on the data.
    */
-  async fit(opts: FeatureAgglomerationFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This FeatureAgglomeration instance has already been disposed'
@@ -143,9 +213,22 @@ pms_FeatureAgglomeration_fit = {k: v for k, v in pms_FeatureAgglomeration_fit.it
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: FeatureAgglomerationFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This FeatureAgglomeration instance has already been disposed'
@@ -183,9 +266,12 @@ pms_FeatureAgglomeration_fit_transform = {k: v for k, v in pms_FeatureAgglomerat
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: FeatureAgglomerationGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.FeatureAgglomeration.fit "sklearn.cluster.FeatureAgglomeration.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This FeatureAgglomeration instance has already been disposed'
@@ -218,9 +304,12 @@ pms_FeatureAgglomeration_get_feature_names_out = {k: v for k, v in pms_FeatureAg
   /**
     Inverse the transformation and return a vector of size `n\_features`.
    */
-  async inverse_transform(
-    opts: FeatureAgglomerationInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      The values to be assigned to each cluster of samples.
+     */
+    Xred?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This FeatureAgglomeration instance has already been disposed'
@@ -255,7 +344,12 @@ pms_FeatureAgglomeration_inverse_transform = {k: v for k, v in pms_FeatureAgglom
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: FeatureAgglomerationSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This FeatureAgglomeration instance has already been disposed'
@@ -287,9 +381,12 @@ pms_FeatureAgglomeration_set_output = {k: v for k, v in pms_FeatureAgglomeration
   /**
     Transform a new matrix using the built clustering.
    */
-  async transform(
-    opts: FeatureAgglomerationTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      A M by N array of M observations in N dimensions or a length M array of M one-dimensional observations.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This FeatureAgglomeration instance has already been disposed'
@@ -533,123 +630,4 @@ pms_FeatureAgglomeration_transform = {k: v for k, v in pms_FeatureAgglomeration_
         ._py`attr_FeatureAgglomeration_distances_.tolist() if hasattr(attr_FeatureAgglomeration_distances_, 'tolist') else attr_FeatureAgglomeration_distances_`
     })()
   }
-}
-
-export interface FeatureAgglomerationOptions {
-  /**
-    The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.
-
-    @defaultValue `2`
-   */
-  n_clusters?: number
-
-  /**
-    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
-
-    @defaultValue `'euclidean'`
-   */
-  affinity?: string
-
-  /**
-    Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
-   */
-  metric?: string
-
-  /**
-    Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
-   */
-  memory?: string
-
-  /**
-    Connectivity matrix. Defines for each feature the neighboring features following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
-   */
-  connectivity?: ArrayLike
-
-  /**
-    Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of features. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.
-
-    @defaultValue `'auto'`
-   */
-  compute_full_tree?: 'auto' | boolean
-
-  /**
-    Which linkage criterion to use. The linkage criterion determines which distance to use between sets of features. The algorithm will merge the pairs of cluster that minimize this criterion.
-
-    @defaultValue `'ward'`
-   */
-  linkage?: 'ward' | 'complete' | 'average' | 'single'
-
-  /**
-    This combines the values of agglomerated features into a single value, and should accept an array of shape \[M, N\] and the keyword argument `axis=1`, and reduce it to an array of size \[M\].
-   */
-  pooling_func?: any
-
-  /**
-    The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
-   */
-  distance_threshold?: number
-
-  /**
-    Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
-
-    @defaultValue `false`
-   */
-  compute_distances?: boolean
-}
-
-export interface FeatureAgglomerationFitOptions {
-  /**
-    The data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface FeatureAgglomerationFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface FeatureAgglomerationGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.FeatureAgglomeration.fit "sklearn.cluster.FeatureAgglomeration.fit").
-   */
-  input_features?: any
-}
-
-export interface FeatureAgglomerationInverseTransformOptions {
-  /**
-    The values to be assigned to each cluster of samples.
-   */
-  Xred?: ArrayLike[]
-}
-
-export interface FeatureAgglomerationSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface FeatureAgglomerationTransformOptions {
-  /**
-    A M by N array of M observations in N dimensions or a length M array of M one-dimensional observations.
-   */
-  X?: ArrayLike[]
 }

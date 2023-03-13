@@ -26,7 +26,97 @@ export class OPTICS {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OPTICSOptions) {
+  constructor(opts?: {
+    /**
+      The number of samples in a neighborhood for a point to be considered as a core point. Also, up and down steep regions can’t have more than `min\_samples` consecutive non-steep points. Expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2).
+
+      @defaultValue `5`
+     */
+    min_samples?: any
+
+    /**
+      The maximum distance between two samples for one to be considered as in the neighborhood of the other. Default value of `np.inf` will identify clusters across all scales; reducing `max\_eps` will result in shorter run times.
+     */
+    max_eps?: number
+
+    /**
+      Metric to use for distance computation. Any metric from scikit-learn or scipy.spatial.distance can be used.
+
+      If metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays as input and return one value indicating the distance between them. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string. If metric is “precomputed”, `X` is assumed to be a distance matrix and must be square.
+
+      Valid values for metric are:
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: string
+
+    /**
+      Parameter for the Minkowski metric from [`pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances"). When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+
+      @defaultValue `2`
+     */
+    p?: number
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      The extraction method used to extract clusters using the calculated reachability and ordering. Possible values are “xi” and “dbscan”.
+
+      @defaultValue `'xi'`
+     */
+    cluster_method?: string
+
+    /**
+      The maximum distance between two samples for one to be considered as in the neighborhood of the other. By default it assumes the same value as `max\_eps`. Used only when `cluster\_method='dbscan'`.
+     */
+    eps?: number
+
+    /**
+      Determines the minimum steepness on the reachability plot that constitutes a cluster boundary. For example, an upwards point in the reachability plot is defined by the ratio from one point to its successor being at most 1-xi. Used only when `cluster\_method='xi'`.
+
+      @defaultValue `0.05`
+     */
+    xi?: any
+
+    /**
+      Correct clusters according to the predecessors calculated by OPTICS [\[2\]](#r2c55e37003fe-2). This parameter has minimal effect on most datasets. Used only when `cluster\_method='xi'`.
+
+      @defaultValue `true`
+     */
+    predecessor_correction?: boolean
+
+    /**
+      Minimum number of samples in an OPTICS cluster, expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). If `undefined`, the value of `min\_samples` is used instead. Used only when `cluster\_method='xi'`.
+     */
+    min_cluster_size?: any
+
+    /**
+      Algorithm used to compute the nearest neighbors:
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
+
+    /**
+      Leaf size passed to `BallTree` or `KDTree`. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+      @defaultValue `30`
+     */
+    leaf_size?: number
+
+    /**
+      Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
+     */
+    memory?: string
+
+    /**
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `OPTICS${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -116,7 +206,17 @@ ctor_OPTICS = {k: v for k, v in ctor_OPTICS.items() if v is not None}`
 
     Extracts an ordered list of points and reachability distances, and performs initial clustering using `max\_eps` distance specified at OPTICS object instantiation.
    */
-  async fit(opts: OPTICSFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      A feature array, or array of distances between samples if metric=’precomputed’. If a sparse matrix is provided, it will be converted into CSR format.
+     */
+    X?: any
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OPTICS instance has already been disposed')
     }
@@ -144,7 +244,17 @@ pms_OPTICS_fit = {k: v for k, v in pms_OPTICS_fit.items() if v is not None}`
   /**
     Perform clustering on `X` and returns cluster labels.
    */
-  async fit_predict(opts: OPTICSFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OPTICS instance has already been disposed')
     }
@@ -357,120 +467,4 @@ pms_OPTICS_fit_predict = {k: v for k, v in pms_OPTICS_fit_predict.items() if v i
         ._py`attr_OPTICS_feature_names_in_.tolist() if hasattr(attr_OPTICS_feature_names_in_, 'tolist') else attr_OPTICS_feature_names_in_`
     })()
   }
-}
-
-export interface OPTICSOptions {
-  /**
-    The number of samples in a neighborhood for a point to be considered as a core point. Also, up and down steep regions can’t have more than `min\_samples` consecutive non-steep points. Expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2).
-
-    @defaultValue `5`
-   */
-  min_samples?: any
-
-  /**
-    The maximum distance between two samples for one to be considered as in the neighborhood of the other. Default value of `np.inf` will identify clusters across all scales; reducing `max\_eps` will result in shorter run times.
-   */
-  max_eps?: number
-
-  /**
-    Metric to use for distance computation. Any metric from scikit-learn or scipy.spatial.distance can be used.
-
-    If metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays as input and return one value indicating the distance between them. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string. If metric is “precomputed”, `X` is assumed to be a distance matrix and must be square.
-
-    Valid values for metric are:
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: string
-
-  /**
-    Parameter for the Minkowski metric from [`pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances"). When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
-
-    @defaultValue `2`
-   */
-  p?: number
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    The extraction method used to extract clusters using the calculated reachability and ordering. Possible values are “xi” and “dbscan”.
-
-    @defaultValue `'xi'`
-   */
-  cluster_method?: string
-
-  /**
-    The maximum distance between two samples for one to be considered as in the neighborhood of the other. By default it assumes the same value as `max\_eps`. Used only when `cluster\_method='dbscan'`.
-   */
-  eps?: number
-
-  /**
-    Determines the minimum steepness on the reachability plot that constitutes a cluster boundary. For example, an upwards point in the reachability plot is defined by the ratio from one point to its successor being at most 1-xi. Used only when `cluster\_method='xi'`.
-
-    @defaultValue `0.05`
-   */
-  xi?: any
-
-  /**
-    Correct clusters according to the predecessors calculated by OPTICS [\[2\]](#r2c55e37003fe-2). This parameter has minimal effect on most datasets. Used only when `cluster\_method='xi'`.
-
-    @defaultValue `true`
-   */
-  predecessor_correction?: boolean
-
-  /**
-    Minimum number of samples in an OPTICS cluster, expressed as an absolute number or a fraction of the number of samples (rounded to be at least 2). If `undefined`, the value of `min\_samples` is used instead. Used only when `cluster\_method='xi'`.
-   */
-  min_cluster_size?: any
-
-  /**
-    Algorithm used to compute the nearest neighbors:
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
-
-  /**
-    Leaf size passed to `BallTree` or `KDTree`. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-    @defaultValue `30`
-   */
-  leaf_size?: number
-
-  /**
-    Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
-   */
-  memory?: string
-
-  /**
-    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface OPTICSFitOptions {
-  /**
-    A feature array, or array of distances between samples if metric=’precomputed’. If a sparse matrix is provided, it will be converted into CSR format.
-   */
-  X?: any
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface OPTICSFitPredictOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
 }

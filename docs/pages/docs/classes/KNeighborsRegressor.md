@@ -15,20 +15,28 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new KNeighborsRegressor(opts?: KNeighborsRegressorOptions): KNeighborsRegressor;
+new KNeighborsRegressor(opts?: object): KNeighborsRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `KNeighborsRegressorOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm used to compute the nearest neighbors:  `Default Value`  `'auto'` |
+| `opts.leaf_size?` | `number` | Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.  `Default Value`  `30` |
+| `opts.metric?` | `string` | Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.  If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a sparse graph, in which case only “nonzero” elements may be considered neighbors.  If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.  `Default Value`  `'minkowski'` |
+| `opts.metric_params?` | `any` | Additional keyword arguments for the metric function. |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsRegressor.fit "sklearn.neighbors.KNeighborsRegressor.fit") method. |
+| `opts.n_neighbors?` | `number` | Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.KNeighborsRegressor.kneighbors "sklearn.neighbors.KNeighborsRegressor.kneighbors") queries.  `Default Value`  `5` |
+| `opts.p?` | `number` | Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.  `Default Value`  `2` |
+| `opts.weights?` | `"uniform"` \| `"distance"` | Weight function used in prediction. Possible values:  `Default Value`  `'uniform'` |
 
 ### Returns
 
 [`KNeighborsRegressor`](KNeighborsRegressor.md)
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L25)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +44,31 @@ Defined in:  [generated/neighbors/KNeighborsRegressor.ts:25](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L23)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L22)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L21)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L18)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L19)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,7 +86,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L283)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L399)
 
 ### effective\_metric\_params\_
 
@@ -94,7 +102,7 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L310)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L426)
 
 ### feature\_names\_in\_
 
@@ -110,7 +118,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L364)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L480)
 
 ### n\_features\_in\_
 
@@ -126,7 +134,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L337)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L453)
 
 ### n\_samples\_fit\_
 
@@ -142,7 +150,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L391)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L507)
 
 ### py
 
@@ -156,7 +164,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L30)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L86)
 
 #### Signature
 
@@ -174,7 +182,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L34)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L90)
 
 ## Methods
 
@@ -194,7 +202,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L93)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L149)
 
 ### fit()
 
@@ -203,20 +211,22 @@ Fit the k-nearest neighbors regressor from the training dataset.
 #### Signature
 
 ```ts
-fit(opts: KNeighborsRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsRegressorFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data. |
+| `opts.y?` | `any` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L110)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L166)
 
 ### init()
 
@@ -240,7 +250,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L43)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L99)
 
 ### kneighbors()
 
@@ -251,20 +261,23 @@ Returns indices of and distances to the neighbors of each point.
 #### Signature
 
 ```ts
-kneighbors(opts: KNeighborsRegressorKneighborsOptions): Promise<ArrayLike[]>;
+kneighbors(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsRegressorKneighborsOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. |
+| `opts.n_neighbors?` | `number` | Number of neighbors required for each sample. The default is the value passed to the constructor. |
+| `opts.return_distance?` | `boolean` | Whether or not to return the distances.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L144)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L210)
 
 ### kneighbors\_graph()
 
@@ -273,20 +286,23 @@ Compute the (weighted) graph of k-Neighbors for points in X.
 #### Signature
 
 ```ts
-kneighbors_graph(opts: KNeighborsRegressorKneighborsGraphOptions): Promise<any[]>;
+kneighbors_graph(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsRegressorKneighborsGraphOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features). |
+| `opts.mode?` | `"connectivity"` \| `"distance"` | Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.  `Default Value`  `'connectivity'` |
+| `opts.n_neighbors?` | `number` | Number of neighbors for each sample. The default is the value passed to the constructor. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L180)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L261)
 
 ### predict()
 
@@ -295,20 +311,21 @@ Predict the target for the provided data.
 #### Signature
 
 ```ts
-predict(opts: KNeighborsRegressorPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsRegressorPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Test samples. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L217)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L313)
 
 ### score()
 
@@ -319,17 +336,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: KNeighborsRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsRegressorScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L249)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L350)

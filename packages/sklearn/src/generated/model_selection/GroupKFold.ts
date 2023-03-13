@@ -24,7 +24,14 @@ export class GroupKFold {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GroupKFoldOptions) {
+  constructor(opts?: {
+    /**
+      Number of folds. Must be at least 2.
+
+      @defaultValue `5`
+     */
+    n_splits?: number
+  }) {
     this.id = `GroupKFold${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +106,22 @@ ctor_GroupKFold = {k: v for k, v in ctor_GroupKFold.items() if v is not None}`
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(opts: GroupKFoldGetNSplitsOptions): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GroupKFold instance has already been disposed')
     }
@@ -127,7 +149,22 @@ pms_GroupKFold_get_n_splits = {k: v for k, v in pms_GroupKFold_get_n_splits.item
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: GroupKFoldSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GroupKFold instance has already been disposed')
     }
@@ -155,47 +192,4 @@ pms_GroupKFold_split = {k: v for k, v in pms_GroupKFold_split.items() if v is no
     return this
       ._py`res_GroupKFold_split.tolist() if hasattr(res_GroupKFold_split, 'tolist') else res_GroupKFold_split`
   }
-}
-
-export interface GroupKFoldOptions {
-  /**
-    Number of folds. Must be at least 2.
-
-    @defaultValue `5`
-   */
-  n_splits?: number
-}
-
-export interface GroupKFoldGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface GroupKFoldSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

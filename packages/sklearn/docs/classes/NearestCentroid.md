@@ -15,20 +15,22 @@ Read more in the [User Guide](../neighbors.html#nearest-centroid-classifier).
 ### Signature
 
 ```ts
-new NearestCentroid(opts?: NearestCentroidOptions): NearestCentroid;
+new NearestCentroid(opts?: object): NearestCentroid;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`NearestCentroidOptions`](../interfaces/NearestCentroidOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.metric?` | `string` | Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values. Note that “wminkowski”, “seuclidean” and “mahalanobis” are not supported.  The centroids for the samples corresponding to each class is the point from which the sum of the distances (according to the metric) of all samples that belong to that particular class are minimized. If the `"manhattan"` metric is provided, this centroid is the median and for all other metrics, the centroid is now set to be the mean.  `Default Value`  `'euclidean'` |
+| `opts.shrink_threshold?` | `number` | Threshold for shrinking centroids to remove features. |
 
 ### Returns
 
 [`NearestCentroid`](NearestCentroid.md)
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L25)
+Defined in:  [generated/neighbors/NearestCentroid.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L25)
 
 ## Properties
 
@@ -36,31 +38,31 @@ Defined in:  [generated/neighbors/NearestCentroid.ts:25](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L23)
+Defined in:  [generated/neighbors/NearestCentroid.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L22)
+Defined in:  [generated/neighbors/NearestCentroid.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L21)
+Defined in:  [generated/neighbors/NearestCentroid.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L18)
+Defined in:  [generated/neighbors/NearestCentroid.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L19)
+Defined in:  [generated/neighbors/NearestCentroid.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L19)
 
 ## Accessors
 
@@ -78,9 +80,9 @@ centroids_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L194)
+Defined in:  [generated/neighbors/NearestCentroid.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L238)
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L194)
+Defined in:  [generated/neighbors/NearestCentroid.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L238)
 
 ### classes\_
 
@@ -96,9 +98,9 @@ classes_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L219)
+Defined in:  [generated/neighbors/NearestCentroid.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L263)
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L219)
+Defined in:  [generated/neighbors/NearestCentroid.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L263)
 
 ### feature\_names\_in\_
 
@@ -114,9 +116,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L269)
+Defined in:  [generated/neighbors/NearestCentroid.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L313)
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L269)
+Defined in:  [generated/neighbors/NearestCentroid.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L313)
 
 ### n\_features\_in\_
 
@@ -132,9 +134,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L244)
+Defined in:  [generated/neighbors/NearestCentroid.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L288)
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L244)
+Defined in:  [generated/neighbors/NearestCentroid.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L288)
 
 ### py
 
@@ -148,7 +150,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L30)
+Defined in:  [generated/neighbors/NearestCentroid.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L44)
 
 #### Signature
 
@@ -166,9 +168,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L34)
+Defined in:  [generated/neighbors/NearestCentroid.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L48)
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L30) [generated/neighbors/NearestCentroid.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L34)
+Defined in:  [generated/neighbors/NearestCentroid.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L44) [generated/neighbors/NearestCentroid.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L48)
 
 ## Methods
 
@@ -188,7 +190,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L83)
+Defined in:  [generated/neighbors/NearestCentroid.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L97)
 
 ### fit()
 
@@ -197,20 +199,22 @@ Fit the NearestCentroid model according to the given training data.
 #### Signature
 
 ```ts
-fit(opts: NearestCentroidFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`NearestCentroidFitOptions`](../interfaces/NearestCentroidFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. Note that centroid shrinking cannot be used with sparse matrices. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L100)
+Defined in:  [generated/neighbors/NearestCentroid.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L114)
 
 ### init()
 
@@ -234,7 +238,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L43)
+Defined in:  [generated/neighbors/NearestCentroid.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L57)
 
 ### predict()
 
@@ -245,20 +249,21 @@ The predicted class `C` for each sample in `X` is returned.
 #### Signature
 
 ```ts
-predict(opts: NearestCentroidPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`NearestCentroidPredictOptions`](../interfaces/NearestCentroidPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Test samples. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L132)
+Defined in:  [generated/neighbors/NearestCentroid.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L156)
 
 ### score()
 
@@ -269,17 +274,20 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: NearestCentroidScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`NearestCentroidScoreOptions`](../interfaces/NearestCentroidScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/NearestCentroid.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L162)
+Defined in:  [generated/neighbors/NearestCentroid.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/NearestCentroid.ts#L191)

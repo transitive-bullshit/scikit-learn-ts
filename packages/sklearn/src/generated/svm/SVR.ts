@@ -24,7 +24,84 @@ export class SVR {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SVROptions) {
+  constructor(opts?: {
+    /**
+      Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix.
+
+      @defaultValue `'rbf'`
+     */
+    kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'precomputed'
+
+    /**
+      Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels.
+
+      @defaultValue `3`
+     */
+    degree?: number
+
+    /**
+      Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
+
+      @defaultValue `'scale'`
+     */
+    gamma?: 'scale' | 'auto' | number
+
+    /**
+      Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.
+
+      @defaultValue `0`
+     */
+    coef0?: number
+
+    /**
+      Tolerance for stopping criterion.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2 penalty.
+
+      @defaultValue `1`
+     */
+    C?: number
+
+    /**
+      Epsilon in the epsilon-SVR model. It specifies the epsilon-tube within which no penalty is associated in the training loss function with points predicted within a distance epsilon from the actual value. Must be non-negative.
+
+      @defaultValue `0.1`
+     */
+    epsilon?: number
+
+    /**
+      Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
+
+      @defaultValue `true`
+     */
+    shrinking?: boolean
+
+    /**
+      Specify the size of the kernel cache (in MB).
+
+      @defaultValue `200`
+     */
+    cache_size?: number
+
+    /**
+      Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      Hard limit on iterations within solver, or -1 for no limit.
+
+      @defaultValue `-1`
+     */
+    max_iter?: number
+  }) {
     this.id = `SVR${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -108,7 +185,22 @@ ctor_SVR = {k: v for k, v in ctor_SVR.items() if v is not None}`
   /**
     Fit the SVM model according to the given training data.
    */
-  async fit(opts: SVRFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+
+    /**
+      Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SVR instance has already been disposed')
     }
@@ -141,7 +233,12 @@ pms_SVR_fit = {k: v for k, v in pms_SVR_fit.items() if v is not None}`
 
     For an one-class model, +1 (inlier) or -1 (outlier) is returned.
    */
-  async predict(opts: SVRPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This SVR instance has already been disposed')
     }
@@ -171,7 +268,22 @@ pms_SVR_predict = {k: v for k, v in pms_SVR_predict.items() if v is not None}`
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: SVRScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This SVR instance has already been disposed')
     }
@@ -424,124 +536,4 @@ pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
         ._py`attr_SVR_support_vectors_.tolist() if hasattr(attr_SVR_support_vectors_, 'tolist') else attr_SVR_support_vectors_`
     })()
   }
-}
-
-export interface SVROptions {
-  /**
-    Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix.
-
-    @defaultValue `'rbf'`
-   */
-  kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'precomputed'
-
-  /**
-    Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels.
-
-    @defaultValue `3`
-   */
-  degree?: number
-
-  /**
-    Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
-
-    @defaultValue `'scale'`
-   */
-  gamma?: 'scale' | 'auto' | number
-
-  /**
-    Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.
-
-    @defaultValue `0`
-   */
-  coef0?: number
-
-  /**
-    Tolerance for stopping criterion.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2 penalty.
-
-    @defaultValue `1`
-   */
-  C?: number
-
-  /**
-    Epsilon in the epsilon-SVR model. It specifies the epsilon-tube within which no penalty is associated in the training loss function with points predicted within a distance epsilon from the actual value. Must be non-negative.
-
-    @defaultValue `0.1`
-   */
-  epsilon?: number
-
-  /**
-    Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
-
-    @defaultValue `true`
-   */
-  shrinking?: boolean
-
-  /**
-    Specify the size of the kernel cache (in MB).
-
-    @defaultValue `200`
-   */
-  cache_size?: number
-
-  /**
-    Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    Hard limit on iterations within solver, or -1 for no limit.
-
-    @defaultValue `-1`
-   */
-  max_iter?: number
-}
-
-export interface SVRFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-
-  /**
-    Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SVRPredictOptions {
-  /**
-    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SVRScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

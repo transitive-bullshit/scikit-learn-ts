@@ -22,7 +22,14 @@ export class MaxAbsScaler {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MaxAbsScalerOptions) {
+  constructor(opts?: {
+    /**
+      Set to `false` to perform inplace scaling and avoid a copy (if the input is already a numpy array).
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `MaxAbsScaler${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +104,17 @@ ctor_MaxAbsScaler = {k: v for k, v in ctor_MaxAbsScaler.items() if v is not None
   /**
     Compute the maximum absolute value to be used for later scaling.
    */
-  async fit(opts: MaxAbsScalerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data used to compute the per-feature minimum and maximum used for later scaling along the features axis.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
     }
@@ -127,7 +144,22 @@ pms_MaxAbsScaler_fit = {k: v for k, v in pms_MaxAbsScaler_fit.items() if v is no
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: MaxAbsScalerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
     }
@@ -159,9 +191,12 @@ pms_MaxAbsScaler_fit_transform = {k: v for k, v in pms_MaxAbsScaler_fit_transfor
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: MaxAbsScalerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
     }
@@ -192,9 +227,12 @@ pms_MaxAbsScaler_get_feature_names_out = {k: v for k, v in pms_MaxAbsScaler_get_
   /**
     Scale back the data to the original representation.
    */
-  async inverse_transform(
-    opts: MaxAbsScalerInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async inverse_transform(opts: {
+    /**
+      The data that should be transformed back.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
     }
@@ -226,7 +264,17 @@ pms_MaxAbsScaler_inverse_transform = {k: v for k, v in pms_MaxAbsScaler_inverse_
 
     All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.MaxAbsScaler.fit "sklearn.preprocessing.MaxAbsScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
    */
-  async partial_fit(opts: MaxAbsScalerPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      The data used to compute the mean and standard deviation used for later scaling along the features axis.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
     }
@@ -256,7 +304,12 @@ pms_MaxAbsScaler_partial_fit = {k: v for k, v in pms_MaxAbsScaler_partial_fit.it
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: MaxAbsScalerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
     }
@@ -284,9 +337,12 @@ pms_MaxAbsScaler_set_output = {k: v for k, v in pms_MaxAbsScaler_set_output.item
   /**
     Scale the data.
    */
-  async transform(
-    opts: MaxAbsScalerTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data that should be scaled.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This MaxAbsScaler instance has already been disposed')
     }
@@ -431,82 +487,4 @@ pms_MaxAbsScaler_transform = {k: v for k, v in pms_MaxAbsScaler_transform.items(
         ._py`attr_MaxAbsScaler_n_samples_seen_.tolist() if hasattr(attr_MaxAbsScaler_n_samples_seen_, 'tolist') else attr_MaxAbsScaler_n_samples_seen_`
     })()
   }
-}
-
-export interface MaxAbsScalerOptions {
-  /**
-    Set to `false` to perform inplace scaling and avoid a copy (if the input is already a numpy array).
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface MaxAbsScalerFitOptions {
-  /**
-    The data used to compute the per-feature minimum and maximum used for later scaling along the features axis.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface MaxAbsScalerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface MaxAbsScalerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface MaxAbsScalerInverseTransformOptions {
-  /**
-    The data that should be transformed back.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface MaxAbsScalerPartialFitOptions {
-  /**
-    The data used to compute the mean and standard deviation used for later scaling along the features axis.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface MaxAbsScalerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface MaxAbsScalerTransformOptions {
-  /**
-    The data that should be scaled.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

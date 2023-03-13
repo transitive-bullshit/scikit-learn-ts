@@ -13,20 +13,24 @@ LinearRegression fits a linear model with coefficients w = (w1, …, wp) to mini
 ### Signature
 
 ```ts
-new LinearRegression(opts?: LinearRegressionOptions): LinearRegression;
+new LinearRegression(opts?: object): LinearRegression;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `LinearRegressionOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.fit_intercept?` | `boolean` | Whether to calculate the intercept for this model. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).  `Default Value`  `true` |
+| `opts.n_jobs?` | `number` | The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.positive?` | `boolean` | When set to `true`, forces the coefficients to be positive. This option is only supported for dense arrays.  `Default Value`  `false` |
 
 ### Returns
 
 [`LinearRegression`](LinearRegression.md)
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L23)
+Defined in:  [generated/linear\_model/LinearRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L23)
 
 ## Properties
 
@@ -34,31 +38,31 @@ Defined in:  [generated/linear\_model/LinearRegression.ts:23](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L21)
+Defined in:  [generated/linear\_model/LinearRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L20)
+Defined in:  [generated/linear\_model/LinearRegression.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L19)
+Defined in:  [generated/linear\_model/LinearRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L16)
+Defined in:  [generated/linear\_model/LinearRegression.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L17)
+Defined in:  [generated/linear\_model/LinearRegression.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L17)
 
 ## Accessors
 
@@ -76,7 +80,7 @@ coef_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/linear\_model/LinearRegression.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L202)
+Defined in: [generated/linear\_model/LinearRegression.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L263)
 
 ### feature\_names\_in\_
 
@@ -92,7 +96,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/LinearRegression.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L337)
+Defined in: [generated/linear\_model/LinearRegression.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L398)
 
 ### intercept\_
 
@@ -108,7 +112,7 @@ intercept_(): Promise<number | any[]>;
 
 `Promise`\<`number` \| `any`[]\>
 
-Defined in: [generated/linear\_model/LinearRegression.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L283)
+Defined in: [generated/linear\_model/LinearRegression.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L344)
 
 ### n\_features\_in\_
 
@@ -124,7 +128,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/LinearRegression.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L310)
+Defined in: [generated/linear\_model/LinearRegression.ts:371](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L371)
 
 ### py
 
@@ -138,7 +142,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L28)
+Defined in:  [generated/linear\_model/LinearRegression.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L54)
 
 #### Signature
 
@@ -156,7 +160,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/LinearRegression.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L32)
+Defined in: [generated/linear\_model/LinearRegression.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L58)
 
 ### rank\_
 
@@ -172,7 +176,7 @@ rank_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/LinearRegression.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L229)
+Defined in: [generated/linear\_model/LinearRegression.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L290)
 
 ### singular\_
 
@@ -188,7 +192,7 @@ singular_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/linear\_model/LinearRegression.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L256)
+Defined in: [generated/linear\_model/LinearRegression.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L317)
 
 ## Methods
 
@@ -208,7 +212,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L85)
+Defined in:  [generated/linear\_model/LinearRegression.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L111)
 
 ### fit()
 
@@ -217,20 +221,23 @@ Fit linear model.
 #### Signature
 
 ```ts
-fit(opts: LinearRegressionFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `LinearRegressionFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data. |
+| `opts.sample_weight?` | `ArrayLike` | Individual weights for each sample. |
+| `opts.y?` | `ArrayLike` | Target values. Will be cast to X’s dtype if necessary. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L102)
+Defined in:  [generated/linear\_model/LinearRegression.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L128)
 
 ### init()
 
@@ -254,7 +261,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L41)
+Defined in:  [generated/linear\_model/LinearRegression.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L67)
 
 ### predict()
 
@@ -263,20 +270,21 @@ Predict using the linear model.
 #### Signature
 
 ```ts
-predict(opts: LinearRegressionPredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `LinearRegressionPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L136)
+Defined in:  [generated/linear\_model/LinearRegression.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L177)
 
 ### score()
 
@@ -287,17 +295,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: LinearRegressionScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `LinearRegressionScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/LinearRegression.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L168)
+Defined in:  [generated/linear\_model/LinearRegression.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/LinearRegression.ts#L214)

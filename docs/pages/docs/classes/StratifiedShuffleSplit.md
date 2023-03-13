@@ -19,20 +19,24 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new StratifiedShuffleSplit(opts?: StratifiedShuffleSplitOptions): StratifiedShuffleSplit;
+new StratifiedShuffleSplit(opts?: object): StratifiedShuffleSplit;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `StratifiedShuffleSplitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.n_splits?` | `number` | Number of re-shuffling & splitting iterations.  `Default Value`  `10` |
+| `opts.random_state?` | `number` | Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See Glossary. |
+| `opts.test_size?` | `number` | If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If `undefined`, the value is set to the complement of the train size. If `train\_size` is also `undefined`, it will be set to 0.1. |
+| `opts.train_size?` | `number` | If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the train split. If int, represents the absolute number of train samples. If `undefined`, the value is automatically set to the complement of the test size. |
 
 ### Returns
 
 [`StratifiedShuffleSplit`](StratifiedShuffleSplit.md)
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L29)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L29)
 
 ## Properties
 
@@ -40,31 +44,31 @@ Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:29](https://g
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L27)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L26)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L25)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L22)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L23)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L23)
 
 ## Accessors
 
@@ -80,7 +84,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L34)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L56)
 
 #### Signature
 
@@ -98,7 +102,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/StratifiedShuffleSplit.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L38)
+Defined in: [generated/model\_selection/StratifiedShuffleSplit.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L60)
 
 ## Methods
 
@@ -118,7 +122,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L93)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L115)
 
 ### get\_n\_splits()
 
@@ -127,20 +131,23 @@ Returns the number of splitting iterations in the cross-validator
 #### Signature
 
 ```ts
-get_n_splits(opts: StratifiedShuffleSplitGetNSplitsOptions): Promise<number>;
+get_n_splits(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `StratifiedShuffleSplitGetNSplitsOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L110)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L132)
 
 ### init()
 
@@ -164,7 +171,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L47)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L69)
 
 ### split()
 
@@ -173,17 +180,20 @@ Generate indices to split data into training and test set.
 #### Signature
 
 ```ts
-split(opts: StratifiedShuffleSplitSplitOptions): Promise<ArrayLike>;
+split(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `StratifiedShuffleSplitSplitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.  Note that providing `y` is sufficient to generate the splits and hence `np.zeros(n\_samples)` may be used as a placeholder for `X` instead of actual training data. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `ArrayLike` | The target variable for supervised learning problems. Stratification is done based on the y labels. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L144)
+Defined in:  [generated/model\_selection/StratifiedShuffleSplit.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedShuffleSplit.ts#L179)

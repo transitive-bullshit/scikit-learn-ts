@@ -24,7 +24,17 @@ export class PredictionErrorDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PredictionErrorDisplayOptions) {
+  constructor(opts?: {
+    /**
+      True values.
+     */
+    y_true?: NDArray
+
+    /**
+      Prediction values.
+     */
+    y_pred?: NDArray
+  }) {
     this.id = `PredictionErrorDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,9 +117,56 @@ ctor_PredictionErrorDisplay = {k: v for k, v in ctor_PredictionErrorDisplay.item
 
     For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
    */
-  async from_estimator(
-    opts: PredictionErrorDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      Fitted regressor or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
+     */
+    estimator?: any
+
+    /**
+      Input values.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      The type of plot to draw:
+
+      @defaultValue `'residual_vs_predicted'`
+     */
+    kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
+
+    /**
+      Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+
+      @defaultValue `1`
+     */
+    subsample?: number
+
+    /**
+      Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
+     */
+    scatter_kwargs?: any
+
+    /**
+      Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
+     */
+    line_kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PredictionErrorDisplay instance has already been disposed'
@@ -154,9 +211,51 @@ pms_PredictionErrorDisplay_from_estimator = {k: v for k, v in pms_PredictionErro
 
     For general information regarding `scikit-learn` visualization tools, read more in the [Visualization Guide](../../visualizations.html#visualizations). For details regarding interpreting these plots, refer to the [Model Evaluation Guide](../model_evaluation.html#visualization-regression-evaluation).
    */
-  async from_predictions(
-    opts: PredictionErrorDisplayFromPredictionsOptions
-  ): Promise<any> {
+  async from_predictions(opts: {
+    /**
+      True target values.
+     */
+    y_true?: ArrayLike
+
+    /**
+      Predicted target values.
+     */
+    y_pred?: ArrayLike
+
+    /**
+      The type of plot to draw:
+
+      @defaultValue `'residual_vs_predicted'`
+     */
+    kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
+
+    /**
+      Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
+
+      @defaultValue `1`
+     */
+    subsample?: number
+
+    /**
+      Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
+     */
+    scatter_kwargs?: any
+
+    /**
+      Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
+     */
+    line_kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PredictionErrorDisplay instance has already been disposed'
@@ -199,7 +298,29 @@ pms_PredictionErrorDisplay_from_predictions = {k: v for k, v in pms_PredictionEr
 
     Extra keyword arguments will be passed to matplotlib’s `plot`.
    */
-  async plot(opts: PredictionErrorDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      The type of plot to draw:
+
+      @defaultValue `'residual_vs_predicted'`
+     */
+    kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
+
+    /**
+      Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
+     */
+    scatter_kwargs?: any
+
+    /**
+      Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
+     */
+    line_kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PredictionErrorDisplay instance has already been disposed'
@@ -362,137 +483,4 @@ pms_PredictionErrorDisplay_plot = {k: v for k, v in pms_PredictionErrorDisplay_p
         ._py`attr_PredictionErrorDisplay_figure_.tolist() if hasattr(attr_PredictionErrorDisplay_figure_, 'tolist') else attr_PredictionErrorDisplay_figure_`
     })()
   }
-}
-
-export interface PredictionErrorDisplayOptions {
-  /**
-    True values.
-   */
-  y_true?: NDArray
-
-  /**
-    Prediction values.
-   */
-  y_pred?: NDArray
-}
-
-export interface PredictionErrorDisplayFromEstimatorOptions {
-  /**
-    Fitted regressor or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a regressor.
-   */
-  estimator?: any
-
-  /**
-    Input values.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    The type of plot to draw:
-
-    @defaultValue `'residual_vs_predicted'`
-   */
-  kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
-
-  /**
-    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
-
-    @defaultValue `1`
-   */
-  subsample?: number
-
-  /**
-    Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
-   */
-  scatter_kwargs?: any
-
-  /**
-    Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
-   */
-  line_kwargs?: any
-}
-
-export interface PredictionErrorDisplayFromPredictionsOptions {
-  /**
-    True target values.
-   */
-  y_true?: ArrayLike
-
-  /**
-    Predicted target values.
-   */
-  y_pred?: ArrayLike
-
-  /**
-    The type of plot to draw:
-
-    @defaultValue `'residual_vs_predicted'`
-   */
-  kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
-
-  /**
-    Sampling the samples to be shown on the scatter plot. If `float`, it should be between 0 and 1 and represents the proportion of the original dataset. If `int`, it represents the number of samples display on the scatter plot. If `undefined`, no subsampling will be applied. by default, a 1000 samples or less will be displayed.
-
-    @defaultValue `1`
-   */
-  subsample?: number
-
-  /**
-    Controls the randomness when `subsample` is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
-   */
-  scatter_kwargs?: any
-
-  /**
-    Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
-   */
-  line_kwargs?: any
-}
-
-export interface PredictionErrorDisplayPlotOptions {
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    The type of plot to draw:
-
-    @defaultValue `'residual_vs_predicted'`
-   */
-  kind?: 'actual_vs_predicted' | 'residual_vs_predicted'
-
-  /**
-    Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
-   */
-  scatter_kwargs?: any
-
-  /**
-    Dictionary with keyword passed to the `matplotlib.pyplot.plot` call to draw the optimal line.
-   */
-  line_kwargs?: any
 }

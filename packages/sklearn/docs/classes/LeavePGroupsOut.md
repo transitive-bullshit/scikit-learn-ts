@@ -19,20 +19,21 @@ Read more in the [User Guide](../cross_validation.html#leave-p-groups-out).
 ### Signature
 
 ```ts
-new LeavePGroupsOut(opts?: LeavePGroupsOutOptions): LeavePGroupsOut;
+new LeavePGroupsOut(opts?: object): LeavePGroupsOut;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`LeavePGroupsOutOptions`](../interfaces/LeavePGroupsOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.n_groups?` | `number` | Number of groups (`p`) to leave out in the test split. |
 
 ### Returns
 
 [`LeavePGroupsOut`](LeavePGroupsOut.md)
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L29)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L29)
 
 ## Properties
 
@@ -40,31 +41,31 @@ Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:29](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L27)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L26)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L25)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L22)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L23)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L23)
 
 ## Accessors
 
@@ -80,7 +81,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L34)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L39)
 
 #### Signature
 
@@ -98,9 +99,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L38)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L43)
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L34) [generated/model\_selection/LeavePGroupsOut.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L38)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L39) [generated/model\_selection/LeavePGroupsOut.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L43)
 
 ## Methods
 
@@ -120,7 +121,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L87)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L92)
 
 ### get\_n\_splits()
 
@@ -129,20 +130,23 @@ Returns the number of splitting iterations in the cross-validator
 #### Signature
 
 ```ts
-get_n_splits(opts: LeavePGroupsOutGetNSplitsOptions): Promise<number>;
+get_n_splits(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LeavePGroupsOutGetNSplitsOptions`](../interfaces/LeavePGroupsOutGetNSplitsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L104)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L109)
 
 ### init()
 
@@ -166,7 +170,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L47)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L52)
 
 ### split()
 
@@ -175,17 +179,20 @@ Generate indices to split data into training and test set.
 #### Signature
 
 ```ts
-split(opts: LeavePGroupsOutSplitOptions): Promise<ArrayLike>;
+split(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LeavePGroupsOutSplitOptions`](../interfaces/LeavePGroupsOutSplitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target variable for supervised learning problems. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L134)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L154)

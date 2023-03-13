@@ -20,7 +20,27 @@ export class KernelCenterer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KernelCentererOptions) {
+  constructor(opts?: {
+    /**
+      Average of each column of kernel matrix.
+     */
+    K_fit_rows_?: NDArray
+
+    /**
+      Average of kernel matrix.
+     */
+    K_fit_all_?: number
+
+    /**
+      Number of features seen during [fit](../../glossary.html#term-fit).
+     */
+    n_features_in_?: number
+
+    /**
+      Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+     */
+    feature_names_in_?: NDArray
+  }) {
     this.id = `KernelCenterer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +121,17 @@ ctor_KernelCenterer = {k: v for k, v in ctor_KernelCenterer.items() if v is not 
   /**
     Fit KernelCenterer.
    */
-  async fit(opts: KernelCentererFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Kernel matrix.
+     */
+    K?: NDArray[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KernelCenterer instance has already been disposed')
     }
@@ -131,7 +161,22 @@ pms_KernelCenterer_fit = {k: v for k, v in pms_KernelCenterer_fit.items() if v i
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: KernelCentererFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This KernelCenterer instance has already been disposed')
     }
@@ -165,9 +210,12 @@ pms_KernelCenterer_fit_transform = {k: v for k, v in pms_KernelCenterer_fit_tran
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: KernelCentererGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.preprocessing.KernelCenterer.fit "sklearn.preprocessing.KernelCenterer.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KernelCenterer instance has already been disposed')
     }
@@ -200,7 +248,12 @@ pms_KernelCenterer_get_feature_names_out = {k: v for k, v in pms_KernelCenterer_
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: KernelCentererSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KernelCenterer instance has already been disposed')
     }
@@ -228,7 +281,19 @@ pms_KernelCenterer_set_output = {k: v for k, v in pms_KernelCenterer_set_output.
   /**
     Center kernel matrix.
    */
-  async transform(opts: KernelCentererTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Kernel matrix.
+     */
+    K?: NDArray[]
+
+    /**
+      Set to `false` to perform inplace computation.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This KernelCenterer instance has already been disposed')
     }
@@ -254,83 +319,4 @@ pms_KernelCenterer_transform = {k: v for k, v in pms_KernelCenterer_transform.it
     return this
       ._py`res_KernelCenterer_transform.tolist() if hasattr(res_KernelCenterer_transform, 'tolist') else res_KernelCenterer_transform`
   }
-}
-
-export interface KernelCentererOptions {
-  /**
-    Average of each column of kernel matrix.
-   */
-  K_fit_rows_?: NDArray
-
-  /**
-    Average of kernel matrix.
-   */
-  K_fit_all_?: number
-
-  /**
-    Number of features seen during [fit](../../glossary.html#term-fit).
-   */
-  n_features_in_?: number
-
-  /**
-    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
-   */
-  feature_names_in_?: NDArray
-}
-
-export interface KernelCentererFitOptions {
-  /**
-    Kernel matrix.
-   */
-  K?: NDArray[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface KernelCentererFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface KernelCentererGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.preprocessing.KernelCenterer.fit "sklearn.preprocessing.KernelCenterer.fit").
-   */
-  input_features?: any
-}
-
-export interface KernelCentererSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface KernelCentererTransformOptions {
-  /**
-    Kernel matrix.
-   */
-  K?: NDArray[]
-
-  /**
-    Set to `false` to perform inplace computation.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
 }

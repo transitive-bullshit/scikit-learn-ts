@@ -19,20 +19,23 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new StratifiedGroupKFold(opts?: StratifiedGroupKFoldOptions): StratifiedGroupKFold;
+new StratifiedGroupKFold(opts?: object): StratifiedGroupKFold;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `StratifiedGroupKFoldOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.n_splits?` | `number` | Number of folds. Must be at least 2.  `Default Value`  `5` |
+| `opts.random_state?` | `number` | When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold for each class. Otherwise, leave `random\_state` as `undefined`. Pass an int for reproducible output across multiple function calls. See Glossary. |
+| `opts.shuffle?` | `boolean` | Whether to shuffle each class’s samples before splitting into batches. Note that the samples within each split will not be shuffled. This implementation can only shuffle groups that have approximately the same y distribution, no global shuffle will be performed.  `Default Value`  `false` |
 
 ### Returns
 
 [`StratifiedGroupKFold`](StratifiedGroupKFold.md)
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L29)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L29)
 
 ## Properties
 
@@ -40,31 +43,31 @@ Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:29](https://git
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L27)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L26)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L25)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L22)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L23)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L23)
 
 ## Accessors
 
@@ -80,7 +83,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L34)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L53)
 
 #### Signature
 
@@ -98,7 +101,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/StratifiedGroupKFold.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L38)
+Defined in: [generated/model\_selection/StratifiedGroupKFold.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L57)
 
 ## Methods
 
@@ -118,7 +121,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L93)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L112)
 
 ### get\_n\_splits()
 
@@ -127,20 +130,23 @@ Returns the number of splitting iterations in the cross-validator
 #### Signature
 
 ```ts
-get_n_splits(opts: StratifiedGroupKFoldGetNSplitsOptions): Promise<number>;
+get_n_splits(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `StratifiedGroupKFoldGetNSplitsOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L110)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L129)
 
 ### init()
 
@@ -164,7 +170,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L47)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L66)
 
 ### split()
 
@@ -173,17 +179,20 @@ Generate indices to split data into training and test set.
 #### Signature
 
 ```ts
-split(opts: StratifiedGroupKFoldSplitOptions): Promise<ArrayLike>;
+split(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `StratifiedGroupKFoldSplitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | `ArrayLike` | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | `ArrayLike` | The target variable for supervised learning problems. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L144)
+Defined in:  [generated/model\_selection/StratifiedGroupKFold.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/StratifiedGroupKFold.ts#L176)

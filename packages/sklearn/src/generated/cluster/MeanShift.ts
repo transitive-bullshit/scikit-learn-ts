@@ -24,7 +24,52 @@ export class MeanShift {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MeanShiftOptions) {
+  constructor(opts?: {
+    /**
+      Bandwidth used in the flat kernel.
+
+      If not given, the bandwidth is estimated using sklearn.cluster.estimate\_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below).
+     */
+    bandwidth?: number
+
+    /**
+      Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get\_bin\_seeds with bandwidth as the grid size and default values for other parameters.
+     */
+    seeds?: ArrayLike[]
+
+    /**
+      If true, initial kernel locations are not locations of all points, but rather the location of the discretized version of points, where points are binned onto a grid whose coarseness corresponds to the bandwidth. Setting this option to `true` will speed up the algorithm because fewer seeds will be initialized. The default value is `false`. Ignored if seeds argument is not `undefined`.
+
+      @defaultValue `false`
+     */
+    bin_seeding?: boolean
+
+    /**
+      To speed up the algorithm, accept only those bins with at least min\_bin\_freq points as seeds.
+
+      @defaultValue `1`
+     */
+    min_bin_freq?: number
+
+    /**
+      If true, then all points are clustered, even those orphans that are not within any kernel. Orphans are assigned to the nearest kernel. If false, then orphans are given cluster label -1.
+
+      @defaultValue `true`
+     */
+    cluster_all?: boolean
+
+    /**
+      The number of jobs to use for the computation. The following tasks benefit from the parallelization:
+     */
+    n_jobs?: number
+
+    /**
+      Maximum number of iterations, per seed point before the clustering operation terminates (for that seed point), if has not converged yet.
+
+      @defaultValue `300`
+     */
+    max_iter?: number
+  }) {
     this.id = `MeanShift${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -106,7 +151,17 @@ ctor_MeanShift = {k: v for k, v in ctor_MeanShift.items() if v is not None}`
   /**
     Perform clustering.
    */
-  async fit(opts: MeanShiftFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Samples to cluster.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MeanShift instance has already been disposed')
     }
@@ -134,7 +189,17 @@ pms_MeanShift_fit = {k: v for k, v in pms_MeanShift_fit.items() if v is not None
   /**
     Perform clustering on `X` and returns cluster labels.
    */
-  async fit_predict(opts: MeanShiftFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MeanShift instance has already been disposed')
     }
@@ -162,7 +227,12 @@ pms_MeanShift_fit_predict = {k: v for k, v in pms_MeanShift_fit_predict.items() 
   /**
     Predict the closest cluster each sample in X belongs to.
    */
-  async predict(opts: MeanShiftPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      New data to predict.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MeanShift instance has already been disposed')
     }
@@ -307,82 +377,4 @@ pms_MeanShift_predict = {k: v for k, v in pms_MeanShift_predict.items() if v is 
         ._py`attr_MeanShift_feature_names_in_.tolist() if hasattr(attr_MeanShift_feature_names_in_, 'tolist') else attr_MeanShift_feature_names_in_`
     })()
   }
-}
-
-export interface MeanShiftOptions {
-  /**
-    Bandwidth used in the flat kernel.
-
-    If not given, the bandwidth is estimated using sklearn.cluster.estimate\_bandwidth; see the documentation for that function for hints on scalability (see also the Notes, below).
-   */
-  bandwidth?: number
-
-  /**
-    Seeds used to initialize kernels. If not set, the seeds are calculated by clustering.get\_bin\_seeds with bandwidth as the grid size and default values for other parameters.
-   */
-  seeds?: ArrayLike[]
-
-  /**
-    If true, initial kernel locations are not locations of all points, but rather the location of the discretized version of points, where points are binned onto a grid whose coarseness corresponds to the bandwidth. Setting this option to `true` will speed up the algorithm because fewer seeds will be initialized. The default value is `false`. Ignored if seeds argument is not `undefined`.
-
-    @defaultValue `false`
-   */
-  bin_seeding?: boolean
-
-  /**
-    To speed up the algorithm, accept only those bins with at least min\_bin\_freq points as seeds.
-
-    @defaultValue `1`
-   */
-  min_bin_freq?: number
-
-  /**
-    If true, then all points are clustered, even those orphans that are not within any kernel. Orphans are assigned to the nearest kernel. If false, then orphans are given cluster label -1.
-
-    @defaultValue `true`
-   */
-  cluster_all?: boolean
-
-  /**
-    The number of jobs to use for the computation. The following tasks benefit from the parallelization:
-   */
-  n_jobs?: number
-
-  /**
-    Maximum number of iterations, per seed point before the clustering operation terminates (for that seed point), if has not converged yet.
-
-    @defaultValue `300`
-   */
-  max_iter?: number
-}
-
-export interface MeanShiftFitOptions {
-  /**
-    Samples to cluster.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface MeanShiftFitPredictOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface MeanShiftPredictOptions {
-  /**
-    New data to predict.
-   */
-  X?: ArrayLike[]
 }

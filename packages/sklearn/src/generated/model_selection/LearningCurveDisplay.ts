@@ -22,7 +22,27 @@ export class LearningCurveDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LearningCurveDisplayOptions) {
+  constructor(opts?: {
+    /**
+      Numbers of training examples that has been used to generate the learning curve.
+     */
+    train_sizes?: NDArray
+
+    /**
+      Scores on training sets.
+     */
+    train_scores?: NDArray[]
+
+    /**
+      Scores on test set.
+     */
+    test_scores?: NDArray[]
+
+    /**
+      The name of the score used in `learning\_curve`. It will be used to decorate the y-axis. If `undefined`, the generic name `"Score"` will be used.
+     */
+    score_name?: string
+  }) {
     this.id = `LearningCurveDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -111,9 +131,143 @@ ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() 
   /**
     Create a learning curve display from an estimator.
    */
-  async from_estimator(
-    opts: LearningCurveDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      An object of that type which is cloned for each validation.
+     */
+    estimator?: any
+
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target relative to X for classification or regression; `undefined` for unsupervised learning.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
+     */
+    groups?: ArrayLike
+
+    /**
+      Relative or absolute numbers of training examples that will be used to generate the learning curve. If the dtype is float, it is regarded as a fraction of the maximum size of the training set (that is determined by the selected validation method), i.e. it has to be within (0, 1\]. Otherwise it is interpreted as absolute sizes of the training sets. Note that for classification the number of samples usually have to be big enough to contain at least one sample from each class.
+     */
+    train_sizes?: ArrayLike
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      A string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a scorer callable object / function with signature `scorer(estimator, X, y)` (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)).
+     */
+    scoring?: string
+
+    /**
+      If the estimator supports incremental learning, this will be used to speed up fitting for different training set sizes.
+
+      @defaultValue `false`
+     */
+    exploit_incremental_learning?: boolean
+
+    /**
+      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Number of predispatched jobs for parallel execution (default is all). The option can reduce the allocated memory. The str can be an expression like ‘2\*n\_jobs’.
+
+      @defaultValue `'all'`
+     */
+    pre_dispatch?: number | string
+
+    /**
+      Controls the verbosity: the higher, the more messages.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Whether to shuffle training data before taking prefixes of it based on\`train\_sizes\`.
+
+      @defaultValue `false`
+     */
+    shuffle?: boolean
+
+    /**
+      Used when `shuffle` is `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised.
+     */
+    error_score?: 'raise'
+
+    /**
+      Parameters to pass to the fit method of the estimator.
+     */
+    fit_params?: any
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Whether or not to negate the scores obtained through [`learning\_curve`](sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve "sklearn.model_selection.learning_curve"). This is particularly useful when using the error denoted by `neg\_\*` in `scikit-learn`.
+
+      @defaultValue `false`
+     */
+    negate_score?: boolean
+
+    /**
+      The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic `"Score"` name will be used.
+     */
+    score_name?: string
+
+    /**
+      The type of score to plot. Can be one of `"test"`, `"train"`, or `"both"`.
+
+      @defaultValue `'test'`
+     */
+    score_type?: 'test' | 'train' | 'both'
+
+    /**
+      Whether or not to use a logarithmic scale for the x-axis.
+
+      @defaultValue `false`
+     */
+    log_scale?: boolean
+
+    /**
+      The style used to display the score standard deviation around the mean score. If `undefined`, no representation of the standard deviation is displayed.
+
+      @defaultValue `'fill_between'`
+     */
+    std_display_style?: 'errorbar' | 'fill_between'
+
+    /**
+      Additional keyword arguments passed to the `plt.plot` used to draw the mean score.
+     */
+    line_kw?: any
+
+    /**
+      Additional keyword arguments passed to the `plt.fill\_between` used to draw the score standard deviation.
+     */
+    fill_between_kw?: any
+
+    /**
+      Additional keyword arguments passed to the `plt.errorbar` used to draw mean score and standard deviation score.
+     */
+    errorbar_kw?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LearningCurveDisplay instance has already been disposed'
@@ -175,7 +329,60 @@ pms_LearningCurveDisplay_from_estimator = {k: v for k, v in pms_LearningCurveDis
   /**
     Plot visualization.
    */
-  async plot(opts: LearningCurveDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Whether or not to negate the scores obtained through [`learning\_curve`](sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve "sklearn.model_selection.learning_curve"). This is particularly useful when using the error denoted by `neg\_\*` in `scikit-learn`.
+
+      @defaultValue `false`
+     */
+    negate_score?: boolean
+
+    /**
+      The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic name “Score” will be used.
+     */
+    score_name?: string
+
+    /**
+      The type of score to plot. Can be one of `"test"`, `"train"`, or `"both"`.
+
+      @defaultValue `'test'`
+     */
+    score_type?: 'test' | 'train' | 'both'
+
+    /**
+      Whether or not to use a logarithmic scale for the x-axis.
+
+      @defaultValue `false`
+     */
+    log_scale?: boolean
+
+    /**
+      The style used to display the score standard deviation around the mean score. If `undefined`, no standard deviation representation is displayed.
+
+      @defaultValue `'fill_between'`
+     */
+    std_display_style?: 'errorbar' | 'fill_between'
+
+    /**
+      Additional keyword arguments passed to the `plt.plot` used to draw the mean score.
+     */
+    line_kw?: any
+
+    /**
+      Additional keyword arguments passed to the `plt.fill\_between` used to draw the score standard deviation.
+     */
+    fill_between_kw?: any
+
+    /**
+      Additional keyword arguments passed to the `plt.errorbar` used to draw mean score and standard deviation score.
+     */
+    errorbar_kw?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LearningCurveDisplay instance has already been disposed'
@@ -344,219 +551,4 @@ pms_LearningCurveDisplay_plot = {k: v for k, v in pms_LearningCurveDisplay_plot.
         ._py`attr_LearningCurveDisplay_fill_between_.tolist() if hasattr(attr_LearningCurveDisplay_fill_between_, 'tolist') else attr_LearningCurveDisplay_fill_between_`
     })()
   }
-}
-
-export interface LearningCurveDisplayOptions {
-  /**
-    Numbers of training examples that has been used to generate the learning curve.
-   */
-  train_sizes?: NDArray
-
-  /**
-    Scores on training sets.
-   */
-  train_scores?: NDArray[]
-
-  /**
-    Scores on test set.
-   */
-  test_scores?: NDArray[]
-
-  /**
-    The name of the score used in `learning\_curve`. It will be used to decorate the y-axis. If `undefined`, the generic name `"Score"` will be used.
-   */
-  score_name?: string
-}
-
-export interface LearningCurveDisplayFromEstimatorOptions {
-  /**
-    An object of that type which is cloned for each validation.
-   */
-  estimator?: any
-
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target relative to X for classification or regression; `undefined` for unsupervised learning.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-   */
-  groups?: ArrayLike
-
-  /**
-    Relative or absolute numbers of training examples that will be used to generate the learning curve. If the dtype is float, it is regarded as a fraction of the maximum size of the training set (that is determined by the selected validation method), i.e. it has to be within (0, 1\]. Otherwise it is interpreted as absolute sizes of the training sets. Note that for classification the number of samples usually have to be big enough to contain at least one sample from each class.
-   */
-  train_sizes?: ArrayLike
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    A string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a scorer callable object / function with signature `scorer(estimator, X, y)` (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)).
-   */
-  scoring?: string
-
-  /**
-    If the estimator supports incremental learning, this will be used to speed up fitting for different training set sizes.
-
-    @defaultValue `false`
-   */
-  exploit_incremental_learning?: boolean
-
-  /**
-    Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Number of predispatched jobs for parallel execution (default is all). The option can reduce the allocated memory. The str can be an expression like ‘2\*n\_jobs’.
-
-    @defaultValue `'all'`
-   */
-  pre_dispatch?: number | string
-
-  /**
-    Controls the verbosity: the higher, the more messages.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Whether to shuffle training data before taking prefixes of it based on\`train\_sizes\`.
-
-    @defaultValue `false`
-   */
-  shuffle?: boolean
-
-  /**
-    Used when `shuffle` is `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised.
-   */
-  error_score?: 'raise'
-
-  /**
-    Parameters to pass to the fit method of the estimator.
-   */
-  fit_params?: any
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Whether or not to negate the scores obtained through [`learning\_curve`](sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve "sklearn.model_selection.learning_curve"). This is particularly useful when using the error denoted by `neg\_\*` in `scikit-learn`.
-
-    @defaultValue `false`
-   */
-  negate_score?: boolean
-
-  /**
-    The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic `"Score"` name will be used.
-   */
-  score_name?: string
-
-  /**
-    The type of score to plot. Can be one of `"test"`, `"train"`, or `"both"`.
-
-    @defaultValue `'test'`
-   */
-  score_type?: 'test' | 'train' | 'both'
-
-  /**
-    Whether or not to use a logarithmic scale for the x-axis.
-
-    @defaultValue `false`
-   */
-  log_scale?: boolean
-
-  /**
-    The style used to display the score standard deviation around the mean score. If `undefined`, no representation of the standard deviation is displayed.
-
-    @defaultValue `'fill_between'`
-   */
-  std_display_style?: 'errorbar' | 'fill_between'
-
-  /**
-    Additional keyword arguments passed to the `plt.plot` used to draw the mean score.
-   */
-  line_kw?: any
-
-  /**
-    Additional keyword arguments passed to the `plt.fill\_between` used to draw the score standard deviation.
-   */
-  fill_between_kw?: any
-
-  /**
-    Additional keyword arguments passed to the `plt.errorbar` used to draw mean score and standard deviation score.
-   */
-  errorbar_kw?: any
-}
-
-export interface LearningCurveDisplayPlotOptions {
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Whether or not to negate the scores obtained through [`learning\_curve`](sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve "sklearn.model_selection.learning_curve"). This is particularly useful when using the error denoted by `neg\_\*` in `scikit-learn`.
-
-    @defaultValue `false`
-   */
-  negate_score?: boolean
-
-  /**
-    The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic name “Score” will be used.
-   */
-  score_name?: string
-
-  /**
-    The type of score to plot. Can be one of `"test"`, `"train"`, or `"both"`.
-
-    @defaultValue `'test'`
-   */
-  score_type?: 'test' | 'train' | 'both'
-
-  /**
-    Whether or not to use a logarithmic scale for the x-axis.
-
-    @defaultValue `false`
-   */
-  log_scale?: boolean
-
-  /**
-    The style used to display the score standard deviation around the mean score. If `undefined`, no standard deviation representation is displayed.
-
-    @defaultValue `'fill_between'`
-   */
-  std_display_style?: 'errorbar' | 'fill_between'
-
-  /**
-    Additional keyword arguments passed to the `plt.plot` used to draw the mean score.
-   */
-  line_kw?: any
-
-  /**
-    Additional keyword arguments passed to the `plt.fill\_between` used to draw the score standard deviation.
-   */
-  fill_between_kw?: any
-
-  /**
-    Additional keyword arguments passed to the `plt.errorbar` used to draw mean score and standard deviation score.
-   */
-  errorbar_kw?: any
 }

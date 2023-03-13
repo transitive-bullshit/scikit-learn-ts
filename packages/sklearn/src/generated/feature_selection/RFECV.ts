@@ -22,7 +22,59 @@ export class RFECV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RFECVOptions) {
+  constructor(opts?: {
+    /**
+      A supervised learning estimator with a `fit` method that provides information about feature importance either through a `coef\_` attribute or through a `feature\_importances\_` attribute.
+     */
+    estimator?: any
+
+    /**
+      If greater than or equal to 1, then `step` corresponds to the (integer) number of features to remove at each iteration. If within (0.0, 1.0), then `step` corresponds to the percentage (rounded down) of features to remove at each iteration. Note that the last iteration may remove fewer than `step` features in order to reach `min\_features\_to\_select`.
+
+      @defaultValue `1`
+     */
+    step?: number
+
+    /**
+      The minimum number of features to be selected. This number of features will always be scored, even if the difference between the original feature count and `min\_features\_to\_select` isn’t divisible by `step`.
+
+      @defaultValue `1`
+     */
+    min_features_to_select?: number
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
+     */
+    scoring?: string
+
+    /**
+      Controls verbosity of output.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Number of cores to run in parallel while fitting across folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      If ‘auto’, uses the feature importance either through a `coef\_` or `feature\_importances\_` attributes of estimator.
+
+      Also accepts a string that specifies an attribute name/path for extracting feature importance. For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") with its last step named `clf`.
+
+      If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
+
+      @defaultValue `'auto'`
+     */
+    importance_getter?: string
+  }) {
     this.id = `RFECV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -102,7 +154,12 @@ ctor_RFECV = {k: v for k, v in ctor_RFECV.items() if v is not None}`
   /**
     Compute the decision function of `X`.
    */
-  async decision_function(opts: RFECVDecisionFunctionOptions): Promise<any> {
+  async decision_function(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: any[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -130,7 +187,22 @@ pms_RFECV_decision_function = {k: v for k, v in pms_RFECV_decision_function.item
   /**
     Fit the RFE model and automatically tune the number of selected features.
    */
-  async fit(opts: RFECVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the total number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (integers for classification, real numbers for regression).
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
+     */
+    groups?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -164,7 +236,22 @@ pms_RFECV_fit = {k: v for k, v in pms_RFECV_fit.items() if v is not None}`
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: RFECVFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -196,9 +283,12 @@ pms_RFECV_fit_transform = {k: v for k, v in pms_RFECV_fit_transform.items() if v
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: RFECVGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -226,7 +316,14 @@ pms_RFECV_get_feature_names_out = {k: v for k, v in pms_RFECV_get_feature_names_
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(opts: RFECVGetSupportOptions): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -254,7 +351,12 @@ pms_RFECV_get_support = {k: v for k, v in pms_RFECV_get_support.items() if v is 
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(opts: RFECVInverseTransformOptions): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -282,7 +384,12 @@ pms_RFECV_inverse_transform = {k: v for k, v in pms_RFECV_inverse_transform.item
   /**
     Reduce X to the selected features and predict using the estimator.
    */
-  async predict(opts: RFECVPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -310,7 +417,12 @@ pms_RFECV_predict = {k: v for k, v in pms_RFECV_predict.items() if v is not None
   /**
     Predict class log-probabilities for X.
    */
-  async predict_log_proba(opts: RFECVPredictLogProbaOptions): Promise<any[]> {
+  async predict_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -338,7 +450,12 @@ pms_RFECV_predict_log_proba = {k: v for k, v in pms_RFECV_predict_log_proba.item
   /**
     Predict class probabilities for X.
    */
-  async predict_proba(opts: RFECVPredictProbaOptions): Promise<any[]> {
+  async predict_proba(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: any[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -366,7 +483,22 @@ pms_RFECV_predict_proba = {k: v for k, v in pms_RFECV_predict_proba.items() if v
   /**
     Reduce X to the selected features and return the score of the estimator.
    */
-  async score(opts: RFECVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+
+    /**
+      The target values.
+     */
+    y?: any
+
+    /**
+      Parameters to pass to the `score` method of the underlying estimator.
+     */
+    fit_params?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -400,7 +532,12 @@ pms_RFECV_score = {k: v for k, v in pms_RFECV_score.items() if v is not None}`
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: RFECVSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -428,7 +565,12 @@ pms_RFECV_set_output = {k: v for k, v in pms_RFECV_set_output.items() if v is no
   /**
     Reduce X to the selected features.
    */
-  async transform(opts: RFECVTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFECV instance has already been disposed')
     }
@@ -613,174 +755,4 @@ pms_RFECV_transform = {k: v for k, v in pms_RFECV_transform.items() if v is not 
         ._py`attr_RFECV_support_.tolist() if hasattr(attr_RFECV_support_, 'tolist') else attr_RFECV_support_`
     })()
   }
-}
-
-export interface RFECVOptions {
-  /**
-    A supervised learning estimator with a `fit` method that provides information about feature importance either through a `coef\_` attribute or through a `feature\_importances\_` attribute.
-   */
-  estimator?: any
-
-  /**
-    If greater than or equal to 1, then `step` corresponds to the (integer) number of features to remove at each iteration. If within (0.0, 1.0), then `step` corresponds to the percentage (rounded down) of features to remove at each iteration. Note that the last iteration may remove fewer than `step` features in order to reach `min\_features\_to\_select`.
-
-    @defaultValue `1`
-   */
-  step?: number
-
-  /**
-    The minimum number of features to be selected. This number of features will always be scored, even if the difference between the original feature count and `min\_features\_to\_select` isn’t divisible by `step`.
-
-    @defaultValue `1`
-   */
-  min_features_to_select?: number
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
-   */
-  scoring?: string
-
-  /**
-    Controls verbosity of output.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Number of cores to run in parallel while fitting across folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    If ‘auto’, uses the feature importance either through a `coef\_` or `feature\_importances\_` attributes of estimator.
-
-    Also accepts a string that specifies an attribute name/path for extracting feature importance. For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") with its last step named `clf`.
-
-    If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
-
-    @defaultValue `'auto'`
-   */
-  importance_getter?: string
-}
-
-export interface RFECVDecisionFunctionOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: any[]
-}
-
-export interface RFECVFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the total number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (integers for classification, real numbers for regression).
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-   */
-  groups?: ArrayLike
-}
-
-export interface RFECVFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface RFECVGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface RFECVGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface RFECVInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface RFECVPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface RFECVPredictLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface RFECVPredictProbaOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: any[]
-}
-
-export interface RFECVScoreOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-
-  /**
-    The target values.
-   */
-  y?: any
-
-  /**
-    Parameters to pass to the `score` method of the underlying estimator.
-   */
-  fit_params?: any
-}
-
-export interface RFECVSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface RFECVTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

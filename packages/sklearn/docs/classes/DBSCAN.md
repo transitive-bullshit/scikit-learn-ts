@@ -15,20 +15,28 @@ Read more in the [User Guide](../clustering.html#dbscan).
 ### Signature
 
 ```ts
-new DBSCAN(opts?: DBSCANOptions): DBSCAN;
+new DBSCAN(opts?: object): DBSCAN;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`DBSCANOptions`](../interfaces/DBSCANOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | The algorithm to be used by the NearestNeighbors module to compute pointwise distances and find nearest neighbors. See NearestNeighbors module documentation for details.  `Default Value`  `'auto'` |
+| `opts.eps?` | `number` | The maximum distance between two samples for one to be considered as in the neighborhood of the other. This is not a maximum bound on the distances of points within a cluster. This is the most important DBSCAN parameter to choose appropriately for your data set and distance function.  `Default Value`  `0.5` |
+| `opts.leaf_size?` | `number` | Leaf size passed to BallTree or cKDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.  `Default Value`  `30` |
+| `opts.metric?` | `any` | The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors for DBSCAN.  `Default Value`  `'euclidean'` |
+| `opts.metric_params?` | `any` | Additional keyword arguments for the metric function. |
+| `opts.min_samples?` | `number` | The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.  `Default Value`  `5` |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.p?` | `number` | The power of the Minkowski metric to be used to calculate distance between points. If `undefined`, then `p=2` (equivalent to the Euclidean distance). |
 
 ### Returns
 
 [`DBSCAN`](DBSCAN.md)
 
-Defined in:  [generated/cluster/DBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L25)
+Defined in:  [generated/cluster/DBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L25)
 
 ## Properties
 
@@ -36,31 +44,31 @@ Defined in:  [generated/cluster/DBSCAN.ts:25](https://github.com/transitive-bull
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/DBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L23)
+Defined in:  [generated/cluster/DBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/DBSCAN.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L22)
+Defined in:  [generated/cluster/DBSCAN.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/DBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L21)
+Defined in:  [generated/cluster/DBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/DBSCAN.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L18)
+Defined in:  [generated/cluster/DBSCAN.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/DBSCAN.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L19)
+Defined in:  [generated/cluster/DBSCAN.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L19)
 
 ## Accessors
 
@@ -78,9 +86,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L196)
+Defined in:  [generated/cluster/DBSCAN.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L276)
 
-Defined in:  [generated/cluster/DBSCAN.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L196)
+Defined in:  [generated/cluster/DBSCAN.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L276)
 
 ### core\_sample\_indices\_
 
@@ -96,9 +104,9 @@ core_sample_indices_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L171)
+Defined in:  [generated/cluster/DBSCAN.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L251)
 
-Defined in:  [generated/cluster/DBSCAN.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L171)
+Defined in:  [generated/cluster/DBSCAN.ts:251](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L251)
 
 ### feature\_names\_in\_
 
@@ -114,9 +122,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L264)
+Defined in:  [generated/cluster/DBSCAN.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L344)
 
-Defined in:  [generated/cluster/DBSCAN.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L264)
+Defined in:  [generated/cluster/DBSCAN.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L344)
 
 ### labels\_
 
@@ -132,9 +140,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L219)
+Defined in:  [generated/cluster/DBSCAN.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L299)
 
-Defined in:  [generated/cluster/DBSCAN.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L219)
+Defined in:  [generated/cluster/DBSCAN.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L299)
 
 ### n\_features\_in\_
 
@@ -150,9 +158,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L241)
+Defined in:  [generated/cluster/DBSCAN.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L321)
 
-Defined in:  [generated/cluster/DBSCAN.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L241)
+Defined in:  [generated/cluster/DBSCAN.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L321)
 
 ### py
 
@@ -166,7 +174,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/DBSCAN.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L30)
+Defined in:  [generated/cluster/DBSCAN.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L80)
 
 #### Signature
 
@@ -184,9 +192,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/DBSCAN.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L34)
+Defined in:  [generated/cluster/DBSCAN.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L84)
 
-Defined in:  [generated/cluster/DBSCAN.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L30) [generated/cluster/DBSCAN.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L34)
+Defined in:  [generated/cluster/DBSCAN.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L80) [generated/cluster/DBSCAN.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L84)
 
 ## Methods
 
@@ -206,7 +214,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L90)
+Defined in:  [generated/cluster/DBSCAN.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L140)
 
 ### fit()
 
@@ -215,20 +223,23 @@ Perform DBSCAN clustering from features, or distance matrix.
 #### Signature
 
 ```ts
-fit(opts: DBSCANFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DBSCANFitOptions`](../interfaces/DBSCANFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Training instances to cluster, or distances between instances if `metric='precomputed'`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Weight of each sample, such that a sample with a weight of at least `min\_samples` is by itself a core sample; a sample with a negative weight may inhibit its eps-neighbor from being core. Note that weights are absolute, and default to 1. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L107)
+Defined in:  [generated/cluster/DBSCAN.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L157)
 
 ### fit\_predict()
 
@@ -237,20 +248,23 @@ Compute clusters from a data or distance matrix and predict labels.
 #### Signature
 
 ```ts
-fit_predict(opts: DBSCANFitPredictOptions): Promise<ArrayLike>;
+fit_predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DBSCANFitPredictOptions`](../interfaces/DBSCANFitPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Training instances to cluster, or distances between instances if `metric='precomputed'`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Weight of each sample, such that a sample with a weight of at least `min\_samples` is by itself a core sample; a sample with a negative weight may inhibit its eps-neighbor from being core. Note that weights are absolute, and default to 1. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L139)
+Defined in:  [generated/cluster/DBSCAN.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L204)
 
 ### init()
 
@@ -274,4 +288,4 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/DBSCAN.ts#L43)
+Defined in:  [generated/cluster/DBSCAN.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/DBSCAN.ts#L93)

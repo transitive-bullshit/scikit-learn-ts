@@ -15,20 +15,24 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new MinCovDet(opts?: MinCovDetOptions): MinCovDet;
+new MinCovDet(opts?: object): MinCovDet;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `MinCovDetOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.assume_centered?` | `boolean` | If `true`, the support of the robust location and the covariance estimates is computed, and a covariance estimate is recomputed from it, without centering the data. Useful to work with data whose mean is significantly equal to zero but is not exactly zero. If `false`, the robust location and covariance are directly computed with the FastMCD algorithm without additional treatment.  `Default Value`  `false` |
+| `opts.random_state?` | `number` | Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See Glossary. |
+| `opts.store_precision?` | `boolean` | Specify if the estimated precision is stored.  `Default Value`  `true` |
+| `opts.support_fraction?` | `number` | The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_sample + n\_features + 1) / 2`. The parameter must be in the range (0, 1\]. |
 
 ### Returns
 
 [`MinCovDet`](MinCovDet.md)
 
-Defined in:  [generated/covariance/MinCovDet.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L25)
+Defined in:  [generated/covariance/MinCovDet.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L25)
 
 ## Properties
 
@@ -36,31 +40,31 @@ Defined in:  [generated/covariance/MinCovDet.ts:25](https://github.com/transitiv
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/MinCovDet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L23)
+Defined in:  [generated/covariance/MinCovDet.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/MinCovDet.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L22)
+Defined in:  [generated/covariance/MinCovDet.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/MinCovDet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L21)
+Defined in:  [generated/covariance/MinCovDet.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/MinCovDet.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L18)
+Defined in:  [generated/covariance/MinCovDet.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/MinCovDet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L19)
+Defined in:  [generated/covariance/MinCovDet.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L19)
 
 ## Accessors
 
@@ -78,7 +82,7 @@ covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/MinCovDet.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L413)
+Defined in: [generated/covariance/MinCovDet.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L499)
 
 ### dist\_
 
@@ -94,7 +98,7 @@ dist_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L482)
+Defined in: [generated/covariance/MinCovDet.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L568)
 
 ### feature\_names\_in\_
 
@@ -110,7 +114,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L530)
+Defined in: [generated/covariance/MinCovDet.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L616)
 
 ### location\_
 
@@ -126,7 +130,7 @@ location_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L390)
+Defined in: [generated/covariance/MinCovDet.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L476)
 
 ### n\_features\_in\_
 
@@ -142,7 +146,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L505)
+Defined in: [generated/covariance/MinCovDet.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L591)
 
 ### precision\_
 
@@ -158,7 +162,7 @@ precision_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/MinCovDet.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L436)
+Defined in: [generated/covariance/MinCovDet.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L522)
 
 ### py
 
@@ -172,7 +176,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/MinCovDet.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L30)
+Defined in:  [generated/covariance/MinCovDet.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L54)
 
 #### Signature
 
@@ -190,7 +194,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/covariance/MinCovDet.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L34)
+Defined in: [generated/covariance/MinCovDet.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L58)
 
 ### raw\_covariance\_
 
@@ -206,7 +210,7 @@ raw_covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/MinCovDet.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L340)
+Defined in: [generated/covariance/MinCovDet.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L426)
 
 ### raw\_location\_
 
@@ -222,7 +226,7 @@ raw_location_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L315)
+Defined in: [generated/covariance/MinCovDet.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L401)
 
 ### raw\_support\_
 
@@ -238,7 +242,7 @@ raw_support_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L365)
+Defined in: [generated/covariance/MinCovDet.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L451)
 
 ### support\_
 
@@ -254,7 +258,7 @@ support_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/MinCovDet.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L459)
+Defined in: [generated/covariance/MinCovDet.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L545)
 
 ## Methods
 
@@ -267,20 +271,21 @@ Correction using the empirical correction factor suggested by Rousseeuw and Van 
 #### Signature
 
 ```ts
-correct_covariance(opts: MinCovDetCorrectCovarianceOptions): Promise<ArrayLike[]>;
+correct_covariance(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MinCovDetCorrectCovarianceOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.data?` | `ArrayLike`[] | The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L105)
+Defined in:  [generated/covariance/MinCovDet.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L129)
 
 ### dispose()
 
@@ -298,7 +303,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L86)
+Defined in:  [generated/covariance/MinCovDet.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L110)
 
 ### error\_norm()
 
@@ -307,20 +312,24 @@ Compute the Mean Squared Error between two covariance estimators.
 #### Signature
 
 ```ts
-error_norm(opts: MinCovDetErrorNormOptions): Promise<number>;
+error_norm(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MinCovDetErrorNormOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.comp_cov?` | `ArrayLike`[] | The covariance to compare with. |
+| `opts.norm?` | `"frobenius"` \| `"spectral"` | The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.  `Default Value`  `'frobenius'` |
+| `opts.scaling?` | `boolean` | If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.  `Default Value`  `true` |
+| `opts.squared?` | `boolean` | Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L135)
+Defined in:  [generated/covariance/MinCovDet.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L162)
 
 ### fit()
 
@@ -329,20 +338,22 @@ Fit a Minimum Covariance Determinant with the FastMCD algorithm.
 #### Signature
 
 ```ts
-fit(opts: MinCovDetFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MinCovDetFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L167)
+Defined in:  [generated/covariance/MinCovDet.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L220)
 
 ### get\_precision()
 
@@ -351,20 +362,21 @@ Getter for the precision matrix.
 #### Signature
 
 ```ts
-get_precision(opts: MinCovDetGetPrecisionOptions): Promise<any>;
+get_precision(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MinCovDetGetPrecisionOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.precision_?` | `ArrayLike`[] | The precision matrix associated to the current covariance object. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L195)
+Defined in:  [generated/covariance/MinCovDet.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L258)
 
 ### init()
 
@@ -388,7 +400,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L43)
+Defined in:  [generated/covariance/MinCovDet.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L67)
 
 ### mahalanobis()
 
@@ -397,20 +409,21 @@ Compute the squared Mahalanobis distances of given observations.
 #### Signature
 
 ```ts
-mahalanobis(opts: MinCovDetMahalanobisOptions): Promise<ArrayLike>;
+mahalanobis(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MinCovDetMahalanobisOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L223)
+Defined in:  [generated/covariance/MinCovDet.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L291)
 
 ### reweight\_covariance()
 
@@ -421,20 +434,21 @@ Re-weight observations using Rousseeuw’s method (equivalent to deleting outlyi
 #### Signature
 
 ```ts
-reweight_covariance(opts: MinCovDetReweightCovarianceOptions): Promise<ArrayLike>;
+reweight_covariance(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MinCovDetReweightCovarianceOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.data?` | `ArrayLike`[] | The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L253)
+Defined in:  [generated/covariance/MinCovDet.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L326)
 
 ### score()
 
@@ -445,17 +459,19 @@ The Gaussian model is defined by its mean and covariance matrix which are repres
 #### Signature
 
 ```ts
-score(opts: MinCovDetScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MinCovDetScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X_test?` | `ArrayLike`[] | Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering). |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/MinCovDet.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/MinCovDet.ts#L285)
+Defined in:  [generated/covariance/MinCovDet.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/MinCovDet.ts#L361)

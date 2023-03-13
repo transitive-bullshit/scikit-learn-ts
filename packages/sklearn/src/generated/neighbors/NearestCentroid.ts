@@ -22,7 +22,21 @@ export class NearestCentroid {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: NearestCentroidOptions) {
+  constructor(opts?: {
+    /**
+      Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values. Note that “wminkowski”, “seuclidean” and “mahalanobis” are not supported.
+
+      The centroids for the samples corresponding to each class is the point from which the sum of the distances (according to the metric) of all samples that belong to that particular class are minimized. If the `"manhattan"` metric is provided, this centroid is the median and for all other metrics, the centroid is now set to be the mean.
+
+      @defaultValue `'euclidean'`
+     */
+    metric?: string
+
+    /**
+      Threshold for shrinking centroids to remove features.
+     */
+    shrink_threshold?: number
+  }) {
     this.id = `NearestCentroid${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +111,17 @@ ctor_NearestCentroid = {k: v for k, v in ctor_NearestCentroid.items() if v is no
   /**
     Fit the NearestCentroid model according to the given training data.
    */
-  async fit(opts: NearestCentroidFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. Note that centroid shrinking cannot be used with sparse matrices.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This NearestCentroid instance has already been disposed')
     }
@@ -129,7 +153,12 @@ pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v
 
     The predicted class `C` for each sample in `X` is returned.
    */
-  async predict(opts: NearestCentroidPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This NearestCentroid instance has already been disposed')
     }
@@ -159,7 +188,22 @@ pms_NearestCentroid_predict = {k: v for k, v in pms_NearestCentroid_predict.item
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: NearestCentroidScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This NearestCentroid instance has already been disposed')
     }
@@ -287,56 +331,4 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
         ._py`attr_NearestCentroid_feature_names_in_.tolist() if hasattr(attr_NearestCentroid_feature_names_in_, 'tolist') else attr_NearestCentroid_feature_names_in_`
     })()
   }
-}
-
-export interface NearestCentroidOptions {
-  /**
-    Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values. Note that “wminkowski”, “seuclidean” and “mahalanobis” are not supported.
-
-    The centroids for the samples corresponding to each class is the point from which the sum of the distances (according to the metric) of all samples that belong to that particular class are minimized. If the `"manhattan"` metric is provided, this centroid is the median and for all other metrics, the centroid is now set to be the mean.
-
-    @defaultValue `'euclidean'`
-   */
-  metric?: string
-
-  /**
-    Threshold for shrinking centroids to remove features.
-   */
-  shrink_threshold?: number
-}
-
-export interface NearestCentroidFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. Note that centroid shrinking cannot be used with sparse matrices.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-}
-
-export interface NearestCentroidPredictOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface NearestCentroidScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

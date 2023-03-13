@@ -15,20 +15,23 @@ Methods
 ### Signature
 
 ```ts
-new SelectorMixin(opts?: SelectorMixinOptions): SelectorMixin;
+new SelectorMixin(opts?: object): SelectorMixin;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `SelectorMixinOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 ### Returns
 
 [`SelectorMixin`](SelectorMixin.md)
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L25)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L25)
 
 ## Properties
 
@@ -36,31 +39,31 @@ Defined in:  [generated/feature\_selection/SelectorMixin.ts:25](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L23)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L22)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L21)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L18)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L19)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L19)
 
 ## Accessors
 
@@ -78,7 +81,7 @@ X_new(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/feature\_selection/SelectorMixin.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L289)
+Defined in: [generated/feature\_selection/SelectorMixin.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L342)
 
 ### py
 
@@ -92,7 +95,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L30)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L45)
 
 #### Signature
 
@@ -110,7 +113,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_selection/SelectorMixin.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L34)
+Defined in: [generated/feature\_selection/SelectorMixin.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L49)
 
 ## Methods
 
@@ -130,7 +133,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L87)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L102)
 
 ### fit\_transform()
 
@@ -141,20 +144,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: SelectorMixinFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SelectorMixinFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L106)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L121)
 
 ### get\_feature\_names\_out()
 
@@ -163,20 +169,21 @@ Mask feature names according to selected features.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: SelectorMixinGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SelectorMixinGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L138)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L168)
 
 ### get\_support()
 
@@ -185,20 +192,21 @@ Get a mask, or integer index, of the features selected.
 #### Signature
 
 ```ts
-get_support(opts: SelectorMixinGetSupportOptions): Promise<any>;
+get_support(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SelectorMixinGetSupportOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.indices?` | `boolean` | If `true`, the return value will be an array of integers, rather than a boolean mask.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L171)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L204)
 
 ### init()
 
@@ -222,7 +230,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L43)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L58)
 
 ### inverse\_transform()
 
@@ -231,20 +239,21 @@ Reverse the transformation operation.
 #### Signature
 
 ```ts
-inverse_transform(opts: SelectorMixinInverseTransformOptions): Promise<any>;
+inverse_transform(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SelectorMixinInverseTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The input samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L199)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L239)
 
 ### set\_output()
 
@@ -255,20 +264,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: SelectorMixinSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SelectorMixinSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L233)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L276)
 
 ### transform()
 
@@ -277,17 +287,18 @@ Reduce X to the selected features.
 #### Signature
 
 ```ts
-transform(opts: SelectorMixinTransformOptions): Promise<any>;
+transform(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SelectorMixinTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The input samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectorMixin.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L261)
+Defined in:  [generated/feature\_selection/SelectorMixin.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectorMixin.ts#L309)

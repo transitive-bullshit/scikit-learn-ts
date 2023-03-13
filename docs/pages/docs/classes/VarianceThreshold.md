@@ -15,20 +15,21 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new VarianceThreshold(opts?: VarianceThresholdOptions): VarianceThreshold;
+new VarianceThreshold(opts?: object): VarianceThreshold;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `VarianceThresholdOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.threshold?` | `number` | Features with a training-set variance lower than this threshold will be removed. The default is to keep all features with non-zero variance, i.e. remove the features that have the same value in all samples.  `Default Value`  `0` |
 
 ### Returns
 
 [`VarianceThreshold`](VarianceThreshold.md)
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L25)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L25)
 
 ## Properties
 
@@ -36,31 +37,31 @@ Defined in:  [generated/feature\_selection/VarianceThreshold.ts:25](https://gith
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L23)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L22)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L21)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L18)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L19)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L19)
 
 ## Accessors
 
@@ -78,7 +79,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/VarianceThreshold.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L388)
+Defined in: [generated/feature\_selection/VarianceThreshold.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L441)
 
 ### n\_features\_in\_
 
@@ -94,7 +95,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_selection/VarianceThreshold.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L361)
+Defined in: [generated/feature\_selection/VarianceThreshold.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L414)
 
 ### py
 
@@ -108,7 +109,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L30)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:37](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L37)
 
 #### Signature
 
@@ -126,7 +127,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_selection/VarianceThreshold.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L34)
+Defined in: [generated/feature\_selection/VarianceThreshold.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L41)
 
 ### variances\_
 
@@ -142,7 +143,7 @@ variances_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/feature\_selection/VarianceThreshold.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L334)
+Defined in: [generated/feature\_selection/VarianceThreshold.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L387)
 
 ## Methods
 
@@ -162,7 +163,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L85)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L92)
 
 ### fit()
 
@@ -171,20 +172,22 @@ Learn empirical variances from X.
 #### Signature
 
 ```ts
-fit(opts: VarianceThresholdFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `VarianceThresholdFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Data from which to compute variances, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Ignored. This parameter exists only for compatibility with sklearn.pipeline.Pipeline. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L102)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L109)
 
 ### fit\_transform()
 
@@ -195,20 +198,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: VarianceThresholdFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `VarianceThresholdFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L134)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L151)
 
 ### get\_feature\_names\_out()
 
@@ -217,20 +223,21 @@ Mask feature names according to selected features.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: VarianceThresholdGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `VarianceThresholdGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L172)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L202)
 
 ### get\_support()
 
@@ -239,20 +246,21 @@ Get a mask, or integer index, of the features selected.
 #### Signature
 
 ```ts
-get_support(opts: VarianceThresholdGetSupportOptions): Promise<any>;
+get_support(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `VarianceThresholdGetSupportOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.indices?` | `boolean` | If `true`, the return value will be an array of integers, rather than a boolean mask.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L207)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L240)
 
 ### init()
 
@@ -276,7 +284,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L43)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L50)
 
 ### inverse\_transform()
 
@@ -285,20 +293,21 @@ Reverse the transformation operation.
 #### Signature
 
 ```ts
-inverse_transform(opts: VarianceThresholdInverseTransformOptions): Promise<any>;
+inverse_transform(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `VarianceThresholdInverseTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The input samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L237)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L277)
 
 ### set\_output()
 
@@ -309,20 +318,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: VarianceThresholdSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `VarianceThresholdSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L274)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L317)
 
 ### transform()
 
@@ -331,17 +341,18 @@ Reduce X to the selected features.
 #### Signature
 
 ```ts
-transform(opts: VarianceThresholdTransformOptions): Promise<any>;
+transform(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `VarianceThresholdTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The input samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/VarianceThreshold.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L304)
+Defined in:  [generated/feature\_selection/VarianceThreshold.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/VarianceThreshold.ts#L352)

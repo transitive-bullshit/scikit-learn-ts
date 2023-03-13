@@ -20,7 +20,78 @@ export class DecisionTreeRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DecisionTreeRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The function to measure the quality of a split. Supported criteria are “squared\_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman\_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute\_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in Poisson deviance to find splits.
+
+      @defaultValue `'squared_error'`
+     */
+    criterion?: 'squared_error' | 'friedman_mse' | 'absolute_error' | 'poisson'
+
+    /**
+      The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split and “random” to choose the best random split.
+
+      @defaultValue `'best'`
+     */
+    splitter?: 'best' | 'random'
+
+    /**
+      The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+     */
+    max_depth?: number
+
+    /**
+      The minimum number of samples required to split an internal node:
+
+      @defaultValue `2`
+     */
+    min_samples_split?: number
+
+    /**
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+
+      @defaultValue `1`
+     */
+    min_samples_leaf?: number
+
+    /**
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
+
+      @defaultValue `0`
+     */
+    min_weight_fraction_leaf?: number
+
+    /**
+      The number of features to consider when looking for the best split:
+     */
+    max_features?: number | 'auto' | 'sqrt' | 'log2'
+
+    /**
+      Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+
+    /**
+      Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+     */
+    max_leaf_nodes?: number
+
+    /**
+      A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
+
+      The weighted impurity decrease equation is the following:
+
+      @defaultValue `0`
+     */
+    min_impurity_decrease?: number
+
+    /**
+      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
+
+      @defaultValue `0`
+     */
+    ccp_alpha?: any
+  }) {
     this.id = `DecisionTreeRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -115,7 +186,19 @@ ctor_DecisionTreeRegressor = {k: v for k, v in ctor_DecisionTreeRegressor.items(
   /**
     Return the index of the leaf that each sample is predicted as.
    */
-  async apply(opts: DecisionTreeRegressorApplyOptions): Promise<ArrayLike> {
+  async apply(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -149,9 +232,22 @@ pms_DecisionTreeRegressor_apply = {k: v for k, v in pms_DecisionTreeRegressor_ap
 
     See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
    */
-  async cost_complexity_pruning_path(
-    opts: DecisionTreeRegressorCostComplexityPruningPathOptions
-  ): Promise<any> {
+  async cost_complexity_pruning_path(opts: {
+    /**
+      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values (class labels) as integers or strings.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -188,9 +284,19 @@ pms_DecisionTreeRegressor_cost_complexity_pruning_path = {k: v for k, v in pms_D
   /**
     Return the decision path in the tree.
    */
-  async decision_path(
-    opts: DecisionTreeRegressorDecisionPathOptions
-  ): Promise<SparseMatrix[]> {
+  async decision_path(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -225,7 +331,29 @@ pms_DecisionTreeRegressor_decision_path = {k: v for k, v in pms_DecisionTreeRegr
   /**
     Build a decision tree regressor from the training set (X, y).
    */
-  async fit(opts: DecisionTreeRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values (real numbers). Use `dtype=np.float64` and `order='C'` for maximum efficiency.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -263,7 +391,7 @@ pms_DecisionTreeRegressor_fit = {k: v for k, v in pms_DecisionTreeRegressor_fit.
 
     The depth of a tree is the maximum distance between the root and any leaf.
    */
-  async get_depth(opts: DecisionTreeRegressorGetDepthOptions): Promise<any> {
+  async get_depth(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -293,9 +421,7 @@ pms_DecisionTreeRegressor_get_depth = {k: v for k, v in pms_DecisionTreeRegresso
   /**
     Return the number of leaves of the decision tree.
    */
-  async get_n_leaves(
-    opts: DecisionTreeRegressorGetNLeavesOptions
-  ): Promise<any> {
+  async get_n_leaves(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -327,7 +453,19 @@ pms_DecisionTreeRegressor_get_n_leaves = {k: v for k, v in pms_DecisionTreeRegre
 
     For a classification model, the predicted class for each sample in X is returned. For a regression model, the predicted value based on X is returned.
    */
-  async predict(opts: DecisionTreeRegressorPredictOptions): Promise<ArrayLike> {
+  async predict(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -361,7 +499,22 @@ pms_DecisionTreeRegressor_predict = {k: v for k, v in pms_DecisionTreeRegressor_
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: DecisionTreeRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeRegressor instance has already been disposed'
@@ -526,181 +679,4 @@ pms_DecisionTreeRegressor_score = {k: v for k, v in pms_DecisionTreeRegressor_sc
         ._py`attr_DecisionTreeRegressor_tree_.tolist() if hasattr(attr_DecisionTreeRegressor_tree_, 'tolist') else attr_DecisionTreeRegressor_tree_`
     })()
   }
-}
-
-export interface DecisionTreeRegressorOptions {
-  /**
-    The function to measure the quality of a split. Supported criteria are “squared\_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman\_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute\_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in Poisson deviance to find splits.
-
-    @defaultValue `'squared_error'`
-   */
-  criterion?: 'squared_error' | 'friedman_mse' | 'absolute_error' | 'poisson'
-
-  /**
-    The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split and “random” to choose the best random split.
-
-    @defaultValue `'best'`
-   */
-  splitter?: 'best' | 'random'
-
-  /**
-    The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
-   */
-  max_depth?: number
-
-  /**
-    The minimum number of samples required to split an internal node:
-
-    @defaultValue `2`
-   */
-  min_samples_split?: number
-
-  /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
-
-    @defaultValue `1`
-   */
-  min_samples_leaf?: number
-
-  /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
-
-    @defaultValue `0`
-   */
-  min_weight_fraction_leaf?: number
-
-  /**
-    The number of features to consider when looking for the best split:
-   */
-  max_features?: number | 'auto' | 'sqrt' | 'log2'
-
-  /**
-    Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-
-  /**
-    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
-   */
-  max_leaf_nodes?: number
-
-  /**
-    A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
-
-    The weighted impurity decrease equation is the following:
-
-    @defaultValue `0`
-   */
-  min_impurity_decrease?: number
-
-  /**
-    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
-
-    @defaultValue `0`
-   */
-  ccp_alpha?: any
-}
-
-export interface DecisionTreeRegressorApplyOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeRegressorCostComplexityPruningPathOptions {
-  /**
-    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values (class labels) as integers or strings.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface DecisionTreeRegressorDecisionPathOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeRegressorFitOptions {
-  /**
-    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values (real numbers). Use `dtype=np.float64` and `order='C'` for maximum efficiency.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeRegressorGetDepthOptions {}
-
-export interface DecisionTreeRegressorGetNLeavesOptions {}
-
-export interface DecisionTreeRegressorPredictOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

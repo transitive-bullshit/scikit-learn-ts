@@ -13,20 +13,29 @@ Read more in the [User Guide](../clustering.html#k-means).
 ### Signature
 
 ```ts
-new KMeans(opts?: KMeansOptions): KMeans;
+new KMeans(opts?: object): KMeans;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`KMeansOptions`](../interfaces/KMeansOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"auto"` \| `"lloyd"` \| `"elkan"` \| `"full"` | K-means algorithm to use. The classical EM-style algorithm is `"lloyd"`. The `"elkan"` variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape `(n\_samples, n\_clusters)`.  `"auto"` and `"full"` are deprecated and they will be removed in Scikit-Learn 1.3. They are both aliases for `"lloyd"`.  `Default Value`  `'lloyd'` |
+| `opts.copy_x?` | `boolean` | When pre-computing distances it is more numerically accurate to center the data first. If copy\_x is `true` (default), then the original data is not modified. If `false`, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy\_x is `false`. If the original data is sparse, but not in CSR format, a copy will be made even if copy\_x is `false`.  `Default Value`  `true` |
+| `opts.init?` | [`ArrayLike`](../types/ArrayLike.md)[] \| `"k-means++"` \| `"random"` | Method for initialization:  ‘k-means++’ : selects initial cluster centroids using sampling based on an empirical probability distribution of the points’ contribution to the overall inertia. This technique speeds up convergence. The algorithm implemented is “greedy k-means++”. It differs from the vanilla k-means++ by making several trials at each sampling step and choosing the best centroid among them.  ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.  If an array is passed, it should be of shape (n\_clusters, n\_features) and gives the initial centers.  If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.  `Default Value`  `'k-means++'` |
+| `opts.max_iter?` | `number` | Maximum number of iterations of the k-means algorithm for a single run.  `Default Value`  `300` |
+| `opts.n_clusters?` | `number` | The number of clusters to form as well as the number of centroids to generate.  `Default Value`  `8` |
+| `opts.n_init?` | `number` \| `"auto"` | Number of times the k-means algorithm is run with different centroid seeds. The final results is the best output of `n\_init` consecutive runs in terms of inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).  When `n\_init='auto'`, the number of runs depends on the value of init: 10 if using `init='random'`, 1 if using `init='k-means++'`.  `Default Value`  `10` |
+| `opts.random_state?` | `number` | Determines random number generation for centroid initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.tol?` | `number` | Relative tolerance with regards to Frobenius norm of the difference in the cluster centers of two consecutive iterations to declare convergence.  `Default Value`  `0.0001` |
+| `opts.verbose?` | `number` | Verbosity mode.  `Default Value`  `0` |
 
 ### Returns
 
 [`KMeans`](KMeans.md)
 
-Defined in:  [generated/cluster/KMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L23)
+Defined in:  [generated/cluster/KMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L23)
 
 ## Properties
 
@@ -34,31 +43,31 @@ Defined in:  [generated/cluster/KMeans.ts:23](https://github.com/transitive-bull
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/KMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L21)
+Defined in:  [generated/cluster/KMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/KMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L20)
+Defined in:  [generated/cluster/KMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/KMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L19)
+Defined in:  [generated/cluster/KMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/KMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L16)
+Defined in:  [generated/cluster/KMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/KMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L17)
+Defined in:  [generated/cluster/KMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L17)
 
 ## Accessors
 
@@ -76,9 +85,9 @@ cluster_centers_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
+Defined in:  [generated/cluster/KMeans.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L517)
 
-Defined in:  [generated/cluster/KMeans.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L361)
+Defined in:  [generated/cluster/KMeans.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L517)
 
 ### feature\_names\_in\_
 
@@ -94,9 +103,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L476)
+Defined in:  [generated/cluster/KMeans.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L632)
 
-Defined in:  [generated/cluster/KMeans.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L476)
+Defined in:  [generated/cluster/KMeans.ts:632](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L632)
 
 ### inertia\_
 
@@ -112,9 +121,9 @@ inertia_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L408)
+Defined in:  [generated/cluster/KMeans.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L564)
 
-Defined in:  [generated/cluster/KMeans.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L408)
+Defined in:  [generated/cluster/KMeans.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L564)
 
 ### labels\_
 
@@ -130,9 +139,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L386)
+Defined in:  [generated/cluster/KMeans.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L542)
 
-Defined in:  [generated/cluster/KMeans.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L386)
+Defined in:  [generated/cluster/KMeans.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L542)
 
 ### n\_features\_in\_
 
@@ -148,9 +157,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L453)
+Defined in:  [generated/cluster/KMeans.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L609)
 
-Defined in:  [generated/cluster/KMeans.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L453)
+Defined in:  [generated/cluster/KMeans.ts:609](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L609)
 
 ### n\_iter\_
 
@@ -166,9 +175,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L431)
+Defined in:  [generated/cluster/KMeans.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L587)
 
-Defined in:  [generated/cluster/KMeans.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L431)
+Defined in:  [generated/cluster/KMeans.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L587)
 
 ### py
 
@@ -182,7 +191,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/KMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L28)
+Defined in:  [generated/cluster/KMeans.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L101)
 
 #### Signature
 
@@ -200,9 +209,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/KMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L32)
+Defined in:  [generated/cluster/KMeans.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L105)
 
-Defined in:  [generated/cluster/KMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L28) [generated/cluster/KMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L32)
+Defined in:  [generated/cluster/KMeans.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L101) [generated/cluster/KMeans.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L105)
 
 ## Methods
 
@@ -222,7 +231,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/KMeans.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L88)
+Defined in:  [generated/cluster/KMeans.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L161)
 
 ### fit()
 
@@ -231,20 +240,23 @@ Compute k-means clustering.
 #### Signature
 
 ```ts
-fit(opts: KMeansFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansFitOptions`](../interfaces/KMeansFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/KMeans.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L105)
+Defined in:  [generated/cluster/KMeans.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L178)
 
 ### fit\_predict()
 
@@ -255,20 +267,23 @@ Convenience method; equivalent to calling fit(X) followed by predict(X).
 #### Signature
 
 ```ts
-fit_predict(opts: KMeansFitPredictOptions): Promise<ArrayLike>;
+fit_predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansFitPredictOptions`](../interfaces/KMeansFitPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to transform. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L139)
+Defined in:  [generated/cluster/KMeans.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L227)
 
 ### fit\_transform()
 
@@ -279,20 +294,23 @@ Equivalent to fit(X).transform(X), but more efficiently implemented.
 #### Signature
 
 ```ts
-fit_transform(opts: KMeansFitTransformOptions): Promise<ArrayLike[]>;
+fit_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansFitTransformOptions`](../interfaces/KMeansFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to transform. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/KMeans.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L173)
+Defined in:  [generated/cluster/KMeans.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L276)
 
 ### get\_feature\_names\_out()
 
@@ -303,20 +321,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: KMeansGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansGetFeatureNamesOutOptions`](../interfaces/KMeansGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.KMeans.fit "sklearn.cluster.KMeans.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/KMeans.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L207)
+Defined in:  [generated/cluster/KMeans.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L325)
 
 ### init()
 
@@ -340,7 +359,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/KMeans.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L41)
+Defined in:  [generated/cluster/KMeans.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L114)
 
 ### predict()
 
@@ -351,20 +370,22 @@ In the vector quantization literature, `cluster\_centers\_` is called the code b
 #### Signature
 
 ```ts
-predict(opts: KMeansPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansPredictOptions`](../interfaces/KMeansPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to predict. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/KMeans.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L239)
+Defined in:  [generated/cluster/KMeans.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L360)
 
 ### score()
 
@@ -373,20 +394,23 @@ Opposite of the value of X on the K-means objective.
 #### Signature
 
 ```ts
-score(opts: KMeansScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansScoreOptions`](../interfaces/KMeansScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/KMeans.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L269)
+Defined in:  [generated/cluster/KMeans.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L400)
 
 ### set\_output()
 
@@ -397,20 +421,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: KMeansSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansSetOutputOptions`](../interfaces/KMeansSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/KMeans.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L303)
+Defined in:  [generated/cluster/KMeans.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L449)
 
 ### transform()
 
@@ -421,17 +446,18 @@ In the new space, each dimension is the distance to the cluster centers. Note th
 #### Signature
 
 ```ts
-transform(opts: KMeansTransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KMeansTransformOptions`](../interfaces/KMeansTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to transform. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/KMeans.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/KMeans.ts#L333)
+Defined in:  [generated/cluster/KMeans.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/KMeans.ts#L484)

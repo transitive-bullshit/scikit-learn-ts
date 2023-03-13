@@ -26,7 +26,54 @@ export class TruncatedSVD {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: TruncatedSVDOptions) {
+  constructor(opts?: {
+    /**
+      Desired dimensionality of output data. If algorithm=’arpack’, must be strictly less than the number of features. If algorithm=’randomized’, must be less than or equal to the number of features. The default value is useful for visualisation. For LSA, a value of 100 is recommended.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      SVD solver to use. Either “arpack” for the ARPACK wrapper in SciPy (scipy.sparse.linalg.svds), or “randomized” for the randomized algorithm due to Halko (2009).
+
+      @defaultValue `'randomized'`
+     */
+    algorithm?: 'arpack' | 'randomized'
+
+    /**
+      Number of iterations for randomized SVD solver. Not used by ARPACK. The default is larger than the default in [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") to handle sparse matrices that may have large slowly decaying spectrum.
+
+      @defaultValue `5`
+     */
+    n_iter?: number
+
+    /**
+      Number of oversamples for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for a complete description.
+
+      @defaultValue `10`
+     */
+    n_oversamples?: number
+
+    /**
+      Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
+
+      @defaultValue `'auto'`
+     */
+    power_iteration_normalizer?: 'auto' | 'QR' | 'LU' | 'none'
+
+    /**
+      Used during randomized svd. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Tolerance for ARPACK. 0 means machine precision. Ignored by randomized SVD solver.
+
+      @defaultValue `0`
+     */
+    tol?: number
+  }) {
     this.id = `TruncatedSVD${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +156,17 @@ ctor_TruncatedSVD = {k: v for k, v in ctor_TruncatedSVD.items() if v is not None
   /**
     Fit model on training data X.
    */
-  async fit(opts: TruncatedSVDFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TruncatedSVD instance has already been disposed')
     }
@@ -137,9 +194,17 @@ pms_TruncatedSVD_fit = {k: v for k, v in pms_TruncatedSVD_fit.items() if v is no
   /**
     Fit model to X and perform dimensionality reduction on X.
    */
-  async fit_transform(
-    opts: TruncatedSVDFitTransformOptions
-  ): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This TruncatedSVD instance has already been disposed')
     }
@@ -169,9 +234,12 @@ pms_TruncatedSVD_fit_transform = {k: v for k, v in pms_TruncatedSVD_fit_transfor
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: TruncatedSVDGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.TruncatedSVD.fit "sklearn.decomposition.TruncatedSVD.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TruncatedSVD instance has already been disposed')
     }
@@ -204,9 +272,12 @@ pms_TruncatedSVD_get_feature_names_out = {k: v for k, v in pms_TruncatedSVD_get_
 
     Returns an array X\_original whose transform would be X.
    */
-  async inverse_transform(
-    opts: TruncatedSVDInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      New data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This TruncatedSVD instance has already been disposed')
     }
@@ -238,7 +309,12 @@ pms_TruncatedSVD_inverse_transform = {k: v for k, v in pms_TruncatedSVD_inverse_
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: TruncatedSVDSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TruncatedSVD instance has already been disposed')
     }
@@ -266,7 +342,12 @@ pms_TruncatedSVD_set_output = {k: v for k, v in pms_TruncatedSVD_set_output.item
   /**
     Perform dimensionality reduction on X.
    */
-  async transform(opts: TruncatedSVDTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      New data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This TruncatedSVD instance has already been disposed')
     }
@@ -440,105 +521,4 @@ pms_TruncatedSVD_transform = {k: v for k, v in pms_TruncatedSVD_transform.items(
         ._py`attr_TruncatedSVD_feature_names_in_.tolist() if hasattr(attr_TruncatedSVD_feature_names_in_, 'tolist') else attr_TruncatedSVD_feature_names_in_`
     })()
   }
-}
-
-export interface TruncatedSVDOptions {
-  /**
-    Desired dimensionality of output data. If algorithm=’arpack’, must be strictly less than the number of features. If algorithm=’randomized’, must be less than or equal to the number of features. The default value is useful for visualisation. For LSA, a value of 100 is recommended.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    SVD solver to use. Either “arpack” for the ARPACK wrapper in SciPy (scipy.sparse.linalg.svds), or “randomized” for the randomized algorithm due to Halko (2009).
-
-    @defaultValue `'randomized'`
-   */
-  algorithm?: 'arpack' | 'randomized'
-
-  /**
-    Number of iterations for randomized SVD solver. Not used by ARPACK. The default is larger than the default in [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") to handle sparse matrices that may have large slowly decaying spectrum.
-
-    @defaultValue `5`
-   */
-  n_iter?: number
-
-  /**
-    Number of oversamples for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for a complete description.
-
-    @defaultValue `10`
-   */
-  n_oversamples?: number
-
-  /**
-    Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
-
-    @defaultValue `'auto'`
-   */
-  power_iteration_normalizer?: 'auto' | 'QR' | 'LU' | 'none'
-
-  /**
-    Used during randomized svd. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Tolerance for ARPACK. 0 means machine precision. Ignored by randomized SVD solver.
-
-    @defaultValue `0`
-   */
-  tol?: number
-}
-
-export interface TruncatedSVDFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface TruncatedSVDFitTransformOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface TruncatedSVDGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.TruncatedSVD.fit "sklearn.decomposition.TruncatedSVD.fit").
-   */
-  input_features?: any
-}
-
-export interface TruncatedSVDInverseTransformOptions {
-  /**
-    New data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface TruncatedSVDSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface TruncatedSVDTransformOptions {
-  /**
-    New data.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

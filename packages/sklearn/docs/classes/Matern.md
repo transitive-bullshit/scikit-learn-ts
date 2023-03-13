@@ -15,20 +15,23 @@ The kernel is given by:
 ### Signature
 
 ```ts
-new Matern(opts?: MaternOptions): Matern;
+new Matern(opts?: object): Matern;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`MaternOptions`](../interfaces/MaternOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.length_scale?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | The length scale of the kernel. If a float, an isotropic kernel is used. If an array, an anisotropic kernel is used where each dimension of l defines the length-scale of the respective feature dimension.  `Default Value`  `1` |
+| `opts.length_scale_bounds?` | `"fixed"` | The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning. |
+| `opts.nu?` | `number` | The parameter nu controlling the smoothness of the learned function. The smaller nu, the less smooth the approximated function is. For nu=inf, the kernel becomes equivalent to the RBF kernel and for nu=0.5 to the absolute exponential kernel. Important intermediate values are nu=1.5 (once differentiable functions) and nu=2.5 (twice differentiable functions). Note that values of nu not in \[0.5, 1.5, 2.5, inf\] incur a considerably higher computational cost (appr. 10 times higher) since they require to evaluate the modified Bessel function. Furthermore, in contrast to l, nu is kept fixed to its initial value and not optimized.  `Default Value`  `1.5` |
 
 ### Returns
 
 [`Matern`](Matern.md)
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L25)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L25)
 
 ## Properties
 
@@ -36,31 +39,31 @@ Defined in:  [generated/gaussian\_process/kernels/Matern.ts:25](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L23)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L22)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L18)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L19)
 
 ## Accessors
 
@@ -76,9 +79,9 @@ anisotropic(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L216)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L262)
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L216)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L262)
 
 ### hyperparameter\_length\_scale
 
@@ -92,9 +95,9 @@ hyperparameter_length_scale(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L236)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L282)
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L236)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L282)
 
 ### py
 
@@ -108,7 +111,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L30)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L49)
 
 #### Signature
 
@@ -126,9 +129,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L34)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L53)
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L30) [generated/gaussian\_process/kernels/Matern.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L34)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L49) [generated/gaussian\_process/kernels/Matern.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L53)
 
 ## Methods
 
@@ -139,20 +142,23 @@ Return the kernel k(X, Y) and optionally its gradient.
 #### Signature
 
 ```ts
-__call__(opts: MaternCallOptions): Promise<ArrayLike[]>;
+__call__(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MaternCallOptions`](../interfaces/MaternCallOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y?` | [`ArrayLike`](../types/ArrayLike.md)[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
+| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L103)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L122)
 
 ### clone\_with\_theta()
 
@@ -161,20 +167,21 @@ Returns a clone of self with given hyperparameters theta.
 #### Signature
 
 ```ts
-clone_with_theta(opts: MaternCloneWithThetaOptions): Promise<any>;
+clone_with_theta(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MaternCloneWithThetaOptions`](../interfaces/MaternCloneWithThetaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.theta?` | [`ArrayLike`](../types/ArrayLike.md) | The hyperparameters |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L135)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L171)
 
 ### diag()
 
@@ -185,20 +192,21 @@ The result of this method is identical to np.diag(self(X)); however, it can be e
 #### Signature
 
 ```ts
-diag(opts: MaternDiagOptions): Promise<ArrayLike>;
+diag(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MaternDiagOptions`](../interfaces/MaternDiagOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L165)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L206)
 
 ### dispose()
 
@@ -216,7 +224,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L86)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L105)
 
 ### init()
 
@@ -240,7 +248,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L43)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L62)
 
 ### is\_stationary()
 
@@ -249,17 +257,17 @@ Returns whether the kernel is stationary.
 #### Signature
 
 ```ts
-is_stationary(opts: MaternIsStationaryOptions): Promise<any>;
+is_stationary(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`MaternIsStationaryOptions`](../interfaces/MaternIsStationaryOptions.md) |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/Matern.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L193)
+Defined in:  [generated/gaussian\_process/kernels/Matern.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Matern.ts#L239)

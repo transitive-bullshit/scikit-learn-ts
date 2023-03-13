@@ -22,7 +22,26 @@ export class MinMaxScaler {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MinMaxScalerOptions) {
+  constructor(opts?: {
+    /**
+      Desired range of transformed data.
+     */
+    feature_range?: any
+
+    /**
+      Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array).
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      Set to `true` to clip transformed values of held-out data to provided `feature range`.
+
+      @defaultValue `false`
+     */
+    clip?: boolean
+  }) {
     this.id = `MinMaxScaler${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +118,17 @@ ctor_MinMaxScaler = {k: v for k, v in ctor_MinMaxScaler.items() if v is not None
   /**
     Compute the minimum and maximum to be used for later scaling.
    */
-  async fit(opts: MinMaxScalerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data used to compute the per-feature minimum and maximum used for later scaling along the features axis.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
     }
@@ -129,7 +158,22 @@ pms_MinMaxScaler_fit = {k: v for k, v in pms_MinMaxScaler_fit.items() if v is no
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: MinMaxScalerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
     }
@@ -161,9 +205,12 @@ pms_MinMaxScaler_fit_transform = {k: v for k, v in pms_MinMaxScaler_fit_transfor
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: MinMaxScalerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
     }
@@ -194,9 +241,12 @@ pms_MinMaxScaler_get_feature_names_out = {k: v for k, v in pms_MinMaxScaler_get_
   /**
     Undo the scaling of X according to feature\_range.
    */
-  async inverse_transform(
-    opts: MinMaxScalerInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      Input data that will be transformed. It cannot be sparse.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
     }
@@ -228,7 +278,17 @@ pms_MinMaxScaler_inverse_transform = {k: v for k, v in pms_MinMaxScaler_inverse_
 
     All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.MinMaxScaler.fit "sklearn.preprocessing.MinMaxScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
    */
-  async partial_fit(opts: MinMaxScalerPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      The data used to compute the mean and standard deviation used for later scaling along the features axis.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
     }
@@ -258,7 +318,12 @@ pms_MinMaxScaler_partial_fit = {k: v for k, v in pms_MinMaxScaler_partial_fit.it
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: MinMaxScalerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
     }
@@ -286,7 +351,12 @@ pms_MinMaxScaler_set_output = {k: v for k, v in pms_MinMaxScaler_set_output.item
   /**
     Scale features of X according to feature\_range.
    */
-  async transform(opts: MinMaxScalerTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Input data that will be transformed.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MinMaxScaler instance has already been disposed')
     }
@@ -506,94 +576,4 @@ pms_MinMaxScaler_transform = {k: v for k, v in pms_MinMaxScaler_transform.items(
         ._py`attr_MinMaxScaler_feature_names_in_.tolist() if hasattr(attr_MinMaxScaler_feature_names_in_, 'tolist') else attr_MinMaxScaler_feature_names_in_`
     })()
   }
-}
-
-export interface MinMaxScalerOptions {
-  /**
-    Desired range of transformed data.
-   */
-  feature_range?: any
-
-  /**
-    Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array).
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    Set to `true` to clip transformed values of held-out data to provided `feature range`.
-
-    @defaultValue `false`
-   */
-  clip?: boolean
-}
-
-export interface MinMaxScalerFitOptions {
-  /**
-    The data used to compute the per-feature minimum and maximum used for later scaling along the features axis.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface MinMaxScalerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface MinMaxScalerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface MinMaxScalerInverseTransformOptions {
-  /**
-    Input data that will be transformed. It cannot be sparse.
-   */
-  X?: ArrayLike[]
-}
-
-export interface MinMaxScalerPartialFitOptions {
-  /**
-    The data used to compute the mean and standard deviation used for later scaling along the features axis.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface MinMaxScalerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface MinMaxScalerTransformOptions {
-  /**
-    Input data that will be transformed.
-   */
-  X?: ArrayLike[]
 }

@@ -20,7 +20,73 @@ export class LassoLarsIC {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LassoLarsICOptions) {
+  constructor(opts?: {
+    /**
+      The type of criterion to use.
+
+      @defaultValue `'aic'`
+     */
+    criterion?: 'aic' | 'bic'
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      Sets the verbosity amount.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+
+    /**
+      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
+
+      @defaultValue `false`
+     */
+    normalize?: boolean
+
+    /**
+      Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
+
+      @defaultValue `'auto'`
+     */
+    precompute?: boolean | 'auto' | ArrayLike
+
+    /**
+      Maximum number of iterations to perform. Can be used for early stopping.
+
+      @defaultValue `500`
+     */
+    max_iter?: number
+
+    /**
+      The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
+     */
+    eps?: number
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      Restrict coefficients to be >= 0. Be aware that you might want to remove fit\_intercept which is set `true` by default. Under the positive restriction the model coefficients do not converge to the ordinary-least-squares solution for small values of alpha. Only coefficients up to the smallest alpha value (`alphas\_\[alphas\_ > 0.\].min()` when fit\_path=`true`) reached by the stepwise Lars-Lasso algorithm are typically in congruence with the solution of the coordinate descent Lasso estimator. As a consequence using LassoLarsIC only makes sense for problems where a sparse solution is expected and/or reached.
+
+      @defaultValue `false`
+     */
+    positive?: boolean
+
+    /**
+      The estimated noise variance of the data. If `undefined`, an unbiased estimate is computed by an OLS model. However, it is only possible in the case where `n\_samples > n\_features + fit\_intercept`.
+     */
+    noise_variance?: number
+  }) {
     this.id = `LassoLarsIC${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +171,22 @@ ctor_LassoLarsIC = {k: v for k, v in ctor_LassoLarsIC.items() if v is not None}`
   /**
     Fit the model using X, y as training data.
    */
-  async fit(opts: LassoLarsICFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values. Will be cast to X’s dtype if necessary.
+     */
+    y?: ArrayLike
+
+    /**
+      If provided, this parameter will override the choice of copy\_X made at instance creation. If `true`, X will be copied; else, it may be overwritten.
+     */
+    copy_X?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LassoLarsIC instance has already been disposed')
     }
@@ -137,7 +218,12 @@ pms_LassoLarsIC_fit = {k: v for k, v in pms_LassoLarsIC_fit.items() if v is not 
   /**
     Predict using the linear model.
    */
-  async predict(opts: LassoLarsICPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LassoLarsIC instance has already been disposed')
     }
@@ -165,7 +251,22 @@ pms_LassoLarsIC_predict = {k: v for k, v in pms_LassoLarsIC_predict.items() if v
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: LassoLarsICScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LassoLarsIC instance has already been disposed')
     }
@@ -410,113 +511,4 @@ pms_LassoLarsIC_score = {k: v for k, v in pms_LassoLarsIC_score.items() if v is 
         ._py`attr_LassoLarsIC_feature_names_in_.tolist() if hasattr(attr_LassoLarsIC_feature_names_in_, 'tolist') else attr_LassoLarsIC_feature_names_in_`
     })()
   }
-}
-
-export interface LassoLarsICOptions {
-  /**
-    The type of criterion to use.
-
-    @defaultValue `'aic'`
-   */
-  criterion?: 'aic' | 'bic'
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    Sets the verbosity amount.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-
-  /**
-    This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-    @defaultValue `false`
-   */
-  normalize?: boolean
-
-  /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
-
-    @defaultValue `'auto'`
-   */
-  precompute?: boolean | 'auto' | ArrayLike
-
-  /**
-    Maximum number of iterations to perform. Can be used for early stopping.
-
-    @defaultValue `500`
-   */
-  max_iter?: number
-
-  /**
-    The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
-   */
-  eps?: number
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    Restrict coefficients to be >= 0. Be aware that you might want to remove fit\_intercept which is set `true` by default. Under the positive restriction the model coefficients do not converge to the ordinary-least-squares solution for small values of alpha. Only coefficients up to the smallest alpha value (`alphas\_\[alphas\_ > 0.\].min()` when fit\_path=`true`) reached by the stepwise Lars-Lasso algorithm are typically in congruence with the solution of the coordinate descent Lasso estimator. As a consequence using LassoLarsIC only makes sense for problems where a sparse solution is expected and/or reached.
-
-    @defaultValue `false`
-   */
-  positive?: boolean
-
-  /**
-    The estimated noise variance of the data. If `undefined`, an unbiased estimate is computed by an OLS model. However, it is only possible in the case where `n\_samples > n\_features + fit\_intercept`.
-   */
-  noise_variance?: number
-}
-
-export interface LassoLarsICFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values. Will be cast to X’s dtype if necessary.
-   */
-  y?: ArrayLike
-
-  /**
-    If provided, this parameter will override the choice of copy\_X made at instance creation. If `true`, X will be copied; else, it may be overwritten.
-   */
-  copy_X?: boolean
-}
-
-export interface LassoLarsICPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface LassoLarsICScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

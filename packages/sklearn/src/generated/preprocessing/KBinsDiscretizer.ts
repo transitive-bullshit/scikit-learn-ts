@@ -20,7 +20,43 @@ export class KBinsDiscretizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KBinsDiscretizerOptions) {
+  constructor(opts?: {
+    /**
+      The number of bins to produce. Raises ValueError if `n\_bins < 2`.
+
+      @defaultValue `5`
+     */
+    n_bins?: number | ArrayLike
+
+    /**
+      Method used to encode the transformed result.
+
+      @defaultValue `'onehot'`
+     */
+    encode?: 'onehot' | 'onehot-dense' | 'ordinal'
+
+    /**
+      Strategy used to define the widths of the bins.
+
+      @defaultValue `'quantile'`
+     */
+    strategy?: 'uniform' | 'quantile' | 'kmeans'
+
+    /**
+      The desired data-type for the output. If `undefined`, output dtype is consistent with input dtype. Only np.float32 and np.float64 are supported.
+     */
+    dtype?: any
+
+    /**
+      Maximum number of samples, used to fit the model, for computational efficiency. Used when `strategy="quantile"`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
+     */
+    subsample?: number
+
+    /**
+      Determines random number generation for subsampling. Pass an int for reproducible results across multiple function calls. See the `subsample` parameter for more details. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `KBinsDiscretizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +139,17 @@ ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is 
   /**
     Fit the estimator.
    */
-  async fit(opts: KBinsDiscretizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data to be discretized.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This KBinsDiscretizer instance has already been disposed'
@@ -135,9 +181,22 @@ pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: KBinsDiscretizerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This KBinsDiscretizer instance has already been disposed'
@@ -173,9 +232,12 @@ pms_KBinsDiscretizer_fit_transform = {k: v for k, v in pms_KBinsDiscretizer_fit_
   /**
     Get output feature names.
    */
-  async get_feature_names_out(
-    opts: KBinsDiscretizerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This KBinsDiscretizer instance has already been disposed'
@@ -210,9 +272,12 @@ pms_KBinsDiscretizer_get_feature_names_out = {k: v for k, v in pms_KBinsDiscreti
 
     Note that this function does not regenerate the original data due to discretization rounding.
    */
-  async inverse_transform(
-    opts: KBinsDiscretizerInverseTransformOptions
-  ): Promise<NDArray> {
+  async inverse_transform(opts: {
+    /**
+      Transformed data in the binned space.
+     */
+    Xt?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This KBinsDiscretizer instance has already been disposed'
@@ -247,7 +312,12 @@ pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: KBinsDiscretizerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This KBinsDiscretizer instance has already been disposed'
@@ -277,7 +347,12 @@ pms_KBinsDiscretizer_set_output = {k: v for k, v in pms_KBinsDiscretizer_set_out
   /**
     Discretize the data.
    */
-  async transform(opts: KBinsDiscretizerTransformOptions): Promise<NDArray> {
+  async transform(opts: {
+    /**
+      Data to be discretized.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This KBinsDiscretizer instance has already been disposed'
@@ -411,99 +486,4 @@ pms_KBinsDiscretizer_transform = {k: v for k, v in pms_KBinsDiscretizer_transfor
         ._py`attr_KBinsDiscretizer_feature_names_in_.tolist() if hasattr(attr_KBinsDiscretizer_feature_names_in_, 'tolist') else attr_KBinsDiscretizer_feature_names_in_`
     })()
   }
-}
-
-export interface KBinsDiscretizerOptions {
-  /**
-    The number of bins to produce. Raises ValueError if `n\_bins < 2`.
-
-    @defaultValue `5`
-   */
-  n_bins?: number | ArrayLike
-
-  /**
-    Method used to encode the transformed result.
-
-    @defaultValue `'onehot'`
-   */
-  encode?: 'onehot' | 'onehot-dense' | 'ordinal'
-
-  /**
-    Strategy used to define the widths of the bins.
-
-    @defaultValue `'quantile'`
-   */
-  strategy?: 'uniform' | 'quantile' | 'kmeans'
-
-  /**
-    The desired data-type for the output. If `undefined`, output dtype is consistent with input dtype. Only np.float32 and np.float64 are supported.
-   */
-  dtype?: any
-
-  /**
-    Maximum number of samples, used to fit the model, for computational efficiency. Used when `strategy="quantile"`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
-   */
-  subsample?: number
-
-  /**
-    Determines random number generation for subsampling. Pass an int for reproducible results across multiple function calls. See the `subsample` parameter for more details. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface KBinsDiscretizerFitOptions {
-  /**
-    Data to be discretized.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
-   */
-  y?: any
-}
-
-export interface KBinsDiscretizerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface KBinsDiscretizerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface KBinsDiscretizerInverseTransformOptions {
-  /**
-    Transformed data in the binned space.
-   */
-  Xt?: ArrayLike[]
-}
-
-export interface KBinsDiscretizerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface KBinsDiscretizerTransformOptions {
-  /**
-    Data to be discretized.
-   */
-  X?: ArrayLike[]
 }

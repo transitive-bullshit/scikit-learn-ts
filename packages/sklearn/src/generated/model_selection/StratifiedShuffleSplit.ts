@@ -26,7 +26,29 @@ export class StratifiedShuffleSplit {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: StratifiedShuffleSplitOptions) {
+  constructor(opts?: {
+    /**
+      Number of re-shuffling & splitting iterations.
+
+      @defaultValue `10`
+     */
+    n_splits?: number
+
+    /**
+      If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If `undefined`, the value is set to the complement of the train size. If `train\_size` is also `undefined`, it will be set to 0.1.
+     */
+    test_size?: number
+
+    /**
+      If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the train split. If int, represents the absolute number of train samples. If `undefined`, the value is automatically set to the complement of the test size.
+     */
+    train_size?: number
+
+    /**
+      Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `StratifiedShuffleSplit${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,9 +129,22 @@ ctor_StratifiedShuffleSplit = {k: v for k, v in ctor_StratifiedShuffleSplit.item
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(
-    opts: StratifiedShuffleSplitGetNSplitsOptions
-  ): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This StratifiedShuffleSplit instance has already been disposed'
@@ -141,7 +176,24 @@ pms_StratifiedShuffleSplit_get_n_splits = {k: v for k, v in pms_StratifiedShuffl
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: StratifiedShuffleSplitSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+      Note that providing `y` is sufficient to generate the splits and hence `np.zeros(n\_samples)` may be used as a placeholder for `X` instead of actual training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems. Stratification is done based on the y labels.
+     */
+    y?: ArrayLike
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This StratifiedShuffleSplit instance has already been disposed'
@@ -171,64 +223,4 @@ pms_StratifiedShuffleSplit_split = {k: v for k, v in pms_StratifiedShuffleSplit_
     return this
       ._py`res_StratifiedShuffleSplit_split.tolist() if hasattr(res_StratifiedShuffleSplit_split, 'tolist') else res_StratifiedShuffleSplit_split`
   }
-}
-
-export interface StratifiedShuffleSplitOptions {
-  /**
-    Number of re-shuffling & splitting iterations.
-
-    @defaultValue `10`
-   */
-  n_splits?: number
-
-  /**
-    If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the test split. If int, represents the absolute number of test samples. If `undefined`, the value is set to the complement of the train size. If `train\_size` is also `undefined`, it will be set to 0.1.
-   */
-  test_size?: number
-
-  /**
-    If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to include in the train split. If int, represents the absolute number of train samples. If `undefined`, the value is automatically set to the complement of the test size.
-   */
-  train_size?: number
-
-  /**
-    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface StratifiedShuffleSplitGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface StratifiedShuffleSplitSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-
-    Note that providing `y` is sufficient to generate the splits and hence `np.zeros(n\_samples)` may be used as a placeholder for `X` instead of actual training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems. Stratification is done based on the y labels.
-   */
-  y?: ArrayLike
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
 }

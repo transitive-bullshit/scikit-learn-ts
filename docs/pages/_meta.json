@@ -2,13 +2,25 @@
   "index": "Home",
   "guide": "Guide",
   "docs": "Documentation",
-  "-- More": {
+  "-- Project": {
     "type": "separator",
-    "title": "More"
+    "title": "Project"
+  },
+  "status": "Status",
+  "credit": "Credit",
+  "license": "License",
+  "-- Links": {
+    "type": "separator",
+    "title": "Links"
   },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
+    "href": "https://twitter.com/transitive_bs",
+    "newWindow": true
+  },
+  "contact-sidebar": {
+    "title": "Contact ↗",
     "href": "https://twitter.com/transitive_bs",
     "newWindow": true
   },

@@ -24,7 +24,85 @@ export class BaggingRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BaggingRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor").
+     */
+    estimator?: any
+
+    /**
+      The number of base estimators in the ensemble.
+
+      @defaultValue `10`
+     */
+    n_estimators?: number
+
+    /**
+      The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).
+
+      @defaultValue `1`
+     */
+    max_samples?: number
+
+    /**
+      The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).
+
+      @defaultValue `1`
+     */
+    max_features?: number
+
+    /**
+      Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.
+
+      @defaultValue `true`
+     */
+    bootstrap?: boolean
+
+    /**
+      Whether features are drawn with replacement.
+
+      @defaultValue `false`
+     */
+    bootstrap_features?: boolean
+
+    /**
+      Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.
+
+      @defaultValue `false`
+     */
+    oob_score?: boolean
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Controls the verbosity when fitting and predicting.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Use `estimator` instead.
+
+      @defaultValue `'deprecated'`
+     */
+    base_estimator?: any
+  }) {
     this.id = `BaggingRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -117,7 +195,22 @@ ctor_BaggingRegressor = {k: v for k, v in ctor_BaggingRegressor.items() if v is 
   /**
     Build a Bagging ensemble of estimators from the training set (X, y).
    */
-  async fit(opts: BaggingRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingRegressor instance has already been disposed'
@@ -153,7 +246,12 @@ pms_BaggingRegressor_fit = {k: v for k, v in pms_BaggingRegressor_fit.items() if
 
     The predicted regression target of an input sample is computed as the mean predicted regression targets of the estimators in the ensemble.
    */
-  async predict(opts: BaggingRegressorPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingRegressor instance has already been disposed'
@@ -185,7 +283,22 @@ pms_BaggingRegressor_predict = {k: v for k, v in pms_BaggingRegressor_predict.it
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: BaggingRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingRegressor instance has already been disposed'
@@ -404,125 +517,4 @@ pms_BaggingRegressor_score = {k: v for k, v in pms_BaggingRegressor_score.items(
         ._py`attr_BaggingRegressor_oob_prediction_.tolist() if hasattr(attr_BaggingRegressor_oob_prediction_, 'tolist') else attr_BaggingRegressor_oob_prediction_`
     })()
   }
-}
-
-export interface BaggingRegressorOptions {
-  /**
-    The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor").
-   */
-  estimator?: any
-
-  /**
-    The number of base estimators in the ensemble.
-
-    @defaultValue `10`
-   */
-  n_estimators?: number
-
-  /**
-    The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).
-
-    @defaultValue `1`
-   */
-  max_samples?: number
-
-  /**
-    The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).
-
-    @defaultValue `1`
-   */
-  max_features?: number
-
-  /**
-    Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.
-
-    @defaultValue `true`
-   */
-  bootstrap?: boolean
-
-  /**
-    Whether features are drawn with replacement.
-
-    @defaultValue `false`
-   */
-  bootstrap_features?: boolean
-
-  /**
-    Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.
-
-    @defaultValue `false`
-   */
-  oob_score?: boolean
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Controls the verbosity when fitting and predicting.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Use `estimator` instead.
-
-    @defaultValue `'deprecated'`
-   */
-  base_estimator?: any
-}
-
-export interface BaggingRegressorFitOptions {
-  /**
-    The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BaggingRegressorPredictOptions {
-  /**
-    The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BaggingRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -17,20 +17,32 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new BaggingRegressor(opts?: BaggingRegressorOptions): BaggingRegressor;
+new BaggingRegressor(opts?: object): BaggingRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `BaggingRegressorOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.base_estimator?` | `any` | Use `estimator` instead.  `Default Value`  `'deprecated'` |
+| `opts.bootstrap?` | `boolean` | Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.  `Default Value`  `true` |
+| `opts.bootstrap_features?` | `boolean` | Whether features are drawn with replacement.  `Default Value`  `false` |
+| `opts.estimator?` | `any` | The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor"). |
+| `opts.max_features?` | `number` | The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).  `Default Value`  `1` |
+| `opts.max_samples?` | `number` | The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).  `Default Value`  `1` |
+| `opts.n_estimators?` | `number` | The number of base estimators in the ensemble.  `Default Value`  `10` |
+| `opts.n_jobs?` | `number` | The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingRegressor.fit "sklearn.ensemble.BaggingRegressor.fit") and [`predict`](#sklearn.ensemble.BaggingRegressor.predict "sklearn.ensemble.BaggingRegressor.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.oob_score?` | `boolean` | Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.  `Default Value`  `false` |
+| `opts.random_state?` | `number` | Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See Glossary. |
+| `opts.verbose?` | `number` | Controls the verbosity when fitting and predicting.  `Default Value`  `0` |
+| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See the Glossary.  `Default Value`  `false` |
 
 ### Returns
 
 [`BaggingRegressor`](BaggingRegressor.md)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L27)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L27)
 
 ## Properties
 
@@ -38,31 +50,31 @@ Defined in:  [generated/ensemble/BaggingRegressor.ts:27](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L25)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L24)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L23)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L20)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L21)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L21)
 
 ## Accessors
 
@@ -80,7 +92,7 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L222)
+Defined in: [generated/ensemble/BaggingRegressor.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L335)
 
 ### estimators\_
 
@@ -96,7 +108,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L303)
+Defined in: [generated/ensemble/BaggingRegressor.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L416)
 
 ### estimators\_features\_
 
@@ -112,7 +124,7 @@ estimators_features_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L330)
+Defined in: [generated/ensemble/BaggingRegressor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L443)
 
 ### feature\_names\_in\_
 
@@ -128,7 +140,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L276)
+Defined in: [generated/ensemble/BaggingRegressor.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L389)
 
 ### n\_features\_in\_
 
@@ -144,7 +156,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L249)
+Defined in: [generated/ensemble/BaggingRegressor.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L362)
 
 ### oob\_prediction\_
 
@@ -160,7 +172,7 @@ oob_prediction_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L384)
+Defined in: [generated/ensemble/BaggingRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L497)
 
 ### oob\_score\_
 
@@ -176,7 +188,7 @@ oob_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L357)
+Defined in: [generated/ensemble/BaggingRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L470)
 
 ### py
 
@@ -190,7 +202,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L32)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L110)
 
 #### Signature
 
@@ -208,7 +220,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/BaggingRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L36)
+Defined in: [generated/ensemble/BaggingRegressor.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L114)
 
 ## Methods
 
@@ -228,7 +240,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L103)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L181)
 
 ### fit()
 
@@ -237,20 +249,23 @@ Build a Bagging ensemble of estimators from the training set (X, y).
 #### Signature
 
 ```ts
-fit(opts: BaggingRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `BaggingRegressorFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The training input samples. Sparse matrices are accepted only if they are supported by the base estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting. |
+| `opts.y?` | `ArrayLike` | The target values (class labels in classification, real numbers in regression). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L120)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L198)
 
 ### init()
 
@@ -274,7 +289,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L45)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L123)
 
 ### predict()
 
@@ -285,20 +300,21 @@ The predicted regression target of an input sample is computed as the mean predi
 #### Signature
 
 ```ts
-predict(opts: BaggingRegressorPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `BaggingRegressorPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The training input samples. Sparse matrices are accepted only if they are supported by the base estimator. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L156)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L249)
 
 ### score()
 
@@ -309,17 +325,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: BaggingRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `BaggingRegressorScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L188)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L286)

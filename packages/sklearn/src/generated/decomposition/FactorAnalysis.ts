@@ -28,7 +28,64 @@ export class FactorAnalysis {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: FactorAnalysisOptions) {
+  constructor(opts?: {
+    /**
+      Dimensionality of latent space, the number of components of `X` that are obtained after `transform`. If `undefined`, n\_components is set to the number of features.
+     */
+    n_components?: number
+
+    /**
+      Stopping tolerance for log-likelihood increase.
+
+      @defaultValue `0.01`
+     */
+    tol?: number
+
+    /**
+      Whether to make a copy of X. If `false`, the input X gets overwritten during fitting.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      Maximum number of iterations.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The initial guess of the noise variance for each feature. If `undefined`, it defaults to np.ones(n\_features).
+     */
+    noise_variance_init?: ArrayLike
+
+    /**
+      Which SVD method to use. If ‘lapack’ use standard SVD from scipy.linalg, if ‘randomized’ use fast `randomized\_svd` function. Defaults to ‘randomized’. For most applications ‘randomized’ will be sufficiently precise while providing significant speed gains. Accuracy can also be improved by setting higher values for `iterated\_power`. If this is not sufficient, for maximum precision you should choose ‘lapack’.
+
+      @defaultValue `'randomized'`
+     */
+    svd_method?: 'lapack' | 'randomized'
+
+    /**
+      Number of iterations for the power method. 3 by default. Only used if `svd\_method` equals ‘randomized’.
+
+      @defaultValue `3`
+     */
+    iterated_power?: number
+
+    /**
+      If not `undefined`, apply the indicated rotation. Currently, varimax and quartimax are implemented. See [“The varimax criterion for analytic rotation in factor analysis”](https://link.springer.com/article/10.1007%2FBF02289233) H. F. Kaiser, 1958.
+     */
+    rotation?: 'varimax' | 'quartimax'
+
+    /**
+      Only used when `svd\_method` equals ‘randomized’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+
+      @defaultValue `0`
+     */
+    random_state?: number
+  }) {
     this.id = `FactorAnalysis${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -117,7 +174,17 @@ ctor_FactorAnalysis = {k: v for k, v in ctor_FactorAnalysis.items() if v is not 
   /**
     Fit the FactorAnalysis model to X using SVD based approach.
    */
-  async fit(opts: FactorAnalysisFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored parameter.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -147,7 +214,22 @@ pms_FactorAnalysis_fit = {k: v for k, v in pms_FactorAnalysis_fit.items() if v i
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: FactorAnalysisFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -181,7 +263,12 @@ pms_FactorAnalysis_fit_transform = {k: v for k, v in pms_FactorAnalysis_fit_tran
 
     `cov \= components\_.T \* components\_ + diag(noise\_variance)`
    */
-  async get_covariance(opts: FactorAnalysisGetCovarianceOptions): Promise<any> {
+  async get_covariance(opts: {
+    /**
+      Estimated covariance of data.
+     */
+    cov?: NDArray[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -211,9 +298,12 @@ pms_FactorAnalysis_get_covariance = {k: v for k, v in pms_FactorAnalysis_get_cov
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: FactorAnalysisGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.FactorAnalysis.fit "sklearn.decomposition.FactorAnalysis.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -244,7 +334,12 @@ pms_FactorAnalysis_get_feature_names_out = {k: v for k, v in pms_FactorAnalysis_
   /**
     Compute data precision matrix with the FactorAnalysis model.
    */
-  async get_precision(opts: FactorAnalysisGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      Estimated precision of data.
+     */
+    precision?: NDArray[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -273,7 +368,17 @@ pms_FactorAnalysis_get_precision = {k: v for k, v in pms_FactorAnalysis_get_prec
   /**
     Compute the average log-likelihood of the samples.
    */
-  async score(opts: FactorAnalysisScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      The data.
+     */
+    X?: NDArray[]
+
+    /**
+      Ignored parameter.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -301,9 +406,12 @@ pms_FactorAnalysis_score = {k: v for k, v in pms_FactorAnalysis_score.items() if
   /**
     Compute the log-likelihood of each sample.
    */
-  async score_samples(
-    opts: FactorAnalysisScoreSamplesOptions
-  ): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      The data.
+     */
+    X?: NDArray[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -333,7 +441,12 @@ pms_FactorAnalysis_score_samples = {k: v for k, v in pms_FactorAnalysis_score_sa
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: FactorAnalysisSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -363,7 +476,12 @@ pms_FactorAnalysis_set_output = {k: v for k, v in pms_FactorAnalysis_set_output.
 
     Compute the expected mean of the latent variables. See Barber, 21.2.33 (or Bishop, 12.66).
    */
-  async transform(opts: FactorAnalysisTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This FactorAnalysis instance has already been disposed')
     }
@@ -560,146 +678,4 @@ pms_FactorAnalysis_transform = {k: v for k, v in pms_FactorAnalysis_transform.it
         ._py`attr_FactorAnalysis_feature_names_in_.tolist() if hasattr(attr_FactorAnalysis_feature_names_in_, 'tolist') else attr_FactorAnalysis_feature_names_in_`
     })()
   }
-}
-
-export interface FactorAnalysisOptions {
-  /**
-    Dimensionality of latent space, the number of components of `X` that are obtained after `transform`. If `undefined`, n\_components is set to the number of features.
-   */
-  n_components?: number
-
-  /**
-    Stopping tolerance for log-likelihood increase.
-
-    @defaultValue `0.01`
-   */
-  tol?: number
-
-  /**
-    Whether to make a copy of X. If `false`, the input X gets overwritten during fitting.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    Maximum number of iterations.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The initial guess of the noise variance for each feature. If `undefined`, it defaults to np.ones(n\_features).
-   */
-  noise_variance_init?: ArrayLike
-
-  /**
-    Which SVD method to use. If ‘lapack’ use standard SVD from scipy.linalg, if ‘randomized’ use fast `randomized\_svd` function. Defaults to ‘randomized’. For most applications ‘randomized’ will be sufficiently precise while providing significant speed gains. Accuracy can also be improved by setting higher values for `iterated\_power`. If this is not sufficient, for maximum precision you should choose ‘lapack’.
-
-    @defaultValue `'randomized'`
-   */
-  svd_method?: 'lapack' | 'randomized'
-
-  /**
-    Number of iterations for the power method. 3 by default. Only used if `svd\_method` equals ‘randomized’.
-
-    @defaultValue `3`
-   */
-  iterated_power?: number
-
-  /**
-    If not `undefined`, apply the indicated rotation. Currently, varimax and quartimax are implemented. See [“The varimax criterion for analytic rotation in factor analysis”](https://link.springer.com/article/10.1007%2FBF02289233) H. F. Kaiser, 1958.
-   */
-  rotation?: 'varimax' | 'quartimax'
-
-  /**
-    Only used when `svd\_method` equals ‘randomized’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-
-    @defaultValue `0`
-   */
-  random_state?: number
-}
-
-export interface FactorAnalysisFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored parameter.
-   */
-  y?: any
-}
-
-export interface FactorAnalysisFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface FactorAnalysisGetCovarianceOptions {
-  /**
-    Estimated covariance of data.
-   */
-  cov?: NDArray[]
-}
-
-export interface FactorAnalysisGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.FactorAnalysis.fit "sklearn.decomposition.FactorAnalysis.fit").
-   */
-  input_features?: any
-}
-
-export interface FactorAnalysisGetPrecisionOptions {
-  /**
-    Estimated precision of data.
-   */
-  precision?: NDArray[]
-}
-
-export interface FactorAnalysisScoreOptions {
-  /**
-    The data.
-   */
-  X?: NDArray[]
-
-  /**
-    Ignored parameter.
-   */
-  y?: any
-}
-
-export interface FactorAnalysisScoreSamplesOptions {
-  /**
-    The data.
-   */
-  X?: NDArray[]
-}
-
-export interface FactorAnalysisSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface FactorAnalysisTransformOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
 }

@@ -15,20 +15,32 @@ Read more in the [User Guide](../linear_model.html#bayesian-regression).
 ### Signature
 
 ```ts
-new BayesianRidge(opts?: BayesianRidgeOptions): BayesianRidge;
+new BayesianRidge(opts?: object): BayesianRidge;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`BayesianRidgeOptions`](../interfaces/BayesianRidgeOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha_1?` | `number` | Hyper-parameter : shape parameter for the Gamma distribution prior over the alpha parameter.  `Default Value`  `0.000001` |
+| `opts.alpha_2?` | `number` | Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the alpha parameter.  `Default Value`  `0.000001` |
+| `opts.alpha_init?` | `number` | Initial value for alpha (precision of the noise). If not set, alpha\_init is 1/Var(y). |
+| `opts.compute_score?` | `boolean` | If `true`, compute the log marginal likelihood at each iteration of the optimization.  `Default Value`  `false` |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.fit_intercept?` | `boolean` | Whether to calculate the intercept for this model. The intercept is not treated as a probabilistic parameter and thus has no associated variance. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).  `Default Value`  `true` |
+| `opts.lambda_1?` | `number` | Hyper-parameter : shape parameter for the Gamma distribution prior over the lambda parameter.  `Default Value`  `0.000001` |
+| `opts.lambda_2?` | `number` | Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the lambda parameter.  `Default Value`  `0.000001` |
+| `opts.lambda_init?` | `number` | Initial value for lambda (precision of the weights). If not set, lambda\_init is 1. |
+| `opts.n_iter?` | `number` | Maximum number of iterations. Should be greater than or equal to 1.  `Default Value`  `300` |
+| `opts.tol?` | `number` | Stop the algorithm if w has converged.  `Default Value`  `0.001` |
+| `opts.verbose?` | `boolean` | Verbose mode when fitting the model.  `Default Value`  `false` |
 
 ### Returns
 
 [`BayesianRidge`](BayesianRidge.md)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L25)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L25)
 
 ## Properties
 
@@ -36,31 +48,31 @@ Defined in:  [generated/linear\_model/BayesianRidge.ts:25](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L23)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L22)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L21)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L18)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L19)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L19)
 
 ## Accessors
 
@@ -78,9 +90,9 @@ X_offset_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L373)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L495)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L373)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L495)
 
 ### X\_scale\_
 
@@ -96,9 +108,9 @@ X_scale_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L398)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L520)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L398)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L520)
 
 ### alpha\_
 
@@ -114,9 +126,9 @@ alpha_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L258)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L380)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L258)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L380)
 
 ### coef\_
 
@@ -132,9 +144,9 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L210)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L332)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L210)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L332)
 
 ### feature\_names\_in\_
 
@@ -150,9 +162,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L448)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L570)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L448)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L570)
 
 ### intercept\_
 
@@ -168,9 +180,9 @@ intercept_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L233)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L355)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L233)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L355)
 
 ### lambda\_
 
@@ -186,9 +198,9 @@ lambda_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L281)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L403)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L281)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L403)
 
 ### n\_features\_in\_
 
@@ -204,9 +216,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L423)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L545)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L423)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L545)
 
 ### n\_iter\_
 
@@ -222,9 +234,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L350)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L472)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L350)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L472)
 
 ### py
 
@@ -238,7 +250,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L30)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L110)
 
 #### Signature
 
@@ -256,9 +268,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L34)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L114)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L30) [generated/linear\_model/BayesianRidge.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L34)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L110) [generated/linear\_model/BayesianRidge.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L114)
 
 ### scores\_
 
@@ -274,9 +286,9 @@ scores_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L327)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L449)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L327)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L449)
 
 ### sigma\_
 
@@ -292,9 +304,9 @@ sigma_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L304)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L426)
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L304)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L426)
 
 ## Methods
 
@@ -314,7 +326,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L95)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L175)
 
 ### fit()
 
@@ -323,20 +335,23 @@ Fit the model.
 #### Signature
 
 ```ts
-fit(opts: BayesianRidgeFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BayesianRidgeFitOptions`](../interfaces/BayesianRidgeFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Individual weights for each sample. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. Will be cast to X’s dtype if necessary. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L112)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L192)
 
 ### init()
 
@@ -360,7 +375,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L43)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L123)
 
 ### predict()
 
@@ -371,20 +386,22 @@ In addition to the mean of the predictive distribution, also its standard deviat
 #### Signature
 
 ```ts
-predict(opts: BayesianRidgePredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BayesianRidgePredictOptions`](../interfaces/BayesianRidgePredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Samples. |
+| `opts.return_std?` | `boolean` | Whether to return the standard deviation of posterior prediction.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L146)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L241)
 
 ### score()
 
@@ -395,17 +412,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: BayesianRidgeScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BayesianRidgeScoreOptions`](../interfaces/BayesianRidgeScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/BayesianRidge.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L178)
+Defined in:  [generated/linear\_model/BayesianRidge.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/BayesianRidge.ts#L285)

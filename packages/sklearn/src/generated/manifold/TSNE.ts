@@ -24,7 +24,113 @@ export class TSNE {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: TSNEOptions) {
+  constructor(opts?: {
+    /**
+      Dimension of the embedded space.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      The perplexity is related to the number of nearest neighbors that is used in other manifold learning algorithms. Larger datasets usually require a larger perplexity. Consider selecting a value between 5 and 50. Different values can result in significantly different results. The perplexity must be less than the number of samples.
+
+      @defaultValue `30`
+     */
+    perplexity?: number
+
+    /**
+      Controls how tight natural clusters in the original space are in the embedded space and how much space will be between them. For larger values, the space between natural clusters will be larger in the embedded space. Again, the choice of this parameter is not very critical. If the cost function increases during initial optimization, the early exaggeration factor or the learning rate might be too high.
+
+      @defaultValue `12`
+     */
+    early_exaggeration?: number
+
+    /**
+      The learning rate for t-SNE is usually in the range \[10.0, 1000.0\]. If the learning rate is too high, the data may look like a ‘ball’ with any point approximately equidistant from its nearest neighbours. If the learning rate is too low, most points may look compressed in a dense cloud with few outliers. If the cost function gets stuck in a bad local minimum increasing the learning rate may help. Note that many other t-SNE implementations (bhtsne, FIt-SNE, openTSNE, etc.) use a definition of learning\_rate that is 4 times smaller than ours. So our learning\_rate=200 corresponds to learning\_rate=800 in those other implementations. The ‘auto’ option sets the learning\_rate to `max(N / early\_exaggeration / 4, 50)` where N is the sample size, following \[4\] and \[5\].
+
+      @defaultValue `'auto'`
+     */
+    learning_rate?: number | 'auto'
+
+    /**
+      Maximum number of iterations for the optimization. Should be at least 250.
+
+      @defaultValue `1000`
+     */
+    n_iter?: number
+
+    /**
+      Maximum number of iterations without progress before we abort the optimization, used after 250 initial iterations with early exaggeration. Note that progress is only checked every 50 iterations so this value is rounded to the next multiple of 50.
+
+      @defaultValue `300`
+     */
+    n_iter_without_progress?: number
+
+    /**
+      If the gradient norm is below this threshold, the optimization will be stopped.
+
+      @defaultValue `1e-7`
+     */
+    min_grad_norm?: number
+
+    /**
+      The metric to use when calculating distance between instances in a feature array. If metric is a string, it must be one of the options allowed by scipy.spatial.distance.pdist for its metric parameter, or a metric listed in pairwise.PAIRWISE\_DISTANCE\_FUNCTIONS. If metric is “precomputed”, X is assumed to be a distance matrix. Alternatively, if metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays from X as input and return a value indicating the distance between them. The default is “euclidean” which is interpreted as squared euclidean distance.
+
+      @defaultValue `'euclidean'`
+     */
+    metric?: string
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      Initialization of embedding. PCA initialization cannot be used with precomputed distances and is usually more globally stable than random initialization.
+
+      @defaultValue `'pca'`
+     */
+    init?: 'random' | 'pca' | NDArray[]
+
+    /**
+      Verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Determines the random number generator. Pass an int for reproducible results across multiple function calls. Note that different initializations might result in different local minima of the cost function. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      By default the gradient calculation algorithm uses Barnes-Hut approximation running in O(NlogN) time. method=’exact’ will run on the slower, but exact, algorithm in O(N^2) time. The exact algorithm should be used when nearest-neighbor errors need to be better than 3%. However, the exact method cannot scale to millions of examples.
+
+      @defaultValue `'barnes_hut'`
+     */
+    method?: 'barnes_hut' | 'exact'
+
+    /**
+      Only used if method=’barnes\_hut’ This is the trade-off between speed and accuracy for Barnes-Hut T-SNE. ‘angle’ is the angular size (referred to as theta in \[3\]) of a distant node as measured from a point. If this size is below ‘angle’ then it is used as a summary node of all points contained within it. This method is not very sensitive to changes in this parameter in the range of 0.2 - 0.8. Angle less than 0.2 has quickly increasing computation time and angle greater 0.8 has quickly increasing error.
+
+      @defaultValue `0.5`
+     */
+    angle?: number
+
+    /**
+      The number of parallel jobs to run for neighbors search. This parameter has no impact when `metric="precomputed"` or (`metric="euclidean"` and `method="exact"`). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      This parameter has no effect since distance values are always squared since 1.1.
+
+      @defaultValue `'deprecated'`
+     */
+    square_distances?: boolean
+  }) {
     this.id = `TSNE${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -118,7 +224,17 @@ ctor_TSNE = {k: v for k, v in ctor_TSNE.items() if v is not None}`
   /**
     Fit X into an embedded space.
    */
-  async fit(opts: TSNEFitOptions): Promise<any[]> {
+  async fit(opts: {
+    /**
+      If the metric is ‘precomputed’ X must be a square distance matrix. Otherwise it contains a sample per row. If the method is ‘exact’, X may be a sparse matrix of type ‘csr’, ‘csc’ or ‘coo’. If the method is ‘barnes\_hut’ and the metric is ‘precomputed’, X may be a precomputed sparse graph.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This TSNE instance has already been disposed')
     }
@@ -145,7 +261,17 @@ pms_TSNE_fit = {k: v for k, v in pms_TSNE_fit.items() if v is not None}`
   /**
     Fit X into an embedded space and return that transformed output.
    */
-  async fit_transform(opts: TSNEFitTransformOptions): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      If the metric is ‘precomputed’ X must be a square distance matrix. Otherwise it contains a sample per row. If the method is ‘exact’, X may be a sparse matrix of type ‘csr’, ‘csc’ or ‘coo’. If the method is ‘barnes\_hut’ and the metric is ‘precomputed’, X may be a precomputed sparse graph.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This TSNE instance has already been disposed')
     }
@@ -308,136 +434,4 @@ pms_TSNE_fit_transform = {k: v for k, v in pms_TSNE_fit_transform.items() if v i
         ._py`attr_TSNE_n_iter_.tolist() if hasattr(attr_TSNE_n_iter_, 'tolist') else attr_TSNE_n_iter_`
     })()
   }
-}
-
-export interface TSNEOptions {
-  /**
-    Dimension of the embedded space.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    The perplexity is related to the number of nearest neighbors that is used in other manifold learning algorithms. Larger datasets usually require a larger perplexity. Consider selecting a value between 5 and 50. Different values can result in significantly different results. The perplexity must be less than the number of samples.
-
-    @defaultValue `30`
-   */
-  perplexity?: number
-
-  /**
-    Controls how tight natural clusters in the original space are in the embedded space and how much space will be between them. For larger values, the space between natural clusters will be larger in the embedded space. Again, the choice of this parameter is not very critical. If the cost function increases during initial optimization, the early exaggeration factor or the learning rate might be too high.
-
-    @defaultValue `12`
-   */
-  early_exaggeration?: number
-
-  /**
-    The learning rate for t-SNE is usually in the range \[10.0, 1000.0\]. If the learning rate is too high, the data may look like a ‘ball’ with any point approximately equidistant from its nearest neighbours. If the learning rate is too low, most points may look compressed in a dense cloud with few outliers. If the cost function gets stuck in a bad local minimum increasing the learning rate may help. Note that many other t-SNE implementations (bhtsne, FIt-SNE, openTSNE, etc.) use a definition of learning\_rate that is 4 times smaller than ours. So our learning\_rate=200 corresponds to learning\_rate=800 in those other implementations. The ‘auto’ option sets the learning\_rate to `max(N / early\_exaggeration / 4, 50)` where N is the sample size, following \[4\] and \[5\].
-
-    @defaultValue `'auto'`
-   */
-  learning_rate?: number | 'auto'
-
-  /**
-    Maximum number of iterations for the optimization. Should be at least 250.
-
-    @defaultValue `1000`
-   */
-  n_iter?: number
-
-  /**
-    Maximum number of iterations without progress before we abort the optimization, used after 250 initial iterations with early exaggeration. Note that progress is only checked every 50 iterations so this value is rounded to the next multiple of 50.
-
-    @defaultValue `300`
-   */
-  n_iter_without_progress?: number
-
-  /**
-    If the gradient norm is below this threshold, the optimization will be stopped.
-
-    @defaultValue `1e-7`
-   */
-  min_grad_norm?: number
-
-  /**
-    The metric to use when calculating distance between instances in a feature array. If metric is a string, it must be one of the options allowed by scipy.spatial.distance.pdist for its metric parameter, or a metric listed in pairwise.PAIRWISE\_DISTANCE\_FUNCTIONS. If metric is “precomputed”, X is assumed to be a distance matrix. Alternatively, if metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays from X as input and return a value indicating the distance between them. The default is “euclidean” which is interpreted as squared euclidean distance.
-
-    @defaultValue `'euclidean'`
-   */
-  metric?: string
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    Initialization of embedding. PCA initialization cannot be used with precomputed distances and is usually more globally stable than random initialization.
-
-    @defaultValue `'pca'`
-   */
-  init?: 'random' | 'pca' | NDArray[]
-
-  /**
-    Verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Determines the random number generator. Pass an int for reproducible results across multiple function calls. Note that different initializations might result in different local minima of the cost function. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    By default the gradient calculation algorithm uses Barnes-Hut approximation running in O(NlogN) time. method=’exact’ will run on the slower, but exact, algorithm in O(N^2) time. The exact algorithm should be used when nearest-neighbor errors need to be better than 3%. However, the exact method cannot scale to millions of examples.
-
-    @defaultValue `'barnes_hut'`
-   */
-  method?: 'barnes_hut' | 'exact'
-
-  /**
-    Only used if method=’barnes\_hut’ This is the trade-off between speed and accuracy for Barnes-Hut T-SNE. ‘angle’ is the angular size (referred to as theta in \[3\]) of a distant node as measured from a point. If this size is below ‘angle’ then it is used as a summary node of all points contained within it. This method is not very sensitive to changes in this parameter in the range of 0.2 - 0.8. Angle less than 0.2 has quickly increasing computation time and angle greater 0.8 has quickly increasing error.
-
-    @defaultValue `0.5`
-   */
-  angle?: number
-
-  /**
-    The number of parallel jobs to run for neighbors search. This parameter has no impact when `metric="precomputed"` or (`metric="euclidean"` and `method="exact"`). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    This parameter has no effect since distance values are always squared since 1.1.
-
-    @defaultValue `'deprecated'`
-   */
-  square_distances?: boolean
-}
-
-export interface TSNEFitOptions {
-  /**
-    If the metric is ‘precomputed’ X must be a square distance matrix. Otherwise it contains a sample per row. If the method is ‘exact’, X may be a sparse matrix of type ‘csr’, ‘csc’ or ‘coo’. If the method is ‘barnes\_hut’ and the metric is ‘precomputed’, X may be a precomputed sparse graph.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface TSNEFitTransformOptions {
-  /**
-    If the metric is ‘precomputed’ X must be a square distance matrix. Otherwise it contains a sample per row. If the method is ‘exact’, X may be a sparse matrix of type ‘csr’, ‘csc’ or ‘coo’. If the method is ‘barnes\_hut’ and the metric is ‘precomputed’, X may be a precomputed sparse graph.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
 }

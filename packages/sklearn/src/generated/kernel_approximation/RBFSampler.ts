@@ -22,7 +22,26 @@ export class RBFSampler {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RBFSamplerOptions) {
+  constructor(opts?: {
+    /**
+      Parameter of RBF kernel: exp(-gamma \* x^2). If `gamma='scale'` is passed then it uses 1 / (n\_features \* X.var()) as value of gamma.
+
+      @defaultValue `1`
+     */
+    gamma?: 'scale' | number
+
+    /**
+      Number of Monte Carlo samples per original feature. Equals the dimensionality of the computed feature space.
+
+      @defaultValue `100`
+     */
+    n_components?: number
+
+    /**
+      Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `RBFSampler${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +120,17 @@ ctor_RBFSampler = {k: v for k, v in ctor_RBFSampler.items() if v is not None}`
 
     Samples random projection according to n\_features.
    */
-  async fit(opts: RBFSamplerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RBFSampler instance has already been disposed')
     }
@@ -131,7 +160,22 @@ pms_RBFSampler_fit = {k: v for k, v in pms_RBFSampler_fit.items() if v is not No
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: RBFSamplerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This RBFSampler instance has already been disposed')
     }
@@ -165,9 +209,12 @@ pms_RBFSampler_fit_transform = {k: v for k, v in pms_RBFSampler_fit_transform.it
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: RBFSamplerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.RBFSampler.fit "sklearn.kernel_approximation.RBFSampler.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RBFSampler instance has already been disposed')
     }
@@ -200,7 +247,12 @@ pms_RBFSampler_get_feature_names_out = {k: v for k, v in pms_RBFSampler_get_feat
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: RBFSamplerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RBFSampler instance has already been disposed')
     }
@@ -228,7 +280,12 @@ pms_RBFSampler_set_output = {k: v for k, v in pms_RBFSampler_set_output.items() 
   /**
     Apply the approximate feature map to X.
    */
-  async transform(opts: RBFSamplerTransformOptions): Promise<ArrayLike> {
+  async transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This RBFSampler instance has already been disposed')
     }
@@ -352,75 +409,4 @@ pms_RBFSampler_transform = {k: v for k, v in pms_RBFSampler_transform.items() if
         ._py`attr_RBFSampler_feature_names_in_.tolist() if hasattr(attr_RBFSampler_feature_names_in_, 'tolist') else attr_RBFSampler_feature_names_in_`
     })()
   }
-}
-
-export interface RBFSamplerOptions {
-  /**
-    Parameter of RBF kernel: exp(-gamma \* x^2). If `gamma='scale'` is passed then it uses 1 / (n\_features \* X.var()) as value of gamma.
-
-    @defaultValue `1`
-   */
-  gamma?: 'scale' | number
-
-  /**
-    Number of Monte Carlo samples per original feature. Equals the dimensionality of the computed feature space.
-
-    @defaultValue `100`
-   */
-  n_components?: number
-
-  /**
-    Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface RBFSamplerFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-}
-
-export interface RBFSamplerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface RBFSamplerGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.RBFSampler.fit "sklearn.kernel_approximation.RBFSampler.fit").
-   */
-  input_features?: any
-}
-
-export interface RBFSamplerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface RBFSamplerTransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix
 }

@@ -13,20 +13,32 @@ Read more in the [User Guide](../clustering.html#mini-batch-kmeans).
 ### Signature
 
 ```ts
-new MiniBatchKMeans(opts?: MiniBatchKMeansOptions): MiniBatchKMeans;
+new MiniBatchKMeans(opts?: object): MiniBatchKMeans;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`MiniBatchKMeansOptions`](../interfaces/MiniBatchKMeansOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.batch_size?` | `number` | Size of the mini batches. For faster computations, you can set the `batch\_size` greater than 256 \* number of cores to enable parallelism on all cores.  `Default Value`  `1024` |
+| `opts.compute_labels?` | `boolean` | Compute label assignment and inertia for the complete dataset once the minibatch optimization has converged in fit.  `Default Value`  `true` |
+| `opts.init?` | [`ArrayLike`](../types/ArrayLike.md)[] \| `"k-means++"` \| `"random"` | Method for initialization:  ‘k-means++’ : selects initial cluster centroids using sampling based on an empirical probability distribution of the points’ contribution to the overall inertia. This technique speeds up convergence. The algorithm implemented is “greedy k-means++”. It differs from the vanilla k-means++ by making several trials at each sampling step and choosing the best centroid among them.  ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.  If an array is passed, it should be of shape (n\_clusters, n\_features) and gives the initial centers.  If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.  `Default Value`  `'k-means++'` |
+| `opts.init_size?` | `number` | Number of samples to randomly sample for speeding up the initialization (sometimes at the expense of accuracy): the only algorithm is initialized by running a batch KMeans on a random subset of the data. This needs to be larger than n\_clusters.  If `undefined`, the heuristic is `init\_size \= 3 \* batch\_size` if `3 \* batch\_size < n\_clusters`, else `init\_size \= 3 \* n\_clusters`. |
+| `opts.max_iter?` | `number` | Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics.  `Default Value`  `100` |
+| `opts.max_no_improvement?` | `number` | Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed inertia.  To disable convergence detection based on inertia, set max\_no\_improvement to `undefined`.  `Default Value`  `10` |
+| `opts.n_clusters?` | `number` | The number of clusters to form as well as the number of centroids to generate.  `Default Value`  `8` |
+| `opts.n_init?` | `number` \| `"auto"` | Number of random initializations that are tried. In contrast to KMeans, the algorithm is only run once, using the best of the `n\_init` initializations as measured by inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).  When `n\_init='auto'`, the number of runs depends on the value of init: 3 if using `init='random'`, 1 if using `init='k-means++'`.  `Default Value`  `3` |
+| `opts.random_state?` | `number` | Determines random number generation for centroid initialization and random reassignment. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.reassignment_ratio?` | `number` | Control the fraction of the maximum number of counts for a center to be reassigned. A higher value means that low count centers are more easily reassigned, which means that the model will take longer to converge, but should converge in a better clustering. However, too high a value may cause convergence issues, especially with a small batch size.  `Default Value`  `0.01` |
+| `opts.tol?` | `number` | Control early stopping based on the relative center changes as measured by a smoothed, variance-normalized of the mean center squared position changes. This early stopping heuristics is closer to the one used for the batch variant of the algorithms but induces a slight computational and memory overhead over the inertia heuristic.  To disable convergence detection based on normalized center change, set tol to 0.0 (default).  `Default Value`  `0` |
+| `opts.verbose?` | `number` | Verbosity mode.  `Default Value`  `0` |
 
 ### Returns
 
 [`MiniBatchKMeans`](MiniBatchKMeans.md)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L23)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L23)
 
 ## Properties
 
@@ -34,31 +46,31 @@ Defined in:  [generated/cluster/MiniBatchKMeans.ts:23](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L21)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L20)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L19)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L16)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L17)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L17)
 
 ## Accessors
 
@@ -76,9 +88,9 @@ cluster_centers_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L405)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L597)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L405)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L597)
 
 ### feature\_names\_in\_
 
@@ -94,9 +106,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L555)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L747)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:555](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L555)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L747)
 
 ### inertia\_
 
@@ -112,9 +124,9 @@ inertia_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L455)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L647)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L455)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L647)
 
 ### labels\_
 
@@ -130,9 +142,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L430)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L622)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L430)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L622)
 
 ### n\_features\_in\_
 
@@ -148,9 +160,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L530)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L722)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L530)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L722)
 
 ### n\_iter\_
 
@@ -166,9 +178,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L480)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L672)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L480)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L672)
 
 ### n\_steps\_
 
@@ -184,9 +196,9 @@ n_steps_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L505)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L697)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L505)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L697)
 
 ### py
 
@@ -200,7 +212,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L28)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L124)
 
 #### Signature
 
@@ -218,9 +230,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L32)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L128)
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L28) [generated/cluster/MiniBatchKMeans.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L32)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L124) [generated/cluster/MiniBatchKMeans.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L128)
 
 ## Methods
 
@@ -240,7 +252,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L95)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L191)
 
 ### fit()
 
@@ -249,20 +261,23 @@ Compute the centroids on X by chunking it into mini-batches.
 #### Signature
 
 ```ts
-fit(opts: MiniBatchKMeansFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansFitOptions`](../interfaces/MiniBatchKMeansFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L112)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L208)
 
 ### fit\_predict()
 
@@ -273,20 +288,23 @@ Convenience method; equivalent to calling fit(X) followed by predict(X).
 #### Signature
 
 ```ts
-fit_predict(opts: MiniBatchKMeansFitPredictOptions): Promise<ArrayLike>;
+fit_predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansFitPredictOptions`](../interfaces/MiniBatchKMeansFitPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to transform. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L146)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L257)
 
 ### fit\_transform()
 
@@ -297,20 +315,23 @@ Equivalent to fit(X).transform(X), but more efficiently implemented.
 #### Signature
 
 ```ts
-fit_transform(opts: MiniBatchKMeansFitTransformOptions): Promise<ArrayLike[]>;
+fit_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansFitTransformOptions`](../interfaces/MiniBatchKMeansFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to transform. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L180)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L306)
 
 ### get\_feature\_names\_out()
 
@@ -321,20 +342,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: MiniBatchKMeansGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansGetFeatureNamesOutOptions`](../interfaces/MiniBatchKMeansGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.MiniBatchKMeans.fit "sklearn.cluster.MiniBatchKMeans.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L216)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L355)
 
 ### init()
 
@@ -358,7 +380,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L41)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L137)
 
 ### partial\_fit()
 
@@ -367,20 +389,23 @@ Update k means estimate on a single mini-batch X.
 #### Signature
 
 ```ts
-partial_fit(opts: MiniBatchKMeansPartialFitOptions): Promise<any>;
+partial_fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansPartialFitOptions`](../interfaces/MiniBatchKMeansPartialFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L249)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L391)
 
 ### predict()
 
@@ -391,20 +416,22 @@ In the vector quantization literature, `cluster\_centers\_` is called the code b
 #### Signature
 
 ```ts
-predict(opts: MiniBatchKMeansPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansPredictOptions`](../interfaces/MiniBatchKMeansPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to predict. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L283)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L440)
 
 ### score()
 
@@ -413,20 +440,23 @@ Opposite of the value of X on the K-means objective.
 #### Signature
 
 ```ts
-score(opts: MiniBatchKMeansScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansScoreOptions`](../interfaces/MiniBatchKMeansScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | The weights for each observation in X. If `undefined`, all observations are assigned equal weight. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L313)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L480)
 
 ### set\_output()
 
@@ -437,20 +467,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: MiniBatchKMeansSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansSetOutputOptions`](../interfaces/MiniBatchKMeansSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L347)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L529)
 
 ### transform()
 
@@ -461,17 +492,18 @@ In the new space, each dimension is the distance to the cluster centers. Note th
 #### Signature
 
 ```ts
-transform(opts: MiniBatchKMeansTransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchKMeansTransformOptions`](../interfaces/MiniBatchKMeansTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data to transform. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/MiniBatchKMeans.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L377)
+Defined in:  [generated/cluster/MiniBatchKMeans.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/MiniBatchKMeans.ts#L564)

@@ -22,7 +22,147 @@ export class MiniBatchDictionaryLearning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MiniBatchDictionaryLearningOptions) {
+  constructor(opts?: {
+    /**
+      Number of dictionary elements to extract.
+     */
+    n_components?: number
+
+    /**
+      Sparsity controlling parameter.
+
+      @defaultValue `1`
+     */
+    alpha?: number
+
+    /**
+      Total number of iterations over data batches to perform.
+
+      @defaultValue `1000`
+     */
+    n_iter?: number
+
+    /**
+      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
+     */
+    max_iter?: number
+
+    /**
+      The algorithm used:
+
+      @defaultValue `'lars'`
+     */
+    fit_algorithm?: 'lars' | 'cd'
+
+    /**
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Number of samples in each mini-batch.
+
+      @defaultValue `3`
+     */
+    batch_size?: number
+
+    /**
+      Whether to shuffle the samples before forming batches.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      Initial value of the dictionary for warm restart scenarios.
+     */
+    dict_init?: NDArray[]
+
+    /**
+      Algorithm used to transform the data:
+
+      @defaultValue `'omp'`
+     */
+    transform_algorithm?:
+      | 'lasso_lars'
+      | 'lasso_cd'
+      | 'lars'
+      | 'omp'
+      | 'threshold'
+
+    /**
+      Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
+     */
+    transform_n_nonzero_coefs?: number
+
+    /**
+      If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
+     */
+    transform_alpha?: number
+
+    /**
+      To control the verbosity of the procedure.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+
+    /**
+      Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
+
+      @defaultValue `false`
+     */
+    split_sign?: boolean
+
+    /**
+      Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Whether to enforce positivity when finding the code.
+
+      @defaultValue `false`
+     */
+    positive_code?: boolean
+
+    /**
+      Whether to enforce positivity when finding the dictionary.
+
+      @defaultValue `false`
+     */
+    positive_dict?: boolean
+
+    /**
+      Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_lars'`.
+
+      @defaultValue `1000`
+     */
+    transform_max_iter?: number
+
+    /**
+      A callable that gets invoked at the end of each iteration.
+     */
+    callback?: any
+
+    /**
+      Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not `undefined`.
+
+      To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not `undefined`.
+
+      To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
+
+      @defaultValue `10`
+     */
+    max_no_improvement?: number
+  }) {
     this.id = `MiniBatchDictionaryLearning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -129,7 +269,17 @@ ctor_MiniBatchDictionaryLearning = {k: v for k, v in ctor_MiniBatchDictionaryLea
   /**
     Fit the model from data in X.
    */
-  async fit(opts: MiniBatchDictionaryLearningFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MiniBatchDictionaryLearning instance has already been disposed'
@@ -163,9 +313,22 @@ pms_MiniBatchDictionaryLearning_fit = {k: v for k, v in pms_MiniBatchDictionaryL
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: MiniBatchDictionaryLearningFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This MiniBatchDictionaryLearning instance has already been disposed'
@@ -204,9 +367,12 @@ pms_MiniBatchDictionaryLearning_fit_transform = {k: v for k, v in pms_MiniBatchD
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: MiniBatchDictionaryLearningGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchDictionaryLearning.fit "sklearn.decomposition.MiniBatchDictionaryLearning.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MiniBatchDictionaryLearning instance has already been disposed'
@@ -239,9 +405,22 @@ pms_MiniBatchDictionaryLearning_get_feature_names_out = {k: v for k, v in pms_Mi
   /**
     Update the model using the data in X as a mini-batch.
    */
-  async partial_fit(
-    opts: MiniBatchDictionaryLearningPartialFitOptions
-  ): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The number of iteration on data batches that has been performed before this call to `partial\_fit`. This is optional: if no number is passed, the memory of the object is used.
+     */
+    iter_offset?: number
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MiniBatchDictionaryLearning instance has already been disposed'
@@ -278,9 +457,12 @@ pms_MiniBatchDictionaryLearning_partial_fit = {k: v for k, v in pms_MiniBatchDic
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(
-    opts: MiniBatchDictionaryLearningSetOutputOptions
-  ): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MiniBatchDictionaryLearning instance has already been disposed'
@@ -315,9 +497,12 @@ pms_MiniBatchDictionaryLearning_set_output = {k: v for k, v in pms_MiniBatchDict
 
     Coding method is determined by the object parameter `transform\_algorithm`.
    */
-  async transform(
-    opts: MiniBatchDictionaryLearningTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Test data to be transformed, must have the same number of features as the data used to train the model.
+     */
+    X?: NDArray[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This MiniBatchDictionaryLearning instance has already been disposed'
@@ -562,208 +747,4 @@ pms_MiniBatchDictionaryLearning_transform = {k: v for k, v in pms_MiniBatchDicti
         ._py`attr_MiniBatchDictionaryLearning_n_steps_.tolist() if hasattr(attr_MiniBatchDictionaryLearning_n_steps_, 'tolist') else attr_MiniBatchDictionaryLearning_n_steps_`
     })()
   }
-}
-
-export interface MiniBatchDictionaryLearningOptions {
-  /**
-    Number of dictionary elements to extract.
-   */
-  n_components?: number
-
-  /**
-    Sparsity controlling parameter.
-
-    @defaultValue `1`
-   */
-  alpha?: number
-
-  /**
-    Total number of iterations over data batches to perform.
-
-    @defaultValue `1000`
-   */
-  n_iter?: number
-
-  /**
-    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored.
-   */
-  max_iter?: number
-
-  /**
-    The algorithm used:
-
-    @defaultValue `'lars'`
-   */
-  fit_algorithm?: 'lars' | 'cd'
-
-  /**
-    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Number of samples in each mini-batch.
-
-    @defaultValue `3`
-   */
-  batch_size?: number
-
-  /**
-    Whether to shuffle the samples before forming batches.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    Initial value of the dictionary for warm restart scenarios.
-   */
-  dict_init?: NDArray[]
-
-  /**
-    Algorithm used to transform the data:
-
-    @defaultValue `'omp'`
-   */
-  transform_algorithm?: 'lasso_lars' | 'lasso_cd' | 'lars' | 'omp' | 'threshold'
-
-  /**
-    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
-   */
-  transform_n_nonzero_coefs?: number
-
-  /**
-    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
-   */
-  transform_alpha?: number
-
-  /**
-    To control the verbosity of the procedure.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-
-  /**
-    Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
-
-    @defaultValue `false`
-   */
-  split_sign?: boolean
-
-  /**
-    Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Whether to enforce positivity when finding the code.
-
-    @defaultValue `false`
-   */
-  positive_code?: boolean
-
-  /**
-    Whether to enforce positivity when finding the dictionary.
-
-    @defaultValue `false`
-   */
-  positive_dict?: boolean
-
-  /**
-    Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_lars'`.
-
-    @defaultValue `1000`
-   */
-  transform_max_iter?: number
-
-  /**
-    A callable that gets invoked at the end of each iteration.
-   */
-  callback?: any
-
-  /**
-    Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not `undefined`.
-
-    To disable early stopping based on changes in the dictionary, set `tol` to 0.0.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not `undefined`.
-
-    To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
-
-    @defaultValue `10`
-   */
-  max_no_improvement?: number
-}
-
-export interface MiniBatchDictionaryLearningFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface MiniBatchDictionaryLearningFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface MiniBatchDictionaryLearningGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchDictionaryLearning.fit "sklearn.decomposition.MiniBatchDictionaryLearning.fit").
-   */
-  input_features?: any
-}
-
-export interface MiniBatchDictionaryLearningPartialFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The number of iteration on data batches that has been performed before this call to `partial\_fit`. This is optional: if no number is passed, the memory of the object is used.
-   */
-  iter_offset?: number
-}
-
-export interface MiniBatchDictionaryLearningSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface MiniBatchDictionaryLearningTransformOptions {
-  /**
-    Test data to be transformed, must have the same number of features as the data used to train the model.
-   */
-  X?: NDArray[]
 }

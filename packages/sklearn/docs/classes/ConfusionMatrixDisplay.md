@@ -15,20 +15,22 @@ Read more in the [User Guide](../../visualizations.html#visualizations).
 ### Signature
 
 ```ts
-new ConfusionMatrixDisplay(opts?: ConfusionMatrixDisplayOptions): ConfusionMatrixDisplay;
+new ConfusionMatrixDisplay(opts?: object): ConfusionMatrixDisplay;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`ConfusionMatrixDisplayOptions`](../interfaces/ConfusionMatrixDisplayOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.confusion_matrix?` | [`ArrayLike`](../types/ArrayLike.md)[] | Confusion matrix. |
+| `opts.display_labels?` | [`ArrayLike`](../types/ArrayLike.md) | Display labels for plot. If `undefined`, display labels are set from 0 to `n\_classes \- 1`. |
 
 ### Returns
 
 [`ConfusionMatrixDisplay`](ConfusionMatrixDisplay.md)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L25)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L25)
 
 ## Properties
 
@@ -36,31 +38,31 @@ Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:25](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L23)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L22)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L21)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L18)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L19)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L19)
 
 ## Accessors
 
@@ -78,9 +80,9 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L317)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L532)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L317)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L532)
 
 ### figure\_
 
@@ -96,9 +98,9 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L344)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L344)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L559)
 
 ### im\_
 
@@ -114,9 +116,9 @@ im_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L263)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L478)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L263)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L478)
 
 ### py
 
@@ -130,7 +132,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L30)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40)
 
 #### Signature
 
@@ -148,9 +150,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L34)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L44)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L30) [generated/metrics/ConfusionMatrixDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L34)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L40) [generated/metrics/ConfusionMatrixDisplay.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L44)
 
 ### text\_
 
@@ -166,9 +168,9 @@ text_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L290)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L505)
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L290)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L505)
 
 ## Methods
 
@@ -188,7 +190,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L92)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L102)
 
 ### from\_estimator()
 
@@ -199,20 +201,35 @@ Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
 #### Signature
 
 ```ts
-from_estimator(opts: ConfusionMatrixDisplayFromEstimatorOptions): Promise<any>;
+from_estimator(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ConfusionMatrixDisplayFromEstimatorOptions`](../interfaces/ConfusionMatrixDisplayFromEstimatorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Input values. |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.cmap?` | `string` | Colormap recognized by matplotlib.  `Default Value`  `'viridis'` |
+| `opts.colorbar?` | `boolean` | Whether or not to add a colorbar to the plot.  `Default Value`  `true` |
+| `opts.display_labels?` | [`ArrayLike`](../types/ArrayLike.md) | Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used. |
+| `opts.estimator?` | `any` | Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. |
+| `opts.im_kw?` | `any` | Dict with keywords passed to `matplotlib.pyplot.imshow` call. |
+| `opts.include_values?` | `boolean` | Includes values in confusion matrix.  `Default Value`  `true` |
+| `opts.labels?` | [`ArrayLike`](../types/ArrayLike.md) | List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order. |
+| `opts.normalize?` | `"all"` \| `"true"` \| `"pred"` | Either to normalize the counts display in the matrix: |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.text_kw?` | `any` | Dict with keywords passed to `matplotlib.pyplot.text` call. |
+| `opts.values_format?` | `string` | Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter. |
+| `opts.xticks_rotation?` | `number` \| `"vertical"` \| `"horizontal"` | Rotation of xtick labels.  `Default Value`  `'horizontal'` |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L111)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L121)
 
 ### from\_predictions()
 
@@ -223,20 +240,34 @@ Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
 #### Signature
 
 ```ts
-from_predictions(opts: ConfusionMatrixDisplayFromPredictionsOptions): Promise<any>;
+from_predictions(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ConfusionMatrixDisplayFromPredictionsOptions`](../interfaces/ConfusionMatrixDisplayFromPredictionsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.cmap?` | `string` | Colormap recognized by matplotlib.  `Default Value`  `'viridis'` |
+| `opts.colorbar?` | `boolean` | Whether or not to add a colorbar to the plot.  `Default Value`  `true` |
+| `opts.display_labels?` | [`ArrayLike`](../types/ArrayLike.md) | Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used. |
+| `opts.im_kw?` | `any` | Dict with keywords passed to `matplotlib.pyplot.imshow` call. |
+| `opts.include_values?` | `boolean` | Includes values in confusion matrix.  `Default Value`  `true` |
+| `opts.labels?` | [`ArrayLike`](../types/ArrayLike.md) | List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order. |
+| `opts.normalize?` | `"all"` \| `"true"` \| `"pred"` | Either to normalize the counts display in the matrix: |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.text_kw?` | `any` | Dict with keywords passed to `matplotlib.pyplot.text` call. |
+| `opts.values_format?` | `string` | Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter. |
+| `opts.xticks_rotation?` | `number` \| `"vertical"` \| `"horizontal"` | Rotation of xtick labels.  `Default Value`  `'horizontal'` |
+| `opts.y_pred?` | [`ArrayLike`](../types/ArrayLike.md) | The predicted labels given by the method `predict` of an classifier. |
+| `opts.y_true?` | [`ArrayLike`](../types/ArrayLike.md) | True labels. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L170)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L261)
 
 ### init()
 
@@ -260,7 +291,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L43)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L53)
 
 ### plot()
 
@@ -269,17 +300,25 @@ Plot visualization.
 #### Signature
 
 ```ts
-plot(opts: ConfusionMatrixDisplayPlotOptions): Promise<any>;
+plot(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ConfusionMatrixDisplayPlotOptions`](../interfaces/ConfusionMatrixDisplayPlotOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.cmap?` | `string` | Colormap recognized by matplotlib.  `Default Value`  `'viridis'` |
+| `opts.colorbar?` | `boolean` | Whether or not to add a colorbar to the plot.  `Default Value`  `true` |
+| `opts.im_kw?` | `any` | Dict with keywords passed to `matplotlib.pyplot.imshow` call. |
+| `opts.include_values?` | `boolean` | Includes values in confusion matrix.  `Default Value`  `true` |
+| `opts.text_kw?` | `any` | Dict with keywords passed to `matplotlib.pyplot.text` call. |
+| `opts.values_format?` | `string` | Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter. |
+| `opts.xticks_rotation?` | `number` \| `"vertical"` \| `"horizontal"` | Rotation of xtick labels.  `Default Value`  `'horizontal'` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L227)
+Defined in:  [generated/metrics/ConfusionMatrixDisplay.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/ConfusionMatrixDisplay.ts#L394)

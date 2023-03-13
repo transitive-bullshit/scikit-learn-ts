@@ -32,7 +32,35 @@ export class TfidfTransformer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: TfidfTransformerOptions) {
+  constructor(opts?: {
+    /**
+      Each output row will have unit norm, either:
+
+      @defaultValue `'l2'`
+     */
+    norm?: 'l1' | 'l2'
+
+    /**
+      Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
+
+      @defaultValue `true`
+     */
+    use_idf?: boolean
+
+    /**
+      Smooth idf weights by adding one to document frequencies, as if an extra document was seen containing every term in the collection exactly once. Prevents zero divisions.
+
+      @defaultValue `true`
+     */
+    smooth_idf?: boolean
+
+    /**
+      Apply sublinear tf scaling, i.e. replace tf with 1 + log(tf).
+
+      @defaultValue `false`
+     */
+    sublinear_tf?: boolean
+  }) {
     this.id = `TfidfTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -111,7 +139,17 @@ ctor_TfidfTransformer = {k: v for k, v in ctor_TfidfTransformer.items() if v is 
   /**
     Learn the idf vector (global term weights).
    */
-  async fit(opts: TfidfTransformerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      A matrix of term/token counts.
+     */
+    X?: any
+
+    /**
+      This parameter is not needed to compute tf-idf.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TfidfTransformer instance has already been disposed'
@@ -143,9 +181,22 @@ pms_TfidfTransformer_fit = {k: v for k, v in pms_TfidfTransformer_fit.items() if
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: TfidfTransformerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This TfidfTransformer instance has already been disposed'
@@ -181,9 +232,12 @@ pms_TfidfTransformer_fit_transform = {k: v for k, v in pms_TfidfTransformer_fit_
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: TfidfTransformerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TfidfTransformer instance has already been disposed'
@@ -218,7 +272,12 @@ pms_TfidfTransformer_get_feature_names_out = {k: v for k, v in pms_TfidfTransfor
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: TfidfTransformerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TfidfTransformer instance has already been disposed'
@@ -248,9 +307,19 @@ pms_TfidfTransformer_set_output = {k: v for k, v in pms_TfidfTransformer_set_out
   /**
     Transform a count matrix to a tf or tf-idf representation.
    */
-  async transform(
-    opts: TfidfTransformerTransformOptions
-  ): Promise<SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      A matrix of term/token counts.
+     */
+    X?: any
+
+    /**
+      Whether to copy X and operate on the copy or perform in-place operations.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This TfidfTransformer instance has already been disposed'
@@ -330,91 +399,4 @@ pms_TfidfTransformer_transform = {k: v for k, v in pms_TfidfTransformer_transfor
         ._py`attr_TfidfTransformer_feature_names_in_.tolist() if hasattr(attr_TfidfTransformer_feature_names_in_, 'tolist') else attr_TfidfTransformer_feature_names_in_`
     })()
   }
-}
-
-export interface TfidfTransformerOptions {
-  /**
-    Each output row will have unit norm, either:
-
-    @defaultValue `'l2'`
-   */
-  norm?: 'l1' | 'l2'
-
-  /**
-    Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
-
-    @defaultValue `true`
-   */
-  use_idf?: boolean
-
-  /**
-    Smooth idf weights by adding one to document frequencies, as if an extra document was seen containing every term in the collection exactly once. Prevents zero divisions.
-
-    @defaultValue `true`
-   */
-  smooth_idf?: boolean
-
-  /**
-    Apply sublinear tf scaling, i.e. replace tf with 1 + log(tf).
-
-    @defaultValue `false`
-   */
-  sublinear_tf?: boolean
-}
-
-export interface TfidfTransformerFitOptions {
-  /**
-    A matrix of term/token counts.
-   */
-  X?: any
-
-  /**
-    This parameter is not needed to compute tf-idf.
-   */
-  y?: any
-}
-
-export interface TfidfTransformerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface TfidfTransformerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface TfidfTransformerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface TfidfTransformerTransformOptions {
-  /**
-    A matrix of term/token counts.
-   */
-  X?: any
-
-  /**
-    Whether to copy X and operate on the copy or perform in-place operations.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
 }

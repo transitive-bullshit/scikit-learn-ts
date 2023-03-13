@@ -20,7 +20,7 @@ export class FitFailedWarning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: FitFailedWarningOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `FitFailedWarning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,9 +97,7 @@ ctor_FitFailedWarning = {k: v for k, v in ctor_FitFailedWarning.items() if v is 
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(
-    opts: FitFailedWarningWithTracebackOptions
-  ): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This FitFailedWarning instance has already been disposed'
@@ -126,9 +124,3 @@ pms_FitFailedWarning_with_traceback = {k: v for k, v in pms_FitFailedWarning_wit
       ._py`res_FitFailedWarning_with_traceback.tolist() if hasattr(res_FitFailedWarning_with_traceback, 'tolist') else res_FitFailedWarning_with_traceback`
   }
 }
-
-export interface FitFailedWarningOptions {
-  args?: any
-}
-
-export interface FitFailedWarningWithTracebackOptions {}

@@ -22,7 +22,118 @@ export class ExtraTreesRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ExtraTreesRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The number of trees in the forest.
+
+      @defaultValue `100`
+     */
+    n_estimators?: number
+
+    /**
+      The function to measure the quality of a split. Supported criteria are “squared\_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman\_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute\_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in Poisson deviance to find splits. Training using “absolute\_error” is significantly slower than when using “squared\_error”.
+
+      @defaultValue `'squared_error'`
+     */
+    criterion?: 'squared_error' | 'absolute_error' | 'friedman_mse' | 'poisson'
+
+    /**
+      The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+     */
+    max_depth?: number
+
+    /**
+      The minimum number of samples required to split an internal node:
+
+      @defaultValue `2`
+     */
+    min_samples_split?: number
+
+    /**
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+
+      @defaultValue `1`
+     */
+    min_samples_leaf?: number
+
+    /**
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
+
+      @defaultValue `0`
+     */
+    min_weight_fraction_leaf?: number
+
+    /**
+      The number of features to consider when looking for the best split:
+
+      @defaultValue `1`
+     */
+    max_features?: 'sqrt' | 'log2' | number | number
+
+    /**
+      Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+     */
+    max_leaf_nodes?: number
+
+    /**
+      A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
+
+      The weighted impurity decrease equation is the following:
+
+      @defaultValue `0`
+     */
+    min_impurity_decrease?: number
+
+    /**
+      Whether bootstrap samples are used when building trees. If `false`, the whole dataset is used to build each tree.
+
+      @defaultValue `false`
+     */
+    bootstrap?: boolean
+
+    /**
+      Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=`true`.
+
+      @defaultValue `false`
+     */
+    oob_score?: boolean
+
+    /**
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesRegressor.fit "sklearn.ensemble.ExtraTreesRegressor.fit"), [`predict`](#sklearn.ensemble.ExtraTreesRegressor.predict "sklearn.ensemble.ExtraTreesRegressor.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesRegressor.decision_path "sklearn.ensemble.ExtraTreesRegressor.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesRegressor.apply "sklearn.ensemble.ExtraTreesRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Controls 3 sources of randomness:
+     */
+    random_state?: number
+
+    /**
+      Controls the verbosity when fitting and predicting.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
+
+      @defaultValue `0`
+     */
+    ccp_alpha?: any
+
+    /**
+      If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
+     */
+    max_samples?: number
+  }) {
     this.id = `ExtraTreesRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -123,7 +234,12 @@ ctor_ExtraTreesRegressor = {k: v for k, v in ctor_ExtraTreesRegressor.items() if
   /**
     Apply trees in the forest to X, return leaf indices.
    */
-  async apply(opts: ExtraTreesRegressorApplyOptions): Promise<NDArray[]> {
+  async apply(opts: {
+    /**
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This ExtraTreesRegressor instance has already been disposed'
@@ -153,9 +269,12 @@ pms_ExtraTreesRegressor_apply = {k: v for k, v in pms_ExtraTreesRegressor_apply.
   /**
     Return the decision path in the forest.
    */
-  async decision_path(
-    opts: ExtraTreesRegressorDecisionPathOptions
-  ): Promise<SparseMatrix[]> {
+  async decision_path(opts: {
+    /**
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This ExtraTreesRegressor instance has already been disposed'
@@ -187,7 +306,22 @@ pms_ExtraTreesRegressor_decision_path = {k: v for k, v in pms_ExtraTreesRegresso
   /**
     Build a forest of trees from the training set (X, y).
    */
-  async fit(opts: ExtraTreesRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ExtraTreesRegressor instance has already been disposed'
@@ -223,7 +357,12 @@ pms_ExtraTreesRegressor_fit = {k: v for k, v in pms_ExtraTreesRegressor_fit.item
 
     The predicted regression target of an input sample is computed as the mean predicted regression targets of the trees in the forest.
    */
-  async predict(opts: ExtraTreesRegressorPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This ExtraTreesRegressor instance has already been disposed'
@@ -255,7 +394,22 @@ pms_ExtraTreesRegressor_predict = {k: v for k, v in pms_ExtraTreesRegressor_pred
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: ExtraTreesRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This ExtraTreesRegressor instance has already been disposed'
@@ -474,172 +628,4 @@ pms_ExtraTreesRegressor_score = {k: v for k, v in pms_ExtraTreesRegressor_score.
         ._py`attr_ExtraTreesRegressor_oob_prediction_.tolist() if hasattr(attr_ExtraTreesRegressor_oob_prediction_, 'tolist') else attr_ExtraTreesRegressor_oob_prediction_`
     })()
   }
-}
-
-export interface ExtraTreesRegressorOptions {
-  /**
-    The number of trees in the forest.
-
-    @defaultValue `100`
-   */
-  n_estimators?: number
-
-  /**
-    The function to measure the quality of a split. Supported criteria are “squared\_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node, “friedman\_mse”, which uses mean squared error with Friedman’s improvement score for potential splits, “absolute\_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node, and “poisson” which uses reduction in Poisson deviance to find splits. Training using “absolute\_error” is significantly slower than when using “squared\_error”.
-
-    @defaultValue `'squared_error'`
-   */
-  criterion?: 'squared_error' | 'absolute_error' | 'friedman_mse' | 'poisson'
-
-  /**
-    The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
-   */
-  max_depth?: number
-
-  /**
-    The minimum number of samples required to split an internal node:
-
-    @defaultValue `2`
-   */
-  min_samples_split?: number
-
-  /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
-
-    @defaultValue `1`
-   */
-  min_samples_leaf?: number
-
-  /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
-
-    @defaultValue `0`
-   */
-  min_weight_fraction_leaf?: number
-
-  /**
-    The number of features to consider when looking for the best split:
-
-    @defaultValue `1`
-   */
-  max_features?: 'sqrt' | 'log2' | number | number
-
-  /**
-    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
-   */
-  max_leaf_nodes?: number
-
-  /**
-    A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
-
-    The weighted impurity decrease equation is the following:
-
-    @defaultValue `0`
-   */
-  min_impurity_decrease?: number
-
-  /**
-    Whether bootstrap samples are used when building trees. If `false`, the whole dataset is used to build each tree.
-
-    @defaultValue `false`
-   */
-  bootstrap?: boolean
-
-  /**
-    Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=`true`.
-
-    @defaultValue `false`
-   */
-  oob_score?: boolean
-
-  /**
-    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesRegressor.fit "sklearn.ensemble.ExtraTreesRegressor.fit"), [`predict`](#sklearn.ensemble.ExtraTreesRegressor.predict "sklearn.ensemble.ExtraTreesRegressor.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesRegressor.decision_path "sklearn.ensemble.ExtraTreesRegressor.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesRegressor.apply "sklearn.ensemble.ExtraTreesRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Controls 3 sources of randomness:
-   */
-  random_state?: number
-
-  /**
-    Controls the verbosity when fitting and predicting.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
-
-    @defaultValue `0`
-   */
-  ccp_alpha?: any
-
-  /**
-    If bootstrap is `true`, the number of samples to draw from X to train each base estimator.
-   */
-  max_samples?: number
-}
-
-export interface ExtraTreesRegressorApplyOptions {
-  /**
-    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface ExtraTreesRegressorDecisionPathOptions {
-  /**
-    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface ExtraTreesRegressorFitOptions {
-  /**
-    The training input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface ExtraTreesRegressorPredictOptions {
-  /**
-    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface ExtraTreesRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

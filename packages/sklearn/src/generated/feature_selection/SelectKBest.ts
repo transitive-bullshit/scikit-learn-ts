@@ -20,7 +20,19 @@ export class SelectKBest {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SelectKBestOptions) {
+  constructor(opts?: {
+    /**
+      Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
+     */
+    score_func?: any
+
+    /**
+      Number of top features to select. The “all” option bypasses selection, for use in a parameter search.
+
+      @defaultValue `10`
+     */
+    k?: number | 'all'
+  }) {
     this.id = `SelectKBest${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -95,7 +107,17 @@ ctor_SelectKBest = {k: v for k, v in ctor_SelectKBest.items() if v is not None}`
   /**
     Run score function on (X, y) and get the appropriate features.
    */
-  async fit(opts: SelectKBestFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
     }
@@ -127,7 +149,22 @@ pms_SelectKBest_fit = {k: v for k, v in pms_SelectKBest_fit.items() if v is not 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: SelectKBestFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
     }
@@ -159,9 +196,12 @@ pms_SelectKBest_fit_transform = {k: v for k, v in pms_SelectKBest_fit_transform.
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: SelectKBestGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
     }
@@ -192,7 +232,14 @@ pms_SelectKBest_get_feature_names_out = {k: v for k, v in pms_SelectKBest_get_fe
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(opts: SelectKBestGetSupportOptions): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
     }
@@ -220,9 +267,12 @@ pms_SelectKBest_get_support = {k: v for k, v in pms_SelectKBest_get_support.item
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(
-    opts: SelectKBestInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
     }
@@ -252,7 +302,12 @@ pms_SelectKBest_inverse_transform = {k: v for k, v in pms_SelectKBest_inverse_tr
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SelectKBestSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
     }
@@ -280,7 +335,12 @@ pms_SelectKBest_set_output = {k: v for k, v in pms_SelectKBest_set_output.items(
   /**
     Reduce X to the selected features.
    */
-  async transform(opts: SelectKBestTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectKBest instance has already been disposed')
     }
@@ -400,84 +460,4 @@ pms_SelectKBest_transform = {k: v for k, v in pms_SelectKBest_transform.items() 
         ._py`attr_SelectKBest_feature_names_in_.tolist() if hasattr(attr_SelectKBest_feature_names_in_, 'tolist') else attr_SelectKBest_feature_names_in_`
     })()
   }
-}
-
-export interface SelectKBestOptions {
-  /**
-    Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
-   */
-  score_func?: any
-
-  /**
-    Number of top features to select. The “all” option bypasses selection, for use in a parameter search.
-
-    @defaultValue `10`
-   */
-  k?: number | 'all'
-}
-
-export interface SelectKBestFitOptions {
-  /**
-    The training input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-}
-
-export interface SelectKBestFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SelectKBestGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface SelectKBestGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface SelectKBestInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface SelectKBestSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SelectKBestTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

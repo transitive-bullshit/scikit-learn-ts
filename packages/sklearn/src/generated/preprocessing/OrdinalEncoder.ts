@@ -22,7 +22,36 @@ export class OrdinalEncoder {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OrdinalEncoderOptions) {
+  constructor(opts?: {
+    /**
+      Categories (unique values) per feature:
+
+      @defaultValue `'auto'`
+     */
+    categories?: 'auto'
+
+    /**
+      Desired dtype of output.
+     */
+    dtype?: any
+
+    /**
+      When set to ‘error’ an error will be raised in case an unknown categorical feature is present during transform. When set to ‘use\_encoded\_value’, the encoded value of unknown categories will be set to the value given for the parameter `unknown\_value`. In [`inverse\_transform`](#sklearn.preprocessing.OrdinalEncoder.inverse_transform "sklearn.preprocessing.OrdinalEncoder.inverse_transform"), an unknown category will be denoted as `undefined`.
+
+      @defaultValue `'error'`
+     */
+    handle_unknown?: 'error' | 'use_encoded_value'
+
+    /**
+      When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this parameter is required and will set the encoded value of unknown categories. It has to be distinct from the values used to encode any of the categories in `fit`. If set to np.nan, the `dtype` parameter must be a float dtype.
+     */
+    unknown_value?: number
+
+    /**
+      Encoded value of missing categories. If set to `np.nan`, then the `dtype` parameter must be a float dtype.
+     */
+    encoded_missing_value?: number
+  }) {
     this.id = `OrdinalEncoder${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +132,17 @@ ctor_OrdinalEncoder = {k: v for k, v in ctor_OrdinalEncoder.items() if v is not 
   /**
     Fit the OrdinalEncoder to X.
    */
-  async fit(opts: OrdinalEncoderFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data to determine the categories of each feature.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OrdinalEncoder instance has already been disposed')
     }
@@ -133,7 +172,22 @@ pms_OrdinalEncoder_fit = {k: v for k, v in pms_OrdinalEncoder_fit.items() if v i
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: OrdinalEncoderFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This OrdinalEncoder instance has already been disposed')
     }
@@ -165,9 +219,12 @@ pms_OrdinalEncoder_fit_transform = {k: v for k, v in pms_OrdinalEncoder_fit_tran
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: OrdinalEncoderGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OrdinalEncoder instance has already been disposed')
     }
@@ -198,9 +255,12 @@ pms_OrdinalEncoder_get_feature_names_out = {k: v for k, v in pms_OrdinalEncoder_
   /**
     Convert the data back to the original representation.
    */
-  async inverse_transform(
-    opts: OrdinalEncoderInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      The transformed data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This OrdinalEncoder instance has already been disposed')
     }
@@ -232,7 +292,12 @@ pms_OrdinalEncoder_inverse_transform = {k: v for k, v in pms_OrdinalEncoder_inve
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: OrdinalEncoderSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OrdinalEncoder instance has already been disposed')
     }
@@ -260,7 +325,12 @@ pms_OrdinalEncoder_set_output = {k: v for k, v in pms_OrdinalEncoder_set_output.
   /**
     Transform X to ordinal codes.
    */
-  async transform(opts: OrdinalEncoderTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      The data to encode.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This OrdinalEncoder instance has already been disposed')
     }
@@ -359,92 +429,4 @@ pms_OrdinalEncoder_transform = {k: v for k, v in pms_OrdinalEncoder_transform.it
         ._py`attr_OrdinalEncoder_feature_names_in_.tolist() if hasattr(attr_OrdinalEncoder_feature_names_in_, 'tolist') else attr_OrdinalEncoder_feature_names_in_`
     })()
   }
-}
-
-export interface OrdinalEncoderOptions {
-  /**
-    Categories (unique values) per feature:
-
-    @defaultValue `'auto'`
-   */
-  categories?: 'auto'
-
-  /**
-    Desired dtype of output.
-   */
-  dtype?: any
-
-  /**
-    When set to ‘error’ an error will be raised in case an unknown categorical feature is present during transform. When set to ‘use\_encoded\_value’, the encoded value of unknown categories will be set to the value given for the parameter `unknown\_value`. In [`inverse\_transform`](#sklearn.preprocessing.OrdinalEncoder.inverse_transform "sklearn.preprocessing.OrdinalEncoder.inverse_transform"), an unknown category will be denoted as `undefined`.
-
-    @defaultValue `'error'`
-   */
-  handle_unknown?: 'error' | 'use_encoded_value'
-
-  /**
-    When the parameter handle\_unknown is set to ‘use\_encoded\_value’, this parameter is required and will set the encoded value of unknown categories. It has to be distinct from the values used to encode any of the categories in `fit`. If set to np.nan, the `dtype` parameter must be a float dtype.
-   */
-  unknown_value?: number
-
-  /**
-    Encoded value of missing categories. If set to `np.nan`, then the `dtype` parameter must be a float dtype.
-   */
-  encoded_missing_value?: number
-}
-
-export interface OrdinalEncoderFitOptions {
-  /**
-    The data to determine the categories of each feature.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
-   */
-  y?: any
-}
-
-export interface OrdinalEncoderFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface OrdinalEncoderGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface OrdinalEncoderInverseTransformOptions {
-  /**
-    The transformed data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface OrdinalEncoderSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface OrdinalEncoderTransformOptions {
-  /**
-    The data to encode.
-   */
-  X?: ArrayLike[]
 }

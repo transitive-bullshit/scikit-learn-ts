@@ -17,20 +17,26 @@ Read more in the [User Guide](../semi_supervised.html#self-training).
 ### Signature
 
 ```ts
-new SelfTrainingClassifier(opts?: SelfTrainingClassifierOptions): SelfTrainingClassifier;
+new SelfTrainingClassifier(opts?: object): SelfTrainingClassifier;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`SelfTrainingClassifierOptions`](../interfaces/SelfTrainingClassifierOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.base_estimator?` | `any` | An estimator object implementing `fit` and `predict\_proba`. Invoking the `fit` method will fit a clone of the passed estimator, which will be stored in the `base\_estimator\_` attribute. |
+| `opts.criterion?` | `"threshold"` \| `"k_best"` | The selection criterion used to select which labels to add to the training set. If `'threshold'`, pseudo-labels with prediction probabilities above `threshold` are added to the dataset. If `'k\_best'`, the `k\_best` pseudo-labels with highest prediction probabilities are added to the dataset. When using the ‘threshold’ criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.  `Default Value`  `'threshold'` |
+| `opts.k_best?` | `number` | The amount of samples to add in each iteration. Only used when `criterion='k\_best'`.  `Default Value`  `10` |
+| `opts.max_iter?` | `number` | Maximum number of iterations allowed. Should be greater than or equal to 0. If it is `undefined`, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.  `Default Value`  `10` |
+| `opts.threshold?` | `number` | The decision threshold for use with `criterion='threshold'`. Should be in \[0, 1). When using the `'threshold'` criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.  `Default Value`  `0.75` |
+| `opts.verbose?` | `boolean` | Enable verbose output.  `Default Value`  `false` |
 
 ### Returns
 
 [`SelfTrainingClassifier`](SelfTrainingClassifier.md)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L27)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L27)
 
 ## Properties
 
@@ -38,31 +44,31 @@ Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:27](https://g
 
 > `boolean`  = `false`
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L25)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L24)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L23)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L20)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L21)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L21)
 
 ## Accessors
 
@@ -80,9 +86,9 @@ base_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L311)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L385)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:311](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L311)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L385)
 
 ### classes\_
 
@@ -98,9 +104,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L338)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L412)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L338)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L412)
 
 ### feature\_names\_in\_
 
@@ -116,9 +122,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L446)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L520)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L446)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L520)
 
 ### labeled\_iter\_
 
@@ -134,9 +140,9 @@ labeled_iter_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L392)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L466)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L392)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L466)
 
 ### n\_features\_in\_
 
@@ -152,9 +158,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L419)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L493)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L419)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L493)
 
 ### n\_iter\_
 
@@ -170,9 +176,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L473)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L547)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L473)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L547)
 
 ### py
 
@@ -186,7 +192,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L32)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L72)
 
 #### Signature
 
@@ -204,9 +210,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L36)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L76)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L32) [generated/semi\_supervised/SelfTrainingClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L36)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L72) [generated/semi\_supervised/SelfTrainingClassifier.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L76)
 
 ### termination\_condition\_
 
@@ -222,9 +228,9 @@ termination_condition_(): Promise<"max_iter" | "no_change" | "all_labeled">;
 
 `Promise`\<`"max_iter"` \| `"no_change"` \| `"all_labeled"`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L500)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L574)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L500)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L574)
 
 ### transduction\_
 
@@ -240,9 +246,9 @@ transduction_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L365)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L439)
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L365)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L439)
 
 ## Methods
 
@@ -253,20 +259,21 @@ Call decision function of the `base\_estimator`.
 #### Signature
 
 ```ts
-decision_function(opts: SelfTrainingClassifierDecisionFunctionOptions): Promise<ArrayLike[]>;
+decision_function(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelfTrainingClassifierDecisionFunctionOptions`](../interfaces/SelfTrainingClassifierDecisionFunctionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Array representing the data. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L110)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L150)
 
 ### dispose()
 
@@ -284,7 +291,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L93)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L133)
 
 ### fit()
 
@@ -293,20 +300,22 @@ Fit self-training classifier using `X`, `y` as training data.
 #### Signature
 
 ```ts
-fit(opts: SelfTrainingClassifierFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelfTrainingClassifierFitOptions`](../interfaces/SelfTrainingClassifierFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Array representing the data. |
+| `opts.y?` | `any` | Array representing the labels. Unlabeled samples should have the label -1. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L145)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L188)
 
 ### init()
 
@@ -330,7 +339,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L45)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L85)
 
 ### predict()
 
@@ -339,20 +348,21 @@ Predict the classes of `X`.
 #### Signature
 
 ```ts
-predict(opts: SelfTrainingClassifierPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelfTrainingClassifierPredictOptions`](../interfaces/SelfTrainingClassifierPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Array representing the data. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L177)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L230)
 
 ### predict\_log\_proba()
 
@@ -361,20 +371,21 @@ Predict log probability for each possible outcome.
 #### Signature
 
 ```ts
-predict_log_proba(opts: SelfTrainingClassifierPredictLogProbaOptions): Promise<ArrayLike[]>;
+predict_log_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelfTrainingClassifierPredictLogProbaOptions`](../interfaces/SelfTrainingClassifierPredictLogProbaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Array representing the data. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L209)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L267)
 
 ### predict\_proba()
 
@@ -383,20 +394,21 @@ Predict probability for each possible outcome.
 #### Signature
 
 ```ts
-predict_proba(opts: SelfTrainingClassifierPredictProbaOptions): Promise<ArrayLike[]>;
+predict_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelfTrainingClassifierPredictProbaOptions`](../interfaces/SelfTrainingClassifierPredictProbaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Array representing the data. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L244)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L305)
 
 ### score()
 
@@ -405,17 +417,19 @@ Call score on the `base\_estimator`.
 #### Signature
 
 ```ts
-score(opts: SelfTrainingClassifierScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelfTrainingClassifierScoreOptions`](../interfaces/SelfTrainingClassifierScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Array representing the data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Array representing the labels. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L279)
+Defined in:  [generated/semi\_supervised/SelfTrainingClassifier.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L343)

@@ -15,20 +15,27 @@ Read more in the [User Guide](../linear_model.html#generalized-linear-models).
 ### Signature
 
 ```ts
-new PoissonRegressor(opts?: PoissonRegressorOptions): PoissonRegressor;
+new PoissonRegressor(opts?: object): PoissonRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`PoissonRegressorOptions`](../interfaces/PoissonRegressorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | Constant that multiplies the L2 penalty term and determines the regularization strength. `alpha \= 0` is equivalent to unpenalized GLMs. In this case, the design matrix `X` must have full column rank (no collinearities). Values of `alpha` must be in the range `\[0.0, inf)`.  `Default Value`  `1` |
+| `opts.fit_intercept?` | `boolean` | Specifies if a constant (a.k.a. bias or intercept) should be added to the linear predictor (`X @ coef + intercept`).  `Default Value`  `true` |
+| `opts.max_iter?` | `number` | The maximal number of iterations for the solver. Values must be in the range `\[1, inf)`.  `Default Value`  `100` |
+| `opts.solver?` | `"lbfgs"` \| `"newton-cholesky"` | Algorithm to use in the optimization problem:  `Default Value`  `'lbfgs'` |
+| `opts.tol?` | `number` | Stopping criterion. For the lbfgs solver, the iteration will stop when `max{\|g\_j\|, j \= 1, ..., d} <= tol` where `g\_j` is the j-th component of the gradient (derivative) of the objective function. Values must be in the range `(0.0, inf)`.  `Default Value`  `0.0001` |
+| `opts.verbose?` | `number` | For the lbfgs solver set verbose to any positive number for verbosity. Values must be in the range `\[0, inf)`.  `Default Value`  `0` |
+| `opts.warm_start?` | `boolean` | If set to `true`, reuse the solution of the previous call to `fit` as initialization for `coef\_` and `intercept\_` .  `Default Value`  `false` |
 
 ### Returns
 
 [`PoissonRegressor`](PoissonRegressor.md)
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L25)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +43,31 @@ Defined in:  [generated/linear\_model/PoissonRegressor.ts:25](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L23)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L22)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L21)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L18)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L19)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,9 +85,9 @@ coef_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L210)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L294)
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L210)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L294)
 
 ### feature\_names\_in\_
 
@@ -96,9 +103,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L291)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L375)
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L291)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L375)
 
 ### intercept\_
 
@@ -114,9 +121,9 @@ intercept_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L237)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L321)
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L237)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L321)
 
 ### n\_features\_in\_
 
@@ -132,9 +139,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L264)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L348)
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L264)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L348)
 
 ### n\_iter\_
 
@@ -150,9 +157,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L318)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L402)
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L318)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L402)
 
 ### py
 
@@ -166,7 +173,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L30)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L79)
 
 #### Signature
 
@@ -184,9 +191,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L34)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L83)
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L30) [generated/linear\_model/PoissonRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L34)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L79) [generated/linear\_model/PoissonRegressor.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L83)
 
 ## Methods
 
@@ -206,7 +213,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L91)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L140)
 
 ### fit()
 
@@ -215,20 +222,23 @@ Fit a Generalized Linear Model.
 #### Signature
 
 ```ts
-fit(opts: PoissonRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PoissonRegressorFitOptions`](../interfaces/PoissonRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L108)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L157)
 
 ### init()
 
@@ -252,7 +262,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L43)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L92)
 
 ### predict()
 
@@ -261,20 +271,21 @@ Predict using GLM with feature matrix X.
 #### Signature
 
 ```ts
-predict(opts: PoissonRegressorPredictOptions): Promise<any[]>;
+predict(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PoissonRegressorPredictOptions`](../interfaces/PoissonRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Samples. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L142)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L206)
 
 ### score()
 
@@ -287,17 +298,20 @@ D^2 is defined as \\(D^2 = 1-\\frac{D(y\_{true},y\_{pred})}{D\_{null}}\\), \\(D\
 #### Signature
 
 ```ts
-score(opts: PoissonRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PoissonRegressorScoreOptions`](../interfaces/PoissonRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Test samples. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values of target. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/PoissonRegressor.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L176)
+Defined in:  [generated/linear\_model/PoissonRegressor.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L245)

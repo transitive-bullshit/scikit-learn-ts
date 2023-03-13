@@ -22,7 +22,24 @@ export class DummyRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DummyRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Strategy to use to generate predictions.
+
+      @defaultValue `'mean'`
+     */
+    strategy?: 'mean' | 'median' | 'quantile' | 'constant'
+
+    /**
+      The explicit constant as predicted by the “constant” strategy. This parameter is useful only for the “constant” strategy.
+     */
+    constant?: number | ArrayLike
+
+    /**
+      The quantile to predict using the “quantile” strategy. A quantile of 0.5 corresponds to the median, while 0.0 to the minimum and 1.0 to the maximum.
+     */
+    quantile?: number
+  }) {
     this.id = `DummyRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +116,22 @@ ctor_DummyRegressor = {k: v for k, v in ctor_DummyRegressor.items() if v is not 
   /**
     Fit the random regressor.
    */
-  async fit(opts: DummyRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DummyRegressor instance has already been disposed')
     }
@@ -131,7 +163,19 @@ pms_DummyRegressor_fit = {k: v for k, v in pms_DummyRegressor_fit.items() if v i
   /**
     Perform classification on test vectors X.
    */
-  async predict(opts: DummyRegressorPredictOptions): Promise<ArrayLike> {
+  async predict(opts: {
+    /**
+      Test data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Whether to return the standard deviation of posterior prediction. All zeros in this case.
+
+      @defaultValue `false`
+     */
+    return_std?: boolean
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This DummyRegressor instance has already been disposed')
     }
@@ -163,7 +207,22 @@ pms_DummyRegressor_predict = {k: v for k, v in pms_DummyRegressor_predict.items(
 
     The coefficient R^2 is defined as `(1 \- u/v)`, where `u` is the residual sum of squares `((y\_true \- y\_pred) \*\* 2).sum()` and `v` is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of y, disregarding the input features, would get a R^2 score of 0.0.
    */
-  async score(opts: DummyRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since `DummyRegressor` operates independently of the sampled observations.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for X.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This DummyRegressor instance has already been disposed')
     }
@@ -241,71 +300,4 @@ pms_DummyRegressor_score = {k: v for k, v in pms_DummyRegressor_score.items() if
         ._py`attr_DummyRegressor_n_outputs_.tolist() if hasattr(attr_DummyRegressor_n_outputs_, 'tolist') else attr_DummyRegressor_n_outputs_`
     })()
   }
-}
-
-export interface DummyRegressorOptions {
-  /**
-    Strategy to use to generate predictions.
-
-    @defaultValue `'mean'`
-   */
-  strategy?: 'mean' | 'median' | 'quantile' | 'constant'
-
-  /**
-    The explicit constant as predicted by the “constant” strategy. This parameter is useful only for the “constant” strategy.
-   */
-  constant?: number | ArrayLike
-
-  /**
-    The quantile to predict using the “quantile” strategy. A quantile of 0.5 corresponds to the median, while 0.0 to the minimum and 1.0 to the maximum.
-   */
-  quantile?: number
-}
-
-export interface DummyRegressorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface DummyRegressorPredictOptions {
-  /**
-    Test data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Whether to return the standard deviation of posterior prediction. All zeros in this case.
-
-    @defaultValue `false`
-   */
-  return_std?: boolean
-}
-
-export interface DummyRegressorScoreOptions {
-  /**
-    Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since `DummyRegressor` operates independently of the sampled observations.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for X.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

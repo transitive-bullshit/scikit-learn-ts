@@ -19,20 +19,22 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new Normalizer(opts?: NormalizerOptions): Normalizer;
+new Normalizer(opts?: object): Normalizer;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `NormalizerOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.copy?` | `boolean` | Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).  `Default Value`  `true` |
+| `opts.norm?` | `"l1"` \| `"l2"` \| `"max"` | The norm to use to normalize each non zero sample. If norm=’max’ is used, values will be rescaled by the maximum of the absolute values.  `Default Value`  `'l2'` |
 
 ### Returns
 
 [`Normalizer`](Normalizer.md)
 
-Defined in:  [generated/preprocessing/Normalizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L29)
+Defined in:  [generated/preprocessing/Normalizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L29)
 
 ## Properties
 
@@ -40,31 +42,31 @@ Defined in:  [generated/preprocessing/Normalizer.ts:29](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L27)
+Defined in:  [generated/preprocessing/Normalizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L26)
+Defined in:  [generated/preprocessing/Normalizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L25)
+Defined in:  [generated/preprocessing/Normalizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L22)
+Defined in:  [generated/preprocessing/Normalizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L23)
+Defined in:  [generated/preprocessing/Normalizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L23)
 
 ## Accessors
 
@@ -82,7 +84,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/Normalizer.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L288)
+Defined in: [generated/preprocessing/Normalizer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L343)
 
 ### n\_features\_in\_
 
@@ -98,7 +100,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/Normalizer.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L263)
+Defined in: [generated/preprocessing/Normalizer.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L318)
 
 ### py
 
@@ -112,7 +114,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L34)
+Defined in:  [generated/preprocessing/Normalizer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L48)
 
 #### Signature
 
@@ -130,7 +132,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/Normalizer.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L38)
+Defined in: [generated/preprocessing/Normalizer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L52)
 
 ## Methods
 
@@ -150,7 +152,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L87)
+Defined in:  [generated/preprocessing/Normalizer.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L101)
 
 ### fit()
 
@@ -161,20 +163,22 @@ This method allows to: (i) validate the estimator’s parameters and (ii) be con
 #### Signature
 
 ```ts
-fit(opts: NormalizerFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `NormalizerFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The data to estimate the normalization parameters. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L106)
+Defined in:  [generated/preprocessing/Normalizer.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L120)
 
 ### fit\_transform()
 
@@ -185,20 +189,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: NormalizerFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `NormalizerFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L136)
+Defined in:  [generated/preprocessing/Normalizer.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L160)
 
 ### get\_feature\_names\_out()
 
@@ -207,20 +214,21 @@ Get output feature names for transformation.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: NormalizerGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `NormalizerGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L168)
+Defined in:  [generated/preprocessing/Normalizer.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L207)
 
 ### init()
 
@@ -244,7 +252,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L47)
+Defined in:  [generated/preprocessing/Normalizer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L61)
 
 ### set\_output()
 
@@ -255,20 +263,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: NormalizerSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `NormalizerSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L203)
+Defined in:  [generated/preprocessing/Normalizer.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L245)
 
 ### transform()
 
@@ -277,17 +286,19 @@ Scale each non zero row of X to unit norm.
 #### Signature
 
 ```ts
-transform(opts: NormalizerTransformOptions): Promise<ArrayLike>;
+transform(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `NormalizerTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The data to normalize, row by row. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy. |
+| `opts.copy?` | `boolean` | Copy the input X or not. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L231)
+Defined in:  [generated/preprocessing/Normalizer.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L278)

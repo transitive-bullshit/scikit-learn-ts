@@ -28,7 +28,57 @@ export class OneHotEncoder {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OneHotEncoderOptions) {
+  constructor(opts?: {
+    /**
+      Categories (unique values) per feature:
+
+      @defaultValue `'auto'`
+     */
+    categories?: 'auto'
+
+    /**
+      Specifies a methodology to use to drop one of the categories per feature. This is useful in situations where perfectly collinear features cause problems, such as when feeding the resulting data into an unregularized linear regression model.
+
+      However, dropping one category breaks the symmetry of the original representation and can therefore induce a bias in downstream models, for instance for penalized linear classification or regression models.
+     */
+    drop?: 'first' | 'if_binary' | any[]
+
+    /**
+      Will return sparse matrix if set `true` else will return an array.
+
+      @defaultValue `true`
+     */
+    sparse?: boolean
+
+    /**
+      Will return sparse matrix if set `true` else will return an array.
+
+      @defaultValue `true`
+     */
+    sparse_output?: boolean
+
+    /**
+      Desired dtype of output.
+     */
+    dtype?: any
+
+    /**
+      Specifies the way unknown categories are handled during [`transform`](#sklearn.preprocessing.OneHotEncoder.transform "sklearn.preprocessing.OneHotEncoder.transform").
+
+      @defaultValue `'error'`
+     */
+    handle_unknown?: 'error' | 'ignore' | 'infrequent_if_exist'
+
+    /**
+      Specifies the minimum frequency below which a category will be considered infrequent.
+     */
+    min_frequency?: number
+
+    /**
+      Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
+     */
+    max_categories?: number
+  }) {
     this.id = `OneHotEncoder${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -113,7 +163,17 @@ ctor_OneHotEncoder = {k: v for k, v in ctor_OneHotEncoder.items() if v is not No
   /**
     Fit OneHotEncoder to X.
    */
-  async fit(opts: OneHotEncoderFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data to determine the categories of each feature.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
     }
@@ -143,7 +203,22 @@ pms_OneHotEncoder_fit = {k: v for k, v in pms_OneHotEncoder_fit.items() if v is 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: OneHotEncoderFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
     }
@@ -175,9 +250,12 @@ pms_OneHotEncoder_fit_transform = {k: v for k, v in pms_OneHotEncoder_fit_transf
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: OneHotEncoderGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
     }
@@ -212,9 +290,12 @@ pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_ge
 
     For a given input feature, if there is an infrequent category, ‘infrequent\_sklearn’ will be used to represent the infrequent category.
    */
-  async inverse_transform(
-    opts: OneHotEncoderInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      The transformed data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
     }
@@ -246,7 +327,12 @@ pms_OneHotEncoder_inverse_transform = {k: v for k, v in pms_OneHotEncoder_invers
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: OneHotEncoderSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
     }
@@ -276,9 +362,12 @@ pms_OneHotEncoder_set_output = {k: v for k, v in pms_OneHotEncoder_set_output.it
 
     If there are infrequent categories for a feature, the infrequent categories will be grouped into a single category.
    */
-  async transform(
-    opts: OneHotEncoderTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data to encode.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This OneHotEncoder instance has already been disposed')
     }
@@ -402,113 +491,4 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
         ._py`attr_OneHotEncoder_feature_names_in_.tolist() if hasattr(attr_OneHotEncoder_feature_names_in_, 'tolist') else attr_OneHotEncoder_feature_names_in_`
     })()
   }
-}
-
-export interface OneHotEncoderOptions {
-  /**
-    Categories (unique values) per feature:
-
-    @defaultValue `'auto'`
-   */
-  categories?: 'auto'
-
-  /**
-    Specifies a methodology to use to drop one of the categories per feature. This is useful in situations where perfectly collinear features cause problems, such as when feeding the resulting data into an unregularized linear regression model.
-
-    However, dropping one category breaks the symmetry of the original representation and can therefore induce a bias in downstream models, for instance for penalized linear classification or regression models.
-   */
-  drop?: 'first' | 'if_binary' | any[]
-
-  /**
-    Will return sparse matrix if set `true` else will return an array.
-
-    @defaultValue `true`
-   */
-  sparse?: boolean
-
-  /**
-    Will return sparse matrix if set `true` else will return an array.
-
-    @defaultValue `true`
-   */
-  sparse_output?: boolean
-
-  /**
-    Desired dtype of output.
-   */
-  dtype?: any
-
-  /**
-    Specifies the way unknown categories are handled during [`transform`](#sklearn.preprocessing.OneHotEncoder.transform "sklearn.preprocessing.OneHotEncoder.transform").
-
-    @defaultValue `'error'`
-   */
-  handle_unknown?: 'error' | 'ignore' | 'infrequent_if_exist'
-
-  /**
-    Specifies the minimum frequency below which a category will be considered infrequent.
-   */
-  min_frequency?: number
-
-  /**
-    Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
-   */
-  max_categories?: number
-}
-
-export interface OneHotEncoderFitOptions {
-  /**
-    The data to determine the categories of each feature.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
-   */
-  y?: any
-}
-
-export interface OneHotEncoderFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface OneHotEncoderGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface OneHotEncoderInverseTransformOptions {
-  /**
-    The transformed data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface OneHotEncoderSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface OneHotEncoderTransformOptions {
-  /**
-    The data to encode.
-   */
-  X?: ArrayLike[]
 }

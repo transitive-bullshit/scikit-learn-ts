@@ -24,7 +24,97 @@ export class LassoCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LassoCVOptions) {
+  constructor(opts?: {
+    /**
+      Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
+
+      @defaultValue `0.001`
+     */
+    eps?: number
+
+    /**
+      Number of alphas along the regularization path.
+
+      @defaultValue `100`
+     */
+    n_alphas?: number
+
+    /**
+      List of alphas where to compute the models. If `undefined` alphas are set automatically.
+     */
+    alphas?: ArrayLike
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
+
+      @defaultValue `'auto'`
+     */
+    precompute?: 'auto' | boolean | ArrayLike[]
+
+    /**
+      The maximum number of iterations.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      Amount of verbosity.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+
+    /**
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      If positive, restrict regression coefficients to be positive.
+
+      @defaultValue `false`
+     */
+    positive?: boolean
+
+    /**
+      The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      If set to ‘random’, a random coefficient is updated every iteration rather than looping over features sequentially by default. This (setting to ‘random’) often leads to significantly faster convergence especially when tol is higher than 1e-4.
+
+      @defaultValue `'cyclic'`
+     */
+    selection?: 'cyclic' | 'random'
+  }) {
     this.id = `LassoCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -114,7 +204,22 @@ ctor_LassoCV = {k: v for k, v in ctor_LassoCV.items() if v is not None}`
 
     Fit is on grid of alphas and best alpha estimated by cross-validation.
    */
-  async fit(opts: LassoCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output, X can be sparse.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights used for fitting and evaluation of the weighted mean squared error of each cv-fold. Note that the cross validated MSE that is finally used to find the best model is the unweighted mean over the (weighted) MSEs of each test fold.
+     */
+    sample_weight?: number | ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LassoCV instance has already been disposed')
     }
@@ -150,7 +255,86 @@ pms_LassoCV_fit = {k: v for k, v in pms_LassoCV_fit.items() if v is not None}`
 
     For mono-output tasks it is:
    */
-  async path(opts: LassoCVPathOptions): Promise<NDArray> {
+  async path(opts: {
+    /**
+      Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike | SparseMatrix
+
+    /**
+      Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
+
+      @defaultValue `0.001`
+     */
+    eps?: number
+
+    /**
+      Number of alphas along the regularization path.
+
+      @defaultValue `100`
+     */
+    n_alphas?: number
+
+    /**
+      List of alphas where to compute the models. If `undefined` alphas are set automatically.
+     */
+    alphas?: NDArray
+
+    /**
+      Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
+
+      @defaultValue `'auto'`
+     */
+    precompute?: 'auto' | boolean | ArrayLike[]
+
+    /**
+      Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
+     */
+    Xy?: ArrayLike
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      The initial values of the coefficients.
+     */
+    coef_init?: NDArray
+
+    /**
+      Amount of verbosity.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+
+    /**
+      Whether to return the number of iterations or not.
+
+      @defaultValue `false`
+     */
+    return_n_iter?: boolean
+
+    /**
+      If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
+
+      @defaultValue `false`
+     */
+    positive?: boolean
+
+    /**
+      Keyword arguments passed to the coordinate descent solver.
+     */
+    params?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LassoCV instance has already been disposed')
     }
@@ -196,7 +380,12 @@ pms_LassoCV_path = {k: v for k, v in pms_LassoCV_path.items() if v is not None}`
   /**
     Predict using the linear model.
    */
-  async predict(opts: LassoCVPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LassoCV instance has already been disposed')
     }
@@ -224,7 +413,22 @@ pms_LassoCV_predict = {k: v for k, v in pms_LassoCV_predict.items() if v is not 
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: LassoCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LassoCV instance has already been disposed')
     }
@@ -461,218 +665,4 @@ pms_LassoCV_score = {k: v for k, v in pms_LassoCV_score.items() if v is not None
         ._py`attr_LassoCV_feature_names_in_.tolist() if hasattr(attr_LassoCV_feature_names_in_, 'tolist') else attr_LassoCV_feature_names_in_`
     })()
   }
-}
-
-export interface LassoCVOptions {
-  /**
-    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
-
-    @defaultValue `0.001`
-   */
-  eps?: number
-
-  /**
-    Number of alphas along the regularization path.
-
-    @defaultValue `100`
-   */
-  n_alphas?: number
-
-  /**
-    List of alphas where to compute the models. If `undefined` alphas are set automatically.
-   */
-  alphas?: ArrayLike
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
-
-    @defaultValue `'auto'`
-   */
-  precompute?: 'auto' | boolean | ArrayLike[]
-
-  /**
-    The maximum number of iterations.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    Amount of verbosity.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-
-  /**
-    Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    If positive, restrict regression coefficients to be positive.
-
-    @defaultValue `false`
-   */
-  positive?: boolean
-
-  /**
-    The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    If set to ‘random’, a random coefficient is updated every iteration rather than looping over features sequentially by default. This (setting to ‘random’) often leads to significantly faster convergence especially when tol is higher than 1e-4.
-
-    @defaultValue `'cyclic'`
-   */
-  selection?: 'cyclic' | 'random'
-}
-
-export interface LassoCVFitOptions {
-  /**
-    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output, X can be sparse.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights used for fitting and evaluation of the weighted mean squared error of each cv-fold. Note that the cross validated MSE that is finally used to find the best model is the unweighted mean over the (weighted) MSEs of each test fold.
-   */
-  sample_weight?: number | ArrayLike
-}
-
-export interface LassoCVPathOptions {
-  /**
-    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike | SparseMatrix
-
-  /**
-    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
-
-    @defaultValue `0.001`
-   */
-  eps?: number
-
-  /**
-    Number of alphas along the regularization path.
-
-    @defaultValue `100`
-   */
-  n_alphas?: number
-
-  /**
-    List of alphas where to compute the models. If `undefined` alphas are set automatically.
-   */
-  alphas?: NDArray
-
-  /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
-
-    @defaultValue `'auto'`
-   */
-  precompute?: 'auto' | boolean | ArrayLike[]
-
-  /**
-    Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
-   */
-  Xy?: ArrayLike
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    The initial values of the coefficients.
-   */
-  coef_init?: NDArray
-
-  /**
-    Amount of verbosity.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-
-  /**
-    Whether to return the number of iterations or not.
-
-    @defaultValue `false`
-   */
-  return_n_iter?: boolean
-
-  /**
-    If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
-
-    @defaultValue `false`
-   */
-  positive?: boolean
-
-  /**
-    Keyword arguments passed to the coordinate descent solver.
-   */
-  params?: any
-}
-
-export interface LassoCVPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface LassoCVScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

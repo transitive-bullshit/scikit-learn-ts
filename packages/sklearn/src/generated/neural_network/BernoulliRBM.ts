@@ -24,7 +24,47 @@ export class BernoulliRBM {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BernoulliRBMOptions) {
+  constructor(opts?: {
+    /**
+      Number of binary hidden units.
+
+      @defaultValue `256`
+     */
+    n_components?: number
+
+    /**
+      The learning rate for weight updates. It is *highly* recommended to tune this hyper-parameter. Reasonable values are in the 10\*\*\[0., -3.\] range.
+
+      @defaultValue `0.1`
+     */
+    learning_rate?: number
+
+    /**
+      Number of examples per minibatch.
+
+      @defaultValue `10`
+     */
+    batch_size?: number
+
+    /**
+      Number of iterations/sweeps over the training dataset to perform during training.
+
+      @defaultValue `10`
+     */
+    n_iter?: number
+
+    /**
+      The verbosity level. The default, zero, means silent mode. Range of values is \[0, inf\].
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Determines random number generation for:
+     */
+    random_state?: number
+  }) {
     this.id = `BernoulliRBM${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +145,17 @@ ctor_BernoulliRBM = {k: v for k, v in ctor_BernoulliRBM.items() if v is not None
   /**
     Fit the model to the data X.
    */
-  async fit(opts: BernoulliRBMFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -137,7 +187,22 @@ pms_BernoulliRBM_fit = {k: v for k, v in pms_BernoulliRBM_fit.items() if v is no
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: BernoulliRBMFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -171,9 +236,12 @@ pms_BernoulliRBM_fit_transform = {k: v for k, v in pms_BernoulliRBM_fit_transfor
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: BernoulliRBMGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.neural_network.BernoulliRBM.fit "sklearn.neural_network.BernoulliRBM.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -204,7 +272,12 @@ pms_BernoulliRBM_get_feature_names_out = {k: v for k, v in pms_BernoulliRBM_get_
   /**
     Perform one Gibbs sampling step.
    */
-  async gibbs(opts: BernoulliRBMGibbsOptions): Promise<NDArray[]> {
+  async gibbs(opts: {
+    /**
+      Values of the visible layer to start from.
+     */
+    v?: NDArray[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -232,7 +305,17 @@ pms_BernoulliRBM_gibbs = {k: v for k, v in pms_BernoulliRBM_gibbs.items() if v i
   /**
     Fit the model to the partial segment of the data X.
    */
-  async partial_fit(opts: BernoulliRBMPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Training data.
+     */
+    X?: NDArray[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -262,7 +345,12 @@ pms_BernoulliRBM_partial_fit = {k: v for k, v in pms_BernoulliRBM_partial_fit.it
   /**
     Compute the pseudo-likelihood of X.
    */
-  async score_samples(opts: BernoulliRBMScoreSamplesOptions): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      Values of the visible layer. Must be all-boolean (not checked).
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -292,7 +380,12 @@ pms_BernoulliRBM_score_samples = {k: v for k, v in pms_BernoulliRBM_score_sample
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: BernoulliRBMSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -320,7 +413,12 @@ pms_BernoulliRBM_set_output = {k: v for k, v in pms_BernoulliRBM_set_output.item
   /**
     Compute the hidden layer activation probabilities, P(h=1|v=X).
    */
-  async transform(opts: BernoulliRBMTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      The data to be transformed.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This BernoulliRBM instance has already been disposed')
     }
@@ -494,122 +592,4 @@ pms_BernoulliRBM_transform = {k: v for k, v in pms_BernoulliRBM_transform.items(
         ._py`attr_BernoulliRBM_feature_names_in_.tolist() if hasattr(attr_BernoulliRBM_feature_names_in_, 'tolist') else attr_BernoulliRBM_feature_names_in_`
     })()
   }
-}
-
-export interface BernoulliRBMOptions {
-  /**
-    Number of binary hidden units.
-
-    @defaultValue `256`
-   */
-  n_components?: number
-
-  /**
-    The learning rate for weight updates. It is *highly* recommended to tune this hyper-parameter. Reasonable values are in the 10\*\*\[0., -3.\] range.
-
-    @defaultValue `0.1`
-   */
-  learning_rate?: number
-
-  /**
-    Number of examples per minibatch.
-
-    @defaultValue `10`
-   */
-  batch_size?: number
-
-  /**
-    Number of iterations/sweeps over the training dataset to perform during training.
-
-    @defaultValue `10`
-   */
-  n_iter?: number
-
-  /**
-    The verbosity level. The default, zero, means silent mode. Range of values is \[0, inf\].
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Determines random number generation for:
-   */
-  random_state?: number
-}
-
-export interface BernoulliRBMFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-}
-
-export interface BernoulliRBMFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface BernoulliRBMGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.neural_network.BernoulliRBM.fit "sklearn.neural_network.BernoulliRBM.fit").
-   */
-  input_features?: any
-}
-
-export interface BernoulliRBMGibbsOptions {
-  /**
-    Values of the visible layer to start from.
-   */
-  v?: NDArray[]
-}
-
-export interface BernoulliRBMPartialFitOptions {
-  /**
-    Training data.
-   */
-  X?: NDArray[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-}
-
-export interface BernoulliRBMScoreSamplesOptions {
-  /**
-    Values of the visible layer. Must be all-boolean (not checked).
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BernoulliRBMSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface BernoulliRBMTransformOptions {
-  /**
-    The data to be transformed.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

@@ -22,7 +22,35 @@ export class PolynomialFeatures {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PolynomialFeaturesOptions) {
+  constructor(opts?: {
+    /**
+      If a single int is given, it specifies the maximal degree of the polynomial features. If a tuple `(min\_degree, max\_degree)` is passed, then `min\_degree` is the minimum and `max\_degree` is the maximum polynomial degree of the generated features. Note that `min\_degree=0` and `min\_degree=1` are equivalent as outputting the degree zero term is determined by `include\_bias`.
+
+      @defaultValue `2`
+     */
+    degree?: number
+
+    /**
+      If `true`, only interaction features are produced: features that are products of at most `degree` *distinct* input features, i.e. terms with power of 2 or higher of the same input feature are excluded:
+
+      @defaultValue `false`
+     */
+    interaction_only?: boolean
+
+    /**
+      If `true` (default), then include a bias column, the feature in which all polynomial powers are zero (i.e. a column of ones - acts as an intercept term in a linear model).
+
+      @defaultValue `true`
+     */
+    include_bias?: boolean
+
+    /**
+      Order of output array in the dense case. `'F'` order is faster to compute, but may slow down subsequent estimators.
+
+      @defaultValue `'C'`
+     */
+    order?: 'C' | 'F'
+  }) {
     this.id = `PolynomialFeatures${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +133,17 @@ ctor_PolynomialFeatures = {k: v for k, v in ctor_PolynomialFeatures.items() if v
   /**
     Compute number of output features.
    */
-  async fit(opts: PolynomialFeaturesFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialFeatures instance has already been disposed'
@@ -137,9 +175,22 @@ pms_PolynomialFeatures_fit = {k: v for k, v in pms_PolynomialFeatures_fit.items(
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: PolynomialFeaturesFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialFeatures instance has already been disposed'
@@ -175,9 +226,12 @@ pms_PolynomialFeatures_fit_transform = {k: v for k, v in pms_PolynomialFeatures_
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: PolynomialFeaturesGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialFeatures instance has already been disposed'
@@ -212,7 +266,12 @@ pms_PolynomialFeatures_get_feature_names_out = {k: v for k, v in pms_PolynomialF
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: PolynomialFeaturesSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialFeatures instance has already been disposed'
@@ -242,9 +301,16 @@ pms_PolynomialFeatures_set_output = {k: v for k, v in pms_PolynomialFeatures_set
   /**
     Transform data to polynomial features.
    */
-  async transform(
-    opts: PolynomialFeaturesTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data to transform, row by row.
+
+      Prefer CSR over CSC for sparse input (for speed), but CSC is required if the degree is 4 or higher. If the degree is less than 4 and the input format is CSC, it will be converted to CSR, have its polynomial features generated, then converted back to CSC.
+
+      If the degree is 2 or 3, the method described in “Leveraging Sparsity to Speed Up Polynomial Feature Expansions of CSR Matrices Using K-Simplex Numbers” by Andrew Nystrom and John Hughes is used, which is much faster than the method used on CSC input. For this reason, a CSC input will be converted to CSR, and the output will be converted back to CSC prior to being returned, hence the preference of CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialFeatures instance has already been disposed'
@@ -351,88 +417,4 @@ pms_PolynomialFeatures_transform = {k: v for k, v in pms_PolynomialFeatures_tran
         ._py`attr_PolynomialFeatures_n_output_features_.tolist() if hasattr(attr_PolynomialFeatures_n_output_features_, 'tolist') else attr_PolynomialFeatures_n_output_features_`
     })()
   }
-}
-
-export interface PolynomialFeaturesOptions {
-  /**
-    If a single int is given, it specifies the maximal degree of the polynomial features. If a tuple `(min\_degree, max\_degree)` is passed, then `min\_degree` is the minimum and `max\_degree` is the maximum polynomial degree of the generated features. Note that `min\_degree=0` and `min\_degree=1` are equivalent as outputting the degree zero term is determined by `include\_bias`.
-
-    @defaultValue `2`
-   */
-  degree?: number
-
-  /**
-    If `true`, only interaction features are produced: features that are products of at most `degree` *distinct* input features, i.e. terms with power of 2 or higher of the same input feature are excluded:
-
-    @defaultValue `false`
-   */
-  interaction_only?: boolean
-
-  /**
-    If `true` (default), then include a bias column, the feature in which all polynomial powers are zero (i.e. a column of ones - acts as an intercept term in a linear model).
-
-    @defaultValue `true`
-   */
-  include_bias?: boolean
-
-  /**
-    Order of output array in the dense case. `'F'` order is faster to compute, but may slow down subsequent estimators.
-
-    @defaultValue `'C'`
-   */
-  order?: 'C' | 'F'
-}
-
-export interface PolynomialFeaturesFitOptions {
-  /**
-    The data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface PolynomialFeaturesFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface PolynomialFeaturesGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface PolynomialFeaturesSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface PolynomialFeaturesTransformOptions {
-  /**
-    The data to transform, row by row.
-
-    Prefer CSR over CSC for sparse input (for speed), but CSC is required if the degree is 4 or higher. If the degree is less than 4 and the input format is CSC, it will be converted to CSR, have its polynomial features generated, then converted back to CSC.
-
-    If the degree is 2 or 3, the method described in “Leveraging Sparsity to Speed Up Polynomial Feature Expansions of CSR Matrices Using K-Simplex Numbers” by Andrew Nystrom and John Hughes is used, which is much faster than the method used on CSC input. For this reason, a CSC input will be converted to CSR, and the output will be converted back to CSC prior to being returned, hence the preference of CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

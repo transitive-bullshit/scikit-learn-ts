@@ -24,7 +24,43 @@ export class AdaBoostClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: AdaBoostClassifierOptions) {
+  constructor(opts?: {
+    /**
+      The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
+     */
+    estimator?: any
+
+    /**
+      The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range `\[1, inf)`.
+
+      @defaultValue `50`
+     */
+    n_estimators?: number
+
+    /**
+      Weight applied to each classifier at each boosting iteration. A higher learning rate increases the contribution of each classifier. There is a trade-off between the `learning\_rate` and `n\_estimators` parameters. Values must be in the range `(0.0, inf)`.
+
+      @defaultValue `1`
+     */
+    learning_rate?: number
+
+    /**
+      If ‘SAMME.R’ then use the SAMME.R real boosting algorithm. `estimator` must support calculation of class probabilities. If ‘SAMME’ then use the SAMME discrete boosting algorithm. The SAMME.R algorithm typically converges faster than SAMME, achieving a lower test error with fewer boosting iterations.
+
+      @defaultValue `'SAMME.R'`
+     */
+    algorithm?: 'SAMME' | 'SAMME.R'
+
+    /**
+      Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
+     */
+    base_estimator?: any
+  }) {
     this.id = `AdaBoostClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,9 +145,12 @@ ctor_AdaBoostClassifier = {k: v for k, v in ctor_AdaBoostClassifier.items() if v
   /**
     Compute the decision function of `X`.
    */
-  async decision_function(
-    opts: AdaBoostClassifierDecisionFunctionOptions
-  ): Promise<any> {
+  async decision_function(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -144,7 +183,22 @@ pms_AdaBoostClassifier_decision_function = {k: v for k, v in pms_AdaBoostClassif
   /**
     Build a boosted classifier/regressor from the training set (X, y).
    */
-  async fit(opts: AdaBoostClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -180,7 +234,12 @@ pms_AdaBoostClassifier_fit = {k: v for k, v in pms_AdaBoostClassifier_fit.items(
 
     The predicted class of an input sample is computed as the weighted mean prediction of the classifiers in the ensemble.
    */
-  async predict(opts: AdaBoostClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -212,9 +271,12 @@ pms_AdaBoostClassifier_predict = {k: v for k, v in pms_AdaBoostClassifier_predic
 
     The predicted class log-probabilities of an input sample is computed as the weighted mean predicted class log-probabilities of the classifiers in the ensemble.
    */
-  async predict_log_proba(
-    opts: AdaBoostClassifierPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -249,9 +311,12 @@ pms_AdaBoostClassifier_predict_log_proba = {k: v for k, v in pms_AdaBoostClassif
 
     The predicted class probabilities of an input sample is computed as the weighted mean predicted class probabilities of the classifiers in the ensemble.
    */
-  async predict_proba(
-    opts: AdaBoostClassifierPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -285,7 +350,22 @@ pms_AdaBoostClassifier_predict_proba = {k: v for k, v in pms_AdaBoostClassifier_
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: AdaBoostClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -321,9 +401,12 @@ pms_AdaBoostClassifier_score = {k: v for k, v in pms_AdaBoostClassifier_score.it
 
     This method allows monitoring (i.e. determine error on testing set) after each boosting iteration.
    */
-  async staged_decision_function(
-    opts: AdaBoostClassifierStagedDecisionFunctionOptions
-  ): Promise<any[]> {
+  async staged_decision_function(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -360,9 +443,12 @@ pms_AdaBoostClassifier_staged_decision_function = {k: v for k, v in pms_AdaBoost
 
     This generator method yields the ensemble prediction after each iteration of boosting and therefore allows monitoring, such as to determine the prediction on a test set after each boost.
    */
-  async staged_predict(
-    opts: AdaBoostClassifierStagedPredictOptions
-  ): Promise<any[]> {
+  async staged_predict(opts: {
+    /**
+      The input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -398,9 +484,12 @@ pms_AdaBoostClassifier_staged_predict = {k: v for k, v in pms_AdaBoostClassifier
 
     This generator method yields the ensemble predicted class probabilities after each iteration of boosting and therefore allows monitoring, such as to determine the predicted class probabilities on a test set after each boost.
    */
-  async staged_predict_proba(
-    opts: AdaBoostClassifierStagedPredictProbaOptions
-  ): Promise<any[]> {
+  async staged_predict_proba(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -435,9 +524,22 @@ pms_AdaBoostClassifier_staged_predict_proba = {k: v for k, v in pms_AdaBoostClas
 
     This generator method yields the ensemble score after each iteration of boosting and therefore allows monitoring, such as to determine the score on a test set after each boost.
    */
-  async staged_score(
-    opts: AdaBoostClassifierStagedScoreOptions
-  ): Promise<number> {
+  async staged_score(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Labels for X.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostClassifier instance has already been disposed'
@@ -685,142 +787,4 @@ pms_AdaBoostClassifier_staged_score = {k: v for k, v in pms_AdaBoostClassifier_s
         ._py`attr_AdaBoostClassifier_feature_names_in_.tolist() if hasattr(attr_AdaBoostClassifier_feature_names_in_, 'tolist') else attr_AdaBoostClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface AdaBoostClassifierOptions {
-  /**
-    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
-   */
-  estimator?: any
-
-  /**
-    The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range `\[1, inf)`.
-
-    @defaultValue `50`
-   */
-  n_estimators?: number
-
-  /**
-    Weight applied to each classifier at each boosting iteration. A higher learning rate increases the contribution of each classifier. There is a trade-off between the `learning\_rate` and `n\_estimators` parameters. Values must be in the range `(0.0, inf)`.
-
-    @defaultValue `1`
-   */
-  learning_rate?: number
-
-  /**
-    If ‘SAMME.R’ then use the SAMME.R real boosting algorithm. `estimator` must support calculation of class probabilities. If ‘SAMME’ then use the SAMME discrete boosting algorithm. The SAMME.R algorithm typically converges faster than SAMME, achieving a lower test error with fewer boosting iterations.
-
-    @defaultValue `'SAMME.R'`
-   */
-  algorithm?: 'SAMME' | 'SAMME.R'
-
-  /**
-    Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The base estimator from which the boosted ensemble is built. Support for sample weighting is required, as well as proper `classes\_` and `n\_classes\_` attributes. If `undefined`, then the base estimator is [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier") initialized with `max\_depth=1`.
-   */
-  base_estimator?: any
-}
-
-export interface AdaBoostClassifierDecisionFunctionOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostClassifierFitOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface AdaBoostClassifierPredictOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostClassifierPredictLogProbaOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostClassifierPredictProbaOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface AdaBoostClassifierStagedDecisionFunctionOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostClassifierStagedPredictOptions {
-  /**
-    The input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike[]
-}
-
-export interface AdaBoostClassifierStagedPredictProbaOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostClassifierStagedScoreOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Labels for X.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

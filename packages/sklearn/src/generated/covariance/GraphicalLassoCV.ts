@@ -22,7 +22,73 @@ export class GraphicalLassoCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GraphicalLassoCVOptions) {
+  constructor(opts?: {
+    /**
+      If an integer is given, it fixes the number of points on the grids of alpha to be used. If a list is given, it gives the grid to be used. See the notes in the class docstring for more details. Range is \[1, inf) for an integer. Range is (0, inf\] for an array-like of floats.
+
+      @defaultValue `4`
+     */
+    alphas?: number | ArrayLike
+
+    /**
+      The number of times the grid is refined. Not used if explicit values of alphas are passed. Range is \[1, inf).
+
+      @defaultValue `4`
+     */
+    n_refinements?: number
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].
+
+      @defaultValue `0.0001`
+     */
+    enet_tol?: number
+
+    /**
+      Maximum number of iterations.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse underlying graphs, where number of features is greater than number of samples. Elsewhere prefer cd which is more numerically stable.
+
+      @defaultValue `'cd'`
+     */
+    mode?: 'cd' | 'lars'
+
+    /**
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      If verbose is `true`, the objective function and duality gap are printed at each iteration.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.
+
+      @defaultValue `false`
+     */
+    assume_centered?: boolean
+  }) {
     this.id = `GraphicalLassoCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +175,33 @@ ctor_GraphicalLassoCV = {k: v for k, v in ctor_GraphicalLassoCV.items() if v is 
   /**
     Compute the Mean Squared Error between two covariance estimators.
    */
-  async error_norm(opts: GraphicalLassoCVErrorNormOptions): Promise<number> {
+  async error_norm(opts: {
+    /**
+      The covariance to compare with.
+     */
+    comp_cov?: ArrayLike[]
+
+    /**
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+
+      @defaultValue `'frobenius'`
+     */
+    norm?: 'frobenius' | 'spectral'
+
+    /**
+      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+
+      @defaultValue `true`
+     */
+    scaling?: boolean
+
+    /**
+      Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
+
+      @defaultValue `true`
+     */
+    squared?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GraphicalLassoCV instance has already been disposed'
@@ -143,7 +235,17 @@ pms_GraphicalLassoCV_error_norm = {k: v for k, v in pms_GraphicalLassoCV_error_n
   /**
     Fit the GraphicalLasso covariance model to X.
    */
-  async fit(opts: GraphicalLassoCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data from which to compute the covariance estimate.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GraphicalLassoCV instance has already been disposed'
@@ -173,7 +275,12 @@ pms_GraphicalLassoCV_fit = {k: v for k, v in pms_GraphicalLassoCV_fit.items() if
   /**
     Getter for the precision matrix.
    */
-  async get_precision(opts: GraphicalLassoCVGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      The precision matrix associated to the current covariance object.
+     */
+    precision_?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GraphicalLassoCV instance has already been disposed'
@@ -206,9 +313,12 @@ pms_GraphicalLassoCV_get_precision = {k: v for k, v in pms_GraphicalLassoCV_get_
   /**
     Compute the squared Mahalanobis distances of given observations.
    */
-  async mahalanobis(
-    opts: GraphicalLassoCVMahalanobisOptions
-  ): Promise<NDArray> {
+  async mahalanobis(opts: {
+    /**
+      The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This GraphicalLassoCV instance has already been disposed'
@@ -240,7 +350,17 @@ pms_GraphicalLassoCV_mahalanobis = {k: v for k, v in pms_GraphicalLassoCV_mahala
 
     The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
-  async score(opts: GraphicalLassoCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+     */
+    X_test?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GraphicalLassoCV instance has already been disposed'
@@ -484,138 +604,4 @@ pms_GraphicalLassoCV_score = {k: v for k, v in pms_GraphicalLassoCV_score.items(
         ._py`attr_GraphicalLassoCV_feature_names_in_.tolist() if hasattr(attr_GraphicalLassoCV_feature_names_in_, 'tolist') else attr_GraphicalLassoCV_feature_names_in_`
     })()
   }
-}
-
-export interface GraphicalLassoCVOptions {
-  /**
-    If an integer is given, it fixes the number of points on the grids of alpha to be used. If a list is given, it gives the grid to be used. See the notes in the class docstring for more details. Range is \[1, inf) for an integer. Range is (0, inf\] for an array-like of floats.
-
-    @defaultValue `4`
-   */
-  alphas?: number | ArrayLike
-
-  /**
-    The number of times the grid is refined. Not used if explicit values of alphas are passed. Range is \[1, inf).
-
-    @defaultValue `4`
-   */
-  n_refinements?: number
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].
-
-    @defaultValue `0.0001`
-   */
-  enet_tol?: number
-
-  /**
-    Maximum number of iterations.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse underlying graphs, where number of features is greater than number of samples. Elsewhere prefer cd which is more numerically stable.
-
-    @defaultValue `'cd'`
-   */
-  mode?: 'cd' | 'lars'
-
-  /**
-    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    If verbose is `true`, the objective function and duality gap are printed at each iteration.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.
-
-    @defaultValue `false`
-   */
-  assume_centered?: boolean
-}
-
-export interface GraphicalLassoCVErrorNormOptions {
-  /**
-    The covariance to compare with.
-   */
-  comp_cov?: ArrayLike[]
-
-  /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
-
-    @defaultValue `'frobenius'`
-   */
-  norm?: 'frobenius' | 'spectral'
-
-  /**
-    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
-
-    @defaultValue `true`
-   */
-  scaling?: boolean
-
-  /**
-    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
-
-    @defaultValue `true`
-   */
-  squared?: boolean
-}
-
-export interface GraphicalLassoCVFitOptions {
-  /**
-    Data from which to compute the covariance estimate.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface GraphicalLassoCVGetPrecisionOptions {
-  /**
-    The precision matrix associated to the current covariance object.
-   */
-  precision_?: ArrayLike[]
-}
-
-export interface GraphicalLassoCVMahalanobisOptions {
-  /**
-    The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GraphicalLassoCVScoreOptions {
-  /**
-    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
-   */
-  X_test?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
 }

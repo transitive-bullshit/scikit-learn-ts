@@ -17,20 +17,26 @@ Read more in the [User Guide](../linear_model.html#huber-regression)
 ### Signature
 
 ```ts
-new HuberRegressor(opts?: HuberRegressorOptions): HuberRegressor;
+new HuberRegressor(opts?: object): HuberRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`HuberRegressorOptions`](../interfaces/HuberRegressorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | Strength of the squared L2 regularization. Note that the penalty is equal to `alpha \* \|\|w\|\|^2`. Must be in the range `\[0, inf)`.  `Default Value`  `0.0001` |
+| `opts.epsilon?` | `number` | The parameter epsilon controls the number of samples that should be classified as outliers. The smaller the epsilon, the more robust it is to outliers. Epsilon must be in the range `\[1, inf)`.  `Default Value`  `1.35` |
+| `opts.fit_intercept?` | `boolean` | Whether or not to fit the intercept. This can be set to `false` if the data is already centered around the origin.  `Default Value`  `true` |
+| `opts.max_iter?` | `number` | Maximum number of iterations that `scipy.optimize.minimize(method="L-BFGS-B")` should run for.  `Default Value`  `100` |
+| `opts.tol?` | `number` | The iteration will stop when `max{\|proj g\_i \| i \= 1, ..., n}` <= `tol` where pg\_i is the i-th component of the projected gradient.  `Default Value`  `0.00001` |
+| `opts.warm_start?` | `boolean` | This is useful if the stored attributes of a previously used model has to be reused. If set to `false`, then the coefficients will be rewritten for every call to fit. See [the Glossary](../../glossary.html#term-warm_start).  `Default Value`  `false` |
 
 ### Returns
 
 [`HuberRegressor`](HuberRegressor.md)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L27)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L27)
 
 ## Properties
 
@@ -38,31 +44,31 @@ Defined in:  [generated/linear\_model/HuberRegressor.ts:27](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L25)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L24)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L23)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L20)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L21)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L21)
 
 ## Accessors
 
@@ -80,9 +86,9 @@ coef_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L200)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L277)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L200)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L277)
 
 ### feature\_names\_in\_
 
@@ -98,9 +104,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L296)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L373)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L296)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L373)
 
 ### intercept\_
 
@@ -116,9 +122,9 @@ intercept_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L223)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L300)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L223)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L300)
 
 ### n\_features\_in\_
 
@@ -134,9 +140,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L271)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L348)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L271)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L348)
 
 ### n\_iter\_
 
@@ -152,9 +158,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L321)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L398)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L321)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L398)
 
 ### outliers\_
 
@@ -170,9 +176,9 @@ outliers_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L346)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L423)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L346)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L423)
 
 ### py
 
@@ -186,7 +192,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L32)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L74)
 
 #### Signature
 
@@ -204,9 +210,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L36)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L78)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L32) [generated/linear\_model/HuberRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L36)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L74) [generated/linear\_model/HuberRegressor.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L78)
 
 ### scale\_
 
@@ -222,9 +228,9 @@ scale_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L248)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L325)
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L248)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L325)
 
 ## Methods
 
@@ -244,7 +250,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L91)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L133)
 
 ### fit()
 
@@ -253,20 +259,23 @@ Fit the model according to the given training data.
 #### Signature
 
 ```ts
-fit(opts: HuberRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`HuberRegressorFitOptions`](../interfaces/HuberRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Weight given to each sample. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target vector relative to X. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L108)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L150)
 
 ### init()
 
@@ -290,7 +299,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L45)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L87)
 
 ### predict()
 
@@ -299,20 +308,21 @@ Predict using the linear model.
 #### Signature
 
 ```ts
-predict(opts: HuberRegressorPredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`HuberRegressorPredictOptions`](../interfaces/HuberRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L138)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L195)
 
 ### score()
 
@@ -323,17 +333,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: HuberRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`HuberRegressorScoreOptions`](../interfaces/HuberRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/HuberRegressor.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L168)
+Defined in:  [generated/linear\_model/HuberRegressor.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L230)

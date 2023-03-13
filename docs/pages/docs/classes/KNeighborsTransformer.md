@@ -15,20 +15,28 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new KNeighborsTransformer(opts?: KNeighborsTransformerOptions): KNeighborsTransformer;
+new KNeighborsTransformer(opts?: object): KNeighborsTransformer;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `KNeighborsTransformerOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm used to compute the nearest neighbors:  `Default Value`  `'auto'` |
+| `opts.leaf_size?` | `number` | Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.  `Default Value`  `30` |
+| `opts.metric?` | `string` | Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.  If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.  Distance matrices are not supported.  `Default Value`  `'minkowski'` |
+| `opts.metric_params?` | `any` | Additional keyword arguments for the metric function. |
+| `opts.mode?` | `"connectivity"` \| `"distance"` | Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, and ‘distance’ will return the distances between neighbors according to the given metric.  `Default Value`  `'distance'` |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run for neighbors search. If `\-1`, then the number of jobs is set to the number of CPU cores. |
+| `opts.n_neighbors?` | `number` | Number of neighbors for each sample in the transformed sparse graph. For compatibility reasons, as each sample is considered as its own neighbor, one extra neighbor will be computed when mode == ‘distance’. In this case, the sparse graph contains (n\_neighbors + 1) neighbors.  `Default Value`  `5` |
+| `opts.p?` | `number` | Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.  `Default Value`  `2` |
 
 ### Returns
 
 [`KNeighborsTransformer`](KNeighborsTransformer.md)
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L25)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L25)
 
 ## Properties
 
@@ -36,31 +44,31 @@ Defined in:  [generated/neighbors/KNeighborsTransformer.ts:25](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L23)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L22)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L21)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L18)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L19)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L19)
 
 ## Accessors
 
@@ -78,7 +86,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/KNeighborsTransformer.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L357)
+Defined in: [generated/neighbors/KNeighborsTransformer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L472)
 
 ### effective\_metric\_params\_
 
@@ -94,7 +102,7 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/KNeighborsTransformer.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L384)
+Defined in: [generated/neighbors/KNeighborsTransformer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L499)
 
 ### feature\_names\_in\_
 
@@ -110,7 +118,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/KNeighborsTransformer.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L438)
+Defined in: [generated/neighbors/KNeighborsTransformer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L553)
 
 ### n\_features\_in\_
 
@@ -126,7 +134,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsTransformer.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L411)
+Defined in: [generated/neighbors/KNeighborsTransformer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L526)
 
 ### n\_samples\_fit\_
 
@@ -142,7 +150,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsTransformer.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L465)
+Defined in: [generated/neighbors/KNeighborsTransformer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L580)
 
 ### py
 
@@ -156,7 +164,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L30)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L86)
 
 #### Signature
 
@@ -174,7 +182,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/KNeighborsTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L34)
+Defined in: [generated/neighbors/KNeighborsTransformer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L90)
 
 ## Methods
 
@@ -194,7 +202,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L93)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L149)
 
 ### fit()
 
@@ -203,20 +211,22 @@ Fit the k-nearest neighbors transformer from the training dataset.
 #### Signature
 
 ```ts
-fit(opts: KNeighborsTransformerFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsTransformerFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L110)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L166)
 
 ### fit\_transform()
 
@@ -227,20 +237,22 @@ Fits transformer to X and y with optional parameters fit\_params and returns a t
 #### Signature
 
 ```ts
-fit_transform(opts: KNeighborsTransformerFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsTransformerFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training set. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L142)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L208)
 
 ### get\_feature\_names\_out()
 
@@ -251,20 +263,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: KNeighborsTransformerGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsTransformerGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.KNeighborsTransformer.fit "sklearn.neighbors.KNeighborsTransformer.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L179)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L253)
 
 ### init()
 
@@ -288,7 +301,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L43)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L99)
 
 ### kneighbors()
 
@@ -299,20 +312,23 @@ Returns indices of and distances to the neighbors of each point.
 #### Signature
 
 ```ts
-kneighbors(opts: KNeighborsTransformerKneighborsOptions): Promise<ArrayLike[]>;
+kneighbors(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsTransformerKneighborsOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. |
+| `opts.n_neighbors?` | `number` | Number of neighbors required for each sample. The default is the value passed to the constructor. |
+| `opts.return_distance?` | `boolean` | Whether or not to return the distances.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L216)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L293)
 
 ### kneighbors\_graph()
 
@@ -321,20 +337,23 @@ Compute the (weighted) graph of k-Neighbors for points in X.
 #### Signature
 
 ```ts
-kneighbors_graph(opts: KNeighborsTransformerKneighborsGraphOptions): Promise<any[]>;
+kneighbors_graph(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsTransformerKneighborsGraphOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features). |
+| `opts.mode?` | `"connectivity"` \| `"distance"` | Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.  `Default Value`  `'connectivity'` |
+| `opts.n_neighbors?` | `number` | Number of neighbors for each sample. The default is the value passed to the constructor. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L252)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L344)
 
 ### set\_output()
 
@@ -345,20 +364,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: KNeighborsTransformerSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsTransformerSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L291)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L398)
 
 ### transform()
 
@@ -367,17 +387,18 @@ Compute the (weighted) graph of Neighbors for points in X.
 #### Signature
 
 ```ts
-transform(opts: KNeighborsTransformerTransformOptions): Promise<any[]>;
+transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `KNeighborsTransformerTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Sample data. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsTransformer.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L323)
+Defined in:  [generated/neighbors/KNeighborsTransformer.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L435)

@@ -22,7 +22,33 @@ export class QuadraticDiscriminantAnalysis {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: QuadraticDiscriminantAnalysisOptions) {
+  constructor(opts?: {
+    /**
+      Class priors. By default, the class proportions are inferred from the training data.
+     */
+    priors?: ArrayLike
+
+    /**
+      Regularizes the per-class covariance estimates by transforming S2 as `S2 \= (1 \- reg\_param) \* S2 + reg\_param \* np.eye(n\_features)`, where S2 corresponds to the `scaling\_` attribute of a given class.
+
+      @defaultValue `0`
+     */
+    reg_param?: number
+
+    /**
+      If `true`, the class covariance matrices are explicitly computed and stored in the `self.covariance\_` attribute.
+
+      @defaultValue `false`
+     */
+    store_covariance?: boolean
+
+    /**
+      Absolute threshold for a singular value to be considered significant, used to estimate the rank of `Xk` where `Xk` is the centered matrix of samples in class k. This parameter does not affect the predictions. It only controls a warning that is raised when features are considered to be colinear.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+  }) {
     this.id = `QuadraticDiscriminantAnalysis${
       crypto.randomUUID().split('-')[0]
     }`
@@ -110,9 +136,12 @@ ctor_QuadraticDiscriminantAnalysis = {k: v for k, v in ctor_QuadraticDiscriminan
 
     The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See [Mathematical formulation of the LDA and QDA classifiers](../lda_qda.html#lda-qda-math).
    */
-  async decision_function(
-    opts: QuadraticDiscriminantAnalysisDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      Array of samples (test vectors).
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This QuadraticDiscriminantAnalysis instance has already been disposed'
@@ -145,7 +174,17 @@ pms_QuadraticDiscriminantAnalysis_decision_function = {k: v for k, v in pms_Quad
   /**
     Fit the model according to the given training data and parameters.
    */
-  async fit(opts: QuadraticDiscriminantAnalysisFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (integers).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This QuadraticDiscriminantAnalysis instance has already been disposed'
@@ -181,9 +220,12 @@ pms_QuadraticDiscriminantAnalysis_fit = {k: v for k, v in pms_QuadraticDiscrimin
 
     The predicted class C for each sample in X is returned.
    */
-  async predict(
-    opts: QuadraticDiscriminantAnalysisPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This QuadraticDiscriminantAnalysis instance has already been disposed'
@@ -216,9 +258,12 @@ pms_QuadraticDiscriminantAnalysis_predict = {k: v for k, v in pms_QuadraticDiscr
   /**
     Return log of posterior probabilities of classification.
    */
-  async predict_log_proba(
-    opts: QuadraticDiscriminantAnalysisPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      Array of samples/test vectors.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This QuadraticDiscriminantAnalysis instance has already been disposed'
@@ -251,9 +296,12 @@ pms_QuadraticDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_Quad
   /**
     Return posterior probabilities of classification.
    */
-  async predict_proba(
-    opts: QuadraticDiscriminantAnalysisPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      Array of samples/test vectors.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This QuadraticDiscriminantAnalysis instance has already been disposed'
@@ -288,9 +336,22 @@ pms_QuadraticDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_Quadrati
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(
-    opts: QuadraticDiscriminantAnalysisScoreOptions
-  ): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This QuadraticDiscriminantAnalysis instance has already been disposed'
@@ -539,89 +600,4 @@ pms_QuadraticDiscriminantAnalysis_score = {k: v for k, v in pms_QuadraticDiscrim
         ._py`attr_QuadraticDiscriminantAnalysis_feature_names_in_.tolist() if hasattr(attr_QuadraticDiscriminantAnalysis_feature_names_in_, 'tolist') else attr_QuadraticDiscriminantAnalysis_feature_names_in_`
     })()
   }
-}
-
-export interface QuadraticDiscriminantAnalysisOptions {
-  /**
-    Class priors. By default, the class proportions are inferred from the training data.
-   */
-  priors?: ArrayLike
-
-  /**
-    Regularizes the per-class covariance estimates by transforming S2 as `S2 \= (1 \- reg\_param) \* S2 + reg\_param \* np.eye(n\_features)`, where S2 corresponds to the `scaling\_` attribute of a given class.
-
-    @defaultValue `0`
-   */
-  reg_param?: number
-
-  /**
-    If `true`, the class covariance matrices are explicitly computed and stored in the `self.covariance\_` attribute.
-
-    @defaultValue `false`
-   */
-  store_covariance?: boolean
-
-  /**
-    Absolute threshold for a singular value to be considered significant, used to estimate the rank of `Xk` where `Xk` is the centered matrix of samples in class k. This parameter does not affect the predictions. It only controls a warning that is raised when features are considered to be colinear.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-}
-
-export interface QuadraticDiscriminantAnalysisDecisionFunctionOptions {
-  /**
-    Array of samples (test vectors).
-   */
-  X?: ArrayLike[]
-}
-
-export interface QuadraticDiscriminantAnalysisFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (integers).
-   */
-  y?: ArrayLike
-}
-
-export interface QuadraticDiscriminantAnalysisPredictOptions {
-  /**
-    Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-}
-
-export interface QuadraticDiscriminantAnalysisPredictLogProbaOptions {
-  /**
-    Array of samples/test vectors.
-   */
-  X?: ArrayLike[]
-}
-
-export interface QuadraticDiscriminantAnalysisPredictProbaOptions {
-  /**
-    Array of samples/test vectors.
-   */
-  X?: ArrayLike[]
-}
-
-export interface QuadraticDiscriminantAnalysisScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

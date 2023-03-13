@@ -26,7 +26,116 @@ export class LogisticRegression {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LogisticRegressionOptions) {
+  constructor(opts?: {
+    /**
+      Specify the norm of the penalty:
+
+      @defaultValue `'l2'`
+     */
+    penalty?: 'l1' | 'l2' | 'elasticnet'
+
+    /**
+      Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n\_samples > n\_features.
+
+      @defaultValue `false`
+     */
+    dual?: boolean
+
+    /**
+      Tolerance for stopping criteria.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Inverse of regularization strength; must be a positive float. Like in support vector machines, smaller values specify stronger regularization.
+
+      @defaultValue `1`
+     */
+    C?: number
+
+    /**
+      Specifies if a constant (a.k.a. bias or intercept) should be added to the decision function.
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to `true`. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
+
+      Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
+
+      @defaultValue `1`
+     */
+    intercept_scaling?: number
+
+    /**
+      Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
+
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+
+      Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      Used when `solver` == ‘sag’, ‘saga’ or ‘liblinear’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+
+    /**
+      Algorithm to use in the optimization problem. Default is ‘lbfgs’. To choose a solver, you might want to consider the following aspects:
+
+      @defaultValue `'lbfgs'`
+     */
+    solver?:
+      | 'lbfgs'
+      | 'liblinear'
+      | 'newton-cg'
+      | 'newton-cholesky'
+      | 'sag'
+      | 'saga'
+
+    /**
+      Maximum number of iterations taken for the solvers to converge.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, *even when the data is binary*. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’.
+
+      @defaultValue `'auto'`
+     */
+    multi_class?: 'auto' | 'ovr' | 'multinomial'
+
+    /**
+      For the liblinear and lbfgs solvers set verbose to any positive number for verbosity.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      The Elastic-Net mixing parameter, with `0 <= l1\_ratio <= 1`. Only used if `penalty='elasticnet'`. Setting `l1\_ratio=0` is equivalent to using `penalty='l2'`, while setting `l1\_ratio=1` is equivalent to using `penalty='l1'`. For `0 < l1\_ratio <1`, the penalty is a combination of L1 and L2.
+     */
+    l1_ratio?: number
+  }) {
     this.id = `LogisticRegression${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -123,9 +232,12 @@ ctor_LogisticRegression = {k: v for k, v in ctor_LogisticRegression.items() if v
 
     The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
    */
-  async decision_function(
-    opts: LogisticRegressionDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix for which we want to get the confidence scores.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -160,7 +272,7 @@ pms_LogisticRegression_decision_function = {k: v for k, v in pms_LogisticRegress
 
     Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
-  async densify(opts: LogisticRegressionDensifyOptions): Promise<any> {
+  async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -188,7 +300,22 @@ pms_LogisticRegression_densify = {k: v for k, v in pms_LogisticRegression_densif
   /**
     Fit the model according to the given training data.
    */
-  async fit(opts: LogisticRegressionFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target vector relative to X.
+     */
+    y?: ArrayLike
+
+    /**
+      Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
+     */
+    sample_weight?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -222,7 +349,12 @@ pms_LogisticRegression_fit = {k: v for k, v in pms_LogisticRegression_fit.items(
   /**
     Predict class labels for samples in X.
    */
-  async predict(opts: LogisticRegressionPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to get the predictions.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -254,9 +386,12 @@ pms_LogisticRegression_predict = {k: v for k, v in pms_LogisticRegression_predic
 
     The returned estimates for all classes are ordered by the label of classes.
    */
-  async predict_log_proba(
-    opts: LogisticRegressionPredictLogProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_log_proba(opts: {
+    /**
+      Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -293,9 +428,12 @@ pms_LogisticRegression_predict_log_proba = {k: v for k, v in pms_LogisticRegress
 
     For a multi\_class problem, if multi\_class is set to be “multinomial” the softmax function is used to find the predicted probability of each class. Else use a one-vs-rest approach, i.e calculate the probability of each class assuming it to be positive using the logistic function. and normalize these values across all the classes.
    */
-  async predict_proba(
-    opts: LogisticRegressionPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -329,7 +467,22 @@ pms_LogisticRegression_predict_proba = {k: v for k, v in pms_LogisticRegression_
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: LogisticRegressionScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -367,7 +520,7 @@ pms_LogisticRegression_score = {k: v for k, v in pms_LogisticRegression_score.it
 
     The `intercept\_` member is not converted.
    */
-  async sparsify(opts: LogisticRegressionSparsifyOptions): Promise<any> {
+  async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LogisticRegression instance has already been disposed'
@@ -558,180 +711,3 @@ pms_LogisticRegression_sparsify = {k: v for k, v in pms_LogisticRegression_spars
     })()
   }
 }
-
-export interface LogisticRegressionOptions {
-  /**
-    Specify the norm of the penalty:
-
-    @defaultValue `'l2'`
-   */
-  penalty?: 'l1' | 'l2' | 'elasticnet'
-
-  /**
-    Dual or primal formulation. Dual formulation is only implemented for l2 penalty with liblinear solver. Prefer dual=`false` when n\_samples > n\_features.
-
-    @defaultValue `false`
-   */
-  dual?: boolean
-
-  /**
-    Tolerance for stopping criteria.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Inverse of regularization strength; must be a positive float. Like in support vector machines, smaller values specify stronger regularization.
-
-    @defaultValue `1`
-   */
-  C?: number
-
-  /**
-    Specifies if a constant (a.k.a. bias or intercept) should be added to the decision function.
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    Useful only when the solver ‘liblinear’ is used and self.fit\_intercept is set to `true`. In this case, x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equal to intercept\_scaling is appended to the instance vector. The intercept becomes `intercept\_scaling \* synthetic\_feature\_weight`.
-
-    Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
-
-    @defaultValue `1`
-   */
-  intercept_scaling?: number
-
-  /**
-    Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
-
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-
-    Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    Used when `solver` == ‘sag’, ‘saga’ or ‘liblinear’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-
-  /**
-    Algorithm to use in the optimization problem. Default is ‘lbfgs’. To choose a solver, you might want to consider the following aspects:
-
-    @defaultValue `'lbfgs'`
-   */
-  solver?:
-    | 'lbfgs'
-    | 'liblinear'
-    | 'newton-cg'
-    | 'newton-cholesky'
-    | 'sag'
-    | 'saga'
-
-  /**
-    Maximum number of iterations taken for the solvers to converge.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, *even when the data is binary*. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’.
-
-    @defaultValue `'auto'`
-   */
-  multi_class?: 'auto' | 'ovr' | 'multinomial'
-
-  /**
-    For the liblinear and lbfgs solvers set verbose to any positive number for verbosity.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. Useless for liblinear solver. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Number of CPU cores used when parallelizing over classes if multi\_class=’ovr’”. This parameter is ignored when the `solver` is set to ‘liblinear’ regardless of whether ‘multi\_class’ is specified or not. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    The Elastic-Net mixing parameter, with `0 <= l1\_ratio <= 1`. Only used if `penalty='elasticnet'`. Setting `l1\_ratio=0` is equivalent to using `penalty='l2'`, while setting `l1\_ratio=1` is equivalent to using `penalty='l1'`. For `0 < l1\_ratio <1`, the penalty is a combination of L1 and L2.
-   */
-  l1_ratio?: number
-}
-
-export interface LogisticRegressionDecisionFunctionOptions {
-  /**
-    The data matrix for which we want to get the confidence scores.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface LogisticRegressionDensifyOptions {}
-
-export interface LogisticRegressionFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target vector relative to X.
-   */
-  y?: ArrayLike
-
-  /**
-    Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
-   */
-  sample_weight?: any
-}
-
-export interface LogisticRegressionPredictOptions {
-  /**
-    The data matrix for which we want to get the predictions.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface LogisticRegressionPredictLogProbaOptions {
-  /**
-    Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LogisticRegressionPredictProbaOptions {
-  /**
-    Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LogisticRegressionScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface LogisticRegressionSparsifyOptions {}

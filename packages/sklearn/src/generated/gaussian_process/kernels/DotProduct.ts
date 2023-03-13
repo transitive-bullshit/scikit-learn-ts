@@ -20,7 +20,19 @@ export class DotProduct {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DotProductOptions) {
+  constructor(opts?: {
+    /**
+      Parameter controlling the inhomogenity of the kernel. If sigma\_0=0, the kernel is homogeneous.
+
+      @defaultValue `1`
+     */
+    sigma_0?: any
+
+    /**
+      The lower and upper bound on ‘sigma\_0’. If set to “fixed”, ‘sigma\_0’ cannot be changed during hyperparameter tuning.
+     */
+    sigma_0_bounds?: 'fixed'
+  }) {
     this.id = `DotProduct${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -95,7 +107,24 @@ ctor_DotProduct = {k: v for k, v in ctor_DotProduct.items() if v is not None}`
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: DotProductCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: NDArray[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
+     */
+    Y?: NDArray[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This DotProduct instance has already been disposed')
     }
@@ -127,7 +156,12 @@ pms_DotProduct___call__ = {k: v for k, v in pms_DotProduct___call__.items() if v
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(opts: DotProductCloneWithThetaOptions): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DotProduct instance has already been disposed')
     }
@@ -157,7 +191,12 @@ pms_DotProduct_clone_with_theta = {k: v for k, v in pms_DotProduct_clone_with_th
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: DotProductDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y).
+     */
+    X?: NDArray[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This DotProduct instance has already been disposed')
     }
@@ -185,7 +224,7 @@ pms_DotProduct_diag = {k: v for k, v in pms_DotProduct_diag.items() if v is not 
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: DotProductIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DotProduct instance has already been disposed')
     }
@@ -230,52 +269,3 @@ pms_DotProduct_is_stationary = {k: v for k, v in pms_DotProduct_is_stationary.it
     })()
   }
 }
-
-export interface DotProductOptions {
-  /**
-    Parameter controlling the inhomogenity of the kernel. If sigma\_0=0, the kernel is homogeneous.
-
-    @defaultValue `1`
-   */
-  sigma_0?: any
-
-  /**
-    The lower and upper bound on ‘sigma\_0’. If set to “fixed”, ‘sigma\_0’ cannot be changed during hyperparameter tuning.
-   */
-  sigma_0_bounds?: 'fixed'
-}
-
-export interface DotProductCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: NDArray[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
-   */
-  Y?: NDArray[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface DotProductCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface DotProductDiagOptions {
-  /**
-    Left argument of the returned kernel k(X, Y).
-   */
-  X?: NDArray[]
-}
-
-export interface DotProductIsStationaryOptions {}

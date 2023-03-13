@@ -26,7 +26,19 @@ export class AdditiveChi2Sampler {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: AdditiveChi2SamplerOptions) {
+  constructor(opts?: {
+    /**
+      Gives the number of (complex) sampling points.
+
+      @defaultValue `2`
+     */
+    sample_steps?: number
+
+    /**
+      Sampling interval. Must be specified when sample\_steps not in {1,2,3}.
+     */
+    sample_interval?: number
+  }) {
     this.id = `AdditiveChi2Sampler${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +117,17 @@ ctor_AdditiveChi2Sampler = {k: v for k, v in ctor_AdditiveChi2Sampler.items() if
   /**
     Set the parameters.
    */
-  async fit(opts: AdditiveChi2SamplerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdditiveChi2Sampler instance has already been disposed'
@@ -137,9 +159,22 @@ pms_AdditiveChi2Sampler_fit = {k: v for k, v in pms_AdditiveChi2Sampler_fit.item
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: AdditiveChi2SamplerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This AdditiveChi2Sampler instance has already been disposed'
@@ -175,9 +210,12 @@ pms_AdditiveChi2Sampler_fit_transform = {k: v for k, v in pms_AdditiveChi2Sample
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: AdditiveChi2SamplerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.AdditiveChi2Sampler.fit "sklearn.kernel_approximation.AdditiveChi2Sampler.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdditiveChi2Sampler instance has already been disposed'
@@ -212,7 +250,12 @@ pms_AdditiveChi2Sampler_get_feature_names_out = {k: v for k, v in pms_AdditiveCh
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: AdditiveChi2SamplerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdditiveChi2Sampler instance has already been disposed'
@@ -244,9 +287,12 @@ pms_AdditiveChi2Sampler_set_output = {k: v for k, v in pms_AdditiveChi2Sampler_s
   /**
     Apply approximate feature map to X.
    */
-  async transform(
-    opts: AdditiveChi2SamplerTransformOptions
-  ): Promise<NDArray | SparseMatrix> {
+  async transform(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<NDArray | SparseMatrix> {
     if (this._isDisposed) {
       throw new Error(
         'This AdditiveChi2Sampler instance has already been disposed'
@@ -353,68 +399,4 @@ pms_AdditiveChi2Sampler_transform = {k: v for k, v in pms_AdditiveChi2Sampler_tr
         ._py`attr_AdditiveChi2Sampler_feature_names_in_.tolist() if hasattr(attr_AdditiveChi2Sampler_feature_names_in_, 'tolist') else attr_AdditiveChi2Sampler_feature_names_in_`
     })()
   }
-}
-
-export interface AdditiveChi2SamplerOptions {
-  /**
-    Gives the number of (complex) sampling points.
-
-    @defaultValue `2`
-   */
-  sample_steps?: number
-
-  /**
-    Sampling interval. Must be specified when sample\_steps not in {1,2,3}.
-   */
-  sample_interval?: number
-}
-
-export interface AdditiveChi2SamplerFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-}
-
-export interface AdditiveChi2SamplerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface AdditiveChi2SamplerGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.AdditiveChi2Sampler.fit "sklearn.kernel_approximation.AdditiveChi2Sampler.fit").
-   */
-  input_features?: any
-}
-
-export interface AdditiveChi2SamplerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface AdditiveChi2SamplerTransformOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix
 }

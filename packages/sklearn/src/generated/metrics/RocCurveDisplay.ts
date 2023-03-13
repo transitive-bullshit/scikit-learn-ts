@@ -22,7 +22,32 @@ export class RocCurveDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RocCurveDisplayOptions) {
+  constructor(opts?: {
+    /**
+      False positive rate.
+     */
+    fpr?: NDArray
+
+    /**
+      True positive rate.
+     */
+    tpr?: NDArray
+
+    /**
+      Area under ROC curve. If `undefined`, the roc\_auc score is not shown.
+     */
+    roc_auc?: number
+
+    /**
+      Name of estimator. If `undefined`, the estimator name is not shown.
+     */
+    estimator_name?: string
+
+    /**
+      The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+     */
+    pos_label?: string | number
+  }) {
     this.id = `RocCurveDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,9 +128,59 @@ ctor_RocCurveDisplay = {k: v for k, v in ctor_RocCurveDisplay.items() if v is no
   /**
     Create a ROC Curve display from an estimator.
    */
-  async from_estimator(
-    opts: RocCurveDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+     */
+    estimator?: any
+
+    /**
+      Input values.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Whether to drop some suboptimal thresholds which would not appear on a plotted ROC curve. This is useful in order to create lighter ROC curves.
+
+      @defaultValue `true`
+     */
+    drop_intermediate?: boolean
+
+    /**
+      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
+     */
+    response_method?: 'decision_function' | 'auto’} default=’auto'
+
+    /**
+      The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+     */
+    pos_label?: string | number
+
+    /**
+      Name of ROC Curve for labeling. If `undefined`, use the name of the estimator.
+     */
+    name?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot`.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RocCurveDisplay instance has already been disposed')
     }
@@ -153,9 +228,49 @@ pms_RocCurveDisplay_from_estimator = {k: v for k, v in pms_RocCurveDisplay_from_
 
     Read more in the [User Guide](../../visualizations.html#visualizations).
    */
-  async from_predictions(
-    opts: RocCurveDisplayFromPredictionsOptions
-  ): Promise<any> {
+  async from_predictions(opts: {
+    /**
+      True labels.
+     */
+    y_true?: ArrayLike
+
+    /**
+      Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by “decision\_function” on some classifiers).
+     */
+    y_pred?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Whether to drop some suboptimal thresholds which would not appear on a plotted ROC curve. This is useful in order to create lighter ROC curves.
+
+      @defaultValue `true`
+     */
+    drop_intermediate?: boolean
+
+    /**
+      The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
+     */
+    pos_label?: string | number
+
+    /**
+      Name of ROC curve for labeling. If `undefined`, name will be set to `"Classifier"`.
+     */
+    name?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Additional keywords arguments passed to matplotlib `plot` function.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RocCurveDisplay instance has already been disposed')
     }
@@ -202,7 +317,22 @@ pms_RocCurveDisplay_from_predictions = {k: v for k, v in pms_RocCurveDisplay_fro
 
     Extra keyword arguments will be passed to matplotlib’s `plot`.
    */
-  async plot(opts: RocCurveDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Name of ROC Curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
+     */
+    name?: string
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot`.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RocCurveDisplay instance has already been disposed')
     }
@@ -299,146 +429,4 @@ pms_RocCurveDisplay_plot = {k: v for k, v in pms_RocCurveDisplay_plot.items() if
         ._py`attr_RocCurveDisplay_figure_.tolist() if hasattr(attr_RocCurveDisplay_figure_, 'tolist') else attr_RocCurveDisplay_figure_`
     })()
   }
-}
-
-export interface RocCurveDisplayOptions {
-  /**
-    False positive rate.
-   */
-  fpr?: NDArray
-
-  /**
-    True positive rate.
-   */
-  tpr?: NDArray
-
-  /**
-    Area under ROC curve. If `undefined`, the roc\_auc score is not shown.
-   */
-  roc_auc?: number
-
-  /**
-    Name of estimator. If `undefined`, the estimator name is not shown.
-   */
-  estimator_name?: string
-
-  /**
-    The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
-   */
-  pos_label?: string | number
-}
-
-export interface RocCurveDisplayFromEstimatorOptions {
-  /**
-    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
-   */
-  estimator?: any
-
-  /**
-    Input values.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Whether to drop some suboptimal thresholds which would not appear on a plotted ROC curve. This is useful in order to create lighter ROC curves.
-
-    @defaultValue `true`
-   */
-  drop_intermediate?: boolean
-
-  /**
-    Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
-   */
-  response_method?: 'decision_function' | 'auto’} default=’auto'
-
-  /**
-    The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
-   */
-  pos_label?: string | number
-
-  /**
-    Name of ROC Curve for labeling. If `undefined`, use the name of the estimator.
-   */
-  name?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Keyword arguments to be passed to matplotlib’s `plot`.
-   */
-  kwargs?: any
-}
-
-export interface RocCurveDisplayFromPredictionsOptions {
-  /**
-    True labels.
-   */
-  y_true?: ArrayLike
-
-  /**
-    Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by “decision\_function” on some classifiers).
-   */
-  y_pred?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Whether to drop some suboptimal thresholds which would not appear on a plotted ROC curve. This is useful in order to create lighter ROC curves.
-
-    @defaultValue `true`
-   */
-  drop_intermediate?: boolean
-
-  /**
-    The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
-   */
-  pos_label?: string | number
-
-  /**
-    Name of ROC curve for labeling. If `undefined`, name will be set to `"Classifier"`.
-   */
-  name?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Additional keywords arguments passed to matplotlib `plot` function.
-   */
-  kwargs?: any
-}
-
-export interface RocCurveDisplayPlotOptions {
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Name of ROC Curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
-   */
-  name?: string
-
-  /**
-    Keyword arguments to be passed to matplotlib’s `plot`.
-   */
-  kwargs?: any
 }

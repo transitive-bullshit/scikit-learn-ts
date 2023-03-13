@@ -22,7 +22,32 @@ export class CalibrationDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: CalibrationDisplayOptions) {
+  constructor(opts?: {
+    /**
+      The proportion of samples whose class is the positive class (fraction of positives), in each bin.
+     */
+    prob_true?: NDArray
+
+    /**
+      The mean predicted probability in each bin.
+     */
+    prob_pred?: NDArray
+
+    /**
+      Probability estimates for the positive class, for each sample.
+     */
+    y_prob?: NDArray
+
+    /**
+      Name of estimator. If `undefined`, the estimator name is not shown.
+     */
+    estimator_name?: string
+
+    /**
+      The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+     */
+    pos_label?: string | number
+  }) {
     this.id = `CalibrationDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -117,9 +142,63 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
 
     Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
    */
-  async from_estimator(
-    opts: CalibrationDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict\_proba](../../glossary.html#term-predict_proba) method.
+     */
+    estimator?: any
+
+    /**
+      Input values.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Binary target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.
+
+      @defaultValue `5`
+     */
+    n_bins?: number
+
+    /**
+      Strategy used to define the widths of the bins.
+
+      @defaultValue `'uniform'`
+     */
+    strategy?: 'uniform' | 'quantile'
+
+    /**
+      The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+     */
+    pos_label?: string | number
+
+    /**
+      Name for labeling curve. If `undefined`, the name of the estimator is used.
+     */
+    name?: string
+
+    /**
+      If `true`, plots a reference line representing a perfectly calibrated classifier.
+
+      @defaultValue `true`
+     */
+    ref_line?: boolean
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This CalibrationDisplay instance has already been disposed'
@@ -167,9 +246,58 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
 
     Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
    */
-  async from_predictions(
-    opts: CalibrationDisplayFromPredictionsOptions
-  ): Promise<any> {
+  async from_predictions(opts: {
+    /**
+      True labels.
+     */
+    y_true?: ArrayLike
+
+    /**
+      The predicted probabilities of the positive class.
+     */
+    y_prob?: ArrayLike
+
+    /**
+      Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.
+
+      @defaultValue `5`
+     */
+    n_bins?: number
+
+    /**
+      Strategy used to define the widths of the bins.
+
+      @defaultValue `'uniform'`
+     */
+    strategy?: 'uniform' | 'quantile'
+
+    /**
+      The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+     */
+    pos_label?: string | number
+
+    /**
+      Name for labeling curve.
+     */
+    name?: string
+
+    /**
+      If `true`, plots a reference line representing a perfectly calibrated classifier.
+
+      @defaultValue `true`
+     */
+    ref_line?: boolean
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This CalibrationDisplay instance has already been disposed'
@@ -214,7 +342,29 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
 
     Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
    */
-  async plot(opts: CalibrationDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Name for labeling curve. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
+     */
+    name?: string
+
+    /**
+      If `true`, plots a reference line representing a perfectly calibrated classifier.
+
+      @defaultValue `true`
+     */
+    ref_line?: boolean
+
+    /**
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This CalibrationDisplay instance has already been disposed'
@@ -323,166 +473,4 @@ pms_CalibrationDisplay_plot = {k: v for k, v in pms_CalibrationDisplay_plot.item
         ._py`attr_CalibrationDisplay_figure_.tolist() if hasattr(attr_CalibrationDisplay_figure_, 'tolist') else attr_CalibrationDisplay_figure_`
     })()
   }
-}
-
-export interface CalibrationDisplayOptions {
-  /**
-    The proportion of samples whose class is the positive class (fraction of positives), in each bin.
-   */
-  prob_true?: NDArray
-
-  /**
-    The mean predicted probability in each bin.
-   */
-  prob_pred?: NDArray
-
-  /**
-    Probability estimates for the positive class, for each sample.
-   */
-  y_prob?: NDArray
-
-  /**
-    Name of estimator. If `undefined`, the estimator name is not shown.
-   */
-  estimator_name?: string
-
-  /**
-    The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
-   */
-  pos_label?: string | number
-}
-
-export interface CalibrationDisplayFromEstimatorOptions {
-  /**
-    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict\_proba](../../glossary.html#term-predict_proba) method.
-   */
-  estimator?: any
-
-  /**
-    Input values.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Binary target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.
-
-    @defaultValue `5`
-   */
-  n_bins?: number
-
-  /**
-    Strategy used to define the widths of the bins.
-
-    @defaultValue `'uniform'`
-   */
-  strategy?: 'uniform' | 'quantile'
-
-  /**
-    The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
-   */
-  pos_label?: string | number
-
-  /**
-    Name for labeling curve. If `undefined`, the name of the estimator is used.
-   */
-  name?: string
-
-  /**
-    If `true`, plots a reference line representing a perfectly calibrated classifier.
-
-    @defaultValue `true`
-   */
-  ref_line?: boolean
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
-   */
-  kwargs?: any
-}
-
-export interface CalibrationDisplayFromPredictionsOptions {
-  /**
-    True labels.
-   */
-  y_true?: ArrayLike
-
-  /**
-    The predicted probabilities of the positive class.
-   */
-  y_prob?: ArrayLike
-
-  /**
-    Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.
-
-    @defaultValue `5`
-   */
-  n_bins?: number
-
-  /**
-    Strategy used to define the widths of the bins.
-
-    @defaultValue `'uniform'`
-   */
-  strategy?: 'uniform' | 'quantile'
-
-  /**
-    The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
-   */
-  pos_label?: string | number
-
-  /**
-    Name for labeling curve.
-   */
-  name?: string
-
-  /**
-    If `true`, plots a reference line representing a perfectly calibrated classifier.
-
-    @defaultValue `true`
-   */
-  ref_line?: boolean
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
-   */
-  kwargs?: any
-}
-
-export interface CalibrationDisplayPlotOptions {
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Name for labeling curve. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
-   */
-  name?: string
-
-  /**
-    If `true`, plots a reference line representing a perfectly calibrated classifier.
-
-    @defaultValue `true`
-   */
-  ref_line?: boolean
-
-  /**
-    Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
-   */
-  kwargs?: any
 }

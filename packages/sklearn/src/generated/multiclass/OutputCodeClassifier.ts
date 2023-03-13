@@ -22,7 +22,31 @@ export class OutputCodeClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OutputCodeClassifierOptions) {
+  constructor(opts?: {
+    /**
+      An estimator object implementing [fit](../../glossary.html#term-fit) and one of [decision\_function](../../glossary.html#term-decision_function) or [predict\_proba](../../glossary.html#term-predict_proba).
+     */
+    estimator?: any
+
+    /**
+      Percentage of the number of classes to be used to create the code book. A number between 0 and 1 will require fewer classifiers than one-vs-the-rest. A number greater than 1 will require more classifiers than one-vs-the-rest.
+
+      @defaultValue `1.5`
+     */
+    code_size?: number
+
+    /**
+      The generator used to initialize the codebook. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The number of jobs to use for the computation: the multiclass problems are computed in parallel.
+
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `OutputCodeClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +127,17 @@ ctor_OutputCodeClassifier = {k: v for k, v in ctor_OutputCodeClassifier.items() 
   /**
     Fit underlying estimators.
    */
-  async fit(opts: OutputCodeClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Multi-class targets.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OutputCodeClassifier instance has already been disposed'
@@ -135,7 +169,12 @@ pms_OutputCodeClassifier_fit = {k: v for k, v in pms_OutputCodeClassifier_fit.it
   /**
     Predict multi-class targets using underlying estimators.
    */
-  async predict(opts: OutputCodeClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This OutputCodeClassifier instance has already been disposed'
@@ -167,7 +206,22 @@ pms_OutputCodeClassifier_predict = {k: v for k, v in pms_OutputCodeClassifier_pr
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: OutputCodeClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This OutputCodeClassifier instance has already been disposed'
@@ -332,66 +386,4 @@ pms_OutputCodeClassifier_score = {k: v for k, v in pms_OutputCodeClassifier_scor
         ._py`attr_OutputCodeClassifier_feature_names_in_.tolist() if hasattr(attr_OutputCodeClassifier_feature_names_in_, 'tolist') else attr_OutputCodeClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface OutputCodeClassifierOptions {
-  /**
-    An estimator object implementing [fit](../../glossary.html#term-fit) and one of [decision\_function](../../glossary.html#term-decision_function) or [predict\_proba](../../glossary.html#term-predict_proba).
-   */
-  estimator?: any
-
-  /**
-    Percentage of the number of classes to be used to create the code book. A number between 0 and 1 will require fewer classifiers than one-vs-the-rest. A number greater than 1 will require more classifiers than one-vs-the-rest.
-
-    @defaultValue `1.5`
-   */
-  code_size?: number
-
-  /**
-    The generator used to initialize the codebook. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The number of jobs to use for the computation: the multiclass problems are computed in parallel.
-
-    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface OutputCodeClassifierFitOptions {
-  /**
-    Data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Multi-class targets.
-   */
-  y?: ArrayLike
-}
-
-export interface OutputCodeClassifierPredictOptions {
-  /**
-    Data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface OutputCodeClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

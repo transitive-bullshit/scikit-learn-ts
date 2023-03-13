@@ -44,27 +44,12 @@ try: ${pyBridgeName}
 except NameError: ${pyBridgeName} = {}
 `
 
-  const optionsTypeDeclaration = `
-export interface ${pyDocClass.name}${optionsSuffix} {
-  ${pyDocClass.params
-    .map((param) => {
-      const pre = indentComment([
-        param.desc,
-        param.type.default !== undefined && param.type.default !== null
-          ? `@defaultValue \`${
-              typeof param.type.default === 'string'
-                ? "'" + param.type.default + "'"
-                : param.type.default
-            }\``
-          : ''
-      ])
+  //   const optionsTypeDeclaration = `
+  // export interface ${pyDocClass.name}${optionsSuffix} ${genPyDocParamsType(
+  //     pyDocClass.params
+  //   )}
+  // `
 
-      const dec = `${param.name}?: ${param.type.type || 'any'}`
-      return `${pre}\n${dec}`
-    })
-    .join('\n\n')}
-}
-`
   const methodNamesToPascalCase = pyDocClass.methods.reduce(
     (acc, method) => ({
       ...acc,
@@ -73,15 +58,12 @@ export interface ${pyDocClass.name}${optionsSuffix} {
     {} as Record<string, string>
   )
 
-  const methodParamsTypeDeclarations = pyDocClass.methods
-    .map(
-      (method) => `
-export interface ${pyDocClass.name}${
-        methodNamesToPascalCase[method.name]
-      }${optionsSuffix} {
-  ${method.params
-    .map((param) => {
-      const pre = indentComment([
+  function genPyDocParamType(
+    param: types.PyDocParam,
+    opts: { indent?: number } = {}
+  ) {
+    const pre = indentComment(
+      [
         param.desc,
         param.type.default !== undefined && param.type.default !== null
           ? `@defaultValue \`${
@@ -90,15 +72,23 @@ export interface ${pyDocClass.name}${
                 : param.type.default
             }\``
           : ''
-      ])
-      const dec = `${param.name}?: ${param.type.type || 'any'}`
-      return `${pre}\n${dec}`
-    })
-    .join('\n\n')}
-}
-`
+      ],
+      opts
     )
-    .join('\n\n\n')
+    const dec = `${param.name}?: ${param.type.type || 'any'}`
+    return `${pre}\n${dec}`
+  }
+
+  function genPyDocParamsType(
+    params: types.PyDocParam[],
+    opts: { indent?: number } = {}
+  ) {
+    const types = params.map((param) => genPyDocParamType(param, opts))
+
+    return `{
+${types.join('\n\n')}
+}`
+  }
 
   const generateParamsInitSnippet = (
     params: types.PyDocParam[],
@@ -131,9 +121,10 @@ export interface ${pyDocClass.name}${
       const pyParamsIdentifier = `pms_${pyDocClass.name}_${method.name}`
       const pyResIdentifier = `res_${pyDocClass.name}_${method.name}`
 
-      const dec = `async ${method.name}(opts: ${pyDocClass.name}${
-        methodNamesToPascalCase[method.name]
-      }${optionsSuffix}): Promise<${method.returns?.type?.type || 'any'}> {
+      const dec = `async ${method.name}(opts: ${genPyDocParamsType(
+        method.params,
+        { indent: 6 }
+      )}): Promise<${method.returns?.type?.type || 'any'}> {
           if (this._isDisposed) {
             throw new Error('This ${
               pyDocClass.name
@@ -221,7 +212,7 @@ export class ${pyDocClass.name} {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
   
-  constructor(opts?: ${pyDocClass.name}${optionsSuffix}) {
+  constructor(opts?: ${genPyDocParamsType(pyDocClass.params, { indent: 6 })}) {
     this.id = \`${pyDocClass.name}\${crypto.randomUUID().split('-')[0]}\`
     this.opts = opts || {}
   }
@@ -296,10 +287,6 @@ export class ${pyDocClass.name} {
 
   ${attribDeclarations}
 }
-
-${optionsTypeDeclaration}
-
-${methodParamsTypeDeclarations}
 `
 
   return formatSource(source)

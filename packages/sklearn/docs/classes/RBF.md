@@ -13,20 +13,22 @@ The RBF kernel is a stationary kernel. It is also known as the “squared expone
 ### Signature
 
 ```ts
-new RBF(opts?: RBFOptions): RBF;
+new RBF(opts?: object): RBF;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`RBFOptions`](../interfaces/RBFOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.length_scale?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | The length scale of the kernel. If a float, an isotropic kernel is used. If an array, an anisotropic kernel is used where each dimension of l defines the length-scale of the respective feature dimension.  `Default Value`  `1` |
+| `opts.length_scale_bounds?` | `"fixed"` | The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning. |
 
 ### Returns
 
 [`RBF`](RBF.md)
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L23)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L23)
 
 ## Properties
 
@@ -34,31 +36,31 @@ Defined in:  [generated/gaussian\_process/kernels/RBF.ts:23](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L20)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L16)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L17)
 
 ## Accessors
 
@@ -74,9 +76,9 @@ anisotropic(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L213)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L252)
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L213)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L252)
 
 ### hyperparameter\_length\_scale
 
@@ -90,9 +92,9 @@ hyperparameter_length_scale(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L233)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L272)
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L233)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L272)
 
 ### py
 
@@ -106,7 +108,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L28)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L40)
 
 #### Signature
 
@@ -124,9 +126,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L32)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L44)
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L28) [generated/gaussian\_process/kernels/RBF.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L32)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L40) [generated/gaussian\_process/kernels/RBF.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L44)
 
 ## Methods
 
@@ -137,20 +139,23 @@ Return the kernel k(X, Y) and optionally its gradient.
 #### Signature
 
 ```ts
-__call__(opts: RBFCallOptions): Promise<ArrayLike[]>;
+__call__(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RBFCallOptions`](../interfaces/RBFCallOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y?` | [`ArrayLike`](../types/ArrayLike.md)[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
+| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L101)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L113)
 
 ### clone\_with\_theta()
 
@@ -159,20 +164,21 @@ Returns a clone of self with given hyperparameters theta.
 #### Signature
 
 ```ts
-clone_with_theta(opts: RBFCloneWithThetaOptions): Promise<any>;
+clone_with_theta(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RBFCloneWithThetaOptions`](../interfaces/RBFCloneWithThetaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.theta?` | [`ArrayLike`](../types/ArrayLike.md) | The hyperparameters |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L133)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L162)
 
 ### diag()
 
@@ -183,20 +189,21 @@ The result of this method is identical to np.diag(self(X)); however, it can be e
 #### Signature
 
 ```ts
-diag(opts: RBFDiagOptions): Promise<ArrayLike>;
+diag(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RBFDiagOptions`](../interfaces/RBFDiagOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L163)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L197)
 
 ### dispose()
 
@@ -214,7 +221,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L84)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L96)
 
 ### init()
 
@@ -238,7 +245,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L41)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L53)
 
 ### is\_stationary()
 
@@ -247,17 +254,17 @@ Returns whether the kernel is stationary.
 #### Signature
 
 ```ts
-is_stationary(opts: RBFIsStationaryOptions): Promise<any>;
+is_stationary(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RBFIsStationaryOptions`](../interfaces/RBFIsStationaryOptions.md) |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/RBF.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L190)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L229)

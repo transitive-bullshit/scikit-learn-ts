@@ -22,7 +22,50 @@ export class ColumnTransformer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ColumnTransformerOptions) {
+  constructor(opts?: {
+    /**
+      List of (name, transformer, columns) tuples specifying the transformer objects to be applied to subsets of the data.
+     */
+    transformers?: any
+
+    /**
+      By default, only the specified columns in `transformers` are transformed and combined in the output, and the non-specified columns are dropped. (default of `'drop'`). By specifying `remainder='passthrough'`, all remaining columns that were not specified in `transformers`, but present in the data passed to `fit` will be automatically passed through. This subset of columns is concatenated with the output of the transformers. For dataframes, extra columns not seen during `fit` will be excluded from the output of `transform`. By setting `remainder` to be an estimator, the remaining non-specified columns will use the `remainder` estimator. The estimator must support [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform). Note that using this feature requires that the DataFrame columns input at [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform) have identical order.
+
+      @defaultValue `'drop'`
+     */
+    remainder?: 'drop' | 'passthrough'
+
+    /**
+      If the output of the different transformers contains sparse matrices, these will be stacked as a sparse matrix if the overall density is lower than this value. Use `sparse\_threshold=0` to always return dense. When the transformed output consists of all dense data, the stacked result will be dense, and this keyword will be ignored.
+
+      @defaultValue `0.3`
+     */
+    sparse_threshold?: number
+
+    /**
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Multiplicative weights for features per transformer. The output of the transformer is multiplied by these weights. Keys are transformer names, values the weights.
+     */
+    transformer_weights?: any
+
+    /**
+      If `true`, the time elapsed while fitting each transformer will be printed as it is completed.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      If `true`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
+
+      @defaultValue `true`
+     */
+    verbose_feature_names_out?: boolean
+  }) {
     this.id = `ColumnTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +152,17 @@ ctor_ColumnTransformer = {k: v for k, v in ctor_ColumnTransformer.items() if v i
   /**
     Fit all transformers using X.
    */
-  async fit(opts: ColumnTransformerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Input data, of which specified subsets are used to fit the transformers.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Targets for supervised learning.
+     */
+    y?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ColumnTransformer instance has already been disposed'
@@ -141,9 +194,17 @@ pms_ColumnTransformer_fit = {k: v for k, v in pms_ColumnTransformer_fit.items() 
   /**
     Fit all transformers, transform the data and concatenate results.
    */
-  async fit_transform(
-    opts: ColumnTransformerFitTransformOptions
-  ): Promise<ArrayLike | SparseMatrix[]> {
+  async fit_transform(opts: {
+    /**
+      Input data, of which specified subsets are used to fit the transformers.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Targets for supervised learning.
+     */
+    y?: ArrayLike
+  }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This ColumnTransformer instance has already been disposed'
@@ -177,9 +238,12 @@ pms_ColumnTransformer_fit_transform = {k: v for k, v in pms_ColumnTransformer_fi
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: ColumnTransformerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ColumnTransformer instance has already been disposed'
@@ -214,7 +278,12 @@ pms_ColumnTransformer_get_feature_names_out = {k: v for k, v in pms_ColumnTransf
 
     Calling `set\_output` will set the output of all estimators in `transformers` and `transformers\_`.
    */
-  async set_output(opts: ColumnTransformerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ColumnTransformer instance has already been disposed'
@@ -244,9 +313,12 @@ pms_ColumnTransformer_set_output = {k: v for k, v in pms_ColumnTransformer_set_o
   /**
     Transform X separately by each transformer, concatenate results.
    */
-  async transform(
-    opts: ColumnTransformerTransformOptions
-  ): Promise<ArrayLike | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data to be transformed by subset.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This ColumnTransformer instance has already been disposed'
@@ -380,94 +452,4 @@ pms_ColumnTransformer_transform = {k: v for k, v in pms_ColumnTransformer_transf
         ._py`attr_ColumnTransformer_n_features_in_.tolist() if hasattr(attr_ColumnTransformer_n_features_in_, 'tolist') else attr_ColumnTransformer_n_features_in_`
     })()
   }
-}
-
-export interface ColumnTransformerOptions {
-  /**
-    List of (name, transformer, columns) tuples specifying the transformer objects to be applied to subsets of the data.
-   */
-  transformers?: any
-
-  /**
-    By default, only the specified columns in `transformers` are transformed and combined in the output, and the non-specified columns are dropped. (default of `'drop'`). By specifying `remainder='passthrough'`, all remaining columns that were not specified in `transformers`, but present in the data passed to `fit` will be automatically passed through. This subset of columns is concatenated with the output of the transformers. For dataframes, extra columns not seen during `fit` will be excluded from the output of `transform`. By setting `remainder` to be an estimator, the remaining non-specified columns will use the `remainder` estimator. The estimator must support [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform). Note that using this feature requires that the DataFrame columns input at [fit](../../glossary.html#term-fit) and [transform](../../glossary.html#term-transform) have identical order.
-
-    @defaultValue `'drop'`
-   */
-  remainder?: 'drop' | 'passthrough'
-
-  /**
-    If the output of the different transformers contains sparse matrices, these will be stacked as a sparse matrix if the overall density is lower than this value. Use `sparse\_threshold=0` to always return dense. When the transformed output consists of all dense data, the stacked result will be dense, and this keyword will be ignored.
-
-    @defaultValue `0.3`
-   */
-  sparse_threshold?: number
-
-  /**
-    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Multiplicative weights for features per transformer. The output of the transformer is multiplied by these weights. Keys are transformer names, values the weights.
-   */
-  transformer_weights?: any
-
-  /**
-    If `true`, the time elapsed while fitting each transformer will be printed as it is completed.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    If `true`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
-
-    @defaultValue `true`
-   */
-  verbose_feature_names_out?: boolean
-}
-
-export interface ColumnTransformerFitOptions {
-  /**
-    Input data, of which specified subsets are used to fit the transformers.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Targets for supervised learning.
-   */
-  y?: ArrayLike[]
-}
-
-export interface ColumnTransformerFitTransformOptions {
-  /**
-    Input data, of which specified subsets are used to fit the transformers.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Targets for supervised learning.
-   */
-  y?: ArrayLike
-}
-
-export interface ColumnTransformerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface ColumnTransformerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface ColumnTransformerTransformOptions {
-  /**
-    The data to be transformed by subset.
-   */
-  X?: ArrayLike[]
 }

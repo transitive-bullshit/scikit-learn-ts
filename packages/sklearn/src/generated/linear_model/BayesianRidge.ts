@@ -22,7 +22,87 @@ export class BayesianRidge {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BayesianRidgeOptions) {
+  constructor(opts?: {
+    /**
+      Maximum number of iterations. Should be greater than or equal to 1.
+
+      @defaultValue `300`
+     */
+    n_iter?: number
+
+    /**
+      Stop the algorithm if w has converged.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Hyper-parameter : shape parameter for the Gamma distribution prior over the alpha parameter.
+
+      @defaultValue `0.000001`
+     */
+    alpha_1?: number
+
+    /**
+      Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the alpha parameter.
+
+      @defaultValue `0.000001`
+     */
+    alpha_2?: number
+
+    /**
+      Hyper-parameter : shape parameter for the Gamma distribution prior over the lambda parameter.
+
+      @defaultValue `0.000001`
+     */
+    lambda_1?: number
+
+    /**
+      Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the lambda parameter.
+
+      @defaultValue `0.000001`
+     */
+    lambda_2?: number
+
+    /**
+      Initial value for alpha (precision of the noise). If not set, alpha\_init is 1/Var(y).
+     */
+    alpha_init?: number
+
+    /**
+      Initial value for lambda (precision of the weights). If not set, lambda\_init is 1.
+     */
+    lambda_init?: number
+
+    /**
+      If `true`, compute the log marginal likelihood at each iteration of the optimization.
+
+      @defaultValue `false`
+     */
+    compute_score?: boolean
+
+    /**
+      Whether to calculate the intercept for this model. The intercept is not treated as a probabilistic parameter and thus has no associated variance. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      Verbose mode when fitting the model.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `BayesianRidge${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +189,22 @@ ctor_BayesianRidge = {k: v for k, v in ctor_BayesianRidge.items() if v is not No
   /**
     Fit the model.
    */
-  async fit(opts: BayesianRidgeFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: NDArray[]
+
+    /**
+      Target values. Will be cast to X’s dtype if necessary.
+     */
+    y?: NDArray
+
+    /**
+      Individual weights for each sample.
+     */
+    sample_weight?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BayesianRidge instance has already been disposed')
     }
@@ -143,7 +238,19 @@ pms_BayesianRidge_fit = {k: v for k, v in pms_BayesianRidge_fit.items() if v is 
 
     In addition to the mean of the predictive distribution, also its standard deviation can be returned.
    */
-  async predict(opts: BayesianRidgePredictOptions): Promise<ArrayLike> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Whether to return the standard deviation of posterior prediction.
+
+      @defaultValue `false`
+     */
+    return_std?: boolean
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This BayesianRidge instance has already been disposed')
     }
@@ -175,7 +282,22 @@ pms_BayesianRidge_predict = {k: v for k, v in pms_BayesianRidge_predict.items() 
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: BayesianRidgeScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This BayesianRidge instance has already been disposed')
     }
@@ -466,134 +588,4 @@ pms_BayesianRidge_score = {k: v for k, v in pms_BayesianRidge_score.items() if v
         ._py`attr_BayesianRidge_feature_names_in_.tolist() if hasattr(attr_BayesianRidge_feature_names_in_, 'tolist') else attr_BayesianRidge_feature_names_in_`
     })()
   }
-}
-
-export interface BayesianRidgeOptions {
-  /**
-    Maximum number of iterations. Should be greater than or equal to 1.
-
-    @defaultValue `300`
-   */
-  n_iter?: number
-
-  /**
-    Stop the algorithm if w has converged.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Hyper-parameter : shape parameter for the Gamma distribution prior over the alpha parameter.
-
-    @defaultValue `0.000001`
-   */
-  alpha_1?: number
-
-  /**
-    Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the alpha parameter.
-
-    @defaultValue `0.000001`
-   */
-  alpha_2?: number
-
-  /**
-    Hyper-parameter : shape parameter for the Gamma distribution prior over the lambda parameter.
-
-    @defaultValue `0.000001`
-   */
-  lambda_1?: number
-
-  /**
-    Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the lambda parameter.
-
-    @defaultValue `0.000001`
-   */
-  lambda_2?: number
-
-  /**
-    Initial value for alpha (precision of the noise). If not set, alpha\_init is 1/Var(y).
-   */
-  alpha_init?: number
-
-  /**
-    Initial value for lambda (precision of the weights). If not set, lambda\_init is 1.
-   */
-  lambda_init?: number
-
-  /**
-    If `true`, compute the log marginal likelihood at each iteration of the optimization.
-
-    @defaultValue `false`
-   */
-  compute_score?: boolean
-
-  /**
-    Whether to calculate the intercept for this model. The intercept is not treated as a probabilistic parameter and thus has no associated variance. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    Verbose mode when fitting the model.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface BayesianRidgeFitOptions {
-  /**
-    Training data.
-   */
-  X?: NDArray[]
-
-  /**
-    Target values. Will be cast to X’s dtype if necessary.
-   */
-  y?: NDArray
-
-  /**
-    Individual weights for each sample.
-   */
-  sample_weight?: NDArray
-}
-
-export interface BayesianRidgePredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Whether to return the standard deviation of posterior prediction.
-
-    @defaultValue `false`
-   */
-  return_std?: boolean
-}
-
-export interface BayesianRidgeScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

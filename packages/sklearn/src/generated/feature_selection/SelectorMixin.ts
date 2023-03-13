@@ -22,7 +22,22 @@ export class SelectorMixin {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SelectorMixinOptions) {
+  constructor(opts?: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }) {
     this.id = `SelectorMixin${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +118,22 @@ ctor_SelectorMixin = {k: v for k, v in ctor_SelectorMixin.items() if v is not No
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: SelectorMixinFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This SelectorMixin instance has already been disposed')
     }
@@ -135,9 +165,12 @@ pms_SelectorMixin_fit_transform = {k: v for k, v in pms_SelectorMixin_fit_transf
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: SelectorMixinGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectorMixin instance has already been disposed')
     }
@@ -168,7 +201,14 @@ pms_SelectorMixin_get_feature_names_out = {k: v for k, v in pms_SelectorMixin_ge
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(opts: SelectorMixinGetSupportOptions): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectorMixin instance has already been disposed')
     }
@@ -196,9 +236,12 @@ pms_SelectorMixin_get_support = {k: v for k, v in pms_SelectorMixin_get_support.
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(
-    opts: SelectorMixinInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectorMixin instance has already been disposed')
     }
@@ -230,7 +273,12 @@ pms_SelectorMixin_inverse_transform = {k: v for k, v in pms_SelectorMixin_invers
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SelectorMixinSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectorMixin instance has already been disposed')
     }
@@ -258,7 +306,12 @@ pms_SelectorMixin_set_output = {k: v for k, v in pms_SelectorMixin_set_output.it
   /**
     Reduce X to the selected features.
    */
-  async transform(opts: SelectorMixinTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SelectorMixin instance has already been disposed')
     }
@@ -305,75 +358,4 @@ pms_SelectorMixin_transform = {k: v for k, v in pms_SelectorMixin_transform.item
         ._py`attr_SelectorMixin_X_new.tolist() if hasattr(attr_SelectorMixin_X_new, 'tolist') else attr_SelectorMixin_X_new`
     })()
   }
-}
-
-export interface SelectorMixinOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SelectorMixinFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SelectorMixinGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface SelectorMixinGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface SelectorMixinInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface SelectorMixinSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SelectorMixinTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

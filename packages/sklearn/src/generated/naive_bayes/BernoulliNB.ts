@@ -22,7 +22,40 @@ export class BernoulliNB {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BernoulliNBOptions) {
+  constructor(opts?: {
+    /**
+      Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`true`, for no smoothing).
+
+      @defaultValue `1`
+     */
+    alpha?: number | ArrayLike
+
+    /**
+      If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
+
+      @defaultValue `false`
+     */
+    force_alpha?: boolean
+
+    /**
+      Threshold for binarizing (mapping to booleans) of sample features. If `undefined`, input is presumed to already consist of binary vectors.
+
+      @defaultValue `0`
+     */
+    binarize?: number
+
+    /**
+      Whether to learn class prior probabilities or not. If false, a uniform prior will be used.
+
+      @defaultValue `true`
+     */
+    fit_prior?: boolean
+
+    /**
+      Prior probabilities of the classes. If specified, the priors are not adjusted according to the data.
+     */
+    class_prior?: ArrayLike
+  }) {
     this.id = `BernoulliNB${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +136,22 @@ ctor_BernoulliNB = {k: v for k, v in ctor_BernoulliNB.items() if v is not None}`
   /**
     Fit Naive Bayes classifier according to X, y.
    */
-  async fit(opts: BernoulliNBFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Weights applied to individual samples (1. for unweighted).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliNB instance has already been disposed')
     }
@@ -141,7 +189,29 @@ pms_BernoulliNB_fit = {k: v for k, v in pms_BernoulliNB_fit.items() if v is not 
 
     This method has some performance overhead hence it is better to call partial\_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
    */
-  async partial_fit(opts: BernoulliNBPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      List of all the classes that can possibly appear in the y vector.
+
+      Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
+     */
+    classes?: ArrayLike
+
+    /**
+      Weights applied to individual samples (1. for unweighted).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BernoulliNB instance has already been disposed')
     }
@@ -177,7 +247,12 @@ pms_BernoulliNB_partial_fit = {k: v for k, v in pms_BernoulliNB_partial_fit.item
   /**
     Perform classification on an array of test vectors X.
    */
-  async predict(opts: BernoulliNBPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This BernoulliNB instance has already been disposed')
     }
@@ -207,9 +282,12 @@ pms_BernoulliNB_predict = {k: v for k, v in pms_BernoulliNB_predict.items() if v
 
     For each row x of X and class y, the joint log probability is given by `log P(x, y) \= log P(y) + log P(x|y),` where `log P(y)` is the class prior probability and `log P(x|y)` is the class-conditional probability.
    */
-  async predict_joint_log_proba(
-    opts: BernoulliNBPredictJointLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_joint_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This BernoulliNB instance has already been disposed')
     }
@@ -240,9 +318,12 @@ pms_BernoulliNB_predict_joint_log_proba = {k: v for k, v in pms_BernoulliNB_pred
   /**
     Return log-probability estimates for the test vector X.
    */
-  async predict_log_proba(
-    opts: BernoulliNBPredictLogProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This BernoulliNB instance has already been disposed')
     }
@@ -270,9 +351,12 @@ pms_BernoulliNB_predict_log_proba = {k: v for k, v in pms_BernoulliNB_predict_lo
   /**
     Return probability estimates for the test vector X.
    */
-  async predict_proba(
-    opts: BernoulliNBPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This BernoulliNB instance has already been disposed')
     }
@@ -302,7 +386,22 @@ pms_BernoulliNB_predict_proba = {k: v for k, v in pms_BernoulliNB_predict_proba.
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: BernoulliNBScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This BernoulliNB instance has already been disposed')
     }
@@ -503,125 +602,4 @@ pms_BernoulliNB_score = {k: v for k, v in pms_BernoulliNB_score.items() if v is 
         ._py`attr_BernoulliNB_feature_names_in_.tolist() if hasattr(attr_BernoulliNB_feature_names_in_, 'tolist') else attr_BernoulliNB_feature_names_in_`
     })()
   }
-}
-
-export interface BernoulliNBOptions {
-  /**
-    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`true`, for no smoothing).
-
-    @defaultValue `1`
-   */
-  alpha?: number | ArrayLike
-
-  /**
-    If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
-
-    @defaultValue `false`
-   */
-  force_alpha?: boolean
-
-  /**
-    Threshold for binarizing (mapping to booleans) of sample features. If `undefined`, input is presumed to already consist of binary vectors.
-
-    @defaultValue `0`
-   */
-  binarize?: number
-
-  /**
-    Whether to learn class prior probabilities or not. If false, a uniform prior will be used.
-
-    @defaultValue `true`
-   */
-  fit_prior?: boolean
-
-  /**
-    Prior probabilities of the classes. If specified, the priors are not adjusted according to the data.
-   */
-  class_prior?: ArrayLike
-}
-
-export interface BernoulliNBFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Weights applied to individual samples (1. for unweighted).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BernoulliNBPartialFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    List of all the classes that can possibly appear in the y vector.
-
-    Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
-   */
-  classes?: ArrayLike
-
-  /**
-    Weights applied to individual samples (1. for unweighted).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BernoulliNBPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface BernoulliNBPredictJointLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface BernoulliNBPredictLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface BernoulliNBPredictProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface BernoulliNBScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

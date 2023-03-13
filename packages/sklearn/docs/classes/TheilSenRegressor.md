@@ -15,20 +15,29 @@ Read more in the [User Guide](../linear_model.html#theil-sen-regression).
 ### Signature
 
 ```ts
-new TheilSenRegressor(opts?: TheilSenRegressorOptions): TheilSenRegressor;
+new TheilSenRegressor(opts?: object): TheilSenRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`TheilSenRegressorOptions`](../interfaces/TheilSenRegressorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.fit_intercept?` | `boolean` | Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations.  `Default Value`  `true` |
+| `opts.max_iter?` | `number` | Maximum number of iterations for the calculation of spatial median.  `Default Value`  `300` |
+| `opts.max_subpopulation?` | `number` | Instead of computing with a set of cardinality ‘n choose k’, where n is the number of samples and k is the number of subsamples (at least number of features), consider only a stochastic subpopulation of a given maximal size if ‘n choose k’ is larger than max\_subpopulation. For other than small problem sizes this parameter will determine memory usage and runtime if n\_subsamples is not changed. Note that the data type should be int but floats such as 1e4 can be accepted too.  `Default Value`  `10000` |
+| `opts.n_jobs?` | `number` | Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.n_subsamples?` | `number` | Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit\_intercept=`true`) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If `undefined`, take the minimum number of subsamples leading to maximal robustness. If n\_subsamples is set to n\_samples, Theil-Sen is identical to least squares. |
+| `opts.random_state?` | `number` | A random number generator instance to define the state of the random permutations generator. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.tol?` | `number` | Tolerance when calculating spatial median.  `Default Value`  `0.001` |
+| `opts.verbose?` | `boolean` | Verbose mode when fitting the model.  `Default Value`  `false` |
 
 ### Returns
 
 [`TheilSenRegressor`](TheilSenRegressor.md)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L25)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +45,31 @@ Defined in:  [generated/linear\_model/TheilSenRegressor.ts:25](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L23)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L22)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L21)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L18)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L19)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,9 +87,9 @@ breakdown_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L262)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L349)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L262)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L349)
 
 ### coef\_
 
@@ -96,9 +105,9 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L208)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L295)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L208)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L295)
 
 ### feature\_names\_in\_
 
@@ -114,9 +123,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L370)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L457)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L370)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L457)
 
 ### intercept\_
 
@@ -132,9 +141,9 @@ intercept_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L235)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L322)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L235)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L322)
 
 ### n\_features\_in\_
 
@@ -150,9 +159,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L343)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L430)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L343)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L430)
 
 ### n\_iter\_
 
@@ -168,9 +177,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L289)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L376)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L289)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L376)
 
 ### n\_subpopulation\_
 
@@ -186,9 +195,9 @@ n_subpopulation_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L316)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L403)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L316)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L403)
 
 ### py
 
@@ -202,7 +211,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L30)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L87)
 
 #### Signature
 
@@ -220,9 +229,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L34)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L91)
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L30) [generated/linear\_model/TheilSenRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L34)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L87) [generated/linear\_model/TheilSenRegressor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L91)
 
 ## Methods
 
@@ -242,7 +251,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L93)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L150)
 
 ### fit()
 
@@ -251,20 +260,22 @@ Fit linear model.
 #### Signature
 
 ```ts
-fit(opts: TheilSenRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TheilSenRegressorFitOptions`](../interfaces/TheilSenRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L110)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L167)
 
 ### init()
 
@@ -288,7 +299,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L43)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L100)
 
 ### predict()
 
@@ -297,20 +308,21 @@ Predict using the linear model.
 #### Signature
 
 ```ts
-predict(opts: TheilSenRegressorPredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TheilSenRegressorPredictOptions`](../interfaces/TheilSenRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L142)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L209)
 
 ### score()
 
@@ -321,17 +333,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: TheilSenRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TheilSenRegressorScoreOptions`](../interfaces/TheilSenRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/TheilSenRegressor.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L174)
+Defined in:  [generated/linear\_model/TheilSenRegressor.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/TheilSenRegressor.ts#L246)

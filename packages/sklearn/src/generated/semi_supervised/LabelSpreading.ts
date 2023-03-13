@@ -22,7 +22,54 @@ export class LabelSpreading {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LabelSpreadingOptions) {
+  constructor(opts?: {
+    /**
+      String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.
+
+      @defaultValue `'rbf'`
+     */
+    kernel?: 'knn' | 'rbf'
+
+    /**
+      Parameter for rbf kernel.
+
+      @defaultValue `20`
+     */
+    gamma?: number
+
+    /**
+      Parameter for knn kernel which is a strictly positive integer.
+
+      @defaultValue `7`
+     */
+    n_neighbors?: number
+
+    /**
+      Clamping factor. A value in (0, 1) that specifies the relative amount that an instance should adopt the information from its neighbors as opposed to its initial label. alpha=0 means keeping the initial label information; alpha=1 means replacing all initial information.
+
+      @defaultValue `0.2`
+     */
+    alpha?: number
+
+    /**
+      Maximum number of iterations allowed.
+
+      @defaultValue `30`
+     */
+    max_iter?: number
+
+    /**
+      Convergence tolerance: threshold to consider the system at steady state.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `LabelSpreading${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +152,17 @@ ctor_LabelSpreading = {k: v for k, v in ctor_LabelSpreading.items() if v is not 
 
     The input samples (labeled and unlabeled) are provided by matrix X, and target labels are provided by matrix y. We conventionally apply the label -1 to unlabeled samples in matrix y in a semi-supervised classification.
    */
-  async fit(opts: LabelSpreadingFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelSpreading instance has already been disposed')
     }
@@ -135,7 +192,12 @@ pms_LabelSpreading_fit = {k: v for k, v in pms_LabelSpreading_fit.items() if v i
   /**
     Perform inductive inference across the model.
    */
-  async predict(opts: LabelSpreadingPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LabelSpreading instance has already been disposed')
     }
@@ -165,9 +227,12 @@ pms_LabelSpreading_predict = {k: v for k, v in pms_LabelSpreading_predict.items(
 
     Compute the probability estimates for each single sample in X and each possible outcome seen during training (categorical distribution).
    */
-  async predict_proba(
-    opts: LabelSpreadingPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This LabelSpreading instance has already been disposed')
     }
@@ -197,7 +262,22 @@ pms_LabelSpreading_predict_proba = {k: v for k, v in pms_LabelSpreading_predict_
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: LabelSpreadingScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LabelSpreading instance has already been disposed')
     }
@@ -398,96 +478,4 @@ pms_LabelSpreading_score = {k: v for k, v in pms_LabelSpreading_score.items() if
         ._py`attr_LabelSpreading_n_iter_.tolist() if hasattr(attr_LabelSpreading_n_iter_, 'tolist') else attr_LabelSpreading_n_iter_`
     })()
   }
-}
-
-export interface LabelSpreadingOptions {
-  /**
-    String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.
-
-    @defaultValue `'rbf'`
-   */
-  kernel?: 'knn' | 'rbf'
-
-  /**
-    Parameter for rbf kernel.
-
-    @defaultValue `20`
-   */
-  gamma?: number
-
-  /**
-    Parameter for knn kernel which is a strictly positive integer.
-
-    @defaultValue `7`
-   */
-  n_neighbors?: number
-
-  /**
-    Clamping factor. A value in (0, 1) that specifies the relative amount that an instance should adopt the information from its neighbors as opposed to its initial label. alpha=0 means keeping the initial label information; alpha=1 means replacing all initial information.
-
-    @defaultValue `0.2`
-   */
-  alpha?: number
-
-  /**
-    Maximum number of iterations allowed.
-
-    @defaultValue `30`
-   */
-  max_iter?: number
-
-  /**
-    Convergence tolerance: threshold to consider the system at steady state.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface LabelSpreadingFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
-   */
-  y?: ArrayLike
-}
-
-export interface LabelSpreadingPredictOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LabelSpreadingPredictProbaOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LabelSpreadingScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -13,20 +13,30 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new MDS(opts?: MDSOptions): MDS;
+new MDS(opts?: object): MDS;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `MDSOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.dissimilarity?` | `"euclidean"` \| `"precomputed"` | Dissimilarity measure to use:  `Default Value`  `'euclidean'` |
+| `opts.eps?` | `number` | Relative tolerance with respect to stress at which to declare convergence. The value of `eps` should be tuned separately depending on whether or not `normalized\_stress` is being used.  `Default Value`  `0.001` |
+| `opts.max_iter?` | `number` | Maximum number of iterations of the SMACOF algorithm for a single run.  `Default Value`  `300` |
+| `opts.metric?` | `boolean` | If `true`, perform metric MDS; otherwise, perform nonmetric MDS. When `false` (i.e. non-metric MDS), dissimilarities with 0 are considered as missing values.  `Default Value`  `true` |
+| `opts.n_components?` | `number` | Number of dimensions in which to immerse the dissimilarities.  `Default Value`  `2` |
+| `opts.n_init?` | `number` | Number of times the SMACOF algorithm will be run with different initializations. The final results will be the best output of the runs, determined by the run with the smallest final stress.  `Default Value`  `4` |
+| `opts.n_jobs?` | `number` | The number of jobs to use for the computation. If multiple initializations are used (`n\_init`), each run of the algorithm is computed in parallel.  `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.normalized_stress?` | `boolean` | Whether use and return normed stress value (Stress-1) instead of raw stress calculated by default. Only supported in non-metric MDS. |
+| `opts.random_state?` | `number` | Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See Glossary. |
+| `opts.verbose?` | `number` | Level of verbosity.  `Default Value`  `0` |
 
 ### Returns
 
 [`MDS`](MDS.md)
 
-Defined in:  [generated/manifold/MDS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L23)
+Defined in:  [generated/manifold/MDS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L23)
 
 ## Properties
 
@@ -34,31 +44,31 @@ Defined in:  [generated/manifold/MDS.ts:23](https://github.com/transitive-bullsh
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/MDS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L21)
+Defined in:  [generated/manifold/MDS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/MDS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L20)
+Defined in:  [generated/manifold/MDS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/manifold/MDS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L19)
+Defined in:  [generated/manifold/MDS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/manifold/MDS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L16)
+Defined in:  [generated/manifold/MDS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/manifold/MDS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L17)
+Defined in:  [generated/manifold/MDS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L17)
 
 ## Accessors
 
@@ -76,7 +86,7 @@ dissimilarity_matrix_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/manifold/MDS.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L214)
+Defined in: [generated/manifold/MDS.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L310)
 
 ### embedding\_
 
@@ -92,7 +102,7 @@ embedding_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/manifold/MDS.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L170)
+Defined in: [generated/manifold/MDS.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L266)
 
 ### feature\_names\_in\_
 
@@ -108,7 +118,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/manifold/MDS.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L262)
+Defined in: [generated/manifold/MDS.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L358)
 
 ### n\_features\_in\_
 
@@ -124,7 +134,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/MDS.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L239)
+Defined in: [generated/manifold/MDS.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L335)
 
 ### n\_iter\_
 
@@ -140,7 +150,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/MDS.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L285)
+Defined in: [generated/manifold/MDS.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L381)
 
 ### py
 
@@ -154,7 +164,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/manifold/MDS.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L28)
+Defined in:  [generated/manifold/MDS.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L94)
 
 #### Signature
 
@@ -172,7 +182,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/manifold/MDS.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L32)
+Defined in: [generated/manifold/MDS.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L98)
 
 ### stress\_
 
@@ -188,7 +198,7 @@ stress_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/MDS.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L192)
+Defined in: [generated/manifold/MDS.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L288)
 
 ## Methods
 
@@ -208,7 +218,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/MDS.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L90)
+Defined in:  [generated/manifold/MDS.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L156)
 
 ### fit()
 
@@ -217,20 +227,23 @@ Compute the position of the points in the embedding space.
 #### Signature
 
 ```ts
-fit(opts: MDSFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MDSFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix. |
+| `opts.init?` | `ArrayLike`[] | Starting configuration of the embedding to initialize the SMACOF algorithm. By default, the algorithm is initialized with a randomly chosen array. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/MDS.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L107)
+Defined in:  [generated/manifold/MDS.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L173)
 
 ### fit\_transform()
 
@@ -239,20 +252,23 @@ Fit the data from `X`, and returns the embedded coordinates.
 #### Signature
 
 ```ts
-fit_transform(opts: MDSFitTransformOptions): Promise<ArrayLike[]>;
+fit_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `MDSFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix. |
+| `opts.init?` | `ArrayLike`[] | Starting configuration of the embedding to initialize the SMACOF algorithm. By default, the algorithm is initialized with a randomly chosen array. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/manifold/MDS.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L138)
+Defined in:  [generated/manifold/MDS.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L219)
 
 ### init()
 
@@ -276,4 +292,4 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/MDS.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/manifold/MDS.ts#L41)
+Defined in:  [generated/manifold/MDS.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/MDS.ts#L107)

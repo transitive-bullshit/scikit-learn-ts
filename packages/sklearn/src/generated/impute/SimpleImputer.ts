@@ -22,7 +22,52 @@ export class SimpleImputer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SimpleImputerOptions) {
+  constructor(opts?: {
+    /**
+      The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` can be set to either `np.nan` or `pd.NA`.
+     */
+    missing_values?: number | string
+
+    /**
+      The imputation strategy.
+
+      @defaultValue `'mean'`
+     */
+    strategy?: string
+
+    /**
+      When strategy == “constant”, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `undefined`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types.
+     */
+    fill_value?: string
+
+    /**
+      Controls the verbosity of the imputer.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible. Note that, in the following cases, a new copy will always be made, even if `copy=False`:
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+
+      @defaultValue `false`
+     */
+    add_indicator?: boolean
+
+    /**
+      If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `strategy="constant"` in which case `fill\_value` will be used instead.
+
+      @defaultValue `false`
+     */
+    keep_empty_features?: boolean
+  }) {
     this.id = `SimpleImputer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +148,17 @@ ctor_SimpleImputer = {k: v for k, v in ctor_SimpleImputer.items() if v is not No
   /**
     Fit the imputer on `X`.
    */
-  async fit(opts: SimpleImputerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SimpleImputer instance has already been disposed')
     }
@@ -133,7 +188,22 @@ pms_SimpleImputer_fit = {k: v for k, v in pms_SimpleImputer_fit.items() if v is 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: SimpleImputerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This SimpleImputer instance has already been disposed')
     }
@@ -165,9 +235,12 @@ pms_SimpleImputer_fit_transform = {k: v for k, v in pms_SimpleImputer_fit_transf
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: SimpleImputerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SimpleImputer instance has already been disposed')
     }
@@ -202,9 +275,12 @@ pms_SimpleImputer_get_feature_names_out = {k: v for k, v in pms_SimpleImputer_ge
 
     Note that `inverse\_transform` can only invert the transform in features that have binary indicators for missing values. If a feature has no missing values at `fit` time, the feature won’t have a binary indicator, and the imputation done at `transform` time won’t be inverted.
    */
-  async inverse_transform(
-    opts: SimpleImputerInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      The imputed data to be reverted to original data. It has to be an augmented array of imputed data and the missing indicator mask.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This SimpleImputer instance has already been disposed')
     }
@@ -236,7 +312,12 @@ pms_SimpleImputer_inverse_transform = {k: v for k, v in pms_SimpleImputer_invers
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SimpleImputerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SimpleImputer instance has already been disposed')
     }
@@ -264,9 +345,12 @@ pms_SimpleImputer_set_output = {k: v for k, v in pms_SimpleImputer_set_output.it
   /**
     Impute all missing values in `X`.
    */
-  async transform(
-    opts: SimpleImputerTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The input data to complete.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This SimpleImputer instance has already been disposed')
     }
@@ -390,108 +474,4 @@ pms_SimpleImputer_transform = {k: v for k, v in pms_SimpleImputer_transform.item
         ._py`attr_SimpleImputer_feature_names_in_.tolist() if hasattr(attr_SimpleImputer_feature_names_in_, 'tolist') else attr_SimpleImputer_feature_names_in_`
     })()
   }
-}
-
-export interface SimpleImputerOptions {
-  /**
-    The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` can be set to either `np.nan` or `pd.NA`.
-   */
-  missing_values?: number | string
-
-  /**
-    The imputation strategy.
-
-    @defaultValue `'mean'`
-   */
-  strategy?: string
-
-  /**
-    When strategy == “constant”, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `undefined`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types.
-   */
-  fill_value?: string
-
-  /**
-    Controls the verbosity of the imputer.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible. Note that, in the following cases, a new copy will always be made, even if `copy=False`:
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
-
-    @defaultValue `false`
-   */
-  add_indicator?: boolean
-
-  /**
-    If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `strategy="constant"` in which case `fill\_value` will be used instead.
-
-    @defaultValue `false`
-   */
-  keep_empty_features?: boolean
-}
-
-export interface SimpleImputerFitOptions {
-  /**
-    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SimpleImputerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SimpleImputerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface SimpleImputerInverseTransformOptions {
-  /**
-    The imputed data to be reverted to original data. It has to be an augmented array of imputed data and the missing indicator mask.
-   */
-  X?: ArrayLike[]
-}
-
-export interface SimpleImputerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SimpleImputerTransformOptions {
-  /**
-    The input data to complete.
-   */
-  X?: ArrayLike | SparseMatrix
 }

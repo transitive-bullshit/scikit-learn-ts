@@ -13,20 +13,28 @@ Minimizes the objective function:
 ### Signature
 
 ```ts
-new Ridge(opts?: RidgeOptions): Ridge;
+new Ridge(opts?: object): Ridge;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `RidgeOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | Constant that multiplies the L2 term, controlling regularization strength. `alpha` must be a non-negative float i.e. in `\[0, inf)`.  When `alpha \= 0`, the objective is equivalent to ordinary least squares, solved by the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object. For numerical reasons, using `alpha \= 0` with the `Ridge` object is not advised. Instead, you should use the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object.  If an array is passed, penalties are assumed to be specific to the targets. Hence they must correspond in number.  `Default Value`  `1` |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.fit_intercept?` | `boolean` | Whether to fit the intercept for this model. If set to false, no intercept will be used in calculations (i.e. `X` and `y` are expected to be centered).  `Default Value`  `true` |
+| `opts.max_iter?` | `number` | Maximum number of iterations for conjugate gradient solver. For ‘sparse\_cg’ and ‘lsqr’ solvers, the default value is determined by scipy.sparse.linalg. For ‘sag’ solver, the default value is 1000. For ‘lbfgs’ solver, the default value is 15000. |
+| `opts.positive?` | `boolean` | When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.  `Default Value`  `false` |
+| `opts.random_state?` | `number` | Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See Glossary for details. |
+| `opts.solver?` | `"auto"` \| `"svd"` \| `"lsqr"` \| `"lbfgs"` \| `"sag"` \| `"saga"` \| `"cholesky"` \| `"sparse_cg"` | Solver to use in the computational routines:  `Default Value`  `'auto'` |
+| `opts.tol?` | `number` | Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ and ‘cholesky’.  `Default Value`  `0.0001` |
 
 ### Returns
 
 [`Ridge`](Ridge.md)
 
-Defined in:  [generated/linear\_model/Ridge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L23)
+Defined in:  [generated/linear\_model/Ridge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L23)
 
 ## Properties
 
@@ -34,31 +42,31 @@ Defined in:  [generated/linear\_model/Ridge.ts:23](https://github.com/transitive
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/Ridge.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L21)
+Defined in:  [generated/linear\_model/Ridge.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/Ridge.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L20)
+Defined in:  [generated/linear\_model/Ridge.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/Ridge.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L19)
+Defined in:  [generated/linear\_model/Ridge.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/Ridge.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L16)
+Defined in:  [generated/linear\_model/Ridge.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/Ridge.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L17)
+Defined in:  [generated/linear\_model/Ridge.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L17)
 
 ## Accessors
 
@@ -76,7 +84,7 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/Ridge.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L197)
+Defined in: [generated/linear\_model/Ridge.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L296)
 
 ### feature\_names\_in\_
 
@@ -92,7 +100,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/Ridge.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L287)
+Defined in: [generated/linear\_model/Ridge.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L386)
 
 ### intercept\_
 
@@ -108,7 +116,7 @@ intercept_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/Ridge.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L219)
+Defined in: [generated/linear\_model/Ridge.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L318)
 
 ### n\_features\_in\_
 
@@ -124,7 +132,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/Ridge.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L264)
+Defined in: [generated/linear\_model/Ridge.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L363)
 
 ### n\_iter\_
 
@@ -140,7 +148,7 @@ n_iter_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/Ridge.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L242)
+Defined in: [generated/linear\_model/Ridge.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L341)
 
 ### py
 
@@ -154,7 +162,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/Ridge.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L28)
+Defined in:  [generated/linear\_model/Ridge.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L92)
 
 #### Signature
 
@@ -172,7 +180,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/Ridge.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L32)
+Defined in: [generated/linear\_model/Ridge.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L96)
 
 ## Methods
 
@@ -192,7 +200,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/Ridge.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L88)
+Defined in:  [generated/linear\_model/Ridge.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L152)
 
 ### fit()
 
@@ -201,20 +209,23 @@ Fit Ridge regression model.
 #### Signature
 
 ```ts
-fit(opts: RidgeFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RidgeFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data. |
+| `opts.sample_weight?` | `number` \| `ArrayLike` | Individual weights for each sample. If given a float, every sample will have the same weight. |
+| `opts.y?` | `ArrayLike` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Ridge.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L105)
+Defined in:  [generated/linear\_model/Ridge.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L169)
 
 ### init()
 
@@ -238,7 +249,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/Ridge.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L41)
+Defined in:  [generated/linear\_model/Ridge.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L105)
 
 ### predict()
 
@@ -247,20 +258,21 @@ Predict using the linear model.
 #### Signature
 
 ```ts
-predict(opts: RidgePredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RidgePredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Ridge.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L137)
+Defined in:  [generated/linear\_model/Ridge.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L216)
 
 ### score()
 
@@ -271,17 +283,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: RidgeScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RidgeScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/Ridge.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/Ridge.ts#L165)
+Defined in:  [generated/linear\_model/Ridge.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/Ridge.ts#L249)

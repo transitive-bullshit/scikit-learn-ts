@@ -13,20 +13,25 @@ Implements Tensor Sketch, which approximates the feature map of the polynomial k
 ### Signature
 
 ```ts
-new PolynomialCountSketch(opts?: PolynomialCountSketchOptions): PolynomialCountSketch;
+new PolynomialCountSketch(opts?: object): PolynomialCountSketch;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `PolynomialCountSketchOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.coef0?` | `number` | Constant term of the polynomial kernel whose feature map will be approximated.  `Default Value`  `0` |
+| `opts.degree?` | `number` | Degree of the polynomial kernel whose feature map will be approximated.  `Default Value`  `2` |
+| `opts.gamma?` | `number` | Parameter of the polynomial kernel whose feature map will be approximated.  `Default Value`  `1` |
+| `opts.n_components?` | `number` | Dimensionality of the output feature space. Usually, `n\_components` should be greater than the number of features in input samples in order to achieve good performance. The optimal score / run time balance is typically achieved around `n\_components` = 10 \* `n\_features`, but this depends on the specific dataset being used.  `Default Value`  `100` |
+| `opts.random_state?` | `number` | Determines random number generation for indexHash and bitHash initialization. Pass an int for reproducible results across multiple function calls. See Glossary. |
 
 ### Returns
 
 [`PolynomialCountSketch`](PolynomialCountSketch.md)
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L23)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L23)
 
 ## Properties
 
@@ -34,31 +39,31 @@ Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:23](https
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L21)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L20)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L19)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L16)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L17)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L17)
 
 ## Accessors
 
@@ -76,7 +81,7 @@ bitHash_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L313)
+Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L380)
 
 ### feature\_names\_in\_
 
@@ -92,7 +97,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L367)
+Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L434)
 
 ### indexHash\_
 
@@ -108,7 +113,7 @@ indexHash_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L286)
+Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L353)
 
 ### n\_features\_in\_
 
@@ -124,7 +129,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L340)
+Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L407)
 
 ### py
 
@@ -138,7 +143,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L28)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L61)
 
 #### Signature
 
@@ -156,7 +161,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L32)
+Defined in: [generated/kernel\_approximation/PolynomialCountSketch.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L65)
 
 ## Methods
 
@@ -176,7 +181,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L89)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L122)
 
 ### fit()
 
@@ -187,20 +192,22 @@ Initializes the internal variables. The method needs no information about the di
 #### Signature
 
 ```ts
-fit(opts: PolynomialCountSketchFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `PolynomialCountSketchFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L108)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L141)
 
 ### fit\_transform()
 
@@ -211,20 +218,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: PolynomialCountSketchFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `PolynomialCountSketchFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | `ArrayLike` | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L142)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L185)
 
 ### get\_feature\_names\_out()
 
@@ -235,20 +245,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: PolynomialCountSketchGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `PolynomialCountSketchGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.PolynomialCountSketch.fit "sklearn.kernel_approximation.PolynomialCountSketch.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L183)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L239)
 
 ### init()
 
@@ -272,7 +283,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L41)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L74)
 
 ### set\_output()
 
@@ -283,20 +294,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: PolynomialCountSketchSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `PolynomialCountSketchSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L220)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L279)
 
 ### transform()
 
@@ -305,17 +317,18 @@ Generate the feature map approximation for X.
 #### Signature
 
 ```ts
-transform(opts: PolynomialCountSketchTransformOptions): Promise<ArrayLike>;
+transform(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `PolynomialCountSketchTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | New data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L252)
+Defined in:  [generated/kernel\_approximation/PolynomialCountSketch.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_approximation/PolynomialCountSketch.ts#L316)

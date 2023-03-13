@@ -19,20 +19,24 @@ Read more in the [User Guide](../feature_extraction.html#feature-hashing).
 ### Signature
 
 ```ts
-new FeatureHasher(opts?: FeatureHasherOptions): FeatureHasher;
+new FeatureHasher(opts?: object): FeatureHasher;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`FeatureHasherOptions`](../interfaces/FeatureHasherOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alternate_sign?` | `boolean` | When `true`, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.  `Default Value`  `true` |
+| `opts.dtype?` | `any` | The type of feature values. Passed to scipy.sparse matrix constructors as the dtype argument. Do not set this to bool, np.boolean or any unsigned integer type. |
+| `opts.input_type?` | `string` | Choose a string from {‘dict’, ‘pair’, ‘string’}. Either “dict” (the default) to accept dictionaries over (feature\_name, value); “pair” to accept pairs of (feature\_name, value); or “string” to accept single strings. feature\_name should be a string, while value should be a number. In the case of “string”, a value of 1 is implied. The feature\_name is hashed to find the appropriate column for the feature. The value’s sign might be flipped in the output (but see non\_negative, below).  `Default Value`  `'dict'` |
+| `opts.n_features?` | `number` | The number of features (columns) in the output matrices. Small numbers of features are likely to cause hash collisions, but large numbers will cause larger coefficient dimensions in linear learners.  `Default Value`  `2` |
 
 ### Returns
 
 [`FeatureHasher`](FeatureHasher.md)
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L29)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L29)
 
 ## Properties
 
@@ -40,31 +44,31 @@ Defined in:  [generated/feature\_extraction/FeatureHasher.ts:29](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L27)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L26)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L25)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L22)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L23)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L23)
 
 ## Accessors
 
@@ -80,7 +84,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L34)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L60)
 
 #### Signature
 
@@ -98,9 +102,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L38)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L64)
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L34) [generated/feature\_extraction/FeatureHasher.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L38)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L60) [generated/feature\_extraction/FeatureHasher.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L64)
 
 ## Methods
 
@@ -120,7 +124,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L89)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L115)
 
 ### fit()
 
@@ -131,20 +135,22 @@ This method allows to: (i) validate the estimator’s parameters and (ii) be con
 #### Signature
 
 ```ts
-fit(opts: FeatureHasherFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`FeatureHasherFitOptions`](../interfaces/FeatureHasherFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Not used, present here for API consistency by convention. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L108)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L134)
 
 ### fit\_transform()
 
@@ -155,20 +161,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: FeatureHasherFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`FeatureHasherFitTransformOptions`](../interfaces/FeatureHasherFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L138)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L174)
 
 ### init()
 
@@ -192,7 +201,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L47)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:73](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L73)
 
 ### set\_output()
 
@@ -203,20 +212,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: FeatureHasherSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`FeatureHasherSetOutputOptions`](../interfaces/FeatureHasherSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L172)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L223)
 
 ### transform()
 
@@ -225,17 +235,18 @@ Transform a sequence of instances to a scipy.sparse matrix.
 #### Signature
 
 ```ts
-transform(opts: FeatureHasherTransformOptions): Promise<any[]>;
+transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`FeatureHasherTransformOptions`](../interfaces/FeatureHasherTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.raw_X?` | `any` | Samples. Each sample must be iterable an (e.g., a list or tuple) containing/generating feature names (and optionally values, see the input\_type constructor argument) which will be hashed. raw\_X need not support the len function, so it can be the result of a generator; n\_samples is determined on the fly. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/FeatureHasher.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L200)
+Defined in:  [generated/feature\_extraction/FeatureHasher.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/FeatureHasher.ts#L256)

@@ -24,7 +24,22 @@ export class LeaveOneGroupOut {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LeaveOneGroupOutOptions) {
+  constructor(opts?: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted.
+     */
+    groups?: ArrayLike
+  }) {
     this.id = `LeaveOneGroupOut${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +118,22 @@ ctor_LeaveOneGroupOut = {k: v for k, v in ctor_LeaveOneGroupOut.items() if v is 
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(opts: LeaveOneGroupOutGetNSplitsOptions): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted.
+     */
+    groups?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This LeaveOneGroupOut instance has already been disposed'
@@ -135,7 +165,22 @@ pms_LeaveOneGroupOut_get_n_splits = {k: v for k, v in pms_LeaveOneGroupOut_get_n
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: LeaveOneGroupOutSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LeaveOneGroupOut instance has already been disposed'
@@ -192,55 +237,4 @@ pms_LeaveOneGroupOut_split = {k: v for k, v in pms_LeaveOneGroupOut_split.items(
         ._py`attr_LeaveOneGroupOut_n_splits.tolist() if hasattr(attr_LeaveOneGroupOut_n_splits, 'tolist') else attr_LeaveOneGroupOut_n_splits`
     })()
   }
-}
-
-export interface LeaveOneGroupOutOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted.
-   */
-  groups?: ArrayLike
-}
-
-export interface LeaveOneGroupOutGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted.
-   */
-  groups?: ArrayLike
-}
-
-export interface LeaveOneGroupOutSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

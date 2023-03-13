@@ -15,20 +15,22 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new OneVsOneClassifier(opts?: OneVsOneClassifierOptions): OneVsOneClassifier;
+new OneVsOneClassifier(opts?: object): OneVsOneClassifier;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `OneVsOneClassifierOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.estimator?` | `any` | A regressor or a classifier that implements fit. When a classifier is passed, decision\_function will be used in priority and it will fallback to predict\_proba if it is not available. When a regressor is passed, predict is used. |
+| `opts.n_jobs?` | `number` | The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \- 1) / 2` OVO problems are computed in parallel.  `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
 
 ### Returns
 
 [`OneVsOneClassifier`](OneVsOneClassifier.md)
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L25)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L25)
 
 ## Properties
 
@@ -36,31 +38,31 @@ Defined in:  [generated/multiclass/OneVsOneClassifier.ts:25](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L23)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L22)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L21)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L18)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L19)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L19)
 
 ## Accessors
 
@@ -78,7 +80,7 @@ classes_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/multiclass/OneVsOneClassifier.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L306)
+Defined in: [generated/multiclass/OneVsOneClassifier.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L366)
 
 ### estimators\_
 
@@ -94,7 +96,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/multiclass/OneVsOneClassifier.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L279)
+Defined in: [generated/multiclass/OneVsOneClassifier.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L339)
 
 ### feature\_names\_in\_
 
@@ -110,7 +112,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/multiclass/OneVsOneClassifier.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L387)
+Defined in: [generated/multiclass/OneVsOneClassifier.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L447)
 
 ### n\_features\_in\_
 
@@ -126,7 +128,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/multiclass/OneVsOneClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L360)
+Defined in: [generated/multiclass/OneVsOneClassifier.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L420)
 
 ### pairwise\_indices\_
 
@@ -142,7 +144,7 @@ pairwise_indices_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/multiclass/OneVsOneClassifier.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L333)
+Defined in: [generated/multiclass/OneVsOneClassifier.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L393)
 
 ### py
 
@@ -156,7 +158,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L30)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L42)
 
 #### Signature
 
@@ -174,7 +176,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/multiclass/OneVsOneClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L34)
+Defined in: [generated/multiclass/OneVsOneClassifier.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L46)
 
 ## Methods
 
@@ -187,20 +189,21 @@ The decision values for the samples are computed by adding the normalized sum of
 #### Signature
 
 ```ts
-decision_function(opts: OneVsOneClassifierDecisionFunctionOptions): Promise<ArrayLike[]>;
+decision_function(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `OneVsOneClassifierDecisionFunctionOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Input data. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L106)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L118)
 
 ### dispose()
 
@@ -218,7 +221,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L87)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L99)
 
 ### fit()
 
@@ -227,20 +230,22 @@ Fit underlying estimators.
 #### Signature
 
 ```ts
-fit(opts: OneVsOneClassifierFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `OneVsOneClassifierFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Data. |
+| `opts.y?` | `ArrayLike` | Multi-class targets. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L141)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L156)
 
 ### init()
 
@@ -264,7 +269,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L43)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L55)
 
 ### partial\_fit()
 
@@ -275,20 +280,23 @@ Should be used when memory is inefficient to train all data. Chunks of data can 
 #### Signature
 
 ```ts
-partial_fit(opts: OneVsOneClassifierPartialFitOptions): Promise<any>;
+partial_fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `OneVsOneClassifierPartialFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any`[] | Data. |
+| `opts.classes?` | `any` | Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls. |
+| `opts.y?` | `ArrayLike` | Multi-class targets. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L175)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L200)
 
 ### predict()
 
@@ -299,20 +307,21 @@ This is implemented as `argmax(decision\_function(X), axis=1)` which will return
 #### Signature
 
 ```ts
-predict(opts: OneVsOneClassifierPredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `OneVsOneClassifierPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Data. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L213)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L253)
 
 ### score()
 
@@ -323,17 +332,20 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: OneVsOneClassifierScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `OneVsOneClassifierScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multiclass/OneVsOneClassifier.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L245)
+Defined in:  [generated/multiclass/OneVsOneClassifier.ts:290](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OneVsOneClassifier.ts#L290)

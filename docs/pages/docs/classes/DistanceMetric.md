@@ -15,20 +15,21 @@ Examples
 ### Signature
 
 ```ts
-new DistanceMetric(opts?: DistanceMetricOptions): DistanceMetric;
+new DistanceMetric(opts?: object): DistanceMetric;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `DistanceMetricOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.dist?` | `any` | True distance. |
 
 ### Returns
 
 [`DistanceMetric`](DistanceMetric.md)
 
-Defined in:  [generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
+Defined in:  [generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
 
 ## Properties
 
@@ -36,31 +37,31 @@ Defined in:  [generated/metrics/DistanceMetric.ts:25](https://github.com/transit
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
+Defined in:  [generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
+Defined in:  [generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L21)
+Defined in:  [generated/metrics/DistanceMetric.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L18)
+Defined in:  [generated/metrics/DistanceMetric.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L19)
+Defined in:  [generated/metrics/DistanceMetric.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L19)
 
 ## Accessors
 
@@ -76,7 +77,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L30)
+Defined in:  [generated/metrics/DistanceMetric.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L35)
 
 #### Signature
 
@@ -94,7 +95,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/metrics/DistanceMetric.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L34)
+Defined in: [generated/metrics/DistanceMetric.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L39)
 
 ## Methods
 
@@ -114,7 +115,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L83)
+Defined in:  [generated/metrics/DistanceMetric.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L88)
 
 ### dist\_to\_rdist()
 
@@ -125,20 +126,21 @@ The surrogate distance is any measure that yields the same rank as the distance,
 #### Signature
 
 ```ts
-dist_to_rdist(opts: DistanceMetricDistToRdistOptions): Promise<any>;
+dist_to_rdist(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `DistanceMetricDistToRdistOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.dist?` | `any` | True distance. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L102)
+Defined in:  [generated/metrics/DistanceMetric.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L107)
 
 ### get\_metric()
 
@@ -149,20 +151,22 @@ See the docstring of DistanceMetric for a list of available metrics.
 #### Signature
 
 ```ts
-get_metric(opts: DistanceMetricGetMetricOptions): Promise<any>;
+get_metric(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `DistanceMetricGetMetricOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.kwargs?` | `any` | additional arguments will be passed to the requested metric |
+| `opts.metric?` | `string` | The distance metric to use |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L132)
+Defined in:  [generated/metrics/DistanceMetric.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L142)
 
 ### init()
 
@@ -186,7 +190,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L43)
+Defined in:  [generated/metrics/DistanceMetric.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L48)
 
 ### pairwise()
 
@@ -197,20 +201,22 @@ This is a convenience routine for the sake of testing. For many metrics, the uti
 #### Signature
 
 ```ts
-pairwise(opts: DistanceMetricPairwiseOptions): Promise<ArrayLike[]>;
+pairwise(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `DistanceMetricPairwiseOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Input data. |
+| `opts.Y?` | `ArrayLike` | Input data. If not specified, then Y=X. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L162)
+Defined in:  [generated/metrics/DistanceMetric.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L182)
 
 ### rdist\_to\_dist()
 
@@ -221,17 +227,18 @@ The surrogate distance is any measure that yields the same rank as the distance,
 #### Signature
 
 ```ts
-rdist_to_dist(opts: DistanceMetricRdistToDistOptions): Promise<any>;
+rdist_to_dist(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `DistanceMetricRdistToDistOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.rdist?` | `any` | Surrogate distance. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L194)
+Defined in:  [generated/metrics/DistanceMetric.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L224)

@@ -22,7 +22,93 @@ export class Isomap {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: IsomapOptions) {
+  constructor(opts?: {
+    /**
+      Number of neighbors to consider for each point. If `n\_neighbors` is an int, then `radius` must be `undefined`.
+
+      @defaultValue `5`
+     */
+    n_neighbors?: number
+
+    /**
+      Limiting distance of neighbors to return. If `radius` is a float, then `n\_neighbors` must be set to `undefined`.
+     */
+    radius?: number
+
+    /**
+      Number of coordinates for the manifold.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      ‘auto’ : Attempt to choose the most efficient solver for the given problem.
+
+      ‘arpack’ : Use Arnoldi decomposition to find the eigenvalues and eigenvectors.
+
+      ‘dense’ : Use a direct solver (i.e. LAPACK) for the eigenvalue decomposition.
+
+      @defaultValue `'auto'`
+     */
+    eigen_solver?: 'auto' | 'arpack' | 'dense'
+
+    /**
+      Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == ‘dense’.
+
+      @defaultValue `0`
+     */
+    tol?: number
+
+    /**
+      Maximum number of iterations for the arpack solver. not used if eigen\_solver == ‘dense’.
+     */
+    max_iter?: number
+
+    /**
+      Method to use in finding shortest path.
+
+      ‘auto’ : attempt to choose the best algorithm automatically.
+
+      ‘FW’ : Floyd-Warshall algorithm.
+
+      ‘D’ : Dijkstra’s algorithm.
+
+      @defaultValue `'auto'`
+     */
+    path_method?: 'auto' | 'FW' | 'D'
+
+    /**
+      Algorithm to use for nearest neighbors search, passed to neighbors.NearestNeighbors instance.
+
+      @defaultValue `'auto'`
+     */
+    neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
+
+    /**
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [Glossary](../../glossary.html#term-sparse-graph).
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: any
+
+    /**
+      Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+
+      @defaultValue `2`
+     */
+    p?: number
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+  }) {
     this.id = `Isomap${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -108,7 +194,17 @@ ctor_Isomap = {k: v for k, v in ctor_Isomap.items() if v is not None}`
   /**
     Compute the embedding vectors for data X.
    */
-  async fit(opts: IsomapFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Sample data, shape = (n\_samples, n\_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
     }
@@ -136,7 +232,17 @@ pms_Isomap_fit = {k: v for k, v in pms_Isomap_fit.items() if v is not None}`
   /**
     Fit the model from data in X and transform X.
    */
-  async fit_transform(opts: IsomapFitTransformOptions): Promise<ArrayLike> {
+  async fit_transform(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
     }
@@ -166,9 +272,12 @@ pms_Isomap_fit_transform = {k: v for k, v in pms_Isomap_fit_transform.items() if
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: IsomapGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.manifold.Isomap.fit "sklearn.manifold.Isomap.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
     }
@@ -196,9 +305,12 @@ pms_Isomap_get_feature_names_out = {k: v for k, v in pms_Isomap_get_feature_name
   /**
     Compute the reconstruction error for the embedding.
    */
-  async reconstruction_error(
-    opts: IsomapReconstructionErrorOptions
-  ): Promise<any> {
+  async reconstruction_error(opts: {
+    /**
+      Reconstruction error.
+     */
+    reconstruction_error?: number
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
     }
@@ -229,7 +341,12 @@ pms_Isomap_reconstruction_error = {k: v for k, v in pms_Isomap_reconstruction_er
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: IsomapSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
     }
@@ -259,7 +376,12 @@ pms_Isomap_set_output = {k: v for k, v in pms_Isomap_set_output.items() if v is 
 
     This is implemented by linking the points X into the graph of geodesic distances of the training data. First the `n\_neighbors` nearest neighbors of X are found in the training data, and from these the shortest geodesic distances from each point in X to each point in the training data are computed in order to construct the kernel. The embedding of X is the projection of this kernel onto the embedding vectors of the training set.
    */
-  async transform(opts: IsomapTransformOptions): Promise<ArrayLike> {
+  async transform(opts: {
+    /**
+      If neighbors\_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n\_queries, n\_samples\_fit).
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This Isomap instance has already been disposed')
     }
@@ -420,144 +542,4 @@ pms_Isomap_transform = {k: v for k, v in pms_Isomap_transform.items() if v is no
         ._py`attr_Isomap_feature_names_in_.tolist() if hasattr(attr_Isomap_feature_names_in_, 'tolist') else attr_Isomap_feature_names_in_`
     })()
   }
-}
-
-export interface IsomapOptions {
-  /**
-    Number of neighbors to consider for each point. If `n\_neighbors` is an int, then `radius` must be `undefined`.
-
-    @defaultValue `5`
-   */
-  n_neighbors?: number
-
-  /**
-    Limiting distance of neighbors to return. If `radius` is a float, then `n\_neighbors` must be set to `undefined`.
-   */
-  radius?: number
-
-  /**
-    Number of coordinates for the manifold.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    ‘auto’ : Attempt to choose the most efficient solver for the given problem.
-
-    ‘arpack’ : Use Arnoldi decomposition to find the eigenvalues and eigenvectors.
-
-    ‘dense’ : Use a direct solver (i.e. LAPACK) for the eigenvalue decomposition.
-
-    @defaultValue `'auto'`
-   */
-  eigen_solver?: 'auto' | 'arpack' | 'dense'
-
-  /**
-    Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == ‘dense’.
-
-    @defaultValue `0`
-   */
-  tol?: number
-
-  /**
-    Maximum number of iterations for the arpack solver. not used if eigen\_solver == ‘dense’.
-   */
-  max_iter?: number
-
-  /**
-    Method to use in finding shortest path.
-
-    ‘auto’ : attempt to choose the best algorithm automatically.
-
-    ‘FW’ : Floyd-Warshall algorithm.
-
-    ‘D’ : Dijkstra’s algorithm.
-
-    @defaultValue `'auto'`
-   */
-  path_method?: 'auto' | 'FW' | 'D'
-
-  /**
-    Algorithm to use for nearest neighbors search, passed to neighbors.NearestNeighbors instance.
-
-    @defaultValue `'auto'`
-   */
-  neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
-
-  /**
-    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [Glossary](../../glossary.html#term-sparse-graph).
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: any
-
-  /**
-    Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
-
-    @defaultValue `2`
-   */
-  p?: number
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-}
-
-export interface IsomapFitOptions {
-  /**
-    Sample data, shape = (n\_samples, n\_features), in the form of a numpy array, sparse matrix, precomputed tree, or NearestNeighbors object.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface IsomapFitTransformOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface IsomapGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.manifold.Isomap.fit "sklearn.manifold.Isomap.fit").
-   */
-  input_features?: any
-}
-
-export interface IsomapReconstructionErrorOptions {
-  /**
-    Reconstruction error.
-   */
-  reconstruction_error?: number
-}
-
-export interface IsomapSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface IsomapTransformOptions {
-  /**
-    If neighbors\_algorithm=’precomputed’, X is assumed to be a distance matrix or a sparse graph of shape (n\_queries, n\_samples\_fit).
-   */
-  X?: ArrayLike | SparseMatrix
 }

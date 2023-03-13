@@ -19,20 +19,22 @@ Read more in the [User Guide](../preprocessing.html#preprocessing-binarization).
 ### Signature
 
 ```ts
-new Binarizer(opts?: BinarizerOptions): Binarizer;
+new Binarizer(opts?: object): Binarizer;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`BinarizerOptions`](../interfaces/BinarizerOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.copy?` | `boolean` | Set to `false` to perform inplace binarization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).  `Default Value`  `true` |
+| `opts.threshold?` | `number` | Feature values below or equal to this are replaced by 0, above it by 1. Threshold may not be less than 0 for operations on sparse matrices.  `Default Value`  `0` |
 
 ### Returns
 
 [`Binarizer`](Binarizer.md)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L29)
+Defined in:  [generated/preprocessing/Binarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L29)
 
 ## Properties
 
@@ -40,31 +42,31 @@ Defined in:  [generated/preprocessing/Binarizer.ts:29](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L27)
+Defined in:  [generated/preprocessing/Binarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L26)
+Defined in:  [generated/preprocessing/Binarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L25)
+Defined in:  [generated/preprocessing/Binarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L22)
+Defined in:  [generated/preprocessing/Binarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L23)
+Defined in:  [generated/preprocessing/Binarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L23)
 
 ## Accessors
 
@@ -82,9 +84,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L287)
+Defined in:  [generated/preprocessing/Binarizer.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L342)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L287)
+Defined in:  [generated/preprocessing/Binarizer.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L342)
 
 ### n\_features\_in\_
 
@@ -100,9 +102,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L262)
+Defined in:  [generated/preprocessing/Binarizer.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L317)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L262)
+Defined in:  [generated/preprocessing/Binarizer.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L317)
 
 ### py
 
@@ -116,7 +118,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L34)
+Defined in:  [generated/preprocessing/Binarizer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L48)
 
 #### Signature
 
@@ -134,9 +136,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L38)
+Defined in:  [generated/preprocessing/Binarizer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L52)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L34) [generated/preprocessing/Binarizer.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L38)
+Defined in:  [generated/preprocessing/Binarizer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L48) [generated/preprocessing/Binarizer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L52)
 
 ## Methods
 
@@ -156,7 +158,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L86)
+Defined in:  [generated/preprocessing/Binarizer.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L100)
 
 ### fit()
 
@@ -167,20 +169,22 @@ This method allows to: (i) validate the estimator’s parameters and (ii) be con
 #### Signature
 
 ```ts
-fit(opts: BinarizerFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BinarizerFitOptions`](../interfaces/BinarizerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The data. |
+| `opts.y?` | `any` | Ignored. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L105)
+Defined in:  [generated/preprocessing/Binarizer.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L119)
 
 ### fit\_transform()
 
@@ -191,20 +195,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: BinarizerFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BinarizerFitTransformOptions`](../interfaces/BinarizerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L135)
+Defined in:  [generated/preprocessing/Binarizer.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L159)
 
 ### get\_feature\_names\_out()
 
@@ -213,20 +220,21 @@ Get output feature names for transformation.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: BinarizerGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BinarizerGetFeatureNamesOutOptions`](../interfaces/BinarizerGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L167)
+Defined in:  [generated/preprocessing/Binarizer.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L206)
 
 ### init()
 
@@ -250,7 +258,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L47)
+Defined in:  [generated/preprocessing/Binarizer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L61)
 
 ### set\_output()
 
@@ -261,20 +269,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: BinarizerSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BinarizerSetOutputOptions`](../interfaces/BinarizerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L202)
+Defined in:  [generated/preprocessing/Binarizer.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L244)
 
 ### transform()
 
@@ -283,17 +292,19 @@ Binarize each element of X.
 #### Signature
 
 ```ts
-transform(opts: BinarizerTransformOptions): Promise<ArrayLike>;
+transform(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BinarizerTransformOptions`](../interfaces/BinarizerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The data to binarize, element by element. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy. |
+| `opts.copy?` | `boolean` | Copy the input X or not. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L230)
+Defined in:  [generated/preprocessing/Binarizer.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L277)

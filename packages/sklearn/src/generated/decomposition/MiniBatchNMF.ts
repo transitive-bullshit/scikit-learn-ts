@@ -18,7 +18,111 @@ export class MiniBatchNMF {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MiniBatchNMFOptions) {
+  constructor(opts?: {
+    /**
+      Number of components, if `n\_components` is not set all features are kept.
+     */
+    n_components?: number
+
+    /**
+      Method used to initialize the procedure. Valid options:
+     */
+    init?: 'random' | 'nndsvd' | 'nndsvda' | 'nndsvdar' | 'custom'
+
+    /**
+      Number of samples in each mini-batch. Large batch sizes give better long-term convergence at the cost of a slower start.
+
+      @defaultValue `1024`
+     */
+    batch_size?: number
+
+    /**
+      Beta divergence to be minimized, measuring the distance between `X` and the dot product `WH`. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for `beta\_loss <= 0` (or ‘itakura-saito’), the input matrix `X` cannot contain zeros.
+
+      @defaultValue `'frobenius'`
+     */
+    beta_loss?: number | 'frobenius' | 'kullback-leibler' | 'itakura-saito'
+
+    /**
+      Control early stopping based on the norm of the differences in `H` between 2 steps. To disable early stopping based on changes in `H`, set `tol` to 0.0.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
+
+      @defaultValue `10`
+     */
+    max_no_improvement?: number
+
+    /**
+      Maximum number of iterations over the complete dataset before timing out.
+
+      @defaultValue `200`
+     */
+    max_iter?: number
+
+    /**
+      Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
+
+      @defaultValue `0`
+     */
+    alpha_W?: number
+
+    /**
+      Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.
+
+      @defaultValue `'same'`
+     */
+    alpha_H?: number | 'same'
+
+    /**
+      The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.
+
+      @defaultValue `0`
+     */
+    l1_ratio?: number
+
+    /**
+      Amount of rescaling of past information. Its value could be 1 with finite datasets. Choosing values < 1 is recommended with online learning as more recent batches will weight more than past batches.
+
+      @defaultValue `0.7`
+     */
+    forget_factor?: number
+
+    /**
+      Whether to completely solve for W at each step. Doing fresh restarts will likely lead to a better solution for a same number of iterations but it is much slower.
+
+      @defaultValue `false`
+     */
+    fresh_restarts?: boolean
+
+    /**
+      Maximum number of iterations when solving for W at each step. Only used when doing fresh restarts. These iterations may be stopped early based on a small change of W controlled by `tol`.
+
+      @defaultValue `30`
+     */
+    fresh_restarts_max_iter?: number
+
+    /**
+      Maximum number of iterations when solving for W at transform time. If `undefined`, it defaults to `max\_iter`.
+     */
+    transform_max_iter?: number
+
+    /**
+      Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Whether to be verbose.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `MiniBatchNMF${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -113,7 +217,22 @@ ctor_MiniBatchNMF = {k: v for k, v in ctor_MiniBatchNMF.items() if v is not None
   /**
     Learn a NMF model for the data X.
    */
-  async fit(opts: MiniBatchNMFFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Parameters (keyword arguments) and values passed to the fit\_transform instance.
+     */
+    params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -145,9 +264,27 @@ pms_MiniBatchNMF_fit = {k: v for k, v in pms_MiniBatchNMF_fit.items() if v is no
 
     This is more efficient than calling fit followed by transform.
    */
-  async fit_transform(
-    opts: MiniBatchNMFFitTransformOptions
-  ): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Data matrix to be decomposed.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      If `init='custom'`, it is used as initial guess for the solution.
+     */
+    W?: ArrayLike[]
+
+    /**
+      If `init='custom'`, it is used as initial guess for the solution.
+     */
+    H?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -183,9 +320,12 @@ pms_MiniBatchNMF_fit_transform = {k: v for k, v in pms_MiniBatchNMF_fit_transfor
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: MiniBatchNMFGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchNMF.fit "sklearn.decomposition.MiniBatchNMF.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -216,9 +356,12 @@ pms_MiniBatchNMF_get_feature_names_out = {k: v for k, v in pms_MiniBatchNMF_get_
   /**
     Transform data back to its original space.
    */
-  async inverse_transform(
-    opts: MiniBatchNMFInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async inverse_transform(opts: {
+    /**
+      Transformed data matrix.
+     */
+    W?: NDArray | SparseMatrix[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -252,7 +395,27 @@ pms_MiniBatchNMF_inverse_transform = {k: v for k, v in pms_MiniBatchNMF_inverse_
 
     This is especially useful when the whole dataset is too big to fit in memory at once (see [Strategies to scale computationally: bigger data](../../computing/scaling_strategies.html#scaling-strategies)).
    */
-  async partial_fit(opts: MiniBatchNMFPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Data matrix to be decomposed.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial\_fit`.
+     */
+    W?: ArrayLike[]
+
+    /**
+      If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial\_fit`.
+     */
+    H?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -288,7 +451,12 @@ pms_MiniBatchNMF_partial_fit = {k: v for k, v in pms_MiniBatchNMF_partial_fit.it
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: MiniBatchNMFSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -316,7 +484,12 @@ pms_MiniBatchNMF_set_output = {k: v for k, v in pms_MiniBatchNMF_set_output.item
   /**
     Transform the data X according to the fitted MiniBatchNMF model.
    */
-  async transform(opts: MiniBatchNMFTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Data matrix to be transformed by the model.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchNMF instance has already been disposed')
     }
@@ -511,199 +684,4 @@ pms_MiniBatchNMF_transform = {k: v for k, v in pms_MiniBatchNMF_transform.items(
         ._py`attr_MiniBatchNMF_feature_names_in_.tolist() if hasattr(attr_MiniBatchNMF_feature_names_in_, 'tolist') else attr_MiniBatchNMF_feature_names_in_`
     })()
   }
-}
-
-export interface MiniBatchNMFOptions {
-  /**
-    Number of components, if `n\_components` is not set all features are kept.
-   */
-  n_components?: number
-
-  /**
-    Method used to initialize the procedure. Valid options:
-   */
-  init?: 'random' | 'nndsvd' | 'nndsvda' | 'nndsvdar' | 'custom'
-
-  /**
-    Number of samples in each mini-batch. Large batch sizes give better long-term convergence at the cost of a slower start.
-
-    @defaultValue `1024`
-   */
-  batch_size?: number
-
-  /**
-    Beta divergence to be minimized, measuring the distance between `X` and the dot product `WH`. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for `beta\_loss <= 0` (or ‘itakura-saito’), the input matrix `X` cannot contain zeros.
-
-    @defaultValue `'frobenius'`
-   */
-  beta_loss?: number | 'frobenius' | 'kullback-leibler' | 'itakura-saito'
-
-  /**
-    Control early stopping based on the norm of the differences in `H` between 2 steps. To disable early stopping based on changes in `H`, set `tol` to 0.0.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.
-
-    @defaultValue `10`
-   */
-  max_no_improvement?: number
-
-  /**
-    Maximum number of iterations over the complete dataset before timing out.
-
-    @defaultValue `200`
-   */
-  max_iter?: number
-
-  /**
-    Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
-
-    @defaultValue `0`
-   */
-  alpha_W?: number
-
-  /**
-    Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.
-
-    @defaultValue `'same'`
-   */
-  alpha_H?: number | 'same'
-
-  /**
-    The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.
-
-    @defaultValue `0`
-   */
-  l1_ratio?: number
-
-  /**
-    Amount of rescaling of past information. Its value could be 1 with finite datasets. Choosing values < 1 is recommended with online learning as more recent batches will weight more than past batches.
-
-    @defaultValue `0.7`
-   */
-  forget_factor?: number
-
-  /**
-    Whether to completely solve for W at each step. Doing fresh restarts will likely lead to a better solution for a same number of iterations but it is much slower.
-
-    @defaultValue `false`
-   */
-  fresh_restarts?: boolean
-
-  /**
-    Maximum number of iterations when solving for W at each step. Only used when doing fresh restarts. These iterations may be stopped early based on a small change of W controlled by `tol`.
-
-    @defaultValue `30`
-   */
-  fresh_restarts_max_iter?: number
-
-  /**
-    Maximum number of iterations when solving for W at transform time. If `undefined`, it defaults to `max\_iter`.
-   */
-  transform_max_iter?: number
-
-  /**
-    Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Whether to be verbose.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface MiniBatchNMFFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Parameters (keyword arguments) and values passed to the fit\_transform instance.
-   */
-  params?: any
-}
-
-export interface MiniBatchNMFFitTransformOptions {
-  /**
-    Data matrix to be decomposed.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    If `init='custom'`, it is used as initial guess for the solution.
-   */
-  W?: ArrayLike[]
-
-  /**
-    If `init='custom'`, it is used as initial guess for the solution.
-   */
-  H?: ArrayLike[]
-}
-
-export interface MiniBatchNMFGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchNMF.fit "sklearn.decomposition.MiniBatchNMF.fit").
-   */
-  input_features?: any
-}
-
-export interface MiniBatchNMFInverseTransformOptions {
-  /**
-    Transformed data matrix.
-   */
-  W?: NDArray | SparseMatrix[]
-}
-
-export interface MiniBatchNMFPartialFitOptions {
-  /**
-    Data matrix to be decomposed.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial\_fit`.
-   */
-  W?: ArrayLike[]
-
-  /**
-    If `init='custom'`, it is used as initial guess for the solution. Only used for the first call to `partial\_fit`.
-   */
-  H?: ArrayLike[]
-}
-
-export interface MiniBatchNMFSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface MiniBatchNMFTransformOptions {
-  /**
-    Data matrix to be transformed by the model.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

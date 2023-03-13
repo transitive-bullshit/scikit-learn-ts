@@ -20,7 +20,31 @@ export class IsotonicRegression {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: IsotonicRegressionOptions) {
+  constructor(opts?: {
+    /**
+      Lower bound on the lowest predicted value (the minimum value may still be higher). If not set, defaults to -inf.
+     */
+    y_min?: number
+
+    /**
+      Upper bound on the highest predicted value (the maximum may still be lower). If not set, defaults to +inf.
+     */
+    y_max?: number
+
+    /**
+      Determines whether the predictions should be constrained to increase or decrease with `X`. ‘auto’ will decide based on the Spearman correlation estimate’s sign.
+
+      @defaultValue `true`
+     */
+    increasing?: boolean | 'auto'
+
+    /**
+      Handles how `X` values outside of the training domain are handled during prediction.
+
+      @defaultValue `'nan'`
+     */
+    out_of_bounds?: 'nan' | 'clip' | 'raise'
+  }) {
     this.id = `IsotonicRegression${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +125,22 @@ ctor_IsotonicRegression = {k: v for k, v in ctor_IsotonicRegression.items() if v
   /**
     Fit the model using X, y as training data.
    */
-  async fit(opts: IsotonicRegressionFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | number
+
+    /**
+      Training target.
+     */
+    y?: ArrayLike
+
+    /**
+      Weights. If set to `undefined`, all weights will be set to 1 (equal weights).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This IsotonicRegression instance has already been disposed'
@@ -137,9 +176,22 @@ pms_IsotonicRegression_fit = {k: v for k, v in pms_IsotonicRegression_fit.items(
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: IsotonicRegressionFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This IsotonicRegression instance has already been disposed'
@@ -175,9 +227,12 @@ pms_IsotonicRegression_fit_transform = {k: v for k, v in pms_IsotonicRegression_
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: IsotonicRegressionGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Ignored.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This IsotonicRegression instance has already been disposed'
@@ -210,7 +265,12 @@ pms_IsotonicRegression_get_feature_names_out = {k: v for k, v in pms_IsotonicReg
   /**
     Predict new data by linear interpolation.
    */
-  async predict(opts: IsotonicRegressionPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Data to transform.
+     */
+    T?: ArrayLike | number
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This IsotonicRegression instance has already been disposed'
@@ -242,7 +302,22 @@ pms_IsotonicRegression_predict = {k: v for k, v in pms_IsotonicRegression_predic
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: IsotonicRegressionScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This IsotonicRegression instance has already been disposed'
@@ -278,7 +353,12 @@ pms_IsotonicRegression_score = {k: v for k, v in pms_IsotonicRegression_score.it
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: IsotonicRegressionSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This IsotonicRegression instance has already been disposed'
@@ -308,7 +388,12 @@ pms_IsotonicRegression_set_output = {k: v for k, v in pms_IsotonicRegression_set
   /**
     Transform new data by linear interpolation.
    */
-  async transform(opts: IsotonicRegressionTransformOptions): Promise<NDArray> {
+  async transform(opts: {
+    /**
+      Data to transform.
+     */
+    T?: ArrayLike | number
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This IsotonicRegression instance has already been disposed'
@@ -494,109 +579,4 @@ pms_IsotonicRegression_transform = {k: v for k, v in pms_IsotonicRegression_tran
         ._py`attr_IsotonicRegression_increasing_.tolist() if hasattr(attr_IsotonicRegression_increasing_, 'tolist') else attr_IsotonicRegression_increasing_`
     })()
   }
-}
-
-export interface IsotonicRegressionOptions {
-  /**
-    Lower bound on the lowest predicted value (the minimum value may still be higher). If not set, defaults to -inf.
-   */
-  y_min?: number
-
-  /**
-    Upper bound on the highest predicted value (the maximum may still be lower). If not set, defaults to +inf.
-   */
-  y_max?: number
-
-  /**
-    Determines whether the predictions should be constrained to increase or decrease with `X`. ‘auto’ will decide based on the Spearman correlation estimate’s sign.
-
-    @defaultValue `true`
-   */
-  increasing?: boolean | 'auto'
-
-  /**
-    Handles how `X` values outside of the training domain are handled during prediction.
-
-    @defaultValue `'nan'`
-   */
-  out_of_bounds?: 'nan' | 'clip' | 'raise'
-}
-
-export interface IsotonicRegressionFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | number
-
-  /**
-    Training target.
-   */
-  y?: ArrayLike
-
-  /**
-    Weights. If set to `undefined`, all weights will be set to 1 (equal weights).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface IsotonicRegressionFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface IsotonicRegressionGetFeatureNamesOutOptions {
-  /**
-    Ignored.
-   */
-  input_features?: any
-}
-
-export interface IsotonicRegressionPredictOptions {
-  /**
-    Data to transform.
-   */
-  T?: ArrayLike | number
-}
-
-export interface IsotonicRegressionScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface IsotonicRegressionSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface IsotonicRegressionTransformOptions {
-  /**
-    Data to transform.
-   */
-  T?: ArrayLike | number
 }

@@ -20,7 +20,59 @@ export class AffinityPropagation {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: AffinityPropagationOptions) {
+  constructor(opts?: {
+    /**
+      Damping factor in the range `\[0.5, 1.0)` is the extent to which the current value is maintained relative to incoming values (weighted 1 - damping). This in order to avoid numerical oscillations when updating these values (messages).
+
+      @defaultValue `0.5`
+     */
+    damping?: number
+
+    /**
+      Maximum number of iterations.
+
+      @defaultValue `200`
+     */
+    max_iter?: number
+
+    /**
+      Number of iterations with no change in the number of estimated clusters that stops the convergence.
+
+      @defaultValue `15`
+     */
+    convergence_iter?: number
+
+    /**
+      Make a copy of input data.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      Preferences for each point - points with larger values of preferences are more likely to be chosen as exemplars. The number of exemplars, ie of clusters, is influenced by the input preferences value. If the preferences are not passed as arguments, they will be set to the median of the input similarities.
+     */
+    preference?: ArrayLike | number
+
+    /**
+      Which affinity to use. At the moment ‘precomputed’ and `euclidean` are supported. ‘euclidean’ uses the negative squared euclidean distance between points.
+
+      @defaultValue `'euclidean'`
+     */
+    affinity?: 'euclidean' | 'precomputed'
+
+    /**
+      Whether to be verbose.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      Pseudo-random number generator to control the starting state. Use an int for reproducible results across function calls. See the [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `AffinityPropagation${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +159,17 @@ ctor_AffinityPropagation = {k: v for k, v in ctor_AffinityPropagation.items() if
   /**
     Fit the clustering from features, or affinity matrix.
    */
-  async fit(opts: AffinityPropagationFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AffinityPropagation instance has already been disposed'
@@ -137,9 +199,17 @@ pms_AffinityPropagation_fit = {k: v for k, v in pms_AffinityPropagation_fit.item
   /**
     Fit clustering from features/affinity matrix; return cluster labels.
    */
-  async fit_predict(
-    opts: AffinityPropagationFitPredictOptions
-  ): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This AffinityPropagation instance has already been disposed'
@@ -171,7 +241,12 @@ pms_AffinityPropagation_fit_predict = {k: v for k, v in pms_AffinityPropagation_
   /**
     Predict the closest cluster each sample in X belongs to.
    */
-  async predict(opts: AffinityPropagationPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      New data to predict. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This AffinityPropagation instance has already been disposed'
@@ -386,89 +461,4 @@ pms_AffinityPropagation_predict = {k: v for k, v in pms_AffinityPropagation_pred
         ._py`attr_AffinityPropagation_feature_names_in_.tolist() if hasattr(attr_AffinityPropagation_feature_names_in_, 'tolist') else attr_AffinityPropagation_feature_names_in_`
     })()
   }
-}
-
-export interface AffinityPropagationOptions {
-  /**
-    Damping factor in the range `\[0.5, 1.0)` is the extent to which the current value is maintained relative to incoming values (weighted 1 - damping). This in order to avoid numerical oscillations when updating these values (messages).
-
-    @defaultValue `0.5`
-   */
-  damping?: number
-
-  /**
-    Maximum number of iterations.
-
-    @defaultValue `200`
-   */
-  max_iter?: number
-
-  /**
-    Number of iterations with no change in the number of estimated clusters that stops the convergence.
-
-    @defaultValue `15`
-   */
-  convergence_iter?: number
-
-  /**
-    Make a copy of input data.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    Preferences for each point - points with larger values of preferences are more likely to be chosen as exemplars. The number of exemplars, ie of clusters, is influenced by the input preferences value. If the preferences are not passed as arguments, they will be set to the median of the input similarities.
-   */
-  preference?: ArrayLike | number
-
-  /**
-    Which affinity to use. At the moment ‘precomputed’ and `euclidean` are supported. ‘euclidean’ uses the negative squared euclidean distance between points.
-
-    @defaultValue `'euclidean'`
-   */
-  affinity?: 'euclidean' | 'precomputed'
-
-  /**
-    Whether to be verbose.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    Pseudo-random number generator to control the starting state. Use an int for reproducible results across function calls. See the [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface AffinityPropagationFitOptions {
-  /**
-    Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface AffinityPropagationFitPredictOptions {
-  /**
-    Training instances to cluster, or similarities / affinities between instances if `affinity='precomputed'`. If a sparse feature matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface AffinityPropagationPredictOptions {
-  /**
-    New data to predict. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

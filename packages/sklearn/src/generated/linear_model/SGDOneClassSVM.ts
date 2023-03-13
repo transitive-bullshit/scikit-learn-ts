@@ -22,7 +22,91 @@ export class SGDOneClassSVM {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SGDOneClassSVMOptions) {
+  constructor(opts?: {
+    /**
+      The nu parameter of the One Class SVM: an upper bound on the fraction of training errors and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\]. By default 0.5 will be taken.
+
+      @defaultValue `0.5`
+     */
+    nu?: number
+
+    /**
+      Whether the intercept should be estimated or not. Defaults to `true`.
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the `partial\_fit`. Defaults to 1000.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol). Defaults to 1e-3.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Whether or not the training data should be shuffled after each epoch. Defaults to `true`.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      The verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      The seed of the pseudo random number generator to use when shuffling the data. If int, random\_state is the seed used by the random number generator; If RandomState instance, random\_state is the random number generator; If `undefined`, the random number generator is the RandomState instance used by `np.random`.
+     */
+    random_state?: number
+
+    /**
+      The learning rate schedule to use with `fit`. (If using `partial\_fit`, learning rate must be controlled directly).
+
+      @defaultValue `'optimal'`
+     */
+    learning_rate?: 'constant' | 'optimal' | 'invscaling' | 'adaptive'
+
+    /**
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’.
+
+      @defaultValue `0`
+     */
+    eta0?: number
+
+    /**
+      The exponent for inverse scaling learning rate \[default 0.5\].
+
+      @defaultValue `0.5`
+     */
+    power_t?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      When set to `true`, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So `average=10` will begin averaging after seeing 10 samples.
+
+      @defaultValue `false`
+     */
+    average?: boolean | number
+  }) {
     this.id = `SGDOneClassSVM${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -111,9 +195,12 @@ ctor_SGDOneClassSVM = {k: v for k, v in ctor_SGDOneClassSVM.items() if v is not 
 
     Signed distance is positive for an inlier and negative for an outlier.
    */
-  async decision_function(
-    opts: SGDOneClassSVMDecisionFunctionOptions
-  ): Promise<ArrayLike> {
+  async decision_function(opts: {
+    /**
+      Testing data.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -145,7 +232,7 @@ pms_SGDOneClassSVM_decision_function = {k: v for k, v in pms_SGDOneClassSVM_deci
 
     Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
-  async densify(opts: SGDOneClassSVMDensifyOptions): Promise<any> {
+  async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -173,7 +260,32 @@ pms_SGDOneClassSVM_densify = {k: v for k, v in pms_SGDOneClassSVM_densify.items(
 
     This solves an equivalent optimization problem of the One-Class SVM primal optimization problem and returns a weight vector w and an offset rho such that the decision function is given by <w, x> - rho.
    */
-  async fit(opts: SGDOneClassSVMFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The initial coefficients to warm-start the optimization.
+     */
+    coef_init?: any
+
+    /**
+      The initial offset to warm-start the optimization.
+     */
+    offset_init?: any
+
+    /**
+      Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -207,7 +319,17 @@ pms_SGDOneClassSVM_fit = {k: v for k, v in pms_SGDOneClassSVM_fit.items() if v i
 
     Returns -1 for outliers and 1 for inliers.
    */
-  async fit_predict(opts: SGDOneClassSVMFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -235,7 +357,22 @@ pms_SGDOneClassSVM_fit_predict = {k: v for k, v in pms_SGDOneClassSVM_fit_predic
   /**
     Fit linear One-Class SVM with Stochastic Gradient Descent.
    */
-  async partial_fit(opts: SGDOneClassSVMPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Subset of the training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Weights applied to individual samples. If not provided, uniform weights are assumed.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -265,7 +402,12 @@ pms_SGDOneClassSVM_partial_fit = {k: v for k, v in pms_SGDOneClassSVM_partial_fi
   /**
     Return labels (1 inlier, -1 outlier) of the samples.
    */
-  async predict(opts: SGDOneClassSVMPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Testing data.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -293,9 +435,12 @@ pms_SGDOneClassSVM_predict = {k: v for k, v in pms_SGDOneClassSVM_predict.items(
   /**
     Raw scoring function of the samples.
    */
-  async score_samples(
-    opts: SGDOneClassSVMScoreSamplesOptions
-  ): Promise<ArrayLike> {
+  async score_samples(opts: {
+    /**
+      Testing data.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -327,7 +472,7 @@ pms_SGDOneClassSVM_score_samples = {k: v for k, v in pms_SGDOneClassSVM_score_sa
 
     The `intercept\_` member is not converted.
    */
-  async sparsify(opts: SGDOneClassSVMSparsifyOptions): Promise<any> {
+  async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDOneClassSVM instance has already been disposed')
     }
@@ -518,170 +663,3 @@ pms_SGDOneClassSVM_sparsify = {k: v for k, v in pms_SGDOneClassSVM_sparsify.item
     })()
   }
 }
-
-export interface SGDOneClassSVMOptions {
-  /**
-    The nu parameter of the One Class SVM: an upper bound on the fraction of training errors and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\]. By default 0.5 will be taken.
-
-    @defaultValue `0.5`
-   */
-  nu?: number
-
-  /**
-    Whether the intercept should be estimated or not. Defaults to `true`.
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the `partial\_fit`. Defaults to 1000.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol). Defaults to 1e-3.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Whether or not the training data should be shuffled after each epoch. Defaults to `true`.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    The verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    The seed of the pseudo random number generator to use when shuffling the data. If int, random\_state is the seed used by the random number generator; If RandomState instance, random\_state is the random number generator; If `undefined`, the random number generator is the RandomState instance used by `np.random`.
-   */
-  random_state?: number
-
-  /**
-    The learning rate schedule to use with `fit`. (If using `partial\_fit`, learning rate must be controlled directly).
-
-    @defaultValue `'optimal'`
-   */
-  learning_rate?: 'constant' | 'optimal' | 'invscaling' | 'adaptive'
-
-  /**
-    The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’.
-
-    @defaultValue `0`
-   */
-  eta0?: number
-
-  /**
-    The exponent for inverse scaling learning rate \[default 0.5\].
-
-    @defaultValue `0.5`
-   */
-  power_t?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    When set to `true`, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So `average=10` will begin averaging after seeing 10 samples.
-
-    @defaultValue `false`
-   */
-  average?: boolean | number
-}
-
-export interface SGDOneClassSVMDecisionFunctionOptions {
-  /**
-    Testing data.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface SGDOneClassSVMDensifyOptions {}
-
-export interface SGDOneClassSVMFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The initial coefficients to warm-start the optimization.
-   */
-  coef_init?: any
-
-  /**
-    The initial offset to warm-start the optimization.
-   */
-  offset_init?: any
-
-  /**
-    Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDOneClassSVMFitPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SGDOneClassSVMPartialFitOptions {
-  /**
-    Subset of the training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Weights applied to individual samples. If not provided, uniform weights are assumed.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDOneClassSVMPredictOptions {
-  /**
-    Testing data.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface SGDOneClassSVMScoreSamplesOptions {
-  /**
-    Testing data.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface SGDOneClassSVMSparsifyOptions {}

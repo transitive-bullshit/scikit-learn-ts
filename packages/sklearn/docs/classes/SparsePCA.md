@@ -15,20 +15,31 @@ Read more in the [User Guide](../decomposition.html#sparsepca).
 ### Signature
 
 ```ts
-new SparsePCA(opts?: SparsePCAOptions): SparsePCA;
+new SparsePCA(opts?: object): SparsePCA;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`SparsePCAOptions`](../interfaces/SparsePCAOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.U_init?` | [`ArrayLike`](../types/ArrayLike.md)[] | Initial values for the loadings for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`. |
+| `opts.V_init?` | [`ArrayLike`](../types/ArrayLike.md)[] | Initial values for the components for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`. |
+| `opts.alpha?` | `number` | Sparsity controlling parameter. Higher values lead to sparser components.  `Default Value`  `1` |
+| `opts.max_iter?` | `number` | Maximum number of iterations to perform.  `Default Value`  `1000` |
+| `opts.method?` | `"cd"` \| `"lars"` | Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear\_model.lars\_path) cd: uses the coordinate descent method to compute the Lasso solution (linear\_model.Lasso). Lars will be faster if the estimated components are sparse.  `Default Value`  `'lars'` |
+| `opts.n_components?` | `number` | Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`. |
+| `opts.n_jobs?` | `number` | Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.random_state?` | `number` | Used during dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.ridge_alpha?` | `number` | Amount of ridge shrinkage to apply in order to improve conditioning when calling the transform method.  `Default Value`  `0.01` |
+| `opts.tol?` | `number` | Tolerance for the stopping condition.  `Default Value`  `1e-8` |
+| `opts.verbose?` | `number` \| `boolean` | Controls the verbosity; the higher, the more messages. Defaults to 0.  `Default Value`  `false` |
 
 ### Returns
 
 [`SparsePCA`](SparsePCA.md)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L25)
+Defined in:  [generated/decomposition/SparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L25)
 
 ## Properties
 
@@ -36,31 +47,31 @@ Defined in:  [generated/decomposition/SparsePCA.ts:25](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L23)
+Defined in:  [generated/decomposition/SparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L22)
+Defined in:  [generated/decomposition/SparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L21)
+Defined in:  [generated/decomposition/SparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L18)
+Defined in:  [generated/decomposition/SparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L19)
+Defined in:  [generated/decomposition/SparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L19)
 
 ## Accessors
 
@@ -78,9 +89,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L302)
+Defined in:  [generated/decomposition/SparsePCA.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L410)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L302)
+Defined in:  [generated/decomposition/SparsePCA.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L410)
 
 ### error\_
 
@@ -96,9 +107,9 @@ error_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L325)
+Defined in:  [generated/decomposition/SparsePCA.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L433)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L325)
+Defined in:  [generated/decomposition/SparsePCA.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L433)
 
 ### feature\_names\_in\_
 
@@ -114,9 +125,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L444)
+Defined in:  [generated/decomposition/SparsePCA.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L552)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L444)
+Defined in:  [generated/decomposition/SparsePCA.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L552)
 
 ### mean\_
 
@@ -132,9 +143,9 @@ mean_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L396)
+Defined in:  [generated/decomposition/SparsePCA.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L504)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L396)
+Defined in:  [generated/decomposition/SparsePCA.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L504)
 
 ### n\_components\_
 
@@ -150,9 +161,9 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L348)
+Defined in:  [generated/decomposition/SparsePCA.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L456)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L348)
+Defined in:  [generated/decomposition/SparsePCA.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L456)
 
 ### n\_features\_in\_
 
@@ -168,9 +179,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L419)
+Defined in:  [generated/decomposition/SparsePCA.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L527)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L419)
+Defined in:  [generated/decomposition/SparsePCA.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L527)
 
 ### n\_iter\_
 
@@ -186,9 +197,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L373)
+Defined in:  [generated/decomposition/SparsePCA.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L481)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L373)
+Defined in:  [generated/decomposition/SparsePCA.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L481)
 
 ### py
 
@@ -202,7 +213,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L30)
+Defined in:  [generated/decomposition/SparsePCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L97)
 
 #### Signature
 
@@ -220,9 +231,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L34)
+Defined in:  [generated/decomposition/SparsePCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L101)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L30) [generated/decomposition/SparsePCA.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L34)
+Defined in:  [generated/decomposition/SparsePCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L97) [generated/decomposition/SparsePCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L101)
 
 ## Methods
 
@@ -242,7 +253,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L94)
+Defined in:  [generated/decomposition/SparsePCA.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L161)
 
 ### fit()
 
@@ -251,20 +262,22 @@ Fit the model from data in X.
 #### Signature
 
 ```ts
-fit(opts: SparsePCAFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SparsePCAFitOptions`](../interfaces/SparsePCAFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L111)
+Defined in:  [generated/decomposition/SparsePCA.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L178)
 
 ### fit\_transform()
 
@@ -275,20 +288,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: SparsePCAFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SparsePCAFitTransformOptions`](../interfaces/SparsePCAFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L141)
+Defined in:  [generated/decomposition/SparsePCA.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L218)
 
 ### get\_feature\_names\_out()
 
@@ -299,20 +315,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: SparsePCAGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SparsePCAGetFeatureNamesOutOptions`](../interfaces/SparsePCAGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.SparsePCA.fit "sklearn.decomposition.SparsePCA.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L175)
+Defined in:  [generated/decomposition/SparsePCA.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L267)
 
 ### init()
 
@@ -336,7 +353,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L43)
+Defined in:  [generated/decomposition/SparsePCA.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L110)
 
 ### inverse\_transform()
 
@@ -347,20 +364,21 @@ This inversion is an approximation due to the loss of information induced by the
 #### Signature
 
 ```ts
-inverse_transform(opts: SparsePCAInverseTransformOptions): Promise<ArrayLike[]>;
+inverse_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SparsePCAInverseTransformOptions`](../interfaces/SparsePCAInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Data in the latent space. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L210)
+Defined in:  [generated/decomposition/SparsePCA.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L305)
 
 ### set\_output()
 
@@ -371,20 +389,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: SparsePCASetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SparsePCASetOutputOptions`](../interfaces/SparsePCASetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L242)
+Defined in:  [generated/decomposition/SparsePCA.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L340)
 
 ### transform()
 
@@ -397,17 +416,18 @@ Note that Sparse PCA components orthogonality is not enforced as in PCA hence on
 #### Signature
 
 ```ts
-transform(opts: SparsePCATransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SparsePCATransformOptions`](../interfaces/SparsePCATransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test data to be transformed, must have the same number of features as the data used to train the model. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L274)
+Defined in:  [generated/decomposition/SparsePCA.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L377)

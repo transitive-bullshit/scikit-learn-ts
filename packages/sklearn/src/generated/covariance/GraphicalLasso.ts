@@ -20,7 +20,56 @@ export class GraphicalLasso {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GraphicalLassoOptions) {
+  constructor(opts?: {
+    /**
+      The regularization parameter: the higher alpha, the more regularization, the sparser the inverse covariance. Range is (0, inf\].
+
+      @defaultValue `0.01`
+     */
+    alpha?: number
+
+    /**
+      The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse underlying graphs, where p > n. Elsewhere prefer cd which is more numerically stable.
+
+      @defaultValue `'cd'`
+     */
+    mode?: 'cd' | 'lars'
+
+    /**
+      The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].
+
+      @defaultValue `0.0001`
+     */
+    enet_tol?: number
+
+    /**
+      The maximum number of iterations.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      If verbose is `true`, the objective function and dual gap are plotted at each iteration.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.
+
+      @defaultValue `false`
+     */
+    assume_centered?: boolean
+  }) {
     this.id = `GraphicalLasso${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +150,33 @@ ctor_GraphicalLasso = {k: v for k, v in ctor_GraphicalLasso.items() if v is not 
   /**
     Compute the Mean Squared Error between two covariance estimators.
    */
-  async error_norm(opts: GraphicalLassoErrorNormOptions): Promise<number> {
+  async error_norm(opts: {
+    /**
+      The covariance to compare with.
+     */
+    comp_cov?: ArrayLike[]
+
+    /**
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+
+      @defaultValue `'frobenius'`
+     */
+    norm?: 'frobenius' | 'spectral'
+
+    /**
+      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+
+      @defaultValue `true`
+     */
+    scaling?: boolean
+
+    /**
+      Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
+
+      @defaultValue `true`
+     */
+    squared?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GraphicalLasso instance has already been disposed')
     }
@@ -133,7 +208,17 @@ pms_GraphicalLasso_error_norm = {k: v for k, v in pms_GraphicalLasso_error_norm.
   /**
     Fit the GraphicalLasso model to X.
    */
-  async fit(opts: GraphicalLassoFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data from which to compute the covariance estimate.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GraphicalLasso instance has already been disposed')
     }
@@ -161,7 +246,12 @@ pms_GraphicalLasso_fit = {k: v for k, v in pms_GraphicalLasso_fit.items() if v i
   /**
     Getter for the precision matrix.
    */
-  async get_precision(opts: GraphicalLassoGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      The precision matrix associated to the current covariance object.
+     */
+    precision_?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GraphicalLasso instance has already been disposed')
     }
@@ -190,7 +280,12 @@ pms_GraphicalLasso_get_precision = {k: v for k, v in pms_GraphicalLasso_get_prec
   /**
     Compute the squared Mahalanobis distances of given observations.
    */
-  async mahalanobis(opts: GraphicalLassoMahalanobisOptions): Promise<NDArray> {
+  async mahalanobis(opts: {
+    /**
+      The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GraphicalLasso instance has already been disposed')
     }
@@ -220,7 +315,17 @@ pms_GraphicalLasso_mahalanobis = {k: v for k, v in pms_GraphicalLasso_mahalanobi
 
     The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
-  async score(opts: GraphicalLassoScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+     */
+    X_test?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GraphicalLasso instance has already been disposed')
     }
@@ -396,121 +501,4 @@ pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if
         ._py`attr_GraphicalLasso_feature_names_in_.tolist() if hasattr(attr_GraphicalLasso_feature_names_in_, 'tolist') else attr_GraphicalLasso_feature_names_in_`
     })()
   }
-}
-
-export interface GraphicalLassoOptions {
-  /**
-    The regularization parameter: the higher alpha, the more regularization, the sparser the inverse covariance. Range is (0, inf\].
-
-    @defaultValue `0.01`
-   */
-  alpha?: number
-
-  /**
-    The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse underlying graphs, where p > n. Elsewhere prefer cd which is more numerically stable.
-
-    @defaultValue `'cd'`
-   */
-  mode?: 'cd' | 'lars'
-
-  /**
-    The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].
-
-    @defaultValue `0.0001`
-   */
-  enet_tol?: number
-
-  /**
-    The maximum number of iterations.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    If verbose is `true`, the objective function and dual gap are plotted at each iteration.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.
-
-    @defaultValue `false`
-   */
-  assume_centered?: boolean
-}
-
-export interface GraphicalLassoErrorNormOptions {
-  /**
-    The covariance to compare with.
-   */
-  comp_cov?: ArrayLike[]
-
-  /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
-
-    @defaultValue `'frobenius'`
-   */
-  norm?: 'frobenius' | 'spectral'
-
-  /**
-    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
-
-    @defaultValue `true`
-   */
-  scaling?: boolean
-
-  /**
-    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
-
-    @defaultValue `true`
-   */
-  squared?: boolean
-}
-
-export interface GraphicalLassoFitOptions {
-  /**
-    Data from which to compute the covariance estimate.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface GraphicalLassoGetPrecisionOptions {
-  /**
-    The precision matrix associated to the current covariance object.
-   */
-  precision_?: ArrayLike[]
-}
-
-export interface GraphicalLassoMahalanobisOptions {
-  /**
-    The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GraphicalLassoScoreOptions {
-  /**
-    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
-   */
-  X_test?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
 }

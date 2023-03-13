@@ -22,7 +22,34 @@ export class TransformedTargetRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: TransformedTargetRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Regressor object such as derived from [`RegressorMixin`](sklearn.base.RegressorMixin.html#sklearn.base.RegressorMixin "sklearn.base.RegressorMixin"). This regressor will automatically be cloned each time prior to fitting. If `regressor is None`, [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") is created and used.
+     */
+    regressor?: any
+
+    /**
+      Estimator object such as derived from [`TransformerMixin`](sklearn.base.TransformerMixin.html#sklearn.base.TransformerMixin "sklearn.base.TransformerMixin"). Cannot be set at the same time as `func` and `inverse\_func`. If `transformer is None` as well as `func` and `inverse\_func`, the transformer will be an identity transformer. Note that the transformer will be cloned during fitting. Also, the transformer is restricting `y` to be a numpy array.
+     */
+    transformer?: any
+
+    /**
+      Function to apply to `y` before passing to [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit"). Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. If `func is None`, the function used will be the identity function.
+     */
+    func?: any
+
+    /**
+      Function to apply to the prediction of the regressor. Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. The inverse function is used to return predictions to the same space of the original training labels.
+     */
+    inverse_func?: any
+
+    /**
+      Whether to check that `transform` followed by `inverse\_transform` or `func` followed by `inverse\_func` leads to the original targets.
+
+      @defaultValue `true`
+     */
+    check_inverse?: boolean
+  }) {
     this.id = `TransformedTargetRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +132,22 @@ ctor_TransformedTargetRegressor = {k: v for k, v in ctor_TransformedTargetRegres
   /**
     Fit the model according to the given training data.
    */
-  async fit(opts: TransformedTargetRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Parameters passed to the `fit` method of the underlying regressor.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TransformedTargetRegressor instance has already been disposed'
@@ -143,9 +185,17 @@ pms_TransformedTargetRegressor_fit = {k: v for k, v in pms_TransformedTargetRegr
 
     The regressor is used to predict and the `inverse\_func` or `inverse\_transform` is applied before returning the prediction.
    */
-  async predict(
-    opts: TransformedTargetRegressorPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Parameters passed to the `predict` method of the underlying regressor.
+     */
+    predict_params?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This TransformedTargetRegressor instance has already been disposed'
@@ -181,7 +231,22 @@ pms_TransformedTargetRegressor_predict = {k: v for k, v in pms_TransformedTarget
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: TransformedTargetRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This TransformedTargetRegressor instance has already been disposed'
@@ -294,79 +359,4 @@ pms_TransformedTargetRegressor_score = {k: v for k, v in pms_TransformedTargetRe
         ._py`attr_TransformedTargetRegressor_feature_names_in_.tolist() if hasattr(attr_TransformedTargetRegressor_feature_names_in_, 'tolist') else attr_TransformedTargetRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface TransformedTargetRegressorOptions {
-  /**
-    Regressor object such as derived from [`RegressorMixin`](sklearn.base.RegressorMixin.html#sklearn.base.RegressorMixin "sklearn.base.RegressorMixin"). This regressor will automatically be cloned each time prior to fitting. If `regressor is None`, [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") is created and used.
-   */
-  regressor?: any
-
-  /**
-    Estimator object such as derived from [`TransformerMixin`](sklearn.base.TransformerMixin.html#sklearn.base.TransformerMixin "sklearn.base.TransformerMixin"). Cannot be set at the same time as `func` and `inverse\_func`. If `transformer is None` as well as `func` and `inverse\_func`, the transformer will be an identity transformer. Note that the transformer will be cloned during fitting. Also, the transformer is restricting `y` to be a numpy array.
-   */
-  transformer?: any
-
-  /**
-    Function to apply to `y` before passing to [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit"). Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. If `func is None`, the function used will be the identity function.
-   */
-  func?: any
-
-  /**
-    Function to apply to the prediction of the regressor. Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. The inverse function is used to return predictions to the same space of the original training labels.
-   */
-  inverse_func?: any
-
-  /**
-    Whether to check that `transform` followed by `inverse\_transform` or `func` followed by `inverse\_func` leads to the original targets.
-
-    @defaultValue `true`
-   */
-  check_inverse?: boolean
-}
-
-export interface TransformedTargetRegressorFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Parameters passed to the `fit` method of the underlying regressor.
-   */
-  fit_params?: any
-}
-
-export interface TransformedTargetRegressorPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Parameters passed to the `predict` method of the underlying regressor.
-   */
-  predict_params?: any
-}
-
-export interface TransformedTargetRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -20,7 +20,42 @@ export class CCA {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: CCAOptions) {
+  constructor(opts?: {
+    /**
+      Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      Whether to scale `X` and `Y`.
+
+      @defaultValue `true`
+     */
+    scale?: boolean
+
+    /**
+      The maximum number of iterations of the power method.
+
+      @defaultValue `500`
+     */
+    max_iter?: number
+
+    /**
+      The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
+
+      @defaultValue `0.000001`
+     */
+    tol?: number
+
+    /**
+      Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `CCA${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -98,7 +133,17 @@ ctor_CCA = {k: v for k, v in ctor_CCA.items() if v is not None}`
   /**
     Fit model to data.
    */
-  async fit(opts: CCAFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+     */
+    Y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -127,7 +172,17 @@ pms_CCA_fit = {k: v for k, v in pms_CCA_fit.items() if v is not None}`
   /**
     Learn and apply the dimension reduction on the train data.
    */
-  async fit_transform(opts: CCAFitTransformOptions): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+     */
+    y?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -159,9 +214,12 @@ pms_CCA_fit_transform = {k: v for k, v in pms_CCA_fit_transform.items() if v is 
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: CCAGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.CCA.fit "sklearn.cross_decomposition.CCA.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -189,9 +247,17 @@ pms_CCA_get_feature_names_out = {k: v for k, v in pms_CCA_get_feature_names_out.
   /**
     Transform data back to its original space.
    */
-  async inverse_transform(
-    opts: CCAInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+     */
+    X?: ArrayLike[]
+
+    /**
+      New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+     */
+    Y?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -221,7 +287,19 @@ pms_CCA_inverse_transform = {k: v for k, v in pms_CCA_inverse_transform.items() 
   /**
     Predict targets of given samples.
    */
-  async predict(opts: CCAPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Whether to copy `X` and `Y`, or perform in-place normalization.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -253,7 +331,22 @@ pms_CCA_predict = {k: v for k, v in pms_CCA_predict.items() if v is not None}`
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: CCAScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -287,7 +380,12 @@ pms_CCA_score = {k: v for k, v in pms_CCA_score.items() if v is not None}`
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: CCASetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -315,7 +413,24 @@ pms_CCA_set_output = {k: v for k, v in pms_CCA_set_output.items() if v is not No
   /**
     Apply the dimension reduction.
    */
-  async transform(opts: CCATransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      Samples to transform.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target vectors.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Whether to copy `X` and `Y`, or perform in-place normalization.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CCA instance has already been disposed')
     }
@@ -569,141 +684,4 @@ pms_CCA_transform = {k: v for k, v in pms_CCA_transform.items() if v is not None
         ._py`attr_CCA_feature_names_in_.tolist() if hasattr(attr_CCA_feature_names_in_, 'tolist') else attr_CCA_feature_names_in_`
     })()
   }
-}
-
-export interface CCAOptions {
-  /**
-    Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    Whether to scale `X` and `Y`.
-
-    @defaultValue `true`
-   */
-  scale?: boolean
-
-  /**
-    The maximum number of iterations of the power method.
-
-    @defaultValue `500`
-   */
-  max_iter?: number
-
-  /**
-    The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
-
-    @defaultValue `0.000001`
-   */
-  tol?: number
-
-  /**
-    Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface CCAFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
-   */
-  Y?: ArrayLike
-}
-
-export interface CCAFitTransformOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
-   */
-  y?: ArrayLike[]
-}
-
-export interface CCAGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.CCA.fit "sklearn.cross_decomposition.CCA.fit").
-   */
-  input_features?: any
-}
-
-export interface CCAInverseTransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
-   */
-  X?: ArrayLike[]
-
-  /**
-    New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
-   */
-  Y?: ArrayLike[]
-}
-
-export interface CCAPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Whether to copy `X` and `Y`, or perform in-place normalization.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface CCAScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface CCASetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface CCATransformOptions {
-  /**
-    Samples to transform.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target vectors.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Whether to copy `X` and `Y`, or perform in-place normalization.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
 }

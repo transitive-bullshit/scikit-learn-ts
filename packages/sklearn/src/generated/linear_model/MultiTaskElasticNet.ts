@@ -20,7 +20,68 @@ export class MultiTaskElasticNet {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MultiTaskElasticNetOptions) {
+  constructor(opts?: {
+    /**
+      Constant that multiplies the L1/L2 term. Defaults to 1.0.
+
+      @defaultValue `1`
+     */
+    alpha?: number
+
+    /**
+      The ElasticNet mixing parameter, with 0 < l1\_ratio <= 1. For l1\_ratio = 1 the penalty is an L1/L2 penalty. For l1\_ratio = 0 it is an L2 penalty. For `0 < l1\_ratio < 1`, the penalty is a combination of L1/L2 and L2.
+
+      @defaultValue `0.5`
+     */
+    l1_ratio?: number
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      The maximum number of iterations.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      If set to ‘random’, a random coefficient is updated every iteration rather than looping over features sequentially by default. This (setting to ‘random’) often leads to significantly faster convergence especially when tol is higher than 1e-4.
+
+      @defaultValue `'cyclic'`
+     */
+    selection?: 'cyclic' | 'random'
+  }) {
     this.id = `MultiTaskElasticNet${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +168,17 @@ ctor_MultiTaskElasticNet = {k: v for k, v in ctor_MultiTaskElasticNet.items() if
   /**
     Fit MultiTaskElasticNet model with coordinate descent.
    */
-  async fit(opts: MultiTaskElasticNetFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data.
+     */
+    X?: NDArray[]
+
+    /**
+      Target. Will be cast to X’s dtype if necessary.
+     */
+    y?: NDArray[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiTaskElasticNet instance has already been disposed'
@@ -143,7 +214,100 @@ pms_MultiTaskElasticNet_fit = {k: v for k, v in pms_MultiTaskElasticNet_fit.item
 
     For mono-output tasks it is:
    */
-  async path(opts: MultiTaskElasticNetPathOptions): Promise<NDArray> {
+  async path(opts: {
+    /**
+      Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike | SparseMatrix
+
+    /**
+      Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penalties). `l1\_ratio=1` corresponds to the Lasso.
+
+      @defaultValue `0.5`
+     */
+    l1_ratio?: number
+
+    /**
+      Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
+
+      @defaultValue `0.001`
+     */
+    eps?: number
+
+    /**
+      Number of alphas along the regularization path.
+
+      @defaultValue `100`
+     */
+    n_alphas?: number
+
+    /**
+      List of alphas where to compute the models. If `undefined` alphas are set automatically.
+     */
+    alphas?: NDArray
+
+    /**
+      Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
+
+      @defaultValue `'auto'`
+     */
+    precompute?: 'auto' | boolean | ArrayLike[]
+
+    /**
+      Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
+     */
+    Xy?: ArrayLike
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      The initial values of the coefficients.
+     */
+    coef_init?: NDArray
+
+    /**
+      Amount of verbosity.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+
+    /**
+      Whether to return the number of iterations or not.
+
+      @defaultValue `false`
+     */
+    return_n_iter?: boolean
+
+    /**
+      If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
+
+      @defaultValue `false`
+     */
+    positive?: boolean
+
+    /**
+      If set to `false`, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+
+    /**
+      Keyword arguments passed to the coordinate descent solver.
+     */
+    params?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiTaskElasticNet instance has already been disposed'
@@ -193,7 +357,12 @@ pms_MultiTaskElasticNet_path = {k: v for k, v in pms_MultiTaskElasticNet_path.it
   /**
     Predict using the linear model.
    */
-  async predict(opts: MultiTaskElasticNetPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiTaskElasticNet instance has already been disposed'
@@ -225,7 +394,22 @@ pms_MultiTaskElasticNet_predict = {k: v for k, v in pms_MultiTaskElasticNet_pred
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: MultiTaskElasticNetScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiTaskElasticNet instance has already been disposed'
@@ -444,198 +628,4 @@ pms_MultiTaskElasticNet_score = {k: v for k, v in pms_MultiTaskElasticNet_score.
         ._py`attr_MultiTaskElasticNet_feature_names_in_.tolist() if hasattr(attr_MultiTaskElasticNet_feature_names_in_, 'tolist') else attr_MultiTaskElasticNet_feature_names_in_`
     })()
   }
-}
-
-export interface MultiTaskElasticNetOptions {
-  /**
-    Constant that multiplies the L1/L2 term. Defaults to 1.0.
-
-    @defaultValue `1`
-   */
-  alpha?: number
-
-  /**
-    The ElasticNet mixing parameter, with 0 < l1\_ratio <= 1. For l1\_ratio = 1 the penalty is an L1/L2 penalty. For l1\_ratio = 0 it is an L2 penalty. For `0 < l1\_ratio < 1`, the penalty is a combination of L1/L2 and L2.
-
-    @defaultValue `0.5`
-   */
-  l1_ratio?: number
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    The maximum number of iterations.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    If set to ‘random’, a random coefficient is updated every iteration rather than looping over features sequentially by default. This (setting to ‘random’) often leads to significantly faster convergence especially when tol is higher than 1e-4.
-
-    @defaultValue `'cyclic'`
-   */
-  selection?: 'cyclic' | 'random'
-}
-
-export interface MultiTaskElasticNetFitOptions {
-  /**
-    Data.
-   */
-  X?: NDArray[]
-
-  /**
-    Target. Will be cast to X’s dtype if necessary.
-   */
-  y?: NDArray[]
-}
-
-export interface MultiTaskElasticNetPathOptions {
-  /**
-    Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike | SparseMatrix
-
-  /**
-    Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penalties). `l1\_ratio=1` corresponds to the Lasso.
-
-    @defaultValue `0.5`
-   */
-  l1_ratio?: number
-
-  /**
-    Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.
-
-    @defaultValue `0.001`
-   */
-  eps?: number
-
-  /**
-    Number of alphas along the regularization path.
-
-    @defaultValue `100`
-   */
-  n_alphas?: number
-
-  /**
-    List of alphas where to compute the models. If `undefined` alphas are set automatically.
-   */
-  alphas?: NDArray
-
-  /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
-
-    @defaultValue `'auto'`
-   */
-  precompute?: 'auto' | boolean | ArrayLike[]
-
-  /**
-    Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
-   */
-  Xy?: ArrayLike
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    The initial values of the coefficients.
-   */
-  coef_init?: NDArray
-
-  /**
-    Amount of verbosity.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-
-  /**
-    Whether to return the number of iterations or not.
-
-    @defaultValue `false`
-   */
-  return_n_iter?: boolean
-
-  /**
-    If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).
-
-    @defaultValue `false`
-   */
-  positive?: boolean
-
-  /**
-    If set to `false`, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-
-  /**
-    Keyword arguments passed to the coordinate descent solver.
-   */
-  params?: any
-}
-
-export interface MultiTaskElasticNetPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface MultiTaskElasticNetScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

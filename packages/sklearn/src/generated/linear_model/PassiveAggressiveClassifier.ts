@@ -20,7 +20,112 @@ export class PassiveAggressiveClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PassiveAggressiveClassifierOptions) {
+  constructor(opts?: {
+    /**
+      Maximum step size (regularization). Defaults to 1.0.
+
+      @defaultValue `1`
+     */
+    C?: number
+
+    /**
+      Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.PassiveAggressiveClassifier.partial_fit "sklearn.linear_model.PassiveAggressiveClassifier.partial_fit") method.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol).
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
+
+      @defaultValue `false`
+     */
+    early_stopping?: boolean
+
+    /**
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      Number of iterations with no improvement to wait before early stopping.
+
+      @defaultValue `5`
+     */
+    n_iter_no_change?: number
+
+    /**
+      Whether or not the training data should be shuffled after each epoch.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      The verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      The loss function to be used: hinge: equivalent to PA-I in the reference paper. squared\_hinge: equivalent to PA-II in the reference paper.
+
+      @defaultValue `'hinge'`
+     */
+    loss?: string
+
+    /**
+      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled.
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Preset for the class\_weight fit parameter.
+
+      Weights associated with classes. If not given, all classes are supposed to have weight one.
+
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      When set to `true`, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So average=10 will begin averaging after seeing 10 samples.
+
+      @defaultValue `false`
+     */
+    average?: boolean | number
+  }) {
     this.id = `PassiveAggressiveClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -119,9 +224,12 @@ ctor_PassiveAggressiveClassifier = {k: v for k, v in ctor_PassiveAggressiveClass
 
     The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
    */
-  async decision_function(
-    opts: PassiveAggressiveClassifierDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix for which we want to get the confidence scores.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This PassiveAggressiveClassifier instance has already been disposed'
@@ -156,7 +264,7 @@ pms_PassiveAggressiveClassifier_decision_function = {k: v for k, v in pms_Passiv
 
     Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
-  async densify(opts: PassiveAggressiveClassifierDensifyOptions): Promise<any> {
+  async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PassiveAggressiveClassifier instance has already been disposed'
@@ -186,7 +294,27 @@ pms_PassiveAggressiveClassifier_densify = {k: v for k, v in pms_PassiveAggressiv
   /**
     Fit linear model with Passive Aggressive algorithm.
    */
-  async fit(opts: PassiveAggressiveClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      The initial coefficients to warm-start the optimization.
+     */
+    coef_init?: NDArray[]
+
+    /**
+      The initial intercept to warm-start the optimization.
+     */
+    intercept_init?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PassiveAggressiveClassifier instance has already been disposed'
@@ -226,9 +354,22 @@ pms_PassiveAggressiveClassifier_fit = {k: v for k, v in pms_PassiveAggressiveCla
   /**
     Fit linear model with Passive Aggressive algorithm.
    */
-  async partial_fit(
-    opts: PassiveAggressiveClassifierPartialFitOptions
-  ): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Subset of the training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Subset of the target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+     */
+    classes?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PassiveAggressiveClassifier instance has already been disposed'
@@ -265,9 +406,12 @@ pms_PassiveAggressiveClassifier_partial_fit = {k: v for k, v in pms_PassiveAggre
   /**
     Predict class labels for samples in X.
    */
-  async predict(
-    opts: PassiveAggressiveClassifierPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to get the predictions.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This PassiveAggressiveClassifier instance has already been disposed'
@@ -302,7 +446,22 @@ pms_PassiveAggressiveClassifier_predict = {k: v for k, v in pms_PassiveAggressiv
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: PassiveAggressiveClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This PassiveAggressiveClassifier instance has already been disposed'
@@ -342,9 +501,7 @@ pms_PassiveAggressiveClassifier_score = {k: v for k, v in pms_PassiveAggressiveC
 
     The `intercept\_` member is not converted.
    */
-  async sparsify(
-    opts: PassiveAggressiveClassifierSparsifyOptions
-  ): Promise<any> {
+  async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PassiveAggressiveClassifier instance has already been disposed'
@@ -587,184 +744,3 @@ pms_PassiveAggressiveClassifier_sparsify = {k: v for k, v in pms_PassiveAggressi
     })()
   }
 }
-
-export interface PassiveAggressiveClassifierOptions {
-  /**
-    Maximum step size (regularization). Defaults to 1.0.
-
-    @defaultValue `1`
-   */
-  C?: number
-
-  /**
-    Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.PassiveAggressiveClassifier.partial_fit "sklearn.linear_model.PassiveAggressiveClassifier.partial_fit") method.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol).
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
-
-    @defaultValue `false`
-   */
-  early_stopping?: boolean
-
-  /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    Number of iterations with no improvement to wait before early stopping.
-
-    @defaultValue `5`
-   */
-  n_iter_no_change?: number
-
-  /**
-    Whether or not the training data should be shuffled after each epoch.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    The verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    The loss function to be used: hinge: equivalent to PA-I in the reference paper. squared\_hinge: equivalent to PA-II in the reference paper.
-
-    @defaultValue `'hinge'`
-   */
-  loss?: string
-
-  /**
-    The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled.
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Preset for the class\_weight fit parameter.
-
-    Weights associated with classes. If not given, all classes are supposed to have weight one.
-
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    When set to `true`, computes the averaged SGD weights and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches average. So average=10 will begin averaging after seeing 10 samples.
-
-    @defaultValue `false`
-   */
-  average?: boolean | number
-}
-
-export interface PassiveAggressiveClassifierDecisionFunctionOptions {
-  /**
-    The data matrix for which we want to get the confidence scores.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface PassiveAggressiveClassifierDensifyOptions {}
-
-export interface PassiveAggressiveClassifierFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    The initial coefficients to warm-start the optimization.
-   */
-  coef_init?: NDArray[]
-
-  /**
-    The initial intercept to warm-start the optimization.
-   */
-  intercept_init?: NDArray
-}
-
-export interface PassiveAggressiveClassifierPartialFitOptions {
-  /**
-    Subset of the training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Subset of the target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
-   */
-  classes?: NDArray
-}
-
-export interface PassiveAggressiveClassifierPredictOptions {
-  /**
-    The data matrix for which we want to get the predictions.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface PassiveAggressiveClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface PassiveAggressiveClassifierSparsifyOptions {}

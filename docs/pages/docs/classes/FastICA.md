@@ -15,20 +15,30 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new FastICA(opts?: FastICAOptions): FastICA;
+new FastICA(opts?: object): FastICA;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `FastICAOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"parallel"` \| `"deflation"` | Specify which algorithm to use for FastICA.  `Default Value`  `'parallel'` |
+| `opts.fun?` | `"logcosh"` \| `"exp"` \| `"cube"` | The functional form of the G function used in the approximation to neg-entropy. Could be either ‘logcosh’, ‘exp’, or ‘cube’. You can also provide your own function. It should return a tuple containing the value of the function, and of its derivative, in the point. The derivative should be averaged along its last dimension. Example:  `Default Value`  `'logcosh'` |
+| `opts.fun_args?` | `any` | Arguments to send to the functional form. If empty or `undefined` and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}. |
+| `opts.max_iter?` | `number` | Maximum number of iterations during fit.  `Default Value`  `200` |
+| `opts.n_components?` | `number` | Number of components to use. If `undefined` is passed, all are used. |
+| `opts.random_state?` | `number` | Used to initialize `w\_init` when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See Glossary. |
+| `opts.tol?` | `number` | A positive scalar giving the tolerance at which the un-mixing matrix is considered to have converged.  `Default Value`  `0.0001` |
+| `opts.w_init?` | `ArrayLike`[] | Initial un-mixing array. If `w\_init=None`, then an array of values drawn from a normal distribution is used. |
+| `opts.whiten?` | `string` \| `boolean` | Specify the whitening strategy to use.  `Default Value`  `'warn'` |
+| `opts.whiten_solver?` | `"svd"` \| `"eigh"` | The solver to use for whitening.  `Default Value`  `'svd'` |
 
 ### Returns
 
 [`FastICA`](FastICA.md)
 
-Defined in:  [generated/decomposition/FastICA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L25)
+Defined in:  [generated/decomposition/FastICA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L25)
 
 ## Properties
 
@@ -36,31 +46,31 @@ Defined in:  [generated/decomposition/FastICA.ts:25](https://github.com/transiti
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/FastICA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L23)
+Defined in:  [generated/decomposition/FastICA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/FastICA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L22)
+Defined in:  [generated/decomposition/FastICA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/FastICA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L21)
+Defined in:  [generated/decomposition/FastICA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/FastICA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L18)
+Defined in:  [generated/decomposition/FastICA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/FastICA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L19)
+Defined in:  [generated/decomposition/FastICA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L19)
 
 ## Accessors
 
@@ -78,7 +88,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/FastICA.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L289)
+Defined in: [generated/decomposition/FastICA.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L401)
 
 ### feature\_names\_in\_
 
@@ -94,7 +104,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/FastICA.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L382)
+Defined in: [generated/decomposition/FastICA.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L494)
 
 ### mean\_
 
@@ -110,7 +120,7 @@ mean_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/decomposition/FastICA.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L335)
+Defined in: [generated/decomposition/FastICA.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L447)
 
 ### mixing\_
 
@@ -126,7 +136,7 @@ mixing_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/FastICA.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L312)
+Defined in: [generated/decomposition/FastICA.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L424)
 
 ### n\_features\_in\_
 
@@ -142,7 +152,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/FastICA.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L357)
+Defined in: [generated/decomposition/FastICA.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L469)
 
 ### n\_iter\_
 
@@ -158,7 +168,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/FastICA.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L407)
+Defined in: [generated/decomposition/FastICA.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L519)
 
 ### py
 
@@ -172,7 +182,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/FastICA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L30)
+Defined in:  [generated/decomposition/FastICA.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L92)
 
 #### Signature
 
@@ -190,7 +200,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/FastICA.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L34)
+Defined in: [generated/decomposition/FastICA.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L96)
 
 ### whitening\_
 
@@ -206,7 +216,7 @@ whitening_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/FastICA.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L430)
+Defined in: [generated/decomposition/FastICA.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L542)
 
 ## Methods
 
@@ -226,7 +236,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L92)
+Defined in:  [generated/decomposition/FastICA.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L154)
 
 ### fit()
 
@@ -235,20 +245,22 @@ Fit the model to X.
 #### Signature
 
 ```ts
-fit(opts: FastICAFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `FastICAFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L109)
+Defined in:  [generated/decomposition/FastICA.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L171)
 
 ### fit\_transform()
 
@@ -257,20 +269,22 @@ Fit the model and recover the sources from X.
 #### Signature
 
 ```ts
-fit_transform(opts: FastICAFitTransformOptions): Promise<ArrayLike[]>;
+fit_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `FastICAFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/FastICA.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L137)
+Defined in:  [generated/decomposition/FastICA.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L209)
 
 ### get\_feature\_names\_out()
 
@@ -281,20 +295,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: FastICAGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `FastICAGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.FastICA.fit "sklearn.decomposition.FastICA.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L167)
+Defined in:  [generated/decomposition/FastICA.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L249)
 
 ### init()
 
@@ -318,7 +333,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L43)
+Defined in:  [generated/decomposition/FastICA.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L105)
 
 ### inverse\_transform()
 
@@ -327,20 +342,22 @@ Transform the sources back to the mixed data (apply mixing matrix).
 #### Signature
 
 ```ts
-inverse_transform(opts: FastICAInverseTransformOptions): Promise<ArrayLike[]>;
+inverse_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `FastICAInverseTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Sources, where `n\_samples` is the number of samples and `n\_components` is the number of components. |
+| `opts.copy?` | `boolean` | If `false`, data passed to fit are overwritten. Defaults to `true`.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/FastICA.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L197)
+Defined in:  [generated/decomposition/FastICA.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L282)
 
 ### set\_output()
 
@@ -351,20 +368,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: FastICASetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `FastICASetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/FastICA.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L231)
+Defined in:  [generated/decomposition/FastICA.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L326)
 
 ### transform()
 
@@ -373,17 +391,19 @@ Recover the sources from X (apply the unmixing matrix).
 #### Signature
 
 ```ts
-transform(opts: FastICATransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `FastICATransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Data to transform, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.copy?` | `boolean` | If `false`, data passed to fit can be overwritten. Defaults to `true`.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/FastICA.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/FastICA.ts#L259)
+Defined in:  [generated/decomposition/FastICA.ts:359](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/FastICA.ts#L359)

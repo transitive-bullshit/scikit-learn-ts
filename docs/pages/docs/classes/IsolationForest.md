@@ -23,20 +23,29 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new IsolationForest(opts?: IsolationForestOptions): IsolationForest;
+new IsolationForest(opts?: object): IsolationForest;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `IsolationForestOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.bootstrap?` | `boolean` | If `true`, individual trees are fit on random subsets of the training data sampled with replacement. If `false`, sampling without replacement is performed.  `Default Value`  `false` |
+| `opts.contamination?` | `number` \| `"auto"` | The amount of contamination of the data set, i.e. the proportion of outliers in the data set. Used when fitting to define the threshold on the scores of the samples.  `Default Value`  `'auto'` |
+| `opts.max_features?` | `number` | The number of features to draw from X to train each base estimator.  `Default Value`  `1` |
+| `opts.max_samples?` | `number` \| `"auto"` | If int, then draw `max\_samples` samples.  `Default Value`  `'auto'` |
+| `opts.n_estimators?` | `number` | The number of base estimators in the ensemble.  `Default Value`  `100` |
+| `opts.n_jobs?` | `number` | The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.random_state?` | `number` | Controls the pseudo-randomness of the selection of the feature and split values for each branching step and each tree in the forest.  Pass an int for reproducible results across multiple function calls. See Glossary. |
+| `opts.verbose?` | `number` | Controls the verbosity of the tree building process.  `Default Value`  `0` |
+| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See the Glossary.  `Default Value`  `false` |
 
 ### Returns
 
 [`IsolationForest`](IsolationForest.md)
 
-Defined in:  [generated/ensemble/IsolationForest.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L33)
+Defined in:  [generated/ensemble/IsolationForest.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L33)
 
 ## Properties
 
@@ -44,31 +53,31 @@ Defined in:  [generated/ensemble/IsolationForest.ts:33](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L31)
+Defined in:  [generated/ensemble/IsolationForest.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L31)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L30)
+Defined in:  [generated/ensemble/IsolationForest.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L30)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L29)
+Defined in:  [generated/ensemble/IsolationForest.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L29)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L26)
+Defined in:  [generated/ensemble/IsolationForest.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L26)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L27)
+Defined in:  [generated/ensemble/IsolationForest.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L27)
 
 ## Accessors
 
@@ -86,7 +95,7 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/IsolationForest.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L278)
+Defined in: [generated/ensemble/IsolationForest.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L375)
 
 ### estimators\_
 
@@ -102,7 +111,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/IsolationForest.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L303)
+Defined in: [generated/ensemble/IsolationForest.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L400)
 
 ### estimators\_features\_
 
@@ -118,7 +127,7 @@ estimators_features_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/IsolationForest.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L328)
+Defined in: [generated/ensemble/IsolationForest.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L425)
 
 ### feature\_names\_in\_
 
@@ -134,7 +143,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/IsolationForest.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L428)
+Defined in: [generated/ensemble/IsolationForest.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L525)
 
 ### max\_samples\_
 
@@ -150,7 +159,7 @@ max_samples_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/IsolationForest.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L353)
+Defined in: [generated/ensemble/IsolationForest.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L450)
 
 ### n\_features\_in\_
 
@@ -166,7 +175,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/IsolationForest.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L403)
+Defined in: [generated/ensemble/IsolationForest.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L500)
 
 ### offset\_
 
@@ -182,7 +191,7 @@ offset_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/IsolationForest.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L378)
+Defined in: [generated/ensemble/IsolationForest.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L475)
 
 ### py
 
@@ -196,7 +205,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/IsolationForest.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L38)
+Defined in:  [generated/ensemble/IsolationForest.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L99)
 
 #### Signature
 
@@ -214,7 +223,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/IsolationForest.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L42)
+Defined in: [generated/ensemble/IsolationForest.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L103)
 
 ## Methods
 
@@ -229,20 +238,21 @@ The measure of normality of an observation given a tree is the depth of the leaf
 #### Signature
 
 ```ts
-decision_function(opts: IsolationForestDecisionFunctionOptions): Promise<ArrayLike>;
+decision_function(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `IsolationForestDecisionFunctionOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L122)
+Defined in:  [generated/ensemble/IsolationForest.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L183)
 
 ### dispose()
 
@@ -260,7 +270,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L101)
+Defined in:  [generated/ensemble/IsolationForest.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L162)
 
 ### fit()
 
@@ -269,20 +279,23 @@ Fit estimator.
 #### Signature
 
 ```ts
-fit(opts: IsolationForestFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `IsolationForestFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. If `undefined`, then samples are equally weighted. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L154)
+Defined in:  [generated/ensemble/IsolationForest.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L218)
 
 ### fit\_predict()
 
@@ -293,20 +306,22 @@ Returns -1 for outliers and 1 for inliers.
 #### Signature
 
 ```ts
-fit_predict(opts: IsolationForestFitPredictOptions): Promise<ArrayLike>;
+fit_predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `IsolationForestFitPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L188)
+Defined in:  [generated/ensemble/IsolationForest.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L267)
 
 ### init()
 
@@ -330,7 +345,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L51)
+Defined in:  [generated/ensemble/IsolationForest.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L112)
 
 ### predict()
 
@@ -339,20 +354,21 @@ Predict if a particular sample is an outlier or not.
 #### Signature
 
 ```ts
-predict(opts: IsolationForestPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `IsolationForestPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L216)
+Defined in:  [generated/ensemble/IsolationForest.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L305)
 
 ### score\_samples()
 
@@ -365,17 +381,18 @@ The measure of normality of an observation given a tree is the depth of the leaf
 #### Signature
 
 ```ts
-score_samples(opts: IsolationForestScoreSamplesOptions): Promise<ArrayLike>;
+score_samples(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `IsolationForestScoreSamplesOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/IsolationForest.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L248)
+Defined in:  [generated/ensemble/IsolationForest.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/IsolationForest.ts#L342)

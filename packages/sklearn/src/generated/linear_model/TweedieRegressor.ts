@@ -22,7 +22,70 @@ export class TweedieRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: TweedieRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The power determines the underlying target distribution according to the following table:
+
+      @defaultValue `0`
+     */
+    power?: number
+
+    /**
+      Constant that multiplies the L2 penalty term and determines the regularization strength. `alpha \= 0` is equivalent to unpenalized GLMs. In this case, the design matrix `X` must have full column rank (no collinearities). Values of `alpha` must be in the range `\[0.0, inf)`.
+
+      @defaultValue `1`
+     */
+    alpha?: number
+
+    /**
+      Specifies if a constant (a.k.a. bias or intercept) should be added to the linear predictor (`X @ coef + intercept`).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      The link function of the GLM, i.e. mapping from linear predictor `X @ coeff + intercept` to prediction `y\_pred`. Option ‘auto’ sets the link depending on the chosen `power` parameter as follows:
+
+      @defaultValue `'auto'`
+     */
+    link?: 'auto' | 'identity' | 'log'
+
+    /**
+      Algorithm to use in the optimization problem:
+
+      @defaultValue `'lbfgs'`
+     */
+    solver?: 'lbfgs' | 'newton-cholesky'
+
+    /**
+      The maximal number of iterations for the solver. Values must be in the range `\[1, inf)`.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      Stopping criterion. For the lbfgs solver, the iteration will stop when `max{|g\_j|, j \= 1, ..., d} <= tol` where `g\_j` is the j-th component of the gradient (derivative) of the objective function. Values must be in the range `(0.0, inf)`.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      If set to `true`, reuse the solution of the previous call to `fit` as initialization for `coef\_` and `intercept\_` .
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      For the lbfgs solver set verbose to any positive number for verbosity. Values must be in the range `\[0, inf)`.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+  }) {
     this.id = `TweedieRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +170,22 @@ ctor_TweedieRegressor = {k: v for k, v in ctor_TweedieRegressor.items() if v is 
   /**
     Fit a Generalized Linear Model.
    */
-  async fit(opts: TweedieRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TweedieRegressor instance has already been disposed'
@@ -141,7 +219,12 @@ pms_TweedieRegressor_fit = {k: v for k, v in pms_TweedieRegressor_fit.items() if
   /**
     Predict using GLM with feature matrix X.
    */
-  async predict(opts: TweedieRegressorPredictOptions): Promise<any[]> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This TweedieRegressor instance has already been disposed'
@@ -175,7 +258,22 @@ pms_TweedieRegressor_predict = {k: v for k, v in pms_TweedieRegressor_predict.it
 
     D^2 is defined as \\(D^2 = 1-\\frac{D(y\_{true},y\_{pred})}{D\_{null}}\\), \\(D\_{null}\\) is the null deviance, i.e. the deviance of a model with intercept alone, which corresponds to \\(y\_{pred} = \\bar{y}\\). The mean \\(\\bar{y}\\) is averaged by sample\_weight. Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse).
    */
-  async score(opts: TweedieRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      True values of target.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This TweedieRegressor instance has already been disposed'
@@ -340,110 +438,4 @@ pms_TweedieRegressor_score = {k: v for k, v in pms_TweedieRegressor_score.items(
         ._py`attr_TweedieRegressor_feature_names_in_.tolist() if hasattr(attr_TweedieRegressor_feature_names_in_, 'tolist') else attr_TweedieRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface TweedieRegressorOptions {
-  /**
-    The power determines the underlying target distribution according to the following table:
-
-    @defaultValue `0`
-   */
-  power?: number
-
-  /**
-    Constant that multiplies the L2 penalty term and determines the regularization strength. `alpha \= 0` is equivalent to unpenalized GLMs. In this case, the design matrix `X` must have full column rank (no collinearities). Values of `alpha` must be in the range `\[0.0, inf)`.
-
-    @defaultValue `1`
-   */
-  alpha?: number
-
-  /**
-    Specifies if a constant (a.k.a. bias or intercept) should be added to the linear predictor (`X @ coef + intercept`).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    The link function of the GLM, i.e. mapping from linear predictor `X @ coeff + intercept` to prediction `y\_pred`. Option ‘auto’ sets the link depending on the chosen `power` parameter as follows:
-
-    @defaultValue `'auto'`
-   */
-  link?: 'auto' | 'identity' | 'log'
-
-  /**
-    Algorithm to use in the optimization problem:
-
-    @defaultValue `'lbfgs'`
-   */
-  solver?: 'lbfgs' | 'newton-cholesky'
-
-  /**
-    The maximal number of iterations for the solver. Values must be in the range `\[1, inf)`.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    Stopping criterion. For the lbfgs solver, the iteration will stop when `max{|g\_j|, j \= 1, ..., d} <= tol` where `g\_j` is the j-th component of the gradient (derivative) of the objective function. Values must be in the range `(0.0, inf)`.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    If set to `true`, reuse the solution of the previous call to `fit` as initialization for `coef\_` and `intercept\_` .
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    For the lbfgs solver set verbose to any positive number for verbosity. Values must be in the range `\[0, inf)`.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-}
-
-export interface TweedieRegressorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface TweedieRegressorPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface TweedieRegressorScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    True values of target.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -11,20 +11,21 @@ Custom warning to capture convergence problems
 ### Signature
 
 ```ts
-new ConvergenceWarning(opts?: ConvergenceWarningOptions): ConvergenceWarning;
+new ConvergenceWarning(opts?: object): ConvergenceWarning;
 ```
 
 ### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | `ConvergenceWarningOptions` |
+| `opts?` | `object` |
+| `opts.args?` | `any` |
 
 ### Returns
 
 [`ConvergenceWarning`](ConvergenceWarning.md)
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L21)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L21)
 
 ## Properties
 
@@ -32,31 +33,31 @@ Defined in:  [generated/exceptions/ConvergenceWarning.ts:21](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L19)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L18)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L17)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L14)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L15)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L15)
 
 ## Accessors
 
@@ -72,7 +73,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L26)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L26)
 
 #### Signature
 
@@ -90,7 +91,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/exceptions/ConvergenceWarning.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L30)
+Defined in: [generated/exceptions/ConvergenceWarning.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L30)
 
 ## Methods
 
@@ -110,7 +111,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L83)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L83)
 
 ### init()
 
@@ -134,7 +135,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L39)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L39)
 
 ### with\_traceback()
 
@@ -143,17 +144,17 @@ Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return se
 #### Signature
 
 ```ts
-with_traceback(opts: ConvergenceWarningWithTracebackOptions): Promise<any>;
+with_traceback(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | `ConvergenceWarningWithTracebackOptions` |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/exceptions/ConvergenceWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L100)
+Defined in:  [generated/exceptions/ConvergenceWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/ConvergenceWarning.ts#L100)

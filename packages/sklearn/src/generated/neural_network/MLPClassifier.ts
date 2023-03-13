@@ -20,7 +20,164 @@ export class MLPClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MLPClassifierOptions) {
+  constructor(opts?: {
+    /**
+      The ith element represents the number of neurons in the ith hidden layer.
+     */
+    hidden_layer_sizes?: any
+
+    /**
+      Activation function for the hidden layer.
+
+      @defaultValue `'relu'`
+     */
+    activation?: 'identity' | 'logistic' | 'tanh' | 'relu'
+
+    /**
+      The solver for weight optimization.
+
+      @defaultValue `'adam'`
+     */
+    solver?: 'lbfgs' | 'sgd' | 'adam'
+
+    /**
+      Strength of the L2 regularization term. The L2 regularization term is divided by the sample size when added to the loss.
+
+      @defaultValue `0.0001`
+     */
+    alpha?: number
+
+    /**
+      Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the classifier will not use minibatch. When set to “auto”, `batch\_size=min(200, n\_samples)`.
+
+      @defaultValue `'auto'`
+     */
+    batch_size?: number
+
+    /**
+      Learning rate schedule for weight updates.
+
+      @defaultValue `'constant'`
+     */
+    learning_rate?: 'constant' | 'invscaling' | 'adaptive'
+
+    /**
+      The initial learning rate used. It controls the step-size in updating the weights. Only used when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `0.001`
+     */
+    learning_rate_init?: number
+
+    /**
+      The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning\_rate is set to ‘invscaling’. Only used when solver=’sgd’.
+
+      @defaultValue `0.5`
+     */
+    power_t?: number
+
+    /**
+      Maximum number of iterations. The solver iterates until convergence (determined by ‘tol’) or this number of iterations. For stochastic solvers (‘sgd’, ‘adam’), note that this determines the number of epochs (how many times each data point will be used), not the number of gradient steps.
+
+      @defaultValue `200`
+     */
+    max_iter?: number
+
+    /**
+      Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive iterations, unless `learning\_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Whether to print progress messages to stdout.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Momentum for gradient descent update. Should be between 0 and 1. Only used when solver=’sgd’.
+
+      @defaultValue `0.9`
+     */
+    momentum?: number
+
+    /**
+      Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and momentum > 0.
+
+      @defaultValue `true`
+     */
+    nesterovs_momentum?: boolean
+
+    /**
+      Whether to use early stopping to terminate training when validation score is not improving. If set to true, it will automatically set aside 10% of training data as validation and terminate training when validation score is not improving by at least tol for `n\_iter\_no\_change` consecutive epochs. The split is stratified, except in a multilabel setting. If early stopping is `false`, then the training stops when the training loss does not improve by more than tol for n\_iter\_no\_change consecutive passes over the training set. Only effective when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `false`
+     */
+    early_stopping?: boolean
+
+    /**
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      Exponential decay rate for estimates of first moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
+
+      @defaultValue `0.9`
+     */
+    beta_1?: number
+
+    /**
+      Exponential decay rate for estimates of second moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
+
+      @defaultValue `0.999`
+     */
+    beta_2?: number
+
+    /**
+      Value for numerical stability in adam. Only used when solver=’adam’.
+
+      @defaultValue `1e-8`
+     */
+    epsilon?: number
+
+    /**
+      Maximum number of epochs to not meet `tol` improvement. Only effective when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `10`
+     */
+    n_iter_no_change?: number
+
+    /**
+      Only used when solver=’lbfgs’. Maximum number of loss function calls. The solver iterates until convergence (determined by ‘tol’), number of iterations reaches max\_iter, or this number of loss function calls. Note that number of loss function calls will be greater than or equal to the number of iterations for the `MLPClassifier`.
+
+      @defaultValue `15000`
+     */
+    max_fun?: number
+  }) {
     this.id = `MLPClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -125,7 +282,17 @@ ctor_MLPClassifier = {k: v for k, v in ctor_MLPClassifier.items() if v is not No
   /**
     Fit the model to data matrix X and target(s) y.
    */
-  async fit(opts: MLPClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input data.
+     */
+    X?: NDArray | SparseMatrix[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MLPClassifier instance has already been disposed')
     }
@@ -155,7 +322,22 @@ pms_MLPClassifier_fit = {k: v for k, v in pms_MLPClassifier_fit.items() if v is 
   /**
     Update the model with a single iteration over the given data.
    */
-  async partial_fit(opts: MLPClassifierPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+     */
+    classes?: any[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MLPClassifier instance has already been disposed')
     }
@@ -187,7 +369,12 @@ pms_MLPClassifier_partial_fit = {k: v for k, v in pms_MLPClassifier_partial_fit.
   /**
     Predict using the multi-layer perceptron classifier.
    */
-  async predict(opts: MLPClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MLPClassifier instance has already been disposed')
     }
@@ -215,9 +402,12 @@ pms_MLPClassifier_predict = {k: v for k, v in pms_MLPClassifier_predict.items() 
   /**
     Return the log of probability estimates.
    */
-  async predict_log_proba(
-    opts: MLPClassifierPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      The input data.
+     */
+    X?: NDArray[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MLPClassifier instance has already been disposed')
     }
@@ -247,9 +437,12 @@ pms_MLPClassifier_predict_log_proba = {k: v for k, v in pms_MLPClassifier_predic
   /**
     Probability estimates.
    */
-  async predict_proba(
-    opts: MLPClassifierPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MLPClassifier instance has already been disposed')
     }
@@ -279,7 +472,22 @@ pms_MLPClassifier_predict_proba = {k: v for k, v in pms_MLPClassifier_predict_pr
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: MLPClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This MLPClassifier instance has already been disposed')
     }
@@ -674,230 +882,4 @@ pms_MLPClassifier_score = {k: v for k, v in pms_MLPClassifier_score.items() if v
         ._py`attr_MLPClassifier_out_activation_.tolist() if hasattr(attr_MLPClassifier_out_activation_, 'tolist') else attr_MLPClassifier_out_activation_`
     })()
   }
-}
-
-export interface MLPClassifierOptions {
-  /**
-    The ith element represents the number of neurons in the ith hidden layer.
-   */
-  hidden_layer_sizes?: any
-
-  /**
-    Activation function for the hidden layer.
-
-    @defaultValue `'relu'`
-   */
-  activation?: 'identity' | 'logistic' | 'tanh' | 'relu'
-
-  /**
-    The solver for weight optimization.
-
-    @defaultValue `'adam'`
-   */
-  solver?: 'lbfgs' | 'sgd' | 'adam'
-
-  /**
-    Strength of the L2 regularization term. The L2 regularization term is divided by the sample size when added to the loss.
-
-    @defaultValue `0.0001`
-   */
-  alpha?: number
-
-  /**
-    Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the classifier will not use minibatch. When set to “auto”, `batch\_size=min(200, n\_samples)`.
-
-    @defaultValue `'auto'`
-   */
-  batch_size?: number
-
-  /**
-    Learning rate schedule for weight updates.
-
-    @defaultValue `'constant'`
-   */
-  learning_rate?: 'constant' | 'invscaling' | 'adaptive'
-
-  /**
-    The initial learning rate used. It controls the step-size in updating the weights. Only used when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `0.001`
-   */
-  learning_rate_init?: number
-
-  /**
-    The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning\_rate is set to ‘invscaling’. Only used when solver=’sgd’.
-
-    @defaultValue `0.5`
-   */
-  power_t?: number
-
-  /**
-    Maximum number of iterations. The solver iterates until convergence (determined by ‘tol’) or this number of iterations. For stochastic solvers (‘sgd’, ‘adam’), note that this determines the number of epochs (how many times each data point will be used), not the number of gradient steps.
-
-    @defaultValue `200`
-   */
-  max_iter?: number
-
-  /**
-    Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive iterations, unless `learning\_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Whether to print progress messages to stdout.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Momentum for gradient descent update. Should be between 0 and 1. Only used when solver=’sgd’.
-
-    @defaultValue `0.9`
-   */
-  momentum?: number
-
-  /**
-    Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and momentum > 0.
-
-    @defaultValue `true`
-   */
-  nesterovs_momentum?: boolean
-
-  /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to true, it will automatically set aside 10% of training data as validation and terminate training when validation score is not improving by at least tol for `n\_iter\_no\_change` consecutive epochs. The split is stratified, except in a multilabel setting. If early stopping is `false`, then the training stops when the training loss does not improve by more than tol for n\_iter\_no\_change consecutive passes over the training set. Only effective when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `false`
-   */
-  early_stopping?: boolean
-
-  /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    Exponential decay rate for estimates of first moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
-
-    @defaultValue `0.9`
-   */
-  beta_1?: number
-
-  /**
-    Exponential decay rate for estimates of second moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
-
-    @defaultValue `0.999`
-   */
-  beta_2?: number
-
-  /**
-    Value for numerical stability in adam. Only used when solver=’adam’.
-
-    @defaultValue `1e-8`
-   */
-  epsilon?: number
-
-  /**
-    Maximum number of epochs to not meet `tol` improvement. Only effective when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `10`
-   */
-  n_iter_no_change?: number
-
-  /**
-    Only used when solver=’lbfgs’. Maximum number of loss function calls. The solver iterates until convergence (determined by ‘tol’), number of iterations reaches max\_iter, or this number of loss function calls. Note that number of loss function calls will be greater than or equal to the number of iterations for the `MLPClassifier`.
-
-    @defaultValue `15000`
-   */
-  max_fun?: number
-}
-
-export interface MLPClassifierFitOptions {
-  /**
-    The input data.
-   */
-  X?: NDArray | SparseMatrix[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: NDArray
-}
-
-export interface MLPClassifierPartialFitOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
-   */
-  classes?: any[]
-}
-
-export interface MLPClassifierPredictOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface MLPClassifierPredictLogProbaOptions {
-  /**
-    The input data.
-   */
-  X?: NDArray[]
-}
-
-export interface MLPClassifierPredictProbaOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface MLPClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -15,20 +15,24 @@ Read more in the [User Guide](../random_projection.html#gaussian-random-matrix).
 ### Signature
 
 ```ts
-new GaussianRandomProjection(opts?: GaussianRandomProjectionOptions): GaussianRandomProjection;
+new GaussianRandomProjection(opts?: object): GaussianRandomProjection;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`GaussianRandomProjectionOptions`](../interfaces/GaussianRandomProjectionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.compute_inverse_components?` | `boolean` | Learn the inverse transform by computing the pseudo-inverse of the components during fit. Note that computing the pseudo-inverse does not scale well to large matrices.  `Default Value`  `false` |
+| `opts.eps?` | `number` | Parameter to control the quality of the embedding according to the Johnson-Lindenstrauss lemma when `n\_components` is set to ‘auto’. The value should be strictly positive.  Smaller values lead to better embedding and higher number of dimensions (n\_components) in the target projection space.  `Default Value`  `0.1` |
+| `opts.n_components?` | `number` \| `"auto"` | Dimensionality of the target projection space.  n\_components can be automatically adjusted according to the number of samples in the dataset and the bound given by the Johnson-Lindenstrauss lemma. In that case the quality of the embedding is controlled by the `eps` parameter.  It should be noted that Johnson-Lindenstrauss lemma can yield very conservative estimated of the required number of components as it makes no assumption on the structure of the dataset.  `Default Value`  `'auto'` |
+| `opts.random_state?` | `number` | Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
 
 ### Returns
 
 [`GaussianRandomProjection`](GaussianRandomProjection.md)
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L25)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L25)
 
 ## Properties
 
@@ -36,31 +40,31 @@ Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:25](https
 
 > `boolean`  = `false`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L23)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L22)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L21)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L18)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L19)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L19)
 
 ## Accessors
 
@@ -78,9 +82,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L350)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L417)
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L350)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L417)
 
 ### feature\_names\_in\_
 
@@ -96,9 +100,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L431)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L498)
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L431)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L498)
 
 ### inverse\_components\_
 
@@ -114,9 +118,9 @@ inverse_components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L377)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L444)
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L377)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L444)
 
 ### n\_components\_
 
@@ -132,9 +136,9 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L323)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L390)
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L323)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L390)
 
 ### n\_features\_in\_
 
@@ -150,9 +154,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L404)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L471)
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L404)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L471)
 
 ### py
 
@@ -166,7 +170,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L30)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L62)
 
 #### Signature
 
@@ -184,9 +188,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L34)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L66)
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L30) [generated/random\_projection/GaussianRandomProjection.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L34)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L62) [generated/random\_projection/GaussianRandomProjection.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L66)
 
 ## Methods
 
@@ -206,7 +210,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L89)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L121)
 
 ### fit()
 
@@ -215,20 +219,22 @@ Generate a sparse random projection matrix.
 #### Signature
 
 ```ts
-fit(opts: GaussianRandomProjectionFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GaussianRandomProjectionFitOptions`](../interfaces/GaussianRandomProjectionFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training set: only the shape is used to find optimal random matrix dimensions based on the theory referenced in the afore mentioned papers. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L106)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L138)
 
 ### fit\_transform()
 
@@ -239,20 +245,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: GaussianRandomProjectionFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GaussianRandomProjectionFitTransformOptions`](../interfaces/GaussianRandomProjectionFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L138)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L180)
 
 ### get\_feature\_names\_out()
 
@@ -263,20 +272,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: GaussianRandomProjectionGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GaussianRandomProjectionGetFeatureNamesOutOptions`](../interfaces/GaussianRandomProjectionGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.random_projection.GaussianRandomProjection.fit "sklearn.random_projection.GaussianRandomProjection.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L179)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L234)
 
 ### init()
 
@@ -300,7 +310,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L43)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L75)
 
 ### inverse\_transform()
 
@@ -313,20 +323,21 @@ If `compute\_inverse\_components` is `false`, the inverse of the components is c
 #### Signature
 
 ```ts
-inverse_transform(opts: GaussianRandomProjectionInverseTransformOptions): Promise<ArrayLike[]>;
+inverse_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GaussianRandomProjectionInverseTransformOptions`](../interfaces/GaussianRandomProjectionInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Data to be transformed back. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L218)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L276)
 
 ### set\_output()
 
@@ -337,20 +348,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: GaussianRandomProjectionSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GaussianRandomProjectionSetOutputOptions`](../interfaces/GaussianRandomProjectionSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L255)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L316)
 
 ### transform()
 
@@ -359,17 +371,18 @@ Project the data by using matrix product with the random matrix.
 #### Signature
 
 ```ts
-transform(opts: GaussianRandomProjectionTransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GaussianRandomProjectionTransformOptions`](../interfaces/GaussianRandomProjectionTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input data to project into a smaller dimensional space. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L289)
+Defined in:  [generated/random\_projection/GaussianRandomProjection.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L353)

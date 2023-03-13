@@ -20,7 +20,21 @@ export class MultiOutputClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MultiOutputClassifierOptions) {
+  constructor(opts?: {
+    /**
+      An estimator object implementing [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). A [predict\_proba](../../glossary.html#term-predict_proba) method will be exposed only if `estimator` implements it.
+     */
+    estimator?: any
+
+    /**
+      The number of jobs to run in parallel. [`fit`](#sklearn.multioutput.MultiOutputClassifier.fit "sklearn.multioutput.MultiOutputClassifier.fit"), [`predict`](#sklearn.multioutput.MultiOutputClassifier.predict "sklearn.multioutput.MultiOutputClassifier.predict") and [`partial\_fit`](#sklearn.multioutput.MultiOutputClassifier.partial_fit "sklearn.multioutput.MultiOutputClassifier.partial_fit") (if supported by the passed estimator) will be parallelized for each target.
+
+      When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
+
+      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `MultiOutputClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +113,27 @@ ctor_MultiOutputClassifier = {k: v for k, v in ctor_MultiOutputClassifier.items(
   /**
     Fit the model to data matrix X and targets Y.
    */
-  async fit(opts: MultiOutputClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying classifier supports sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Parameters passed to the `estimator.fit` method of each step.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiOutputClassifier instance has already been disposed'
@@ -135,9 +169,27 @@ pms_MultiOutputClassifier_fit = {k: v for k, v in pms_MultiOutputClassifier_fit.
   /**
     Incrementally fit a separate model for each class output.
    */
-  async partial_fit(
-    opts: MultiOutputClassifierPartialFitOptions
-  ): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Multi-output targets.
+     */
+    y?: ArrayLike | SparseMatrix[]
+
+    /**
+      Each array is unique classes for one output in str/int. Can be obtained via `\[np.unique(y\[:, i\]) for i in range(y.shape\[1\])\]`, where `y` is the target matrix of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that `y` doesn’t need to contain all labels in `classes`.
+     */
+    classes?: any[]
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiOutputClassifier instance has already been disposed'
@@ -177,9 +229,12 @@ pms_MultiOutputClassifier_partial_fit = {k: v for k, v in pms_MultiOutputClassif
   /**
     Predict multi-output variable using model for each target variable.
    */
-  async predict(
-    opts: MultiOutputClassifierPredictOptions
-  ): Promise<ArrayLike | SparseMatrix[]> {
+  async predict(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiOutputClassifier instance has already been disposed'
@@ -211,9 +266,12 @@ pms_MultiOutputClassifier_predict = {k: v for k, v in pms_MultiOutputClassifier_
 
     This method will raise a `ValueError` if any of the estimators do not have `predict\_proba`.
    */
-  async predict_proba(
-    opts: MultiOutputClassifierPredictProbaOptions
-  ): Promise<any> {
+  async predict_proba(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiOutputClassifier instance has already been disposed'
@@ -246,7 +304,17 @@ pms_MultiOutputClassifier_predict_proba = {k: v for k, v in pms_MultiOutputClass
   /**
     Return the mean accuracy on the given test data and labels.
    */
-  async score(opts: MultiOutputClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for X.
+     */
+    y?: ArrayLike[]
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiOutputClassifier instance has already been disposed'
@@ -382,90 +450,4 @@ pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_sc
         ._py`attr_MultiOutputClassifier_feature_names_in_.tolist() if hasattr(attr_MultiOutputClassifier_feature_names_in_, 'tolist') else attr_MultiOutputClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface MultiOutputClassifierOptions {
-  /**
-    An estimator object implementing [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). A [predict\_proba](../../glossary.html#term-predict_proba) method will be exposed only if `estimator` implements it.
-   */
-  estimator?: any
-
-  /**
-    The number of jobs to run in parallel. [`fit`](#sklearn.multioutput.MultiOutputClassifier.fit "sklearn.multioutput.MultiOutputClassifier.fit"), [`predict`](#sklearn.multioutput.MultiOutputClassifier.predict "sklearn.multioutput.MultiOutputClassifier.predict") and [`partial\_fit`](#sklearn.multioutput.MultiOutputClassifier.partial_fit "sklearn.multioutput.MultiOutputClassifier.partial_fit") (if supported by the passed estimator) will be parallelized for each target.
-
-    When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
-
-    `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface MultiOutputClassifierFitOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying classifier supports sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Parameters passed to the `estimator.fit` method of each step.
-   */
-  fit_params?: any
-}
-
-export interface MultiOutputClassifierPartialFitOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Multi-output targets.
-   */
-  y?: ArrayLike | SparseMatrix[]
-
-  /**
-    Each array is unique classes for one output in str/int. Can be obtained via `\[np.unique(y\[:, i\]) for i in range(y.shape\[1\])\]`, where `y` is the target matrix of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that `y` doesn’t need to contain all labels in `classes`.
-   */
-  classes?: any[]
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface MultiOutputClassifierPredictOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface MultiOutputClassifierPredictProbaOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface MultiOutputClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for X.
-   */
-  y?: ArrayLike[]
 }

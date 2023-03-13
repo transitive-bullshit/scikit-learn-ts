@@ -20,7 +20,7 @@ export class DataDimensionalityWarning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DataDimensionalityWarningOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `DataDimensionalityWarning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,9 +99,7 @@ ctor_DataDimensionalityWarning = {k: v for k, v in ctor_DataDimensionalityWarnin
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(
-    opts: DataDimensionalityWarningWithTracebackOptions
-  ): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DataDimensionalityWarning instance has already been disposed'
@@ -128,9 +126,3 @@ pms_DataDimensionalityWarning_with_traceback = {k: v for k, v in pms_DataDimensi
       ._py`res_DataDimensionalityWarning_with_traceback.tolist() if hasattr(res_DataDimensionalityWarning_with_traceback, 'tolist') else res_DataDimensionalityWarning_with_traceback`
   }
 }
-
-export interface DataDimensionalityWarningOptions {
-  args?: any
-}
-
-export interface DataDimensionalityWarningWithTracebackOptions {}

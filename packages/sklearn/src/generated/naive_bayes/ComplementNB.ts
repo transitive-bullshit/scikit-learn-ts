@@ -22,7 +22,40 @@ export class ComplementNB {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ComplementNBOptions) {
+  constructor(opts?: {
+    /**
+      Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`true`, for no smoothing).
+
+      @defaultValue `1`
+     */
+    alpha?: number | ArrayLike
+
+    /**
+      If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
+
+      @defaultValue `false`
+     */
+    force_alpha?: boolean
+
+    /**
+      Only used in edge case with a single class in the training set.
+
+      @defaultValue `true`
+     */
+    fit_prior?: boolean
+
+    /**
+      Prior probabilities of the classes. Not used.
+     */
+    class_prior?: ArrayLike
+
+    /**
+      Whether or not a second normalization of the weights is performed. The default behavior mirrors the implementations found in Mahout and Weka, which do not follow the full algorithm described in Table 9 of the paper.
+
+      @defaultValue `false`
+     */
+    norm?: boolean
+  }) {
     this.id = `ComplementNB${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +136,22 @@ ctor_ComplementNB = {k: v for k, v in ctor_ComplementNB.items() if v is not None
   /**
     Fit Naive Bayes classifier according to X, y.
    */
-  async fit(opts: ComplementNBFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Weights applied to individual samples (1. for unweighted).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ComplementNB instance has already been disposed')
     }
@@ -141,7 +189,29 @@ pms_ComplementNB_fit = {k: v for k, v in pms_ComplementNB_fit.items() if v is no
 
     This method has some performance overhead hence it is better to call partial\_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
    */
-  async partial_fit(opts: ComplementNBPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      List of all the classes that can possibly appear in the y vector.
+
+      Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
+     */
+    classes?: ArrayLike
+
+    /**
+      Weights applied to individual samples (1. for unweighted).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ComplementNB instance has already been disposed')
     }
@@ -177,7 +247,12 @@ pms_ComplementNB_partial_fit = {k: v for k, v in pms_ComplementNB_partial_fit.it
   /**
     Perform classification on an array of test vectors X.
    */
-  async predict(opts: ComplementNBPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This ComplementNB instance has already been disposed')
     }
@@ -207,9 +282,12 @@ pms_ComplementNB_predict = {k: v for k, v in pms_ComplementNB_predict.items() if
 
     For each row x of X and class y, the joint log probability is given by `log P(x, y) \= log P(y) + log P(x|y),` where `log P(y)` is the class prior probability and `log P(x|y)` is the class-conditional probability.
    */
-  async predict_joint_log_proba(
-    opts: ComplementNBPredictJointLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_joint_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This ComplementNB instance has already been disposed')
     }
@@ -240,9 +318,12 @@ pms_ComplementNB_predict_joint_log_proba = {k: v for k, v in pms_ComplementNB_pr
   /**
     Return log-probability estimates for the test vector X.
    */
-  async predict_log_proba(
-    opts: ComplementNBPredictLogProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This ComplementNB instance has already been disposed')
     }
@@ -272,9 +353,12 @@ pms_ComplementNB_predict_log_proba = {k: v for k, v in pms_ComplementNB_predict_
   /**
     Return probability estimates for the test vector X.
    */
-  async predict_proba(
-    opts: ComplementNBPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This ComplementNB instance has already been disposed')
     }
@@ -304,7 +388,22 @@ pms_ComplementNB_predict_proba = {k: v for k, v in pms_ComplementNB_predict_prob
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: ComplementNBScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This ComplementNB instance has already been disposed')
     }
@@ -530,125 +629,4 @@ pms_ComplementNB_score = {k: v for k, v in pms_ComplementNB_score.items() if v i
         ._py`attr_ComplementNB_feature_names_in_.tolist() if hasattr(attr_ComplementNB_feature_names_in_, 'tolist') else attr_ComplementNB_feature_names_in_`
     })()
   }
-}
-
-export interface ComplementNBOptions {
-  /**
-    Additive (Laplace/Lidstone) smoothing parameter (set alpha=0 and force\_alpha=`true`, for no smoothing).
-
-    @defaultValue `1`
-   */
-  alpha?: number | ArrayLike
-
-  /**
-    If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, alpha will remain unchanged. This may cause numerical errors if alpha is too close to 0.
-
-    @defaultValue `false`
-   */
-  force_alpha?: boolean
-
-  /**
-    Only used in edge case with a single class in the training set.
-
-    @defaultValue `true`
-   */
-  fit_prior?: boolean
-
-  /**
-    Prior probabilities of the classes. Not used.
-   */
-  class_prior?: ArrayLike
-
-  /**
-    Whether or not a second normalization of the weights is performed. The default behavior mirrors the implementations found in Mahout and Weka, which do not follow the full algorithm described in Table 9 of the paper.
-
-    @defaultValue `false`
-   */
-  norm?: boolean
-}
-
-export interface ComplementNBFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Weights applied to individual samples (1. for unweighted).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface ComplementNBPartialFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    List of all the classes that can possibly appear in the y vector.
-
-    Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
-   */
-  classes?: ArrayLike
-
-  /**
-    Weights applied to individual samples (1. for unweighted).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface ComplementNBPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface ComplementNBPredictJointLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface ComplementNBPredictLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface ComplementNBPredictProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface ComplementNBScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

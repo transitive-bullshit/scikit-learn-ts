@@ -22,7 +22,71 @@ export class LarsCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LarsCVOptions) {
+  constructor(opts?: {
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      Sets the verbosity amount.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+
+    /**
+      Maximum number of iterations to perform.
+
+      @defaultValue `500`
+     */
+    max_iter?: number
+
+    /**
+      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
+
+      @defaultValue `false`
+     */
+    normalize?: boolean
+
+    /**
+      Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix cannot be passed as argument since we will use only subsets of X.
+
+      @defaultValue `'auto'`
+     */
+    precompute?: boolean | 'auto' | ArrayLike
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      The maximum number of points on the path used to compute the residuals in the cross-validation.
+
+      @defaultValue `1000`
+     */
+    max_n_alphas?: number
+
+    /**
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
+     */
+    eps?: number
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+  }) {
     this.id = `LarsCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -104,7 +168,17 @@ ctor_LarsCV = {k: v for k, v in ctor_LarsCV.items() if v is not None}`
   /**
     Fit the model using X, y as training data.
    */
-  async fit(opts: LarsCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LarsCV instance has already been disposed')
     }
@@ -134,7 +208,12 @@ pms_LarsCV_fit = {k: v for k, v in pms_LarsCV_fit.items() if v is not None}`
   /**
     Predict using the linear model.
    */
-  async predict(opts: LarsCVPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LarsCV instance has already been disposed')
     }
@@ -162,7 +241,22 @@ pms_LarsCV_predict = {k: v for k, v in pms_LarsCV_predict.items() if v is not No
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: LarsCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LarsCV instance has already been disposed')
     }
@@ -440,106 +534,4 @@ pms_LarsCV_score = {k: v for k, v in pms_LarsCV_score.items() if v is not None}`
         ._py`attr_LarsCV_feature_names_in_.tolist() if hasattr(attr_LarsCV_feature_names_in_, 'tolist') else attr_LarsCV_feature_names_in_`
     })()
   }
-}
-
-export interface LarsCVOptions {
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    Sets the verbosity amount.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-
-  /**
-    Maximum number of iterations to perform.
-
-    @defaultValue `500`
-   */
-  max_iter?: number
-
-  /**
-    This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-    @defaultValue `false`
-   */
-  normalize?: boolean
-
-  /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix cannot be passed as argument since we will use only subsets of X.
-
-    @defaultValue `'auto'`
-   */
-  precompute?: boolean | 'auto' | ArrayLike
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    The maximum number of points on the path used to compute the residuals in the cross-validation.
-
-    @defaultValue `1000`
-   */
-  max_n_alphas?: number
-
-  /**
-    Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
-   */
-  eps?: number
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-}
-
-export interface LarsCVFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-}
-
-export interface LarsCVPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface LarsCVScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -22,7 +22,49 @@ export class SplineTransformer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SplineTransformerOptions) {
+  constructor(opts?: {
+    /**
+      Number of knots of the splines if `knots` equals one of {‘uniform’, ‘quantile’}. Must be larger or equal 2. Ignored if `knots` is array-like.
+
+      @defaultValue `5`
+     */
+    n_knots?: number
+
+    /**
+      The polynomial degree of the spline basis. Must be a non-negative integer.
+
+      @defaultValue `3`
+     */
+    degree?: number
+
+    /**
+      Set knot positions such that first knot <= features <= last knot.
+
+      @defaultValue `'uniform'`
+     */
+    knots?: 'uniform' | 'quantile' | ArrayLike[]
+
+    /**
+      If ‘error’, values outside the min and max values of the training features raises a `ValueError`. If ‘constant’, the value of the splines at minimum and maximum value of the features is used as constant extrapolation. If ‘linear’, a linear extrapolation is used. If ‘continue’, the splines are extrapolated as is, i.e. option `extrapolate=True` in [`scipy.interpolate.BSpline`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.BSpline.html#scipy.interpolate.BSpline "(in SciPy v1.10.1)"). If ‘periodic’, periodic splines with a periodicity equal to the distance between the first and last knot are used. Periodic splines enforce equal function values and derivatives at the first and last knot. For example, this makes it possible to avoid introducing an arbitrary jump between Dec 31st and Jan 1st in spline features derived from a naturally periodic “day-of-year” input feature. In this case it is recommended to manually set the knot values to control the period.
+
+      @defaultValue `'constant'`
+     */
+    extrapolation?: 'error' | 'constant' | 'linear' | 'continue' | 'periodic'
+
+    /**
+      If `true` (default), then the last spline element inside the data range of a feature is dropped. As B-splines sum to one over the spline basis functions for each data point, they implicitly include a bias term, i.e. a column of ones. It acts as an intercept term in a linear models.
+
+      @defaultValue `true`
+     */
+    include_bias?: boolean
+
+    /**
+      Order of output array. ‘F’ order is faster to compute, but may slow down subsequent estimators.
+
+      @defaultValue `'C'`
+     */
+    order?: 'C' | 'F'
+  }) {
     this.id = `SplineTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +147,22 @@ ctor_SplineTransformer = {k: v for k, v in ctor_SplineTransformer.items() if v i
   /**
     Compute knot positions of splines.
    */
-  async fit(opts: SplineTransformerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+
+    /**
+      Individual weights for each sample. Used to calculate quantiles if `knots="quantile"`. For `knots="uniform"`, zero weighted observations are ignored for finding the min and max of `X`.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SplineTransformer instance has already been disposed'
@@ -141,9 +198,22 @@ pms_SplineTransformer_fit = {k: v for k, v in pms_SplineTransformer_fit.items() 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: SplineTransformerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SplineTransformer instance has already been disposed'
@@ -179,9 +249,12 @@ pms_SplineTransformer_fit_transform = {k: v for k, v in pms_SplineTransformer_fi
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: SplineTransformerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SplineTransformer instance has already been disposed'
@@ -216,7 +289,12 @@ pms_SplineTransformer_get_feature_names_out = {k: v for k, v in pms_SplineTransf
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SplineTransformerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SplineTransformer instance has already been disposed'
@@ -246,7 +324,12 @@ pms_SplineTransformer_set_output = {k: v for k, v in pms_SplineTransformer_set_o
   /**
     Transform each feature data to B-splines.
    */
-  async transform(opts: SplineTransformerTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      The data to transform.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SplineTransformer instance has already been disposed'
@@ -380,103 +463,4 @@ pms_SplineTransformer_transform = {k: v for k, v in pms_SplineTransformer_transf
         ._py`attr_SplineTransformer_n_features_out_.tolist() if hasattr(attr_SplineTransformer_n_features_out_, 'tolist') else attr_SplineTransformer_n_features_out_`
     })()
   }
-}
-
-export interface SplineTransformerOptions {
-  /**
-    Number of knots of the splines if `knots` equals one of {‘uniform’, ‘quantile’}. Must be larger or equal 2. Ignored if `knots` is array-like.
-
-    @defaultValue `5`
-   */
-  n_knots?: number
-
-  /**
-    The polynomial degree of the spline basis. Must be a non-negative integer.
-
-    @defaultValue `3`
-   */
-  degree?: number
-
-  /**
-    Set knot positions such that first knot <= features <= last knot.
-
-    @defaultValue `'uniform'`
-   */
-  knots?: 'uniform' | 'quantile' | ArrayLike[]
-
-  /**
-    If ‘error’, values outside the min and max values of the training features raises a `ValueError`. If ‘constant’, the value of the splines at minimum and maximum value of the features is used as constant extrapolation. If ‘linear’, a linear extrapolation is used. If ‘continue’, the splines are extrapolated as is, i.e. option `extrapolate=True` in [`scipy.interpolate.BSpline`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.BSpline.html#scipy.interpolate.BSpline "(in SciPy v1.10.1)"). If ‘periodic’, periodic splines with a periodicity equal to the distance between the first and last knot are used. Periodic splines enforce equal function values and derivatives at the first and last knot. For example, this makes it possible to avoid introducing an arbitrary jump between Dec 31st and Jan 1st in spline features derived from a naturally periodic “day-of-year” input feature. In this case it is recommended to manually set the knot values to control the period.
-
-    @defaultValue `'constant'`
-   */
-  extrapolation?: 'error' | 'constant' | 'linear' | 'continue' | 'periodic'
-
-  /**
-    If `true` (default), then the last spline element inside the data range of a feature is dropped. As B-splines sum to one over the spline basis functions for each data point, they implicitly include a bias term, i.e. a column of ones. It acts as an intercept term in a linear models.
-
-    @defaultValue `true`
-   */
-  include_bias?: boolean
-
-  /**
-    Order of output array. ‘F’ order is faster to compute, but may slow down subsequent estimators.
-
-    @defaultValue `'C'`
-   */
-  order?: 'C' | 'F'
-}
-
-export interface SplineTransformerFitOptions {
-  /**
-    The data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-
-  /**
-    Individual weights for each sample. Used to calculate quantiles if `knots="quantile"`. For `knots="uniform"`, zero weighted observations are ignored for finding the min and max of `X`.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SplineTransformerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SplineTransformerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface SplineTransformerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SplineTransformerTransformOptions {
-  /**
-    The data to transform.
-   */
-  X?: ArrayLike[]
 }

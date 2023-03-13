@@ -13,20 +13,23 @@ Read more in the [User Guide](../feature_extraction.html#image-feature-extractio
 ### Signature
 
 ```ts
-new PatchExtractor(opts?: PatchExtractorOptions): PatchExtractor;
+new PatchExtractor(opts?: object): PatchExtractor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`PatchExtractorOptions`](../interfaces/PatchExtractorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.max_patches?` | `number` | The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches. |
+| `opts.patch_size?` | `any` | The dimensions of one patch. |
+| `opts.random_state?` | `number` | Determines the random number generator used for random sampling when `max\_patches is not None`. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state). |
 
 ### Returns
 
 [`PatchExtractor`](PatchExtractor.md)
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L23)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L23)
 
 ## Properties
 
@@ -34,31 +37,31 @@ Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:23](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L21)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L20)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L19)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L16)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L17)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L17)
 
 ## Accessors
 
@@ -74,7 +77,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L28)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L43)
 
 #### Signature
 
@@ -92,9 +95,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L32)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L47)
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L28) [generated/feature\_extraction/image/PatchExtractor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L32)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L43) [generated/feature\_extraction/image/PatchExtractor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L47)
 
 ## Methods
 
@@ -114,7 +117,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L83)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L98)
 
 ### fit()
 
@@ -125,20 +128,22 @@ This method is just there to implement the usual API and hence work in pipelines
 #### Signature
 
 ```ts
-fit(opts: PatchExtractorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PatchExtractorFitOptions`](../interfaces/PatchExtractorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L102)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L117)
 
 ### init()
 
@@ -162,7 +167,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L41)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L56)
 
 ### transform()
 
@@ -171,17 +176,18 @@ Transform the image samples in `X` into a matrix of patch data.
 #### Signature
 
 ```ts
-transform(opts: PatchExtractorTransformOptions): Promise<any[]>;
+transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PatchExtractorTransformOptions`](../interfaces/PatchExtractorTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[][] | Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n\_channels=3`. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L130)
+Defined in:  [generated/feature\_extraction/image/PatchExtractor.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L155)

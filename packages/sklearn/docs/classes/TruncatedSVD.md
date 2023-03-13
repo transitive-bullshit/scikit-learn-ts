@@ -19,20 +19,27 @@ Read more in the [User Guide](../decomposition.html#lsa).
 ### Signature
 
 ```ts
-new TruncatedSVD(opts?: TruncatedSVDOptions): TruncatedSVD;
+new TruncatedSVD(opts?: object): TruncatedSVD;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`TruncatedSVDOptions`](../interfaces/TruncatedSVDOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"randomized"` \| `"arpack"` | SVD solver to use. Either “arpack” for the ARPACK wrapper in SciPy (scipy.sparse.linalg.svds), or “randomized” for the randomized algorithm due to Halko (2009).  `Default Value`  `'randomized'` |
+| `opts.n_components?` | `number` | Desired dimensionality of output data. If algorithm=’arpack’, must be strictly less than the number of features. If algorithm=’randomized’, must be less than or equal to the number of features. The default value is useful for visualisation. For LSA, a value of 100 is recommended.  `Default Value`  `2` |
+| `opts.n_iter?` | `number` | Number of iterations for randomized SVD solver. Not used by ARPACK. The default is larger than the default in [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") to handle sparse matrices that may have large slowly decaying spectrum.  `Default Value`  `5` |
+| `opts.n_oversamples?` | `number` | Number of oversamples for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for a complete description.  `Default Value`  `10` |
+| `opts.power_iteration_normalizer?` | `"auto"` \| `"QR"` \| `"LU"` \| `"none"` | Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.  `Default Value`  `'auto'` |
+| `opts.random_state?` | `number` | Used during randomized svd. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.tol?` | `number` | Tolerance for ARPACK. 0 means machine precision. Ignored by randomized SVD solver.  `Default Value`  `0` |
 
 ### Returns
 
 [`TruncatedSVD`](TruncatedSVD.md)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L29)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L29)
 
 ## Properties
 
@@ -40,31 +47,31 @@ Defined in:  [generated/decomposition/TruncatedSVD.ts:29](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L27)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L26)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L25)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L22)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L23)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L23)
 
 ## Accessors
 
@@ -82,9 +89,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L297)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L378)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L297)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L378)
 
 ### explained\_variance\_
 
@@ -100,9 +107,9 @@ explained_variance_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L322)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L403)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L322)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L403)
 
 ### explained\_variance\_ratio\_
 
@@ -118,9 +125,9 @@ explained_variance_ratio_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L347)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L428)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L347)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L428)
 
 ### feature\_names\_in\_
 
@@ -136,9 +143,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L422)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L503)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L422)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L503)
 
 ### n\_features\_in\_
 
@@ -154,9 +161,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L397)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L478)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L397)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L478)
 
 ### py
 
@@ -170,7 +177,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L34)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L81)
 
 #### Signature
 
@@ -188,9 +195,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L38)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L85)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L34) [generated/decomposition/TruncatedSVD.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L38)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L81) [generated/decomposition/TruncatedSVD.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L85)
 
 ### singular\_values\_
 
@@ -206,9 +213,9 @@ singular_values_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L372)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L453)
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L372)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L453)
 
 ## Methods
 
@@ -228,7 +235,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L95)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L142)
 
 ### fit()
 
@@ -237,20 +244,22 @@ Fit model on training data X.
 #### Signature
 
 ```ts
-fit(opts: TruncatedSVDFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TruncatedSVDFitOptions`](../interfaces/TruncatedSVDFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L112)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L159)
 
 ### fit\_transform()
 
@@ -259,20 +268,22 @@ Fit model to X and perform dimensionality reduction on X.
 #### Signature
 
 ```ts
-fit_transform(opts: TruncatedSVDFitTransformOptions): Promise<ArrayLike[]>;
+fit_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TruncatedSVDFitTransformOptions`](../interfaces/TruncatedSVDFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L140)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L197)
 
 ### get\_feature\_names\_out()
 
@@ -283,20 +294,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: TruncatedSVDGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TruncatedSVDGetFeatureNamesOutOptions`](../interfaces/TruncatedSVDGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.TruncatedSVD.fit "sklearn.decomposition.TruncatedSVD.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L172)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L237)
 
 ### init()
 
@@ -320,7 +332,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L47)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L94)
 
 ### inverse\_transform()
 
@@ -331,20 +343,21 @@ Returns an array X\_original whose transform would be X.
 #### Signature
 
 ```ts
-inverse_transform(opts: TruncatedSVDInverseTransformOptions): Promise<ArrayLike[]>;
+inverse_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TruncatedSVDInverseTransformOptions`](../interfaces/TruncatedSVDInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | New data. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L207)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L275)
 
 ### set\_output()
 
@@ -355,20 +368,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: TruncatedSVDSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TruncatedSVDSetOutputOptions`](../interfaces/TruncatedSVDSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:241](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L241)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L312)
 
 ### transform()
 
@@ -377,17 +391,18 @@ Perform dimensionality reduction on X.
 #### Signature
 
 ```ts
-transform(opts: TruncatedSVDTransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TruncatedSVDTransformOptions`](../interfaces/TruncatedSVDTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | New data. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/decomposition/TruncatedSVD.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L269)
+Defined in:  [generated/decomposition/TruncatedSVD.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/TruncatedSVD.ts#L345)

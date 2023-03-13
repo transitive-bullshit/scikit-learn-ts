@@ -20,7 +20,40 @@ export class PairwiseKernel {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PairwiseKernelOptions) {
+  constructor(opts?: {
+    /**
+      Parameter gamma of the pairwise kernel specified by metric. It should be positive.
+
+      @defaultValue `1`
+     */
+    gamma?: number
+
+    /**
+      The lower and upper bound on ‘gamma’. If set to “fixed”, ‘gamma’ cannot be changed during hyperparameter tuning.
+     */
+    gamma_bounds?: 'fixed'
+
+    /**
+      The metric to use when calculating kernel between instances in a feature array. If metric is a string, it must be one of the metrics in pairwise.PAIRWISE\_KERNEL\_FUNCTIONS. If metric is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays from X as input and return a value indicating the distance between them.
+
+      @defaultValue `'linear'`
+     */
+    metric?:
+      | 'linear'
+      | 'additive_chi2'
+      | 'chi2'
+      | 'poly'
+      | 'polynomial'
+      | 'rbf'
+      | 'laplacian'
+      | 'sigmoid'
+      | 'cosine'
+
+    /**
+      All entries of this dict (if any) are passed as keyword arguments to the pairwise kernel function.
+     */
+    pairwise_kernels_kwargs?: any
+  }) {
     this.id = `PairwiseKernel${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +132,24 @@ ctor_PairwiseKernel = {k: v for k, v in ctor_PairwiseKernel.items() if v is not 
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: PairwiseKernelCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: NDArray[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
+     */
+    Y?: NDArray[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This PairwiseKernel instance has already been disposed')
     }
@@ -131,9 +181,12 @@ pms_PairwiseKernel___call__ = {k: v for k, v in pms_PairwiseKernel___call__.item
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(
-    opts: PairwiseKernelCloneWithThetaOptions
-  ): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PairwiseKernel instance has already been disposed')
     }
@@ -166,7 +219,12 @@ pms_PairwiseKernel_clone_with_theta = {k: v for k, v in pms_PairwiseKernel_clone
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: PairwiseKernelDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: NDArray[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This PairwiseKernel instance has already been disposed')
     }
@@ -194,7 +252,7 @@ pms_PairwiseKernel_diag = {k: v for k, v in pms_PairwiseKernel_diag.items() if v
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: PairwiseKernelIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PairwiseKernel instance has already been disposed')
     }
@@ -239,73 +297,3 @@ pms_PairwiseKernel_is_stationary = {k: v for k, v in pms_PairwiseKernel_is_stati
     })()
   }
 }
-
-export interface PairwiseKernelOptions {
-  /**
-    Parameter gamma of the pairwise kernel specified by metric. It should be positive.
-
-    @defaultValue `1`
-   */
-  gamma?: number
-
-  /**
-    The lower and upper bound on ‘gamma’. If set to “fixed”, ‘gamma’ cannot be changed during hyperparameter tuning.
-   */
-  gamma_bounds?: 'fixed'
-
-  /**
-    The metric to use when calculating kernel between instances in a feature array. If metric is a string, it must be one of the metrics in pairwise.PAIRWISE\_KERNEL\_FUNCTIONS. If metric is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if metric is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two arrays from X as input and return a value indicating the distance between them.
-
-    @defaultValue `'linear'`
-   */
-  metric?:
-    | 'linear'
-    | 'additive_chi2'
-    | 'chi2'
-    | 'poly'
-    | 'polynomial'
-    | 'rbf'
-    | 'laplacian'
-    | 'sigmoid'
-    | 'cosine'
-
-  /**
-    All entries of this dict (if any) are passed as keyword arguments to the pairwise kernel function.
-   */
-  pairwise_kernels_kwargs?: any
-}
-
-export interface PairwiseKernelCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: NDArray[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
-   */
-  Y?: NDArray[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface PairwiseKernelCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface PairwiseKernelDiagOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: NDArray[]
-}
-
-export interface PairwiseKernelIsStationaryOptions {}

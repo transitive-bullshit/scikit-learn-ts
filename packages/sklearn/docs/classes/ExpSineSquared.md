@@ -13,20 +13,24 @@ The ExpSineSquared kernel allows one to model functions which repeat themselves 
 ### Signature
 
 ```ts
-new ExpSineSquared(opts?: ExpSineSquaredOptions): ExpSineSquared;
+new ExpSineSquared(opts?: object): ExpSineSquared;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`ExpSineSquaredOptions`](../interfaces/ExpSineSquaredOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.length_scale?` | `any` | The length scale of the kernel.  `Default Value`  `1` |
+| `opts.length_scale_bounds?` | `"fixed"` | The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning. |
+| `opts.periodicity?` | `any` | The periodicity of the kernel.  `Default Value`  `1` |
+| `opts.periodicity_bounds?` | `"fixed"` | The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘periodicity’ cannot be changed during hyperparameter tuning. |
 
 ### Returns
 
 [`ExpSineSquared`](ExpSineSquared.md)
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L23)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L23)
 
 ## Properties
 
@@ -34,31 +38,31 @@ Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:23](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L20)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L16)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L17)
 
 ## Accessors
 
@@ -74,9 +78,9 @@ hyperparameter_periodicity(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L220)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L269)
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L220)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L269)
 
 ### py
 
@@ -90,7 +94,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L28)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L52)
 
 #### Signature
 
@@ -108,9 +112,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L32)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L56)
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L28) [generated/gaussian\_process/kernels/ExpSineSquared.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L32)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L52) [generated/gaussian\_process/kernels/ExpSineSquared.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L56)
 
 ## Methods
 
@@ -121,20 +125,23 @@ Return the kernel k(X, Y) and optionally its gradient.
 #### Signature
 
 ```ts
-__call__(opts: ExpSineSquaredCallOptions): Promise<ArrayLike[]>;
+__call__(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ExpSineSquaredCallOptions`](../interfaces/ExpSineSquaredCallOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y?` | [`ArrayLike`](../types/ArrayLike.md)[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
+| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L102)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L126)
 
 ### clone\_with\_theta()
 
@@ -143,20 +150,21 @@ Returns a clone of self with given hyperparameters theta.
 #### Signature
 
 ```ts
-clone_with_theta(opts: ExpSineSquaredCloneWithThetaOptions): Promise<any>;
+clone_with_theta(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ExpSineSquaredCloneWithThetaOptions`](../interfaces/ExpSineSquaredCloneWithThetaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.theta?` | [`ArrayLike`](../types/ArrayLike.md) | The hyperparameters |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L134)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L175)
 
 ### diag()
 
@@ -167,20 +175,21 @@ The result of this method is identical to np.diag(self(X)); however, it can be e
 #### Signature
 
 ```ts
-diag(opts: ExpSineSquaredDiagOptions): Promise<ArrayLike>;
+diag(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ExpSineSquaredDiagOptions`](../interfaces/ExpSineSquaredDiagOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L169)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L213)
 
 ### dispose()
 
@@ -198,7 +207,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L85)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L109)
 
 ### init()
 
@@ -222,7 +231,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L41)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L65)
 
 ### is\_stationary()
 
@@ -231,17 +240,17 @@ Returns whether the kernel is stationary.
 #### Signature
 
 ```ts
-is_stationary(opts: ExpSineSquaredIsStationaryOptions): Promise<any>;
+is_stationary(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExpSineSquaredIsStationaryOptions`](../interfaces/ExpSineSquaredIsStationaryOptions.md) |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L197)
+Defined in:  [generated/gaussian\_process/kernels/ExpSineSquared.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/ExpSineSquared.ts#L246)

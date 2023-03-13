@@ -19,20 +19,23 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new LeaveOneOut(opts?: LeaveOneOutOptions): LeaveOneOut;
+new LeaveOneOut(opts?: object): LeaveOneOut;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `LeaveOneOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 ### Returns
 
 [`LeaveOneOut`](LeaveOneOut.md)
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L29)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L29)
 
 ## Properties
 
@@ -40,31 +43,31 @@ Defined in:  [generated/model\_selection/LeaveOneOut.ts:29](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L27)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L26)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L25)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L22)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L23)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L23)
 
 ## Accessors
 
@@ -82,7 +85,7 @@ n_splits(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/model\_selection/LeaveOneOut.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L168)
+Defined in: [generated/model\_selection/LeaveOneOut.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L213)
 
 ### py
 
@@ -96,7 +99,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L34)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L49)
 
 #### Signature
 
@@ -114,7 +117,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/LeaveOneOut.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L38)
+Defined in: [generated/model\_selection/LeaveOneOut.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L53)
 
 ## Methods
 
@@ -134,7 +137,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L89)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L104)
 
 ### get\_n\_splits()
 
@@ -143,20 +146,23 @@ Returns the number of splitting iterations in the cross-validator
 #### Signature
 
 ```ts
-get_n_splits(opts: LeaveOneOutGetNSplitsOptions): Promise<number>;
+get_n_splits(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `LeaveOneOutGetNSplitsOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L106)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L121)
 
 ### init()
 
@@ -180,7 +186,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L47)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L62)
 
 ### split()
 
@@ -189,17 +195,20 @@ Generate indices to split data into training and test set.
 #### Signature
 
 ```ts
-split(opts: LeaveOneOutSplitOptions): Promise<ArrayLike>;
+split(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `LeaveOneOutSplitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | `ArrayLike` | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | `ArrayLike` | The target variable for supervised learning problems. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/LeaveOneOut.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L136)
+Defined in:  [generated/model\_selection/LeaveOneOut.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeaveOneOut.ts#L166)

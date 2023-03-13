@@ -13,20 +13,22 @@ The main use-case of this kernel is as part of a sum-kernel where it explains th
 ### Signature
 
 ```ts
-new WhiteKernel(opts?: WhiteKernelOptions): WhiteKernel;
+new WhiteKernel(opts?: object): WhiteKernel;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `WhiteKernelOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.noise_level?` | `number` | Parameter controlling the noise level (variance)  `Default Value`  `1` |
+| `opts.noise_level_bounds?` | `"fixed"` | The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise\_level’ cannot be changed during hyperparameter tuning. |
 
 ### Returns
 
 [`WhiteKernel`](WhiteKernel.md)
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L23)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L23)
 
 ## Properties
 
@@ -34,31 +36,31 @@ Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:23](https://git
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L21)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L20)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L19)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L16)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L17)
 
 ## Accessors
 
@@ -74,7 +76,7 @@ hyperparameter_noise_level(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L211)
+Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L250)
 
 ### py
 
@@ -88,7 +90,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L28)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L40)
 
 #### Signature
 
@@ -106,7 +108,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L32)
+Defined in: [generated/gaussian\_process/kernels/WhiteKernel.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L44)
 
 ## Methods
 
@@ -117,20 +119,23 @@ Return the kernel k(X, Y) and optionally its gradient.
 #### Signature
 
 ```ts
-__call__(opts: WhiteKernelCallOptions): Promise<ArrayLike[]>;
+__call__(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `WhiteKernelCallOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y?` | `ArrayLike`[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead. |
+| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L98)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L110)
 
 ### clone\_with\_theta()
 
@@ -139,20 +144,21 @@ Returns a clone of self with given hyperparameters theta.
 #### Signature
 
 ```ts
-clone_with_theta(opts: WhiteKernelCloneWithThetaOptions): Promise<any>;
+clone_with_theta(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `WhiteKernelCloneWithThetaOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.theta?` | `ArrayLike` | The hyperparameters |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L130)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L159)
 
 ### diag()
 
@@ -163,20 +169,21 @@ The result of this method is identical to np.diag(self(X)); however, it can be e
 #### Signature
 
 ```ts
-diag(opts: WhiteKernelDiagOptions): Promise<ArrayLike>;
+diag(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `WhiteKernelDiagOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Argument to the kernel. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L160)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L194)
 
 ### dispose()
 
@@ -194,7 +201,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L81)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L93)
 
 ### init()
 
@@ -218,7 +225,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L41)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L53)
 
 ### is\_stationary()
 
@@ -227,17 +234,17 @@ Returns whether the kernel is stationary.
 #### Signature
 
 ```ts
-is_stationary(opts: WhiteKernelIsStationaryOptions): Promise<any>;
+is_stationary(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | `WhiteKernelIsStationaryOptions` |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L188)
+Defined in:  [generated/gaussian\_process/kernels/WhiteKernel.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/WhiteKernel.ts#L227)

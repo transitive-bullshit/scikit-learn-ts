@@ -19,20 +19,24 @@ Read more in the [User Guide](../cross_validation.html#time-series-split).
 ### Signature
 
 ```ts
-new TimeSeriesSplit(opts?: TimeSeriesSplitOptions): TimeSeriesSplit;
+new TimeSeriesSplit(opts?: object): TimeSeriesSplit;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`TimeSeriesSplitOptions`](../interfaces/TimeSeriesSplitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.gap?` | `number` | Number of samples to exclude from the end of each train set before the test set.  `Default Value`  `0` |
+| `opts.max_train_size?` | `number` | Maximum size for a single training set. |
+| `opts.n_splits?` | `number` | Number of splits. Must be at least 2.  `Default Value`  `5` |
+| `opts.test_size?` | `number` | Used to limit the size of the test set. Defaults to `n\_samples // (n\_splits + 1)`, which is the maximum allowed value with `gap=0`. |
 
 ### Returns
 
 [`TimeSeriesSplit`](TimeSeriesSplit.md)
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L29)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L29)
 
 ## Properties
 
@@ -40,31 +44,31 @@ Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:29](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L27)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L26)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L25)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L22)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L23)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L23)
 
 ## Accessors
 
@@ -80,7 +84,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L34)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L58)
 
 #### Signature
 
@@ -98,9 +102,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L38)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L62)
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L34) [generated/model\_selection/TimeSeriesSplit.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L38)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L58) [generated/model\_selection/TimeSeriesSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L62)
 
 ## Methods
 
@@ -120,7 +124,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L91)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L115)
 
 ### get\_n\_splits()
 
@@ -129,20 +133,23 @@ Returns the number of splitting iterations in the cross-validator
 #### Signature
 
 ```ts
-get_n_splits(opts: TimeSeriesSplitGetNSplitsOptions): Promise<number>;
+get_n_splits(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TimeSeriesSplitGetNSplitsOptions`](../interfaces/TimeSeriesSplitGetNSplitsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L108)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L132)
 
 ### init()
 
@@ -166,7 +173,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L47)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L71)
 
 ### split()
 
@@ -175,17 +182,20 @@ Generate indices to split data into training and test set.
 #### Signature
 
 ```ts
-split(opts: TimeSeriesSplitSplitOptions): Promise<ArrayLike>;
+split(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`TimeSeriesSplitSplitOptions`](../interfaces/TimeSeriesSplitSplitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Always ignored, exists for compatibility. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Always ignored, exists for compatibility. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L136)
+Defined in:  [generated/model\_selection/TimeSeriesSplit.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/TimeSeriesSplit.ts#L175)

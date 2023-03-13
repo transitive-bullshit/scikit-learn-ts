@@ -13,20 +13,22 @@ Read more in the [User Guide](../covariance.html#covariance).
 ### Signature
 
 ```ts
-new EmpiricalCovariance(opts?: EmpiricalCovarianceOptions): EmpiricalCovariance;
+new EmpiricalCovariance(opts?: object): EmpiricalCovariance;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`EmpiricalCovarianceOptions`](../interfaces/EmpiricalCovarianceOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.assume_centered?` | `boolean` | If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false` (default), data are centered before computation.  `Default Value`  `false` |
+| `opts.store_precision?` | `boolean` | Specifies if the estimated precision is stored.  `Default Value`  `true` |
 
 ### Returns
 
 [`EmpiricalCovariance`](EmpiricalCovariance.md)
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L23)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L23)
 
 ## Properties
 
@@ -34,31 +36,31 @@ Defined in:  [generated/covariance/EmpiricalCovariance.ts:23](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L21)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L20)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L19)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L16)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L17)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L17)
 
 ## Accessors
 
@@ -76,9 +78,9 @@ covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L299)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L365)
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L299)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L365)
 
 ### feature\_names\_in\_
 
@@ -94,9 +96,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L380)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L446)
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L380)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L446)
 
 ### location\_
 
@@ -112,9 +114,9 @@ location_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L272)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L338)
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L272)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L338)
 
 ### n\_features\_in\_
 
@@ -130,9 +132,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L353)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L419)
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L353)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L419)
 
 ### precision\_
 
@@ -148,9 +150,9 @@ precision_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L326)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L392)
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L326)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L392)
 
 ### py
 
@@ -164,7 +166,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L28)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L42)
 
 #### Signature
 
@@ -182,9 +184,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L32)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L46)
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L28) [generated/covariance/EmpiricalCovariance.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L32)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L42) [generated/covariance/EmpiricalCovariance.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L46)
 
 ## Methods
 
@@ -204,7 +206,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L85)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L99)
 
 ### error\_norm()
 
@@ -213,20 +215,24 @@ Compute the Mean Squared Error between two covariance estimators.
 #### Signature
 
 ```ts
-error_norm(opts: EmpiricalCovarianceErrorNormOptions): Promise<number>;
+error_norm(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`EmpiricalCovarianceErrorNormOptions`](../interfaces/EmpiricalCovarianceErrorNormOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.comp_cov?` | [`ArrayLike`](../types/ArrayLike.md)[] | The covariance to compare with. |
+| `opts.norm?` | `"frobenius"` \| `"spectral"` | The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.  `Default Value`  `'frobenius'` |
+| `opts.scaling?` | `boolean` | If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.  `Default Value`  `true` |
+| `opts.squared?` | `boolean` | Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L102)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L116)
 
 ### fit()
 
@@ -235,20 +241,22 @@ Fit the maximum likelihood covariance estimator to X.
 #### Signature
 
 ```ts
-fit(opts: EmpiricalCovarianceFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`EmpiricalCovarianceFitOptions`](../interfaces/EmpiricalCovarianceFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L139)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L179)
 
 ### get\_precision()
 
@@ -257,20 +265,21 @@ Getter for the precision matrix.
 #### Signature
 
 ```ts
-get_precision(opts: EmpiricalCovarianceGetPrecisionOptions): Promise<any>;
+get_precision(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`EmpiricalCovarianceGetPrecisionOptions`](../interfaces/EmpiricalCovarianceGetPrecisionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.precision_?` | [`ArrayLike`](../types/ArrayLike.md)[] | The precision matrix associated to the current covariance object. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L169)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L219)
 
 ### init()
 
@@ -294,7 +303,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L41)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L55)
 
 ### mahalanobis()
 
@@ -303,20 +312,21 @@ Compute the squared Mahalanobis distances of given observations.
 #### Signature
 
 ```ts
-mahalanobis(opts: EmpiricalCovarianceMahalanobisOptions): Promise<ArrayLike>;
+mahalanobis(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`EmpiricalCovarianceMahalanobisOptions`](../interfaces/EmpiricalCovarianceMahalanobisOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L204)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L257)
 
 ### score()
 
@@ -327,17 +337,19 @@ The Gaussian model is defined by its mean and covariance matrix which are repres
 #### Signature
 
 ```ts
-score(opts: EmpiricalCovarianceScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`EmpiricalCovarianceScoreOptions`](../interfaces/EmpiricalCovarianceScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X_test?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering). |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/EmpiricalCovariance.ts:240](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L240)
+Defined in:  [generated/covariance/EmpiricalCovariance.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/EmpiricalCovariance.ts#L296)

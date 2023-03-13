@@ -13,20 +13,21 @@ This Warning is used in meta estimators GridSearchCV and RandomizedSearchCV and 
 ### Signature
 
 ```ts
-new FitFailedWarning(opts?: FitFailedWarningOptions): FitFailedWarning;
+new FitFailedWarning(opts?: object): FitFailedWarning;
 ```
 
 ### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts?` | [`FitFailedWarningOptions`](../interfaces/FitFailedWarningOptions.md) |
+| `opts?` | `object` |
+| `opts.args?` | `any` |
 
 ### Returns
 
 [`FitFailedWarning`](FitFailedWarning.md)
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L23)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L23)
 
 ## Properties
 
@@ -34,31 +35,31 @@ Defined in:  [generated/exceptions/FitFailedWarning.ts:23](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L21)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L20)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L19)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L16)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L17)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L17)
 
 ## Accessors
 
@@ -74,7 +75,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L28)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L28)
 
 #### Signature
 
@@ -92,9 +93,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L32)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L32)
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L28) [generated/exceptions/FitFailedWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L32)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L28) [generated/exceptions/FitFailedWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L32)
 
 ## Methods
 
@@ -114,7 +115,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L83)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L83)
 
 ### init()
 
@@ -138,7 +139,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L41)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L41)
 
 ### with\_traceback()
 
@@ -147,17 +148,17 @@ Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return se
 #### Signature
 
 ```ts
-with_traceback(opts: FitFailedWarningWithTracebackOptions): Promise<any>;
+with_traceback(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`FitFailedWarningWithTracebackOptions`](../interfaces/FitFailedWarningWithTracebackOptions.md) |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/exceptions/FitFailedWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L100)
+Defined in:  [generated/exceptions/FitFailedWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/exceptions/FitFailedWarning.ts#L100)

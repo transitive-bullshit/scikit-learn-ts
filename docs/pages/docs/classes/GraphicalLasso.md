@@ -13,20 +13,27 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new GraphicalLasso(opts?: GraphicalLassoOptions): GraphicalLasso;
+new GraphicalLasso(opts?: object): GraphicalLasso;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `GraphicalLassoOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | The regularization parameter: the higher alpha, the more regularization, the sparser the inverse covariance. Range is (0, inf\].  `Default Value`  `0.01` |
+| `opts.assume_centered?` | `boolean` | If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.  `Default Value`  `false` |
+| `opts.enet_tol?` | `number` | The tolerance for the elastic net solver used to calculate the descent direction. This parameter controls the accuracy of the search direction for a given column update, not of the overall parameter estimate. Only used for mode=’cd’. Range is (0, inf\].  `Default Value`  `0.0001` |
+| `opts.max_iter?` | `number` | The maximum number of iterations.  `Default Value`  `100` |
+| `opts.mode?` | `"cd"` \| `"lars"` | The Lasso solver to use: coordinate descent or LARS. Use LARS for very sparse underlying graphs, where p > n. Elsewhere prefer cd which is more numerically stable.  `Default Value`  `'cd'` |
+| `opts.tol?` | `number` | The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].  `Default Value`  `0.0001` |
+| `opts.verbose?` | `boolean` | If verbose is `true`, the objective function and dual gap are plotted at each iteration.  `Default Value`  `false` |
 
 ### Returns
 
 [`GraphicalLasso`](GraphicalLasso.md)
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L23)
+Defined in:  [generated/covariance/GraphicalLasso.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L23)
 
 ## Properties
 
@@ -34,31 +41,31 @@ Defined in:  [generated/covariance/GraphicalLasso.ts:23](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L21)
+Defined in:  [generated/covariance/GraphicalLasso.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L20)
+Defined in:  [generated/covariance/GraphicalLasso.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L19)
+Defined in:  [generated/covariance/GraphicalLasso.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L16)
+Defined in:  [generated/covariance/GraphicalLasso.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L17)
+Defined in:  [generated/covariance/GraphicalLasso.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L17)
 
 ## Accessors
 
@@ -76,7 +83,7 @@ covariance_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/GraphicalLasso.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L278)
+Defined in: [generated/covariance/GraphicalLasso.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L383)
 
 ### feature\_names\_in\_
 
@@ -92,7 +99,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/GraphicalLasso.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L378)
+Defined in: [generated/covariance/GraphicalLasso.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L483)
 
 ### location\_
 
@@ -108,7 +115,7 @@ location_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/covariance/GraphicalLasso.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L253)
+Defined in: [generated/covariance/GraphicalLasso.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L358)
 
 ### n\_features\_in\_
 
@@ -124,7 +131,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/GraphicalLasso.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L353)
+Defined in: [generated/covariance/GraphicalLasso.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L458)
 
 ### n\_iter\_
 
@@ -140,7 +147,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/covariance/GraphicalLasso.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L328)
+Defined in: [generated/covariance/GraphicalLasso.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L433)
 
 ### precision\_
 
@@ -156,7 +163,7 @@ precision_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/covariance/GraphicalLasso.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L303)
+Defined in: [generated/covariance/GraphicalLasso.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L408)
 
 ### py
 
@@ -170,7 +177,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L28)
+Defined in:  [generated/covariance/GraphicalLasso.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L77)
 
 #### Signature
 
@@ -188,7 +195,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/covariance/GraphicalLasso.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L32)
+Defined in: [generated/covariance/GraphicalLasso.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L81)
 
 ## Methods
 
@@ -208,7 +215,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L87)
+Defined in:  [generated/covariance/GraphicalLasso.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L136)
 
 ### error\_norm()
 
@@ -217,20 +224,24 @@ Compute the Mean Squared Error between two covariance estimators.
 #### Signature
 
 ```ts
-error_norm(opts: GraphicalLassoErrorNormOptions): Promise<number>;
+error_norm(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GraphicalLassoErrorNormOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.comp_cov?` | `ArrayLike`[] | The covariance to compare with. |
+| `opts.norm?` | `"frobenius"` \| `"spectral"` | The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.  `Default Value`  `'frobenius'` |
+| `opts.scaling?` | `boolean` | If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.  `Default Value`  `true` |
+| `opts.squared?` | `boolean` | Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L104)
+Defined in:  [generated/covariance/GraphicalLasso.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L153)
 
 ### fit()
 
@@ -239,20 +250,22 @@ Fit the GraphicalLasso model to X.
 #### Signature
 
 ```ts
-fit(opts: GraphicalLassoFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GraphicalLassoFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Data from which to compute the covariance estimate. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L136)
+Defined in:  [generated/covariance/GraphicalLasso.ts:211](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L211)
 
 ### get\_precision()
 
@@ -261,20 +274,21 @@ Getter for the precision matrix.
 #### Signature
 
 ```ts
-get_precision(opts: GraphicalLassoGetPrecisionOptions): Promise<any>;
+get_precision(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GraphicalLassoGetPrecisionOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.precision_?` | `ArrayLike`[] | The precision matrix associated to the current covariance object. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L164)
+Defined in:  [generated/covariance/GraphicalLasso.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L249)
 
 ### init()
 
@@ -298,7 +312,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L41)
+Defined in:  [generated/covariance/GraphicalLasso.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L90)
 
 ### mahalanobis()
 
@@ -307,20 +321,21 @@ Compute the squared Mahalanobis distances of given observations.
 #### Signature
 
 ```ts
-mahalanobis(opts: GraphicalLassoMahalanobisOptions): Promise<ArrayLike>;
+mahalanobis(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GraphicalLassoMahalanobisOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L193)
+Defined in:  [generated/covariance/GraphicalLasso.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L283)
 
 ### score()
 
@@ -331,17 +346,19 @@ The Gaussian model is defined by its mean and covariance matrix which are repres
 #### Signature
 
 ```ts
-score(opts: GraphicalLassoScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GraphicalLassoScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X_test?` | `ArrayLike`[] | Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering). |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/covariance/GraphicalLasso.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L223)
+Defined in:  [generated/covariance/GraphicalLasso.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/GraphicalLasso.ts#L318)

@@ -15,20 +15,23 @@ Read more in the [User Guide](../cross_validation.html#repeated-k-fold).
 ### Signature
 
 ```ts
-new RepeatedStratifiedKFold(opts?: RepeatedStratifiedKFoldOptions): RepeatedStratifiedKFold;
+new RepeatedStratifiedKFold(opts?: object): RepeatedStratifiedKFold;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`RepeatedStratifiedKFoldOptions`](../interfaces/RepeatedStratifiedKFoldOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.n_repeats?` | `number` | Number of times cross-validator needs to be repeated.  `Default Value`  `10` |
+| `opts.n_splits?` | `number` | Number of folds. Must be at least 2.  `Default Value`  `5` |
+| `opts.random_state?` | `number` | Controls the generation of the random states for each repetition. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
 
 ### Returns
 
 [`RepeatedStratifiedKFold`](RepeatedStratifiedKFold.md)
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L25)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L25)
 
 ## Properties
 
@@ -36,31 +39,31 @@ Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:25](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L23)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L22)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L21)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L18)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L19)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L19)
 
 ## Accessors
 
@@ -76,7 +79,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L30)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L49)
 
 #### Signature
 
@@ -94,9 +97,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L34)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L53)
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L30) [generated/model\_selection/RepeatedStratifiedKFold.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L34)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L49) [generated/model\_selection/RepeatedStratifiedKFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L53)
 
 ## Methods
 
@@ -116,7 +119,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L89)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L108)
 
 ### get\_n\_splits()
 
@@ -125,20 +128,23 @@ Returns the number of splitting iterations in the cross-validator
 #### Signature
 
 ```ts
-get_n_splits(opts: RepeatedStratifiedKFoldGetNSplitsOptions): Promise<number>;
+get_n_splits(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RepeatedStratifiedKFoldGetNSplitsOptions`](../interfaces/RepeatedStratifiedKFoldGetNSplitsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L106)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L125)
 
 ### init()
 
@@ -162,7 +168,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L43)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L62)
 
 ### split()
 
@@ -171,17 +177,20 @@ Generates indices to split data into training and test set.
 #### Signature
 
 ```ts
-split(opts: RepeatedStratifiedKFoldSplitOptions): Promise<ArrayLike>;
+split(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RepeatedStratifiedKFoldSplitOptions`](../interfaces/RepeatedStratifiedKFoldSplitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target variable for supervised learning problems. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L142)
+Defined in:  [generated/model\_selection/RepeatedStratifiedKFold.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/RepeatedStratifiedKFold.ts#L174)

@@ -17,20 +17,23 @@ Read more in the [User Guide](../cross_validation.html#k-fold).
 ### Signature
 
 ```ts
-new KFold(opts?: KFoldOptions): KFold;
+new KFold(opts?: object): KFold;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`KFoldOptions`](../interfaces/KFoldOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.n_splits?` | `number` | Number of folds. Must be at least 2.  `Default Value`  `5` |
+| `opts.random_state?` | `number` | When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.shuffle?` | `boolean` | Whether to shuffle the data before splitting into batches. Note that the samples within each split will not be shuffled.  `Default Value`  `false` |
 
 ### Returns
 
 [`KFold`](KFold.md)
 
-Defined in:  [generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
+Defined in:  [generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
 
 ## Properties
 
@@ -38,31 +41,31 @@ Defined in:  [generated/model\_selection/KFold.ts:27](https://github.com/transit
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
+Defined in:  [generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/KFold.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L24)
+Defined in:  [generated/model\_selection/KFold.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
+Defined in:  [generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/KFold.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L20)
+Defined in:  [generated/model\_selection/KFold.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/KFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L21)
+Defined in:  [generated/model\_selection/KFold.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L21)
 
 ## Accessors
 
@@ -78,7 +81,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/KFold.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L32)
+Defined in:  [generated/model\_selection/KFold.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L51)
 
 #### Signature
 
@@ -96,9 +99,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/model\_selection/KFold.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L36)
+Defined in:  [generated/model\_selection/KFold.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L55)
 
-Defined in:  [generated/model\_selection/KFold.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L32) [generated/model\_selection/KFold.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L36)
+Defined in:  [generated/model\_selection/KFold.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L51) [generated/model\_selection/KFold.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L55)
 
 ## Methods
 
@@ -118,7 +121,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/KFold.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L86)
+Defined in:  [generated/model\_selection/KFold.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L105)
 
 ### get\_n\_splits()
 
@@ -127,20 +130,23 @@ Returns the number of splitting iterations in the cross-validator
 #### Signature
 
 ```ts
-get_n_splits(opts: KFoldGetNSplitsOptions): Promise<number>;
+get_n_splits(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KFoldGetNSplitsOptions`](../interfaces/KFoldGetNSplitsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/KFold.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L103)
+Defined in:  [generated/model\_selection/KFold.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L122)
 
 ### init()
 
@@ -164,7 +170,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/KFold.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L45)
+Defined in:  [generated/model\_selection/KFold.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L64)
 
 ### split()
 
@@ -173,17 +179,20 @@ Generate indices to split data into training and test set.
 #### Signature
 
 ```ts
-split(opts: KFoldSplitOptions): Promise<ArrayLike>;
+split(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KFoldSplitOptions`](../interfaces/KFoldSplitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target variable for supervised learning problems. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/KFold.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/model_selection/KFold.ts#L131)
+Defined in:  [generated/model\_selection/KFold.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/KFold.ts#L165)

@@ -20,7 +20,91 @@ export class DecisionTreeClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DecisionTreeClassifierOptions) {
+  constructor(opts?: {
+    /**
+      The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log\_loss” and “entropy” both for the Shannon information gain, see [Mathematical formulation](../tree.html#tree-mathematical-formulation).
+
+      @defaultValue `'gini'`
+     */
+    criterion?: 'gini' | 'entropy' | 'log_loss'
+
+    /**
+      The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split and “random” to choose the best random split.
+
+      @defaultValue `'best'`
+     */
+    splitter?: 'best' | 'random'
+
+    /**
+      The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+     */
+    max_depth?: number
+
+    /**
+      The minimum number of samples required to split an internal node:
+
+      @defaultValue `2`
+     */
+    min_samples_split?: number
+
+    /**
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+
+      @defaultValue `1`
+     */
+    min_samples_leaf?: number
+
+    /**
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
+
+      @defaultValue `0`
+     */
+    min_weight_fraction_leaf?: number
+
+    /**
+      The number of features to consider when looking for the best split:
+     */
+    max_features?: number | 'auto' | 'sqrt' | 'log2'
+
+    /**
+      Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+
+    /**
+      Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+     */
+    max_leaf_nodes?: number
+
+    /**
+      A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
+
+      The weighted impurity decrease equation is the following:
+
+      @defaultValue `0`
+     */
+    min_impurity_decrease?: number
+
+    /**
+      Weights associated with classes in the form `{class\_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
+
+      Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].
+
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`
+
+      For multi-output, the weights of each column of y will be multiplied.
+
+      Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
+
+      @defaultValue `0`
+     */
+    ccp_alpha?: any
+  }) {
     this.id = `DecisionTreeClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -117,7 +201,19 @@ ctor_DecisionTreeClassifier = {k: v for k, v in ctor_DecisionTreeClassifier.item
   /**
     Return the index of the leaf that each sample is predicted as.
    */
-  async apply(opts: DecisionTreeClassifierApplyOptions): Promise<ArrayLike> {
+  async apply(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -151,9 +247,22 @@ pms_DecisionTreeClassifier_apply = {k: v for k, v in pms_DecisionTreeClassifier_
 
     See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details on the pruning process.
    */
-  async cost_complexity_pruning_path(
-    opts: DecisionTreeClassifierCostComplexityPruningPathOptions
-  ): Promise<any> {
+  async cost_complexity_pruning_path(opts: {
+    /**
+      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values (class labels) as integers or strings.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -190,9 +299,19 @@ pms_DecisionTreeClassifier_cost_complexity_pruning_path = {k: v for k, v in pms_
   /**
     Return the decision path in the tree.
    */
-  async decision_path(
-    opts: DecisionTreeClassifierDecisionPathOptions
-  ): Promise<SparseMatrix[]> {
+  async decision_path(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -227,7 +346,29 @@ pms_DecisionTreeClassifier_decision_path = {k: v for k, v in pms_DecisionTreeCla
   /**
     Build a decision tree classifier from the training set (X, y).
    */
-  async fit(opts: DecisionTreeClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values (class labels) as integers or strings.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -265,7 +406,7 @@ pms_DecisionTreeClassifier_fit = {k: v for k, v in pms_DecisionTreeClassifier_fi
 
     The depth of a tree is the maximum distance between the root and any leaf.
    */
-  async get_depth(opts: DecisionTreeClassifierGetDepthOptions): Promise<any> {
+  async get_depth(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -295,9 +436,7 @@ pms_DecisionTreeClassifier_get_depth = {k: v for k, v in pms_DecisionTreeClassif
   /**
     Return the number of leaves of the decision tree.
    */
-  async get_n_leaves(
-    opts: DecisionTreeClassifierGetNLeavesOptions
-  ): Promise<any> {
+  async get_n_leaves(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -329,9 +468,19 @@ pms_DecisionTreeClassifier_get_n_leaves = {k: v for k, v in pms_DecisionTreeClas
 
     For a classification model, the predicted class for each sample in X is returned. For a regression model, the predicted value based on X is returned.
    */
-  async predict(
-    opts: DecisionTreeClassifierPredictOptions
-  ): Promise<ArrayLike> {
+  async predict(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -365,9 +514,12 @@ pms_DecisionTreeClassifier_predict = {k: v for k, v in pms_DecisionTreeClassifie
   /**
     Predict class log-probabilities of the input samples X.
    */
-  async predict_log_proba(
-    opts: DecisionTreeClassifierPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -402,9 +554,19 @@ pms_DecisionTreeClassifier_predict_log_proba = {k: v for k, v in pms_DecisionTre
 
     The predicted class probability is the fraction of samples of the same class in a leaf.
    */
-  async predict_proba(
-    opts: DecisionTreeClassifierPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -441,7 +603,22 @@ pms_DecisionTreeClassifier_predict_proba = {k: v for k, v in pms_DecisionTreeCla
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: DecisionTreeClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionTreeClassifier instance has already been disposed'
@@ -660,215 +837,4 @@ pms_DecisionTreeClassifier_score = {k: v for k, v in pms_DecisionTreeClassifier_
         ._py`attr_DecisionTreeClassifier_tree_.tolist() if hasattr(attr_DecisionTreeClassifier_tree_, 'tolist') else attr_DecisionTreeClassifier_tree_`
     })()
   }
-}
-
-export interface DecisionTreeClassifierOptions {
-  /**
-    The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “log\_loss” and “entropy” both for the Shannon information gain, see [Mathematical formulation](../tree.html#tree-mathematical-formulation).
-
-    @defaultValue `'gini'`
-   */
-  criterion?: 'gini' | 'entropy' | 'log_loss'
-
-  /**
-    The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split and “random” to choose the best random split.
-
-    @defaultValue `'best'`
-   */
-  splitter?: 'best' | 'random'
-
-  /**
-    The maximum depth of the tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
-   */
-  max_depth?: number
-
-  /**
-    The minimum number of samples required to split an internal node:
-
-    @defaultValue `2`
-   */
-  min_samples_split?: number
-
-  /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
-
-    @defaultValue `1`
-   */
-  min_samples_leaf?: number
-
-  /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
-
-    @defaultValue `0`
-   */
-  min_weight_fraction_leaf?: number
-
-  /**
-    The number of features to consider when looking for the best split:
-   */
-  max_features?: number | 'auto' | 'sqrt' | 'log2'
-
-  /**
-    Controls the randomness of the estimator. The features are always randomly permuted at each split, even if `splitter` is set to `"best"`. When `max\_features < n\_features`, the algorithm will select `max\_features` at random at each split before finding the best split among them. But the best found split may vary across different runs, even if `max\_features=n\_features`. That is the case, if the improvement of the criterion is identical for several splits and one split has to be selected at random. To obtain a deterministic behaviour during fitting, `random\_state` has to be fixed to an integer. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-
-  /**
-    Grow a tree with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
-   */
-  max_leaf_nodes?: number
-
-  /**
-    A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
-
-    The weighted impurity decrease equation is the following:
-
-    @defaultValue `0`
-   */
-  min_impurity_decrease?: number
-
-  /**
-    Weights associated with classes in the form `{class\_label: weight}`. If `undefined`, all classes are supposed to have weight one. For multi-output problems, a list of dicts can be provided in the same order as the columns of y.
-
-    Note that for multioutput (including multilabel) weights should be defined for each class of every column in its own dict. For example, for four-class multilabel classification weights should be \[{0: 1, 1: 1}, {0: 1, 1: 5}, {0: 1, 1: 1}, {0: 1, 1: 1}\] instead of \[{1:1}, {2:5}, {3:1}, {4:1}\].
-
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`
-
-    For multi-output, the weights of each column of y will be multiplied.
-
-    Note that these weights will be multiplied with sample\_weight (passed through the fit method) if sample\_weight is specified.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
-
-    @defaultValue `0`
-   */
-  ccp_alpha?: any
-}
-
-export interface DecisionTreeClassifierApplyOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeClassifierCostComplexityPruningPathOptions {
-  /**
-    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values (class labels) as integers or strings.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface DecisionTreeClassifierDecisionPathOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeClassifierFitOptions {
-  /**
-    The training input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csc\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values (class labels) as integers or strings.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. Splits are also ignored if they would result in any single class carrying a negative weight in either child node.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeClassifierGetDepthOptions {}
-
-export interface DecisionTreeClassifierGetNLeavesOptions {}
-
-export interface DecisionTreeClassifierPredictOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeClassifierPredictLogProbaOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface DecisionTreeClassifierPredictProbaOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Allow to bypass several input checking. Don’t use this parameter unless you know what you’re doing.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface DecisionTreeClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

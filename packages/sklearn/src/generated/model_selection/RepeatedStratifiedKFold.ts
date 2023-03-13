@@ -22,7 +22,26 @@ export class RepeatedStratifiedKFold {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RepeatedStratifiedKFoldOptions) {
+  constructor(opts?: {
+    /**
+      Number of folds. Must be at least 2.
+
+      @defaultValue `5`
+     */
+    n_splits?: number
+
+    /**
+      Number of times cross-validator needs to be repeated.
+
+      @defaultValue `10`
+     */
+    n_repeats?: number
+
+    /**
+      Controls the generation of the random states for each repetition. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `RepeatedStratifiedKFold${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,9 +122,22 @@ ctor_RepeatedStratifiedKFold = {k: v for k, v in ctor_RepeatedStratifiedKFold.it
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(
-    opts: RepeatedStratifiedKFoldGetNSplitsOptions
-  ): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
+     */
+    y?: any
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This RepeatedStratifiedKFold instance has already been disposed'
@@ -139,7 +171,22 @@ pms_RepeatedStratifiedKFold_get_n_splits = {k: v for k, v in pms_RepeatedStratif
   /**
     Generates indices to split data into training and test set.
    */
-  async split(opts: RepeatedStratifiedKFoldSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RepeatedStratifiedKFold instance has already been disposed'
@@ -169,59 +216,4 @@ pms_RepeatedStratifiedKFold_split = {k: v for k, v in pms_RepeatedStratifiedKFol
     return this
       ._py`res_RepeatedStratifiedKFold_split.tolist() if hasattr(res_RepeatedStratifiedKFold_split, 'tolist') else res_RepeatedStratifiedKFold_split`
   }
-}
-
-export interface RepeatedStratifiedKFoldOptions {
-  /**
-    Number of folds. Must be at least 2.
-
-    @defaultValue `5`
-   */
-  n_splits?: number
-
-  /**
-    Number of times cross-validator needs to be repeated.
-
-    @defaultValue `10`
-   */
-  n_repeats?: number
-
-  /**
-    Controls the generation of the random states for each repetition. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface RepeatedStratifiedKFoldGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility. `np.zeros(n\_samples)` may be used as a placeholder.
-   */
-  y?: any
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
-}
-
-export interface RepeatedStratifiedKFoldSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

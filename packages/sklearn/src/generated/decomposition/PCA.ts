@@ -28,7 +28,68 @@ export class PCA {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PCAOptions) {
+  constructor(opts?: {
+    /**
+      Number of components to keep. if n\_components is not set all components are kept:
+     */
+    n_components?: number | 'mle'
+
+    /**
+      If `false`, data passed to fit are overwritten and running fit(X).transform(X) will not yield the expected results, use fit\_transform(X) instead.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      When `true` (`false` by default) the `components\_` vectors are multiplied by the square root of n\_samples and then divided by the singular values to ensure uncorrelated outputs with unit component-wise variances.
+
+      Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometime improve the predictive accuracy of the downstream estimators by making their data respect some hard-wired assumptions.
+
+      @defaultValue `false`
+     */
+    whiten?: boolean
+
+    /**
+      The solver is selected by a default policy based on `X.shape` and `n\_components`: if the input data is larger than 500x500 and the number of components to extract is lower than 80% of the smallest dimension of the data, then the more efficient ‘randomized’ method is enabled. Otherwise the exact full SVD is computed and optionally truncated afterwards.
+
+      @defaultValue `'auto'`
+     */
+    svd_solver?: 'auto' | 'full' | 'arpack' | 'randomized'
+
+    /**
+      Tolerance for singular values computed by svd\_solver == ‘arpack’. Must be of range \[0.0, infinity).
+
+      @defaultValue `0`
+     */
+    tol?: number
+
+    /**
+      Number of iterations for the power method computed by svd\_solver == ‘randomized’. Must be of range \[0, infinity).
+
+      @defaultValue `'auto'`
+     */
+    iterated_power?: number | 'auto'
+
+    /**
+      This parameter is only relevant when `svd\_solver="randomized"`. It corresponds to the additional number of random vectors to sample the range of `X` so as to ensure proper conditioning. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
+
+      @defaultValue `10`
+     */
+    n_oversamples?: number
+
+    /**
+      Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
+
+      @defaultValue `'auto'`
+     */
+    power_iteration_normalizer?: 'auto' | 'QR' | 'LU' | 'none'
+
+    /**
+      Used when the ‘arpack’ or ‘randomized’ solvers are used. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `PCA${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -112,7 +173,17 @@ ctor_PCA = {k: v for k, v in ctor_PCA.items() if v is not None}`
   /**
     Fit the model with X.
    */
-  async fit(opts: PCAFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -139,7 +210,17 @@ pms_PCA_fit = {k: v for k, v in pms_PCA_fit.items() if v is not None}`
   /**
     Fit the model with X and apply the dimensionality reduction on X.
    */
-  async fit_transform(opts: PCAFitTransformOptions): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -169,7 +250,12 @@ pms_PCA_fit_transform = {k: v for k, v in pms_PCA_fit_transform.items() if v is 
 
     `cov \= components\_.T \* S\*\*2 \* components\_ + sigma2 \* eye(n\_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
    */
-  async get_covariance(opts: PCAGetCovarianceOptions): Promise<any> {
+  async get_covariance(opts: {
+    /**
+      Estimated covariance of data.
+     */
+    cov?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -199,9 +285,12 @@ pms_PCA_get_covariance = {k: v for k, v in pms_PCA_get_covariance.items() if v i
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: PCAGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.PCA.fit "sklearn.decomposition.PCA.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -231,7 +320,12 @@ pms_PCA_get_feature_names_out = {k: v for k, v in pms_PCA_get_feature_names_out.
 
     Equals the inverse of the covariance but computed with the matrix inversion lemma for efficiency.
    */
-  async get_precision(opts: PCAGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      Estimated precision of data.
+     */
+    precision?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -261,7 +355,12 @@ pms_PCA_get_precision = {k: v for k, v in pms_PCA_get_precision.items() if v is 
 
     In other words, return an input `X\_original` whose transform would be X.
    */
-  async inverse_transform(opts: PCAInverseTransformOptions): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_components` is the number of components.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -291,7 +390,17 @@ pms_PCA_inverse_transform = {k: v for k, v in pms_PCA_inverse_transform.items() 
 
     See. “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf)
    */
-  async score(opts: PCAScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      The data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -321,7 +430,12 @@ pms_PCA_score = {k: v for k, v in pms_PCA_score.items() if v is not None}`
 
     See. “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf)
    */
-  async score_samples(opts: PCAScoreSamplesOptions): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      The data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -351,7 +465,12 @@ pms_PCA_score_samples = {k: v for k, v in pms_PCA_score_samples.items() if v is 
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: PCASetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -381,7 +500,12 @@ pms_PCA_set_output = {k: v for k, v in pms_PCA_set_output.items() if v is not No
 
     X is projected on the first principal components previously extracted from a training set.
    */
-  async transform(opts: PCATransformOptions): Promise<ArrayLike[]> {
+  async transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This PCA instance has already been disposed')
     }
@@ -668,152 +792,4 @@ pms_PCA_transform = {k: v for k, v in pms_PCA_transform.items() if v is not None
         ._py`attr_PCA_feature_names_in_.tolist() if hasattr(attr_PCA_feature_names_in_, 'tolist') else attr_PCA_feature_names_in_`
     })()
   }
-}
-
-export interface PCAOptions {
-  /**
-    Number of components to keep. if n\_components is not set all components are kept:
-   */
-  n_components?: number | 'mle'
-
-  /**
-    If `false`, data passed to fit are overwritten and running fit(X).transform(X) will not yield the expected results, use fit\_transform(X) instead.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    When `true` (`false` by default) the `components\_` vectors are multiplied by the square root of n\_samples and then divided by the singular values to ensure uncorrelated outputs with unit component-wise variances.
-
-    Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometime improve the predictive accuracy of the downstream estimators by making their data respect some hard-wired assumptions.
-
-    @defaultValue `false`
-   */
-  whiten?: boolean
-
-  /**
-    The solver is selected by a default policy based on `X.shape` and `n\_components`: if the input data is larger than 500x500 and the number of components to extract is lower than 80% of the smallest dimension of the data, then the more efficient ‘randomized’ method is enabled. Otherwise the exact full SVD is computed and optionally truncated afterwards.
-
-    @defaultValue `'auto'`
-   */
-  svd_solver?: 'auto' | 'full' | 'arpack' | 'randomized'
-
-  /**
-    Tolerance for singular values computed by svd\_solver == ‘arpack’. Must be of range \[0.0, infinity).
-
-    @defaultValue `0`
-   */
-  tol?: number
-
-  /**
-    Number of iterations for the power method computed by svd\_solver == ‘randomized’. Must be of range \[0, infinity).
-
-    @defaultValue `'auto'`
-   */
-  iterated_power?: number | 'auto'
-
-  /**
-    This parameter is only relevant when `svd\_solver="randomized"`. It corresponds to the additional number of random vectors to sample the range of `X` so as to ensure proper conditioning. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
-
-    @defaultValue `10`
-   */
-  n_oversamples?: number
-
-  /**
-    Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.
-
-    @defaultValue `'auto'`
-   */
-  power_iteration_normalizer?: 'auto' | 'QR' | 'LU' | 'none'
-
-  /**
-    Used when the ‘arpack’ or ‘randomized’ solvers are used. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface PCAFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface PCAFitTransformOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface PCAGetCovarianceOptions {
-  /**
-    Estimated covariance of data.
-   */
-  cov?: any
-}
-
-export interface PCAGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.PCA.fit "sklearn.decomposition.PCA.fit").
-   */
-  input_features?: any
-}
-
-export interface PCAGetPrecisionOptions {
-  /**
-    Estimated precision of data.
-   */
-  precision?: any
-}
-
-export interface PCAInverseTransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_components` is the number of components.
-   */
-  X?: ArrayLike[]
-}
-
-export interface PCAScoreOptions {
-  /**
-    The data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface PCAScoreSamplesOptions {
-  /**
-    The data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface PCASetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface PCATransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
 }

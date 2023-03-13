@@ -22,7 +22,39 @@ export class GaussianRandomProjection {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GaussianRandomProjectionOptions) {
+  constructor(opts?: {
+    /**
+      Dimensionality of the target projection space.
+
+      n\_components can be automatically adjusted according to the number of samples in the dataset and the bound given by the Johnson-Lindenstrauss lemma. In that case the quality of the embedding is controlled by the `eps` parameter.
+
+      It should be noted that Johnson-Lindenstrauss lemma can yield very conservative estimated of the required number of components as it makes no assumption on the structure of the dataset.
+
+      @defaultValue `'auto'`
+     */
+    n_components?: number | 'auto'
+
+    /**
+      Parameter to control the quality of the embedding according to the Johnson-Lindenstrauss lemma when `n\_components` is set to ‘auto’. The value should be strictly positive.
+
+      Smaller values lead to better embedding and higher number of dimensions (n\_components) in the target projection space.
+
+      @defaultValue `0.1`
+     */
+    eps?: number
+
+    /**
+      Learn the inverse transform by computing the pseudo-inverse of the components during fit. Note that computing the pseudo-inverse does not scale well to large matrices.
+
+      @defaultValue `false`
+     */
+    compute_inverse_components?: boolean
+
+    /**
+      Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `GaussianRandomProjection${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +135,17 @@ ctor_GaussianRandomProjection = {k: v for k, v in ctor_GaussianRandomProjection.
   /**
     Generate a sparse random projection matrix.
    */
-  async fit(opts: GaussianRandomProjectionFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training set: only the shape is used to find optimal random matrix dimensions based on the theory referenced in the afore mentioned papers.
+     */
+    X?: NDArray | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianRandomProjection instance has already been disposed'
@@ -135,9 +177,22 @@ pms_GaussianRandomProjection_fit = {k: v for k, v in pms_GaussianRandomProjectio
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: GaussianRandomProjectionFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianRandomProjection instance has already been disposed'
@@ -176,9 +231,12 @@ pms_GaussianRandomProjection_fit_transform = {k: v for k, v in pms_GaussianRando
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: GaussianRandomProjectionGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.random_projection.GaussianRandomProjection.fit "sklearn.random_projection.GaussianRandomProjection.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianRandomProjection instance has already been disposed'
@@ -215,9 +273,12 @@ pms_GaussianRandomProjection_get_feature_names_out = {k: v for k, v in pms_Gauss
 
     If `compute\_inverse\_components` is `false`, the inverse of the components is computed during each call to `inverse\_transform` which can be costly.
    */
-  async inverse_transform(
-    opts: GaussianRandomProjectionInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      Data to be transformed back.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianRandomProjection instance has already been disposed'
@@ -252,9 +313,12 @@ pms_GaussianRandomProjection_inverse_transform = {k: v for k, v in pms_GaussianR
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(
-    opts: GaussianRandomProjectionSetOutputOptions
-  ): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianRandomProjection instance has already been disposed'
@@ -286,9 +350,12 @@ pms_GaussianRandomProjection_set_output = {k: v for k, v in pms_GaussianRandomPr
   /**
     Project the data by using matrix product with the random matrix.
    */
-  async transform(
-    opts: GaussianRandomProjectionTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      The input data to project into a smaller dimensional space.
+     */
+    X?: NDArray | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianRandomProjection instance has already been disposed'
@@ -451,95 +518,4 @@ pms_GaussianRandomProjection_transform = {k: v for k, v in pms_GaussianRandomPro
         ._py`attr_GaussianRandomProjection_feature_names_in_.tolist() if hasattr(attr_GaussianRandomProjection_feature_names_in_, 'tolist') else attr_GaussianRandomProjection_feature_names_in_`
     })()
   }
-}
-
-export interface GaussianRandomProjectionOptions {
-  /**
-    Dimensionality of the target projection space.
-
-    n\_components can be automatically adjusted according to the number of samples in the dataset and the bound given by the Johnson-Lindenstrauss lemma. In that case the quality of the embedding is controlled by the `eps` parameter.
-
-    It should be noted that Johnson-Lindenstrauss lemma can yield very conservative estimated of the required number of components as it makes no assumption on the structure of the dataset.
-
-    @defaultValue `'auto'`
-   */
-  n_components?: number | 'auto'
-
-  /**
-    Parameter to control the quality of the embedding according to the Johnson-Lindenstrauss lemma when `n\_components` is set to ‘auto’. The value should be strictly positive.
-
-    Smaller values lead to better embedding and higher number of dimensions (n\_components) in the target projection space.
-
-    @defaultValue `0.1`
-   */
-  eps?: number
-
-  /**
-    Learn the inverse transform by computing the pseudo-inverse of the components during fit. Note that computing the pseudo-inverse does not scale well to large matrices.
-
-    @defaultValue `false`
-   */
-  compute_inverse_components?: boolean
-
-  /**
-    Controls the pseudo random number generator used to generate the projection matrix at fit time. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface GaussianRandomProjectionFitOptions {
-  /**
-    Training set: only the shape is used to find optimal random matrix dimensions based on the theory referenced in the afore mentioned papers.
-   */
-  X?: NDArray | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface GaussianRandomProjectionFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface GaussianRandomProjectionGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.random_projection.GaussianRandomProjection.fit "sklearn.random_projection.GaussianRandomProjection.fit").
-   */
-  input_features?: any
-}
-
-export interface GaussianRandomProjectionInverseTransformOptions {
-  /**
-    Data to be transformed back.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface GaussianRandomProjectionSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface GaussianRandomProjectionTransformOptions {
-  /**
-    The input data to project into a smaller dimensional space.
-   */
-  X?: NDArray | SparseMatrix[]
 }

@@ -18,7 +18,7 @@ export class ConvergenceWarning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ConvergenceWarningOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `ConvergenceWarning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,9 +97,7 @@ ctor_ConvergenceWarning = {k: v for k, v in ctor_ConvergenceWarning.items() if v
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(
-    opts: ConvergenceWarningWithTracebackOptions
-  ): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ConvergenceWarning instance has already been disposed'
@@ -126,9 +124,3 @@ pms_ConvergenceWarning_with_traceback = {k: v for k, v in pms_ConvergenceWarning
       ._py`res_ConvergenceWarning_with_traceback.tolist() if hasattr(res_ConvergenceWarning_with_traceback, 'tolist') else res_ConvergenceWarning_with_traceback`
   }
 }
-
-export interface ConvergenceWarningOptions {
-  args?: any
-}
-
-export interface ConvergenceWarningWithTracebackOptions {}

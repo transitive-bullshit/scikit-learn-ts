@@ -24,7 +24,43 @@ export class AdaBoostRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: AdaBoostRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
+     */
+    estimator?: any
+
+    /**
+      The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range `\[1, inf)`.
+
+      @defaultValue `50`
+     */
+    n_estimators?: number
+
+    /**
+      Weight applied to each regressor at each boosting iteration. A higher learning rate increases the contribution of each regressor. There is a trade-off between the `learning\_rate` and `n\_estimators` parameters. Values must be in the range `(0.0, inf)`.
+
+      @defaultValue `1`
+     */
+    learning_rate?: number
+
+    /**
+      The loss function to use when updating the weights after each boosting iteration.
+
+      @defaultValue `'linear'`
+     */
+    loss?: 'linear' | 'square' | 'exponential'
+
+    /**
+      Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. In addition, it controls the bootstrap of the weights used to train the `estimator` at each boosting iteration. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
+     */
+    base_estimator?: any
+  }) {
     this.id = `AdaBoostRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +143,22 @@ ctor_AdaBoostRegressor = {k: v for k, v in ctor_AdaBoostRegressor.items() if v i
   /**
     Build a boosted classifier/regressor from the training set (X, y).
    */
-  async fit(opts: AdaBoostRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostRegressor instance has already been disposed'
@@ -143,7 +194,12 @@ pms_AdaBoostRegressor_fit = {k: v for k, v in pms_AdaBoostRegressor_fit.items() 
 
     The predicted regression value of an input sample is computed as the weighted median prediction of the regressors in the ensemble.
    */
-  async predict(opts: AdaBoostRegressorPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostRegressor instance has already been disposed'
@@ -175,7 +231,22 @@ pms_AdaBoostRegressor_predict = {k: v for k, v in pms_AdaBoostRegressor_predict.
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: AdaBoostRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostRegressor instance has already been disposed'
@@ -213,9 +284,12 @@ pms_AdaBoostRegressor_score = {k: v for k, v in pms_AdaBoostRegressor_score.item
 
     This generator method yields the ensemble prediction after each iteration of boosting and therefore allows monitoring, such as to determine the prediction on a test set after each boost.
    */
-  async staged_predict(
-    opts: AdaBoostRegressorStagedPredictOptions
-  ): Promise<any[]> {
+  async staged_predict(opts: {
+    /**
+      The training input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostRegressor instance has already been disposed'
@@ -249,9 +323,22 @@ pms_AdaBoostRegressor_staged_predict = {k: v for k, v in pms_AdaBoostRegressor_s
 
     This generator method yields the ensemble score after each iteration of boosting and therefore allows monitoring, such as to determine the score on a test set after each boost.
    */
-  async staged_score(
-    opts: AdaBoostRegressorStagedScoreOptions
-  ): Promise<number> {
+  async staged_score(opts: {
+    /**
+      The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Labels for X.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This AdaBoostRegressor instance has already been disposed'
@@ -445,107 +532,4 @@ pms_AdaBoostRegressor_staged_score = {k: v for k, v in pms_AdaBoostRegressor_sta
         ._py`attr_AdaBoostRegressor_feature_names_in_.tolist() if hasattr(attr_AdaBoostRegressor_feature_names_in_, 'tolist') else attr_AdaBoostRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface AdaBoostRegressorOptions {
-  /**
-    The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
-   */
-  estimator?: any
-
-  /**
-    The maximum number of estimators at which boosting is terminated. In case of perfect fit, the learning procedure is stopped early. Values must be in the range `\[1, inf)`.
-
-    @defaultValue `50`
-   */
-  n_estimators?: number
-
-  /**
-    Weight applied to each regressor at each boosting iteration. A higher learning rate increases the contribution of each regressor. There is a trade-off between the `learning\_rate` and `n\_estimators` parameters. Values must be in the range `(0.0, inf)`.
-
-    @defaultValue `1`
-   */
-  learning_rate?: number
-
-  /**
-    The loss function to use when updating the weights after each boosting iteration.
-
-    @defaultValue `'linear'`
-   */
-  loss?: 'linear' | 'square' | 'exponential'
-
-  /**
-    Controls the random seed given at each `estimator` at each boosting iteration. Thus, it is only used when `estimator` exposes a `random\_state`. In addition, it controls the bootstrap of the weights used to train the `estimator` at each boosting iteration. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The base estimator from which the boosted ensemble is built. If `undefined`, then the base estimator is [`DecisionTreeRegressor`](sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor "sklearn.tree.DecisionTreeRegressor") initialized with `max\_depth=3`.
-   */
-  base_estimator?: any
-}
-
-export interface AdaBoostRegressorFitOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, the sample weights are initialized to 1 / n\_samples.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface AdaBoostRegressorPredictOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface AdaBoostRegressorStagedPredictOptions {
-  /**
-    The training input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface AdaBoostRegressorStagedScoreOptions {
-  /**
-    The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO, DOK, and LIL are converted to CSR.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Labels for X.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

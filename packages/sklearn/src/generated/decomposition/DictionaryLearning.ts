@@ -22,7 +22,117 @@ export class DictionaryLearning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DictionaryLearningOptions) {
+  constructor(opts?: {
+    /**
+      Number of dictionary elements to extract. If `undefined`, then `n\_components` is set to `n\_features`.
+     */
+    n_components?: number
+
+    /**
+      Sparsity controlling parameter.
+
+      @defaultValue `1`
+     */
+    alpha?: number
+
+    /**
+      Maximum number of iterations to perform.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      Tolerance for numerical error.
+
+      @defaultValue `1e-8`
+     */
+    tol?: number
+
+    /**
+      `'lars'`: uses the least angle regression method to solve the lasso problem ([`lars\_path`](sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path "sklearn.linear_model.lars_path"));
+
+      @defaultValue `'lars'`
+     */
+    fit_algorithm?: 'lars' | 'cd'
+
+    /**
+      Algorithm used to transform the data:
+
+      @defaultValue `'omp'`
+     */
+    transform_algorithm?:
+      | 'lasso_lars'
+      | 'lasso_cd'
+      | 'lars'
+      | 'omp'
+      | 'threshold'
+
+    /**
+      Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
+     */
+    transform_n_nonzero_coefs?: number
+
+    /**
+      If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
+     */
+    transform_alpha?: number
+
+    /**
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Initial value for the code, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
+     */
+    code_init?: NDArray[]
+
+    /**
+      Initial values for the dictionary, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
+     */
+    dict_init?: NDArray[]
+
+    /**
+      To control the verbosity of the procedure.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
+
+      @defaultValue `false`
+     */
+    split_sign?: boolean
+
+    /**
+      Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Whether to enforce positivity when finding the code.
+
+      @defaultValue `false`
+     */
+    positive_code?: boolean
+
+    /**
+      Whether to enforce positivity when finding the dictionary.
+
+      @defaultValue `false`
+     */
+    positive_dict?: boolean
+
+    /**
+      Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_lars'`.
+
+      @defaultValue `1000`
+     */
+    transform_max_iter?: number
+  }) {
     this.id = `DictionaryLearning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -125,7 +235,17 @@ ctor_DictionaryLearning = {k: v for k, v in ctor_DictionaryLearning.items() if v
   /**
     Fit the model from data in X.
    */
-  async fit(opts: DictionaryLearningFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DictionaryLearning instance has already been disposed'
@@ -157,9 +277,22 @@ pms_DictionaryLearning_fit = {k: v for k, v in pms_DictionaryLearning_fit.items(
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: DictionaryLearningFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This DictionaryLearning instance has already been disposed'
@@ -197,9 +330,12 @@ pms_DictionaryLearning_fit_transform = {k: v for k, v in pms_DictionaryLearning_
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: DictionaryLearningGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.DictionaryLearning.fit "sklearn.decomposition.DictionaryLearning.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DictionaryLearning instance has already been disposed'
@@ -234,7 +370,12 @@ pms_DictionaryLearning_get_feature_names_out = {k: v for k, v in pms_DictionaryL
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: DictionaryLearningSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DictionaryLearning instance has already been disposed'
@@ -266,9 +407,12 @@ pms_DictionaryLearning_set_output = {k: v for k, v in pms_DictionaryLearning_set
 
     Coding method is determined by the object parameter `transform\_algorithm`.
    */
-  async transform(
-    opts: DictionaryLearningTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Test data to be transformed, must have the same number of features as the data used to train the model.
+     */
+    X?: NDArray[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This DictionaryLearning instance has already been disposed'
@@ -429,161 +573,4 @@ pms_DictionaryLearning_transform = {k: v for k, v in pms_DictionaryLearning_tran
         ._py`attr_DictionaryLearning_n_iter_.tolist() if hasattr(attr_DictionaryLearning_n_iter_, 'tolist') else attr_DictionaryLearning_n_iter_`
     })()
   }
-}
-
-export interface DictionaryLearningOptions {
-  /**
-    Number of dictionary elements to extract. If `undefined`, then `n\_components` is set to `n\_features`.
-   */
-  n_components?: number
-
-  /**
-    Sparsity controlling parameter.
-
-    @defaultValue `1`
-   */
-  alpha?: number
-
-  /**
-    Maximum number of iterations to perform.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    Tolerance for numerical error.
-
-    @defaultValue `1e-8`
-   */
-  tol?: number
-
-  /**
-    `'lars'`: uses the least angle regression method to solve the lasso problem ([`lars\_path`](sklearn.linear_model.lars_path.html#sklearn.linear_model.lars_path "sklearn.linear_model.lars_path"));
-
-    @defaultValue `'lars'`
-   */
-  fit_algorithm?: 'lars' | 'cd'
-
-  /**
-    Algorithm used to transform the data:
-
-    @defaultValue `'omp'`
-   */
-  transform_algorithm?: 'lasso_lars' | 'lasso_cd' | 'lars' | 'omp' | 'threshold'
-
-  /**
-    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'`. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
-   */
-  transform_n_nonzero_coefs?: number
-
-  /**
-    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `undefined`, defaults to `alpha`.
-   */
-  transform_alpha?: number
-
-  /**
-    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Initial value for the code, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
-   */
-  code_init?: NDArray[]
-
-  /**
-    Initial values for the dictionary, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
-   */
-  dict_init?: NDArray[]
-
-  /**
-    To control the verbosity of the procedure.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
-
-    @defaultValue `false`
-   */
-  split_sign?: boolean
-
-  /**
-    Used for initializing the dictionary when `dict\_init` is not specified, randomly shuffling the data when `shuffle` is set to `true`, and updating the dictionary. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Whether to enforce positivity when finding the code.
-
-    @defaultValue `false`
-   */
-  positive_code?: boolean
-
-  /**
-    Whether to enforce positivity when finding the dictionary.
-
-    @defaultValue `false`
-   */
-  positive_dict?: boolean
-
-  /**
-    Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `'lasso\_lars'`.
-
-    @defaultValue `1000`
-   */
-  transform_max_iter?: number
-}
-
-export interface DictionaryLearningFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface DictionaryLearningFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface DictionaryLearningGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.DictionaryLearning.fit "sklearn.decomposition.DictionaryLearning.fit").
-   */
-  input_features?: any
-}
-
-export interface DictionaryLearningSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface DictionaryLearningTransformOptions {
-  /**
-    Test data to be transformed, must have the same number of features as the data used to train the model.
-   */
-  X?: NDArray[]
 }

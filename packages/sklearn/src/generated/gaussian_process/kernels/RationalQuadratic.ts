@@ -20,7 +20,31 @@ export class RationalQuadratic {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RationalQuadraticOptions) {
+  constructor(opts?: {
+    /**
+      The length scale of the kernel.
+
+      @defaultValue `1`
+     */
+    length_scale?: any
+
+    /**
+      Scale mixture parameter
+
+      @defaultValue `1`
+     */
+    alpha?: any
+
+    /**
+      The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
+     */
+    length_scale_bounds?: 'fixed'
+
+    /**
+      The lower and upper bound on ‘alpha’. If set to “fixed”, ‘alpha’ cannot be changed during hyperparameter tuning.
+     */
+    alpha_bounds?: 'fixed'
+  }) {
     this.id = `RationalQuadratic${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +123,24 @@ ctor_RationalQuadratic = {k: v for k, v in ctor_RationalQuadratic.items() if v i
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: RationalQuadraticCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: NDArray[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
+     */
+    Y?: NDArray[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RationalQuadratic instance has already been disposed'
@@ -133,9 +174,12 @@ pms_RationalQuadratic___call__ = {k: v for k, v in pms_RationalQuadratic___call_
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(
-    opts: RationalQuadraticCloneWithThetaOptions
-  ): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RationalQuadratic instance has already been disposed'
@@ -170,7 +214,12 @@ pms_RationalQuadratic_clone_with_theta = {k: v for k, v in pms_RationalQuadratic
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: RationalQuadraticDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: NDArray[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RationalQuadratic instance has already been disposed'
@@ -200,9 +249,7 @@ pms_RationalQuadratic_diag = {k: v for k, v in pms_RationalQuadratic_diag.items(
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(
-    opts: RationalQuadraticIsStationaryOptions
-  ): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RationalQuadratic instance has already been disposed'
@@ -277,64 +324,3 @@ pms_RationalQuadratic_is_stationary = {k: v for k, v in pms_RationalQuadratic_is
     })()
   }
 }
-
-export interface RationalQuadraticOptions {
-  /**
-    The length scale of the kernel.
-
-    @defaultValue `1`
-   */
-  length_scale?: any
-
-  /**
-    Scale mixture parameter
-
-    @defaultValue `1`
-   */
-  alpha?: any
-
-  /**
-    The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
-   */
-  length_scale_bounds?: 'fixed'
-
-  /**
-    The lower and upper bound on ‘alpha’. If set to “fixed”, ‘alpha’ cannot be changed during hyperparameter tuning.
-   */
-  alpha_bounds?: 'fixed'
-}
-
-export interface RationalQuadraticCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: NDArray[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
-   */
-  Y?: NDArray[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface RationalQuadraticCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface RationalQuadraticDiagOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: NDArray[]
-}
-
-export interface RationalQuadraticIsStationaryOptions {}

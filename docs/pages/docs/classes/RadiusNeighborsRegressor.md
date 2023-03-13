@@ -15,20 +15,28 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new RadiusNeighborsRegressor(opts?: RadiusNeighborsRegressorOptions): RadiusNeighborsRegressor;
+new RadiusNeighborsRegressor(opts?: object): RadiusNeighborsRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `RadiusNeighborsRegressorOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm used to compute the nearest neighbors:  `Default Value`  `'auto'` |
+| `opts.leaf_size?` | `number` | Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.  `Default Value`  `30` |
+| `opts.metric?` | `string` | Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.  If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a sparse graph, in which case only “nonzero” elements may be considered neighbors.  If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.  `Default Value`  `'minkowski'` |
+| `opts.metric_params?` | `any` | Additional keyword arguments for the metric function. |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.p?` | `number` | Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.  `Default Value`  `2` |
+| `opts.radius?` | `number` | Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors "sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors") queries.  `Default Value`  `1` |
+| `opts.weights?` | `"uniform"` \| `"distance"` | Weight function used in prediction. Possible values:  `Default Value`  `'uniform'` |
 
 ### Returns
 
 [`RadiusNeighborsRegressor`](RadiusNeighborsRegressor.md)
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L25)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +44,31 @@ Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:25](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L23)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L22)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L21)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L18)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L19)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,7 +86,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L295)
+Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L423)
 
 ### effective\_metric\_params\_
 
@@ -94,7 +102,7 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L322)
+Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L450)
 
 ### feature\_names\_in\_
 
@@ -110,7 +118,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L376)
+Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L504)
 
 ### n\_features\_in\_
 
@@ -126,7 +134,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L349)
+Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L477)
 
 ### n\_samples\_fit\_
 
@@ -142,7 +150,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L403)
+Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L531)
 
 ### py
 
@@ -156,7 +164,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L30)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L86)
 
 #### Signature
 
@@ -174,7 +182,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L34)
+Defined in: [generated/neighbors/RadiusNeighborsRegressor.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L90)
 
 ## Methods
 
@@ -194,7 +202,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L93)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L149)
 
 ### fit()
 
@@ -203,20 +211,22 @@ Fit the radius neighbors regressor from the training dataset.
 #### Signature
 
 ```ts
-fit(opts: RadiusNeighborsRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsRegressorFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data. |
+| `opts.y?` | `any` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L110)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L166)
 
 ### init()
 
@@ -240,7 +250,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L43)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L99)
 
 ### predict()
 
@@ -249,20 +259,21 @@ Predict the target for the provided data.
 #### Signature
 
 ```ts
-predict(opts: RadiusNeighborsRegressorPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsRegressorPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Test samples. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L142)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L208)
 
 ### radius\_neighbors()
 
@@ -275,20 +286,24 @@ The result points are *not* necessarily sorted by distance to their query point.
 #### Signature
 
 ```ts
-radius_neighbors(opts: RadiusNeighborsRegressorRadiusNeighborsOptions): Promise<any>;
+radius_neighbors(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsRegressorRadiusNeighborsOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. |
+| `opts.radius?` | `number` | Limiting distance of neighbors to return. The default is the value passed to the constructor. |
+| `opts.return_distance?` | `boolean` | Whether or not to return the distances.  `Default Value`  `true` |
+| `opts.sort_results?` | `boolean` | If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L180)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L249)
 
 ### radius\_neighbors\_graph()
 
@@ -299,20 +314,24 @@ Neighborhoods are restricted the points at a distance lower than radius.
 #### Signature
 
 ```ts
-radius_neighbors_graph(opts: RadiusNeighborsRegressorRadiusNeighborsGraphOptions): Promise<any[]>;
+radius_neighbors_graph(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsRegressorRadiusNeighborsGraphOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. |
+| `opts.mode?` | `"connectivity"` \| `"distance"` | Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.  `Default Value`  `'connectivity'` |
+| `opts.radius?` | `number` | Radius of neighborhoods. The default is the value passed to the constructor. |
+| `opts.sort_results?` | `boolean` | If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L218)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L309)
 
 ### score()
 
@@ -323,17 +342,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: RadiusNeighborsRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsRegressorScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L259)
+Defined in:  [generated/neighbors/RadiusNeighborsRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsRegressor.ts#L372)

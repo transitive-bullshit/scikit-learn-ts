@@ -26,7 +26,77 @@ export class GridSearchCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GridSearchCVOptions) {
+  constructor(opts?: {
+    /**
+      This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
+     */
+    estimator?: any
+
+    /**
+      Dictionary with parameters names (`str`) as keys and lists of parameter settings to try as values, or a list of such dictionaries, in which case the grids spanned by each dictionary in the list are explored. This enables searching over any sequence of parameter settings.
+     */
+    param_grid?: any
+
+    /**
+      Strategy to evaluate the performance of the cross-validated model on the test set.
+
+      If `scoring` represents a single score, one can use:
+     */
+    scoring?: string | any[] | any
+
+    /**
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Refit an estimator using the best found parameters on the whole dataset.
+
+      For multiple metric evaluation, this needs to be a `str` denoting the scorer that would be used to find the best parameters for refitting the estimator at the end.
+
+      Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best\_index\_` given `cv\_results\_`. In that case, the `best\_estimator\_` and `best\_params\_` will be set according to the returned `best\_index\_` while the `best\_score\_` attribute will not be available.
+
+      The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `GridSearchCV` instance.
+
+      Also for multiple metric evaluation, the attributes `best\_index\_`, `best\_score\_` and `best\_params\_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
+
+      See `scoring` parameter to know more about multiple metric evaluation.
+
+      See [Custom refit strategy of a grid search with cross-validation](../../auto_examples/model_selection/plot_grid_search_digits.html#sphx-glr-auto-examples-model-selection-plot-grid-search-digits-py) to see how to design a custom selection strategy using a callable via `refit`.
+
+      @defaultValue `true`
+     */
+    refit?: boolean
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      Controls the verbosity: the higher, the more messages.
+     */
+    verbose?: number
+
+    /**
+      Controls the number of jobs that get dispatched during parallel execution. Reducing this number can be useful to avoid an explosion of memory consumption when more jobs get dispatched than CPUs can process. This parameter can be:
+
+      @defaultValue `'2*n_jobs'`
+     */
+    pre_dispatch?: string
+
+    /**
+      Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error.
+     */
+    error_score?: 'raise'
+
+    /**
+      If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+
+      @defaultValue `false`
+     */
+    return_train_score?: boolean
+  }) {
     this.id = `GridSearchCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -113,9 +183,12 @@ ctor_GridSearchCV = {k: v for k, v in ctor_GridSearchCV.items() if v is not None
 
     Only available if `refit=True` and the underlying estimator supports `decision\_function`.
    */
-  async decision_function(
-    opts: GridSearchCVDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -145,7 +218,29 @@ pms_GridSearchCV_decision_function = {k: v for k, v in pms_GridSearchCV_decision
   /**
     Run fit with all sets of parameters.
    */
-  async fit(opts: GridSearchCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target relative to X for classification or regression; `undefined` for unsupervised learning.
+     */
+    y?: ArrayLike[]
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
+     */
+    groups?: ArrayLike
+
+    /**
+      Parameters passed to the `fit` method of the estimator.
+
+      If a fit parameter is an array-like whose length is equal to `num\_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample\_weight](../../glossary.html#term-sample_weight) parameter is split because `len(sample\_weights) \= len(X)`.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -181,9 +276,12 @@ pms_GridSearchCV_fit = {k: v for k, v in pms_GridSearchCV_fit.items() if v is no
 
     Only available if the underlying estimator implements `inverse\_transform` and `refit=True`.
    */
-  async inverse_transform(
-    opts: GridSearchCVInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async inverse_transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    Xt?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -215,7 +313,12 @@ pms_GridSearchCV_inverse_transform = {k: v for k, v in pms_GridSearchCV_inverse_
 
     Only available if `refit=True` and the underlying estimator supports `predict`.
    */
-  async predict(opts: GridSearchCVPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -245,9 +348,12 @@ pms_GridSearchCV_predict = {k: v for k, v in pms_GridSearchCV_predict.items() if
 
     Only available if `refit=True` and the underlying estimator supports `predict\_log\_proba`.
    */
-  async predict_log_proba(
-    opts: GridSearchCVPredictLogProbaOptions
-  ): Promise<NDArray> {
+  async predict_log_proba(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -279,7 +385,12 @@ pms_GridSearchCV_predict_log_proba = {k: v for k, v in pms_GridSearchCV_predict_
 
     Only available if `refit=True` and the underlying estimator supports `predict\_proba`.
    */
-  async predict_proba(opts: GridSearchCVPredictProbaOptions): Promise<NDArray> {
+  async predict_proba(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -309,7 +420,17 @@ pms_GridSearchCV_predict_proba = {k: v for k, v in pms_GridSearchCV_predict_prob
 
     This uses the score defined by `scoring` where provided, and the `best\_estimator\_.score` method otherwise.
    */
-  async score(opts: GridSearchCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target relative to X for classification or regression; `undefined` for unsupervised learning.
+     */
+    y?: ArrayLike[]
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -341,7 +462,12 @@ pms_GridSearchCV_score = {k: v for k, v in pms_GridSearchCV_score.items() if v i
 
     Only available if `refit=True` and the underlying estimator supports `score\_samples`.
    */
-  async score_samples(opts: GridSearchCVScoreSamplesOptions): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -371,9 +497,12 @@ pms_GridSearchCV_score_samples = {k: v for k, v in pms_GridSearchCV_score_sample
 
     Only available if the underlying estimator supports `transform` and `refit=True`.
    */
-  async transform(
-    opts: GridSearchCVTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This GridSearchCV instance has already been disposed')
     }
@@ -663,161 +792,4 @@ pms_GridSearchCV_transform = {k: v for k, v in pms_GridSearchCV_transform.items(
         ._py`attr_GridSearchCV_feature_names_in_.tolist() if hasattr(attr_GridSearchCV_feature_names_in_, 'tolist') else attr_GridSearchCV_feature_names_in_`
     })()
   }
-}
-
-export interface GridSearchCVOptions {
-  /**
-    This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
-   */
-  estimator?: any
-
-  /**
-    Dictionary with parameters names (`str`) as keys and lists of parameter settings to try as values, or a list of such dictionaries, in which case the grids spanned by each dictionary in the list are explored. This enables searching over any sequence of parameter settings.
-   */
-  param_grid?: any
-
-  /**
-    Strategy to evaluate the performance of the cross-validated model on the test set.
-
-    If `scoring` represents a single score, one can use:
-   */
-  scoring?: string | any[] | any
-
-  /**
-    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Refit an estimator using the best found parameters on the whole dataset.
-
-    For multiple metric evaluation, this needs to be a `str` denoting the scorer that would be used to find the best parameters for refitting the estimator at the end.
-
-    Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best\_index\_` given `cv\_results\_`. In that case, the `best\_estimator\_` and `best\_params\_` will be set according to the returned `best\_index\_` while the `best\_score\_` attribute will not be available.
-
-    The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `GridSearchCV` instance.
-
-    Also for multiple metric evaluation, the attributes `best\_index\_`, `best\_score\_` and `best\_params\_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
-
-    See `scoring` parameter to know more about multiple metric evaluation.
-
-    See [Custom refit strategy of a grid search with cross-validation](../../auto_examples/model_selection/plot_grid_search_digits.html#sphx-glr-auto-examples-model-selection-plot-grid-search-digits-py) to see how to design a custom selection strategy using a callable via `refit`.
-
-    @defaultValue `true`
-   */
-  refit?: boolean
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    Controls the verbosity: the higher, the more messages.
-   */
-  verbose?: number
-
-  /**
-    Controls the number of jobs that get dispatched during parallel execution. Reducing this number can be useful to avoid an explosion of memory consumption when more jobs get dispatched than CPUs can process. This parameter can be:
-
-    @defaultValue `'2*n_jobs'`
-   */
-  pre_dispatch?: string
-
-  /**
-    Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error.
-   */
-  error_score?: 'raise'
-
-  /**
-    If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
-
-    @defaultValue `false`
-   */
-  return_train_score?: boolean
-}
-
-export interface GridSearchCVDecisionFunctionOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface GridSearchCVFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target relative to X for classification or regression; `undefined` for unsupervised learning.
-   */
-  y?: ArrayLike[]
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-   */
-  groups?: ArrayLike
-
-  /**
-    Parameters passed to the `fit` method of the estimator.
-
-    If a fit parameter is an array-like whose length is equal to `num\_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample\_weight](../../glossary.html#term-sample_weight) parameter is split because `len(sample\_weights) \= len(X)`.
-   */
-  fit_params?: any
-}
-
-export interface GridSearchCVInverseTransformOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  Xt?: any
-}
-
-export interface GridSearchCVPredictOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface GridSearchCVPredictLogProbaOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface GridSearchCVPredictProbaOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface GridSearchCVScoreOptions {
-  /**
-    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target relative to X for classification or regression; `undefined` for unsupervised learning.
-   */
-  y?: ArrayLike[]
-}
-
-export interface GridSearchCVScoreSamplesOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface GridSearchCVTransformOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
 }

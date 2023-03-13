@@ -15,20 +15,24 @@ Read more in the [User Guide](../ensemble.html#voting-regressor).
 ### Signature
 
 ```ts
-new VotingRegressor(opts?: VotingRegressorOptions): VotingRegressor;
+new VotingRegressor(opts?: object): VotingRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`VotingRegressorOptions`](../interfaces/VotingRegressorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.estimators?` | `any` | Invoking the `fit` method on the `VotingRegressor` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingRegressor.set_params "sklearn.ensemble.VotingRegressor.set_params"). |
+| `opts.n_jobs?` | `number` | The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.verbose?` | `boolean` | If `true`, the time elapsed while fitting will be printed as it is completed.  `Default Value`  `false` |
+| `opts.weights?` | [`ArrayLike`](../types/ArrayLike.md) | Sequence of weights (`float` or `int`) to weight the occurrences of predicted values before averaging. Uses uniform weights if `undefined`. |
 
 ### Returns
 
 [`VotingRegressor`](VotingRegressor.md)
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L25)
+Defined in:  [generated/ensemble/VotingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +40,31 @@ Defined in:  [generated/ensemble/VotingRegressor.ts:25](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L23)
+Defined in:  [generated/ensemble/VotingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L22)
+Defined in:  [generated/ensemble/VotingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L21)
+Defined in:  [generated/ensemble/VotingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L18)
+Defined in:  [generated/ensemble/VotingRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L19)
+Defined in:  [generated/ensemble/VotingRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,9 +82,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L327)
+Defined in:  [generated/ensemble/VotingRegressor.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L410)
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L327)
+Defined in:  [generated/ensemble/VotingRegressor.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L410)
 
 ### feature\_names\_in\_
 
@@ -96,9 +100,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L377)
+Defined in:  [generated/ensemble/VotingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L460)
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L377)
+Defined in:  [generated/ensemble/VotingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L460)
 
 ### named\_estimators\_
 
@@ -114,9 +118,9 @@ named_estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L352)
+Defined in:  [generated/ensemble/VotingRegressor.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L435)
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L352)
+Defined in:  [generated/ensemble/VotingRegressor.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L435)
 
 ### py
 
@@ -130,7 +134,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L30)
+Defined in:  [generated/ensemble/VotingRegressor.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L52)
 
 #### Signature
 
@@ -148,9 +152,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L34)
+Defined in:  [generated/ensemble/VotingRegressor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L56)
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L30) [generated/ensemble/VotingRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L34)
+Defined in:  [generated/ensemble/VotingRegressor.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L52) [generated/ensemble/VotingRegressor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L56)
 
 ## Methods
 
@@ -170,7 +174,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L87)
+Defined in:  [generated/ensemble/VotingRegressor.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L109)
 
 ### fit()
 
@@ -179,20 +183,23 @@ Fit the estimators.
 #### Signature
 
 ```ts
-fit(opts: VotingRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`VotingRegressorFitOptions`](../interfaces/VotingRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L104)
+Defined in:  [generated/ensemble/VotingRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L126)
 
 ### fit\_transform()
 
@@ -203,20 +210,23 @@ Return predictions for X for each estimator.
 #### Signature
 
 ```ts
-fit_transform(opts: VotingRegressorFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`VotingRegressorFitTransformOptions`](../interfaces/VotingRegressorFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L138)
+Defined in:  [generated/ensemble/VotingRegressor.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L175)
 
 ### get\_feature\_names\_out()
 
@@ -225,20 +235,21 @@ Get output feature names for transformation.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: VotingRegressorGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`VotingRegressorGetFeatureNamesOutOptions`](../interfaces/VotingRegressorGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L172)
+Defined in:  [generated/ensemble/VotingRegressor.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L222)
 
 ### init()
 
@@ -262,7 +273,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L43)
+Defined in:  [generated/ensemble/VotingRegressor.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L65)
 
 ### predict()
 
@@ -273,20 +284,21 @@ The predicted regression target of an input sample is computed as the mean predi
 #### Signature
 
 ```ts
-predict(opts: VotingRegressorPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`VotingRegressorPredictOptions`](../interfaces/VotingRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input samples. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L207)
+Defined in:  [generated/ensemble/VotingRegressor.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L260)
 
 ### score()
 
@@ -297,20 +309,23 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: VotingRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`VotingRegressorScoreOptions`](../interfaces/VotingRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L237)
+Defined in:  [generated/ensemble/VotingRegressor.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L295)
 
 ### set\_output()
 
@@ -321,20 +336,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: VotingRegressorSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`VotingRegressorSetOutputOptions`](../interfaces/VotingRegressorSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L271)
+Defined in:  [generated/ensemble/VotingRegressor.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L344)
 
 ### transform()
 
@@ -343,17 +359,18 @@ Return predictions for X for each estimator.
 #### Signature
 
 ```ts
-transform(opts: VotingRegressorTransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`VotingRegressorTransformOptions`](../interfaces/VotingRegressorTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input samples. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/VotingRegressor.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L299)
+Defined in:  [generated/ensemble/VotingRegressor.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/VotingRegressor.ts#L377)

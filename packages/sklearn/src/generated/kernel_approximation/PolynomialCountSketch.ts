@@ -20,7 +20,40 @@ export class PolynomialCountSketch {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PolynomialCountSketchOptions) {
+  constructor(opts?: {
+    /**
+      Parameter of the polynomial kernel whose feature map will be approximated.
+
+      @defaultValue `1`
+     */
+    gamma?: number
+
+    /**
+      Degree of the polynomial kernel whose feature map will be approximated.
+
+      @defaultValue `2`
+     */
+    degree?: number
+
+    /**
+      Constant term of the polynomial kernel whose feature map will be approximated.
+
+      @defaultValue `0`
+     */
+    coef0?: number
+
+    /**
+      Dimensionality of the output feature space. Usually, `n\_components` should be greater than the number of features in input samples in order to achieve good performance. The optimal score / run time balance is typically achieved around `n\_components` = 10 \* `n\_features`, but this depends on the specific dataset being used.
+
+      @defaultValue `100`
+     */
+    n_components?: number
+
+    /**
+      Determines random number generation for indexHash and bitHash initialization. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `PolynomialCountSketch${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +138,17 @@ ctor_PolynomialCountSketch = {k: v for k, v in ctor_PolynomialCountSketch.items(
 
     Initializes the internal variables. The method needs no information about the distribution of data, so we only care about n\_features in X.
    */
-  async fit(opts: PolynomialCountSketchFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialCountSketch instance has already been disposed'
@@ -139,9 +182,22 @@ pms_PolynomialCountSketch_fit = {k: v for k, v in pms_PolynomialCountSketch_fit.
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: PolynomialCountSketchFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialCountSketch instance has already been disposed'
@@ -180,9 +236,12 @@ pms_PolynomialCountSketch_fit_transform = {k: v for k, v in pms_PolynomialCountS
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: PolynomialCountSketchGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.PolynomialCountSketch.fit "sklearn.kernel_approximation.PolynomialCountSketch.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialCountSketch instance has already been disposed'
@@ -217,7 +276,12 @@ pms_PolynomialCountSketch_get_feature_names_out = {k: v for k, v in pms_Polynomi
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: PolynomialCountSketchSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialCountSketch instance has already been disposed'
@@ -249,9 +313,12 @@ pms_PolynomialCountSketch_set_output = {k: v for k, v in pms_PolynomialCountSket
   /**
     Generate the feature map approximation for X.
    */
-  async transform(
-    opts: PolynomialCountSketchTransformOptions
-  ): Promise<ArrayLike> {
+  async transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This PolynomialCountSketch instance has already been disposed'
@@ -387,89 +454,4 @@ pms_PolynomialCountSketch_transform = {k: v for k, v in pms_PolynomialCountSketc
         ._py`attr_PolynomialCountSketch_feature_names_in_.tolist() if hasattr(attr_PolynomialCountSketch_feature_names_in_, 'tolist') else attr_PolynomialCountSketch_feature_names_in_`
     })()
   }
-}
-
-export interface PolynomialCountSketchOptions {
-  /**
-    Parameter of the polynomial kernel whose feature map will be approximated.
-
-    @defaultValue `1`
-   */
-  gamma?: number
-
-  /**
-    Degree of the polynomial kernel whose feature map will be approximated.
-
-    @defaultValue `2`
-   */
-  degree?: number
-
-  /**
-    Constant term of the polynomial kernel whose feature map will be approximated.
-
-    @defaultValue `0`
-   */
-  coef0?: number
-
-  /**
-    Dimensionality of the output feature space. Usually, `n\_components` should be greater than the number of features in input samples in order to achieve good performance. The optimal score / run time balance is typically achieved around `n\_components` = 10 \* `n\_features`, but this depends on the specific dataset being used.
-
-    @defaultValue `100`
-   */
-  n_components?: number
-
-  /**
-    Determines random number generation for indexHash and bitHash initialization. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface PolynomialCountSketchFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-}
-
-export interface PolynomialCountSketchFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface PolynomialCountSketchGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.PolynomialCountSketch.fit "sklearn.kernel_approximation.PolynomialCountSketch.fit").
-   */
-  input_features?: any
-}
-
-export interface PolynomialCountSketchSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface PolynomialCountSketchTransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike
 }

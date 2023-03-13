@@ -15,20 +15,25 @@ The computation during [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "
 ### Signature
 
 ```ts
-new TransformedTargetRegressor(opts?: TransformedTargetRegressorOptions): TransformedTargetRegressor;
+new TransformedTargetRegressor(opts?: object): TransformedTargetRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `TransformedTargetRegressorOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.check_inverse?` | `boolean` | Whether to check that `transform` followed by `inverse\_transform` or `func` followed by `inverse\_func` leads to the original targets.  `Default Value`  `true` |
+| `opts.func?` | `any` | Function to apply to `y` before passing to [`fit`](#sklearn.compose.TransformedTargetRegressor.fit "sklearn.compose.TransformedTargetRegressor.fit"). Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. If `func is None`, the function used will be the identity function. |
+| `opts.inverse_func?` | `any` | Function to apply to the prediction of the regressor. Cannot be set at the same time as `transformer`. The function needs to return a 2-dimensional array. The inverse function is used to return predictions to the same space of the original training labels. |
+| `opts.regressor?` | `any` | Regressor object such as derived from [`RegressorMixin`](sklearn.base.RegressorMixin.html#sklearn.base.RegressorMixin "sklearn.base.RegressorMixin"). This regressor will automatically be cloned each time prior to fitting. If `regressor is None`, [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") is created and used. |
+| `opts.transformer?` | `any` | Estimator object such as derived from [`TransformerMixin`](sklearn.base.TransformerMixin.html#sklearn.base.TransformerMixin "sklearn.base.TransformerMixin"). Cannot be set at the same time as `func` and `inverse\_func`. If `transformer is None` as well as `func` and `inverse\_func`, the transformer will be an identity transformer. Note that the transformer will be cloned during fitting. Also, the transformer is restricting `y` to be a numpy array. |
 
 ### Returns
 
 [`TransformedTargetRegressor`](TransformedTargetRegressor.md)
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
 
 ## Properties
 
@@ -36,31 +41,31 @@ Defined in:  [generated/compose/TransformedTargetRegressor.ts:25](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19)
 
 ## Accessors
 
@@ -78,7 +83,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/compose/TransformedTargetRegressor.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L274)
+Defined in: [generated/compose/TransformedTargetRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L339)
 
 ### py
 
@@ -92,7 +97,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L30)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57)
 
 #### Signature
 
@@ -110,7 +115,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/compose/TransformedTargetRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L34)
+Defined in: [generated/compose/TransformedTargetRegressor.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L61)
 
 ### regressor\_
 
@@ -126,7 +131,7 @@ regressor_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/compose/TransformedTargetRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L220)
+Defined in: [generated/compose/TransformedTargetRegressor.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L285)
 
 ### transformer\_
 
@@ -142,7 +147,7 @@ transformer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/compose/TransformedTargetRegressor.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L247)
+Defined in: [generated/compose/TransformedTargetRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L312)
 
 ## Methods
 
@@ -162,7 +167,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L91)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L118)
 
 ### fit()
 
@@ -171,20 +176,23 @@ Fit the model according to the given training data.
 #### Signature
 
 ```ts
-fit(opts: TransformedTargetRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TransformedTargetRegressorFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.fit_params?` | `any` | Parameters passed to the `fit` method of the underlying regressor. |
+| `opts.y?` | `ArrayLike` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L108)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L135)
 
 ### init()
 
@@ -208,7 +216,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L43)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L70)
 
 ### predict()
 
@@ -219,20 +227,22 @@ The regressor is used to predict and the `inverse\_func` or `inverse\_transform`
 #### Signature
 
 ```ts
-predict(opts: TransformedTargetRegressorPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TransformedTargetRegressorPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Samples. |
+| `opts.predict_params?` | `any` | Parameters passed to the `predict` method of the underlying regressor. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L146)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L188)
 
 ### score()
 
@@ -243,17 +253,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: TransformedTargetRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `TransformedTargetRegressorScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L184)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L234)

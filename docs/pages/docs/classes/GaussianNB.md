@@ -13,20 +13,22 @@ Can perform online updates to model parameters via [`partial\_fit`](#sklearn.nai
 ### Signature
 
 ```ts
-new GaussianNB(opts?: GaussianNBOptions): GaussianNB;
+new GaussianNB(opts?: object): GaussianNB;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `GaussianNBOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.priors?` | `ArrayLike` | Prior probabilities of the classes. If specified, the priors are not adjusted according to the data. |
+| `opts.var_smoothing?` | `number` | Portion of the largest variance of all features that is added to variances for calculation stability.  `Default Value`  `1e-9` |
 
 ### Returns
 
 [`GaussianNB`](GaussianNB.md)
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L23)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L23)
 
 ## Properties
 
@@ -34,31 +36,31 @@ Defined in:  [generated/naive\_bayes/GaussianNB.ts:23](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L21)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L20)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L19)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L16)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L17)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L17)
 
 ## Accessors
 
@@ -76,7 +78,7 @@ class_count_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L330)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L408)
 
 ### class\_prior\_
 
@@ -92,7 +94,7 @@ class_prior_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L355)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L433)
 
 ### classes\_
 
@@ -108,7 +110,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L380)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L458)
 
 ### epsilon\_
 
@@ -124,7 +126,7 @@ epsilon_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L403)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L481)
 
 ### feature\_names\_in\_
 
@@ -140,7 +142,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L451)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L529)
 
 ### n\_features\_in\_
 
@@ -156,7 +158,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L426)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L504)
 
 ### py
 
@@ -170,7 +172,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L28)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L40)
 
 #### Signature
 
@@ -188,7 +190,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L32)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L44)
 
 ### theta\_
 
@@ -204,7 +206,7 @@ theta_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L499)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L577)
 
 ### var\_
 
@@ -220,7 +222,7 @@ var_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/naive\_bayes/GaussianNB.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L476)
+Defined in: [generated/naive\_bayes/GaussianNB.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L554)
 
 ## Methods
 
@@ -240,7 +242,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L83)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L95)
 
 ### fit()
 
@@ -249,20 +251,23 @@ Fit Gaussian Naive Bayes according to X, y.
 #### Signature
 
 ```ts
-fit(opts: GaussianNBFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianNBFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.sample_weight?` | `ArrayLike` | Weights applied to individual samples (1. for unweighted). |
+| `opts.y?` | `ArrayLike` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L100)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L112)
 
 ### init()
 
@@ -286,7 +291,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L41)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L53)
 
 ### partial\_fit()
 
@@ -301,20 +306,24 @@ This method has some performance and numerical stability overhead, hence it is b
 #### Signature
 
 ```ts
-partial_fit(opts: GaussianNBPartialFitOptions): Promise<any>;
+partial_fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianNBPartialFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.classes?` | `ArrayLike` | List of all the classes that can possibly appear in the y vector.  Must be provided at the first call to partial\_fit, can be omitted in subsequent calls. |
+| `opts.sample_weight?` | `ArrayLike` | Weights applied to individual samples (1. for unweighted). |
+| `opts.y?` | `ArrayLike` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L138)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L165)
 
 ### predict()
 
@@ -323,20 +332,21 @@ Perform classification on an array of test vectors X.
 #### Signature
 
 ```ts
-predict(opts: GaussianNBPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianNBPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | The input samples. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L174)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L223)
 
 ### predict\_joint\_log\_proba()
 
@@ -347,20 +357,21 @@ For each row x of X and class y, the joint log probability is given by `log P(x,
 #### Signature
 
 ```ts
-predict_joint_log_proba(opts: GaussianNBPredictJointLogProbaOptions): Promise<ArrayLike[]>;
+predict_joint_log_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianNBPredictJointLogProbaOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | The input samples. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L204)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L258)
 
 ### predict\_log\_proba()
 
@@ -369,20 +380,21 @@ Return log-probability estimates for the test vector X.
 #### Signature
 
 ```ts
-predict_log_proba(opts: GaussianNBPredictLogProbaOptions): Promise<ArrayLike[]>;
+predict_log_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianNBPredictLogProbaOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | The input samples. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L236)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L293)
 
 ### predict\_proba()
 
@@ -391,20 +403,21 @@ Return probability estimates for the test vector X.
 #### Signature
 
 ```ts
-predict_proba(opts: GaussianNBPredictProbaOptions): Promise<ArrayLike[]>;
+predict_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianNBPredictProbaOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | The input samples. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L266)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L326)
 
 ### score()
 
@@ -415,17 +428,20 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: GaussianNBScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianNBScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/naive\_bayes/GaussianNB.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L298)
+Defined in:  [generated/naive\_bayes/GaussianNB.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/naive_bayes/GaussianNB.ts#L361)

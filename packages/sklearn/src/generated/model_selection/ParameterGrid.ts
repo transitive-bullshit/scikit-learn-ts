@@ -22,7 +22,16 @@ export class ParameterGrid {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ParameterGridOptions) {
+  constructor(opts?: {
+    /**
+      The parameter grid to explore, as a dictionary mapping estimator parameters to sequences of allowed values.
+
+      An empty dict signifies default parameters.
+
+      A sequence of dicts signifies a sequence of grids to search, and is useful to avoid exploring parameter combinations that make no sense or have no effect. See the examples below.
+     */
+    param_grid?: any
+  }) {
     this.id = `ParameterGrid${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -93,15 +102,4 @@ ctor_ParameterGrid = {k: v for k, v in ctor_ParameterGrid.items() if v is not No
 
     this._isDisposed = true
   }
-}
-
-export interface ParameterGridOptions {
-  /**
-    The parameter grid to explore, as a dictionary mapping estimator parameters to sequences of allowed values.
-
-    An empty dict signifies default parameters.
-
-    A sequence of dicts signifies a sequence of grids to search, and is useful to avoid exploring parameter combinations that make no sense or have no effect. See the examples below.
-   */
-  param_grid?: any
 }

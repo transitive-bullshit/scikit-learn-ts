@@ -15,20 +15,24 @@ Read more in the [User Guide](../multiclass.html#ecoc).
 ### Signature
 
 ```ts
-new OutputCodeClassifier(opts?: OutputCodeClassifierOptions): OutputCodeClassifier;
+new OutputCodeClassifier(opts?: object): OutputCodeClassifier;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`OutputCodeClassifierOptions`](../interfaces/OutputCodeClassifierOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.code_size?` | `number` | Percentage of the number of classes to be used to create the code book. A number between 0 and 1 will require fewer classifiers than one-vs-the-rest. A number greater than 1 will require more classifiers than one-vs-the-rest.  `Default Value`  `1.5` |
+| `opts.estimator?` | `any` | An estimator object implementing [fit](../../glossary.html#term-fit) and one of [decision\_function](../../glossary.html#term-decision_function) or [predict\_proba](../../glossary.html#term-predict_proba). |
+| `opts.n_jobs?` | `number` | The number of jobs to use for the computation: the multiclass problems are computed in parallel.  `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.random_state?` | `number` | The generator used to initialize the codebook. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
 
 ### Returns
 
 [`OutputCodeClassifier`](OutputCodeClassifier.md)
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L25)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L25)
 
 ## Properties
 
@@ -36,31 +40,31 @@ Defined in:  [generated/multiclass/OutputCodeClassifier.ts:25](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L23)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L22)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L21)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L18)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L19)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L19)
 
 ## Accessors
 
@@ -78,9 +82,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L231)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L285)
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L231)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L285)
 
 ### code\_book\_
 
@@ -96,9 +100,9 @@ code_book_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L258)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L312)
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L258)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L312)
 
 ### estimators\_
 
@@ -114,9 +118,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L204)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L258)
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L204)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L258)
 
 ### feature\_names\_in\_
 
@@ -132,9 +136,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L312)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L366)
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L312)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L366)
 
 ### n\_features\_in\_
 
@@ -150,9 +154,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L285)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L339)
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L285)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L339)
 
 ### py
 
@@ -166,7 +170,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L30)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L54)
 
 #### Signature
 
@@ -184,9 +188,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L34)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L58)
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L30) [generated/multiclass/OutputCodeClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L34)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L54) [generated/multiclass/OutputCodeClassifier.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L58)
 
 ## Methods
 
@@ -206,7 +210,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L89)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L113)
 
 ### fit()
 
@@ -215,20 +219,22 @@ Fit underlying estimators.
 #### Signature
 
 ```ts
-fit(opts: OutputCodeClassifierFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`OutputCodeClassifierFitOptions`](../interfaces/OutputCodeClassifierFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Multi-class targets. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L106)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L130)
 
 ### init()
 
@@ -252,7 +258,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L43)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L67)
 
 ### predict()
 
@@ -261,20 +267,21 @@ Predict multi-class targets using underlying estimators.
 #### Signature
 
 ```ts
-predict(opts: OutputCodeClassifierPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`OutputCodeClassifierPredictOptions`](../interfaces/OutputCodeClassifierPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Data. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L138)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L172)
 
 ### score()
 
@@ -285,17 +292,20 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: OutputCodeClassifierScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`OutputCodeClassifierScoreOptions`](../interfaces/OutputCodeClassifierScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multiclass/OutputCodeClassifier.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L170)
+Defined in:  [generated/multiclass/OutputCodeClassifier.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/multiclass/OutputCodeClassifier.ts#L209)

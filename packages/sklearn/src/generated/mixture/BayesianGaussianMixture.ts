@@ -22,7 +22,116 @@ export class BayesianGaussianMixture {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BayesianGaussianMixtureOptions) {
+  constructor(opts?: {
+    /**
+      The number of mixture components. Depending on the data and the value of the `weight\_concentration\_prior` the model can decide to not use all the components by setting some component `weights\_` to values very close to zero. The number of effective components is therefore smaller than n\_components.
+
+      @defaultValue `1`
+     */
+    n_components?: number
+
+    /**
+      String describing the type of covariance parameters to use. Must be one of:
+
+      @defaultValue `'full'`
+     */
+    covariance_type?: 'full' | 'tied' | 'diag' | 'spherical'
+
+    /**
+      The convergence threshold. EM iterations will stop when the lower bound average gain on the likelihood (of the training data with respect to the model) is below this threshold.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Non-negative regularization added to the diagonal of covariance. Allows to assure that the covariance matrices are all positive.
+
+      @defaultValue `0.000001`
+     */
+    reg_covar?: number
+
+    /**
+      The number of EM iterations to perform.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      The number of initializations to perform. The result with the highest lower bound value on the likelihood is kept.
+
+      @defaultValue `1`
+     */
+    n_init?: number
+
+    /**
+      The method used to initialize the weights, the means and the covariances. String must be one of:
+
+      @defaultValue `'kmeans'`
+     */
+    init_params?: 'kmeans' | 'k-means++' | 'random' | 'random_from_data'
+
+    /**
+      String describing the type of the weight concentration prior.
+
+      @defaultValue `'dirichlet_process'`
+     */
+    weight_concentration_prior_type?:
+      | 'dirichlet_process'
+      | 'dirichlet_distribution'
+
+    /**
+      The dirichlet concentration of each component on the weight distribution (Dirichlet). This is commonly called gamma in the literature. The higher concentration puts more mass in the center and will lead to more components being active, while a lower concentration parameter will lead to more mass at the edge of the mixture weights simplex. The value of the parameter must be greater than 0. If it is `undefined`, it’s set to `1. / n\_components`.
+     */
+    weight_concentration_prior?: number
+
+    /**
+      The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. The value of the parameter must be greater than 0. If it is `undefined`, it is set to 1.
+     */
+    mean_precision_prior?: number
+
+    /**
+      The prior on the mean distribution (Gaussian). If it is `undefined`, it is set to the mean of X.
+     */
+    mean_prior?: ArrayLike
+
+    /**
+      The prior of the number of degrees of freedom on the covariance distributions (Wishart). If it is `undefined`, it’s set to `n\_features`.
+     */
+    degrees_of_freedom_prior?: number
+
+    /**
+      The prior on the covariance distribution (Wishart). If it is `undefined`, the emiprical covariance prior is initialized using the covariance of X. The shape depends on `covariance\_type`:
+     */
+    covariance_prior?: number | ArrayLike
+
+    /**
+      Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Enable verbose output. If 1 then it prints the current initialization and each iteration step. If greater than 1 then it prints also the log probability and the time needed for each step.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Number of iteration done before the next print.
+
+      @defaultValue `10`
+     */
+    verbose_interval?: number
+  }) {
     this.id = `BayesianGaussianMixture${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -127,7 +236,17 @@ ctor_BayesianGaussianMixture = {k: v for k, v in ctor_BayesianGaussianMixture.it
 
     The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `true`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
    */
-  async fit(opts: BayesianGaussianMixtureFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BayesianGaussianMixture instance has already been disposed'
@@ -159,9 +278,17 @@ pms_BayesianGaussianMixture_fit = {k: v for k, v in pms_BayesianGaussianMixture_
 
     The method fits the model n\_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
    */
-  async fit_predict(
-    opts: BayesianGaussianMixtureFitPredictOptions
-  ): Promise<any> {
+  async fit_predict(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BayesianGaussianMixture instance has already been disposed'
@@ -194,7 +321,12 @@ pms_BayesianGaussianMixture_fit_predict = {k: v for k, v in pms_BayesianGaussian
   /**
     Predict the labels for the data samples in X using trained model.
    */
-  async predict(opts: BayesianGaussianMixturePredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BayesianGaussianMixture instance has already been disposed'
@@ -226,9 +358,12 @@ pms_BayesianGaussianMixture_predict = {k: v for k, v in pms_BayesianGaussianMixt
   /**
     Evaluate the components’ density for each sample.
    */
-  async predict_proba(
-    opts: BayesianGaussianMixturePredictProbaOptions
-  ): Promise<any> {
+  async predict_proba(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BayesianGaussianMixture instance has already been disposed'
@@ -261,7 +396,14 @@ pms_BayesianGaussianMixture_predict_proba = {k: v for k, v in pms_BayesianGaussi
   /**
     Generate random samples from the fitted Gaussian distribution.
    */
-  async sample(opts: BayesianGaussianMixtureSampleOptions): Promise<any> {
+  async sample(opts: {
+    /**
+      Number of samples to generate.
+
+      @defaultValue `1`
+     */
+    n_samples?: number
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BayesianGaussianMixture instance has already been disposed'
@@ -293,7 +435,17 @@ pms_BayesianGaussianMixture_sample = {k: v for k, v in pms_BayesianGaussianMixtu
   /**
     Compute the per-sample average log-likelihood of the given data X.
    */
-  async score(opts: BayesianGaussianMixtureScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This BayesianGaussianMixture instance has already been disposed'
@@ -323,9 +475,12 @@ pms_BayesianGaussianMixture_score = {k: v for k, v in pms_BayesianGaussianMixtur
   /**
     Compute the log-likelihood of each sample.
    */
-  async score_samples(
-    opts: BayesianGaussianMixtureScoreSamplesOptions
-  ): Promise<any> {
+  async score_samples(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BayesianGaussianMixture instance has already been disposed'
@@ -840,181 +995,4 @@ pms_BayesianGaussianMixture_score_samples = {k: v for k, v in pms_BayesianGaussi
         ._py`attr_BayesianGaussianMixture_feature_names_in_.tolist() if hasattr(attr_BayesianGaussianMixture_feature_names_in_, 'tolist') else attr_BayesianGaussianMixture_feature_names_in_`
     })()
   }
-}
-
-export interface BayesianGaussianMixtureOptions {
-  /**
-    The number of mixture components. Depending on the data and the value of the `weight\_concentration\_prior` the model can decide to not use all the components by setting some component `weights\_` to values very close to zero. The number of effective components is therefore smaller than n\_components.
-
-    @defaultValue `1`
-   */
-  n_components?: number
-
-  /**
-    String describing the type of covariance parameters to use. Must be one of:
-
-    @defaultValue `'full'`
-   */
-  covariance_type?: 'full' | 'tied' | 'diag' | 'spherical'
-
-  /**
-    The convergence threshold. EM iterations will stop when the lower bound average gain on the likelihood (of the training data with respect to the model) is below this threshold.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Non-negative regularization added to the diagonal of covariance. Allows to assure that the covariance matrices are all positive.
-
-    @defaultValue `0.000001`
-   */
-  reg_covar?: number
-
-  /**
-    The number of EM iterations to perform.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    The number of initializations to perform. The result with the highest lower bound value on the likelihood is kept.
-
-    @defaultValue `1`
-   */
-  n_init?: number
-
-  /**
-    The method used to initialize the weights, the means and the covariances. String must be one of:
-
-    @defaultValue `'kmeans'`
-   */
-  init_params?: 'kmeans' | 'k-means++' | 'random' | 'random_from_data'
-
-  /**
-    String describing the type of the weight concentration prior.
-
-    @defaultValue `'dirichlet_process'`
-   */
-  weight_concentration_prior_type?:
-    | 'dirichlet_process'
-    | 'dirichlet_distribution'
-
-  /**
-    The dirichlet concentration of each component on the weight distribution (Dirichlet). This is commonly called gamma in the literature. The higher concentration puts more mass in the center and will lead to more components being active, while a lower concentration parameter will lead to more mass at the edge of the mixture weights simplex. The value of the parameter must be greater than 0. If it is `undefined`, it’s set to `1. / n\_components`.
-   */
-  weight_concentration_prior?: number
-
-  /**
-    The precision prior on the mean distribution (Gaussian). Controls the extent of where means can be placed. Larger values concentrate the cluster means around `mean\_prior`. The value of the parameter must be greater than 0. If it is `undefined`, it is set to 1.
-   */
-  mean_precision_prior?: number
-
-  /**
-    The prior on the mean distribution (Gaussian). If it is `undefined`, it is set to the mean of X.
-   */
-  mean_prior?: ArrayLike
-
-  /**
-    The prior of the number of degrees of freedom on the covariance distributions (Wishart). If it is `undefined`, it’s set to `n\_features`.
-   */
-  degrees_of_freedom_prior?: number
-
-  /**
-    The prior on the covariance distribution (Wishart). If it is `undefined`, the emiprical covariance prior is initialized using the covariance of X. The shape depends on `covariance\_type`:
-   */
-  covariance_prior?: number | ArrayLike
-
-  /**
-    Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Enable verbose output. If 1 then it prints the current initialization and each iteration step. If greater than 1 then it prints also the log probability and the time needed for each step.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Number of iteration done before the next print.
-
-    @defaultValue `10`
-   */
-  verbose_interval?: number
-}
-
-export interface BayesianGaussianMixtureFitOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface BayesianGaussianMixtureFitPredictOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface BayesianGaussianMixturePredictOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-}
-
-export interface BayesianGaussianMixturePredictProbaOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-}
-
-export interface BayesianGaussianMixtureSampleOptions {
-  /**
-    Number of samples to generate.
-
-    @defaultValue `1`
-   */
-  n_samples?: number
-}
-
-export interface BayesianGaussianMixtureScoreOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface BayesianGaussianMixtureScoreSamplesOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
 }

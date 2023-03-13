@@ -20,7 +20,7 @@ export class NotFittedError {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: NotFittedErrorOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `NotFittedError${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -95,7 +95,7 @@ ctor_NotFittedError = {k: v for k, v in ctor_NotFittedError.items() if v is not 
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(opts: NotFittedErrorWithTracebackOptions): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This NotFittedError instance has already been disposed')
     }
@@ -118,9 +118,3 @@ pms_NotFittedError_with_traceback = {k: v for k, v in pms_NotFittedError_with_tr
       ._py`res_NotFittedError_with_traceback.tolist() if hasattr(res_NotFittedError_with_traceback, 'tolist') else res_NotFittedError_with_traceback`
   }
 }
-
-export interface NotFittedErrorOptions {
-  args?: any
-}
-
-export interface NotFittedErrorWithTracebackOptions {}

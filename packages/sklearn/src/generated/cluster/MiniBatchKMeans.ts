@@ -20,7 +20,103 @@ export class MiniBatchKMeans {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MiniBatchKMeansOptions) {
+  constructor(opts?: {
+    /**
+      The number of clusters to form as well as the number of centroids to generate.
+
+      @defaultValue `8`
+     */
+    n_clusters?: number
+
+    /**
+      Method for initialization:
+
+      ‘k-means++’ : selects initial cluster centroids using sampling based on an empirical probability distribution of the points’ contribution to the overall inertia. This technique speeds up convergence. The algorithm implemented is “greedy k-means++”. It differs from the vanilla k-means++ by making several trials at each sampling step and choosing the best centroid among them.
+
+      ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.
+
+      If an array is passed, it should be of shape (n\_clusters, n\_features) and gives the initial centers.
+
+      If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.
+
+      @defaultValue `'k-means++'`
+     */
+    init?: 'k-means++' | 'random' | ArrayLike[]
+
+    /**
+      Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      Size of the mini batches. For faster computations, you can set the `batch\_size` greater than 256 \* number of cores to enable parallelism on all cores.
+
+      @defaultValue `1024`
+     */
+    batch_size?: number
+
+    /**
+      Verbosity mode.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Compute label assignment and inertia for the complete dataset once the minibatch optimization has converged in fit.
+
+      @defaultValue `true`
+     */
+    compute_labels?: boolean
+
+    /**
+      Determines random number generation for centroid initialization and random reassignment. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Control early stopping based on the relative center changes as measured by a smoothed, variance-normalized of the mean center squared position changes. This early stopping heuristics is closer to the one used for the batch variant of the algorithms but induces a slight computational and memory overhead over the inertia heuristic.
+
+      To disable convergence detection based on normalized center change, set tol to 0.0 (default).
+
+      @defaultValue `0`
+     */
+    tol?: number
+
+    /**
+      Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed inertia.
+
+      To disable convergence detection based on inertia, set max\_no\_improvement to `undefined`.
+
+      @defaultValue `10`
+     */
+    max_no_improvement?: number
+
+    /**
+      Number of samples to randomly sample for speeding up the initialization (sometimes at the expense of accuracy): the only algorithm is initialized by running a batch KMeans on a random subset of the data. This needs to be larger than n\_clusters.
+
+      If `undefined`, the heuristic is `init\_size \= 3 \* batch\_size` if `3 \* batch\_size < n\_clusters`, else `init\_size \= 3 \* n\_clusters`.
+     */
+    init_size?: number
+
+    /**
+      Number of random initializations that are tried. In contrast to KMeans, the algorithm is only run once, using the best of the `n\_init` initializations as measured by inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).
+
+      When `n\_init='auto'`, the number of runs depends on the value of init: 3 if using `init='random'`, 1 if using `init='k-means++'`.
+
+      @defaultValue `3`
+     */
+    n_init?: 'auto' | number
+
+    /**
+      Control the fraction of the maximum number of counts for a center to be reassigned. A higher value means that low count centers are more easily reassigned, which means that the model will take longer to converge, but should converge in a better clustering. However, too high a value may cause convergence issues, especially with a small batch size.
+
+      @defaultValue `0.01`
+     */
+    reassignment_ratio?: number
+  }) {
     this.id = `MiniBatchKMeans${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +205,22 @@ ctor_MiniBatchKMeans = {k: v for k, v in ctor_MiniBatchKMeans.items() if v is no
   /**
     Compute the centroids on X by chunking it into mini-batches.
    */
-  async fit(opts: MiniBatchKMeansFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -143,7 +254,22 @@ pms_MiniBatchKMeans_fit = {k: v for k, v in pms_MiniBatchKMeans_fit.items() if v
 
     Convenience method; equivalent to calling fit(X) followed by predict(X).
    */
-  async fit_predict(opts: MiniBatchKMeansFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      New data to transform.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -177,9 +303,22 @@ pms_MiniBatchKMeans_fit_predict = {k: v for k, v in pms_MiniBatchKMeans_fit_pred
 
     Equivalent to fit(X).transform(X), but more efficiently implemented.
    */
-  async fit_transform(
-    opts: MiniBatchKMeansFitTransformOptions
-  ): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      New data to transform.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -213,9 +352,12 @@ pms_MiniBatchKMeans_fit_transform = {k: v for k, v in pms_MiniBatchKMeans_fit_tr
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: MiniBatchKMeansGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.MiniBatchKMeans.fit "sklearn.cluster.MiniBatchKMeans.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -246,7 +388,22 @@ pms_MiniBatchKMeans_get_feature_names_out = {k: v for k, v in pms_MiniBatchKMean
   /**
     Update k means estimate on a single mini-batch X.
    */
-  async partial_fit(opts: MiniBatchKMeansPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -280,7 +437,17 @@ pms_MiniBatchKMeans_partial_fit = {k: v for k, v in pms_MiniBatchKMeans_partial_
 
     In the vector quantization literature, `cluster\_centers\_` is called the code book and each value returned by `predict` is the index of the closest code in the code book.
    */
-  async predict(opts: MiniBatchKMeansPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      New data to predict.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -310,7 +477,22 @@ pms_MiniBatchKMeans_predict = {k: v for k, v in pms_MiniBatchKMeans_predict.item
   /**
     Opposite of the value of X on the K-means objective.
    */
-  async score(opts: MiniBatchKMeansScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      New data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -344,7 +526,12 @@ pms_MiniBatchKMeans_score = {k: v for k, v in pms_MiniBatchKMeans_score.items() 
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: MiniBatchKMeansSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -374,7 +561,12 @@ pms_MiniBatchKMeans_set_output = {k: v for k, v in pms_MiniBatchKMeans_set_outpu
 
     In the new space, each dimension is the distance to the cluster centers. Note that even if X is sparse, the array returned by `transform` will typically be dense.
    */
-  async transform(opts: MiniBatchKMeansTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      New data to transform.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MiniBatchKMeans instance has already been disposed')
     }
@@ -573,220 +765,4 @@ pms_MiniBatchKMeans_transform = {k: v for k, v in pms_MiniBatchKMeans_transform.
         ._py`attr_MiniBatchKMeans_feature_names_in_.tolist() if hasattr(attr_MiniBatchKMeans_feature_names_in_, 'tolist') else attr_MiniBatchKMeans_feature_names_in_`
     })()
   }
-}
-
-export interface MiniBatchKMeansOptions {
-  /**
-    The number of clusters to form as well as the number of centroids to generate.
-
-    @defaultValue `8`
-   */
-  n_clusters?: number
-
-  /**
-    Method for initialization:
-
-    ‘k-means++’ : selects initial cluster centroids using sampling based on an empirical probability distribution of the points’ contribution to the overall inertia. This technique speeds up convergence. The algorithm implemented is “greedy k-means++”. It differs from the vanilla k-means++ by making several trials at each sampling step and choosing the best centroid among them.
-
-    ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.
-
-    If an array is passed, it should be of shape (n\_clusters, n\_features) and gives the initial centers.
-
-    If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.
-
-    @defaultValue `'k-means++'`
-   */
-  init?: 'k-means++' | 'random' | ArrayLike[]
-
-  /**
-    Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    Size of the mini batches. For faster computations, you can set the `batch\_size` greater than 256 \* number of cores to enable parallelism on all cores.
-
-    @defaultValue `1024`
-   */
-  batch_size?: number
-
-  /**
-    Verbosity mode.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Compute label assignment and inertia for the complete dataset once the minibatch optimization has converged in fit.
-
-    @defaultValue `true`
-   */
-  compute_labels?: boolean
-
-  /**
-    Determines random number generation for centroid initialization and random reassignment. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Control early stopping based on the relative center changes as measured by a smoothed, variance-normalized of the mean center squared position changes. This early stopping heuristics is closer to the one used for the batch variant of the algorithms but induces a slight computational and memory overhead over the inertia heuristic.
-
-    To disable convergence detection based on normalized center change, set tol to 0.0 (default).
-
-    @defaultValue `0`
-   */
-  tol?: number
-
-  /**
-    Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed inertia.
-
-    To disable convergence detection based on inertia, set max\_no\_improvement to `undefined`.
-
-    @defaultValue `10`
-   */
-  max_no_improvement?: number
-
-  /**
-    Number of samples to randomly sample for speeding up the initialization (sometimes at the expense of accuracy): the only algorithm is initialized by running a batch KMeans on a random subset of the data. This needs to be larger than n\_clusters.
-
-    If `undefined`, the heuristic is `init\_size \= 3 \* batch\_size` if `3 \* batch\_size < n\_clusters`, else `init\_size \= 3 \* n\_clusters`.
-   */
-  init_size?: number
-
-  /**
-    Number of random initializations that are tried. In contrast to KMeans, the algorithm is only run once, using the best of the `n\_init` initializations as measured by inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).
-
-    When `n\_init='auto'`, the number of runs depends on the value of init: 3 if using `init='random'`, 1 if using `init='k-means++'`.
-
-    @defaultValue `3`
-   */
-  n_init?: 'auto' | number
-
-  /**
-    Control the fraction of the maximum number of counts for a center to be reassigned. A higher value means that low count centers are more easily reassigned, which means that the model will take longer to converge, but should converge in a better clustering. However, too high a value may cause convergence issues, especially with a small batch size.
-
-    @defaultValue `0.01`
-   */
-  reassignment_ratio?: number
-}
-
-export interface MiniBatchKMeansFitOptions {
-  /**
-    Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface MiniBatchKMeansFitPredictOptions {
-  /**
-    New data to transform.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface MiniBatchKMeansFitTransformOptions {
-  /**
-    New data to transform.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface MiniBatchKMeansGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.MiniBatchKMeans.fit "sklearn.cluster.MiniBatchKMeans.fit").
-   */
-  input_features?: any
-}
-
-export interface MiniBatchKMeansPartialFitOptions {
-  /**
-    Training instances to cluster. It must be noted that the data will be converted to C ordering, which will cause a memory copy if the given data is not C-contiguous. If a sparse matrix is passed, a copy will be made if it’s not in CSR format.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface MiniBatchKMeansPredictOptions {
-  /**
-    New data to predict.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface MiniBatchKMeansScoreOptions {
-  /**
-    New data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface MiniBatchKMeansSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface MiniBatchKMeansTransformOptions {
-  /**
-    New data to transform.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

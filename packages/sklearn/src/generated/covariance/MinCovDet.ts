@@ -22,7 +22,31 @@ export class MinCovDet {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MinCovDetOptions) {
+  constructor(opts?: {
+    /**
+      Specify if the estimated precision is stored.
+
+      @defaultValue `true`
+     */
+    store_precision?: boolean
+
+    /**
+      If `true`, the support of the robust location and the covariance estimates is computed, and a covariance estimate is recomputed from it, without centering the data. Useful to work with data whose mean is significantly equal to zero but is not exactly zero. If `false`, the robust location and covariance are directly computed with the FastMCD algorithm without additional treatment.
+
+      @defaultValue `false`
+     */
+    assume_centered?: boolean
+
+    /**
+      The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_sample + n\_features + 1) / 2`. The parameter must be in the range (0, 1\].
+     */
+    support_fraction?: number
+
+    /**
+      Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `MinCovDet${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -102,9 +126,12 @@ ctor_MinCovDet = {k: v for k, v in ctor_MinCovDet.items() if v is not None}`
 
     Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](#r491365aeaa84-rvd).
    */
-  async correct_covariance(
-    opts: MinCovDetCorrectCovarianceOptions
-  ): Promise<NDArray[]> {
+  async correct_covariance(opts: {
+    /**
+      The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
+     */
+    data?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MinCovDet instance has already been disposed')
     }
@@ -132,7 +159,33 @@ pms_MinCovDet_correct_covariance = {k: v for k, v in pms_MinCovDet_correct_covar
   /**
     Compute the Mean Squared Error between two covariance estimators.
    */
-  async error_norm(opts: MinCovDetErrorNormOptions): Promise<number> {
+  async error_norm(opts: {
+    /**
+      The covariance to compare with.
+     */
+    comp_cov?: ArrayLike[]
+
+    /**
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+
+      @defaultValue `'frobenius'`
+     */
+    norm?: 'frobenius' | 'spectral'
+
+    /**
+      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+
+      @defaultValue `true`
+     */
+    scaling?: boolean
+
+    /**
+      Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
+
+      @defaultValue `true`
+     */
+    squared?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This MinCovDet instance has already been disposed')
     }
@@ -164,7 +217,17 @@ pms_MinCovDet_error_norm = {k: v for k, v in pms_MinCovDet_error_norm.items() if
   /**
     Fit a Minimum Covariance Determinant with the FastMCD algorithm.
    */
-  async fit(opts: MinCovDetFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MinCovDet instance has already been disposed')
     }
@@ -192,7 +255,12 @@ pms_MinCovDet_fit = {k: v for k, v in pms_MinCovDet_fit.items() if v is not None
   /**
     Getter for the precision matrix.
    */
-  async get_precision(opts: MinCovDetGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      The precision matrix associated to the current covariance object.
+     */
+    precision_?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MinCovDet instance has already been disposed')
     }
@@ -220,7 +288,12 @@ pms_MinCovDet_get_precision = {k: v for k, v in pms_MinCovDet_get_precision.item
   /**
     Compute the squared Mahalanobis distances of given observations.
    */
-  async mahalanobis(opts: MinCovDetMahalanobisOptions): Promise<NDArray> {
+  async mahalanobis(opts: {
+    /**
+      The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MinCovDet instance has already been disposed')
     }
@@ -250,9 +323,12 @@ pms_MinCovDet_mahalanobis = {k: v for k, v in pms_MinCovDet_mahalanobis.items() 
 
     Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](#r9465bad4668c-rvdriessen).
    */
-  async reweight_covariance(
-    opts: MinCovDetReweightCovarianceOptions
-  ): Promise<NDArray> {
+  async reweight_covariance(opts: {
+    /**
+      The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
+     */
+    data?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This MinCovDet instance has already been disposed')
     }
@@ -282,7 +358,17 @@ pms_MinCovDet_reweight_covariance = {k: v for k, v in pms_MinCovDet_reweight_cov
 
     The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
-  async score(opts: MinCovDetScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+     */
+    X_test?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This MinCovDet instance has already been disposed')
     }
@@ -548,110 +634,4 @@ pms_MinCovDet_score = {k: v for k, v in pms_MinCovDet_score.items() if v is not 
         ._py`attr_MinCovDet_feature_names_in_.tolist() if hasattr(attr_MinCovDet_feature_names_in_, 'tolist') else attr_MinCovDet_feature_names_in_`
     })()
   }
-}
-
-export interface MinCovDetOptions {
-  /**
-    Specify if the estimated precision is stored.
-
-    @defaultValue `true`
-   */
-  store_precision?: boolean
-
-  /**
-    If `true`, the support of the robust location and the covariance estimates is computed, and a covariance estimate is recomputed from it, without centering the data. Useful to work with data whose mean is significantly equal to zero but is not exactly zero. If `false`, the robust location and covariance are directly computed with the FastMCD algorithm without additional treatment.
-
-    @defaultValue `false`
-   */
-  assume_centered?: boolean
-
-  /**
-    The proportion of points to be included in the support of the raw MCD estimate. Default is `undefined`, which implies that the minimum value of support\_fraction will be used within the algorithm: `(n\_sample + n\_features + 1) / 2`. The parameter must be in the range (0, 1\].
-   */
-  support_fraction?: number
-
-  /**
-    Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface MinCovDetCorrectCovarianceOptions {
-  /**
-    The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
-   */
-  data?: ArrayLike[]
-}
-
-export interface MinCovDetErrorNormOptions {
-  /**
-    The covariance to compare with.
-   */
-  comp_cov?: ArrayLike[]
-
-  /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
-
-    @defaultValue `'frobenius'`
-   */
-  norm?: 'frobenius' | 'spectral'
-
-  /**
-    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
-
-    @defaultValue `true`
-   */
-  scaling?: boolean
-
-  /**
-    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
-
-    @defaultValue `true`
-   */
-  squared?: boolean
-}
-
-export interface MinCovDetFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface MinCovDetGetPrecisionOptions {
-  /**
-    The precision matrix associated to the current covariance object.
-   */
-  precision_?: ArrayLike[]
-}
-
-export interface MinCovDetMahalanobisOptions {
-  /**
-    The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
-   */
-  X?: ArrayLike[]
-}
-
-export interface MinCovDetReweightCovarianceOptions {
-  /**
-    The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
-   */
-  data?: ArrayLike[]
-}
-
-export interface MinCovDetScoreOptions {
-  /**
-    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
-   */
-  X_test?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
 }

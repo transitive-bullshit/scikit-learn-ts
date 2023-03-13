@@ -22,7 +22,64 @@ export class TheilSenRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: TheilSenRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations.
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      Instead of computing with a set of cardinality ‘n choose k’, where n is the number of samples and k is the number of subsamples (at least number of features), consider only a stochastic subpopulation of a given maximal size if ‘n choose k’ is larger than max\_subpopulation. For other than small problem sizes this parameter will determine memory usage and runtime if n\_subsamples is not changed. Note that the data type should be int but floats such as 1e4 can be accepted too.
+
+      @defaultValue `10000`
+     */
+    max_subpopulation?: number
+
+    /**
+      Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit\_intercept=`true`) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If `undefined`, take the minimum number of subsamples leading to maximal robustness. If n\_subsamples is set to n\_samples, Theil-Sen is identical to least squares.
+     */
+    n_subsamples?: number
+
+    /**
+      Maximum number of iterations for the calculation of spatial median.
+
+      @defaultValue `300`
+     */
+    max_iter?: number
+
+    /**
+      Tolerance when calculating spatial median.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      A random number generator instance to define the state of the random permutations generator. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Verbose mode when fitting the model.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `TheilSenRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +164,17 @@ ctor_TheilSenRegressor = {k: v for k, v in ctor_TheilSenRegressor.items() if v i
   /**
     Fit linear model.
    */
-  async fit(opts: TheilSenRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: NDArray[]
+
+    /**
+      Target values.
+     */
+    y?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TheilSenRegressor instance has already been disposed'
@@ -139,7 +206,12 @@ pms_TheilSenRegressor_fit = {k: v for k, v in pms_TheilSenRegressor_fit.items() 
   /**
     Predict using the linear model.
    */
-  async predict(opts: TheilSenRegressorPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This TheilSenRegressor instance has already been disposed'
@@ -171,7 +243,22 @@ pms_TheilSenRegressor_predict = {k: v for k, v in pms_TheilSenRegressor_predict.
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: TheilSenRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This TheilSenRegressor instance has already been disposed'
@@ -390,99 +477,4 @@ pms_TheilSenRegressor_score = {k: v for k, v in pms_TheilSenRegressor_score.item
         ._py`attr_TheilSenRegressor_feature_names_in_.tolist() if hasattr(attr_TheilSenRegressor_feature_names_in_, 'tolist') else attr_TheilSenRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface TheilSenRegressorOptions {
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations.
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    Instead of computing with a set of cardinality ‘n choose k’, where n is the number of samples and k is the number of subsamples (at least number of features), consider only a stochastic subpopulation of a given maximal size if ‘n choose k’ is larger than max\_subpopulation. For other than small problem sizes this parameter will determine memory usage and runtime if n\_subsamples is not changed. Note that the data type should be int but floats such as 1e4 can be accepted too.
-
-    @defaultValue `10000`
-   */
-  max_subpopulation?: number
-
-  /**
-    Number of samples to calculate the parameters. This is at least the number of features (plus 1 if fit\_intercept=`true`) and the number of samples as a maximum. A lower number leads to a higher breakdown point and a low efficiency while a high number leads to a low breakdown point and a high efficiency. If `undefined`, take the minimum number of subsamples leading to maximal robustness. If n\_subsamples is set to n\_samples, Theil-Sen is identical to least squares.
-   */
-  n_subsamples?: number
-
-  /**
-    Maximum number of iterations for the calculation of spatial median.
-
-    @defaultValue `300`
-   */
-  max_iter?: number
-
-  /**
-    Tolerance when calculating spatial median.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    A random number generator instance to define the state of the random permutations generator. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Verbose mode when fitting the model.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface TheilSenRegressorFitOptions {
-  /**
-    Training data.
-   */
-  X?: NDArray[]
-
-  /**
-    Target values.
-   */
-  y?: NDArray
-}
-
-export interface TheilSenRegressorPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface TheilSenRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

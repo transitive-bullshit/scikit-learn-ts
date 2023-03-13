@@ -20,7 +20,38 @@ export class EllipticEnvelope {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: EllipticEnvelopeOptions) {
+  constructor(opts?: {
+    /**
+      Specify if the estimated precision is stored.
+
+      @defaultValue `true`
+     */
+    store_precision?: boolean
+
+    /**
+      If `true`, the support of robust location and covariance estimates is computed, and a covariance estimate is recomputed from it, without centering the data. Useful to work with data whose mean is significantly equal to zero but is not exactly zero. If `false`, the robust location and covariance are directly computed with the FastMCD algorithm without additional treatment.
+
+      @defaultValue `false`
+     */
+    assume_centered?: boolean
+
+    /**
+      The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support\_fraction will be used within the algorithm: `\[n\_sample + n\_features + 1\] / 2`. Range is (0, 1).
+     */
+    support_fraction?: number
+
+    /**
+      The amount of contamination of the data set, i.e. the proportion of outliers in the data set. Range is (0, 0.5\].
+
+      @defaultValue `0.1`
+     */
+    contamination?: number
+
+    /**
+      Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `EllipticEnvelope${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,9 +136,12 @@ ctor_EllipticEnvelope = {k: v for k, v in ctor_EllipticEnvelope.items() if v is 
 
     Correction using the empirical correction factor suggested by Rousseeuw and Van Driessen in [\[RVD\]](#rbb2ba44703ed-rvd).
    */
-  async correct_covariance(
-    opts: EllipticEnvelopeCorrectCovarianceOptions
-  ): Promise<NDArray[]> {
+  async correct_covariance(opts: {
+    /**
+      The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
+     */
+    data?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -140,9 +174,12 @@ pms_EllipticEnvelope_correct_covariance = {k: v for k, v in pms_EllipticEnvelope
   /**
     Compute the decision function of the given observations.
    */
-  async decision_function(
-    opts: EllipticEnvelopeDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -174,7 +211,33 @@ pms_EllipticEnvelope_decision_function = {k: v for k, v in pms_EllipticEnvelope_
   /**
     Compute the Mean Squared Error between two covariance estimators.
    */
-  async error_norm(opts: EllipticEnvelopeErrorNormOptions): Promise<number> {
+  async error_norm(opts: {
+    /**
+      The covariance to compare with.
+     */
+    comp_cov?: ArrayLike[]
+
+    /**
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+
+      @defaultValue `'frobenius'`
+     */
+    norm?: 'frobenius' | 'spectral'
+
+    /**
+      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+
+      @defaultValue `true`
+     */
+    scaling?: boolean
+
+    /**
+      Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
+
+      @defaultValue `true`
+     */
+    squared?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -208,7 +271,17 @@ pms_EllipticEnvelope_error_norm = {k: v for k, v in pms_EllipticEnvelope_error_n
   /**
     Fit the EllipticEnvelope model.
    */
-  async fit(opts: EllipticEnvelopeFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -240,7 +313,17 @@ pms_EllipticEnvelope_fit = {k: v for k, v in pms_EllipticEnvelope_fit.items() if
 
     Returns -1 for outliers and 1 for inliers.
    */
-  async fit_predict(opts: EllipticEnvelopeFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -270,7 +353,12 @@ pms_EllipticEnvelope_fit_predict = {k: v for k, v in pms_EllipticEnvelope_fit_pr
   /**
     Getter for the precision matrix.
    */
-  async get_precision(opts: EllipticEnvelopeGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      The precision matrix associated to the current covariance object.
+     */
+    precision_?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -303,9 +391,12 @@ pms_EllipticEnvelope_get_precision = {k: v for k, v in pms_EllipticEnvelope_get_
   /**
     Compute the squared Mahalanobis distances of given observations.
    */
-  async mahalanobis(
-    opts: EllipticEnvelopeMahalanobisOptions
-  ): Promise<NDArray> {
+  async mahalanobis(opts: {
+    /**
+      The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -335,7 +426,12 @@ pms_EllipticEnvelope_mahalanobis = {k: v for k, v in pms_EllipticEnvelope_mahala
   /**
     Predict labels (1 inlier, -1 outlier) of X according to fitted model.
    */
-  async predict(opts: EllipticEnvelopePredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -367,9 +463,12 @@ pms_EllipticEnvelope_predict = {k: v for k, v in pms_EllipticEnvelope_predict.it
 
     Re-weight observations using Rousseeuw’s method (equivalent to deleting outlying observations from the data set before computing location and covariance estimates) described in [\[RVDriessen\]](#rd2c89e63f1c9-rvdriessen).
    */
-  async reweight_covariance(
-    opts: EllipticEnvelopeReweightCovarianceOptions
-  ): Promise<NDArray> {
+  async reweight_covariance(opts: {
+    /**
+      The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
+     */
+    data?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -404,7 +503,22 @@ pms_EllipticEnvelope_reweight_covariance = {k: v for k, v in pms_EllipticEnvelop
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: EllipticEnvelopeScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for X.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -438,9 +552,12 @@ pms_EllipticEnvelope_score = {k: v for k, v in pms_EllipticEnvelope_score.items(
   /**
     Compute the negative Mahalanobis distances.
    */
-  async score_samples(
-    opts: EllipticEnvelopeScoreSamplesOptions
-  ): Promise<ArrayLike> {
+  async score_samples(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This EllipticEnvelope instance has already been disposed'
@@ -765,155 +882,4 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
         ._py`attr_EllipticEnvelope_feature_names_in_.tolist() if hasattr(attr_EllipticEnvelope_feature_names_in_, 'tolist') else attr_EllipticEnvelope_feature_names_in_`
     })()
   }
-}
-
-export interface EllipticEnvelopeOptions {
-  /**
-    Specify if the estimated precision is stored.
-
-    @defaultValue `true`
-   */
-  store_precision?: boolean
-
-  /**
-    If `true`, the support of robust location and covariance estimates is computed, and a covariance estimate is recomputed from it, without centering the data. Useful to work with data whose mean is significantly equal to zero but is not exactly zero. If `false`, the robust location and covariance are directly computed with the FastMCD algorithm without additional treatment.
-
-    @defaultValue `false`
-   */
-  assume_centered?: boolean
-
-  /**
-    The proportion of points to be included in the support of the raw MCD estimate. If `undefined`, the minimum value of support\_fraction will be used within the algorithm: `\[n\_sample + n\_features + 1\] / 2`. Range is (0, 1).
-   */
-  support_fraction?: number
-
-  /**
-    The amount of contamination of the data set, i.e. the proportion of outliers in the data set. Range is (0, 0.5\].
-
-    @defaultValue `0.1`
-   */
-  contamination?: number
-
-  /**
-    Determines the pseudo random number generator for shuffling the data. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface EllipticEnvelopeCorrectCovarianceOptions {
-  /**
-    The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
-   */
-  data?: ArrayLike[]
-}
-
-export interface EllipticEnvelopeDecisionFunctionOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
-}
-
-export interface EllipticEnvelopeErrorNormOptions {
-  /**
-    The covariance to compare with.
-   */
-  comp_cov?: ArrayLike[]
-
-  /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
-
-    @defaultValue `'frobenius'`
-   */
-  norm?: 'frobenius' | 'spectral'
-
-  /**
-    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
-
-    @defaultValue `true`
-   */
-  scaling?: boolean
-
-  /**
-    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
-
-    @defaultValue `true`
-   */
-  squared?: boolean
-}
-
-export interface EllipticEnvelopeFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface EllipticEnvelopeFitPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface EllipticEnvelopeGetPrecisionOptions {
-  /**
-    The precision matrix associated to the current covariance object.
-   */
-  precision_?: ArrayLike[]
-}
-
-export interface EllipticEnvelopeMahalanobisOptions {
-  /**
-    The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
-   */
-  X?: ArrayLike[]
-}
-
-export interface EllipticEnvelopePredictOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
-}
-
-export interface EllipticEnvelopeReweightCovarianceOptions {
-  /**
-    The data matrix, with p features and n samples. The data set must be the one which was used to compute the raw estimates.
-   */
-  data?: ArrayLike[]
-}
-
-export interface EllipticEnvelopeScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for X.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface EllipticEnvelopeScoreSamplesOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
 }

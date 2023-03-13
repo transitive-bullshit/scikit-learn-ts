@@ -20,7 +20,7 @@ export class EfficiencyWarning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: EfficiencyWarningOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `EfficiencyWarning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,9 +97,7 @@ ctor_EfficiencyWarning = {k: v for k, v in ctor_EfficiencyWarning.items() if v i
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(
-    opts: EfficiencyWarningWithTracebackOptions
-  ): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This EfficiencyWarning instance has already been disposed'
@@ -126,9 +124,3 @@ pms_EfficiencyWarning_with_traceback = {k: v for k, v in pms_EfficiencyWarning_w
       ._py`res_EfficiencyWarning_with_traceback.tolist() if hasattr(res_EfficiencyWarning_with_traceback, 'tolist') else res_EfficiencyWarning_with_traceback`
   }
 }
-
-export interface EfficiencyWarningOptions {
-  args?: any
-}
-
-export interface EfficiencyWarningWithTracebackOptions {}

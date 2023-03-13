@@ -19,20 +19,39 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new SGDRegressor(opts?: SGDRegressorOptions): SGDRegressor;
+new SGDRegressor(opts?: object): SGDRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `SGDRegressorOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when set to `learning\_rate` is set to ‘optimal’.  `Default Value`  `0.0001` |
+| `opts.average?` | `number` \| `boolean` | When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples.  `Default Value`  `false` |
+| `opts.early_stopping?` | `boolean` | Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs.  `Default Value`  `false` |
+| `opts.epsilon?` | `number` | Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold.  `Default Value`  `0.1` |
+| `opts.eta0?` | `number` | The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.01.  `Default Value`  `0.01` |
+| `opts.fit_intercept?` | `boolean` | Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.  `Default Value`  `true` |
+| `opts.l1_ratio?` | `number` | The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’.  `Default Value`  `0.15` |
+| `opts.learning_rate?` | `string` | The learning rate schedule:  `Default Value`  `'invscaling'` |
+| `opts.loss?` | `string` | The loss function to be used. The possible values are ‘squared\_error’, ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’  The ‘squared\_error’ refers to the ordinary least squares fit. ‘huber’ modifies ‘squared\_error’ to focus less on getting outliers correct by switching from squared to linear loss past a distance of epsilon. ‘epsilon\_insensitive’ ignores errors less than epsilon and is linear past that; this is the loss function used in SVR. ‘squared\_epsilon\_insensitive’ is the same but becomes squared loss past a tolerance of epsilon.  More details about the losses formulas can be found in the User Guide.  `Default Value`  `'squared_error'` |
+| `opts.max_iter?` | `number` | The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDRegressor.partial_fit "sklearn.linear_model.SGDRegressor.partial_fit") method.  `Default Value`  `1000` |
+| `opts.n_iter_no_change?` | `number` | Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.  `Default Value`  `5` |
+| `opts.penalty?` | `"l1"` \| `"l2"` \| `"elasticnet"` | The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is the standard regularizer for linear SVM models. ‘l1’ and ‘elasticnet’ might bring sparsity to the model (feature selection) not achievable with ‘l2’. No penalty is added when set to `undefined`.  `Default Value`  `'l2'` |
+| `opts.power_t?` | `number` | The exponent for inverse scaling learning rate.  `Default Value`  `0.25` |
+| `opts.random_state?` | `number` | Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See Glossary. |
+| `opts.shuffle?` | `boolean` | Whether or not the training data should be shuffled after each epoch.  `Default Value`  `true` |
+| `opts.tol?` | `number` | The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.  `Default Value`  `0.001` |
+| `opts.validation_fraction?` | `number` | The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`.  `Default Value`  `0.1` |
+| `opts.verbose?` | `number` | The verbosity level.  `Default Value`  `0` |
+| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See the Glossary.  Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.  `Default Value`  `false` |
 
 ### Returns
 
 [`SGDRegressor`](SGDRegressor.md)
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L29)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L29)
 
 ## Properties
 
@@ -40,31 +59,31 @@ Defined in:  [generated/linear\_model/SGDRegressor.ts:29](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L27)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L26)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L25)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L22)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L23)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L23)
 
 ## Accessors
 
@@ -82,7 +101,7 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L312)
+Defined in: [generated/linear\_model/SGDRegressor.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L509)
 
 ### feature\_names\_in\_
 
@@ -98,7 +117,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L431)
+Defined in: [generated/linear\_model/SGDRegressor.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L628)
 
 ### intercept\_
 
@@ -114,7 +133,7 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:335](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L335)
+Defined in: [generated/linear\_model/SGDRegressor.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L532)
 
 ### n\_features\_in\_
 
@@ -130,7 +149,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L406)
+Defined in: [generated/linear\_model/SGDRegressor.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L603)
 
 ### n\_iter\_
 
@@ -146,7 +165,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L360)
+Defined in: [generated/linear\_model/SGDRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L557)
 
 ### py
 
@@ -160,7 +179,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L34)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L171)
 
 #### Signature
 
@@ -178,7 +197,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L38)
+Defined in: [generated/linear\_model/SGDRegressor.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L175)
 
 ### t\_
 
@@ -194,7 +213,7 @@ t_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/SGDRegressor.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L383)
+Defined in: [generated/linear\_model/SGDRegressor.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L580)
 
 ## Methods
 
@@ -207,20 +226,20 @@ Converts the `coef\_` member (back) to a numpy.ndarray. This is the default form
 #### Signature
 
 ```ts
-densify(opts: SGDRegressorDensifyOptions): Promise<any>;
+densify(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | `SGDRegressorDensifyOptions` |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L126)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:263](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L263)
 
 ### dispose()
 
@@ -238,7 +257,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L107)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L244)
 
 ### fit()
 
@@ -247,20 +266,25 @@ Fit linear model with Stochastic Gradient Descent.
 #### Signature
 
 ```ts
-fit(opts: SGDRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SGDRegressorFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Training data. |
+| `opts.coef_init?` | `ArrayLike` | The initial coefficients to warm-start the optimization. |
+| `opts.intercept_init?` | `ArrayLike` | The initial intercept to warm-start the optimization. |
+| `opts.sample_weight?` | `ArrayLike` | Weights applied to individual samples (1. for unweighted). |
+| `opts.y?` | `ArrayLike` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L152)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L289)
 
 ### init()
 
@@ -284,7 +308,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L47)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L184)
 
 ### partial\_fit()
 
@@ -295,20 +319,23 @@ Internally, this method uses `max\_iter \= 1`. Therefore, it is not guaranteed t
 #### Signature
 
 ```ts
-partial_fit(opts: SGDRegressorPartialFitOptions): Promise<any>;
+partial_fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SGDRegressorPartialFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Subset of training data. |
+| `opts.sample_weight?` | `ArrayLike` | Weights applied to individual samples. If not provided, uniform weights are assumed. |
+| `opts.y?` | `any`[] | Subset of target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L190)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L352)
 
 ### predict()
 
@@ -317,20 +344,21 @@ Predict using the linear model.
 #### Signature
 
 ```ts
-predict(opts: SGDRegressorPredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SGDRegressorPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Input data. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L220)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L397)
 
 ### score()
 
@@ -341,20 +369,23 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: SGDRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `SGDRegressorScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L250)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:432](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L432)
 
 ### sparsify()
 
@@ -367,17 +398,17 @@ The `intercept\_` member is not converted.
 #### Signature
 
 ```ts
-sparsify(opts: SGDRegressorSparsifyOptions): Promise<any>;
+sparsify(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | `SGDRegressorSparsifyOptions` |
+| `opts` | `object` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/SGDRegressor.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L286)
+Defined in:  [generated/linear\_model/SGDRegressor.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/SGDRegressor.ts#L483)

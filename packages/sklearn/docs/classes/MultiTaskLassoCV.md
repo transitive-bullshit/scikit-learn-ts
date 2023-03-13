@@ -15,20 +15,32 @@ The optimization objective for MultiTaskLasso is:
 ### Signature
 
 ```ts
-new MultiTaskLassoCV(opts?: MultiTaskLassoCVOptions): MultiTaskLassoCV;
+new MultiTaskLassoCV(opts?: object): MultiTaskLassoCV;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`MultiTaskLassoCVOptions`](../interfaces/MultiTaskLassoCVOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alphas?` | [`ArrayLike`](../types/ArrayLike.md) | List of alphas where to compute the models. If not provided, set automatically. |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.cv?` | `number` | Determines the cross-validation splitting strategy. Possible inputs for cv are: |
+| `opts.eps?` | `number` | Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.  `Default Value`  `0.001` |
+| `opts.fit_intercept?` | `boolean` | Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).  `Default Value`  `true` |
+| `opts.max_iter?` | `number` | The maximum number of iterations.  `Default Value`  `1000` |
+| `opts.n_alphas?` | `number` | Number of alphas along the regularization path.  `Default Value`  `100` |
+| `opts.n_jobs?` | `number` | Number of CPUs to use during the cross validation. Note that this is used only if multiple values for l1\_ratio are given. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.random_state?` | `number` | The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.selection?` | `"random"` \| `"cyclic"` | If set to ‘random’, a random coefficient is updated every iteration rather than looping over features sequentially by default. This (setting to ‘random’) often leads to significantly faster convergence especially when tol is higher than 1e-4.  `Default Value`  `'cyclic'` |
+| `opts.tol?` | `number` | The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.  `Default Value`  `0.0001` |
+| `opts.verbose?` | `number` \| `boolean` | Amount of verbosity.  `Default Value`  `false` |
 
 ### Returns
 
 [`MultiTaskLassoCV`](MultiTaskLassoCV.md)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L25)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L25)
 
 ## Properties
 
@@ -36,31 +48,31 @@ Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:25](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L23)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L22)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L21)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L18)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L19)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L19)
 
 ## Accessors
 
@@ -78,9 +90,9 @@ alpha_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L320)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L505)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L320)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L505)
 
 ### alphas\_
 
@@ -96,9 +108,9 @@ alphas_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L374)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L559)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L374)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L559)
 
 ### coef\_
 
@@ -114,9 +126,9 @@ coef_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L293)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L478)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L293)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L478)
 
 ### dual\_gap\_
 
@@ -132,9 +144,9 @@ dual_gap_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L428)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L613)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L428)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L613)
 
 ### feature\_names\_in\_
 
@@ -150,9 +162,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L482)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:667](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L667)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L482)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:667](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L667)
 
 ### intercept\_
 
@@ -168,9 +180,9 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L266)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L451)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L266)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L451)
 
 ### mse\_path\_
 
@@ -186,9 +198,9 @@ mse_path_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L347)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L532)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L347)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:532](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L532)
 
 ### n\_features\_in\_
 
@@ -204,9 +216,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L455)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L640)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L455)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L640)
 
 ### n\_iter\_
 
@@ -222,9 +234,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L401)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L586)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L401)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L586)
 
 ### py
 
@@ -238,7 +250,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L30)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L106)
 
 #### Signature
 
@@ -256,9 +268,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L34)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L110)
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L30) [generated/linear\_model/MultiTaskLassoCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L34)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L106) [generated/linear\_model/MultiTaskLassoCV.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L110)
 
 ## Methods
 
@@ -278,7 +290,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L97)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L173)
 
 ### fit()
 
@@ -289,20 +301,22 @@ Fit is on grid of alphas and best alpha estimated by cross-validation.
 #### Signature
 
 ```ts
-fit(opts: MultiTaskLassoCVFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiTaskLassoCVFitOptions`](../interfaces/MultiTaskLassoCVFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md)[] | Target. Will be cast to X’s dtype if necessary. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L116)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:192](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L192)
 
 ### init()
 
@@ -326,7 +340,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L43)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L119)
 
 ### path()
 
@@ -339,20 +353,33 @@ For mono-output tasks it is:
 #### Signature
 
 ```ts
-path(opts: MultiTaskLassoCVPathOptions): Promise<ArrayLike>;
+path(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiTaskLassoCVPathOptions`](../interfaces/MultiTaskLassoCVPathOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse. |
+| `opts.Xy?` | [`ArrayLike`](../types/ArrayLike.md) | Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed. |
+| `opts.alphas?` | [`ArrayLike`](../types/ArrayLike.md) | List of alphas where to compute the models. If `undefined` alphas are set automatically. |
+| `opts.coef_init?` | [`ArrayLike`](../types/ArrayLike.md) | The initial values of the coefficients. |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.eps?` | `number` | Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.  `Default Value`  `0.001` |
+| `opts.n_alphas?` | `number` | Number of alphas along the regularization path.  `Default Value`  `100` |
+| `opts.params?` | `any` | Keyword arguments passed to the coordinate descent solver. |
+| `opts.positive?` | `boolean` | If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).  `Default Value`  `false` |
+| `opts.precompute?` | `boolean` \| [`ArrayLike`](../types/ArrayLike.md)[] \| `"auto"` | Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.  `Default Value`  `'auto'` |
+| `opts.return_n_iter?` | `boolean` | Whether to return the number of iterations or not.  `Default Value`  `false` |
+| `opts.verbose?` | `number` \| `boolean` | Amount of verbosity.  `Default Value`  `false` |
+| `opts.y?` | `any` | Target values. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L152)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L238)
 
 ### predict()
 
@@ -361,20 +388,21 @@ Predict using the linear model.
 #### Signature
 
 ```ts
-predict(opts: MultiTaskLassoCVPredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiTaskLassoCVPredictOptions`](../interfaces/MultiTaskLassoCVPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L200)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L365)
 
 ### score()
 
@@ -385,17 +413,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: MultiTaskLassoCVScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiTaskLassoCVScoreOptions`](../interfaces/MultiTaskLassoCVScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L232)
+Defined in:  [generated/linear\_model/MultiTaskLassoCV.ts:402](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/MultiTaskLassoCV.ts#L402)

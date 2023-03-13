@@ -20,7 +20,19 @@ export class MultiLabelBinarizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MultiLabelBinarizerOptions) {
+  constructor(opts?: {
+    /**
+      Indicates an ordering for the class labels. All entries should be unique (cannot contain duplicate classes).
+     */
+    classes?: ArrayLike
+
+    /**
+      Set to `true` if output binary array is desired in CSR sparse format.
+
+      @defaultValue `false`
+     */
+    sparse_output?: boolean
+  }) {
     this.id = `MultiLabelBinarizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +113,12 @@ ctor_MultiLabelBinarizer = {k: v for k, v in ctor_MultiLabelBinarizer.items() if
   /**
     Fit the label sets binarizer, storing [classes\_](../../glossary.html#term-classes_).
    */
-  async fit(opts: MultiLabelBinarizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiLabelBinarizer instance has already been disposed'
@@ -131,9 +148,12 @@ pms_MultiLabelBinarizer_fit = {k: v for k, v in pms_MultiLabelBinarizer_fit.item
   /**
     Fit the label sets binarizer and transform the given label sets.
    */
-  async fit_transform(
-    opts: MultiLabelBinarizerFitTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async fit_transform(opts: {
+    /**
+      A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
+     */
+    y?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiLabelBinarizer instance has already been disposed'
@@ -165,9 +185,12 @@ pms_MultiLabelBinarizer_fit_transform = {k: v for k, v in pms_MultiLabelBinarize
   /**
     Transform the given indicator matrix into label sets.
    */
-  async inverse_transform(
-    opts: MultiLabelBinarizerInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      A matrix containing only 1s ands 0s.
+     */
+    yt?: NDArray | SparseMatrix[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiLabelBinarizer instance has already been disposed'
@@ -202,7 +225,12 @@ pms_MultiLabelBinarizer_inverse_transform = {k: v for k, v in pms_MultiLabelBina
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: MultiLabelBinarizerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiLabelBinarizer instance has already been disposed'
@@ -234,7 +262,12 @@ pms_MultiLabelBinarizer_set_output = {k: v for k, v in pms_MultiLabelBinarizer_s
   /**
     Transform the given label sets.
    */
-  async transform(opts: MultiLabelBinarizerTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MultiLabelBinarizer instance has already been disposed'
@@ -287,53 +320,4 @@ pms_MultiLabelBinarizer_transform = {k: v for k, v in pms_MultiLabelBinarizer_tr
         ._py`attr_MultiLabelBinarizer_classes_.tolist() if hasattr(attr_MultiLabelBinarizer_classes_, 'tolist') else attr_MultiLabelBinarizer_classes_`
     })()
   }
-}
-
-export interface MultiLabelBinarizerOptions {
-  /**
-    Indicates an ordering for the class labels. All entries should be unique (cannot contain duplicate classes).
-   */
-  classes?: ArrayLike
-
-  /**
-    Set to `true` if output binary array is desired in CSR sparse format.
-
-    @defaultValue `false`
-   */
-  sparse_output?: boolean
-}
-
-export interface MultiLabelBinarizerFitOptions {
-  /**
-    A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
-   */
-  y?: any
-}
-
-export interface MultiLabelBinarizerFitTransformOptions {
-  /**
-    A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
-   */
-  y?: any
-}
-
-export interface MultiLabelBinarizerInverseTransformOptions {
-  /**
-    A matrix containing only 1s ands 0s.
-   */
-  yt?: NDArray | SparseMatrix[]
-}
-
-export interface MultiLabelBinarizerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface MultiLabelBinarizerTransformOptions {
-  /**
-    A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated.
-   */
-  y?: any
 }

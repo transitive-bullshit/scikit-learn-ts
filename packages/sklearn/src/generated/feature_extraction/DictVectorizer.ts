@@ -30,7 +30,33 @@ export class DictVectorizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DictVectorizerOptions) {
+  constructor(opts?: {
+    /**
+      The type of feature values. Passed to Numpy array/scipy.sparse matrix constructors as the dtype argument.
+     */
+    dtype?: any
+
+    /**
+      Separator string used when constructing new features for one-hot coding.
+
+      @defaultValue `'='`
+     */
+    separator?: string
+
+    /**
+      Whether transform should produce scipy.sparse matrices.
+
+      @defaultValue `true`
+     */
+    sparse?: boolean
+
+    /**
+      Whether `feature\_names\_` and `vocabulary\_` should be sorted when fitting.
+
+      @defaultValue `true`
+     */
+    sort?: boolean
+  }) {
     this.id = `DictVectorizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +133,17 @@ ctor_DictVectorizer = {k: v for k, v in ctor_DictVectorizer.items() if v is not 
   /**
     Learn a list of feature name -> indices mappings.
    */
-  async fit(opts: DictVectorizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype).
+     */
+    X?: any
+
+    /**
+      Ignored parameter.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
     }
@@ -137,9 +173,17 @@ pms_DictVectorizer_fit = {k: v for k, v in pms_DictVectorizer_fit.items() if v i
 
     Like fit(X) followed by transform(X), but does not require materializing X in memory.
    */
-  async fit_transform(
-    opts: DictVectorizerFitTransformOptions
-  ): Promise<SparseMatrix> {
+  async fit_transform(opts: {
+    /**
+      Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype).
+     */
+    X?: any
+
+    /**
+      Ignored parameter.
+     */
+    y?: any
+  }): Promise<SparseMatrix> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
     }
@@ -167,9 +211,12 @@ pms_DictVectorizer_fit_transform = {k: v for k, v in pms_DictVectorizer_fit_tran
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: DictVectorizerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
     }
@@ -204,9 +251,17 @@ pms_DictVectorizer_get_feature_names_out = {k: v for k, v in pms_DictVectorizer_
 
     In the case of one-hot/one-of-K coding, the constructed feature names and values are returned rather than the original ones.
    */
-  async inverse_transform(
-    opts: DictVectorizerInverseTransformOptions
-  ): Promise<any[]> {
+  async inverse_transform(opts: {
+    /**
+      Sample matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Constructor for feature mappings. Must conform to the collections.Mapping API.
+     */
+    dict_type?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
     }
@@ -240,7 +295,19 @@ pms_DictVectorizer_inverse_transform = {k: v for k, v in pms_DictVectorizer_inve
 
     This function modifies the estimator in-place.
    */
-  async restrict(opts: DictVectorizerRestrictOptions): Promise<any> {
+  async restrict(opts: {
+    /**
+      Boolean mask or list of indices (as returned by the get\_support member of feature selectors).
+     */
+    support?: ArrayLike
+
+    /**
+      Whether support is a list of indices.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
     }
@@ -270,7 +337,12 @@ pms_DictVectorizer_restrict = {k: v for k, v in pms_DictVectorizer_restrict.item
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: DictVectorizerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
     }
@@ -300,7 +372,12 @@ pms_DictVectorizer_set_output = {k: v for k, v in pms_DictVectorizer_set_output.
 
     Named features not encountered during fit or fit\_transform will be silently ignored.
    */
-  async transform(opts: DictVectorizerTransformOptions): Promise<SparseMatrix> {
+  async transform(opts: {
+    /**
+      Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype).
+     */
+    X?: any[]
+  }): Promise<SparseMatrix> {
     if (this._isDisposed) {
       throw new Error('This DictVectorizer instance has already been disposed')
     }
@@ -374,103 +451,4 @@ pms_DictVectorizer_transform = {k: v for k, v in pms_DictVectorizer_transform.it
         ._py`attr_DictVectorizer_feature_names_.tolist() if hasattr(attr_DictVectorizer_feature_names_, 'tolist') else attr_DictVectorizer_feature_names_`
     })()
   }
-}
-
-export interface DictVectorizerOptions {
-  /**
-    The type of feature values. Passed to Numpy array/scipy.sparse matrix constructors as the dtype argument.
-   */
-  dtype?: any
-
-  /**
-    Separator string used when constructing new features for one-hot coding.
-
-    @defaultValue `'='`
-   */
-  separator?: string
-
-  /**
-    Whether transform should produce scipy.sparse matrices.
-
-    @defaultValue `true`
-   */
-  sparse?: boolean
-
-  /**
-    Whether `feature\_names\_` and `vocabulary\_` should be sorted when fitting.
-
-    @defaultValue `true`
-   */
-  sort?: boolean
-}
-
-export interface DictVectorizerFitOptions {
-  /**
-    Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype).
-   */
-  X?: any
-
-  /**
-    Ignored parameter.
-   */
-  y?: any
-}
-
-export interface DictVectorizerFitTransformOptions {
-  /**
-    Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype).
-   */
-  X?: any
-
-  /**
-    Ignored parameter.
-   */
-  y?: any
-}
-
-export interface DictVectorizerGetFeatureNamesOutOptions {
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  input_features?: any
-}
-
-export interface DictVectorizerInverseTransformOptions {
-  /**
-    Sample matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Constructor for feature mappings. Must conform to the collections.Mapping API.
-   */
-  dict_type?: any
-}
-
-export interface DictVectorizerRestrictOptions {
-  /**
-    Boolean mask or list of indices (as returned by the get\_support member of feature selectors).
-   */
-  support?: ArrayLike
-
-  /**
-    Whether support is a list of indices.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface DictVectorizerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface DictVectorizerTransformOptions {
-  /**
-    Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype).
-   */
-  X?: any[]
 }

@@ -22,7 +22,32 @@ export class DecisionBoundaryDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DecisionBoundaryDisplayOptions) {
+  constructor(opts?: {
+    /**
+      First output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
+     */
+    xx0?: NDArray[]
+
+    /**
+      Second output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
+     */
+    xx1?: NDArray[]
+
+    /**
+      Values of the response function.
+     */
+    response?: NDArray[]
+
+    /**
+      Default label to place on x axis.
+     */
+    xlabel?: string
+
+    /**
+      Default label to place on y axis.
+     */
+    ylabel?: string
+  }) {
     this.id = `DecisionBoundaryDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,9 +134,65 @@ ctor_DecisionBoundaryDisplay = {k: v for k, v in ctor_DecisionBoundaryDisplay.it
 
     Read more in the [User Guide](../../visualizations.html#visualizations).
    */
-  async from_estimator(
-    opts: DecisionBoundaryDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      Trained estimator used to plot the decision boundary.
+     */
+    estimator?: any
+
+    /**
+      Input data that should be only 2-dimensional.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Number of grid points to use for plotting decision boundary. Higher values will make the plot look nicer but be slower to render.
+
+      @defaultValue `100`
+     */
+    grid_resolution?: number
+
+    /**
+      Extends the minimum and maximum values of X for evaluating the response function.
+
+      @defaultValue `1`
+     */
+    eps?: number
+
+    /**
+      Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.7.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.7.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.7.1)").
+
+      @defaultValue `'contourf'`
+     */
+    plot_method?: 'contourf' | 'contour' | 'pcolormesh'
+
+    /**
+      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba), [decision\_function](../../glossary.html#term-decision_function), [predict](../../glossary.html#term-predict) as the target response. If set to ‘auto’, the response method is tried in the following order: [decision\_function](../../glossary.html#term-decision_function), [predict\_proba](../../glossary.html#term-predict_proba), [predict](../../glossary.html#term-predict). For multiclass problems, [predict](../../glossary.html#term-predict) is selected when `response\_method="auto"`.
+
+      @defaultValue `'auto'`
+     */
+    response_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
+
+    /**
+      The label used for the x-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
+     */
+    xlabel?: string
+
+    /**
+      The label used for the y-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
+     */
+    ylabel?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Additional keyword arguments to be passed to the `plot\_method`.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionBoundaryDisplay instance has already been disposed'
@@ -154,7 +235,34 @@ pms_DecisionBoundaryDisplay_from_estimator = {k: v for k, v in pms_DecisionBound
   /**
     Plot visualization.
    */
-  async plot(opts: DecisionBoundaryDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.7.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.7.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.7.1)").
+
+      @defaultValue `'contourf'`
+     */
+    plot_method?: 'contourf' | 'contour' | 'pcolormesh'
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Overwrite the x-axis label.
+     */
+    xlabel?: string
+
+    /**
+      Overwrite the y-axis label.
+     */
+    ylabel?: string
+
+    /**
+      Additional keyword arguments to be passed to the `plot\_method`.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DecisionBoundaryDisplay instance has already been disposed'
@@ -265,120 +373,4 @@ pms_DecisionBoundaryDisplay_plot = {k: v for k, v in pms_DecisionBoundaryDisplay
         ._py`attr_DecisionBoundaryDisplay_figure_.tolist() if hasattr(attr_DecisionBoundaryDisplay_figure_, 'tolist') else attr_DecisionBoundaryDisplay_figure_`
     })()
   }
-}
-
-export interface DecisionBoundaryDisplayOptions {
-  /**
-    First output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
-   */
-  xx0?: NDArray[]
-
-  /**
-    Second output of [`meshgrid`](https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid "(in NumPy v1.24)").
-   */
-  xx1?: NDArray[]
-
-  /**
-    Values of the response function.
-   */
-  response?: NDArray[]
-
-  /**
-    Default label to place on x axis.
-   */
-  xlabel?: string
-
-  /**
-    Default label to place on y axis.
-   */
-  ylabel?: string
-}
-
-export interface DecisionBoundaryDisplayFromEstimatorOptions {
-  /**
-    Trained estimator used to plot the decision boundary.
-   */
-  estimator?: any
-
-  /**
-    Input data that should be only 2-dimensional.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Number of grid points to use for plotting decision boundary. Higher values will make the plot look nicer but be slower to render.
-
-    @defaultValue `100`
-   */
-  grid_resolution?: number
-
-  /**
-    Extends the minimum and maximum values of X for evaluating the response function.
-
-    @defaultValue `1`
-   */
-  eps?: number
-
-  /**
-    Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.7.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.7.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.7.1)").
-
-    @defaultValue `'contourf'`
-   */
-  plot_method?: 'contourf' | 'contour' | 'pcolormesh'
-
-  /**
-    Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba), [decision\_function](../../glossary.html#term-decision_function), [predict](../../glossary.html#term-predict) as the target response. If set to ‘auto’, the response method is tried in the following order: [decision\_function](../../glossary.html#term-decision_function), [predict\_proba](../../glossary.html#term-predict_proba), [predict](../../glossary.html#term-predict). For multiclass problems, [predict](../../glossary.html#term-predict) is selected when `response\_method="auto"`.
-
-    @defaultValue `'auto'`
-   */
-  response_method?: 'auto' | 'predict_proba' | 'decision_function' | 'predict'
-
-  /**
-    The label used for the x-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
-   */
-  xlabel?: string
-
-  /**
-    The label used for the y-axis. If `undefined`, an attempt is made to extract a label from `X` if it is a dataframe, otherwise an empty string is used.
-   */
-  ylabel?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Additional keyword arguments to be passed to the `plot\_method`.
-   */
-  kwargs?: any
-}
-
-export interface DecisionBoundaryDisplayPlotOptions {
-  /**
-    Plotting method to call when plotting the response. Please refer to the following matplotlib documentation for details: [`contourf`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf "(in Matplotlib v3.7.1)"), [`contour`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour "(in Matplotlib v3.7.1)"), [`pcolormesh`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh "(in Matplotlib v3.7.1)").
-
-    @defaultValue `'contourf'`
-   */
-  plot_method?: 'contourf' | 'contour' | 'pcolormesh'
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Overwrite the x-axis label.
-   */
-  xlabel?: string
-
-  /**
-    Overwrite the y-axis label.
-   */
-  ylabel?: string
-
-  /**
-    Additional keyword arguments to be passed to the `plot\_method`.
-   */
-  kwargs?: any
 }

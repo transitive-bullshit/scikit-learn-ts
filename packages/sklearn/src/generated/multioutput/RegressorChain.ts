@@ -22,7 +22,34 @@ export class RegressorChain {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RegressorChainOptions) {
+  constructor(opts?: {
+    /**
+      The base estimator from which the regressor chain is built.
+     */
+    base_estimator?: any
+
+    /**
+      If `undefined`, the order will be determined by the order of columns in the label matrix Y.:
+     */
+    order?: ArrayLike | 'random'
+
+    /**
+      Determines whether to use cross validated predictions or true labels for the results of previous estimators in the chain. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      If `true`, chain progress is output as each model is completed.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `RegressorChain${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +128,22 @@ ctor_RegressorChain = {k: v for k, v in ctor_RegressorChain.items() if v is not 
   /**
     Fit the model to data matrix X and targets Y.
    */
-  async fit(opts: RegressorChainFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Parameters passed to the `fit` method at each step of the regressor chain.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RegressorChain instance has already been disposed')
     }
@@ -133,7 +175,12 @@ pms_RegressorChain_fit = {k: v for k, v in pms_RegressorChain_fit.items() if v i
   /**
     Predict on the data matrix X using the ClassifierChain model.
    */
-  async predict(opts: RegressorChainPredictOptions): Promise<ArrayLike[]> {
+  async predict(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This RegressorChain instance has already been disposed')
     }
@@ -163,7 +210,22 @@ pms_RegressorChain_predict = {k: v for k, v in pms_RegressorChain_predict.items(
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: RegressorChainScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This RegressorChain instance has already been disposed')
     }
@@ -289,74 +351,4 @@ pms_RegressorChain_score = {k: v for k, v in pms_RegressorChain_score.items() if
         ._py`attr_RegressorChain_feature_names_in_.tolist() if hasattr(attr_RegressorChain_feature_names_in_, 'tolist') else attr_RegressorChain_feature_names_in_`
     })()
   }
-}
-
-export interface RegressorChainOptions {
-  /**
-    The base estimator from which the regressor chain is built.
-   */
-  base_estimator?: any
-
-  /**
-    If `undefined`, the order will be determined by the order of columns in the label matrix Y.:
-   */
-  order?: ArrayLike | 'random'
-
-  /**
-    Determines whether to use cross validated predictions or true labels for the results of previous estimators in the chain. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    If `true`, chain progress is output as each model is completed.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface RegressorChainFitOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Parameters passed to the `fit` method at each step of the regressor chain.
-   */
-  fit_params?: any
-}
-
-export interface RegressorChainPredictOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface RegressorChainScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

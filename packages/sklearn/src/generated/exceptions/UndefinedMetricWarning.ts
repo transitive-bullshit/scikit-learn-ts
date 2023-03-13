@@ -18,7 +18,7 @@ export class UndefinedMetricWarning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: UndefinedMetricWarningOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `UndefinedMetricWarning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,9 +97,7 @@ ctor_UndefinedMetricWarning = {k: v for k, v in ctor_UndefinedMetricWarning.item
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(
-    opts: UndefinedMetricWarningWithTracebackOptions
-  ): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This UndefinedMetricWarning instance has already been disposed'
@@ -126,9 +124,3 @@ pms_UndefinedMetricWarning_with_traceback = {k: v for k, v in pms_UndefinedMetri
       ._py`res_UndefinedMetricWarning_with_traceback.tolist() if hasattr(res_UndefinedMetricWarning_with_traceback, 'tolist') else res_UndefinedMetricWarning_with_traceback`
   }
 }
-
-export interface UndefinedMetricWarningOptions {
-  args?: any
-}
-
-export interface UndefinedMetricWarningWithTracebackOptions {}

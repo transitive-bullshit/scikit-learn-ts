@@ -11,5 +11,6 @@
   "excludeProtected": true,
   "excludeExternals": true,
   "excludeInternal": true,
+  "preserveAnchorCasing": true,
   "entryDocument": "readme.md"
 }

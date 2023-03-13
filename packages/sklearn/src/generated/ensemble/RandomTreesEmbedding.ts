@@ -24,7 +24,87 @@ export class RandomTreesEmbedding {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RandomTreesEmbeddingOptions) {
+  constructor(opts?: {
+    /**
+      Number of trees in the forest.
+
+      @defaultValue `100`
+     */
+    n_estimators?: number
+
+    /**
+      The maximum depth of each tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
+
+      @defaultValue `5`
+     */
+    max_depth?: number
+
+    /**
+      The minimum number of samples required to split an internal node:
+
+      @defaultValue `2`
+     */
+    min_samples_split?: number
+
+    /**
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+
+      @defaultValue `1`
+     */
+    min_samples_leaf?: number
+
+    /**
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
+
+      @defaultValue `0`
+     */
+    min_weight_fraction_leaf?: number
+
+    /**
+      Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
+     */
+    max_leaf_nodes?: number
+
+    /**
+      A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
+
+      The weighted impurity decrease equation is the following:
+
+      @defaultValue `0`
+     */
+    min_impurity_decrease?: number
+
+    /**
+      Whether or not to return a sparse CSR matrix, as default behavior, or to return a dense array compatible with dense pipeline operators.
+
+      @defaultValue `true`
+     */
+    sparse_output?: boolean
+
+    /**
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Controls the generation of the random `y` used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+
+    /**
+      Controls the verbosity when fitting and predicting.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+  }) {
     this.id = `RandomTreesEmbedding${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -119,7 +199,12 @@ ctor_RandomTreesEmbedding = {k: v for k, v in ctor_RandomTreesEmbedding.items() 
   /**
     Apply trees in the forest to X, return leaf indices.
    */
-  async apply(opts: RandomTreesEmbeddingApplyOptions): Promise<NDArray[]> {
+  async apply(opts: {
+    /**
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomTreesEmbedding instance has already been disposed'
@@ -149,9 +234,12 @@ pms_RandomTreesEmbedding_apply = {k: v for k, v in pms_RandomTreesEmbedding_appl
   /**
     Return the decision path in the forest.
    */
-  async decision_path(
-    opts: RandomTreesEmbeddingDecisionPathOptions
-  ): Promise<SparseMatrix[]> {
+  async decision_path(opts: {
+    /**
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomTreesEmbedding instance has already been disposed'
@@ -183,7 +271,22 @@ pms_RandomTreesEmbedding_decision_path = {k: v for k, v in pms_RandomTreesEmbedd
   /**
     Fit estimator.
    */
-  async fit(opts: RandomTreesEmbeddingFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomTreesEmbedding instance has already been disposed'
@@ -217,9 +320,22 @@ pms_RandomTreesEmbedding_fit = {k: v for k, v in pms_RandomTreesEmbedding_fit.it
   /**
     Fit estimator and transform dataset.
    */
-  async fit_transform(
-    opts: RandomTreesEmbeddingFitTransformOptions
-  ): Promise<SparseMatrix[]> {
+  async fit_transform(opts: {
+    /**
+      Input data used to build forests. Use `dtype=np.float32` for maximum efficiency.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomTreesEmbedding instance has already been disposed'
@@ -255,9 +371,12 @@ pms_RandomTreesEmbedding_fit_transform = {k: v for k, v in pms_RandomTreesEmbedd
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: RandomTreesEmbeddingGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomTreesEmbedding instance has already been disposed'
@@ -292,7 +411,12 @@ pms_RandomTreesEmbedding_get_feature_names_out = {k: v for k, v in pms_RandomTre
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: RandomTreesEmbeddingSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomTreesEmbedding instance has already been disposed'
@@ -324,9 +448,12 @@ pms_RandomTreesEmbedding_set_output = {k: v for k, v in pms_RandomTreesEmbedding
   /**
     Transform dataset.
    */
-  async transform(
-    opts: RandomTreesEmbeddingTransformOptions
-  ): Promise<SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csr\_matrix` for maximum efficiency.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomTreesEmbedding instance has already been disposed'
@@ -516,155 +643,4 @@ pms_RandomTreesEmbedding_transform = {k: v for k, v in pms_RandomTreesEmbedding_
         ._py`attr_RandomTreesEmbedding_one_hot_encoder_.tolist() if hasattr(attr_RandomTreesEmbedding_one_hot_encoder_, 'tolist') else attr_RandomTreesEmbedding_one_hot_encoder_`
     })()
   }
-}
-
-export interface RandomTreesEmbeddingOptions {
-  /**
-    Number of trees in the forest.
-
-    @defaultValue `100`
-   */
-  n_estimators?: number
-
-  /**
-    The maximum depth of each tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.
-
-    @defaultValue `5`
-   */
-  max_depth?: number
-
-  /**
-    The minimum number of samples required to split an internal node:
-
-    @defaultValue `2`
-   */
-  min_samples_split?: number
-
-  /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
-
-    @defaultValue `1`
-   */
-  min_samples_leaf?: number
-
-  /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.
-
-    @defaultValue `0`
-   */
-  min_weight_fraction_leaf?: number
-
-  /**
-    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes.
-   */
-  max_leaf_nodes?: number
-
-  /**
-    A node will be split if this split induces a decrease of the impurity greater than or equal to this value.
-
-    The weighted impurity decrease equation is the following:
-
-    @defaultValue `0`
-   */
-  min_impurity_decrease?: number
-
-  /**
-    Whether or not to return a sparse CSR matrix, as default behavior, or to return a dense array compatible with dense pipeline operators.
-
-    @defaultValue `true`
-   */
-  sparse_output?: boolean
-
-  /**
-    The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Controls the generation of the random `y` used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-
-  /**
-    Controls the verbosity when fitting and predicting.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [Glossary](../../glossary.html#term-warm_start) and [Fitting additional weak-learners](../ensemble.html#gradient-boosting-warm-start) for details.
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-}
-
-export interface RandomTreesEmbeddingApplyOptions {
-  /**
-    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface RandomTreesEmbeddingDecisionPathOptions {
-  /**
-    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface RandomTreesEmbeddingFitOptions {
-  /**
-    The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface RandomTreesEmbeddingFitTransformOptions {
-  /**
-    Input data used to build forests. Use `dtype=np.float32` for maximum efficiency.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface RandomTreesEmbeddingGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit").
-   */
-  input_features?: any
-}
-
-export interface RandomTreesEmbeddingSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface RandomTreesEmbeddingTransformOptions {
-  /**
-    Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csr\_matrix` for maximum efficiency.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

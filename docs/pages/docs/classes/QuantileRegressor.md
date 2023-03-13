@@ -17,20 +17,25 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new QuantileRegressor(opts?: QuantileRegressorOptions): QuantileRegressor;
+new QuantileRegressor(opts?: object): QuantileRegressor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `QuantileRegressorOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | Regularization constant that multiplies the L1 penalty term.  `Default Value`  `1` |
+| `opts.fit_intercept?` | `boolean` | Whether or not to fit the intercept.  `Default Value`  `true` |
+| `opts.quantile?` | `number` | The quantile that the model tries to predict. It must be strictly between 0 and 1. If 0.5 (default), the model predicts the 50% quantile, i.e. the median.  `Default Value`  `0.5` |
+| `opts.solver?` | `"highs-ds"` \| `"highs-ipm"` \| `"highs"` \| `"interior-point"` \| `"revised simplex"` | Method used by [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") to solve the linear programming formulation.  From `scipy>=1.6.0`, it is recommended to use the highs methods because they are the fastest ones. Solvers “highs-ds”, “highs-ipm” and “highs” support sparse input data and, in fact, always convert to sparse csc.  From `scipy>=1.11.0`, “interior-point” is not available anymore.  `Default Value`  `'interior-point'` |
+| `opts.solver_options?` | `any` | Additional parameters passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") as options. If `undefined` and if `solver='interior-point'`, then `{"lstsq": `true`}` is passed to [`scipy.optimize.linprog`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html#scipy.optimize.linprog "(in SciPy v1.10.1)") for the sake of stability. |
 
 ### Returns
 
 [`QuantileRegressor`](QuantileRegressor.md)
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L27)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L27)
 
 ## Properties
 
@@ -38,31 +43,31 @@ Defined in:  [generated/linear\_model/QuantileRegressor.ts:27](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L25)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L24)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L23)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L20)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L21)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L21)
 
 ## Accessors
 
@@ -80,7 +85,7 @@ coef_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/linear\_model/QuantileRegressor.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L208)
+Defined in: [generated/linear\_model/QuantileRegressor.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L285)
 
 ### feature\_names\_in\_
 
@@ -96,7 +101,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/QuantileRegressor.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L289)
+Defined in: [generated/linear\_model/QuantileRegressor.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L366)
 
 ### intercept\_
 
@@ -112,7 +117,7 @@ intercept_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/QuantileRegressor.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L235)
+Defined in: [generated/linear\_model/QuantileRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L312)
 
 ### n\_features\_in\_
 
@@ -128,7 +133,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/QuantileRegressor.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L262)
+Defined in: [generated/linear\_model/QuantileRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L339)
 
 ### n\_iter\_
 
@@ -144,7 +149,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/QuantileRegressor.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L316)
+Defined in: [generated/linear\_model/QuantileRegressor.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L393)
 
 ### py
 
@@ -158,7 +163,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L32)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L74)
 
 #### Signature
 
@@ -176,7 +181,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/QuantileRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L36)
+Defined in: [generated/linear\_model/QuantileRegressor.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L78)
 
 ## Methods
 
@@ -196,7 +201,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L91)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L133)
 
 ### fit()
 
@@ -205,20 +210,23 @@ Fit the model according to the given training data.
 #### Signature
 
 ```ts
-fit(opts: QuantileRegressorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `QuantileRegressorFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | Target values. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L108)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L150)
 
 ### init()
 
@@ -242,7 +250,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L45)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L87)
 
 ### predict()
 
@@ -251,20 +259,21 @@ Predict using the linear model.
 #### Signature
 
 ```ts
-predict(opts: QuantileRegressorPredictOptions): Promise<any>;
+predict(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `QuantileRegressorPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Samples. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L142)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L199)
 
 ### score()
 
@@ -275,17 +284,20 @@ The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\
 #### Signature
 
 ```ts
-score(opts: QuantileRegressorScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `QuantileRegressorScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True values for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/QuantileRegressor.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L174)
+Defined in:  [generated/linear\_model/QuantileRegressor.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/QuantileRegressor.ts#L236)

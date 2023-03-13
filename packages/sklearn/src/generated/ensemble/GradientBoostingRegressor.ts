@@ -24,7 +24,146 @@ export class GradientBoostingRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GradientBoostingRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Loss function to be optimized. ‘squared\_error’ refers to the squared error for regression. ‘absolute\_error’ refers to the absolute error of regression and is a robust loss function. ‘huber’ is a combination of the two. ‘quantile’ allows quantile regression (use `alpha` to specify the quantile).
+
+      @defaultValue `'squared_error'`
+     */
+    loss?: 'squared_error' | 'absolute_error' | 'huber' | 'quantile'
+
+    /**
+      Learning rate shrinks the contribution of each tree by `learning\_rate`. There is a trade-off between learning\_rate and n\_estimators. Values must be in the range `\[0.0, inf)`.
+
+      @defaultValue `0.1`
+     */
+    learning_rate?: number
+
+    /**
+      The number of boosting stages to perform. Gradient boosting is fairly robust to over-fitting so a large number usually results in better performance. Values must be in the range `\[1, inf)`.
+
+      @defaultValue `100`
+     */
+    n_estimators?: number
+
+    /**
+      The fraction of samples to be used for fitting the individual base learners. If smaller than 1.0 this results in Stochastic Gradient Boosting. `subsample` interacts with the parameter `n\_estimators`. Choosing `subsample < 1.0` leads to a reduction of variance and an increase in bias. Values must be in the range `(0.0, 1.0\]`.
+
+      @defaultValue `1`
+     */
+    subsample?: number
+
+    /**
+      The function to measure the quality of a split. Supported criteria are “friedman\_mse” for the mean squared error with improvement score by Friedman, “squared\_error” for mean squared error. The default value of “friedman\_mse” is generally the best as it can provide a better approximation in some cases.
+
+      @defaultValue `'friedman_mse'`
+     */
+    criterion?: 'friedman_mse' | 'squared_error'
+
+    /**
+      The minimum number of samples required to split an internal node:
+
+      @defaultValue `2`
+     */
+    min_samples_split?: number
+
+    /**
+      The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
+
+      @defaultValue `1`
+     */
+    min_samples_leaf?: number
+
+    /**
+      The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided. Values must be in the range `\[0.0, 0.5\]`.
+
+      @defaultValue `0`
+     */
+    min_weight_fraction_leaf?: number
+
+    /**
+      Maximum depth of the individual regression estimators. The maximum depth limits the number of nodes in the tree. Tune this parameter for best performance; the best value depends on the interaction of the input variables. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples. If int, values must be in the range `\[1, inf)`.
+
+      @defaultValue `3`
+     */
+    max_depth?: number
+
+    /**
+      A node will be split if this split induces a decrease of the impurity greater than or equal to this value. Values must be in the range `\[0.0, inf)`.
+
+      The weighted impurity decrease equation is the following:
+
+      @defaultValue `0`
+     */
+    min_impurity_decrease?: number
+
+    /**
+      An estimator object that is used to compute the initial predictions. `init` has to provide [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). If ‘zero’, the initial raw predictions are set to zero. By default a `DummyEstimator` is used, predicting either the average target value (for loss=’squared\_error’), or a quantile for the other losses.
+     */
+    init?: 'zero'
+
+    /**
+      Controls the random seed given to each Tree estimator at each boosting iteration. In addition, it controls the random permutation of the features at each split (see Notes for more details). It also controls the random splitting of the training data to obtain a validation set if `n\_iter\_no\_change` is not `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The number of features to consider when looking for the best split:
+     */
+    max_features?: 'auto' | 'sqrt' | 'log2' | number | number
+
+    /**
+      The alpha-quantile of the huber loss function and the quantile loss function. Only if `loss='huber'` or `loss='quantile'`. Values must be in the range `(0.0, 1.0)`.
+
+      @defaultValue `0.9`
+     */
+    alpha?: number
+
+    /**
+      Enable verbose output. If 1 then it prints progress and performance once in a while (the more trees the lower the frequency). If greater than 1 then it prints progress and performance for every tree. Values must be in the range `\[0, inf)`.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. Values must be in the range `\[2, inf)`. If `undefined`, then unlimited number of leaf nodes.
+     */
+    max_leaf_nodes?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      The proportion of training data to set aside as validation set for early stopping. Values must be in the range `(0.0, 1.0)`. Only used if `n\_iter\_no\_change` is set to an integer.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      `n\_iter\_no\_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation\_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n\_iter\_no\_change` numbers of iterations. Values must be in the range `\[1, inf)`.
+     */
+    n_iter_no_change?: number
+
+    /**
+      Tolerance for the early stopping. When the loss is not improving by at least tol for `n\_iter\_no\_change` iterations (if set to a number), the training stops. Values must be in the range `\[0.0, inf)`.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. Values must be in the range `\[0.0, inf)`. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
+
+      @defaultValue `0`
+     */
+    ccp_alpha?: any
+  }) {
     this.id = `GradientBoostingRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -133,9 +272,12 @@ ctor_GradientBoostingRegressor = {k: v for k, v in ctor_GradientBoostingRegresso
   /**
     Apply trees in the ensemble to X, return leaf indices.
    */
-  async apply(
-    opts: GradientBoostingRegressorApplyOptions
-  ): Promise<ArrayLike[]> {
+  async apply(opts: {
+    /**
+      The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This GradientBoostingRegressor instance has already been disposed'
@@ -167,7 +309,27 @@ pms_GradientBoostingRegressor_apply = {k: v for k, v in pms_GradientBoostingRegr
   /**
     Fit the gradient boosting model.
    */
-  async fit(opts: GradientBoostingRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (strings or integers in classification, real numbers in regression) For classification, labels must correspond to classes.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `\_fit\_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshoting.
+     */
+    monitor?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GradientBoostingRegressor instance has already been disposed'
@@ -203,9 +365,12 @@ pms_GradientBoostingRegressor_fit = {k: v for k, v in pms_GradientBoostingRegres
   /**
     Predict regression target for X.
    */
-  async predict(
-    opts: GradientBoostingRegressorPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This GradientBoostingRegressor instance has already been disposed'
@@ -239,7 +404,22 @@ pms_GradientBoostingRegressor_predict = {k: v for k, v in pms_GradientBoostingRe
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: GradientBoostingRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GradientBoostingRegressor instance has already been disposed'
@@ -277,9 +457,12 @@ pms_GradientBoostingRegressor_score = {k: v for k, v in pms_GradientBoostingRegr
 
     This method allows monitoring (i.e. determine error on testing set) after each stage.
    */
-  async staged_predict(
-    opts: GradientBoostingRegressorStagedPredictOptions
-  ): Promise<any[]> {
+  async staged_predict(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This GradientBoostingRegressor instance has already been disposed'
@@ -551,205 +734,4 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
         ._py`attr_GradientBoostingRegressor_max_features_.tolist() if hasattr(attr_GradientBoostingRegressor_max_features_, 'tolist') else attr_GradientBoostingRegressor_max_features_`
     })()
   }
-}
-
-export interface GradientBoostingRegressorOptions {
-  /**
-    Loss function to be optimized. ‘squared\_error’ refers to the squared error for regression. ‘absolute\_error’ refers to the absolute error of regression and is a robust loss function. ‘huber’ is a combination of the two. ‘quantile’ allows quantile regression (use `alpha` to specify the quantile).
-
-    @defaultValue `'squared_error'`
-   */
-  loss?: 'squared_error' | 'absolute_error' | 'huber' | 'quantile'
-
-  /**
-    Learning rate shrinks the contribution of each tree by `learning\_rate`. There is a trade-off between learning\_rate and n\_estimators. Values must be in the range `\[0.0, inf)`.
-
-    @defaultValue `0.1`
-   */
-  learning_rate?: number
-
-  /**
-    The number of boosting stages to perform. Gradient boosting is fairly robust to over-fitting so a large number usually results in better performance. Values must be in the range `\[1, inf)`.
-
-    @defaultValue `100`
-   */
-  n_estimators?: number
-
-  /**
-    The fraction of samples to be used for fitting the individual base learners. If smaller than 1.0 this results in Stochastic Gradient Boosting. `subsample` interacts with the parameter `n\_estimators`. Choosing `subsample < 1.0` leads to a reduction of variance and an increase in bias. Values must be in the range `(0.0, 1.0\]`.
-
-    @defaultValue `1`
-   */
-  subsample?: number
-
-  /**
-    The function to measure the quality of a split. Supported criteria are “friedman\_mse” for the mean squared error with improvement score by Friedman, “squared\_error” for mean squared error. The default value of “friedman\_mse” is generally the best as it can provide a better approximation in some cases.
-
-    @defaultValue `'friedman_mse'`
-   */
-  criterion?: 'friedman_mse' | 'squared_error'
-
-  /**
-    The minimum number of samples required to split an internal node:
-
-    @defaultValue `2`
-   */
-  min_samples_split?: number
-
-  /**
-    The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.
-
-    @defaultValue `1`
-   */
-  min_samples_leaf?: number
-
-  /**
-    The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided. Values must be in the range `\[0.0, 0.5\]`.
-
-    @defaultValue `0`
-   */
-  min_weight_fraction_leaf?: number
-
-  /**
-    Maximum depth of the individual regression estimators. The maximum depth limits the number of nodes in the tree. Tune this parameter for best performance; the best value depends on the interaction of the input variables. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples. If int, values must be in the range `\[1, inf)`.
-
-    @defaultValue `3`
-   */
-  max_depth?: number
-
-  /**
-    A node will be split if this split induces a decrease of the impurity greater than or equal to this value. Values must be in the range `\[0.0, inf)`.
-
-    The weighted impurity decrease equation is the following:
-
-    @defaultValue `0`
-   */
-  min_impurity_decrease?: number
-
-  /**
-    An estimator object that is used to compute the initial predictions. `init` has to provide [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). If ‘zero’, the initial raw predictions are set to zero. By default a `DummyEstimator` is used, predicting either the average target value (for loss=’squared\_error’), or a quantile for the other losses.
-   */
-  init?: 'zero'
-
-  /**
-    Controls the random seed given to each Tree estimator at each boosting iteration. In addition, it controls the random permutation of the features at each split (see Notes for more details). It also controls the random splitting of the training data to obtain a validation set if `n\_iter\_no\_change` is not `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The number of features to consider when looking for the best split:
-   */
-  max_features?: 'auto' | 'sqrt' | 'log2' | number | number
-
-  /**
-    The alpha-quantile of the huber loss function and the quantile loss function. Only if `loss='huber'` or `loss='quantile'`. Values must be in the range `(0.0, 1.0)`.
-
-    @defaultValue `0.9`
-   */
-  alpha?: number
-
-  /**
-    Enable verbose output. If 1 then it prints progress and performance once in a while (the more trees the lower the frequency). If greater than 1 then it prints progress and performance for every tree. Values must be in the range `\[0, inf)`.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. Values must be in the range `\[2, inf)`. If `undefined`, then unlimited number of leaf nodes.
-   */
-  max_leaf_nodes?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    The proportion of training data to set aside as validation set for early stopping. Values must be in the range `(0.0, 1.0)`. Only used if `n\_iter\_no\_change` is set to an integer.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    `n\_iter\_no\_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation\_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n\_iter\_no\_change` numbers of iterations. Values must be in the range `\[1, inf)`.
-   */
-  n_iter_no_change?: number
-
-  /**
-    Tolerance for the early stopping. When the loss is not improving by at least tol for `n\_iter\_no\_change` iterations (if set to a number), the training stops. Values must be in the range `\[0.0, inf)`.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. Values must be in the range `\[0.0, inf)`. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.
-
-    @defaultValue `0`
-   */
-  ccp_alpha?: any
-}
-
-export interface GradientBoostingRegressorApplyOptions {
-  /**
-    The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface GradientBoostingRegressorFitOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (strings or integers in classification, real numbers in regression) For classification, labels must correspond to classes.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `\_fit\_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshoting.
-   */
-  monitor?: any
-}
-
-export interface GradientBoostingRegressorPredictOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface GradientBoostingRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface GradientBoostingRegressorStagedPredictOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

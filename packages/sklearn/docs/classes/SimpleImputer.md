@@ -15,20 +15,27 @@ Read more in the [User Guide](../impute.html#impute).
 ### Signature
 
 ```ts
-new SimpleImputer(opts?: SimpleImputerOptions): SimpleImputer;
+new SimpleImputer(opts?: object): SimpleImputer;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`SimpleImputerOptions`](../interfaces/SimpleImputerOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.add_indicator?` | `boolean` | If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.  `Default Value`  `false` |
+| `opts.copy?` | `boolean` | If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible. Note that, in the following cases, a new copy will always be made, even if `copy=False`:  `Default Value`  `true` |
+| `opts.fill_value?` | `string` | When strategy == “constant”, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `undefined`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types. |
+| `opts.keep_empty_features?` | `boolean` | If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `strategy="constant"` in which case `fill\_value` will be used instead.  `Default Value`  `false` |
+| `opts.missing_values?` | `string` \| `number` | The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` can be set to either `np.nan` or `pd.NA`. |
+| `opts.strategy?` | `string` | The imputation strategy.  `Default Value`  `'mean'` |
+| `opts.verbose?` | `number` | Controls the verbosity of the imputer.  `Default Value`  `0` |
 
 ### Returns
 
 [`SimpleImputer`](SimpleImputer.md)
 
-Defined in:  [generated/impute/SimpleImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L25)
+Defined in:  [generated/impute/SimpleImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L25)
 
 ## Properties
 
@@ -36,31 +43,31 @@ Defined in:  [generated/impute/SimpleImputer.ts:25](https://github.com/transitiv
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/SimpleImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L23)
+Defined in:  [generated/impute/SimpleImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/SimpleImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L22)
+Defined in:  [generated/impute/SimpleImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/impute/SimpleImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L21)
+Defined in:  [generated/impute/SimpleImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/impute/SimpleImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L18)
+Defined in:  [generated/impute/SimpleImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/impute/SimpleImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L19)
+Defined in:  [generated/impute/SimpleImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L19)
 
 ## Accessors
 
@@ -78,9 +85,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L372)
+Defined in:  [generated/impute/SimpleImputer.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L456)
 
-Defined in:  [generated/impute/SimpleImputer.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L372)
+Defined in:  [generated/impute/SimpleImputer.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L456)
 
 ### indicator\_
 
@@ -96,9 +103,9 @@ indicator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L322)
+Defined in:  [generated/impute/SimpleImputer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L406)
 
-Defined in:  [generated/impute/SimpleImputer.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L322)
+Defined in:  [generated/impute/SimpleImputer.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L406)
 
 ### n\_features\_in\_
 
@@ -114,9 +121,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L347)
+Defined in:  [generated/impute/SimpleImputer.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L431)
 
-Defined in:  [generated/impute/SimpleImputer.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L347)
+Defined in:  [generated/impute/SimpleImputer.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L431)
 
 ### py
 
@@ -130,7 +137,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/impute/SimpleImputer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L30)
+Defined in:  [generated/impute/SimpleImputer.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L75)
 
 #### Signature
 
@@ -148,9 +155,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/impute/SimpleImputer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L34)
+Defined in:  [generated/impute/SimpleImputer.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L79)
 
-Defined in:  [generated/impute/SimpleImputer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L30) [generated/impute/SimpleImputer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L34)
+Defined in:  [generated/impute/SimpleImputer.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L75) [generated/impute/SimpleImputer.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L79)
 
 ### statistics\_
 
@@ -166,9 +173,9 @@ statistics_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L297)
+Defined in:  [generated/impute/SimpleImputer.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L381)
 
-Defined in:  [generated/impute/SimpleImputer.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L297)
+Defined in:  [generated/impute/SimpleImputer.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L381)
 
 ## Methods
 
@@ -188,7 +195,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L89)
+Defined in:  [generated/impute/SimpleImputer.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L134)
 
 ### fit()
 
@@ -197,20 +204,22 @@ Fit the imputer on `X`.
 #### Signature
 
 ```ts
-fit(opts: SimpleImputerFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SimpleImputerFitOptions`](../interfaces/SimpleImputerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L106)
+Defined in:  [generated/impute/SimpleImputer.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L151)
 
 ### fit\_transform()
 
@@ -221,20 +230,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: SimpleImputerFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SimpleImputerFitTransformOptions`](../interfaces/SimpleImputerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L136)
+Defined in:  [generated/impute/SimpleImputer.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L191)
 
 ### get\_feature\_names\_out()
 
@@ -243,20 +255,21 @@ Get output feature names for transformation.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: SimpleImputerGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SimpleImputerGetFeatureNamesOutOptions`](../interfaces/SimpleImputerGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L168)
+Defined in:  [generated/impute/SimpleImputer.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L238)
 
 ### init()
 
@@ -280,7 +293,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L43)
+Defined in:  [generated/impute/SimpleImputer.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L88)
 
 ### inverse\_transform()
 
@@ -293,20 +306,21 @@ Note that `inverse\_transform` can only invert the transform in features that ha
 #### Signature
 
 ```ts
-inverse_transform(opts: SimpleImputerInverseTransformOptions): Promise<ArrayLike[]>;
+inverse_transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SimpleImputerInverseTransformOptions`](../interfaces/SimpleImputerInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The imputed data to be reverted to original data. It has to be an augmented array of imputed data and the missing indicator mask. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L205)
+Defined in:  [generated/impute/SimpleImputer.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L278)
 
 ### set\_output()
 
@@ -317,20 +331,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: SimpleImputerSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SimpleImputerSetOutputOptions`](../interfaces/SimpleImputerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L239)
+Defined in:  [generated/impute/SimpleImputer.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L315)
 
 ### transform()
 
@@ -339,17 +354,18 @@ Impute all missing values in `X`.
 #### Signature
 
 ```ts
-transform(opts: SimpleImputerTransformOptions): Promise<ArrayLike>;
+transform(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SimpleImputerTransformOptions`](../interfaces/SimpleImputerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The input data to complete. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/impute/SimpleImputer.ts#L267)
+Defined in:  [generated/impute/SimpleImputer.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/SimpleImputer.ts#L348)

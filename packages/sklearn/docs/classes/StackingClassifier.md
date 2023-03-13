@@ -17,20 +17,27 @@ Read more in the [User Guide](../ensemble.html#stacking).
 ### Signature
 
 ```ts
-new StackingClassifier(opts?: StackingClassifierOptions): StackingClassifier;
+new StackingClassifier(opts?: object): StackingClassifier;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`StackingClassifierOptions`](../interfaces/StackingClassifierOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.cv?` | `number` \| `"prefit"` | Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are: |
+| `opts.estimators?` | `any` | Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.  The type of estimator is generally expected to be a classifier. However, one can pass a regressor for some use case (e.g. ordinal regression). |
+| `opts.final_estimator?` | `any` | A classifier which will be used to combine the base estimators. The default classifier is a [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression"). |
+| `opts.n_jobs?` | `number` | The number of jobs to run in parallel all `estimators` `fit`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details. |
+| `opts.passthrough?` | `boolean` | When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.  `Default Value`  `false` |
+| `opts.stack_method?` | `"auto"` \| `"predict_proba"` \| `"decision_function"` \| `"predict"` | Methods called for each base estimator. It can be:  `Default Value`  `'auto'` |
+| `opts.verbose?` | `number` | Verbosity level.  `Default Value`  `0` |
 
 ### Returns
 
 [`StackingClassifier`](StackingClassifier.md)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L27)
+Defined in:  [generated/ensemble/StackingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L27)
 
 ## Properties
 
@@ -38,31 +45,31 @@ Defined in:  [generated/ensemble/StackingClassifier.ts:27](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L25)
+Defined in:  [generated/ensemble/StackingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L24)
+Defined in:  [generated/ensemble/StackingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L23)
+Defined in:  [generated/ensemble/StackingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L20)
+Defined in:  [generated/ensemble/StackingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L21)
+Defined in:  [generated/ensemble/StackingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L21)
 
 ## Accessors
 
@@ -80,9 +87,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L422)
+Defined in:  [generated/ensemble/StackingClassifier.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L535)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L422)
+Defined in:  [generated/ensemble/StackingClassifier.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L535)
 
 ### estimators\_
 
@@ -98,9 +105,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L449)
+Defined in:  [generated/ensemble/StackingClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L562)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L449)
+Defined in:  [generated/ensemble/StackingClassifier.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L562)
 
 ### feature\_names\_in\_
 
@@ -116,9 +123,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L503)
+Defined in:  [generated/ensemble/StackingClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L616)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L503)
+Defined in:  [generated/ensemble/StackingClassifier.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L616)
 
 ### final\_estimator\_
 
@@ -134,9 +141,9 @@ final_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L530)
+Defined in:  [generated/ensemble/StackingClassifier.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L643)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:530](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L530)
+Defined in:  [generated/ensemble/StackingClassifier.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L643)
 
 ### named\_estimators\_
 
@@ -152,9 +159,9 @@ named_estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L476)
+Defined in:  [generated/ensemble/StackingClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L589)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L476)
+Defined in:  [generated/ensemble/StackingClassifier.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L589)
 
 ### py
 
@@ -168,7 +175,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L32)
+Defined in:  [generated/ensemble/StackingClassifier.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L75)
 
 #### Signature
 
@@ -186,9 +193,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L36)
+Defined in:  [generated/ensemble/StackingClassifier.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L79)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L32) [generated/ensemble/StackingClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L36)
+Defined in:  [generated/ensemble/StackingClassifier.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L75) [generated/ensemble/StackingClassifier.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L79)
 
 ### stack\_method\_
 
@@ -204,9 +211,9 @@ stack_method_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L557)
+Defined in:  [generated/ensemble/StackingClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L670)
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L557)
+Defined in:  [generated/ensemble/StackingClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L670)
 
 ## Methods
 
@@ -217,20 +224,21 @@ Decision function for samples in `X` using the final estimator.
 #### Signature
 
 ```ts
-decision_function(opts: StackingClassifierDecisionFunctionOptions): Promise<ArrayLike>;
+decision_function(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierDecisionFunctionOptions`](../interfaces/StackingClassifierDecisionFunctionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L112)
+Defined in:  [generated/ensemble/StackingClassifier.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L155)
 
 ### dispose()
 
@@ -248,7 +256,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L95)
+Defined in:  [generated/ensemble/StackingClassifier.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L138)
 
 ### fit()
 
@@ -257,20 +265,23 @@ Fit the estimators.
 #### Signature
 
 ```ts
-fit(opts: StackingClassifierFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierFitOptions`](../interfaces/StackingClassifierFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. Note that `y` will be internally encoded in numerically increasing order or lexicographic order. If the order matter (e.g. for ordinal regression), one should numerically encode the target `y` before calling [fit](../../glossary.html#term-fit). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L147)
+Defined in:  [generated/ensemble/StackingClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L193)
 
 ### fit\_transform()
 
@@ -281,20 +292,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: StackingClassifierFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierFitTransformOptions`](../interfaces/StackingClassifierFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L183)
+Defined in:  [generated/ensemble/StackingClassifier.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L244)
 
 ### get\_feature\_names\_out()
 
@@ -303,20 +317,21 @@ Get output feature names for transformation.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: StackingClassifierGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierGetFeatureNamesOutOptions`](../interfaces/StackingClassifierGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. The input feature names are only used when `passthrough` is `true`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L221)
+Defined in:  [generated/ensemble/StackingClassifier.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L295)
 
 ### init()
 
@@ -340,7 +355,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L45)
+Defined in:  [generated/ensemble/StackingClassifier.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L88)
 
 ### predict()
 
@@ -349,20 +364,22 @@ Predict target for X.
 #### Signature
 
 ```ts
-predict(opts: StackingClassifierPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierPredictOptions`](../interfaces/StackingClassifierPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.predict_params?` | `any` | Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L256)
+Defined in:  [generated/ensemble/StackingClassifier.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L333)
 
 ### predict\_proba()
 
@@ -371,20 +388,21 @@ Predict class probabilities for `X` using the final estimator.
 #### Signature
 
 ```ts
-predict_proba(opts: StackingClassifierPredictProbaOptions): Promise<any[] | ArrayLike[]>;
+predict_proba(opts: object): Promise<any[] | ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierPredictProbaOptions`](../interfaces/StackingClassifierPredictProbaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
 
 #### Returns
 
 `Promise`\<`any`[] \| [`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L288)
+Defined in:  [generated/ensemble/StackingClassifier.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L375)
 
 ### score()
 
@@ -395,20 +413,23 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: StackingClassifierScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierScoreOptions`](../interfaces/StackingClassifierScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L324)
+Defined in:  [generated/ensemble/StackingClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L414)
 
 ### set\_output()
 
@@ -419,20 +440,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: StackingClassifierSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierSetOutputOptions`](../interfaces/StackingClassifierSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L360)
+Defined in:  [generated/ensemble/StackingClassifier.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L465)
 
 ### transform()
 
@@ -441,17 +463,18 @@ Return class labels or probabilities for X for each estimator.
 #### Signature
 
 ```ts
-transform(opts: StackingClassifierTransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`StackingClassifierTransformOptions`](../interfaces/StackingClassifierTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/StackingClassifier.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L390)
+Defined in:  [generated/ensemble/StackingClassifier.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/StackingClassifier.ts#L500)

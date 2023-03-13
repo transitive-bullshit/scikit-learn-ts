@@ -20,7 +20,21 @@ export class OAS {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OASOptions) {
+  constructor(opts?: {
+    /**
+      Specify if the estimated precision is stored.
+
+      @defaultValue `true`
+     */
+    store_precision?: boolean
+
+    /**
+      If `true`, data will not be centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false` (default), data will be centered before computation.
+
+      @defaultValue `false`
+     */
+    assume_centered?: boolean
+  }) {
     this.id = `OAS${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -94,7 +108,33 @@ ctor_OAS = {k: v for k, v in ctor_OAS.items() if v is not None}`
   /**
     Compute the Mean Squared Error between two covariance estimators.
    */
-  async error_norm(opts: OASErrorNormOptions): Promise<number> {
+  async error_norm(opts: {
+    /**
+      The covariance to compare with.
+     */
+    comp_cov?: ArrayLike[]
+
+    /**
+      The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
+
+      @defaultValue `'frobenius'`
+     */
+    norm?: 'frobenius' | 'spectral'
+
+    /**
+      If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
+
+      @defaultValue `true`
+     */
+    scaling?: boolean
+
+    /**
+      Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
+
+      @defaultValue `true`
+     */
+    squared?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This OAS instance has already been disposed')
     }
@@ -126,7 +166,17 @@ pms_OAS_error_norm = {k: v for k, v in pms_OAS_error_norm.items() if v is not No
   /**
     Fit the Oracle Approximating Shrinkage covariance model to X.
    */
-  async fit(opts: OASFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OAS instance has already been disposed')
     }
@@ -153,7 +203,12 @@ pms_OAS_fit = {k: v for k, v in pms_OAS_fit.items() if v is not None}`
   /**
     Getter for the precision matrix.
    */
-  async get_precision(opts: OASGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      The precision matrix associated to the current covariance object.
+     */
+    precision_?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OAS instance has already been disposed')
     }
@@ -181,7 +236,12 @@ pms_OAS_get_precision = {k: v for k, v in pms_OAS_get_precision.items() if v is 
   /**
     Compute the squared Mahalanobis distances of given observations.
    */
-  async mahalanobis(opts: OASMahalanobisOptions): Promise<NDArray> {
+  async mahalanobis(opts: {
+    /**
+      The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OAS instance has already been disposed')
     }
@@ -211,7 +271,17 @@ pms_OAS_mahalanobis = {k: v for k, v in pms_OAS_mahalanobis.items() if v is not 
 
     The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
    */
-  async score(opts: OASScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
+     */
+    X_test?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This OAS instance has already been disposed')
     }
@@ -372,86 +442,4 @@ pms_OAS_score = {k: v for k, v in pms_OAS_score.items() if v is not None}`
         ._py`attr_OAS_feature_names_in_.tolist() if hasattr(attr_OAS_feature_names_in_, 'tolist') else attr_OAS_feature_names_in_`
     })()
   }
-}
-
-export interface OASOptions {
-  /**
-    Specify if the estimated precision is stored.
-
-    @defaultValue `true`
-   */
-  store_precision?: boolean
-
-  /**
-    If `true`, data will not be centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false` (default), data will be centered before computation.
-
-    @defaultValue `false`
-   */
-  assume_centered?: boolean
-}
-
-export interface OASErrorNormOptions {
-  /**
-    The covariance to compare with.
-   */
-  comp_cov?: ArrayLike[]
-
-  /**
-    The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.
-
-    @defaultValue `'frobenius'`
-   */
-  norm?: 'frobenius' | 'spectral'
-
-  /**
-    If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.
-
-    @defaultValue `true`
-   */
-  scaling?: boolean
-
-  /**
-    Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.
-
-    @defaultValue `true`
-   */
-  squared?: boolean
-}
-
-export interface OASFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface OASGetPrecisionOptions {
-  /**
-    The precision matrix associated to the current covariance object.
-   */
-  precision_?: ArrayLike[]
-}
-
-export interface OASMahalanobisOptions {
-  /**
-    The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit.
-   */
-  X?: ArrayLike[]
-}
-
-export interface OASScoreOptions {
-  /**
-    Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering).
-   */
-  X_test?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
 }

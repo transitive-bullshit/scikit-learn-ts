@@ -24,7 +24,41 @@ export class StackingRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: StackingRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.
+     */
+    estimators?: any
+
+    /**
+      A regressor which will be used to combine the base estimators. The default regressor is a [`RidgeCV`](sklearn.linear_model.RidgeCV.html#sklearn.linear_model.RidgeCV "sklearn.linear_model.RidgeCV").
+     */
+    final_estimator?: any
+
+    /**
+      Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are:
+     */
+    cv?: number | 'prefit'
+
+    /**
+      The number of jobs to run in parallel for `fit` of all `estimators`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
+     */
+    n_jobs?: number
+
+    /**
+      When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.
+
+      @defaultValue `false`
+     */
+    passthrough?: boolean
+
+    /**
+      Verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+  }) {
     this.id = `StackingRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +139,22 @@ ctor_StackingRegressor = {k: v for k, v in ctor_StackingRegressor.items() if v i
   /**
     Fit the estimators.
    */
-  async fit(opts: StackingRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -139,9 +188,22 @@ pms_StackingRegressor_fit = {k: v for k, v in pms_StackingRegressor_fit.items() 
   /**
     Fit the estimators and return the predictions for X for each estimator.
    */
-  async fit_transform(
-    opts: StackingRegressorFitTransformOptions
-  ): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -177,9 +239,12 @@ pms_StackingRegressor_fit_transform = {k: v for k, v in pms_StackingRegressor_fi
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: StackingRegressorGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features. The input feature names are only used when `passthrough` is `true`.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -212,7 +277,17 @@ pms_StackingRegressor_get_feature_names_out = {k: v for k, v in pms_StackingRegr
   /**
     Predict target for X.
    */
-  async predict(opts: StackingRegressorPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator.
+     */
+    predict_params?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -246,7 +321,22 @@ pms_StackingRegressor_predict = {k: v for k, v in pms_StackingRegressor_predict.
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: StackingRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -282,7 +372,12 @@ pms_StackingRegressor_score = {k: v for k, v in pms_StackingRegressor_score.item
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: StackingRegressorSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -312,7 +407,12 @@ pms_StackingRegressor_set_output = {k: v for k, v in pms_StackingRegressor_set_o
   /**
     Return the predictions for X for each estimator.
    */
-  async transform(opts: StackingRegressorTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This StackingRegressor instance has already been disposed'
@@ -473,124 +573,4 @@ pms_StackingRegressor_transform = {k: v for k, v in pms_StackingRegressor_transf
         ._py`attr_StackingRegressor_stack_method_.tolist() if hasattr(attr_StackingRegressor_stack_method_, 'tolist') else attr_StackingRegressor_stack_method_`
     })()
   }
-}
-
-export interface StackingRegressorOptions {
-  /**
-    Base estimators which will be stacked together. Each element of the list is defined as a tuple of string (i.e. name) and an estimator instance. An estimator can be set to ‘drop’ using `set\_params`.
-   */
-  estimators?: any
-
-  /**
-    A regressor which will be used to combine the base estimators. The default regressor is a [`RidgeCV`](sklearn.linear_model.RidgeCV.html#sklearn.linear_model.RidgeCV "sklearn.linear_model.RidgeCV").
-   */
-  final_estimator?: any
-
-  /**
-    Determines the cross-validation splitting strategy used in `cross\_val\_predict` to train `final\_estimator`. Possible inputs for cv are:
-   */
-  cv?: number | 'prefit'
-
-  /**
-    The number of jobs to run in parallel for `fit` of all `estimators`. `undefined` means 1 unless in a `joblib.parallel\_backend` context. -1 means using all processors. See Glossary for more details.
-   */
-  n_jobs?: number
-
-  /**
-    When `false`, only the predictions of estimators will be used as training data for `final\_estimator`. When `true`, the `final\_estimator` is trained on the predictions as well as the original training data.
-
-    @defaultValue `false`
-   */
-  passthrough?: boolean
-
-  /**
-    Verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-}
-
-export interface StackingRegressorFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface StackingRegressorFitTransformOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface StackingRegressorGetFeatureNamesOutOptions {
-  /**
-    Input features. The input feature names are only used when `passthrough` is `true`.
-   */
-  input_features?: any
-}
-
-export interface StackingRegressorPredictOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Parameters to the `predict` called by the `final\_estimator`. Note that this may be used to return uncertainties from some estimators with `return\_std` or `return\_cov`. Be aware that it will only accounts for uncertainty in the final estimator.
-   */
-  predict_params?: any
-}
-
-export interface StackingRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface StackingRegressorSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface StackingRegressorTransformOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

@@ -24,7 +24,63 @@ export class PartialDependenceDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PartialDependenceDisplayOptions) {
+  constructor(opts?: {
+    /**
+      Results of [`partial\_dependence`](sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`.
+     */
+    pd_results?: any
+
+    /**
+      Indices of features for a given plot. A tuple of one integer will plot a partial dependence curve of one feature. A tuple of two integers will plot a two-way partial dependence curve as a contour plot.
+     */
+    features?: any
+
+    /**
+      Feature names corresponding to the indices in `features`.
+     */
+    feature_names?: any
+
+    /**
+      In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used.
+     */
+    target_idx?: number
+
+    /**
+      Deciles for feature indices in `features`.
+     */
+    deciles?: any
+
+    /**
+      Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined`, the limit will be inferred from the global minimum and maximum of all predictions.
+     */
+    pdp_lim?: any
+
+    /**
+      Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.
+
+      @defaultValue `'average'`
+     */
+    kind?: 'average' | 'individual' | 'both'
+
+    /**
+      Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If int, represents the maximum absolute number of samples to use.
+
+      Note that the full dataset is still used to calculate partial dependence when `kind='both'`.
+
+      @defaultValue `1000`
+     */
+    subsample?: number
+
+    /**
+      Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+
+    /**
+      Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `undefined`, all features are assumed to be continuous.
+     */
+    is_categorical?: any
+  }) {
     this.id = `PartialDependenceDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -115,9 +171,137 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
 
     Read more in the [User Guide](../partial_dependence.html#partial-dependence).
    */
-  async from_estimator(
-    opts: PartialDependenceDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      A fitted estimator object implementing [predict](../../glossary.html#term-predict), [predict\_proba](../../glossary.html#term-predict_proba), or [decision\_function](../../glossary.html#term-decision_function). Multioutput-multiclass classifiers are not supported.
+     */
+    estimator?: any
+
+    /**
+      `X` is used to generate a grid of values for the target `features` (where the partial dependence will be evaluated), and also to generate values for the complement features when the `method` is `'brute'`.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target features for which to create the PDPs. If `features\[i\]` is an integer or a string, a one-way PDP is created; if `features\[i\]` is a tuple, a two-way PDP is created (only supported with `kind='average'`). Each tuple must be of size 2. If any entry is a string, then it must be in `feature\_names`.
+     */
+    features?: string
+
+    /**
+      Indicates the categorical features.
+     */
+    categorical_features?: ArrayLike | number
+
+    /**
+      Name of each feature; `feature\_names\[i\]` holds the name of the feature with index `i`. By default, the name of the feature corresponds to their numerical index for NumPy array and their column name for pandas dataframe.
+     */
+    feature_names?: ArrayLike
+
+    /**
+      In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used.
+     */
+    target?: number
+
+    /**
+      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. For regressors this parameter is ignored and the response is always the output of [predict](../../glossary.html#term-predict). By default, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and we revert to [decision\_function](../../glossary.html#term-decision_function) if it doesn’t exist. If `method` is `'recursion'`, the response is always the output of [decision\_function](../../glossary.html#term-decision_function).
+
+      @defaultValue `'auto'`
+     */
+    response_method?: 'auto' | 'predict_proba' | 'decision_function'
+
+    /**
+      The maximum number of columns in the grid plot. Only active when `ax` is a single axis or `undefined`.
+
+      @defaultValue `3`
+     */
+    n_cols?: number
+
+    /**
+      The number of equally spaced points on the axes of the plots, for each target feature.
+
+      @defaultValue `100`
+     */
+    grid_resolution?: number
+
+    /**
+      The lower and upper percentile used to create the extreme values for the PDP axes. Must be in \[0, 1\].
+     */
+    percentiles?: any
+
+    /**
+      The method used to calculate the averaged predictions:
+
+      @defaultValue `'auto'`
+     */
+    method?: string
+
+    /**
+      The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.
+
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Verbose output during PD computations.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. It can be used to define common properties for both `ice\_lines\_kw` and `pdp\_line\_kw`.
+     */
+    line_kw?: any
+
+    /**
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice\_lines\_kw` takes priority over `line\_kw`.
+     */
+    ice_lines_kw?: any
+
+    /**
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd\_line\_kw` takes priority over `line\_kw`.
+     */
+    pd_line_kw?: any
+
+    /**
+      Dict with keywords passed to the `matplotlib.pyplot.contourf` call. For two-way partial dependence plots.
+     */
+    contour_kw?: any
+
+    /**
+      If a single axis is passed in, it is treated as a bounding axes and a grid of partial dependence plots will be drawn within these bounds. The `n\_cols` parameter controls the number of columns in the grid.
+     */
+    ax?: any
+
+    /**
+      Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.
+
+      @defaultValue `'average'`
+     */
+    kind?: 'average' | 'individual' | 'both'
+
+    /**
+      If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
+
+      @defaultValue `false`
+     */
+    centered?: boolean
+
+    /**
+      Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If `float`, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If `int`, represents the absolute number samples to use.
+
+      Note that the full dataset is still used to calculate averaged partial dependence when `kind='both'`.
+
+      @defaultValue `1000`
+     */
+    subsample?: number
+
+    /**
+      Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PartialDependenceDisplay instance has already been disposed'
@@ -178,7 +362,61 @@ pms_PartialDependenceDisplay_from_estimator = {k: v for k, v in pms_PartialDepen
   /**
     Plot partial dependence plots.
    */
-  async plot(opts: PartialDependenceDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      and a grid of partial dependence plots will be drawn within these bounds. The `n\_cols` parameter controls the number of columns in the grid.
+     */
+    ax?: any
+
+    /**
+      The maximum number of columns in the grid plot. Only active when `ax` is a single axes or `undefined`.
+
+      @defaultValue `3`
+     */
+    n_cols?: number
+
+    /**
+      Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots.
+     */
+    line_kw?: any
+
+    /**
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice\_lines\_kw` takes priority over `line\_kw`.
+     */
+    ice_lines_kw?: any
+
+    /**
+      Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd\_line\_kw` takes priority over `line\_kw`.
+     */
+    pd_line_kw?: any
+
+    /**
+      Dict with keywords passed to the `matplotlib.pyplot.contourf` call for two-way partial dependence plots.
+     */
+    contour_kw?: any
+
+    /**
+      Dict with keywords passed to the `matplotlib.pyplot.bar` call for one-way categorical partial dependence plots.
+     */
+    bar_kw?: any
+
+    /**
+      Dict with keywords passed to the `matplotlib.pyplot.imshow` call for two-way categorical partial dependence plots.
+     */
+    heatmap_kw?: any
+
+    /**
+      Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined` (default), the limit will be inferred from the global minimum and maximum of all predictions.
+     */
+    pdp_lim?: any
+
+    /**
+      If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
+
+      @defaultValue `false`
+     */
+    centered?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PartialDependenceDisplay instance has already been disposed'
@@ -455,250 +693,4 @@ pms_PartialDependenceDisplay_plot = {k: v for k, v in pms_PartialDependenceDispl
         ._py`attr_PartialDependenceDisplay_figure_.tolist() if hasattr(attr_PartialDependenceDisplay_figure_, 'tolist') else attr_PartialDependenceDisplay_figure_`
     })()
   }
-}
-
-export interface PartialDependenceDisplayOptions {
-  /**
-    Results of [`partial\_dependence`](sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`.
-   */
-  pd_results?: any
-
-  /**
-    Indices of features for a given plot. A tuple of one integer will plot a partial dependence curve of one feature. A tuple of two integers will plot a two-way partial dependence curve as a contour plot.
-   */
-  features?: any
-
-  /**
-    Feature names corresponding to the indices in `features`.
-   */
-  feature_names?: any
-
-  /**
-    In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used.
-   */
-  target_idx?: number
-
-  /**
-    Deciles for feature indices in `features`.
-   */
-  deciles?: any
-
-  /**
-    Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined`, the limit will be inferred from the global minimum and maximum of all predictions.
-   */
-  pdp_lim?: any
-
-  /**
-    Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.
-
-    @defaultValue `'average'`
-   */
-  kind?: 'average' | 'individual' | 'both'
-
-  /**
-    Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If int, represents the maximum absolute number of samples to use.
-
-    Note that the full dataset is still used to calculate partial dependence when `kind='both'`.
-
-    @defaultValue `1000`
-   */
-  subsample?: number
-
-  /**
-    Controls the randomness of the selected samples when subsamples is not `undefined`. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-
-  /**
-    Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `undefined`, all features are assumed to be continuous.
-   */
-  is_categorical?: any
-}
-
-export interface PartialDependenceDisplayFromEstimatorOptions {
-  /**
-    A fitted estimator object implementing [predict](../../glossary.html#term-predict), [predict\_proba](../../glossary.html#term-predict_proba), or [decision\_function](../../glossary.html#term-decision_function). Multioutput-multiclass classifiers are not supported.
-   */
-  estimator?: any
-
-  /**
-    `X` is used to generate a grid of values for the target `features` (where the partial dependence will be evaluated), and also to generate values for the complement features when the `method` is `'brute'`.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target features for which to create the PDPs. If `features\[i\]` is an integer or a string, a one-way PDP is created; if `features\[i\]` is a tuple, a two-way PDP is created (only supported with `kind='average'`). Each tuple must be of size 2. If any entry is a string, then it must be in `feature\_names`.
-   */
-  features?: string
-
-  /**
-    Indicates the categorical features.
-   */
-  categorical_features?: ArrayLike | number
-
-  /**
-    Name of each feature; `feature\_names\[i\]` holds the name of the feature with index `i`. By default, the name of the feature corresponds to their numerical index for NumPy array and their column name for pandas dataframe.
-   */
-  feature_names?: ArrayLike
-
-  /**
-    In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used.
-   */
-  target?: number
-
-  /**
-    Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. For regressors this parameter is ignored and the response is always the output of [predict](../../glossary.html#term-predict). By default, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and we revert to [decision\_function](../../glossary.html#term-decision_function) if it doesn’t exist. If `method` is `'recursion'`, the response is always the output of [decision\_function](../../glossary.html#term-decision_function).
-
-    @defaultValue `'auto'`
-   */
-  response_method?: 'auto' | 'predict_proba' | 'decision_function'
-
-  /**
-    The maximum number of columns in the grid plot. Only active when `ax` is a single axis or `undefined`.
-
-    @defaultValue `3`
-   */
-  n_cols?: number
-
-  /**
-    The number of equally spaced points on the axes of the plots, for each target feature.
-
-    @defaultValue `100`
-   */
-  grid_resolution?: number
-
-  /**
-    The lower and upper percentile used to create the extreme values for the PDP axes. Must be in \[0, 1\].
-   */
-  percentiles?: any
-
-  /**
-    The method used to calculate the averaged predictions:
-
-    @defaultValue `'auto'`
-   */
-  method?: string
-
-  /**
-    The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.
-
-    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Verbose output during PD computations.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. It can be used to define common properties for both `ice\_lines\_kw` and `pdp\_line\_kw`.
-   */
-  line_kw?: any
-
-  /**
-    Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice\_lines\_kw` takes priority over `line\_kw`.
-   */
-  ice_lines_kw?: any
-
-  /**
-    Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd\_line\_kw` takes priority over `line\_kw`.
-   */
-  pd_line_kw?: any
-
-  /**
-    Dict with keywords passed to the `matplotlib.pyplot.contourf` call. For two-way partial dependence plots.
-   */
-  contour_kw?: any
-
-  /**
-    If a single axis is passed in, it is treated as a bounding axes and a grid of partial dependence plots will be drawn within these bounds. The `n\_cols` parameter controls the number of columns in the grid.
-   */
-  ax?: any
-
-  /**
-    Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.
-
-    @defaultValue `'average'`
-   */
-  kind?: 'average' | 'individual' | 'both'
-
-  /**
-    If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
-
-    @defaultValue `false`
-   */
-  centered?: boolean
-
-  /**
-    Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If `float`, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If `int`, represents the absolute number samples to use.
-
-    Note that the full dataset is still used to calculate averaged partial dependence when `kind='both'`.
-
-    @defaultValue `1000`
-   */
-  subsample?: number
-
-  /**
-    Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-}
-
-export interface PartialDependenceDisplayPlotOptions {
-  /**
-    and a grid of partial dependence plots will be drawn within these bounds. The `n\_cols` parameter controls the number of columns in the grid.
-   */
-  ax?: any
-
-  /**
-    The maximum number of columns in the grid plot. Only active when `ax` is a single axes or `undefined`.
-
-    @defaultValue `3`
-   */
-  n_cols?: number
-
-  /**
-    Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots.
-   */
-  line_kw?: any
-
-  /**
-    Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For ICE lines in the one-way partial dependence plots. The key value pairs defined in `ice\_lines\_kw` takes priority over `line\_kw`.
-   */
-  ice_lines_kw?: any
-
-  /**
-    Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd\_line\_kw` takes priority over `line\_kw`.
-   */
-  pd_line_kw?: any
-
-  /**
-    Dict with keywords passed to the `matplotlib.pyplot.contourf` call for two-way partial dependence plots.
-   */
-  contour_kw?: any
-
-  /**
-    Dict with keywords passed to the `matplotlib.pyplot.bar` call for one-way categorical partial dependence plots.
-   */
-  bar_kw?: any
-
-  /**
-    Dict with keywords passed to the `matplotlib.pyplot.imshow` call for two-way categorical partial dependence plots.
-   */
-  heatmap_kw?: any
-
-  /**
-    Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined` (default), the limit will be inferred from the global minimum and maximum of all predictions.
-   */
-  pdp_lim?: any
-
-  /**
-    If `true`, the ICE and PD lines will start at the origin of the y-axis. By default, no centering is done.
-
-    @defaultValue `false`
-   */
-  centered?: boolean
 }

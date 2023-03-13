@@ -22,7 +22,75 @@ export class SpectralBiclustering {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SpectralBiclusteringOptions) {
+  constructor(opts?: {
+    /**
+      The number of row and column clusters in the checkerboard structure.
+
+      @defaultValue `3`
+     */
+    n_clusters?: number
+
+    /**
+      Method of normalizing and converting singular vectors into biclusters. May be one of ‘scale’, ‘bistochastic’, or ‘log’. The authors recommend using ‘log’. If the data is sparse, however, log normalization will not work, which is why the default is ‘bistochastic’.
+
+      @defaultValue `'bistochastic'`
+     */
+    method?: 'bistochastic' | 'scale' | 'log'
+
+    /**
+      Number of singular vectors to check.
+
+      @defaultValue `6`
+     */
+    n_components?: number
+
+    /**
+      Number of best singular vectors to which to project the data for clustering.
+
+      @defaultValue `3`
+     */
+    n_best?: number
+
+    /**
+      Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, uses [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, uses `scipy.sparse.linalg.svds`, which is more accurate, but possibly slower in some cases.
+
+      @defaultValue `'randomized'`
+     */
+    svd_method?: 'randomized' | 'arpack'
+
+    /**
+      Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized\`.
+     */
+    n_svd_vecs?: number
+
+    /**
+      Whether to use mini-batch k-means, which is faster but may get different results.
+
+      @defaultValue `false`
+     */
+    mini_batch?: boolean
+
+    /**
+      Method for initialization of k-means algorithm; defaults to ‘k-means++’.
+
+      @defaultValue `'k-means++'`
+     */
+    init?: 'k-means++' | 'random' | NDArray[]
+
+    /**
+      Number of random initializations that are tried with the k-means algorithm.
+
+      If mini-batch k-means is used, the best initialization is chosen and the algorithm runs once. Otherwise, the algorithm is run for each initialization and the best solution chosen.
+
+      @defaultValue `10`
+     */
+    n_init?: number
+
+    /**
+      Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `SpectralBiclustering${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -111,7 +179,17 @@ ctor_SpectralBiclustering = {k: v for k, v in ctor_SpectralBiclustering.items() 
   /**
     Create a biclustering for X.
    */
-  async fit(opts: SpectralBiclusteringFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralBiclustering instance has already been disposed'
@@ -143,9 +221,12 @@ pms_SpectralBiclustering_fit = {k: v for k, v in pms_SpectralBiclustering_fit.it
 
     Only works if `rows\_` and `columns\_` attributes exist.
    */
-  async get_indices(
-    opts: SpectralBiclusteringGetIndicesOptions
-  ): Promise<NDArray> {
+  async get_indices(opts: {
+    /**
+      The index of the cluster.
+     */
+    i?: number
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralBiclustering instance has already been disposed'
@@ -177,7 +258,12 @@ pms_SpectralBiclustering_get_indices = {k: v for k, v in pms_SpectralBiclusterin
   /**
     Shape of the `i`’th bicluster.
    */
-  async get_shape(opts: SpectralBiclusteringGetShapeOptions): Promise<number> {
+  async get_shape(opts: {
+    /**
+      The index of the cluster.
+     */
+    i?: number
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralBiclustering instance has already been disposed'
@@ -209,9 +295,17 @@ pms_SpectralBiclustering_get_shape = {k: v for k, v in pms_SpectralBiclustering_
   /**
     Return the submatrix corresponding to bicluster `i`.
    */
-  async get_submatrix(
-    opts: SpectralBiclusteringGetSubmatrixOptions
-  ): Promise<NDArray[]> {
+  async get_submatrix(opts: {
+    /**
+      The index of the cluster.
+     */
+    i?: number
+
+    /**
+      The data.
+     */
+    data?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralBiclustering instance has already been disposed'
@@ -403,112 +497,4 @@ pms_SpectralBiclustering_get_submatrix = {k: v for k, v in pms_SpectralBicluster
         ._py`attr_SpectralBiclustering_feature_names_in_.tolist() if hasattr(attr_SpectralBiclustering_feature_names_in_, 'tolist') else attr_SpectralBiclustering_feature_names_in_`
     })()
   }
-}
-
-export interface SpectralBiclusteringOptions {
-  /**
-    The number of row and column clusters in the checkerboard structure.
-
-    @defaultValue `3`
-   */
-  n_clusters?: number
-
-  /**
-    Method of normalizing and converting singular vectors into biclusters. May be one of ‘scale’, ‘bistochastic’, or ‘log’. The authors recommend using ‘log’. If the data is sparse, however, log normalization will not work, which is why the default is ‘bistochastic’.
-
-    @defaultValue `'bistochastic'`
-   */
-  method?: 'bistochastic' | 'scale' | 'log'
-
-  /**
-    Number of singular vectors to check.
-
-    @defaultValue `6`
-   */
-  n_components?: number
-
-  /**
-    Number of best singular vectors to which to project the data for clustering.
-
-    @defaultValue `3`
-   */
-  n_best?: number
-
-  /**
-    Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, uses [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, uses `scipy.sparse.linalg.svds`, which is more accurate, but possibly slower in some cases.
-
-    @defaultValue `'randomized'`
-   */
-  svd_method?: 'randomized' | 'arpack'
-
-  /**
-    Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized\`.
-   */
-  n_svd_vecs?: number
-
-  /**
-    Whether to use mini-batch k-means, which is faster but may get different results.
-
-    @defaultValue `false`
-   */
-  mini_batch?: boolean
-
-  /**
-    Method for initialization of k-means algorithm; defaults to ‘k-means++’.
-
-    @defaultValue `'k-means++'`
-   */
-  init?: 'k-means++' | 'random' | NDArray[]
-
-  /**
-    Number of random initializations that are tried with the k-means algorithm.
-
-    If mini-batch k-means is used, the best initialization is chosen and the algorithm runs once. Otherwise, the algorithm is run for each initialization and the best solution chosen.
-
-    @defaultValue `10`
-   */
-  n_init?: number
-
-  /**
-    Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface SpectralBiclusteringFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SpectralBiclusteringGetIndicesOptions {
-  /**
-    The index of the cluster.
-   */
-  i?: number
-}
-
-export interface SpectralBiclusteringGetShapeOptions {
-  /**
-    The index of the cluster.
-   */
-  i?: number
-}
-
-export interface SpectralBiclusteringGetSubmatrixOptions {
-  /**
-    The index of the cluster.
-   */
-  i?: number
-
-  /**
-    The data.
-   */
-  data?: ArrayLike[]
 }

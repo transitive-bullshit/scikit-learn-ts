@@ -30,7 +30,68 @@ export class IsolationForest {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: IsolationForestOptions) {
+  constructor(opts?: {
+    /**
+      The number of base estimators in the ensemble.
+
+      @defaultValue `100`
+     */
+    n_estimators?: number
+
+    /**
+      If int, then draw `max\_samples` samples.
+
+      @defaultValue `'auto'`
+     */
+    max_samples?: 'auto' | number | number
+
+    /**
+      The amount of contamination of the data set, i.e. the proportion of outliers in the data set. Used when fitting to define the threshold on the scores of the samples.
+
+      @defaultValue `'auto'`
+     */
+    contamination?: 'auto' | number
+
+    /**
+      The number of features to draw from X to train each base estimator.
+
+      @defaultValue `1`
+     */
+    max_features?: number
+
+    /**
+      If `true`, individual trees are fit on random subsets of the training data sampled with replacement. If `false`, sampling without replacement is performed.
+
+      @defaultValue `false`
+     */
+    bootstrap?: boolean
+
+    /**
+      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Controls the pseudo-randomness of the selection of the feature and split values for each branching step and each tree in the forest.
+
+      Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Controls the verbosity of the tree building process.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+  }) {
     this.id = `IsolationForest${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -119,9 +180,12 @@ ctor_IsolationForest = {k: v for k, v in ctor_IsolationForest.items() if v is no
 
     The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n\_left in the leaf, the average path length of a n\_left samples isolation tree is added.
    */
-  async decision_function(
-    opts: IsolationForestDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This IsolationForest instance has already been disposed')
     }
@@ -151,7 +215,22 @@ pms_IsolationForest_decision_function = {k: v for k, v in pms_IsolationForest_de
   /**
     Fit estimator.
    */
-  async fit(opts: IsolationForestFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IsolationForest instance has already been disposed')
     }
@@ -185,7 +264,17 @@ pms_IsolationForest_fit = {k: v for k, v in pms_IsolationForest_fit.items() if v
 
     Returns -1 for outliers and 1 for inliers.
    */
-  async fit_predict(opts: IsolationForestFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This IsolationForest instance has already been disposed')
     }
@@ -213,7 +302,12 @@ pms_IsolationForest_fit_predict = {k: v for k, v in pms_IsolationForest_fit_pred
   /**
     Predict if a particular sample is an outlier or not.
    */
-  async predict(opts: IsolationForestPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This IsolationForest instance has already been disposed')
     }
@@ -245,9 +339,12 @@ pms_IsolationForest_predict = {k: v for k, v in pms_IsolationForest_predict.item
 
     The measure of normality of an observation given a tree is the depth of the leaf containing this observation, which is equivalent to the number of splittings required to isolate this point. In case of several observations n\_left in the leaf, the average path length of a n\_left samples isolation tree is added.
    */
-  async score_samples(
-    opts: IsolationForestScoreSamplesOptions
-  ): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This IsolationForest instance has already been disposed')
     }
@@ -446,117 +543,4 @@ pms_IsolationForest_score_samples = {k: v for k, v in pms_IsolationForest_score_
         ._py`attr_IsolationForest_feature_names_in_.tolist() if hasattr(attr_IsolationForest_feature_names_in_, 'tolist') else attr_IsolationForest_feature_names_in_`
     })()
   }
-}
-
-export interface IsolationForestOptions {
-  /**
-    The number of base estimators in the ensemble.
-
-    @defaultValue `100`
-   */
-  n_estimators?: number
-
-  /**
-    If int, then draw `max\_samples` samples.
-
-    @defaultValue `'auto'`
-   */
-  max_samples?: 'auto' | number | number
-
-  /**
-    The amount of contamination of the data set, i.e. the proportion of outliers in the data set. Used when fitting to define the threshold on the scores of the samples.
-
-    @defaultValue `'auto'`
-   */
-  contamination?: 'auto' | number
-
-  /**
-    The number of features to draw from X to train each base estimator.
-
-    @defaultValue `1`
-   */
-  max_features?: number
-
-  /**
-    If `true`, individual trees are fit on random subsets of the training data sampled with replacement. If `false`, sampling without replacement is performed.
-
-    @defaultValue `false`
-   */
-  bootstrap?: boolean
-
-  /**
-    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.IsolationForest.fit "sklearn.ensemble.IsolationForest.fit") and [`predict`](#sklearn.ensemble.IsolationForest.predict "sklearn.ensemble.IsolationForest.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Controls the pseudo-randomness of the selection of the feature and split values for each branching step and each tree in the forest.
-
-    Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Controls the verbosity of the tree building process.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-}
-
-export interface IsolationForestDecisionFunctionOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface IsolationForestFitOptions {
-  /**
-    The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface IsolationForestFitPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface IsolationForestPredictOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface IsolationForestScoreSamplesOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

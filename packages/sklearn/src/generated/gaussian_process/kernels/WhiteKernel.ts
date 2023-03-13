@@ -20,7 +20,19 @@ export class WhiteKernel {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: WhiteKernelOptions) {
+  constructor(opts?: {
+    /**
+      Parameter controlling the noise level (variance)
+
+      @defaultValue `1`
+     */
+    noise_level?: number
+
+    /**
+      The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise\_level’ cannot be changed during hyperparameter tuning.
+     */
+    noise_level_bounds?: 'fixed'
+  }) {
     this.id = `WhiteKernel${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -95,7 +107,24 @@ ctor_WhiteKernel = {k: v for k, v in ctor_WhiteKernel.items() if v is not None}`
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: WhiteKernelCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: ArrayLike[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This WhiteKernel instance has already been disposed')
     }
@@ -127,7 +156,12 @@ pms_WhiteKernel___call__ = {k: v for k, v in pms_WhiteKernel___call__.items() if
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(opts: WhiteKernelCloneWithThetaOptions): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This WhiteKernel instance has already been disposed')
     }
@@ -157,7 +191,12 @@ pms_WhiteKernel_clone_with_theta = {k: v for k, v in pms_WhiteKernel_clone_with_
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: WhiteKernelDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Argument to the kernel.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This WhiteKernel instance has already been disposed')
     }
@@ -185,7 +224,7 @@ pms_WhiteKernel_diag = {k: v for k, v in pms_WhiteKernel_diag.items() if v is no
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: WhiteKernelIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This WhiteKernel instance has already been disposed')
     }
@@ -230,52 +269,3 @@ pms_WhiteKernel_is_stationary = {k: v for k, v in pms_WhiteKernel_is_stationary.
     })()
   }
 }
-
-export interface WhiteKernelOptions {
-  /**
-    Parameter controlling the noise level (variance)
-
-    @defaultValue `1`
-   */
-  noise_level?: number
-
-  /**
-    The lower and upper bound on ‘noise\_level’. If set to “fixed”, ‘noise\_level’ cannot be changed during hyperparameter tuning.
-   */
-  noise_level_bounds?: 'fixed'
-}
-
-export interface WhiteKernelCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: ArrayLike[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface WhiteKernelCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface WhiteKernelDiagOptions {
-  /**
-    Argument to the kernel.
-   */
-  X?: ArrayLike[]
-}
-
-export interface WhiteKernelIsStationaryOptions {}

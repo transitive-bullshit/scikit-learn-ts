@@ -17,20 +17,26 @@ Read more in the [User Guide](../neural_networks_unsupervised.html#rbm).
 ### Signature
 
 ```ts
-new BernoulliRBM(opts?: BernoulliRBMOptions): BernoulliRBM;
+new BernoulliRBM(opts?: object): BernoulliRBM;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`BernoulliRBMOptions`](../interfaces/BernoulliRBMOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.batch_size?` | `number` | Number of examples per minibatch.  `Default Value`  `10` |
+| `opts.learning_rate?` | `number` | The learning rate for weight updates. It is *highly* recommended to tune this hyper-parameter. Reasonable values are in the 10\*\*\[0., -3.\] range.  `Default Value`  `0.1` |
+| `opts.n_components?` | `number` | Number of binary hidden units.  `Default Value`  `256` |
+| `opts.n_iter?` | `number` | Number of iterations/sweeps over the training dataset to perform during training.  `Default Value`  `10` |
+| `opts.random_state?` | `number` | Determines random number generation for: |
+| `opts.verbose?` | `number` | The verbosity level. The default, zero, means silent mode. Range of values is \[0, inf\].  `Default Value`  `0` |
 
 ### Returns
 
 [`BernoulliRBM`](BernoulliRBM.md)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L27)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L27)
 
 ## Properties
 
@@ -38,31 +44,31 @@ Defined in:  [generated/neural\_network/BernoulliRBM.ts:27](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L25)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L24)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L23)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L20)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L21)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L21)
 
 ## Accessors
 
@@ -80,9 +86,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L401)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L499)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L401)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L499)
 
 ### feature\_names\_in\_
 
@@ -98,9 +104,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L476)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L574)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L476)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L574)
 
 ### h\_samples\_
 
@@ -116,9 +122,9 @@ h_samples_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L426)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L524)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L426)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L524)
 
 ### intercept\_hidden\_
 
@@ -134,9 +140,9 @@ intercept_hidden_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L351)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L449)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L351)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L449)
 
 ### intercept\_visible\_
 
@@ -152,9 +158,9 @@ intercept_visible_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L376)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L474)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L376)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L474)
 
 ### n\_features\_in\_
 
@@ -170,9 +176,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L451)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L549)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L451)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L549)
 
 ### py
 
@@ -186,7 +192,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L32)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L72)
 
 #### Signature
 
@@ -204,9 +210,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L36)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L76)
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L32) [generated/neural\_network/BernoulliRBM.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L36)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L72) [generated/neural\_network/BernoulliRBM.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L76)
 
 ## Methods
 
@@ -226,7 +232,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L91)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L131)
 
 ### fit()
 
@@ -235,20 +241,22 @@ Fit the model to the data X.
 #### Signature
 
 ```ts
-fit(opts: BernoulliRBMFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMFitOptions`](../interfaces/BernoulliRBMFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L108)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L148)
 
 ### fit\_transform()
 
@@ -259,20 +267,23 @@ Fits transformer to `X` and `y` with optional parameters `fit\_params` and retur
 #### Signature
 
 ```ts
-fit_transform(opts: BernoulliRBMFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMFitTransformOptions`](../interfaces/BernoulliRBMFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L140)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L190)
 
 ### get\_feature\_names\_out()
 
@@ -283,20 +294,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: BernoulliRBMGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMGetFeatureNamesOutOptions`](../interfaces/BernoulliRBMGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.neural_network.BernoulliRBM.fit "sklearn.neural_network.BernoulliRBM.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L174)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L239)
 
 ### gibbs()
 
@@ -305,20 +317,21 @@ Perform one Gibbs sampling step.
 #### Signature
 
 ```ts
-gibbs(opts: BernoulliRBMGibbsOptions): Promise<ArrayLike[]>;
+gibbs(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMGibbsOptions`](../interfaces/BernoulliRBMGibbsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.v?` | [`ArrayLike`](../types/ArrayLike.md)[] | Values of the visible layer to start from. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L207)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L275)
 
 ### init()
 
@@ -342,7 +355,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L45)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L85)
 
 ### partial\_fit()
 
@@ -351,20 +364,22 @@ Fit the model to the partial segment of the data X.
 #### Signature
 
 ```ts
-partial_fit(opts: BernoulliRBMPartialFitOptions): Promise<any>;
+partial_fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMPartialFitOptions`](../interfaces/BernoulliRBMPartialFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L235)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L308)
 
 ### score\_samples()
 
@@ -373,20 +388,21 @@ Compute the pseudo-likelihood of X.
 #### Signature
 
 ```ts
-score_samples(opts: BernoulliRBMScoreSamplesOptions): Promise<ArrayLike>;
+score_samples(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMScoreSamplesOptions`](../interfaces/BernoulliRBMScoreSamplesOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Values of the visible layer. Must be all-boolean (not checked). |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L265)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L348)
 
 ### set\_output()
 
@@ -397,20 +413,21 @@ See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set
 #### Signature
 
 ```ts
-set_output(opts: BernoulliRBMSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMSetOutputOptions`](../interfaces/BernoulliRBMSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L295)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L383)
 
 ### transform()
 
@@ -419,17 +436,18 @@ Compute the hidden layer activation probabilities, P(h=1|v=X).
 #### Signature
 
 ```ts
-transform(opts: BernoulliRBMTransformOptions): Promise<ArrayLike[]>;
+transform(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`BernoulliRBMTransformOptions`](../interfaces/BernoulliRBMTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The data to be transformed. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neural\_network/BernoulliRBM.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L323)
+Defined in:  [generated/neural\_network/BernoulliRBM.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/BernoulliRBM.ts#L416)

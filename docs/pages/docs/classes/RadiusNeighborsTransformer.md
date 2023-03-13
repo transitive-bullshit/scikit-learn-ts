@@ -15,20 +15,28 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new RadiusNeighborsTransformer(opts?: RadiusNeighborsTransformerOptions): RadiusNeighborsTransformer;
+new RadiusNeighborsTransformer(opts?: object): RadiusNeighborsTransformer;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `RadiusNeighborsTransformerOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm used to compute the nearest neighbors:  `Default Value`  `'auto'` |
+| `opts.leaf_size?` | `number` | Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.  `Default Value`  `30` |
+| `opts.metric?` | `string` | Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.  If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.  Distance matrices are not supported.  `Default Value`  `'minkowski'` |
+| `opts.metric_params?` | `any` | Additional keyword arguments for the metric function. |
+| `opts.mode?` | `"connectivity"` \| `"distance"` | Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, and ‘distance’ will return the distances between neighbors according to the given metric.  `Default Value`  `'distance'` |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run for neighbors search. If `\-1`, then the number of jobs is set to the number of CPU cores. |
+| `opts.p?` | `number` | Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_distances. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.  `Default Value`  `2` |
+| `opts.radius?` | `number` | Radius of neighborhood in the transformed sparse graph.  `Default Value`  `1` |
 
 ### Returns
 
 [`RadiusNeighborsTransformer`](RadiusNeighborsTransformer.md)
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L25)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L25)
 
 ## Properties
 
@@ -36,31 +44,31 @@ Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:25](https://gith
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L23)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L22)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L21)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L18)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L19)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L19)
 
 ## Accessors
 
@@ -78,7 +86,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L369)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L496)
 
 ### effective\_metric\_params\_
 
@@ -94,7 +102,7 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L396)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L523)
 
 ### feature\_names\_in\_
 
@@ -110,7 +118,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L450)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:577](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L577)
 
 ### n\_features\_in\_
 
@@ -126,7 +134,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L423)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:550](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L550)
 
 ### n\_samples\_fit\_
 
@@ -142,7 +150,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L477)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:604](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L604)
 
 ### py
 
@@ -156,7 +164,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L30)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L86)
 
 #### Signature
 
@@ -174,7 +182,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L34)
+Defined in: [generated/neighbors/RadiusNeighborsTransformer.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L90)
 
 ## Methods
 
@@ -194,7 +202,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L93)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L149)
 
 ### fit()
 
@@ -203,20 +211,22 @@ Fit the radius neighbors transformer from the training dataset.
 #### Signature
 
 ```ts
-fit(opts: RadiusNeighborsTransformerFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsTransformerFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Training data. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L110)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L166)
 
 ### fit\_transform()
 
@@ -227,20 +237,22 @@ Fits transformer to X and y with optional parameters fit\_params and returns a t
 #### Signature
 
 ```ts
-fit_transform(opts: RadiusNeighborsTransformerFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsTransformerFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Training set. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L144)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L210)
 
 ### get\_feature\_names\_out()
 
@@ -251,20 +263,21 @@ The feature names out will prefixed by the lowercased class name. For example, i
 #### Signature
 
 ```ts
-get_feature_names_out(opts: RadiusNeighborsTransformerGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsTransformerGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.RadiusNeighborsTransformer.fit "sklearn.neighbors.RadiusNeighborsTransformer.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L181)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L255)
 
 ### init()
 
@@ -288,7 +301,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L43)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L99)
 
 ### radius\_neighbors()
 
@@ -301,20 +314,24 @@ The result points are *not* necessarily sorted by distance to their query point.
 #### Signature
 
 ```ts
-radius_neighbors(opts: RadiusNeighborsTransformerRadiusNeighborsOptions): Promise<any>;
+radius_neighbors(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsTransformerRadiusNeighborsOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. |
+| `opts.radius?` | `number` | Limiting distance of neighbors to return. The default is the value passed to the constructor. |
+| `opts.return_distance?` | `boolean` | Whether or not to return the distances.  `Default Value`  `true` |
+| `opts.sort_results?` | `boolean` | If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L220)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L297)
 
 ### radius\_neighbors\_graph()
 
@@ -325,20 +342,24 @@ Neighborhoods are restricted the points at a distance lower than radius.
 #### Signature
 
 ```ts
-radius_neighbors_graph(opts: RadiusNeighborsTransformerRadiusNeighborsGraphOptions): Promise<any[]>;
+radius_neighbors_graph(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsTransformerRadiusNeighborsGraphOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. |
+| `opts.mode?` | `"connectivity"` \| `"distance"` | Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.  `Default Value`  `'connectivity'` |
+| `opts.radius?` | `number` | Radius of neighborhoods. The default is the value passed to the constructor. |
+| `opts.sort_results?` | `boolean` | If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L258)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L357)
 
 ### set\_output()
 
@@ -349,20 +370,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: RadiusNeighborsTransformerSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsTransformerSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L299)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L420)
 
 ### transform()
 
@@ -371,17 +393,18 @@ Compute the (weighted) graph of Neighbors for points in X.
 #### Signature
 
 ```ts
-transform(opts: RadiusNeighborsTransformerTransformOptions): Promise<any[]>;
+transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RadiusNeighborsTransformerTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Sample data. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L334)
+Defined in:  [generated/neighbors/RadiusNeighborsTransformer.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/RadiusNeighborsTransformer.ts#L458)

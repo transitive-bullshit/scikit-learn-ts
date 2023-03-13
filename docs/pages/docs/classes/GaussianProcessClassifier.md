@@ -19,20 +19,29 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new GaussianProcessClassifier(opts?: GaussianProcessClassifierOptions): GaussianProcessClassifier;
+new GaussianProcessClassifier(opts?: object): GaussianProcessClassifier;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `GaussianProcessClassifierOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.copy_X_train?` | `boolean` | If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.  `Default Value`  `true` |
+| `opts.kernel?` | `any` | The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel “1.0 \* RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a `CompoundKernel`. |
+| `opts.max_iter_predict?` | `number` | The maximum number of iterations in Newton’s method for approximating the posterior during predict. Smaller values will reduce computation time at the cost of worse results.  `Default Value`  `100` |
+| `opts.multi_class?` | `"one_vs_rest"` \| `"one_vs_one"` | Specifies how multi-class classification problems are handled. Supported are ‘one\_vs\_rest’ and ‘one\_vs\_one’. In ‘one\_vs\_rest’, one binary Gaussian process classifier is fitted for each class, which is trained to separate this class from the rest. In ‘one\_vs\_one’, one binary Gaussian process classifier is fitted for each pair of classes, which is trained to separate these two classes. The predictions of these binary predictors are combined into multi-class predictions. Note that ‘one\_vs\_one’ does not support predicting probability estimates.  `Default Value`  `'one_vs_rest'` |
+| `opts.n_jobs?` | `number` | The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.n_restarts_optimizer?` | `number` | The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n\_restarts\_optimizer=0 implies that one run is performed.  `Default Value`  `0` |
+| `opts.optimizer?` | `"fmin_l_bfgs_b"` | Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:  `Default Value`  `'fmin_l_bfgs_b'` |
+| `opts.random_state?` | `number` | Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See Glossary. |
+| `opts.warm_start?` | `boolean` | If warm-starts are enabled, the solution of the last Newton iteration on the Laplace approximation of the posterior mode is used as initialization for the next call of \_posterior\_mode(). This can speed up convergence when \_posterior\_mode is called several times on similar problems as in hyperparameter optimization. See the Glossary.  `Default Value`  `false` |
 
 ### Returns
 
 [`GaussianProcessClassifier`](GaussianProcessClassifier.md)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L29)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L29)
 
 ## Properties
 
@@ -40,31 +49,31 @@ Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:29](https
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L27)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L26)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L25)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L22)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L23)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L23)
 
 ## Accessors
 
@@ -82,7 +91,7 @@ base_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L298)
+Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L403)
 
 ### classes\_
 
@@ -98,7 +107,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L352)
+Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L457)
 
 ### feature\_names\_in\_
 
@@ -114,7 +123,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L433)
+Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L538)
 
 ### log\_marginal\_likelihood\_value\_
 
@@ -130,7 +139,7 @@ log_marginal_likelihood_value_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L325)
+Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L430)
 
 ### n\_classes\_
 
@@ -146,7 +155,7 @@ n_classes_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L379)
+Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L484)
 
 ### n\_features\_in\_
 
@@ -162,7 +171,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L406)
+Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L511)
 
 ### py
 
@@ -176,7 +185,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L34)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L91)
 
 #### Signature
 
@@ -194,7 +203,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L38)
+Defined in: [generated/gaussian\_process/GaussianProcessClassifier.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L95)
 
 ## Methods
 
@@ -214,7 +223,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L103)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L160)
 
 ### fit()
 
@@ -223,20 +232,22 @@ Fit Gaussian process classification model.
 #### Signature
 
 ```ts
-fit(opts: GaussianProcessClassifierFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianProcessClassifierFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Feature vectors or other representations of training data. |
+| `opts.y?` | `ArrayLike` | Target values, must be binary. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L120)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L177)
 
 ### init()
 
@@ -260,7 +271,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L47)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L104)
 
 ### log\_marginal\_likelihood()
 
@@ -271,20 +282,23 @@ In the case of multi-class classification, the mean log-marginal likelihood of t
 #### Signature
 
 ```ts
-log_marginal_likelihood(opts: GaussianProcessClassifierLogMarginalLikelihoodOptions): Promise<number>;
+log_marginal_likelihood(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianProcessClassifierLogMarginalLikelihoodOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.clone_kernel?` | `boolean` | If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.  `Default Value`  `true` |
+| `opts.eval_gradient?` | `boolean` | If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. Note that gradient computation is not supported for non-binary classification. If `true`, theta must not be `undefined`.  `Default Value`  `false` |
+| `opts.theta?` | `ArrayLike` | Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L154)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L221)
 
 ### predict()
 
@@ -293,20 +307,21 @@ Perform classification on an array of test vectors X.
 #### Signature
 
 ```ts
-predict(opts: GaussianProcessClassifierPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianProcessClassifierPredictOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Query points where the GP is evaluated for classification. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L191)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L275)
 
 ### predict\_proba()
 
@@ -315,20 +330,21 @@ Return probability estimates for the test vector X.
 #### Signature
 
 ```ts
-predict_proba(opts: GaussianProcessClassifierPredictProbaOptions): Promise<ArrayLike[]>;
+predict_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianProcessClassifierPredictProbaOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Query points where the GP is evaluated for classification. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L225)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L312)
 
 ### score()
 
@@ -339,17 +355,20 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: GaussianProcessClassifierScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `GaussianProcessClassifierScoreOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike`[] | Test samples. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. |
+| `opts.y?` | `ArrayLike` | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L262)
+Defined in:  [generated/gaussian\_process/GaussianProcessClassifier.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/GaussianProcessClassifier.ts#L352)

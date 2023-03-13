@@ -15,20 +15,24 @@ The model fits a Gaussian density to each class.
 ### Signature
 
 ```ts
-new QuadraticDiscriminantAnalysis(opts?: QuadraticDiscriminantAnalysisOptions): QuadraticDiscriminantAnalysis;
+new QuadraticDiscriminantAnalysis(opts?: object): QuadraticDiscriminantAnalysis;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`QuadraticDiscriminantAnalysisOptions`](../interfaces/QuadraticDiscriminantAnalysisOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.priors?` | [`ArrayLike`](../types/ArrayLike.md) | Class priors. By default, the class proportions are inferred from the training data. |
+| `opts.reg_param?` | `number` | Regularizes the per-class covariance estimates by transforming S2 as `S2 \= (1 \- reg\_param) \* S2 + reg\_param \* np.eye(n\_features)`, where S2 corresponds to the `scaling\_` attribute of a given class.  `Default Value`  `0` |
+| `opts.store_covariance?` | `boolean` | If `true`, the class covariance matrices are explicitly computed and stored in the `self.covariance\_` attribute.  `Default Value`  `false` |
+| `opts.tol?` | `number` | Absolute threshold for a singular value to be considered significant, used to estimate the rank of `Xk` where `Xk` is the centered matrix of samples in class k. This parameter does not affect the predictions. It only controls a warning that is raised when features are considered to be colinear.  `Default Value`  `0.0001` |
 
 ### Returns
 
 [`QuadraticDiscriminantAnalysis`](QuadraticDiscriminantAnalysis.md)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L25)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L25)
 
 ## Properties
 
@@ -36,31 +40,31 @@ Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:
 
 > `boolean`  = `false`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L23)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L22)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L21)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L18)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L19)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L19)
 
 ## Accessors
 
@@ -78,9 +82,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L465)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L526)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:465](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L465)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L526)
 
 ### covariance\_
 
@@ -96,9 +100,9 @@ covariance_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L330)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L391)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L330)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L391)
 
 ### feature\_names\_in\_
 
@@ -114,9 +118,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L519)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L580)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L519)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L580)
 
 ### means\_
 
@@ -132,9 +136,9 @@ means_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L357)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L418)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L357)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L418)
 
 ### n\_features\_in\_
 
@@ -150,9 +154,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L492)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L553)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L492)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L553)
 
 ### priors\_
 
@@ -168,9 +172,9 @@ priors_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L384)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L445)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L384)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L445)
 
 ### py
 
@@ -184,7 +188,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L32)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L58)
 
 #### Signature
 
@@ -202,9 +206,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L36)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L62)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L32) [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L36)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:58](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L58) [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L62)
 
 ### rotations\_
 
@@ -220,9 +224,9 @@ rotations_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L411)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L472)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L411)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L472)
 
 ### scalings\_
 
@@ -238,9 +242,9 @@ scalings_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L438)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L499)
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L438)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L499)
 
 ## Methods
 
@@ -253,20 +257,21 @@ The decision function is equal (up to a constant factor) to the log-posterior of
 #### Signature
 
 ```ts
-decision_function(opts: QuadraticDiscriminantAnalysisDecisionFunctionOptions): Promise<ArrayLike>;
+decision_function(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuadraticDiscriminantAnalysisDecisionFunctionOptions`](../interfaces/QuadraticDiscriminantAnalysisDecisionFunctionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Array of samples (test vectors). |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L113)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L139)
 
 ### dispose()
 
@@ -284,7 +289,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L94)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L120)
 
 ### fit()
 
@@ -293,20 +298,22 @@ Fit the model according to the given training data and parameters.
 #### Signature
 
 ```ts
-fit(opts: QuadraticDiscriminantAnalysisFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuadraticDiscriminantAnalysisFitOptions`](../interfaces/QuadraticDiscriminantAnalysisFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (integers). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L148)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L177)
 
 ### init()
 
@@ -330,7 +337,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L45)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:71](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L71)
 
 ### predict()
 
@@ -341,20 +348,21 @@ The predicted class C for each sample in X is returned.
 #### Signature
 
 ```ts
-predict(opts: QuadraticDiscriminantAnalysisPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuadraticDiscriminantAnalysisPredictOptions`](../interfaces/QuadraticDiscriminantAnalysisPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Vector to be scored, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L184)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L223)
 
 ### predict\_log\_proba()
 
@@ -363,20 +371,21 @@ Return log of posterior probabilities of classification.
 #### Signature
 
 ```ts
-predict_log_proba(opts: QuadraticDiscriminantAnalysisPredictLogProbaOptions): Promise<ArrayLike[]>;
+predict_log_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuadraticDiscriminantAnalysisPredictLogProbaOptions`](../interfaces/QuadraticDiscriminantAnalysisPredictLogProbaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Array of samples/test vectors. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L219)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L261)
 
 ### predict\_proba()
 
@@ -385,20 +394,21 @@ Return posterior probabilities of classification.
 #### Signature
 
 ```ts
-predict_proba(opts: QuadraticDiscriminantAnalysisPredictProbaOptions): Promise<ArrayLike[]>;
+predict_proba(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuadraticDiscriminantAnalysisPredictProbaOptions`](../interfaces/QuadraticDiscriminantAnalysisPredictProbaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Array of samples/test vectors. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L254)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L299)
 
 ### score()
 
@@ -409,17 +419,20 @@ In multi-label classification, this is the subset accuracy which is a harsh metr
 #### Signature
 
 ```ts
-score(opts: QuadraticDiscriminantAnalysisScoreOptions): Promise<number>;
+score(opts: object): Promise<number>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuadraticDiscriminantAnalysisScoreOptions`](../interfaces/QuadraticDiscriminantAnalysisScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True labels for `X`. |
 
 #### Returns
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L291)
+Defined in:  [generated/discriminant\_analysis/QuadraticDiscriminantAnalysis.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/discriminant_analysis/QuadraticDiscriminantAnalysis.ts#L339)

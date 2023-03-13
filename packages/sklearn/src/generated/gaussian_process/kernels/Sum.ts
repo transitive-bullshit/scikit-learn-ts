@@ -18,7 +18,17 @@ export class Sum {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SumOptions) {
+  constructor(opts?: {
+    /**
+      The first base-kernel of the sum-kernel
+     */
+    k1?: any
+
+    /**
+      The second base-kernel of the sum-kernel
+     */
+    k2?: any
+  }) {
     this.id = `Sum${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -92,7 +102,24 @@ ctor_Sum = {k: v for k, v in ctor_Sum.items() if v is not None}`
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: SumCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: ArrayLike[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Sum instance has already been disposed')
     }
@@ -124,7 +151,12 @@ pms_Sum___call__ = {k: v for k, v in pms_Sum___call__.items() if v is not None}`
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(opts: SumCloneWithThetaOptions): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Sum instance has already been disposed')
     }
@@ -154,7 +186,12 @@ pms_Sum_clone_with_theta = {k: v for k, v in pms_Sum_clone_with_theta.items() if
 
     The result of this method is identical to `np.diag(self(X))`; however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: SumDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Argument to the kernel.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Sum instance has already been disposed')
     }
@@ -181,7 +218,7 @@ pms_Sum_diag = {k: v for k, v in pms_Sum_diag.items() if v is not None}`
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: SumIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Sum instance has already been disposed')
     }
@@ -204,50 +241,3 @@ pms_Sum_is_stationary = {k: v for k, v in pms_Sum_is_stationary.items() if v is 
       ._py`res_Sum_is_stationary.tolist() if hasattr(res_Sum_is_stationary, 'tolist') else res_Sum_is_stationary`
   }
 }
-
-export interface SumOptions {
-  /**
-    The first base-kernel of the sum-kernel
-   */
-  k1?: any
-
-  /**
-    The second base-kernel of the sum-kernel
-   */
-  k2?: any
-}
-
-export interface SumCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: ArrayLike[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface SumCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface SumDiagOptions {
-  /**
-    Argument to the kernel.
-   */
-  X?: ArrayLike[]
-}
-
-export interface SumIsStationaryOptions {}

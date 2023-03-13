@@ -17,20 +17,32 @@ Read more in the User Guide.
 ### Signature
 
 ```ts
-new RandomTreesEmbedding(opts?: RandomTreesEmbeddingOptions): RandomTreesEmbedding;
+new RandomTreesEmbedding(opts?: object): RandomTreesEmbedding;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | `RandomTreesEmbeddingOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.max_depth?` | `number` | The maximum depth of each tree. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples.  `Default Value`  `5` |
+| `opts.max_leaf_nodes?` | `number` | Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. If `undefined` then unlimited number of leaf nodes. |
+| `opts.min_impurity_decrease?` | `number` | A node will be split if this split induces a decrease of the impurity greater than or equal to this value.  The weighted impurity decrease equation is the following:  `Default Value`  `0` |
+| `opts.min_samples_leaf?` | `number` | The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.  `Default Value`  `1` |
+| `opts.min_samples_split?` | `number` | The minimum number of samples required to split an internal node:  `Default Value`  `2` |
+| `opts.min_weight_fraction_leaf?` | `number` | The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided.  `Default Value`  `0` |
+| `opts.n_estimators?` | `number` | Number of trees in the forest.  `Default Value`  `100` |
+| `opts.n_jobs?` | `number` | The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.random_state?` | `number` | Controls the generation of the random `y` used to fit the trees and the draw of the splits for each feature at the trees’ nodes. See Glossary for details. |
+| `opts.sparse_output?` | `boolean` | Whether or not to return a sparse CSR matrix, as default behavior, or to return a dense array compatible with dense pipeline operators.  `Default Value`  `true` |
+| `opts.verbose?` | `number` | Controls the verbosity when fitting and predicting.  `Default Value`  `0` |
+| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest. See Glossary and Fitting additional weak-learners for details.  `Default Value`  `false` |
 
 ### Returns
 
 [`RandomTreesEmbedding`](RandomTreesEmbedding.md)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L27)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L27)
 
 ## Properties
 
@@ -38,31 +50,31 @@ Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:27](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L25)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L24)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L23)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L20)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L21)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L21)
 
 ## Accessors
 
@@ -80,7 +92,7 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/RandomTreesEmbedding.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L361)
+Defined in: [generated/ensemble/RandomTreesEmbedding.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L488)
 
 ### estimators\_
 
@@ -96,7 +108,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/RandomTreesEmbedding.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L388)
+Defined in: [generated/ensemble/RandomTreesEmbedding.ts:515](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L515)
 
 ### feature\_names\_in\_
 
@@ -112,7 +124,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/RandomTreesEmbedding.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L442)
+Defined in: [generated/ensemble/RandomTreesEmbedding.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L569)
 
 ### n\_features\_in\_
 
@@ -128,7 +140,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/RandomTreesEmbedding.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L415)
+Defined in: [generated/ensemble/RandomTreesEmbedding.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L542)
 
 ### n\_outputs\_
 
@@ -144,7 +156,7 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/ensemble/RandomTreesEmbedding.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L469)
+Defined in: [generated/ensemble/RandomTreesEmbedding.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L596)
 
 ### one\_hot\_encoder\_
 
@@ -160,7 +172,7 @@ one_hot_encoder_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/RandomTreesEmbedding.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L496)
+Defined in: [generated/ensemble/RandomTreesEmbedding.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L623)
 
 ### py
 
@@ -174,7 +186,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L32)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L112)
 
 #### Signature
 
@@ -192,7 +204,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/RandomTreesEmbedding.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L36)
+Defined in: [generated/ensemble/RandomTreesEmbedding.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L116)
 
 ## Methods
 
@@ -203,20 +215,21 @@ Apply trees in the forest to X, return leaf indices.
 #### Signature
 
 ```ts
-apply(opts: RandomTreesEmbeddingApplyOptions): Promise<ArrayLike[]>;
+apply(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RandomTreesEmbeddingApplyOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`. |
 
 #### Returns
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L122)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L202)
 
 ### decision\_path()
 
@@ -225,20 +238,21 @@ Return the decision path in the forest.
 #### Signature
 
 ```ts
-decision_path(opts: RandomTreesEmbeddingDecisionPathOptions): Promise<any[]>;
+decision_path(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RandomTreesEmbeddingDecisionPathOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L152)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L237)
 
 ### dispose()
 
@@ -256,7 +270,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L105)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L185)
 
 ### fit()
 
@@ -265,20 +279,23 @@ Fit estimator.
 #### Signature
 
 ```ts
-fit(opts: RandomTreesEmbeddingFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RandomTreesEmbeddingFitOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | The input samples. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csc\_matrix` for maximum efficiency. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L186)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L274)
 
 ### fit\_transform()
 
@@ -287,20 +304,23 @@ Fit estimator and transform dataset.
 #### Signature
 
 ```ts
-fit_transform(opts: RandomTreesEmbeddingFitTransformOptions): Promise<any[]>;
+fit_transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RandomTreesEmbeddingFitTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Input data used to build forests. Use `dtype=np.float32` for maximum efficiency. |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L220)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L323)
 
 ### get\_feature\_names\_out()
 
@@ -309,20 +329,21 @@ Get output feature names for transformation.
 #### Signature
 
 ```ts
-get_feature_names_out(opts: RandomTreesEmbeddingGetFeatureNamesOutOptions): Promise<any>;
+get_feature_names_out(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RandomTreesEmbeddingGetFeatureNamesOutOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"). |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L258)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L374)
 
 ### init()
 
@@ -346,7 +367,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L45)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L125)
 
 ### set\_output()
 
@@ -357,20 +378,21 @@ See Introducing the set\_output API for an example on how to use the API.
 #### Signature
 
 ```ts
-set_output(opts: RandomTreesEmbeddingSetOutputOptions): Promise<any>;
+set_output(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RandomTreesEmbeddingSetOutputOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L295)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L414)
 
 ### transform()
 
@@ -379,17 +401,18 @@ Transform dataset.
 #### Signature
 
 ```ts
-transform(opts: RandomTreesEmbeddingTransformOptions): Promise<any[]>;
+transform(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `RandomTreesEmbeddingTransformOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `ArrayLike` | Input data to be transformed. Use `dtype=np.float32` for maximum efficiency. Sparse matrices are also supported, use sparse `csr\_matrix` for maximum efficiency. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L327)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L451)

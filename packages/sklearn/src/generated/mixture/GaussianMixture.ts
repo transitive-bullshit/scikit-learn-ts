@@ -22,7 +22,97 @@ export class GaussianMixture {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GaussianMixtureOptions) {
+  constructor(opts?: {
+    /**
+      The number of mixture components.
+
+      @defaultValue `1`
+     */
+    n_components?: number
+
+    /**
+      String describing the type of covariance parameters to use. Must be one of:
+
+      @defaultValue `'full'`
+     */
+    covariance_type?: 'full' | 'tied' | 'diag' | 'spherical'
+
+    /**
+      The convergence threshold. EM iterations will stop when the lower bound average gain is below this threshold.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Non-negative regularization added to the diagonal of covariance. Allows to assure that the covariance matrices are all positive.
+
+      @defaultValue `0.000001`
+     */
+    reg_covar?: number
+
+    /**
+      The number of EM iterations to perform.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      The number of initializations to perform. The best results are kept.
+
+      @defaultValue `1`
+     */
+    n_init?: number
+
+    /**
+      The method used to initialize the weights, the means and the precisions. String must be one of:
+
+      @defaultValue `'kmeans'`
+     */
+    init_params?: 'kmeans' | 'k-means++' | 'random' | 'random_from_data'
+
+    /**
+      The user-provided initial weights. If it is `undefined`, weights are initialized using the `init\_params` method.
+     */
+    weights_init?: ArrayLike
+
+    /**
+      The user-provided initial means, If it is `undefined`, means are initialized using the `init\_params` method.
+     */
+    means_init?: ArrayLike[]
+
+    /**
+      The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init\_params’ method. The shape depends on ‘covariance\_type’:
+     */
+    precisions_init?: ArrayLike
+
+    /**
+      Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n\_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Enable verbose output. If 1 then it prints the current initialization and each iteration step. If greater than 1 then it prints also the log probability and the time needed for each step.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Number of iteration done before the next print.
+
+      @defaultValue `10`
+     */
+    verbose_interval?: number
+  }) {
     this.id = `GaussianMixture${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -119,7 +209,12 @@ ctor_GaussianMixture = {k: v for k, v in ctor_GaussianMixture.items() if v is no
 
     You can refer to this [mathematical section](../linear_model.html#aic-bic) for more details regarding the formulation of the AIC used.
    */
-  async aic(opts: GaussianMixtureAicOptions): Promise<number> {
+  async aic(opts: {
+    /**
+      The input samples.
+     */
+    X?: any[]
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -149,7 +244,12 @@ pms_GaussianMixture_aic = {k: v for k, v in pms_GaussianMixture_aic.items() if v
 
     You can refer to this [mathematical section](../linear_model.html#aic-bic) for more details regarding the formulation of the BIC used.
    */
-  async bic(opts: GaussianMixtureBicOptions): Promise<number> {
+  async bic(opts: {
+    /**
+      The input samples.
+     */
+    X?: any[]
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -179,7 +279,17 @@ pms_GaussianMixture_bic = {k: v for k, v in pms_GaussianMixture_bic.items() if v
 
     The method fits the model `n\_init` times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a `ConvergenceWarning` is raised. If `warm\_start` is `true`, then `n\_init` is ignored and a single initialization is performed upon the first call. Upon consecutive calls, training starts where it left off.
    */
-  async fit(opts: GaussianMixtureFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -209,7 +319,17 @@ pms_GaussianMixture_fit = {k: v for k, v in pms_GaussianMixture_fit.items() if v
 
     The method fits the model n\_init times and sets the parameters with which the model has the largest likelihood or lower bound. Within each trial, the method iterates between E-step and M-step for `max\_iter` times until the change of likelihood or lower bound is less than `tol`, otherwise, a [`ConvergenceWarning`](sklearn.exceptions.ConvergenceWarning.html#sklearn.exceptions.ConvergenceWarning "sklearn.exceptions.ConvergenceWarning") is raised. After fitting, it predicts the most probable label for the input data points.
    */
-  async fit_predict(opts: GaussianMixtureFitPredictOptions): Promise<any> {
+  async fit_predict(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -237,7 +357,12 @@ pms_GaussianMixture_fit_predict = {k: v for k, v in pms_GaussianMixture_fit_pred
   /**
     Predict the labels for the data samples in X using trained model.
    */
-  async predict(opts: GaussianMixturePredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -265,7 +390,12 @@ pms_GaussianMixture_predict = {k: v for k, v in pms_GaussianMixture_predict.item
   /**
     Evaluate the components’ density for each sample.
    */
-  async predict_proba(opts: GaussianMixturePredictProbaOptions): Promise<any> {
+  async predict_proba(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -293,7 +423,14 @@ pms_GaussianMixture_predict_proba = {k: v for k, v in pms_GaussianMixture_predic
   /**
     Generate random samples from the fitted Gaussian distribution.
    */
-  async sample(opts: GaussianMixtureSampleOptions): Promise<any> {
+  async sample(opts: {
+    /**
+      Number of samples to generate.
+
+      @defaultValue `1`
+     */
+    n_samples?: number
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -321,7 +458,17 @@ pms_GaussianMixture_sample = {k: v for k, v in pms_GaussianMixture_sample.items(
   /**
     Compute the per-sample average log-likelihood of the given data X.
    */
-  async score(opts: GaussianMixtureScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -349,7 +496,12 @@ pms_GaussianMixture_score = {k: v for k, v in pms_GaussianMixture_score.items() 
   /**
     Compute the log-likelihood of each sample.
    */
-  async score_samples(opts: GaussianMixtureScoreSamplesOptions): Promise<any> {
+  async score_samples(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianMixture instance has already been disposed')
     }
@@ -623,176 +775,4 @@ pms_GaussianMixture_score_samples = {k: v for k, v in pms_GaussianMixture_score_
         ._py`attr_GaussianMixture_feature_names_in_.tolist() if hasattr(attr_GaussianMixture_feature_names_in_, 'tolist') else attr_GaussianMixture_feature_names_in_`
     })()
   }
-}
-
-export interface GaussianMixtureOptions {
-  /**
-    The number of mixture components.
-
-    @defaultValue `1`
-   */
-  n_components?: number
-
-  /**
-    String describing the type of covariance parameters to use. Must be one of:
-
-    @defaultValue `'full'`
-   */
-  covariance_type?: 'full' | 'tied' | 'diag' | 'spherical'
-
-  /**
-    The convergence threshold. EM iterations will stop when the lower bound average gain is below this threshold.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Non-negative regularization added to the diagonal of covariance. Allows to assure that the covariance matrices are all positive.
-
-    @defaultValue `0.000001`
-   */
-  reg_covar?: number
-
-  /**
-    The number of EM iterations to perform.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    The number of initializations to perform. The best results are kept.
-
-    @defaultValue `1`
-   */
-  n_init?: number
-
-  /**
-    The method used to initialize the weights, the means and the precisions. String must be one of:
-
-    @defaultValue `'kmeans'`
-   */
-  init_params?: 'kmeans' | 'k-means++' | 'random' | 'random_from_data'
-
-  /**
-    The user-provided initial weights. If it is `undefined`, weights are initialized using the `init\_params` method.
-   */
-  weights_init?: ArrayLike
-
-  /**
-    The user-provided initial means, If it is `undefined`, means are initialized using the `init\_params` method.
-   */
-  means_init?: ArrayLike[]
-
-  /**
-    The user-provided initial precisions (inverse of the covariance matrices). If it is `undefined`, precisions are initialized using the ‘init\_params’ method. The shape depends on ‘covariance\_type’:
-   */
-  precisions_init?: ArrayLike
-
-  /**
-    Controls the random seed given to the method chosen to initialize the parameters (see `init\_params`). In addition, it controls the generation of random samples from the fitted distribution (see the method `sample`). Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    If ‘warm\_start’ is `true`, the solution of the last fitting is used as initialization for the next call of fit(). This can speed up convergence when fit is called several times on similar problems. In that case, ‘n\_init’ is ignored and only a single initialization occurs upon the first call. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Enable verbose output. If 1 then it prints the current initialization and each iteration step. If greater than 1 then it prints also the log probability and the time needed for each step.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Number of iteration done before the next print.
-
-    @defaultValue `10`
-   */
-  verbose_interval?: number
-}
-
-export interface GaussianMixtureAicOptions {
-  /**
-    The input samples.
-   */
-  X?: any[]
-}
-
-export interface GaussianMixtureBicOptions {
-  /**
-    The input samples.
-   */
-  X?: any[]
-}
-
-export interface GaussianMixtureFitOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface GaussianMixtureFitPredictOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface GaussianMixturePredictOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianMixturePredictProbaOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianMixtureSampleOptions {
-  /**
-    Number of samples to generate.
-
-    @defaultValue `1`
-   */
-  n_samples?: number
-}
-
-export interface GaussianMixtureScoreOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface GaussianMixtureScoreSamplesOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
 }

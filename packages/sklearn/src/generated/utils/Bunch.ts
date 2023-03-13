@@ -22,7 +22,7 @@ export class Bunch {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BunchOptions) {
+  constructor(opts?: {}) {
     this.id = `Bunch${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -91,7 +91,7 @@ ctor_Bunch = {k: v for k, v in ctor_Bunch.items() if v is not None}`
     this._isDisposed = true
   }
 
-  async clear(opts: BunchClearOptions): Promise<any> {
+  async clear(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -114,7 +114,7 @@ pms_Bunch_clear = {k: v for k, v in pms_Bunch_clear.items() if v is not None}`
       ._py`res_Bunch_clear.tolist() if hasattr(res_Bunch_clear, 'tolist') else res_Bunch_clear`
   }
 
-  async copy(opts: BunchCopyOptions): Promise<any> {
+  async copy(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -140,7 +140,7 @@ pms_Bunch_copy = {k: v for k, v in pms_Bunch_copy.items() if v is not None}`
   /**
     Create a new dictionary with keys from iterable and values set to value.
    */
-  async fromkeys(opts: BunchFromkeysOptions): Promise<any> {
+  async fromkeys(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -166,7 +166,7 @@ pms_Bunch_fromkeys = {k: v for k, v in pms_Bunch_fromkeys.items() if v is not No
   /**
     Return the value for key if key is in the dictionary, else default.
    */
-  async get(opts: BunchGetOptions): Promise<any> {
+  async get(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -189,7 +189,7 @@ pms_Bunch_get = {k: v for k, v in pms_Bunch_get.items() if v is not None}`
       ._py`res_Bunch_get.tolist() if hasattr(res_Bunch_get, 'tolist') else res_Bunch_get`
   }
 
-  async items(opts: BunchItemsOptions): Promise<any> {
+  async items(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -212,7 +212,7 @@ pms_Bunch_items = {k: v for k, v in pms_Bunch_items.items() if v is not None}`
       ._py`res_Bunch_items.tolist() if hasattr(res_Bunch_items, 'tolist') else res_Bunch_items`
   }
 
-  async keys(opts: BunchKeysOptions): Promise<any> {
+  async keys(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -238,7 +238,7 @@ pms_Bunch_keys = {k: v for k, v in pms_Bunch_keys.items() if v is not None}`
   /**
     If key is not found, default is returned if given, otherwise KeyError is raised
    */
-  async pop(opts: BunchPopOptions): Promise<any> {
+  async pop(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -266,7 +266,7 @@ pms_Bunch_pop = {k: v for k, v in pms_Bunch_pop.items() if v is not None}`
 
     Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if the dict is empty.
    */
-  async popitem(opts: BunchPopitemOptions): Promise<any> {
+  async popitem(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -294,7 +294,7 @@ pms_Bunch_popitem = {k: v for k, v in pms_Bunch_popitem.items() if v is not None
 
     Return the value for key if key is in the dictionary, else default.
    */
-  async setdefault(opts: BunchSetdefaultOptions): Promise<any> {
+  async setdefault(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -320,7 +320,7 @@ pms_Bunch_setdefault = {k: v for k, v in pms_Bunch_setdefault.items() if v is no
   /**
     If E is present and has a .keys() method, then does: for k in E: D\[k\] = E\[k\] If E is present and lacks a .keys() method, then does: for k, v in E: D\[k\] = v In either case, this is followed by: for k in F: D\[k\] = F\[k\]
    */
-  async update(opts: BunchUpdateOptions): Promise<any> {
+  async update(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -343,7 +343,7 @@ pms_Bunch_update = {k: v for k, v in pms_Bunch_update.items() if v is not None}`
       ._py`res_Bunch_update.tolist() if hasattr(res_Bunch_update, 'tolist') else res_Bunch_update`
   }
 
-  async values(opts: BunchValuesOptions): Promise<any> {
+  async values(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Bunch instance has already been disposed')
     }
@@ -366,27 +366,3 @@ pms_Bunch_values = {k: v for k, v in pms_Bunch_values.items() if v is not None}`
       ._py`res_Bunch_values.tolist() if hasattr(res_Bunch_values, 'tolist') else res_Bunch_values`
   }
 }
-
-export interface BunchOptions {}
-
-export interface BunchClearOptions {}
-
-export interface BunchCopyOptions {}
-
-export interface BunchFromkeysOptions {}
-
-export interface BunchGetOptions {}
-
-export interface BunchItemsOptions {}
-
-export interface BunchKeysOptions {}
-
-export interface BunchPopOptions {}
-
-export interface BunchPopitemOptions {}
-
-export interface BunchSetdefaultOptions {}
-
-export interface BunchUpdateOptions {}
-
-export interface BunchValuesOptions {}

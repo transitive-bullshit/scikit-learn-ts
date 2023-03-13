@@ -13,20 +13,29 @@ The anomaly score of each sample is called the Local Outlier Factor. It measures
 ### Signature
 
 ```ts
-new LocalOutlierFactor(opts?: LocalOutlierFactorOptions): LocalOutlierFactor;
+new LocalOutlierFactor(opts?: object): LocalOutlierFactor;
 ```
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`LocalOutlierFactorOptions`](../interfaces/LocalOutlierFactorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.algorithm?` | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm used to compute the nearest neighbors:  `Default Value`  `'auto'` |
+| `opts.contamination?` | `number` \| `"auto"` | The amount of contamination of the data set, i.e. the proportion of outliers in the data set. When fitting this is used to define the threshold on the scores of the samples.  `Default Value`  `'auto'` |
+| `opts.leaf_size?` | `number` | Leaf is size passed to [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.  `Default Value`  `30` |
+| `opts.metric?` | `string` | Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.  If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.  If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.  `Default Value`  `'minkowski'` |
+| `opts.metric_params?` | `any` | Additional keyword arguments for the metric function. |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.n_neighbors?` | `number` | Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries. If n\_neighbors is larger than the number of samples provided, all samples will be used.  `Default Value`  `20` |
+| `opts.novelty?` | `boolean` | By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=`false`). Set novelty to `true` if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision\_function and score\_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.  `Default Value`  `false` |
+| `opts.p?` | `number` | Parameter for the Minkowski metric from `sklearn.metrics.pairwise.pairwise\_distances`. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.  `Default Value`  `2` |
 
 ### Returns
 
 [`LocalOutlierFactor`](LocalOutlierFactor.md)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L23)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L23)
 
 ## Properties
 
@@ -34,31 +43,31 @@ Defined in:  [generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L21)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L20)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L19)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L16)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L17)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L17)
 
 ## Accessors
 
@@ -76,9 +85,9 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L443)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L565)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L443)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L565)
 
 ### effective\_metric\_params\_
 
@@ -94,9 +103,9 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L470)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L592)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L470)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L592)
 
 ### feature\_names\_in\_
 
@@ -112,9 +121,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L524)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L646)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L524)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L646)
 
 ### n\_features\_in\_
 
@@ -130,9 +139,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L497)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L497)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L619)
 
 ### n\_neighbors\_
 
@@ -148,9 +157,9 @@ n_neighbors_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L389)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L511)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L389)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L511)
 
 ### n\_samples\_fit\_
 
@@ -166,9 +175,9 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L551)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L673)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L551)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L673)
 
 ### negative\_outlier\_factor\_
 
@@ -186,9 +195,9 @@ negative_outlier_factor_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L362)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L484)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L362)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L484)
 
 ### offset\_
 
@@ -204,9 +213,9 @@ offset_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L416)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L538)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L416)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L538)
 
 ### py
 
@@ -220,7 +229,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L28)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91)
 
 #### Signature
 
@@ -238,9 +247,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L32)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L95)
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L28) [generated/neighbors/LocalOutlierFactor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L32)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91) [generated/neighbors/LocalOutlierFactor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L95)
 
 ## Methods
 
@@ -255,20 +264,21 @@ Bigger is better, i.e. large values correspond to inliers.
 #### Signature
 
 ```ts
-decision_function(opts: LocalOutlierFactorDecisionFunctionOptions): Promise<ArrayLike>;
+decision_function(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LocalOutlierFactorDecisionFunctionOptions`](../interfaces/LocalOutlierFactorDecisionFunctionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L116)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L179)
 
 ### dispose()
 
@@ -286,7 +296,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L95)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L158)
 
 ### fit()
 
@@ -295,20 +305,22 @@ Fit the local outlier factor detector from the training dataset.
 #### Signature
 
 ```ts
-fit(opts: LocalOutlierFactorFitOptions): Promise<any>;
+fit(opts: object): Promise<any>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LocalOutlierFactorFitOptions`](../interfaces/LocalOutlierFactorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L151)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L217)
 
 ### fit\_predict()
 
@@ -319,20 +331,22 @@ Fit the model to the training set X and return the labels.
 #### Signature
 
 ```ts
-fit_predict(opts: LocalOutlierFactorFitPredictOptions): Promise<ArrayLike>;
+fit_predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LocalOutlierFactorFitPredictOptions`](../interfaces/LocalOutlierFactorFitPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L183)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L259)
 
 ### init()
 
@@ -356,7 +370,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L41)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L104)
 
 ### kneighbors()
 
@@ -367,20 +381,23 @@ Returns indices of and distances to the neighbors of each point.
 #### Signature
 
 ```ts
-kneighbors(opts: LocalOutlierFactorKneighborsOptions): Promise<ArrayLike[]>;
+kneighbors(opts: object): Promise<ArrayLike[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LocalOutlierFactorKneighborsOptions`](../interfaces/LocalOutlierFactorKneighborsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. |
+| `opts.n_neighbors?` | `number` | Number of neighbors required for each sample. The default is the value passed to the constructor. |
+| `opts.return_distance?` | `boolean` | Whether or not to return the distances.  `Default Value`  `true` |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L219)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L303)
 
 ### kneighbors\_graph()
 
@@ -389,20 +406,23 @@ Compute the (weighted) graph of k-Neighbors for points in X.
 #### Signature
 
 ```ts
-kneighbors_graph(opts: LocalOutlierFactorKneighborsGraphOptions): Promise<any[]>;
+kneighbors_graph(opts: object): Promise<any[]>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LocalOutlierFactorKneighborsGraphOptions`](../interfaces/LocalOutlierFactorKneighborsGraphOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features). |
+| `opts.mode?` | `"connectivity"` \| `"distance"` | Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.  `Default Value`  `'connectivity'` |
+| `opts.n_neighbors?` | `number` | Number of neighbors for each sample. The default is the value passed to the constructor. |
 
 #### Returns
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L253)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L352)
 
 ### predict()
 
@@ -413,20 +433,21 @@ Predict the labels (1 inlier, -1 outlier) of X according to LOF.
 #### Signature
 
 ```ts
-predict(opts: LocalOutlierFactorPredictOptions): Promise<ArrayLike>;
+predict(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LocalOutlierFactorPredictOptions`](../interfaces/LocalOutlierFactorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L292)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L406)
 
 ### score\_samples()
 
@@ -439,17 +460,18 @@ It is the opposite as bigger is better, i.e. large values correspond to inliers.
 #### Signature
 
 ```ts
-score_samples(opts: LocalOutlierFactorScoreSamplesOptions): Promise<ArrayLike>;
+score_samples(opts: object): Promise<ArrayLike>;
 ```
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LocalOutlierFactorScoreSamplesOptions`](../interfaces/LocalOutlierFactorScoreSamplesOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples. |
 
 #### Returns
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/neighbors/LocalOutlierFactor.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/b59c1ff/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L326)
+Defined in:  [generated/neighbors/LocalOutlierFactor.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L445)

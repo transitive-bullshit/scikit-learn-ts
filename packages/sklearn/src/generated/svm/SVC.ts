@@ -26,7 +26,108 @@ export class SVC {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SVCOptions) {
+  constructor(opts?: {
+    /**
+      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2 penalty.
+
+      @defaultValue `1`
+     */
+    C?: number
+
+    /**
+      Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to pre-compute the kernel matrix from data matrices; that matrix should be an array of shape `(n\_samples, n\_samples)`.
+
+      @defaultValue `'rbf'`
+     */
+    kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'precomputed'
+
+    /**
+      Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels.
+
+      @defaultValue `3`
+     */
+    degree?: number
+
+    /**
+      Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
+
+      @defaultValue `'scale'`
+     */
+    gamma?: 'scale' | 'auto' | number
+
+    /**
+      Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.
+
+      @defaultValue `0`
+     */
+    coef0?: number
+
+    /**
+      Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
+
+      @defaultValue `true`
+     */
+    shrinking?: boolean
+
+    /**
+      Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict\_proba` may be inconsistent with `predict`. Read more in the [User Guide](../svm.html#scores-probabilities).
+
+      @defaultValue `false`
+     */
+    probability?: boolean
+
+    /**
+      Tolerance for stopping criterion.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Specify the size of the kernel cache (in MB).
+
+      @defaultValue `200`
+     */
+    cache_size?: number
+
+    /**
+      Set the parameter C of class i to class\_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      Hard limit on iterations within solver, or -1 for no limit.
+
+      @defaultValue `-1`
+     */
+    max_iter?: number
+
+    /**
+      Whether to return a one-vs-rest (‘ovr’) decision function of shape (n\_samples, n\_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n\_samples, n\_classes \* (n\_classes - 1) / 2). However, note that internally, one-vs-one (‘ovo’) is always used as a multi-class strategy to train models; an ovr matrix is only constructed from the ovo matrix. The parameter is ignored for binary classification.
+
+      @defaultValue `'ovr'`
+     */
+    decision_function_shape?: 'ovo' | 'ovr'
+
+    /**
+      If true, `decision\_function\_shape='ovr'`, and number of classes > 2, [predict](../../glossary.html#term-predict) will break ties according to the confidence values of [decision\_function](../../glossary.html#term-decision_function); otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
+
+      @defaultValue `false`
+     */
+    break_ties?: boolean
+
+    /**
+      Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `SVC${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -116,9 +217,12 @@ ctor_SVC = {k: v for k, v in ctor_SVC.items() if v is not None}`
   /**
     Evaluate the decision function for the samples in X.
    */
-  async decision_function(
-    opts: SVCDecisionFunctionOptions
-  ): Promise<NDArray[]> {
+  async decision_function(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This SVC instance has already been disposed')
     }
@@ -146,7 +250,22 @@ pms_SVC_decision_function = {k: v for k, v in pms_SVC_decision_function.items() 
   /**
     Fit the SVM model according to the given training data.
    */
-  async fit(opts: SVCFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+
+    /**
+      Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SVC instance has already been disposed')
     }
@@ -179,7 +298,12 @@ pms_SVC_fit = {k: v for k, v in pms_SVC_fit.items() if v is not None}`
 
     For an one-class model, +1 or -1 is returned.
    */
-  async predict(opts: SVCPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This SVC instance has already been disposed')
     }
@@ -209,7 +333,12 @@ pms_SVC_predict = {k: v for k, v in pms_SVC_predict.items() if v is not None}`
 
     The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
    */
-  async predict_log_proba(opts: SVCPredictLogProbaOptions): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This SVC instance has already been disposed')
     }
@@ -239,7 +368,12 @@ pms_SVC_predict_log_proba = {k: v for k, v in pms_SVC_predict_log_proba.items() 
 
     The model need to have probability information computed at training time: fit with attribute `probability` set to `true`.
    */
-  async predict_proba(opts: SVCPredictProbaOptions): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This SVC instance has already been disposed')
     }
@@ -269,7 +403,22 @@ pms_SVC_predict_proba = {k: v for k, v in pms_SVC_predict_proba.items() if v is 
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: SVCScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This SVC instance has already been disposed')
     }
@@ -544,169 +693,4 @@ pms_SVC_score = {k: v for k, v in pms_SVC_score.items() if v is not None}`
         ._py`attr_SVC_shape_fit_.tolist() if hasattr(attr_SVC_shape_fit_, 'tolist') else attr_SVC_shape_fit_`
     })()
   }
-}
-
-export interface SVCOptions {
-  /**
-    Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive. The penalty is a squared l2 penalty.
-
-    @defaultValue `1`
-   */
-  C?: number
-
-  /**
-    Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to pre-compute the kernel matrix from data matrices; that matrix should be an array of shape `(n\_samples, n\_samples)`.
-
-    @defaultValue `'rbf'`
-   */
-  kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'precomputed'
-
-  /**
-    Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels.
-
-    @defaultValue `3`
-   */
-  degree?: number
-
-  /**
-    Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
-
-    @defaultValue `'scale'`
-   */
-  gamma?: 'scale' | 'auto' | number
-
-  /**
-    Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.
-
-    @defaultValue `0`
-   */
-  coef0?: number
-
-  /**
-    Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
-
-    @defaultValue `true`
-   */
-  shrinking?: boolean
-
-  /**
-    Whether to enable probability estimates. This must be enabled prior to calling `fit`, will slow down that method as it internally uses 5-fold cross-validation, and `predict\_proba` may be inconsistent with `predict`. Read more in the [User Guide](../svm.html#scores-probabilities).
-
-    @defaultValue `false`
-   */
-  probability?: boolean
-
-  /**
-    Tolerance for stopping criterion.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Specify the size of the kernel cache (in MB).
-
-    @defaultValue `200`
-   */
-  cache_size?: number
-
-  /**
-    Set the parameter C of class i to class\_weight\[i\]\*C for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    Hard limit on iterations within solver, or -1 for no limit.
-
-    @defaultValue `-1`
-   */
-  max_iter?: number
-
-  /**
-    Whether to return a one-vs-rest (‘ovr’) decision function of shape (n\_samples, n\_classes) as all other classifiers, or the original one-vs-one (‘ovo’) decision function of libsvm which has shape (n\_samples, n\_classes \* (n\_classes - 1) / 2). However, note that internally, one-vs-one (‘ovo’) is always used as a multi-class strategy to train models; an ovr matrix is only constructed from the ovo matrix. The parameter is ignored for binary classification.
-
-    @defaultValue `'ovr'`
-   */
-  decision_function_shape?: 'ovo' | 'ovr'
-
-  /**
-    If true, `decision\_function\_shape='ovr'`, and number of classes > 2, [predict](../../glossary.html#term-predict) will break ties according to the confidence values of [decision\_function](../../glossary.html#term-decision_function); otherwise the first class among the tied classes is returned. Please note that breaking ties comes at a relatively high computational cost compared to a simple predict.
-
-    @defaultValue `false`
-   */
-  break_ties?: boolean
-
-  /**
-    Controls the pseudo random number generation for shuffling the data for probability estimates. Ignored when `probability` is `false`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface SVCDecisionFunctionOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface SVCFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. For kernel=”precomputed”, the expected shape of X is (n\_samples, n\_samples).
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-
-  /**
-    Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SVCPredictOptions {
-  /**
-    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SVCPredictLogProbaOptions {
-  /**
-    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
-   */
-  X?: ArrayLike[]
-}
-
-export interface SVCPredictProbaOptions {
-  /**
-    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
-   */
-  X?: ArrayLike[]
-}
-
-export interface SVCScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

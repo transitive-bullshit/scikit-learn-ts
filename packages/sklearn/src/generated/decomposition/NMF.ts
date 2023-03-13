@@ -22,7 +22,85 @@ export class NMF {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: NMFOptions) {
+  constructor(opts?: {
+    /**
+      Number of components, if n\_components is not set all features are kept.
+     */
+    n_components?: number
+
+    /**
+      Method used to initialize the procedure. Valid options:
+     */
+    init?: 'random' | 'nndsvd' | 'nndsvda' | 'nndsvdar' | 'custom'
+
+    /**
+      Numerical solver to use:
+
+      @defaultValue `'cd'`
+     */
+    solver?: 'cd' | 'mu'
+
+    /**
+      Beta divergence to be minimized, measuring the distance between X and the dot product WH. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for beta\_loss <= 0 (or ‘itakura-saito’), the input matrix X cannot contain zeros. Used only in ‘mu’ solver.
+
+      @defaultValue `'frobenius'`
+     */
+    beta_loss?: number | 'frobenius' | 'kullback-leibler' | 'itakura-saito'
+
+    /**
+      Tolerance of the stopping condition.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Maximum number of iterations before timing out.
+
+      @defaultValue `200`
+     */
+    max_iter?: number
+
+    /**
+      Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
+
+      @defaultValue `0`
+     */
+    alpha_W?: number
+
+    /**
+      Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.
+
+      @defaultValue `'same'`
+     */
+    alpha_H?: number | 'same'
+
+    /**
+      The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.
+
+      @defaultValue `0`
+     */
+    l1_ratio?: number
+
+    /**
+      Whether to be verbose.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      If true, randomize the order of coordinates in the CD solver.
+
+      @defaultValue `false`
+     */
+    shuffle?: boolean
+  }) {
     this.id = `NMF${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -106,7 +184,22 @@ ctor_NMF = {k: v for k, v in ctor_NMF.items() if v is not None}`
   /**
     Learn a NMF model for the data X.
    */
-  async fit(opts: NMFFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Parameters (keyword arguments) and values passed to the fit\_transform instance.
+     */
+    params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
     }
@@ -137,7 +230,27 @@ pms_NMF_fit = {k: v for k, v in pms_NMF_fit.items() if v is not None}`
 
     This is more efficient than calling fit followed by transform.
    */
-  async fit_transform(opts: NMFFitTransformOptions): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      If init=’custom’, it is used as initial guess for the solution.
+     */
+    W?: ArrayLike[]
+
+    /**
+      If init=’custom’, it is used as initial guess for the solution.
+     */
+    H?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
     }
@@ -173,9 +286,12 @@ pms_NMF_fit_transform = {k: v for k, v in pms_NMF_fit_transform.items() if v is 
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: NMFGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.NMF.fit "sklearn.decomposition.NMF.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
     }
@@ -203,9 +319,12 @@ pms_NMF_get_feature_names_out = {k: v for k, v in pms_NMF_get_feature_names_out.
   /**
     Transform data back to its original space.
    */
-  async inverse_transform(
-    opts: NMFInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async inverse_transform(opts: {
+    /**
+      Transformed data matrix.
+     */
+    W?: NDArray | SparseMatrix[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
     }
@@ -235,7 +354,12 @@ pms_NMF_inverse_transform = {k: v for k, v in pms_NMF_inverse_transform.items() 
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: NMFSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
     }
@@ -263,7 +387,12 @@ pms_NMF_set_output = {k: v for k, v in pms_NMF_set_output.items() if v is not No
   /**
     Transform the data X according to the fitted NMF model.
    */
-  async transform(opts: NMFTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
     }
@@ -426,151 +555,4 @@ pms_NMF_transform = {k: v for k, v in pms_NMF_transform.items() if v is not None
         ._py`attr_NMF_feature_names_in_.tolist() if hasattr(attr_NMF_feature_names_in_, 'tolist') else attr_NMF_feature_names_in_`
     })()
   }
-}
-
-export interface NMFOptions {
-  /**
-    Number of components, if n\_components is not set all features are kept.
-   */
-  n_components?: number
-
-  /**
-    Method used to initialize the procedure. Valid options:
-   */
-  init?: 'random' | 'nndsvd' | 'nndsvda' | 'nndsvdar' | 'custom'
-
-  /**
-    Numerical solver to use:
-
-    @defaultValue `'cd'`
-   */
-  solver?: 'cd' | 'mu'
-
-  /**
-    Beta divergence to be minimized, measuring the distance between X and the dot product WH. Note that values different from ‘frobenius’ (or 2) and ‘kullback-leibler’ (or 1) lead to significantly slower fits. Note that for beta\_loss <= 0 (or ‘itakura-saito’), the input matrix X cannot contain zeros. Used only in ‘mu’ solver.
-
-    @defaultValue `'frobenius'`
-   */
-  beta_loss?: number | 'frobenius' | 'kullback-leibler' | 'itakura-saito'
-
-  /**
-    Tolerance of the stopping condition.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Maximum number of iterations before timing out.
-
-    @defaultValue `200`
-   */
-  max_iter?: number
-
-  /**
-    Used for initialisation (when `init` == ‘nndsvdar’ or ‘random’), and in Coordinate Descent. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Constant that multiplies the regularization terms of `W`. Set it to zero (default) to have no regularization on `W`.
-
-    @defaultValue `0`
-   */
-  alpha_W?: number
-
-  /**
-    Constant that multiplies the regularization terms of `H`. Set it to zero to have no regularization on `H`. If “same” (default), it takes the same value as `alpha\_W`.
-
-    @defaultValue `'same'`
-   */
-  alpha_H?: number | 'same'
-
-  /**
-    The regularization mixing parameter, with 0 <= l1\_ratio <= 1. For l1\_ratio = 0 the penalty is an elementwise L2 penalty (aka Frobenius Norm). For l1\_ratio = 1 it is an elementwise L1 penalty. For 0 < l1\_ratio < 1, the penalty is a combination of L1 and L2.
-
-    @defaultValue `0`
-   */
-  l1_ratio?: number
-
-  /**
-    Whether to be verbose.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    If true, randomize the order of coordinates in the CD solver.
-
-    @defaultValue `false`
-   */
-  shuffle?: boolean
-}
-
-export interface NMFFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Parameters (keyword arguments) and values passed to the fit\_transform instance.
-   */
-  params?: any
-}
-
-export interface NMFFitTransformOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    If init=’custom’, it is used as initial guess for the solution.
-   */
-  W?: ArrayLike[]
-
-  /**
-    If init=’custom’, it is used as initial guess for the solution.
-   */
-  H?: ArrayLike[]
-}
-
-export interface NMFGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.NMF.fit "sklearn.decomposition.NMF.fit").
-   */
-  input_features?: any
-}
-
-export interface NMFInverseTransformOptions {
-  /**
-    Transformed data matrix.
-   */
-  W?: NDArray | SparseMatrix[]
-}
-
-export interface NMFSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface NMFTransformOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }
