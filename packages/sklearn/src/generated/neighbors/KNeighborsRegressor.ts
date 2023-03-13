@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neighbors.html#regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html)
  */
 export class KNeighborsRegressor {
   id: string
@@ -22,7 +22,63 @@ export class KNeighborsRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KNeighborsRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.KNeighborsRegressor.kneighbors "sklearn.neighbors.KNeighborsRegressor.kneighbors") queries.
+
+      @defaultValue `5`
+     */
+    n_neighbors?: number
+
+    /**
+      Weight function used in prediction. Possible values:
+
+      @defaultValue `'uniform'`
+     */
+    weights?: 'uniform' | 'distance'
+
+    /**
+      Algorithm used to compute the nearest neighbors:
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
+
+    /**
+      Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+      @defaultValue `30`
+     */
+    leaf_size?: number
+
+    /**
+      Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+
+      @defaultValue `2`
+     */
+    p?: number
+
+    /**
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+
+      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+
+      If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: string
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsRegressor.fit "sklearn.neighbors.KNeighborsRegressor.fit") method.
+     */
+    n_jobs?: number
+  }) {
     this.id = `KNeighborsRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +163,17 @@ ctor_KNeighborsRegressor = {k: v for k, v in ctor_KNeighborsRegressor.items() if
   /**
     Fit the k-nearest neighbors regressor from the training dataset.
    */
-  async fit(opts: KNeighborsRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsRegressor instance has already been disposed'
@@ -141,9 +207,24 @@ pms_KNeighborsRegressor_fit = {k: v for k, v in pms_KNeighborsRegressor_fit.item
 
     Returns indices of and distances to the neighbors of each point.
    */
-  async kneighbors(
-    opts: KNeighborsRegressorKneighborsOptions
-  ): Promise<NDArray[]> {
+  async kneighbors(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Number of neighbors required for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Whether or not to return the distances.
+
+      @defaultValue `true`
+     */
+    return_distance?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsRegressor instance has already been disposed'
@@ -177,9 +258,24 @@ pms_KNeighborsRegressor_kneighbors = {k: v for k, v in pms_KNeighborsRegressor_k
   /**
     Compute the (weighted) graph of k-Neighbors for points in X.
    */
-  async kneighbors_graph(
-    opts: KNeighborsRegressorKneighborsGraphOptions
-  ): Promise<any[]> {
+  async kneighbors_graph(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
+     */
+    X?: any
+
+    /**
+      Number of neighbors for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
+
+      @defaultValue `'connectivity'`
+     */
+    mode?: 'connectivity' | 'distance'
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsRegressor instance has already been disposed'
@@ -214,7 +310,12 @@ pms_KNeighborsRegressor_kneighbors_graph = {k: v for k, v in pms_KNeighborsRegre
   /**
     Predict the target for the provided data.
    */
-  async predict(opts: KNeighborsRegressorPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Test samples.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsRegressor instance has already been disposed'
@@ -246,7 +347,22 @@ pms_KNeighborsRegressor_predict = {k: v for k, v in pms_KNeighborsRegressor_pred
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: KNeighborsRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsRegressor instance has already been disposed'
@@ -411,136 +527,4 @@ pms_KNeighborsRegressor_score = {k: v for k, v in pms_KNeighborsRegressor_score.
         ._py`attr_KNeighborsRegressor_n_samples_fit_.tolist() if hasattr(attr_KNeighborsRegressor_n_samples_fit_, 'tolist') else attr_KNeighborsRegressor_n_samples_fit_`
     })()
   }
-}
-
-export interface KNeighborsRegressorOptions {
-  /**
-    Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.KNeighborsRegressor.kneighbors "sklearn.neighbors.KNeighborsRegressor.kneighbors") queries.
-
-    @defaultValue `5`
-   */
-  n_neighbors?: number
-
-  /**
-    Weight function used in prediction. Possible values:
-
-    @defaultValue `'uniform'`
-   */
-  weights?: 'uniform' | 'distance'
-
-  /**
-    Algorithm used to compute the nearest neighbors:
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
-
-  /**
-    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-    @defaultValue `30`
-   */
-  leaf_size?: number
-
-  /**
-    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
-
-    @defaultValue `2`
-   */
-  p?: number
-
-  /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
-
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
-
-    If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: string
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsRegressor.fit "sklearn.neighbors.KNeighborsRegressor.fit") method.
-   */
-  n_jobs?: number
-}
-
-export interface KNeighborsRegressorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike | SparseMatrix
-}
-
-export interface KNeighborsRegressorKneighborsOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Number of neighbors required for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Whether or not to return the distances.
-
-    @defaultValue `true`
-   */
-  return_distance?: boolean
-}
-
-export interface KNeighborsRegressorKneighborsGraphOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
-   */
-  X?: any
-
-  /**
-    Number of neighbors for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
-
-    @defaultValue `'connectivity'`
-   */
-  mode?: 'connectivity' | 'distance'
-}
-
-export interface KNeighborsRegressorPredictOptions {
-  /**
-    Test samples.
-   */
-  X?: any
-}
-
-export interface KNeighborsRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

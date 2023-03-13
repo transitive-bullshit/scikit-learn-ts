@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / LedoitWolf
-
-# Class: LedoitWolf
+# LedoitWolf
 
 LedoitWolf Estimator.
 
@@ -8,205 +6,176 @@ Ledoit-Wolf is a particular form of shrinkage, where the shrinkage coefficient i
 
 Read more in the [User Guide](../covariance.html#shrunk-covariance).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](LedoitWolf.md#constructor)
-
-### Properties
-
-- [\_isDisposed](LedoitWolf.md#_isdisposed)
-- [\_isInitialized](LedoitWolf.md#_isinitialized)
-- [\_py](LedoitWolf.md#_py)
-- [id](LedoitWolf.md#id)
-- [opts](LedoitWolf.md#opts)
-
-### Accessors
-
-- [covariance\_](LedoitWolf.md#covariance_)
-- [feature\_names\_in\_](LedoitWolf.md#feature_names_in_)
-- [location\_](LedoitWolf.md#location_)
-- [n\_features\_in\_](LedoitWolf.md#n_features_in_)
-- [precision\_](LedoitWolf.md#precision_)
-- [py](LedoitWolf.md#py)
-- [shrinkage\_](LedoitWolf.md#shrinkage_)
-
-### Methods
-
-- [dispose](LedoitWolf.md#dispose)
-- [error\_norm](LedoitWolf.md#error_norm)
-- [fit](LedoitWolf.md#fit)
-- [get\_precision](LedoitWolf.md#get_precision)
-- [init](LedoitWolf.md#init)
-- [mahalanobis](LedoitWolf.md#mahalanobis)
-- [score](LedoitWolf.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new LedoitWolf**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new LedoitWolf(opts?: object): LedoitWolf;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`LedoitWolfOptions`](../interfaces/LedoitWolfOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.assume_centered?` | `boolean` | If `true`, data will not be centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false` (default), data will be centered before computation.  `Default Value`  `false` |
+| `opts.block_size?` | `number` | Size of blocks into which the covariance matrix will be split during its Ledoit-Wolf estimation. This is purely a memory optimization and does not affect results.  `Default Value`  `1000` |
+| `opts.store_precision?` | `boolean` | Specify if the estimated precision is stored.  `Default Value`  `true` |
 
-[generated/covariance/LedoitWolf.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L25)
+### Returns
+
+[`LedoitWolf`](LedoitWolf.md)
+
+Defined in:  [generated/covariance/LedoitWolf.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/covariance/LedoitWolf.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L23)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/covariance/LedoitWolf.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L22)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/covariance/LedoitWolf.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L21)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/covariance/LedoitWolf.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L18)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/covariance/LedoitWolf.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L19)
+Defined in:  [generated/covariance/LedoitWolf.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L19)
 
 ## Accessors
 
 ### covariance\_
 
-• `get` **covariance_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Estimated covariance matrix.
+
+#### Signature
+
+```ts
+covariance_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L327)
 
-[generated/covariance/LedoitWolf.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L250)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L327)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L446)
 
-[generated/covariance/LedoitWolf.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L369)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L446)
 
 ### location\_
 
-• `get` **location_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Estimated location, i.e. the estimated mean.
+
+#### Signature
+
+```ts
+location_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L352)
 
-[generated/covariance/LedoitWolf.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L275)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L352)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L421)
 
-[generated/covariance/LedoitWolf.ts:344](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L344)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L421)
 
 ### precision\_
 
-• `get` **precision_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
+
+#### Signature
+
+```ts
+precision_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L375)
 
-[generated/covariance/LedoitWolf.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L298)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L375)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L51)
 
-[generated/covariance/LedoitWolf.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -218,119 +187,132 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L55)
 
-[generated/covariance/LedoitWolf.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L34)
-
-___
+Defined in:  [generated/covariance/LedoitWolf.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L51) [generated/covariance/LedoitWolf.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L55)
 
 ### shrinkage\_
 
-• `get` **shrinkage_**(): `Promise`<`number`\>
-
 Coefficient in the convex combination used for the computation of the shrunk estimate. Range is \[0, 1\].
+
+#### Signature
+
+```ts
+shrinkage_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L398)
 
-[generated/covariance/LedoitWolf.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L321)
+Defined in:  [generated/covariance/LedoitWolf.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L398)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L106)
 
-[generated/covariance/LedoitWolf.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L85)
-
-___
-
-### error\_norm
-
-▸ **error_norm**(`opts`): `Promise`<`number`\>
+### error\_norm()
 
 Compute the Mean Squared Error between two covariance estimators.
 
+#### Signature
+
+```ts
+error_norm(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LedoitWolfErrorNormOptions`](../interfaces/LedoitWolfErrorNormOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.comp_cov?` | [`ArrayLike`](../types/ArrayLike.md)[] | The covariance to compare with. |
+| `opts.norm?` | `"frobenius"` \| `"spectral"` | The type of norm used to compute the error. Available error types: - ‘frobenius’ (default): sqrt(tr(A^t.A)) - ‘spectral’: sqrt(max(eigenvalues(A^t.A)) where A is the error `(comp\_cov \- self.covariance\_)`.  `Default Value`  `'frobenius'` |
+| `opts.scaling?` | `boolean` | If `true` (default), the squared error norm is divided by n\_features. If `false`, the squared error norm is not rescaled.  `Default Value`  `true` |
+| `opts.squared?` | `boolean` | Whether to compute the squared error norm or the error norm. If `true` (default), the squared error norm is returned. If `false`, the error norm is returned.  `Default Value`  `true` |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L123)
 
-[generated/covariance/LedoitWolf.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L102)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the Ledoit-Wolf shrunk covariance model to X.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LedoitWolfFitOptions`](../interfaces/LedoitWolfFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L181)
 
-[generated/covariance/LedoitWolf.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L134)
-
-___
-
-### get\_precision
-
-▸ **get_precision**(`opts`): `Promise`<`any`\>
+### get\_precision()
 
 Getter for the precision matrix.
 
+#### Signature
+
+```ts
+get_precision(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LedoitWolfGetPrecisionOptions`](../interfaces/LedoitWolfGetPrecisionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.precision_?` | [`ArrayLike`](../types/ArrayLike.md)[] | The precision matrix associated to the current covariance object. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L219)
 
-[generated/covariance/LedoitWolf.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L162)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -340,54 +322,55 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L64)
 
-[generated/covariance/LedoitWolf.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L43)
-
-___
-
-### mahalanobis
-
-▸ **mahalanobis**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### mahalanobis()
 
 Compute the squared Mahalanobis distances of given observations.
 
+#### Signature
+
+```ts
+mahalanobis(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LedoitWolfMahalanobisOptions`](../interfaces/LedoitWolfMahalanobisOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The observations, the Mahalanobis distances of the which we compute. Observations are assumed to be drawn from the same distribution than the data used in fit. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/covariance/LedoitWolf.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L252)
 
-[generated/covariance/LedoitWolf.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L190)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Compute the log-likelihood of `X\_test` under the estimated Gaussian model.
 
 The Gaussian model is defined by its mean and covariance matrix which are represented respectively by `self.location\_` and `self.covariance\_`.
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LedoitWolfScoreOptions`](../interfaces/LedoitWolfScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X_test?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test data of which we compute the likelihood, where `n\_samples` is the number of samples and `n\_features` is the number of features. `X\_test` is assumed to be drawn from the same distribution than the data used in fit (including centering). |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/covariance/LedoitWolf.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L220)
+Defined in:  [generated/covariance/LedoitWolf.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/covariance/LedoitWolf.ts#L287)

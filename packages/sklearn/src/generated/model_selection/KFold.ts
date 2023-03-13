@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#k-fold).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)
  */
 export class KFold {
   id: string
@@ -24,7 +24,26 @@ export class KFold {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KFoldOptions) {
+  constructor(opts?: {
+    /**
+      Number of folds. Must be at least 2.
+
+      @defaultValue `5`
+     */
+    n_splits?: number
+
+    /**
+      Whether to shuffle the data before splitting into batches. Note that the samples within each split will not be shuffled.
+
+      @defaultValue `false`
+     */
+    shuffle?: boolean
+
+    /**
+      When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `KFold${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -100,7 +119,22 @@ ctor_KFold = {k: v for k, v in ctor_KFold.items() if v is not None}`
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(opts: KFoldGetNSplitsOptions): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This KFold instance has already been disposed')
     }
@@ -128,7 +162,22 @@ pms_KFold_get_n_splits = {k: v for k, v in pms_KFold_get_n_splits.items() if v i
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: KFoldSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This KFold instance has already been disposed')
     }
@@ -156,59 +205,4 @@ pms_KFold_split = {k: v for k, v in pms_KFold_split.items() if v is not None}`
     return this
       ._py`res_KFold_split.tolist() if hasattr(res_KFold_split, 'tolist') else res_KFold_split`
   }
-}
-
-export interface KFoldOptions {
-  /**
-    Number of folds. Must be at least 2.
-
-    @defaultValue `5`
-   */
-  n_splits?: number
-
-  /**
-    Whether to shuffle the data before splitting into batches. Note that the samples within each split will not be shuffled.
-
-    @defaultValue `false`
-   */
-  shuffle?: boolean
-
-  /**
-    When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold. Otherwise, this parameter has no effect. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface KFoldGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface KFoldSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / GroupShuffleSplit
-
-# Class: GroupShuffleSplit
+# GroupShuffleSplit
 
 Shuffle-Group(s)-Out cross-validation iterator
 
@@ -16,116 +14,87 @@ Note: The parameters `test\_size` and `train\_size` refer to groups, and not to 
 
 Read more in the [User Guide](../cross_validation.html#group-shuffle-split).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](GroupShuffleSplit.md#constructor)
-
-### Properties
-
-- [\_isDisposed](GroupShuffleSplit.md#_isdisposed)
-- [\_isInitialized](GroupShuffleSplit.md#_isinitialized)
-- [\_py](GroupShuffleSplit.md#_py)
-- [id](GroupShuffleSplit.md#id)
-- [opts](GroupShuffleSplit.md#opts)
-
-### Accessors
-
-- [py](GroupShuffleSplit.md#py)
-
-### Methods
-
-- [dispose](GroupShuffleSplit.md#dispose)
-- [get\_n\_splits](GroupShuffleSplit.md#get_n_splits)
-- [init](GroupShuffleSplit.md#init)
-- [split](GroupShuffleSplit.md#split)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new GroupShuffleSplit**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new GroupShuffleSplit(opts?: object): GroupShuffleSplit;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`GroupShuffleSplitOptions`](../interfaces/GroupShuffleSplitOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.n_splits?` | `number` | Number of re-shuffling & splitting iterations.  `Default Value`  `5` |
+| `opts.random_state?` | `number` | Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.test_size?` | `number` | If float, should be between 0.0 and 1.0 and represent the proportion of groups to include in the test split (rounded up). If int, represents the absolute number of test groups. If `undefined`, the value is set to the complement of the train size. The default will change in version 0.21. It will remain 0.2 only if `train\_size` is unspecified, otherwise it will complement the specified `train\_size`.  `Default Value`  `0.2` |
+| `opts.train_size?` | `number` | If float, should be between 0.0 and 1.0 and represent the proportion of the groups to include in the train split. If int, represents the absolute number of train groups. If `undefined`, the value is automatically set to the complement of the test size. |
 
-[generated/model_selection/GroupShuffleSplit.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L33)
+### Returns
+
+[`GroupShuffleSplit`](GroupShuffleSplit.md)
+
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L33)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/GroupShuffleSplit.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L31)
-
-___
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L31)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/GroupShuffleSplit.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L30)
-
-___
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L30)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/model_selection/GroupShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L29)
-
-___
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L29)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/model_selection/GroupShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L26)
-
-___
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L26)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/model_selection/GroupShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L27)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L27)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L62)
 
-[generated/model_selection/GroupShuffleSplit.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L38)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -137,59 +106,66 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L66)
 
-[generated/model_selection/GroupShuffleSplit.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L42)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L62) [generated/model\_selection/GroupShuffleSplit.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L66)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L119)
 
-[generated/model_selection/GroupShuffleSplit.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L95)
-
-___
-
-### get\_n\_splits
-
-▸ **get_n_splits**(`opts`): `Promise`<`number`\>
+### get\_n\_splits()
 
 Returns the number of splitting iterations in the cross-validator
 
+#### Signature
+
+```ts
+get_n_splits(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GroupShuffleSplitGetNSplitsOptions`](../interfaces/GroupShuffleSplitGetNSplitsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. |
+| `opts.groups?` | `any` | Always ignored, exists for compatibility. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L136)
 
-[generated/model_selection/GroupShuffleSplit.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L112)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -199,30 +175,31 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L75)
 
-[generated/model_selection/GroupShuffleSplit.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L51)
-
-___
-
-### split
-
-▸ **split**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### split()
 
 Generate indices to split data into training and test set.
 
+#### Signature
+
+```ts
+split(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GroupShuffleSplitSplitOptions`](../interfaces/GroupShuffleSplitSplitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target variable for supervised learning problems. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/model_selection/GroupShuffleSplit.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L146)
+Defined in:  [generated/model\_selection/GroupShuffleSplit.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/GroupShuffleSplit.ts#L183)

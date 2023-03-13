@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../decomposition.html#ica).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html)
  */
 export class FastICA {
   id: string
@@ -22,7 +22,69 @@ export class FastICA {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: FastICAOptions) {
+  constructor(opts?: {
+    /**
+      Number of components to use. If `undefined` is passed, all are used.
+     */
+    n_components?: number
+
+    /**
+      Specify which algorithm to use for FastICA.
+
+      @defaultValue `'parallel'`
+     */
+    algorithm?: 'parallel' | 'deflation'
+
+    /**
+      Specify the whitening strategy to use.
+
+      @defaultValue `'warn'`
+     */
+    whiten?: string | boolean
+
+    /**
+      The functional form of the G function used in the approximation to neg-entropy. Could be either ‘logcosh’, ‘exp’, or ‘cube’. You can also provide your own function. It should return a tuple containing the value of the function, and of its derivative, in the point. The derivative should be averaged along its last dimension. Example:
+
+      @defaultValue `'logcosh'`
+     */
+    fun?: 'logcosh' | 'exp' | 'cube'
+
+    /**
+      Arguments to send to the functional form. If empty or `undefined` and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}.
+     */
+    fun_args?: any
+
+    /**
+      Maximum number of iterations during fit.
+
+      @defaultValue `200`
+     */
+    max_iter?: number
+
+    /**
+      A positive scalar giving the tolerance at which the un-mixing matrix is considered to have converged.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Initial un-mixing array. If `w\_init=None`, then an array of values drawn from a normal distribution is used.
+     */
+    w_init?: ArrayLike[]
+
+    /**
+      The solver to use for whitening.
+
+      @defaultValue `'svd'`
+     */
+    whiten_solver?: 'eigh' | 'svd'
+
+    /**
+      Used to initialize `w\_init` when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `FastICA${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -106,7 +168,17 @@ ctor_FastICA = {k: v for k, v in ctor_FastICA.items() if v is not None}`
   /**
     Fit the model to X.
    */
-  async fit(opts: FastICAFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FastICA instance has already been disposed')
     }
@@ -134,7 +206,17 @@ pms_FastICA_fit = {k: v for k, v in pms_FastICA_fit.items() if v is not None}`
   /**
     Fit the model and recover the sources from X.
    */
-  async fit_transform(opts: FastICAFitTransformOptions): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This FastICA instance has already been disposed')
     }
@@ -164,9 +246,12 @@ pms_FastICA_fit_transform = {k: v for k, v in pms_FastICA_fit_transform.items() 
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: FastICAGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.FastICA.fit "sklearn.decomposition.FastICA.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FastICA instance has already been disposed')
     }
@@ -194,9 +279,19 @@ pms_FastICA_get_feature_names_out = {k: v for k, v in pms_FastICA_get_feature_na
   /**
     Transform the sources back to the mixed data (apply mixing matrix).
    */
-  async inverse_transform(
-    opts: FastICAInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      Sources, where `n\_samples` is the number of samples and `n\_components` is the number of components.
+     */
+    X?: ArrayLike[]
+
+    /**
+      If `false`, data passed to fit are overwritten. Defaults to `true`.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This FastICA instance has already been disposed')
     }
@@ -228,7 +323,12 @@ pms_FastICA_inverse_transform = {k: v for k, v in pms_FastICA_inverse_transform.
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: FastICASetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FastICA instance has already been disposed')
     }
@@ -256,7 +356,19 @@ pms_FastICA_set_output = {k: v for k, v in pms_FastICA_set_output.items() if v i
   /**
     Recover the sources from X (apply the unmixing matrix).
    */
-  async transform(opts: FastICATransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Data to transform, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      If `false`, data passed to fit can be overwritten. Defaults to `true`.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This FastICA instance has already been disposed')
     }
@@ -446,134 +558,4 @@ pms_FastICA_transform = {k: v for k, v in pms_FastICA_transform.items() if v is 
         ._py`attr_FastICA_whitening_.tolist() if hasattr(attr_FastICA_whitening_, 'tolist') else attr_FastICA_whitening_`
     })()
   }
-}
-
-export interface FastICAOptions {
-  /**
-    Number of components to use. If `undefined` is passed, all are used.
-   */
-  n_components?: number
-
-  /**
-    Specify which algorithm to use for FastICA.
-
-    @defaultValue `'parallel'`
-   */
-  algorithm?: 'parallel' | 'deflation'
-
-  /**
-    Specify the whitening strategy to use.
-
-    @defaultValue `'warn'`
-   */
-  whiten?: string | boolean
-
-  /**
-    The functional form of the G function used in the approximation to neg-entropy. Could be either ‘logcosh’, ‘exp’, or ‘cube’. You can also provide your own function. It should return a tuple containing the value of the function, and of its derivative, in the point. The derivative should be averaged along its last dimension. Example:
-
-    @defaultValue `'logcosh'`
-   */
-  fun?: 'logcosh' | 'exp' | 'cube'
-
-  /**
-    Arguments to send to the functional form. If empty or `undefined` and if fun=’logcosh’, fun\_args will take value {‘alpha’ : 1.0}.
-   */
-  fun_args?: any
-
-  /**
-    Maximum number of iterations during fit.
-
-    @defaultValue `200`
-   */
-  max_iter?: number
-
-  /**
-    A positive scalar giving the tolerance at which the un-mixing matrix is considered to have converged.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Initial un-mixing array. If `w\_init=None`, then an array of values drawn from a normal distribution is used.
-   */
-  w_init?: ArrayLike[]
-
-  /**
-    The solver to use for whitening.
-
-    @defaultValue `'svd'`
-   */
-  whiten_solver?: 'eigh' | 'svd'
-
-  /**
-    Used to initialize `w\_init` when not specified, with a normal distribution. Pass an int, for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface FastICAFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface FastICAFitTransformOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface FastICAGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.FastICA.fit "sklearn.decomposition.FastICA.fit").
-   */
-  input_features?: any
-}
-
-export interface FastICAInverseTransformOptions {
-  /**
-    Sources, where `n\_samples` is the number of samples and `n\_components` is the number of components.
-   */
-  X?: ArrayLike[]
-
-  /**
-    If `false`, data passed to fit are overwritten. Defaults to `true`.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface FastICASetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface FastICATransformOptions {
-  /**
-    Data to transform, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    If `false`, data passed to fit can be overwritten. Defaults to `true`.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
 }

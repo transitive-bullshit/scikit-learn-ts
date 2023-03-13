@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../compose.html#pipeline).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
  */
 export class Pipeline {
   id: string
@@ -24,7 +24,24 @@ export class Pipeline {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PipelineOptions) {
+  constructor(opts?: {
+    /**
+      List of (name, transform) tuples (implementing `fit`/`transform`) that are chained in sequential order. The last transform must be an estimator.
+     */
+    steps?: any
+
+    /**
+      Used to cache the fitted transformers of the pipeline. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
+     */
+    memory?: string
+
+    /**
+      If `true`, the time elapsed while fitting each step will be printed as it is completed.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `Pipeline${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -102,9 +119,12 @@ ctor_Pipeline = {k: v for k, v in ctor_Pipeline.items() if v is not None}`
 
     Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `decision\_function` method. Only valid if the final estimator implements `decision\_function`.
    */
-  async decision_function(
-    opts: PipelineDecisionFunctionOptions
-  ): Promise<NDArray[]> {
+  async decision_function(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -134,7 +154,22 @@ pms_Pipeline_decision_function = {k: v for k, v in pms_Pipeline_decision_functio
 
     Fit all the transformers one after the other and transform the data. Finally, fit the transformed data using the final estimator.
    */
-  async fit(opts: PipelineFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+
+    /**
+      Training targets. Must fulfill label requirements for all steps of the pipeline.
+     */
+    y?: any
+
+    /**
+      Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -166,7 +201,22 @@ pms_Pipeline_fit = {k: v for k, v in pms_Pipeline_fit.items() if v is not None}`
 
     Call `fit\_transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `fit\_predict` method. Only valid if the final estimator implements `fit\_predict`.
    */
-  async fit_predict(opts: PipelineFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Training data. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+
+    /**
+      Training targets. Must fulfill label requirements for all steps of the pipeline.
+     */
+    y?: any
+
+    /**
+      Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
+     */
+    fit_params?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -198,7 +248,22 @@ pms_Pipeline_fit_predict = {k: v for k, v in pms_Pipeline_fit_predict.items() if
 
     Fits all the transformers one after the other and transform the data. Then uses `fit\_transform` on transformed data with the final estimator.
    */
-  async fit_transform(opts: PipelineFitTransformOptions): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training data. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+
+    /**
+      Training targets. Must fulfill label requirements for all steps of the pipeline.
+     */
+    y?: any
+
+    /**
+      Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
+     */
+    fit_params?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -230,9 +295,12 @@ pms_Pipeline_fit_transform = {k: v for k, v in pms_Pipeline_fit_transform.items(
 
     Transform input features using the pipeline.
    */
-  async get_feature_names_out(
-    opts: PipelineGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -264,9 +332,12 @@ pms_Pipeline_get_feature_names_out = {k: v for k, v in pms_Pipeline_get_feature_
 
     All estimators in the pipeline must support `inverse\_transform`.
    */
-  async inverse_transform(
-    opts: PipelineInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method.
+     */
+    Xt?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -296,7 +367,17 @@ pms_Pipeline_inverse_transform = {k: v for k, v in pms_Pipeline_inverse_transfor
 
     Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict` method. Only valid if the final estimator implements `predict`.
    */
-  async predict(opts: PipelinePredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+
+    /**
+      Parameters to the `predict` called at the end of all transformations in the pipeline. Note that while this may be used to return uncertainties from some models with return\_std or return\_cov, uncertainties that are generated by the transformations in the pipeline are not propagated to the final estimator.
+     */
+    predict_params?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -326,9 +407,17 @@ pms_Pipeline_predict = {k: v for k, v in pms_Pipeline_predict.items() if v is no
 
     Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict\_log\_proba` method. Only valid if the final estimator implements `predict\_log\_proba`.
    */
-  async predict_log_proba(
-    opts: PipelinePredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+
+    /**
+      Parameters to the `predict\_log\_proba` called at the end of all transformations in the pipeline.
+     */
+    predict_log_proba_params?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -360,7 +449,17 @@ pms_Pipeline_predict_log_proba = {k: v for k, v in pms_Pipeline_predict_log_prob
 
     Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `predict\_proba` method. Only valid if the final estimator implements `predict\_proba`.
    */
-  async predict_proba(opts: PipelinePredictProbaOptions): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+
+    /**
+      Parameters to the `predict\_proba` called at the end of all transformations in the pipeline.
+     */
+    predict_proba_params?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -390,7 +489,22 @@ pms_Pipeline_predict_proba = {k: v for k, v in pms_Pipeline_predict_proba.items(
 
     Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `score` method. Only valid if the final estimator implements `score`.
    */
-  async score(opts: PipelineScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+
+    /**
+      Targets used for scoring. Must fulfill label requirements for all steps of the pipeline.
+     */
+    y?: any
+
+    /**
+      If not `undefined`, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -422,7 +536,12 @@ pms_Pipeline_score = {k: v for k, v in pms_Pipeline_score.items() if v is not No
 
     Call `transform` of each transformer in the pipeline. The transformed data are finally passed to the final estimator that calls `score\_samples` method. Only valid if the final estimator implements `score\_samples`.
    */
-  async score_samples(opts: PipelineScoreSamplesOptions): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -452,7 +571,12 @@ pms_Pipeline_score_samples = {k: v for k, v in pms_Pipeline_score_samples.items(
 
     Calling `set\_output` will set the output of all estimators in `steps`.
    */
-  async set_output(opts: PipelineSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -484,7 +608,12 @@ pms_Pipeline_set_output = {k: v for k, v in pms_Pipeline_set_output.items() if v
 
     This also works where final estimator is `undefined` in which case all prior transformations are applied.
    */
-  async transform(opts: PipelineTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Data to transform. Must fulfill input requirements of first step of the pipeline.
+     */
+    X?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Pipeline instance has already been disposed')
     }
@@ -506,169 +635,4 @@ pms_Pipeline_transform = {k: v for k, v in pms_Pipeline_transform.items() if v i
     return this
       ._py`res_Pipeline_transform.tolist() if hasattr(res_Pipeline_transform, 'tolist') else res_Pipeline_transform`
   }
-}
-
-export interface PipelineOptions {
-  /**
-    List of (name, transform) tuples (implementing `fit`/`transform`) that are chained in sequential order. The last transform must be an estimator.
-   */
-  steps?: any
-
-  /**
-    Used to cache the fitted transformers of the pipeline. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
-   */
-  memory?: string
-
-  /**
-    If `true`, the time elapsed while fitting each step will be printed as it is completed.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface PipelineDecisionFunctionOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-}
-
-export interface PipelineFitOptions {
-  /**
-    Training data. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-
-  /**
-    Training targets. Must fulfill label requirements for all steps of the pipeline.
-   */
-  y?: any
-
-  /**
-    Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
-   */
-  fit_params?: any
-}
-
-export interface PipelineFitPredictOptions {
-  /**
-    Training data. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-
-  /**
-    Training targets. Must fulfill label requirements for all steps of the pipeline.
-   */
-  y?: any
-
-  /**
-    Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
-   */
-  fit_params?: any
-}
-
-export interface PipelineFitTransformOptions {
-  /**
-    Training data. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-
-  /**
-    Training targets. Must fulfill label requirements for all steps of the pipeline.
-   */
-  y?: any
-
-  /**
-    Parameters passed to the `fit` method of each step, where each parameter name is prefixed such that parameter `p` for step `s` has key `s\_\_p`.
-   */
-  fit_params?: any
-}
-
-export interface PipelineGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface PipelineInverseTransformOptions {
-  /**
-    Data samples, where `n\_samples` is the number of samples and `n\_features` is the number of features. Must fulfill input requirements of last step of pipeline’s `inverse\_transform` method.
-   */
-  Xt?: ArrayLike[]
-}
-
-export interface PipelinePredictOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-
-  /**
-    Parameters to the `predict` called at the end of all transformations in the pipeline. Note that while this may be used to return uncertainties from some models with return\_std or return\_cov, uncertainties that are generated by the transformations in the pipeline are not propagated to the final estimator.
-   */
-  predict_params?: any
-}
-
-export interface PipelinePredictLogProbaOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-
-  /**
-    Parameters to the `predict\_log\_proba` called at the end of all transformations in the pipeline.
-   */
-  predict_log_proba_params?: any
-}
-
-export interface PipelinePredictProbaOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-
-  /**
-    Parameters to the `predict\_proba` called at the end of all transformations in the pipeline.
-   */
-  predict_proba_params?: any
-}
-
-export interface PipelineScoreOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-
-  /**
-    Targets used for scoring. Must fulfill label requirements for all steps of the pipeline.
-   */
-  y?: any
-
-  /**
-    If not `undefined`, this argument is passed as `sample\_weight` keyword argument to the `score` method of the final estimator.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface PipelineScoreSamplesOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
-}
-
-export interface PipelineSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface PipelineTransformOptions {
-  /**
-    Data to transform. Must fulfill input requirements of first step of the pipeline.
-   */
-  X?: any
 }

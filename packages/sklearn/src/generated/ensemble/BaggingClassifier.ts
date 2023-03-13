@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../ensemble.html#bagging).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html)
  */
 export class BaggingClassifier {
   id: string
@@ -24,7 +24,85 @@ export class BaggingClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BaggingClassifierOptions) {
+  constructor(opts?: {
+    /**
+      The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier").
+     */
+    estimator?: any
+
+    /**
+      The number of base estimators in the ensemble.
+
+      @defaultValue `10`
+     */
+    n_estimators?: number
+
+    /**
+      The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).
+
+      @defaultValue `1`
+     */
+    max_samples?: number
+
+    /**
+      The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).
+
+      @defaultValue `1`
+     */
+    max_features?: number
+
+    /**
+      Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.
+
+      @defaultValue `true`
+     */
+    bootstrap?: boolean
+
+    /**
+      Whether features are drawn with replacement.
+
+      @defaultValue `false`
+     */
+    bootstrap_features?: boolean
+
+    /**
+      Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.
+
+      @defaultValue `false`
+     */
+    oob_score?: boolean
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Controls the verbosity when fitting and predicting.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Use `estimator` instead.
+
+      @defaultValue `'deprecated'`
+     */
+    base_estimator?: any
+  }) {
     this.id = `BaggingClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -117,9 +195,12 @@ ctor_BaggingClassifier = {k: v for k, v in ctor_BaggingClassifier.items() if v i
   /**
     Average of the decision functions of the base classifiers.
    */
-  async decision_function(
-    opts: BaggingClassifierDecisionFunctionOptions
-  ): Promise<NDArray[]> {
+  async decision_function(opts: {
+    /**
+      The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingClassifier instance has already been disposed'
@@ -152,7 +233,22 @@ pms_BaggingClassifier_decision_function = {k: v for k, v in pms_BaggingClassifie
   /**
     Build a Bagging ensemble of estimators from the training set (X, y).
    */
-  async fit(opts: BaggingClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingClassifier instance has already been disposed'
@@ -188,7 +284,12 @@ pms_BaggingClassifier_fit = {k: v for k, v in pms_BaggingClassifier_fit.items() 
 
     The predicted class of an input sample is computed as the class with the highest mean predicted probability. If base estimators do not implement a `predict\_proba` method, then it resorts to voting.
    */
-  async predict(opts: BaggingClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingClassifier instance has already been disposed'
@@ -220,9 +321,12 @@ pms_BaggingClassifier_predict = {k: v for k, v in pms_BaggingClassifier_predict.
 
     The predicted class log-probabilities of an input sample is computed as the log of the mean predicted class probabilities of the base estimators in the ensemble.
    */
-  async predict_log_proba(
-    opts: BaggingClassifierPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingClassifier instance has already been disposed'
@@ -257,9 +361,12 @@ pms_BaggingClassifier_predict_log_proba = {k: v for k, v in pms_BaggingClassifie
 
     The predicted class probabilities of an input sample is computed as the mean predicted class probabilities of the base estimators in the ensemble. If base estimators do not implement a `predict\_proba` method, then it resorts to voting and the predicted class probabilities of an input sample represents the proportion of estimators predicting each class.
    */
-  async predict_proba(
-    opts: BaggingClassifierPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingClassifier instance has already been disposed'
@@ -293,7 +400,22 @@ pms_BaggingClassifier_predict_proba = {k: v for k, v in pms_BaggingClassifier_pr
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: BaggingClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This BaggingClassifier instance has already been disposed'
@@ -566,146 +688,4 @@ pms_BaggingClassifier_score = {k: v for k, v in pms_BaggingClassifier_score.item
         ._py`attr_BaggingClassifier_oob_decision_function_.tolist() if hasattr(attr_BaggingClassifier_oob_decision_function_, 'tolist') else attr_BaggingClassifier_oob_decision_function_`
     })()
   }
-}
-
-export interface BaggingClassifierOptions {
-  /**
-    The base estimator to fit on random subsets of the dataset. If `undefined`, then the base estimator is a [`DecisionTreeClassifier`](sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier "sklearn.tree.DecisionTreeClassifier").
-   */
-  estimator?: any
-
-  /**
-    The number of base estimators in the ensemble.
-
-    @defaultValue `10`
-   */
-  n_estimators?: number
-
-  /**
-    The number of samples to draw from X to train each base estimator (with replacement by default, see `bootstrap` for more details).
-
-    @defaultValue `1`
-   */
-  max_samples?: number
-
-  /**
-    The number of features to draw from X to train each base estimator ( without replacement by default, see `bootstrap\_features` for more details).
-
-    @defaultValue `1`
-   */
-  max_features?: number
-
-  /**
-    Whether samples are drawn with replacement. If `false`, sampling without replacement is performed.
-
-    @defaultValue `true`
-   */
-  bootstrap?: boolean
-
-  /**
-    Whether features are drawn with replacement.
-
-    @defaultValue `false`
-   */
-  bootstrap_features?: boolean
-
-  /**
-    Whether to use out-of-bag samples to estimate the generalization error. Only available if bootstrap=`true`.
-
-    @defaultValue `false`
-   */
-  oob_score?: boolean
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new ensemble. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    The number of jobs to run in parallel for both [`fit`](#sklearn.ensemble.BaggingClassifier.fit "sklearn.ensemble.BaggingClassifier.fit") and [`predict`](#sklearn.ensemble.BaggingClassifier.predict "sklearn.ensemble.BaggingClassifier.predict"). `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Controls the random resampling of the original dataset (sample wise and feature wise). If the base estimator accepts a `random\_state` attribute, a different seed is generated for each instance in the ensemble. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Controls the verbosity when fitting and predicting.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Use `estimator` instead.
-
-    @defaultValue `'deprecated'`
-   */
-  base_estimator?: any
-}
-
-export interface BaggingClassifierDecisionFunctionOptions {
-  /**
-    The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BaggingClassifierFitOptions {
-  /**
-    The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if the base estimator supports sample weighting.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BaggingClassifierPredictOptions {
-  /**
-    The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BaggingClassifierPredictLogProbaOptions {
-  /**
-    The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BaggingClassifierPredictProbaOptions {
-  /**
-    The training input samples. Sparse matrices are accepted only if they are supported by the base estimator.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BaggingClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

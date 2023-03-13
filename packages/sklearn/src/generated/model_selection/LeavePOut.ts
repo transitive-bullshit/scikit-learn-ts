@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#leave-p-out).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html)
  */
 export class LeavePOut {
   id: string
@@ -26,7 +26,12 @@ export class LeavePOut {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LeavePOutOptions) {
+  constructor(opts?: {
+    /**
+      Size of the test sets. Must be strictly less than the number of samples.
+     */
+    p?: number
+  }) {
     this.id = `LeavePOut${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -98,7 +103,22 @@ ctor_LeavePOut = {k: v for k, v in ctor_LeavePOut.items() if v is not None}`
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(opts: LeavePOutGetNSplitsOptions): Promise<any> {
+  async get_n_splits(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LeavePOut instance has already been disposed')
     }
@@ -128,7 +148,22 @@ pms_LeavePOut_get_n_splits = {k: v for k, v in pms_LeavePOut_get_n_splits.items(
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: LeavePOutSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LeavePOut instance has already been disposed')
     }
@@ -156,45 +191,4 @@ pms_LeavePOut_split = {k: v for k, v in pms_LeavePOut_split.items() if v is not 
     return this
       ._py`res_LeavePOut_split.tolist() if hasattr(res_LeavePOut_split, 'tolist') else res_LeavePOut_split`
   }
-}
-
-export interface LeavePOutOptions {
-  /**
-    Size of the test sets. Must be strictly less than the number of samples.
-   */
-  p?: number
-}
-
-export interface LeavePOutGetNSplitsOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface LeavePOutSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

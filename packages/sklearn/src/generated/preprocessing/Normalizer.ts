@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-normalization).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html)
  */
 export class Normalizer {
   id: string
@@ -26,7 +26,21 @@ export class Normalizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: NormalizerOptions) {
+  constructor(opts?: {
+    /**
+      The norm to use to normalize each non zero sample. If norm=’max’ is used, values will be rescaled by the maximum of the absolute values.
+
+      @defaultValue `'l2'`
+     */
+    norm?: 'l1' | 'l2' | 'max'
+
+    /**
+      Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `Normalizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +117,17 @@ ctor_Normalizer = {k: v for k, v in ctor_Normalizer.items() if v is not None}`
 
     This method allows to: (i) validate the estimator’s parameters and (ii) be consistent with the scikit-learn transformer API.
    */
-  async fit(opts: NormalizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data to estimate the normalization parameters.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Normalizer instance has already been disposed')
     }
@@ -133,7 +157,22 @@ pms_Normalizer_fit = {k: v for k, v in pms_Normalizer_fit.items() if v is not No
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: NormalizerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This Normalizer instance has already been disposed')
     }
@@ -165,9 +204,12 @@ pms_Normalizer_fit_transform = {k: v for k, v in pms_Normalizer_fit_transform.it
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: NormalizerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Normalizer instance has already been disposed')
     }
@@ -200,7 +242,12 @@ pms_Normalizer_get_feature_names_out = {k: v for k, v in pms_Normalizer_get_feat
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: NormalizerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Normalizer instance has already been disposed')
     }
@@ -228,9 +275,17 @@ pms_Normalizer_set_output = {k: v for k, v in pms_Normalizer_set_output.items() 
   /**
     Scale each non zero row of X to unit norm.
    */
-  async transform(
-    opts: NormalizerTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data to normalize, row by row. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Copy the input X or not.
+     */
+    copy?: boolean
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This Normalizer instance has already been disposed')
     }
@@ -306,75 +361,4 @@ pms_Normalizer_transform = {k: v for k, v in pms_Normalizer_transform.items() if
         ._py`attr_Normalizer_feature_names_in_.tolist() if hasattr(attr_Normalizer_feature_names_in_, 'tolist') else attr_Normalizer_feature_names_in_`
     })()
   }
-}
-
-export interface NormalizerOptions {
-  /**
-    The norm to use to normalize each non zero sample. If norm=’max’ is used, values will be rescaled by the maximum of the absolute values.
-
-    @defaultValue `'l2'`
-   */
-  norm?: 'l1' | 'l2' | 'max'
-
-  /**
-    Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface NormalizerFitOptions {
-  /**
-    The data to estimate the normalization parameters.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface NormalizerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface NormalizerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface NormalizerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface NormalizerTransformOptions {
-  /**
-    The data to normalize, row by row. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Copy the input X or not.
-   */
-  copy?: boolean
 }

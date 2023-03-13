@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / KernelRidge
-
-# Class: KernelRidge
+# KernelRidge
 
 Kernel ridge regression.
 
@@ -12,185 +10,161 @@ This estimator has built-in support for multi-variate regression (i.e., when y i
 
 Read more in the [User Guide](../kernel_ridge.html#kernel-ridge).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](KernelRidge.md#constructor)
-
-### Properties
-
-- [\_isDisposed](KernelRidge.md#_isdisposed)
-- [\_isInitialized](KernelRidge.md#_isinitialized)
-- [\_py](KernelRidge.md#_py)
-- [id](KernelRidge.md#id)
-- [opts](KernelRidge.md#opts)
-
-### Accessors
-
-- [X\_fit\_](KernelRidge.md#x_fit_)
-- [dual\_coef\_](KernelRidge.md#dual_coef_)
-- [feature\_names\_in\_](KernelRidge.md#feature_names_in_)
-- [n\_features\_in\_](KernelRidge.md#n_features_in_)
-- [py](KernelRidge.md#py)
-
-### Methods
-
-- [dispose](KernelRidge.md#dispose)
-- [fit](KernelRidge.md#fit)
-- [init](KernelRidge.md#init)
-- [predict](KernelRidge.md#predict)
-- [score](KernelRidge.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new KernelRidge**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new KernelRidge(opts?: object): KernelRidge;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`KernelRidgeOptions`](../interfaces/KernelRidgeOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If an array is passed, penalties are assumed to be specific to the targets. Hence they must correspond in number. See [Ridge regression and classification](../linear_model.html#ridge-regression) for formula.  `Default Value`  `1` |
+| `opts.coef0?` | `number` | Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.  `Default Value`  `1` |
+| `opts.degree?` | `number` | Degree of the polynomial kernel. Ignored by other kernels.  `Default Value`  `3` |
+| `opts.gamma?` | `number` | Gamma parameter for the RBF, laplacian, polynomial, exponential chi2 and sigmoid kernels. Interpretation of the default value is left to the kernel; see the documentation for sklearn.metrics.pairwise. Ignored by other kernels. |
+| `opts.kernel?` | `string` | Kernel mapping used internally. This parameter is directly passed to `pairwise\_kernel`. If `kernel` is a string, it must be one of the metrics in `pairwise.PAIRWISE\_KERNEL\_FUNCTIONS` or “precomputed”. If `kernel` is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if `kernel` is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two rows from X as input and return the corresponding kernel value as a single number. This means that callables from [`sklearn.metrics.pairwise`](../classes.html#module-sklearn.metrics.pairwise "sklearn.metrics.pairwise") are not allowed, as they operate on matrices, not single samples. Use the string identifying the kernel instead.  `Default Value`  `'linear'` |
+| `opts.kernel_params?` | `any` | Additional parameters (keyword arguments) for kernel function passed as callable object. |
 
-[generated/kernel_ridge/KernelRidge.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L29)
+### Returns
+
+[`KernelRidge`](KernelRidge.md)
+
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/kernel_ridge/KernelRidge.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L27)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L27)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/kernel_ridge/KernelRidge.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L26)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L26)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/kernel_ridge/KernelRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L25)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L25)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/kernel_ridge/KernelRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L22)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L22)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/kernel_ridge/KernelRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L23)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L23)
 
 ## Accessors
 
 ### X\_fit\_
 
-• `get` **X_fit_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Training data, which is also required for prediction. If kernel == “precomputed” this is instead the precomputed training matrix, of shape (n\_samples, n\_samples).
+
+#### Signature
+
+```ts
+X_fit_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L302)
 
-[generated/kernel_ridge/KernelRidge.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L229)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L302)
 
 ### dual\_coef\_
 
-• `get` **dual_coef_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Representation of weight vector(s) in kernel space
+
+#### Signature
+
+```ts
+dual_coef_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L277)
 
-[generated/kernel_ridge/KernelRidge.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L204)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L277)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L350)
 
-[generated/kernel_ridge/KernelRidge.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L277)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L350)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L325)
 
-[generated/kernel_ridge/KernelRidge.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L252)
-
-___
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L325)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L72)
 
-[generated/kernel_ridge/KernelRidge.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L34)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -202,59 +176,66 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L76)
 
-[generated/kernel_ridge/KernelRidge.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L38)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L72) [generated/kernel\_ridge/KernelRidge.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L76)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L131)
 
-[generated/kernel_ridge/KernelRidge.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L93)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit Kernel Ridge regression model.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KernelRidgeFitOptions`](../interfaces/KernelRidgeFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. If kernel == “precomputed” this is instead a precomputed kernel matrix, of shape (n\_samples, n\_samples). |
+| `opts.sample_weight?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | Individual weights for each sample, ignored if `undefined` is passed. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L148)
 
-[generated/kernel_ridge/KernelRidge.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L110)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -264,54 +245,56 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L85)
 
-[generated/kernel_ridge/KernelRidge.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L47)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### predict()
 
 Predict using the kernel ridge model.
 
+#### Signature
+
+```ts
+predict(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KernelRidgePredictOptions`](../interfaces/KernelRidgePredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Samples. If kernel == “precomputed” this is instead a precomputed kernel matrix, shape = \[n\_samples, n\_samples\_fitted\], where n\_samples\_fitted is the number of samples used in the fitting for this estimator. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L195)
 
-[generated/kernel_ridge/KernelRidge.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L142)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KernelRidgeScoreOptions`](../interfaces/KernelRidgeScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/kernel_ridge/KernelRidge.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L172)
+Defined in:  [generated/kernel\_ridge/KernelRidge.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/kernel_ridge/KernelRidge.ts#L230)

@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neighbors.html#nca).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NeighborhoodComponentsAnalysis.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NeighborhoodComponentsAnalysis.html)
  */
 export class NeighborhoodComponentsAnalysis {
   id: string
@@ -22,7 +22,57 @@ export class NeighborhoodComponentsAnalysis {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: NeighborhoodComponentsAnalysisOptions) {
+  constructor(opts?: {
+    /**
+      Preferred dimensionality of the projected space. If `undefined` it will be set to `n\_features`.
+     */
+    n_components?: number
+
+    /**
+      Initialization of the linear transformation. Possible options are `'auto'`, `'pca'`, `'lda'`, `'identity'`, `'random'`, and a numpy array of shape `(n\_features\_a, n\_features\_b)`.
+
+      @defaultValue `'auto'`
+     */
+    init?: 'auto' | 'pca' | 'lda' | 'identity' | 'random' | NDArray[]
+
+    /**
+      If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") has been called before, the solution of the previous call to [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") is used as the initial linear transformation (`n\_components` and `init` will be ignored).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Maximum number of iterations in the optimization.
+
+      @defaultValue `50`
+     */
+    max_iter?: number
+
+    /**
+      Convergence tolerance for the optimization.
+
+      @defaultValue `0.00001`
+     */
+    tol?: number
+
+    /**
+      If not `undefined`, this function is called after every iteration of the optimizer, taking as arguments the current solution (flattened transformation matrix) and the number of iterations. This might be useful in case one wants to examine or store the transformation found after each iteration.
+     */
+    callback?: any
+
+    /**
+      If 0, no progress messages will be printed. If 1, progress messages will be printed to stdout. If > 1, progress messages will be printed and the `disp` parameter of [`scipy.optimize.minimize`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize "(in SciPy v1.10.1)") will be set to `verbose \- 2`.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      A pseudo random number generator object or a seed for it if int. If `init='random'`, `random\_state` is used to initialize the random transformation. If `init='pca'`, `random\_state` is passed as an argument to PCA when initializing the transformation. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `NeighborhoodComponentsAnalysis${
       crypto.randomUUID().split('-')[0]
     }`
@@ -111,7 +161,17 @@ ctor_NeighborhoodComponentsAnalysis = {k: v for k, v in ctor_NeighborhoodCompone
   /**
     Fit the model according to the given training data.
    */
-  async fit(opts: NeighborhoodComponentsAnalysisFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The corresponding training labels.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This NeighborhoodComponentsAnalysis instance has already been disposed'
@@ -147,9 +207,22 @@ pms_NeighborhoodComponentsAnalysis_fit = {k: v for k, v in pms_NeighborhoodCompo
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: NeighborhoodComponentsAnalysisFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This NeighborhoodComponentsAnalysis instance has already been disposed'
@@ -188,9 +261,12 @@ pms_NeighborhoodComponentsAnalysis_fit_transform = {k: v for k, v in pms_Neighbo
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: NeighborhoodComponentsAnalysisGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This NeighborhoodComponentsAnalysis instance has already been disposed'
@@ -225,9 +301,12 @@ pms_NeighborhoodComponentsAnalysis_get_feature_names_out = {k: v for k, v in pms
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(
-    opts: NeighborhoodComponentsAnalysisSetOutputOptions
-  ): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This NeighborhoodComponentsAnalysis instance has already been disposed'
@@ -260,9 +339,12 @@ pms_NeighborhoodComponentsAnalysis_set_output = {k: v for k, v in pms_Neighborho
   /**
     Apply the learned transformation to the given data.
    */
-  async transform(
-    opts: NeighborhoodComponentsAnalysisTransformOptions
-  ): Promise<any> {
+  async transform(opts: {
+    /**
+      Data samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This NeighborhoodComponentsAnalysis instance has already been disposed'
@@ -426,106 +508,4 @@ pms_NeighborhoodComponentsAnalysis_transform = {k: v for k, v in pms_Neighborhoo
         ._py`attr_NeighborhoodComponentsAnalysis_feature_names_in_.tolist() if hasattr(attr_NeighborhoodComponentsAnalysis_feature_names_in_, 'tolist') else attr_NeighborhoodComponentsAnalysis_feature_names_in_`
     })()
   }
-}
-
-export interface NeighborhoodComponentsAnalysisOptions {
-  /**
-    Preferred dimensionality of the projected space. If `undefined` it will be set to `n\_features`.
-   */
-  n_components?: number
-
-  /**
-    Initialization of the linear transformation. Possible options are `'auto'`, `'pca'`, `'lda'`, `'identity'`, `'random'`, and a numpy array of shape `(n\_features\_a, n\_features\_b)`.
-
-    @defaultValue `'auto'`
-   */
-  init?: 'auto' | 'pca' | 'lda' | 'identity' | 'random' | NDArray[]
-
-  /**
-    If `true` and [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") has been called before, the solution of the previous call to [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit") is used as the initial linear transformation (`n\_components` and `init` will be ignored).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Maximum number of iterations in the optimization.
-
-    @defaultValue `50`
-   */
-  max_iter?: number
-
-  /**
-    Convergence tolerance for the optimization.
-
-    @defaultValue `0.00001`
-   */
-  tol?: number
-
-  /**
-    If not `undefined`, this function is called after every iteration of the optimizer, taking as arguments the current solution (flattened transformation matrix) and the number of iterations. This might be useful in case one wants to examine or store the transformation found after each iteration.
-   */
-  callback?: any
-
-  /**
-    If 0, no progress messages will be printed. If 1, progress messages will be printed to stdout. If > 1, progress messages will be printed and the `disp` parameter of [`scipy.optimize.minimize`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize "(in SciPy v1.10.1)") will be set to `verbose \- 2`.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    A pseudo random number generator object or a seed for it if int. If `init='random'`, `random\_state` is used to initialize the random transformation. If `init='pca'`, `random\_state` is passed as an argument to PCA when initializing the transformation. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface NeighborhoodComponentsAnalysisFitOptions {
-  /**
-    The training samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The corresponding training labels.
-   */
-  y?: ArrayLike
-}
-
-export interface NeighborhoodComponentsAnalysisFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface NeighborhoodComponentsAnalysisGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.NeighborhoodComponentsAnalysis.fit "sklearn.neighbors.NeighborhoodComponentsAnalysis.fit").
-   */
-  input_features?: any
-}
-
-export interface NeighborhoodComponentsAnalysisSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface NeighborhoodComponentsAnalysisTransformOptions {
-  /**
-    Data samples.
-   */
-  X?: ArrayLike[]
 }

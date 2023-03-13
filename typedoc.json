@@ -4,11 +4,13 @@
   "exclude": ["**/*.test.ts"],
   "plugin": ["typedoc-plugin-markdown"],
   "out": "./packages/sklearn/docs",
-  "hideBreadcrumbs": false,
-  "hideInPageTOC": false,
+  "hideBreadcrumbs": true,
+  "hideInPageTOC": true,
+  "hideGenerator": true,
   "excludePrivate": true,
   "excludeProtected": true,
   "excludeExternals": true,
   "excludeInternal": true,
+  "preserveAnchorCasing": true,
   "entryDocument": "readme.md"
 }

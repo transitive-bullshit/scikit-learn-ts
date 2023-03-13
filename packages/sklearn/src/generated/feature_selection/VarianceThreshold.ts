@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_selection.html#variance-threshold).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html)
  */
 export class VarianceThreshold {
   id: string
@@ -22,7 +22,14 @@ export class VarianceThreshold {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: VarianceThresholdOptions) {
+  constructor(opts?: {
+    /**
+      Features with a training-set variance lower than this threshold will be removed. The default is to keep all features with non-zero variance, i.e. remove the features that have the same value in all samples.
+
+      @defaultValue `0`
+     */
+    threshold?: number
+  }) {
     this.id = `VarianceThreshold${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +106,17 @@ ctor_VarianceThreshold = {k: v for k, v in ctor_VarianceThreshold.items() if v i
   /**
     Learn empirical variances from X.
    */
-  async fit(opts: VarianceThresholdFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data from which to compute variances, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Ignored. This parameter exists only for compatibility with sklearn.pipeline.Pipeline.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VarianceThreshold instance has already been disposed'
@@ -131,9 +148,22 @@ pms_VarianceThreshold_fit = {k: v for k, v in pms_VarianceThreshold_fit.items() 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: VarianceThresholdFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This VarianceThreshold instance has already been disposed'
@@ -169,9 +199,12 @@ pms_VarianceThreshold_fit_transform = {k: v for k, v in pms_VarianceThreshold_fi
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: VarianceThresholdGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VarianceThreshold instance has already been disposed'
@@ -204,7 +237,14 @@ pms_VarianceThreshold_get_feature_names_out = {k: v for k, v in pms_VarianceThre
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(opts: VarianceThresholdGetSupportOptions): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VarianceThreshold instance has already been disposed'
@@ -234,9 +274,12 @@ pms_VarianceThreshold_get_support = {k: v for k, v in pms_VarianceThreshold_get_
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(
-    opts: VarianceThresholdInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VarianceThreshold instance has already been disposed'
@@ -271,7 +314,12 @@ pms_VarianceThreshold_inverse_transform = {k: v for k, v in pms_VarianceThreshol
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: VarianceThresholdSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VarianceThreshold instance has already been disposed'
@@ -301,7 +349,12 @@ pms_VarianceThreshold_set_output = {k: v for k, v in pms_VarianceThreshold_set_o
   /**
     Reduce X to the selected features.
    */
-  async transform(opts: VarianceThresholdTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VarianceThreshold instance has already been disposed'
@@ -408,79 +461,4 @@ pms_VarianceThreshold_transform = {k: v for k, v in pms_VarianceThreshold_transf
         ._py`attr_VarianceThreshold_feature_names_in_.tolist() if hasattr(attr_VarianceThreshold_feature_names_in_, 'tolist') else attr_VarianceThreshold_feature_names_in_`
     })()
   }
-}
-
-export interface VarianceThresholdOptions {
-  /**
-    Features with a training-set variance lower than this threshold will be removed. The default is to keep all features with non-zero variance, i.e. remove the features that have the same value in all samples.
-
-    @defaultValue `0`
-   */
-  threshold?: number
-}
-
-export interface VarianceThresholdFitOptions {
-  /**
-    Data from which to compute variances, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Ignored. This parameter exists only for compatibility with sklearn.pipeline.Pipeline.
-   */
-  y?: any
-}
-
-export interface VarianceThresholdFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface VarianceThresholdGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface VarianceThresholdGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface VarianceThresholdInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface VarianceThresholdSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface VarianceThresholdTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

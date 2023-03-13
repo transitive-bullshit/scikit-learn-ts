@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-transformer).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html)
  */
 export class QuantileTransformer {
   id: string
@@ -24,7 +24,47 @@ export class QuantileTransformer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: QuantileTransformerOptions) {
+  constructor(opts?: {
+    /**
+      Number of quantiles to be computed. It corresponds to the number of landmarks used to discretize the cumulative distribution function. If n\_quantiles is larger than the number of samples, n\_quantiles is set to the number of samples as a larger number of quantiles does not give a better approximation of the cumulative distribution function estimator.
+
+      @defaultValue `1000`
+     */
+    n_quantiles?: number
+
+    /**
+      Marginal distribution for the transformed data. The choices are ‘uniform’ (default) or ‘normal’.
+
+      @defaultValue `'uniform'`
+     */
+    output_distribution?: 'uniform' | 'normal'
+
+    /**
+      Only applies to sparse matrices. If `true`, the sparse entries of the matrix are discarded to compute the quantile statistics. If `false`, these entries are treated as zeros.
+
+      @defaultValue `false`
+     */
+    ignore_implicit_zeros?: boolean
+
+    /**
+      Maximum number of samples used to estimate the quantiles for computational efficiency. Note that the subsampling procedure may differ for value-identical sparse and dense matrices.
+
+      @defaultValue `10`
+     */
+    subsample?: number
+
+    /**
+      Determines random number generation for subsampling and smoothing noise. Please see `subsample` for more details. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Set to `false` to perform inplace transformation and avoid a copy (if the input is already a numpy array).
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `QuantileTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +149,17 @@ ctor_QuantileTransformer = {k: v for k, v in ctor_QuantileTransformer.items() if
   /**
     Compute the quantiles used for transforming.
    */
-  async fit(opts: QuantileTransformerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This QuantileTransformer instance has already been disposed'
@@ -141,9 +191,22 @@ pms_QuantileTransformer_fit = {k: v for k, v in pms_QuantileTransformer_fit.item
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: QuantileTransformerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This QuantileTransformer instance has already been disposed'
@@ -179,9 +242,12 @@ pms_QuantileTransformer_fit_transform = {k: v for k, v in pms_QuantileTransforme
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: QuantileTransformerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This QuantileTransformer instance has already been disposed'
@@ -214,9 +280,12 @@ pms_QuantileTransformer_get_feature_names_out = {k: v for k, v in pms_QuantileTr
   /**
     Back-projection to the original space.
    */
-  async inverse_transform(
-    opts: QuantileTransformerInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This QuantileTransformer instance has already been disposed'
@@ -251,7 +320,12 @@ pms_QuantileTransformer_inverse_transform = {k: v for k, v in pms_QuantileTransf
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: QuantileTransformerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This QuantileTransformer instance has already been disposed'
@@ -283,9 +357,12 @@ pms_QuantileTransformer_set_output = {k: v for k, v in pms_QuantileTransformer_s
   /**
     Feature-wise transformation of the data.
    */
-  async transform(
-    opts: QuantileTransformerTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This QuantileTransformer instance has already been disposed'
@@ -446,103 +523,4 @@ pms_QuantileTransformer_transform = {k: v for k, v in pms_QuantileTransformer_tr
         ._py`attr_QuantileTransformer_feature_names_in_.tolist() if hasattr(attr_QuantileTransformer_feature_names_in_, 'tolist') else attr_QuantileTransformer_feature_names_in_`
     })()
   }
-}
-
-export interface QuantileTransformerOptions {
-  /**
-    Number of quantiles to be computed. It corresponds to the number of landmarks used to discretize the cumulative distribution function. If n\_quantiles is larger than the number of samples, n\_quantiles is set to the number of samples as a larger number of quantiles does not give a better approximation of the cumulative distribution function estimator.
-
-    @defaultValue `1000`
-   */
-  n_quantiles?: number
-
-  /**
-    Marginal distribution for the transformed data. The choices are ‘uniform’ (default) or ‘normal’.
-
-    @defaultValue `'uniform'`
-   */
-  output_distribution?: 'uniform' | 'normal'
-
-  /**
-    Only applies to sparse matrices. If `true`, the sparse entries of the matrix are discarded to compute the quantile statistics. If `false`, these entries are treated as zeros.
-
-    @defaultValue `false`
-   */
-  ignore_implicit_zeros?: boolean
-
-  /**
-    Maximum number of samples used to estimate the quantiles for computational efficiency. Note that the subsampling procedure may differ for value-identical sparse and dense matrices.
-
-    @defaultValue `10`
-   */
-  subsample?: number
-
-  /**
-    Determines random number generation for subsampling and smoothing noise. Please see `subsample` for more details. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Set to `false` to perform inplace transformation and avoid a copy (if the input is already a numpy array).
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface QuantileTransformerFitOptions {
-  /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface QuantileTransformerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface QuantileTransformerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface QuantileTransformerInverseTransformOptions {
-  /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface QuantileTransformerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface QuantileTransformerTransformOptions {
-  /**
-    The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

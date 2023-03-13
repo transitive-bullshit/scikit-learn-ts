@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / DummyClassifier
-
-# Class: DummyClassifier
+# DummyClassifier
 
 DummyClassifier makes predictions that ignore the input features.
 
@@ -14,188 +12,158 @@ Note that the “stratified” and “uniform” strategies lead to non-determin
 
 Read more in the [User Guide](../model_evaluation.html#dummy-estimators).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](DummyClassifier.md#constructor)
-
-### Properties
-
-- [\_isDisposed](DummyClassifier.md#_isdisposed)
-- [\_isInitialized](DummyClassifier.md#_isinitialized)
-- [\_py](DummyClassifier.md#_py)
-- [id](DummyClassifier.md#id)
-- [opts](DummyClassifier.md#opts)
-
-### Accessors
-
-- [class\_prior\_](DummyClassifier.md#class_prior_)
-- [classes\_](DummyClassifier.md#classes_)
-- [n\_classes\_](DummyClassifier.md#n_classes_)
-- [n\_outputs\_](DummyClassifier.md#n_outputs_)
-- [py](DummyClassifier.md#py)
-- [sparse\_output\_](DummyClassifier.md#sparse_output_)
-
-### Methods
-
-- [dispose](DummyClassifier.md#dispose)
-- [fit](DummyClassifier.md#fit)
-- [init](DummyClassifier.md#init)
-- [predict](DummyClassifier.md#predict)
-- [predict\_log\_proba](DummyClassifier.md#predict_log_proba)
-- [predict\_proba](DummyClassifier.md#predict_proba)
-- [score](DummyClassifier.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new DummyClassifier**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new DummyClassifier(opts?: object): DummyClassifier;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`DummyClassifierOptions`](../interfaces/DummyClassifierOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.constant?` | `string` \| `number` \| [`ArrayLike`](../types/ArrayLike.md) | The explicit constant as predicted by the “constant” strategy. This parameter is useful only for the “constant” strategy. |
+| `opts.random_state?` | `number` | Controls the randomness to generate the predictions when `strategy='stratified'` or `strategy='uniform'`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.strategy?` | `"uniform"` \| `"most_frequent"` \| `"prior"` \| `"stratified"` \| `"constant"` | Strategy to use to generate predictions.  `Default Value`  `'prior'` |
 
-[generated/dummy/DummyClassifier.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L31)
+### Returns
+
+[`DummyClassifier`](DummyClassifier.md)
+
+Defined in:  [generated/dummy/DummyClassifier.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L31)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/dummy/DummyClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L29)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L29)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/dummy/DummyClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L28)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L28)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/dummy/DummyClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L27)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L27)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/dummy/DummyClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L24)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L24)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/dummy/DummyClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L25)
+Defined in:  [generated/dummy/DummyClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L25)
 
 ## Accessors
 
 ### class\_prior\_
 
-• `get` **class_prior_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Frequency of each class observed in `y`. For multioutput classification problems, this is computed independently for each output.
+
+#### Signature
+
+```ts
+class_prior_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L374)
 
-[generated/dummy/DummyClassifier.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L316)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L374)
 
 ### classes\_
 
-• `get` **classes_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Unique class labels observed in `y`. For multi-output classification problems, this attribute is a list of arrays as each output has an independent set of possible classes.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L324)
 
-[generated/dummy/DummyClassifier.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L266)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L324)
 
 ### n\_classes\_
 
-• `get` **n_classes_**(): `Promise`<`number`\>
-
 Number of label for each output.
+
+#### Signature
+
+```ts
+n_classes_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L349)
 
-[generated/dummy/DummyClassifier.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L291)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L349)
 
 ### n\_outputs\_
 
-• `get` **n_outputs_**(): `Promise`<`number`\>
-
 Number of outputs.
+
+#### Signature
+
+```ts
+n_outputs_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L399)
 
-[generated/dummy/DummyClassifier.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L341)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L399)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L53)
 
-[generated/dummy/DummyClassifier.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L36)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -207,75 +175,84 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L57)
 
-[generated/dummy/DummyClassifier.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L40)
-
-___
+Defined in:  [generated/dummy/DummyClassifier.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L53) [generated/dummy/DummyClassifier.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L57)
 
 ### sparse\_output\_
 
-• `get` **sparse_output_**(): `Promise`<`boolean`\>
-
 True if the array returned from predict is to be in sparse CSC format. Is automatically set to `true` if the input `y` is passed in sparse format.
+
+#### Signature
+
+```ts
+sparse_output_(): Promise<boolean>;
+```
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L424)
 
-[generated/dummy/DummyClassifier.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L366)
+Defined in:  [generated/dummy/DummyClassifier.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L424)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L110)
 
-[generated/dummy/DummyClassifier.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L93)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the baseline classifier.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyClassifierFitOptions`](../interfaces/DummyClassifierFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L127)
 
-[generated/dummy/DummyClassifier.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L110)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -285,98 +262,102 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L66)
 
-[generated/dummy/DummyClassifier.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L49)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### predict()
 
 Perform classification on test vectors X.
 
+#### Signature
+
+```ts
+predict(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyClassifierPredictOptions`](../interfaces/DummyClassifierPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test data. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L174)
 
-[generated/dummy/DummyClassifier.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L142)
-
-___
-
-### predict\_log\_proba
-
-▸ **predict_log_proba**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### predict\_log\_proba()
 
 Return log probability estimates for the test vectors X.
 
+#### Signature
+
+```ts
+predict_log_proba(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyClassifierPredictLogProbaOptions`](../interfaces/DummyClassifierPredictLogProbaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Training data. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L207)
 
-[generated/dummy/DummyClassifier.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L170)
-
-___
-
-### predict\_proba
-
-▸ **predict_proba**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### predict\_proba()
 
 Return probability estimates for the test vectors X.
 
+#### Signature
+
+```ts
+predict_proba(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyClassifierPredictProbaOptions`](../interfaces/DummyClassifierPredictProbaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test data. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/dummy/DummyClassifier.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L242)
 
-[generated/dummy/DummyClassifier.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L202)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the mean accuracy on the given test data and labels.
 
 In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DummyClassifierScoreOptions`](../interfaces/DummyClassifierScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since DummyClassifier operates independently of the sampled observations. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True labels for X. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/dummy/DummyClassifier.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L234)
+Defined in:  [generated/dummy/DummyClassifier.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/dummy/DummyClassifier.ts#L277)

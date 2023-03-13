@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / MinMaxScaler
-
-# Class: MinMaxScaler
+# MinMaxScaler
 
 Transform features by scaling each feature to a given range.
 
@@ -8,241 +6,212 @@ This estimator scales and translates each feature individually such that it is i
 
 The transformation is given by:
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MinMaxScaler.md#constructor)
-
-### Properties
-
-- [\_isDisposed](MinMaxScaler.md#_isdisposed)
-- [\_isInitialized](MinMaxScaler.md#_isinitialized)
-- [\_py](MinMaxScaler.md#_py)
-- [id](MinMaxScaler.md#id)
-- [opts](MinMaxScaler.md#opts)
-
-### Accessors
-
-- [data\_max\_](MinMaxScaler.md#data_max_)
-- [data\_min\_](MinMaxScaler.md#data_min_)
-- [data\_range\_](MinMaxScaler.md#data_range_)
-- [feature\_names\_in\_](MinMaxScaler.md#feature_names_in_)
-- [min\_](MinMaxScaler.md#min_)
-- [n\_features\_in\_](MinMaxScaler.md#n_features_in_)
-- [n\_samples\_seen\_](MinMaxScaler.md#n_samples_seen_)
-- [py](MinMaxScaler.md#py)
-- [scale\_](MinMaxScaler.md#scale_)
-
-### Methods
-
-- [dispose](MinMaxScaler.md#dispose)
-- [fit](MinMaxScaler.md#fit)
-- [fit\_transform](MinMaxScaler.md#fit_transform)
-- [get\_feature\_names\_out](MinMaxScaler.md#get_feature_names_out)
-- [init](MinMaxScaler.md#init)
-- [inverse\_transform](MinMaxScaler.md#inverse_transform)
-- [partial\_fit](MinMaxScaler.md#partial_fit)
-- [set\_output](MinMaxScaler.md#set_output)
-- [transform](MinMaxScaler.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new MinMaxScaler**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new MinMaxScaler(opts?: object): MinMaxScaler;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`MinMaxScalerOptions`](../interfaces/MinMaxScalerOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.clip?` | `boolean` | Set to `true` to clip transformed values of held-out data to provided `feature range`.  `Default Value`  `false` |
+| `opts.copy?` | `boolean` | Set to `false` to perform inplace row normalization and avoid a copy (if the input is already a numpy array).  `Default Value`  `true` |
+| `opts.feature_range?` | `any` | Desired range of transformed data. |
 
-[generated/preprocessing/MinMaxScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L25)
+### Returns
+
+[`MinMaxScaler`](MinMaxScaler.md)
+
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/MinMaxScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L23)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/MinMaxScaler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L22)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/preprocessing/MinMaxScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L21)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/preprocessing/MinMaxScaler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L18)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/preprocessing/MinMaxScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L19)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L19)
 
 ## Accessors
 
 ### data\_max\_
 
-• `get` **data_max_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per feature maximum seen in the data
+
+#### Signature
+
+```ts
+data_max_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L458)
 
-[generated/preprocessing/MinMaxScaler.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L388)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L458)
 
 ### data\_min\_
 
-• `get` **data_min_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per feature minimum seen in the data
+
+#### Signature
+
+```ts
+data_min_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L433)
 
-[generated/preprocessing/MinMaxScaler.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L363)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L433)
 
 ### data\_range\_
 
-• `get` **data_range_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per feature range `(data\_max\_ \- data\_min\_)` seen in the data
+
+#### Signature
+
+```ts
+data_range_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L483)
 
-[generated/preprocessing/MinMaxScaler.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L413)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L483)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L558)
 
-[generated/preprocessing/MinMaxScaler.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L488)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L558)
 
 ### min\_
 
-• `get` **min_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per feature adjustment for minimum. Equivalent to `min \- X.min(axis=0) \* self.scale\_`
+
+#### Signature
+
+```ts
+min_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L387)
 
-[generated/preprocessing/MinMaxScaler.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L317)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L387)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L508)
 
-[generated/preprocessing/MinMaxScaler.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L438)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L508)
 
 ### n\_samples\_seen\_
 
-• `get` **n_samples_seen_**(): `Promise`<`number`\>
-
 The number of samples processed by the estimator. It will be reset on new calls to fit, but increments across `partial\_fit` calls.
+
+#### Signature
+
+```ts
+n_samples_seen_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L533)
 
-[generated/preprocessing/MinMaxScaler.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L463)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L533)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L49)
 
-[generated/preprocessing/MinMaxScaler.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -254,121 +223,133 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L53)
 
-[generated/preprocessing/MinMaxScaler.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L34)
-
-___
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L49) [generated/preprocessing/MinMaxScaler.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L53)
 
 ### scale\_
 
-• `get` **scale_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per feature relative scaling of the data. Equivalent to `(max \- min) / (X.max(axis=0) \- X.min(axis=0))`
+
+#### Signature
+
+```ts
+scale_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L410)
 
-[generated/preprocessing/MinMaxScaler.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L340)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L410)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L104)
 
-[generated/preprocessing/MinMaxScaler.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L85)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Compute the minimum and maximum to be used for later scaling.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MinMaxScalerFitOptions`](../interfaces/MinMaxScalerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The data used to compute the per-feature minimum and maximum used for later scaling along the features axis. |
+| `opts.y?` | `any` | Ignored. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L121)
 
-[generated/preprocessing/MinMaxScaler.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L102)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MinMaxScalerFitTransformOptions`](../interfaces/MinMaxScalerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L161)
 
-[generated/preprocessing/MinMaxScaler.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L132)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MinMaxScalerGetFeatureNamesOutOptions`](../interfaces/MinMaxScalerGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L208)
 
-[generated/preprocessing/MinMaxScaler.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L164)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -378,100 +359,103 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L62)
 
-[generated/preprocessing/MinMaxScaler.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L43)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### inverse\_transform()
 
 Undo the scaling of X according to feature\_range.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MinMaxScalerInverseTransformOptions`](../interfaces/MinMaxScalerInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input data that will be transformed. It cannot be sparse. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L244)
 
-[generated/preprocessing/MinMaxScaler.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L197)
-
-___
-
-### partial\_fit
-
-▸ **partial_fit**(`opts`): `Promise`<`any`\>
+### partial\_fit()
 
 Online computation of min and max on X for later scaling.
 
 All of X is processed as a single batch. This is intended for cases when [`fit`](#sklearn.preprocessing.MinMaxScaler.fit "sklearn.preprocessing.MinMaxScaler.fit") is not feasible due to very large number of `n\_samples` or because X is read from a continuous stream.
 
+#### Signature
+
+```ts
+partial_fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MinMaxScalerPartialFitOptions`](../interfaces/MinMaxScalerPartialFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The data used to compute the mean and standard deviation used for later scaling along the features axis. |
+| `opts.y?` | `any` | Ignored. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L281)
 
-[generated/preprocessing/MinMaxScaler.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L231)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MinMaxScalerSetOutputOptions`](../interfaces/MinMaxScalerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L321)
 
-[generated/preprocessing/MinMaxScaler.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L261)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### transform()
 
 Scale features of X according to feature\_range.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MinMaxScalerTransformOptions`](../interfaces/MinMaxScalerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input data that will be transformed. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
-
-[generated/preprocessing/MinMaxScaler.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L289)
+Defined in:  [generated/preprocessing/MinMaxScaler.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MinMaxScaler.ts#L354)

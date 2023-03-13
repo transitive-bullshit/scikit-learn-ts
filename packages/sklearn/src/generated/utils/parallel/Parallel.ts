@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The API does not change and you can refer to [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.3.0.dev0)") documentation for more details.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.utils.parallel.Parallel.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.utils.parallel.Parallel.html)
  */
 export class Parallel {
   id: string
@@ -22,7 +22,7 @@ export class Parallel {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ParallelOptions) {
+  constructor(opts?: {}) {
     this.id = `Parallel${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -96,7 +96,7 @@ ctor_Parallel = {k: v for k, v in ctor_Parallel.items() if v is not None}`
 
     This method is meant to be called concurrently by the multiprocessing callback. We rely on the thread-safety of dispatch\_one\_batch to protect against concurrent consumption of the unprotected iterator.
    */
-  async dispatch_next(opts: ParallelDispatchNextOptions): Promise<any> {
+  async dispatch_next(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Parallel instance has already been disposed')
     }
@@ -126,9 +126,7 @@ pms_Parallel_dispatch_next = {k: v for k, v in pms_Parallel_dispatch_next.items(
 
     The iterator consumption and dispatching is protected by the same lock so calling this function should be thread safe.
    */
-  async dispatch_one_batch(
-    opts: ParallelDispatchOneBatchOptions
-  ): Promise<any> {
+  async dispatch_one_batch(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Parallel instance has already been disposed')
     }
@@ -154,7 +152,7 @@ pms_Parallel_dispatch_one_batch = {k: v for k, v in pms_Parallel_dispatch_one_ba
   /**
     Return the formatted representation of the object.
    */
-  async format(opts: ParallelFormatOptions): Promise<any> {
+  async format(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Parallel instance has already been disposed')
     }
@@ -180,7 +178,7 @@ pms_Parallel_format = {k: v for k, v in pms_Parallel_format.items() if v is not 
   /**
     Display the process of the parallel execution only a fraction of time, controlled by self.verbose.
    */
-  async print_progress(opts: ParallelPrintProgressOptions): Promise<any> {
+  async print_progress(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Parallel instance has already been disposed')
     }
@@ -203,13 +201,3 @@ pms_Parallel_print_progress = {k: v for k, v in pms_Parallel_print_progress.item
       ._py`res_Parallel_print_progress.tolist() if hasattr(res_Parallel_print_progress, 'tolist') else res_Parallel_print_progress`
   }
 }
-
-export interface ParallelOptions {}
-
-export interface ParallelDispatchNextOptions {}
-
-export interface ParallelDispatchOneBatchOptions {}
-
-export interface ParallelFormatOptions {}
-
-export interface ParallelPrintProgressOptions {}

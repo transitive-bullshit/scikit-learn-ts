@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / QuantileTransformer
-
-# Class: QuantileTransformer
+# QuantileTransformer
 
 Transform features using quantiles information.
 
@@ -10,173 +8,143 @@ The transformation is applied on each feature independently. First an estimate o
 
 Read more in the [User Guide](../preprocessing.html#preprocessing-transformer).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](QuantileTransformer.md#constructor)
-
-### Properties
-
-- [\_isDisposed](QuantileTransformer.md#_isdisposed)
-- [\_isInitialized](QuantileTransformer.md#_isinitialized)
-- [\_py](QuantileTransformer.md#_py)
-- [id](QuantileTransformer.md#id)
-- [opts](QuantileTransformer.md#opts)
-
-### Accessors
-
-- [feature\_names\_in\_](QuantileTransformer.md#feature_names_in_)
-- [n\_features\_in\_](QuantileTransformer.md#n_features_in_)
-- [n\_quantiles\_](QuantileTransformer.md#n_quantiles_)
-- [py](QuantileTransformer.md#py)
-- [quantiles\_](QuantileTransformer.md#quantiles_)
-- [references\_](QuantileTransformer.md#references_)
-
-### Methods
-
-- [dispose](QuantileTransformer.md#dispose)
-- [fit](QuantileTransformer.md#fit)
-- [fit\_transform](QuantileTransformer.md#fit_transform)
-- [get\_feature\_names\_out](QuantileTransformer.md#get_feature_names_out)
-- [init](QuantileTransformer.md#init)
-- [inverse\_transform](QuantileTransformer.md#inverse_transform)
-- [set\_output](QuantileTransformer.md#set_output)
-- [transform](QuantileTransformer.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new QuantileTransformer**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new QuantileTransformer(opts?: object): QuantileTransformer;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`QuantileTransformerOptions`](../interfaces/QuantileTransformerOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.copy?` | `boolean` | Set to `false` to perform inplace transformation and avoid a copy (if the input is already a numpy array).  `Default Value`  `true` |
+| `opts.ignore_implicit_zeros?` | `boolean` | Only applies to sparse matrices. If `true`, the sparse entries of the matrix are discarded to compute the quantile statistics. If `false`, these entries are treated as zeros.  `Default Value`  `false` |
+| `opts.n_quantiles?` | `number` | Number of quantiles to be computed. It corresponds to the number of landmarks used to discretize the cumulative distribution function. If n\_quantiles is larger than the number of samples, n\_quantiles is set to the number of samples as a larger number of quantiles does not give a better approximation of the cumulative distribution function estimator.  `Default Value`  `1000` |
+| `opts.output_distribution?` | `"uniform"` \| `"normal"` | Marginal distribution for the transformed data. The choices are ‘uniform’ (default) or ‘normal’.  `Default Value`  `'uniform'` |
+| `opts.random_state?` | `number` | Determines random number generation for subsampling and smoothing noise. Please see `subsample` for more details. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.subsample?` | `number` | Maximum number of samples used to estimate the quantiles for computational efficiency. Note that the subsampling procedure may differ for value-identical sparse and dense matrices.  `Default Value`  `10` |
 
-[generated/preprocessing/QuantileTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L27)
+### Returns
+
+[`QuantileTransformer`](QuantileTransformer.md)
+
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L27)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/QuantileTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L25)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L25)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/QuantileTransformer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L24)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L24)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/preprocessing/QuantileTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L23)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L23)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/preprocessing/QuantileTransformer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L20)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L20)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/preprocessing/QuantileTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L21)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L21)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L503)
 
-[generated/preprocessing/QuantileTransformer.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L426)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L503)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L476)
 
-[generated/preprocessing/QuantileTransformer.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L399)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L476)
 
 ### n\_quantiles\_
 
-• `get` **n_quantiles_**(): `Promise`<`number`\>
-
 The actual number of quantiles used to discretize the cumulative distribution function.
+
+#### Signature
+
+```ts
+n_quantiles_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L395)
 
-[generated/preprocessing/QuantileTransformer.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L318)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L395)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L72)
 
-[generated/preprocessing/QuantileTransformer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L32)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -188,137 +156,151 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L76)
 
-[generated/preprocessing/QuantileTransformer.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L36)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L72) [generated/preprocessing/QuantileTransformer.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L76)
 
 ### quantiles\_
 
-• `get` **quantiles_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 The values corresponding the quantiles of reference.
+
+#### Signature
+
+```ts
+quantiles_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L422)
 
-[generated/preprocessing/QuantileTransformer.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L345)
-
-___
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L422)
 
 ### references\_
 
-• `get` **references_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Quantiles of references.
+
+#### Signature
+
+```ts
+references_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L449)
 
-[generated/preprocessing/QuantileTransformer.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L372)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L449)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L135)
 
-[generated/preprocessing/QuantileTransformer.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L95)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Compute the quantiles used for transforming.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuantileTransformerFitOptions`](../interfaces/QuantileTransformerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`. |
+| `opts.y?` | `any` | Ignored. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L152)
 
-[generated/preprocessing/QuantileTransformer.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L112)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuantileTransformerFitTransformOptions`](../interfaces/QuantileTransformerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L194)
 
-[generated/preprocessing/QuantileTransformer.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L144)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuantileTransformerGetFeatureNamesOutOptions`](../interfaces/QuantileTransformerGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L245)
 
-[generated/preprocessing/QuantileTransformer.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L182)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -328,76 +310,77 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L85)
 
-[generated/preprocessing/QuantileTransformer.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L45)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<`any`\>
+### inverse\_transform()
 
 Back-projection to the original space.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuantileTransformerInverseTransformOptions`](../interfaces/QuantileTransformerInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:283](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L283)
 
-[generated/preprocessing/QuantileTransformer.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L217)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuantileTransformerSetOutputOptions`](../interfaces/QuantileTransformerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L323)
 
-[generated/preprocessing/QuantileTransformer.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L254)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### transform()
 
 Feature-wise transformation of the data.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`QuantileTransformerTransformOptions`](../interfaces/QuantileTransformerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The data used to scale along the features axis. If a sparse matrix is provided, it will be converted into a sparse `csc\_matrix`. Additionally, the sparse matrix needs to be nonnegative if `ignore\_implicit\_zeros` is `false`. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/preprocessing/QuantileTransformer.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L286)
+Defined in:  [generated/preprocessing/QuantileTransformer.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/QuantileTransformer.ts#L360)

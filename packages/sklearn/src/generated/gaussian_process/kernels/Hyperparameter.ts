@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   A kernel hyperparameter’s specification in form of a namedtuple.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Hyperparameter.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Hyperparameter.html)
  */
 export class Hyperparameter {
   id: string
@@ -18,7 +18,34 @@ export class Hyperparameter {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: HyperparameterOptions) {
+  constructor(opts?: {
+    /**
+      The name of the hyperparameter. Note that a kernel using a hyperparameter with name “x” must have the attributes self.x and self.x\_bounds
+     */
+    name?: string
+
+    /**
+      The type of the hyperparameter. Currently, only “numeric” hyperparameters are supported.
+     */
+    value_type?: string
+
+    /**
+      The lower and upper bound on the parameter. If n\_elements>1, a pair of 1d array with n\_elements each may be given alternatively. If the string “fixed” is passed as bounds, the hyperparameter’s value cannot be changed.
+     */
+    bounds?: 'fixed'
+
+    /**
+      The number of elements of the hyperparameter value. Defaults to 1, which corresponds to a scalar hyperparameter. n\_elements > 1 corresponds to a hyperparameter which is vector-valued, such as, e.g., anisotropic length-scales.
+
+      @defaultValue `1`
+     */
+    n_elements?: number
+
+    /**
+      Whether the value of this hyperparameter is fixed, i.e., cannot be changed during hyperparameter tuning. If `undefined` is passed, the “fixed” is derived based on the given bounds.
+     */
+    fixed?: boolean
+  }) {
     this.id = `Hyperparameter${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +124,7 @@ ctor_Hyperparameter = {k: v for k, v in ctor_Hyperparameter.items() if v is not 
   /**
     Call self as a function.
    */
-  async __call__(opts: HyperparameterCallOptions): Promise<any> {
+  async __call__(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Hyperparameter instance has already been disposed')
     }
@@ -123,7 +150,7 @@ pms_Hyperparameter___call__ = {k: v for k, v in pms_Hyperparameter___call__.item
   /**
     Return number of occurrences of value.
    */
-  async count(opts: HyperparameterCountOptions): Promise<any> {
+  async count(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Hyperparameter instance has already been disposed')
     }
@@ -151,7 +178,7 @@ pms_Hyperparameter_count = {k: v for k, v in pms_Hyperparameter_count.items() if
 
     Raises ValueError if the value is not present.
    */
-  async index(opts: HyperparameterIndexOptions): Promise<any> {
+  async index(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Hyperparameter instance has already been disposed')
     }
@@ -174,38 +201,3 @@ pms_Hyperparameter_index = {k: v for k, v in pms_Hyperparameter_index.items() if
       ._py`res_Hyperparameter_index.tolist() if hasattr(res_Hyperparameter_index, 'tolist') else res_Hyperparameter_index`
   }
 }
-
-export interface HyperparameterOptions {
-  /**
-    The name of the hyperparameter. Note that a kernel using a hyperparameter with name “x” must have the attributes self.x and self.x\_bounds
-   */
-  name?: string
-
-  /**
-    The type of the hyperparameter. Currently, only “numeric” hyperparameters are supported.
-   */
-  value_type?: string
-
-  /**
-    The lower and upper bound on the parameter. If n\_elements>1, a pair of 1d array with n\_elements each may be given alternatively. If the string “fixed” is passed as bounds, the hyperparameter’s value cannot be changed.
-   */
-  bounds?: 'fixed'
-
-  /**
-    The number of elements of the hyperparameter value. Defaults to 1, which corresponds to a scalar hyperparameter. n\_elements > 1 corresponds to a hyperparameter which is vector-valued, such as, e.g., anisotropic length-scales.
-
-    @defaultValue `1`
-   */
-  n_elements?: number
-
-  /**
-    Whether the value of this hyperparameter is fixed, i.e., cannot be changed during hyperparameter tuning. If `undefined` is passed, the “fixed” is derived based on the given bounds.
-   */
-  fixed?: boolean
-}
-
-export interface HyperparameterCallOptions {}
-
-export interface HyperparameterCountOptions {}
-
-export interface HyperparameterIndexOptions {}

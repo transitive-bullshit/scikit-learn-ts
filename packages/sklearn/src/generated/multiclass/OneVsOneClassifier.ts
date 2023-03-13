@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../multiclass.html#ovo-classification).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsOneClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsOneClassifier.html)
  */
 export class OneVsOneClassifier {
   id: string
@@ -22,7 +22,19 @@ export class OneVsOneClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OneVsOneClassifierOptions) {
+  constructor(opts?: {
+    /**
+      A regressor or a classifier that implements [fit](../../glossary.html#term-fit). When a classifier is passed, [decision\_function](../../glossary.html#term-decision_function) will be used in priority and it will fallback to [predict\_proba](../../glossary.html#term-predict_proba) if it is not available. When a regressor is passed, [predict](../../glossary.html#term-predict) is used.
+     */
+    estimator?: any
+
+    /**
+      The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \- 1) / 2` OVO problems are computed in parallel.
+
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `OneVsOneClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,9 +115,12 @@ ctor_OneVsOneClassifier = {k: v for k, v in ctor_OneVsOneClassifier.items() if v
 
     The decision values for the samples are computed by adding the normalized sum of pair-wise classification confidence levels to the votes in order to disambiguate between the decision values when the votes for all the classes are equal leading to a tie.
    */
-  async decision_function(
-    opts: OneVsOneClassifierDecisionFunctionOptions
-  ): Promise<ArrayLike[]> {
+  async decision_function(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsOneClassifier instance has already been disposed'
@@ -138,7 +153,17 @@ pms_OneVsOneClassifier_decision_function = {k: v for k, v in pms_OneVsOneClassif
   /**
     Fit underlying estimators.
    */
-  async fit(opts: OneVsOneClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Multi-class targets.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsOneClassifier instance has already been disposed'
@@ -172,7 +197,22 @@ pms_OneVsOneClassifier_fit = {k: v for k, v in pms_OneVsOneClassifier_fit.items(
 
     Should be used when memory is inefficient to train all data. Chunks of data can be passed in several iteration, where the first call should have an array of all target variables.
    */
-  async partial_fit(opts: OneVsOneClassifierPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Data.
+     */
+    X?: any[]
+
+    /**
+      Multi-class targets.
+     */
+    y?: ArrayLike
+
+    /**
+      Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls.
+     */
+    classes?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsOneClassifier instance has already been disposed'
@@ -210,7 +250,12 @@ pms_OneVsOneClassifier_partial_fit = {k: v for k, v in pms_OneVsOneClassifier_pa
 
     This is implemented as `argmax(decision\_function(X), axis=1)` which will return the label of the class with most votes by estimators predicting the outcome of a decision for each possible class pair.
    */
-  async predict(opts: OneVsOneClassifierPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsOneClassifier instance has already been disposed'
@@ -242,7 +287,22 @@ pms_OneVsOneClassifier_predict = {k: v for k, v in pms_OneVsOneClassifier_predic
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: OneVsOneClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsOneClassifier instance has already been disposed'
@@ -407,78 +467,4 @@ pms_OneVsOneClassifier_score = {k: v for k, v in pms_OneVsOneClassifier_score.it
         ._py`attr_OneVsOneClassifier_feature_names_in_.tolist() if hasattr(attr_OneVsOneClassifier_feature_names_in_, 'tolist') else attr_OneVsOneClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface OneVsOneClassifierOptions {
-  /**
-    A regressor or a classifier that implements [fit](../../glossary.html#term-fit). When a classifier is passed, [decision\_function](../../glossary.html#term-decision_function) will be used in priority and it will fallback to [predict\_proba](../../glossary.html#term-predict_proba) if it is not available. When a regressor is passed, [predict](../../glossary.html#term-predict) is used.
-   */
-  estimator?: any
-
-  /**
-    The number of jobs to use for the computation: the `n\_classes \* ( n\_classes \- 1) / 2` OVO problems are computed in parallel.
-
-    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface OneVsOneClassifierDecisionFunctionOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface OneVsOneClassifierFitOptions {
-  /**
-    Data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Multi-class targets.
-   */
-  y?: ArrayLike
-}
-
-export interface OneVsOneClassifierPartialFitOptions {
-  /**
-    Data.
-   */
-  X?: any[]
-
-  /**
-    Multi-class targets.
-   */
-  y?: ArrayLike
-
-  /**
-    Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls.
-   */
-  classes?: any
-}
-
-export interface OneVsOneClassifierPredictOptions {
-  /**
-    Data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface OneVsOneClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../manifold.html#spectral-embedding).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html)
  */
 export class SpectralEmbedding {
   id: string
@@ -24,7 +24,57 @@ export class SpectralEmbedding {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SpectralEmbeddingOptions) {
+  constructor(opts?: {
+    /**
+      The dimension of the projected subspace.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      ‘nearest\_neighbors’ : construct the affinity matrix by computing a graph of nearest neighbors.
+
+      @defaultValue `'nearest_neighbors'`
+     */
+    affinity?:
+      | 'nearest_neighbors'
+      | 'rbf'
+      | 'precomputed'
+      | 'precomputed_nearest_neighbors'
+
+    /**
+      Kernel coefficient for rbf kernel. If `undefined`, gamma will be set to 1/n\_features.
+     */
+    gamma?: number
+
+    /**
+      A pseudo random number generator used for the initialization of the lobpcg eigen vectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
+     */
+    random_state?: number
+
+    /**
+      The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems. If `undefined`, then `'arpack'` is used.
+     */
+    eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
+
+    /**
+      Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:
+
+      @defaultValue `'auto'`
+     */
+    eigen_tol?: number
+
+    /**
+      Number of nearest neighbors for nearest\_neighbors graph building. If `undefined`, n\_neighbors will be set to max(n\_samples/10, 1).
+     */
+    n_neighbors?: number
+
+    /**
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `SpectralEmbedding${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +159,19 @@ ctor_SpectralEmbedding = {k: v for k, v in ctor_SpectralEmbedding.items() if v i
   /**
     Fit the model from data in X.
    */
-  async fit(opts: SpectralEmbeddingFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+      If affinity is “precomputed” X : {array-like, sparse matrix}, shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralEmbedding instance has already been disposed'
@@ -139,9 +201,19 @@ pms_SpectralEmbedding_fit = {k: v for k, v in pms_SpectralEmbedding_fit.items() 
   /**
     Fit the model from data in X and transform X.
    */
-  async fit_transform(
-    opts: SpectralEmbeddingFitTransformOptions
-  ): Promise<ArrayLike[]> {
+  async fit_transform(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+
+      If affinity is “precomputed” X : {array-like, sparse matrix} of shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralEmbedding instance has already been disposed'
@@ -304,84 +376,4 @@ pms_SpectralEmbedding_fit_transform = {k: v for k, v in pms_SpectralEmbedding_fi
         ._py`attr_SpectralEmbedding_n_neighbors_.tolist() if hasattr(attr_SpectralEmbedding_n_neighbors_, 'tolist') else attr_SpectralEmbedding_n_neighbors_`
     })()
   }
-}
-
-export interface SpectralEmbeddingOptions {
-  /**
-    The dimension of the projected subspace.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    ‘nearest\_neighbors’ : construct the affinity matrix by computing a graph of nearest neighbors.
-
-    @defaultValue `'nearest_neighbors'`
-   */
-  affinity?:
-    | 'nearest_neighbors'
-    | 'rbf'
-    | 'precomputed'
-    | 'precomputed_nearest_neighbors'
-
-  /**
-    Kernel coefficient for rbf kernel. If `undefined`, gamma will be set to 1/n\_features.
-   */
-  gamma?: number
-
-  /**
-    A pseudo random number generator used for the initialization of the lobpcg eigen vectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
-   */
-  random_state?: number
-
-  /**
-    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems. If `undefined`, then `'arpack'` is used.
-   */
-  eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
-
-  /**
-    Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:
-
-    @defaultValue `'auto'`
-   */
-  eigen_tol?: number
-
-  /**
-    Number of nearest neighbors for nearest\_neighbors graph building. If `undefined`, n\_neighbors will be set to max(n\_samples/10, 1).
-   */
-  n_neighbors?: number
-
-  /**
-    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface SpectralEmbeddingFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-
-    If affinity is “precomputed” X : {array-like, sparse matrix}, shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SpectralEmbeddingFitTransformOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-
-    If affinity is “precomputed” X : {array-like, sparse matrix} of shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
 }

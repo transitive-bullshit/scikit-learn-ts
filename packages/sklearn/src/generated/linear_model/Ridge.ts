@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Minimizes the objective function:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
  */
 export class Ridge {
   id: string
@@ -20,7 +20,71 @@ export class Ridge {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RidgeOptions) {
+  constructor(opts?: {
+    /**
+      Constant that multiplies the L2 term, controlling regularization strength. `alpha` must be a non-negative float i.e. in `\[0, inf)`.
+
+      When `alpha \= 0`, the objective is equivalent to ordinary least squares, solved by the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object. For numerical reasons, using `alpha \= 0` with the `Ridge` object is not advised. Instead, you should use the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object.
+
+      If an array is passed, penalties are assumed to be specific to the targets. Hence they must correspond in number.
+
+      @defaultValue `1`
+     */
+    alpha?: number
+
+    /**
+      Whether to fit the intercept for this model. If set to false, no intercept will be used in calculations (i.e. `X` and `y` are expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      Maximum number of iterations for conjugate gradient solver. For ‘sparse\_cg’ and ‘lsqr’ solvers, the default value is determined by scipy.sparse.linalg. For ‘sag’ solver, the default value is 1000. For ‘lbfgs’ solver, the default value is 15000.
+     */
+    max_iter?: number
+
+    /**
+      Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ and ‘cholesky’.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Solver to use in the computational routines:
+
+      @defaultValue `'auto'`
+     */
+    solver?:
+      | 'auto'
+      | 'svd'
+      | 'cholesky'
+      | 'lsqr'
+      | 'sparse_cg'
+      | 'sag'
+      | 'saga'
+      | 'lbfgs'
+
+    /**
+      When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
+
+      @defaultValue `false`
+     */
+    positive?: boolean
+
+    /**
+      Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+  }) {
     this.id = `Ridge${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -102,7 +166,22 @@ ctor_Ridge = {k: v for k, v in ctor_Ridge.items() if v is not None}`
   /**
     Fit Ridge regression model.
    */
-  async fit(opts: RidgeFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: NDArray | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: NDArray
+
+    /**
+      Individual weights for each sample. If given a float, every sample will have the same weight.
+     */
+    sample_weight?: number | NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Ridge instance has already been disposed')
     }
@@ -134,7 +213,12 @@ pms_Ridge_fit = {k: v for k, v in pms_Ridge_fit.items() if v is not None}`
   /**
     Predict using the linear model.
    */
-  async predict(opts: RidgePredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Ridge instance has already been disposed')
     }
@@ -162,7 +246,22 @@ pms_Ridge_predict = {k: v for k, v in pms_Ridge_predict.items() if v is not None
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: RidgeScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This Ridge instance has already been disposed')
     }
@@ -305,111 +404,4 @@ pms_Ridge_score = {k: v for k, v in pms_Ridge_score.items() if v is not None}`
         ._py`attr_Ridge_feature_names_in_.tolist() if hasattr(attr_Ridge_feature_names_in_, 'tolist') else attr_Ridge_feature_names_in_`
     })()
   }
-}
-
-export interface RidgeOptions {
-  /**
-    Constant that multiplies the L2 term, controlling regularization strength. `alpha` must be a non-negative float i.e. in `\[0, inf)`.
-
-    When `alpha \= 0`, the objective is equivalent to ordinary least squares, solved by the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object. For numerical reasons, using `alpha \= 0` with the `Ridge` object is not advised. Instead, you should use the [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") object.
-
-    If an array is passed, penalties are assumed to be specific to the targets. Hence they must correspond in number.
-
-    @defaultValue `1`
-   */
-  alpha?: number
-
-  /**
-    Whether to fit the intercept for this model. If set to false, no intercept will be used in calculations (i.e. `X` and `y` are expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    Maximum number of iterations for conjugate gradient solver. For ‘sparse\_cg’ and ‘lsqr’ solvers, the default value is determined by scipy.sparse.linalg. For ‘sag’ solver, the default value is 1000. For ‘lbfgs’ solver, the default value is 15000.
-   */
-  max_iter?: number
-
-  /**
-    Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ and ‘cholesky’.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Solver to use in the computational routines:
-
-    @defaultValue `'auto'`
-   */
-  solver?:
-    | 'auto'
-    | 'svd'
-    | 'cholesky'
-    | 'lsqr'
-    | 'sparse_cg'
-    | 'sag'
-    | 'saga'
-    | 'lbfgs'
-
-  /**
-    When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
-
-    @defaultValue `false`
-   */
-  positive?: boolean
-
-  /**
-    Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-}
-
-export interface RidgeFitOptions {
-  /**
-    Training data.
-   */
-  X?: NDArray | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: NDArray
-
-  /**
-    Individual weights for each sample. If given a float, every sample will have the same weight.
-   */
-  sample_weight?: number | NDArray
-}
-
-export interface RidgePredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface RidgeScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

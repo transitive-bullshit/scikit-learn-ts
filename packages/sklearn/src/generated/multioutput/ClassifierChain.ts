@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../multiclass.html#classifierchain).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.ClassifierChain.html)
  */
 export class ClassifierChain {
   id: string
@@ -22,7 +22,34 @@ export class ClassifierChain {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ClassifierChainOptions) {
+  constructor(opts?: {
+    /**
+      The base estimator from which the classifier chain is built.
+     */
+    base_estimator?: any
+
+    /**
+      If `undefined`, the order will be determined by the order of columns in the label matrix Y.:
+     */
+    order?: ArrayLike | 'random'
+
+    /**
+      Determines whether to use cross validated predictions or true labels for the results of previous estimators in the chain. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      If `true`, chain progress is output as each model is completed.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `ClassifierChain${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,9 +128,12 @@ ctor_ClassifierChain = {k: v for k, v in ctor_ClassifierChain.items() if v is no
   /**
     Evaluate the decision\_function of the models in the chain.
    */
-  async decision_function(
-    opts: ClassifierChainDecisionFunctionOptions
-  ): Promise<ArrayLike[]> {
+  async decision_function(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This ClassifierChain instance has already been disposed')
     }
@@ -133,7 +163,17 @@ pms_ClassifierChain_decision_function = {k: v for k, v in pms_ClassifierChain_de
   /**
     Fit the model to data matrix X and targets Y.
    */
-  async fit(opts: ClassifierChainFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    Y?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ClassifierChain instance has already been disposed')
     }
@@ -163,7 +203,12 @@ pms_ClassifierChain_fit = {k: v for k, v in pms_ClassifierChain_fit.items() if v
   /**
     Predict on the data matrix X using the ClassifierChain model.
    */
-  async predict(opts: ClassifierChainPredictOptions): Promise<ArrayLike[]> {
+  async predict(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This ClassifierChain instance has already been disposed')
     }
@@ -191,9 +236,12 @@ pms_ClassifierChain_predict = {k: v for k, v in pms_ClassifierChain_predict.item
   /**
     Predict probability estimates.
    */
-  async predict_proba(
-    opts: ClassifierChainPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This ClassifierChain instance has already been disposed')
     }
@@ -223,7 +271,22 @@ pms_ClassifierChain_predict_proba = {k: v for k, v in pms_ClassifierChain_predic
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: ClassifierChainScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This ClassifierChain instance has already been disposed')
     }
@@ -376,83 +439,4 @@ pms_ClassifierChain_score = {k: v for k, v in pms_ClassifierChain_score.items() 
         ._py`attr_ClassifierChain_feature_names_in_.tolist() if hasattr(attr_ClassifierChain_feature_names_in_, 'tolist') else attr_ClassifierChain_feature_names_in_`
     })()
   }
-}
-
-export interface ClassifierChainOptions {
-  /**
-    The base estimator from which the classifier chain is built.
-   */
-  base_estimator?: any
-
-  /**
-    If `undefined`, the order will be determined by the order of columns in the label matrix Y.:
-   */
-  order?: ArrayLike | 'random'
-
-  /**
-    Determines whether to use cross validated predictions or true labels for the results of previous estimators in the chain. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    If `order='random'`, determines random number generation for the chain order. In addition, it controls the random seed given at each `base\_estimator` at each chaining iteration. Thus, it is only used when `base\_estimator` exposes a `random\_state`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    If `true`, chain progress is output as each model is completed.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface ClassifierChainDecisionFunctionOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface ClassifierChainFitOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  Y?: ArrayLike[]
-}
-
-export interface ClassifierChainPredictOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface ClassifierChainPredictProbaOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface ClassifierChainScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

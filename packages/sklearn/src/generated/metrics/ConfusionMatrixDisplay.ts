@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../../visualizations.html#visualizations).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html)
  */
 export class ConfusionMatrixDisplay {
   id: string
@@ -22,7 +22,17 @@ export class ConfusionMatrixDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ConfusionMatrixDisplayOptions) {
+  constructor(opts?: {
+    /**
+      Confusion matrix.
+     */
+    confusion_matrix?: NDArray[]
+
+    /**
+      Display labels for plot. If `undefined`, display labels are set from 0 to `n\_classes \- 1`.
+     */
+    display_labels?: NDArray
+  }) {
     this.id = `ConfusionMatrixDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -108,9 +118,90 @@ ctor_ConfusionMatrixDisplay = {k: v for k, v in ctor_ConfusionMatrixDisplay.item
 
     Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
    */
-  async from_estimator(
-    opts: ConfusionMatrixDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+     */
+    estimator?: any
+
+    /**
+      Input values.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
+     */
+    labels?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Either to normalize the counts display in the matrix:
+     */
+    normalize?: 'true' | 'pred' | 'all'
+
+    /**
+      Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
+     */
+    display_labels?: ArrayLike
+
+    /**
+      Includes values in confusion matrix.
+
+      @defaultValue `true`
+     */
+    include_values?: boolean
+
+    /**
+      Rotation of xtick labels.
+
+      @defaultValue `'horizontal'`
+     */
+    xticks_rotation?: 'vertical' | 'horizontal' | number
+
+    /**
+      Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+     */
+    values_format?: string
+
+    /**
+      Colormap recognized by matplotlib.
+
+      @defaultValue `'viridis'`
+     */
+    cmap?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Whether or not to add a colorbar to the plot.
+
+      @defaultValue `true`
+     */
+    colorbar?: boolean
+
+    /**
+      Dict with keywords passed to `matplotlib.pyplot.imshow` call.
+     */
+    im_kw?: any
+
+    /**
+      Dict with keywords passed to `matplotlib.pyplot.text` call.
+     */
+    text_kw?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ConfusionMatrixDisplay instance has already been disposed'
@@ -167,9 +258,85 @@ pms_ConfusionMatrixDisplay_from_estimator = {k: v for k, v in pms_ConfusionMatri
 
     Read more in the [User Guide](../model_evaluation.html#confusion-matrix).
    */
-  async from_predictions(
-    opts: ConfusionMatrixDisplayFromPredictionsOptions
-  ): Promise<any> {
+  async from_predictions(opts: {
+    /**
+      True labels.
+     */
+    y_true?: ArrayLike
+
+    /**
+      The predicted labels given by the method `predict` of an classifier.
+     */
+    y_pred?: ArrayLike
+
+    /**
+      List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
+     */
+    labels?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Either to normalize the counts display in the matrix:
+     */
+    normalize?: 'true' | 'pred' | 'all'
+
+    /**
+      Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
+     */
+    display_labels?: ArrayLike
+
+    /**
+      Includes values in confusion matrix.
+
+      @defaultValue `true`
+     */
+    include_values?: boolean
+
+    /**
+      Rotation of xtick labels.
+
+      @defaultValue `'horizontal'`
+     */
+    xticks_rotation?: 'vertical' | 'horizontal' | number
+
+    /**
+      Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+     */
+    values_format?: string
+
+    /**
+      Colormap recognized by matplotlib.
+
+      @defaultValue `'viridis'`
+     */
+    cmap?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Whether or not to add a colorbar to the plot.
+
+      @defaultValue `true`
+     */
+    colorbar?: boolean
+
+    /**
+      Dict with keywords passed to `matplotlib.pyplot.imshow` call.
+     */
+    im_kw?: any
+
+    /**
+      Dict with keywords passed to `matplotlib.pyplot.text` call.
+     */
+    text_kw?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ConfusionMatrixDisplay instance has already been disposed'
@@ -224,7 +391,55 @@ pms_ConfusionMatrixDisplay_from_predictions = {k: v for k, v in pms_ConfusionMat
   /**
     Plot visualization.
    */
-  async plot(opts: ConfusionMatrixDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Includes values in confusion matrix.
+
+      @defaultValue `true`
+     */
+    include_values?: boolean
+
+    /**
+      Colormap recognized by matplotlib.
+
+      @defaultValue `'viridis'`
+     */
+    cmap?: string
+
+    /**
+      Rotation of xtick labels.
+
+      @defaultValue `'horizontal'`
+     */
+    xticks_rotation?: 'vertical' | 'horizontal' | number
+
+    /**
+      Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
+     */
+    values_format?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Whether or not to add a colorbar to the plot.
+
+      @defaultValue `true`
+     */
+    colorbar?: boolean
+
+    /**
+      Dict with keywords passed to `matplotlib.pyplot.imshow` call.
+     */
+    im_kw?: any
+
+    /**
+      Dict with keywords passed to `matplotlib.pyplot.text` call.
+     */
+    text_kw?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This ConfusionMatrixDisplay instance has already been disposed'
@@ -364,231 +579,4 @@ pms_ConfusionMatrixDisplay_plot = {k: v for k, v in pms_ConfusionMatrixDisplay_p
         ._py`attr_ConfusionMatrixDisplay_figure_.tolist() if hasattr(attr_ConfusionMatrixDisplay_figure_, 'tolist') else attr_ConfusionMatrixDisplay_figure_`
     })()
   }
-}
-
-export interface ConfusionMatrixDisplayOptions {
-  /**
-    Confusion matrix.
-   */
-  confusion_matrix?: NDArray[]
-
-  /**
-    Display labels for plot. If `undefined`, display labels are set from 0 to `n\_classes \- 1`.
-   */
-  display_labels?: NDArray
-}
-
-export interface ConfusionMatrixDisplayFromEstimatorOptions {
-  /**
-    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
-   */
-  estimator?: any
-
-  /**
-    Input values.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
-   */
-  labels?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Either to normalize the counts display in the matrix:
-   */
-  normalize?: 'true' | 'pred' | 'all'
-
-  /**
-    Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
-   */
-  display_labels?: ArrayLike
-
-  /**
-    Includes values in confusion matrix.
-
-    @defaultValue `true`
-   */
-  include_values?: boolean
-
-  /**
-    Rotation of xtick labels.
-
-    @defaultValue `'horizontal'`
-   */
-  xticks_rotation?: 'vertical' | 'horizontal' | number
-
-  /**
-    Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
-   */
-  values_format?: string
-
-  /**
-    Colormap recognized by matplotlib.
-
-    @defaultValue `'viridis'`
-   */
-  cmap?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Whether or not to add a colorbar to the plot.
-
-    @defaultValue `true`
-   */
-  colorbar?: boolean
-
-  /**
-    Dict with keywords passed to `matplotlib.pyplot.imshow` call.
-   */
-  im_kw?: any
-
-  /**
-    Dict with keywords passed to `matplotlib.pyplot.text` call.
-   */
-  text_kw?: any
-}
-
-export interface ConfusionMatrixDisplayFromPredictionsOptions {
-  /**
-    True labels.
-   */
-  y_true?: ArrayLike
-
-  /**
-    The predicted labels given by the method `predict` of an classifier.
-   */
-  y_pred?: ArrayLike
-
-  /**
-    List of labels to index the confusion matrix. This may be used to reorder or select a subset of labels. If `undefined` is given, those that appear at least once in `y\_true` or `y\_pred` are used in sorted order.
-   */
-  labels?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Either to normalize the counts display in the matrix:
-   */
-  normalize?: 'true' | 'pred' | 'all'
-
-  /**
-    Target names used for plotting. By default, `labels` will be used if it is defined, otherwise the unique labels of `y\_true` and `y\_pred` will be used.
-   */
-  display_labels?: ArrayLike
-
-  /**
-    Includes values in confusion matrix.
-
-    @defaultValue `true`
-   */
-  include_values?: boolean
-
-  /**
-    Rotation of xtick labels.
-
-    @defaultValue `'horizontal'`
-   */
-  xticks_rotation?: 'vertical' | 'horizontal' | number
-
-  /**
-    Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
-   */
-  values_format?: string
-
-  /**
-    Colormap recognized by matplotlib.
-
-    @defaultValue `'viridis'`
-   */
-  cmap?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Whether or not to add a colorbar to the plot.
-
-    @defaultValue `true`
-   */
-  colorbar?: boolean
-
-  /**
-    Dict with keywords passed to `matplotlib.pyplot.imshow` call.
-   */
-  im_kw?: any
-
-  /**
-    Dict with keywords passed to `matplotlib.pyplot.text` call.
-   */
-  text_kw?: any
-}
-
-export interface ConfusionMatrixDisplayPlotOptions {
-  /**
-    Includes values in confusion matrix.
-
-    @defaultValue `true`
-   */
-  include_values?: boolean
-
-  /**
-    Colormap recognized by matplotlib.
-
-    @defaultValue `'viridis'`
-   */
-  cmap?: string
-
-  /**
-    Rotation of xtick labels.
-
-    @defaultValue `'horizontal'`
-   */
-  xticks_rotation?: 'vertical' | 'horizontal' | number
-
-  /**
-    Format specification for values in confusion matrix. If `undefined`, the format specification is ‘d’ or ‘.2g’ whichever is shorter.
-   */
-  values_format?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Whether or not to add a colorbar to the plot.
-
-    @defaultValue `true`
-   */
-  colorbar?: boolean
-
-  /**
-    Dict with keywords passed to `matplotlib.pyplot.imshow` call.
-   */
-  im_kw?: any
-
-  /**
-    Dict with keywords passed to `matplotlib.pyplot.text` call.
-   */
-  text_kw?: any
 }

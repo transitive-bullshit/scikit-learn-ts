@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / MiniBatchSparsePCA
-
-# Class: MiniBatchSparsePCA
+# MiniBatchSparsePCA
 
 Mini-batch Sparse Principal Components Analysis.
 
@@ -8,222 +6,205 @@ Finds the set of sparse components that can optimally reconstruct the data. The 
 
 Read more in the [User Guide](../decomposition.html#sparsepca).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchSparsePCA.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MiniBatchSparsePCA.md#constructor)
-
-### Properties
-
-- [\_isDisposed](MiniBatchSparsePCA.md#_isdisposed)
-- [\_isInitialized](MiniBatchSparsePCA.md#_isinitialized)
-- [\_py](MiniBatchSparsePCA.md#_py)
-- [id](MiniBatchSparsePCA.md#id)
-- [opts](MiniBatchSparsePCA.md#opts)
-
-### Accessors
-
-- [components\_](MiniBatchSparsePCA.md#components_)
-- [feature\_names\_in\_](MiniBatchSparsePCA.md#feature_names_in_)
-- [mean\_](MiniBatchSparsePCA.md#mean_)
-- [n\_components\_](MiniBatchSparsePCA.md#n_components_)
-- [n\_features\_in\_](MiniBatchSparsePCA.md#n_features_in_)
-- [n\_iter\_](MiniBatchSparsePCA.md#n_iter_)
-- [py](MiniBatchSparsePCA.md#py)
-
-### Methods
-
-- [dispose](MiniBatchSparsePCA.md#dispose)
-- [fit](MiniBatchSparsePCA.md#fit)
-- [fit\_transform](MiniBatchSparsePCA.md#fit_transform)
-- [get\_feature\_names\_out](MiniBatchSparsePCA.md#get_feature_names_out)
-- [init](MiniBatchSparsePCA.md#init)
-- [inverse\_transform](MiniBatchSparsePCA.md#inverse_transform)
-- [set\_output](MiniBatchSparsePCA.md#set_output)
-- [transform](MiniBatchSparsePCA.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.MiniBatchSparsePCA.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new MiniBatchSparsePCA**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new MiniBatchSparsePCA(opts?: object): MiniBatchSparsePCA;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`MiniBatchSparsePCAOptions`](../interfaces/MiniBatchSparsePCAOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | Sparsity controlling parameter. Higher values lead to sparser components.  `Default Value`  `1` |
+| `opts.batch_size?` | `number` | The number of features to take in each mini batch.  `Default Value`  `3` |
+| `opts.callback?` | `any` | Callable that gets invoked every five iterations. |
+| `opts.max_iter?` | `number` | Maximum number of iterations over the complete dataset before stopping independently of any early stopping criterion heuristics. If `max\_iter` is not `undefined`, `n\_iter` is ignored. |
+| `opts.max_no_improvement?` | `number` | Control early stopping based on the consecutive number of mini batches that does not yield an improvement on the smoothed cost function. Used only if `max\_iter` is not `undefined`.  To disable convergence detection based on cost function, set `max\_no\_improvement` to `undefined`.  `Default Value`  `10` |
+| `opts.method?` | `"cd"` \| `"lars"` | Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear\_model.lars\_path) cd: uses the coordinate descent method to compute the Lasso solution (linear\_model.Lasso). Lars will be faster if the estimated components are sparse.  `Default Value`  `'lars'` |
+| `opts.n_components?` | `number` | Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`. |
+| `opts.n_iter?` | `number` | Number of iterations to perform for each mini batch.  `Default Value`  `100` |
+| `opts.n_jobs?` | `number` | Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.random_state?` | `number` | Used for random shuffling when `shuffle` is set to `true`, during online dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.ridge_alpha?` | `number` | Amount of ridge shrinkage to apply in order to improve conditioning when calling the transform method.  `Default Value`  `0.01` |
+| `opts.shuffle?` | `boolean` | Whether to shuffle the data before splitting it in batches.  `Default Value`  `true` |
+| `opts.tol?` | `number` | Control early stopping based on the norm of the differences in the dictionary between 2 steps. Used only if `max\_iter` is not `undefined`.  To disable early stopping based on changes in the dictionary, set `tol` to 0.0.  `Default Value`  `0.001` |
+| `opts.verbose?` | `number` \| `boolean` | Controls the verbosity; the higher, the more messages. Defaults to 0.  `Default Value`  `false` |
 
-[generated/decomposition/MiniBatchSparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L25)
+### Returns
+
+[`MiniBatchSparsePCA`](MiniBatchSparsePCA.md)
+
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/MiniBatchSparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L23)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/MiniBatchSparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L22)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/decomposition/MiniBatchSparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L21)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/decomposition/MiniBatchSparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L18)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/decomposition/MiniBatchSparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L19)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L19)
 
 ## Accessors
 
 ### components\_
 
-• `get` **components_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Sparse components extracted from the data.
+
+#### Signature
+
+```ts
+components_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L457)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L328)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L457)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L592)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L463)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L592)
 
 ### mean\_
 
-• `get` **mean_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Per-feature empirical mean, estimated from the training set. Equal to `X.mean(axis=0)`.
+
+#### Signature
+
+```ts
+mean_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L538)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L409)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L538)
 
 ### n\_components\_
 
-• `get` **n_components_**(): `Promise`<`number`\>
-
 Estimated number of components.
+
+#### Signature
+
+```ts
+n_components_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L484)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L355)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L484)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L565)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L436)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L565)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 Number of iterations run.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L511)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:382](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L382)
-
-___
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L511)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L122)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -235,107 +216,117 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L126)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L34)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L122) [generated/decomposition/MiniBatchSparsePCA.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L126)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L191)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L99)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model from data in X.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchSparsePCAFitOptions`](../interfaces/MiniBatchSparsePCAFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:208](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L208)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L116)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchSparsePCAFitTransformOptions`](../interfaces/MiniBatchSparsePCAFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L250)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L148)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchSparsePCAGetFeatureNamesOutOptions`](../interfaces/MiniBatchSparsePCAGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchSparsePCA.fit "sklearn.decomposition.MiniBatchSparsePCA.fit"). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L303)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L188)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -345,65 +336,61 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L135)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L43)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### inverse\_transform()
 
 Transform data from the latent space to the original space.
 
 This inversion is an approximation due to the loss of information induced by the forward decomposition.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchSparsePCAInverseTransformOptions`](../interfaces/MiniBatchSparsePCAInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Data in the latent space. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L343)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:225](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L225)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchSparsePCASetOutputOptions`](../interfaces/MiniBatchSparsePCASetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L383)
 
-[generated/decomposition/MiniBatchSparsePCA.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L262)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### transform()
 
 Least Squares projection of the data onto the sparse components.
 
@@ -411,16 +398,21 @@ To avoid instability issues in case the system is under-determined, regularizati
 
 Note that Sparse PCA components orthogonality is not enforced as in PCA hence one cannot use a simple linear projection.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MiniBatchSparsePCATransformOptions`](../interfaces/MiniBatchSparsePCATransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test data to be transformed, must have the same number of features as the data used to train the model. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
-
-[generated/decomposition/MiniBatchSparsePCA.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L296)
+Defined in:  [generated/decomposition/MiniBatchSparsePCA.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/MiniBatchSparsePCA.ts#L422)

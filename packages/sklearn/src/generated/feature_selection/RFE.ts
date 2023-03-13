@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_selection.html#rfe).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html)
  */
 export class RFE {
   id: string
@@ -22,7 +22,42 @@ export class RFE {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RFEOptions) {
+  constructor(opts?: {
+    /**
+      A supervised learning estimator with a `fit` method that provides information about feature importance (e.g. `coef\_`, `feature\_importances\_`).
+     */
+    estimator?: any
+
+    /**
+      The number of features to select. If `undefined`, half of the features are selected. If integer, the parameter is the absolute number of features to select. If float between 0 and 1, it is the fraction of features to select.
+     */
+    n_features_to_select?: number
+
+    /**
+      If greater than or equal to 1, then `step` corresponds to the (integer) number of features to remove at each iteration. If within (0.0, 1.0), then `step` corresponds to the percentage (rounded down) of features to remove at each iteration.
+
+      @defaultValue `1`
+     */
+    step?: number
+
+    /**
+      Controls verbosity of output.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      If ‘auto’, uses the feature importance either through a `coef\_` or `feature\_importances\_` attributes of estimator.
+
+      Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of class:`~sklearn.pipeline.Pipeline` with its last step named `clf`.
+
+      If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
+
+      @defaultValue `'auto'`
+     */
+    importance_getter?: string
+  }) {
     this.id = `RFE${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -100,7 +135,12 @@ ctor_RFE = {k: v for k, v in ctor_RFE.items() if v is not None}`
   /**
     Compute the decision function of `X`.
    */
-  async decision_function(opts: RFEDecisionFunctionOptions): Promise<any> {
+  async decision_function(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: any[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -128,7 +168,22 @@ pms_RFE_decision_function = {k: v for k, v in pms_RFE_decision_function.items() 
   /**
     Fit the RFE model and then the underlying estimator on the selected features.
    */
-  async fit(opts: RFEFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Additional parameters passed to the `fit` method of the underlying estimator.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -161,7 +216,22 @@ pms_RFE_fit = {k: v for k, v in pms_RFE_fit.items() if v is not None}`
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: RFEFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -193,9 +263,12 @@ pms_RFE_fit_transform = {k: v for k, v in pms_RFE_fit_transform.items() if v is 
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: RFEGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -223,7 +296,14 @@ pms_RFE_get_feature_names_out = {k: v for k, v in pms_RFE_get_feature_names_out.
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(opts: RFEGetSupportOptions): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -251,7 +331,12 @@ pms_RFE_get_support = {k: v for k, v in pms_RFE_get_support.items() if v is not 
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(opts: RFEInverseTransformOptions): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -279,7 +364,12 @@ pms_RFE_inverse_transform = {k: v for k, v in pms_RFE_inverse_transform.items() 
   /**
     Reduce X to the selected features and predict using the estimator.
    */
-  async predict(opts: RFEPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -307,7 +397,12 @@ pms_RFE_predict = {k: v for k, v in pms_RFE_predict.items() if v is not None}`
   /**
     Predict class log-probabilities for X.
    */
-  async predict_log_proba(opts: RFEPredictLogProbaOptions): Promise<any[]> {
+  async predict_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -335,7 +430,12 @@ pms_RFE_predict_log_proba = {k: v for k, v in pms_RFE_predict_log_proba.items() 
   /**
     Predict class probabilities for X.
    */
-  async predict_proba(opts: RFEPredictProbaOptions): Promise<any[]> {
+  async predict_proba(opts: {
+    /**
+      The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
+     */
+    X?: any[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -363,7 +463,22 @@ pms_RFE_predict_proba = {k: v for k, v in pms_RFE_predict_proba.items() if v is 
   /**
     Reduce X to the selected features and return the score of the estimator.
    */
-  async score(opts: RFEScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+
+    /**
+      The target values.
+     */
+    y?: any
+
+    /**
+      Parameters to pass to the `score` method of the underlying estimator.
+     */
+    fit_params?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -397,7 +512,12 @@ pms_RFE_score = {k: v for k, v in pms_RFE_score.items() if v is not None}`
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: RFESetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -425,7 +545,12 @@ pms_RFE_set_output = {k: v for k, v in pms_RFE_set_output.items() if v is not No
   /**
     Reduce X to the selected features.
    */
-  async transform(opts: RFETransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RFE instance has already been disposed')
     }
@@ -584,157 +709,4 @@ pms_RFE_transform = {k: v for k, v in pms_RFE_transform.items() if v is not None
         ._py`attr_RFE_support_.tolist() if hasattr(attr_RFE_support_, 'tolist') else attr_RFE_support_`
     })()
   }
-}
-
-export interface RFEOptions {
-  /**
-    A supervised learning estimator with a `fit` method that provides information about feature importance (e.g. `coef\_`, `feature\_importances\_`).
-   */
-  estimator?: any
-
-  /**
-    The number of features to select. If `undefined`, half of the features are selected. If integer, the parameter is the absolute number of features to select. If float between 0 and 1, it is the fraction of features to select.
-   */
-  n_features_to_select?: number
-
-  /**
-    If greater than or equal to 1, then `step` corresponds to the (integer) number of features to remove at each iteration. If within (0.0, 1.0), then `step` corresponds to the percentage (rounded down) of features to remove at each iteration.
-
-    @defaultValue `1`
-   */
-  step?: number
-
-  /**
-    Controls verbosity of output.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    If ‘auto’, uses the feature importance either through a `coef\_` or `feature\_importances\_` attributes of estimator.
-
-    Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of class:`~sklearn.pipeline.Pipeline` with its last step named `clf`.
-
-    If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.
-
-    @defaultValue `'auto'`
-   */
-  importance_getter?: string
-}
-
-export interface RFEDecisionFunctionOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: any[]
-}
-
-export interface RFEFitOptions {
-  /**
-    The training input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Additional parameters passed to the `fit` method of the underlying estimator.
-   */
-  fit_params?: any
-}
-
-export interface RFEFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface RFEGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface RFEGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface RFEInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface RFEPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface RFEPredictLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface RFEPredictProbaOptions {
-  /**
-    The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`.
-   */
-  X?: any[]
-}
-
-export interface RFEScoreOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-
-  /**
-    The target values.
-   */
-  y?: any
-
-  /**
-    Parameters to pass to the `score` method of the underlying estimator.
-   */
-  fit_params?: any
-}
-
-export interface RFESetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface RFETransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

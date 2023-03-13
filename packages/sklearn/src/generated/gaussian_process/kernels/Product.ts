@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   The `Product` kernel takes two kernels \\(k\_1\\) and \\(k\_2\\) and combines them via
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Product.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Product.html)
  */
 export class Product {
   id: string
@@ -18,7 +18,17 @@ export class Product {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ProductOptions) {
+  constructor(opts?: {
+    /**
+      The first base-kernel of the product-kernel
+     */
+    k1?: any
+
+    /**
+      The second base-kernel of the product-kernel
+     */
+    k2?: any
+  }) {
     this.id = `Product${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -92,7 +102,24 @@ ctor_Product = {k: v for k, v in ctor_Product.items() if v is not None}`
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: ProductCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: ArrayLike[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Product instance has already been disposed')
     }
@@ -124,7 +151,12 @@ pms_Product___call__ = {k: v for k, v in pms_Product___call__.items() if v is no
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(opts: ProductCloneWithThetaOptions): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Product instance has already been disposed')
     }
@@ -154,7 +186,12 @@ pms_Product_clone_with_theta = {k: v for k, v in pms_Product_clone_with_theta.it
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: ProductDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Argument to the kernel.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Product instance has already been disposed')
     }
@@ -182,7 +219,7 @@ pms_Product_diag = {k: v for k, v in pms_Product_diag.items() if v is not None}`
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: ProductIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Product instance has already been disposed')
     }
@@ -205,50 +242,3 @@ pms_Product_is_stationary = {k: v for k, v in pms_Product_is_stationary.items() 
       ._py`res_Product_is_stationary.tolist() if hasattr(res_Product_is_stationary, 'tolist') else res_Product_is_stationary`
   }
 }
-
-export interface ProductOptions {
-  /**
-    The first base-kernel of the product-kernel
-   */
-  k1?: any
-
-  /**
-    The second base-kernel of the product-kernel
-   */
-  k2?: any
-}
-
-export interface ProductCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: ArrayLike[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface ProductCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface ProductDiagOptions {
-  /**
-    Argument to the kernel.
-   */
-  X?: ArrayLike[]
-}
-
-export interface ProductIsStationaryOptions {}

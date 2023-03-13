@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neighbors.html#unsupervised-neighbors).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.BallTree.html)
  */
 export class BallTree {
   id: string
@@ -20,7 +20,26 @@ export class BallTree {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BallTreeOptions) {
+  constructor(opts?: {
+    /**
+      n\_samples is the number of points in the data set, and n\_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Number of points at which to switch to brute-force. Changing leaf\_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n\_samples / leaf\_size. For a specified `leaf\_size`, a leaf node is guaranteed to satisfy `leaf\_size <= n\_points <= 2 \* leaf\_size`, except in the case that `n\_samples < leaf\_size`.
+
+      @defaultValue `40`
+     */
+    leaf_size?: any
+
+    /**
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. ball\_tree.valid\_metrics gives a list of the metrics which are valid for BallTree. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for more information.
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: string
+  }) {
     this.id = `BallTree${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -96,7 +115,7 @@ ctor_BallTree = {k: v for k, v in ctor_BallTree.items() if v is not None}`
   /**
     Get data and node arrays.
    */
-  async get_arrays(opts: BallTreeGetArraysOptions): Promise<any> {
+  async get_arrays(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -122,7 +141,7 @@ pms_BallTree_get_arrays = {k: v for k, v in pms_BallTree_get_arrays.items() if v
   /**
     Get number of calls.
    */
-  async get_n_calls(opts: BallTreeGetNCallsOptions): Promise<any> {
+  async get_n_calls(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -148,7 +167,7 @@ pms_BallTree_get_n_calls = {k: v for k, v in pms_BallTree_get_n_calls.items() if
   /**
     Get tree status.
    */
-  async get_tree_stats(opts: BallTreeGetTreeStatsOptions): Promise<any> {
+  async get_tree_stats(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -174,7 +193,52 @@ pms_BallTree_get_tree_stats = {k: v for k, v in pms_BallTree_get_tree_stats.item
   /**
     Compute the kernel density estimate at points X with the given kernel, using the distance metric specified at tree creation.
    */
-  async kernel_density(opts: BallTreeKernelDensityOptions): Promise<any> {
+  async kernel_density(opts: {
+    /**
+      An array of points to query. Last dimension should match dimension of training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      the bandwidth of the kernel
+     */
+    h?: number
+
+    /**
+      specify the kernel to use. Options are - ‘gaussian’ - ‘tophat’ - ‘epanechnikov’ - ‘exponential’ - ‘linear’ - ‘cosine’ Default is kernel = ‘gaussian’
+
+      @defaultValue `'gaussian'`
+     */
+    kernel?: string
+
+    /**
+      Specify the desired absolute tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is zero (i.e. machine precision).
+
+      @defaultValue `0`
+     */
+    atol?: number
+
+    /**
+      Specify the desired relative tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is `1e-8` (i.e. machine precision).
+
+      @defaultValue `1e-8`
+     */
+    rtol?: number
+
+    /**
+      If `true`, use a breadth-first search. If `false` (default) use a depth-first search. Breadth-first is generally faster for compact kernels and/or high tolerances.
+
+      @defaultValue `false`
+     */
+    breadth_first?: boolean
+
+    /**
+      Return the logarithm of the result. This can be more accurate than returning the result itself for narrow kernels.
+
+      @defaultValue `false`
+     */
+    return_log?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -208,7 +272,47 @@ pms_BallTree_kernel_density = {k: v for k, v in pms_BallTree_kernel_density.item
   /**
     query the tree for the k nearest neighbors
    */
-  async query(opts: BallTreeQueryOptions): Promise<any> {
+  async query(opts: {
+    /**
+      An array of points to query
+     */
+    X?: ArrayLike[]
+
+    /**
+      The number of nearest neighbors to return
+
+      @defaultValue `1`
+     */
+    k?: number
+
+    /**
+      if `true`, return a tuple (d, i) of distances and indices if `false`, return array i
+
+      @defaultValue `true`
+     */
+    return_distance?: boolean
+
+    /**
+      if `true`, use the dual tree formalism for the query: a tree is built for the query points, and the pair of trees is used to efficiently search this space. This can lead to better performance as the number of points grows large.
+
+      @defaultValue `false`
+     */
+    dualtree?: boolean
+
+    /**
+      if `true`, then query the nodes in a breadth-first manner. Otherwise, query the nodes in a depth-first manner.
+
+      @defaultValue `false`
+     */
+    breadth_first?: boolean
+
+    /**
+      if `true`, then distances and indices of each point are sorted on return, so that the first column contains the closest points. Otherwise, neighbors are returned in an arbitrary order.
+
+      @defaultValue `true`
+     */
+    sort_results?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -242,7 +346,38 @@ pms_BallTree_query = {k: v for k, v in pms_BallTree_query.items() if v is not No
   /**
     query the tree for neighbors within a radius r
    */
-  async query_radius(opts: BallTreeQueryRadiusOptions): Promise<any> {
+  async query_radius(opts: {
+    /**
+      An array of points to query
+     */
+    X?: ArrayLike[]
+
+    /**
+      r can be a single value, or an array of values of shape x.shape\[:-1\] if different radii are desired for each point.
+     */
+    r?: any
+
+    /**
+      if `true`, return distances to neighbors of each point if `false`, return only neighbors Note that unlike the query() method, setting return\_distance=`true` here adds to the computation time. Not all distances need to be calculated explicitly for return\_distance=`false`. Results are not sorted by default: see `sort\_results` keyword.
+
+      @defaultValue `false`
+     */
+    return_distance?: boolean
+
+    /**
+      if `true`, return only the count of points within distance r if `false`, return the indices of all points within distance r If return\_distance==`true`, setting count\_only=`true` will result in an error.
+
+      @defaultValue `false`
+     */
+    count_only?: boolean
+
+    /**
+      if `true`, the distances and indices will be sorted before being returned. If `false`, the results will not be sorted. If return\_distance == `false`, setting sort\_results = `true` will result in an error.
+
+      @defaultValue `false`
+     */
+    sort_results?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -276,7 +411,7 @@ pms_BallTree_query_radius = {k: v for k, v in pms_BallTree_query_radius.items() 
   /**
     Reset number of calls to 0.
    */
-  async reset_n_calls(opts: BallTreeResetNCallsOptions): Promise<any> {
+  async reset_n_calls(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -302,9 +437,24 @@ pms_BallTree_reset_n_calls = {k: v for k, v in pms_BallTree_reset_n_calls.items(
   /**
     Compute the two-point correlation function
    */
-  async two_point_correlation(
-    opts: BallTreeTwoPointCorrelationOptions
-  ): Promise<NDArray> {
+  async two_point_correlation(opts: {
+    /**
+      An array of points to query. Last dimension should match dimension of training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      A one-dimensional array of distances
+     */
+    r?: ArrayLike
+
+    /**
+      If `true`, use a dualtree algorithm. Otherwise, use a single-tree algorithm. Dual tree algorithms can have better scaling for large N.
+
+      @defaultValue `false`
+     */
+    dualtree?: boolean
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This BallTree instance has already been disposed')
     }
@@ -354,174 +504,4 @@ pms_BallTree_two_point_correlation = {k: v for k, v in pms_BallTree_two_point_co
         ._py`attr_BallTree_data.tolist() if hasattr(attr_BallTree_data, 'tolist') else attr_BallTree_data`
     })()
   }
-}
-
-export interface BallTreeOptions {
-  /**
-    n\_samples is the number of points in the data set, and n\_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Number of points at which to switch to brute-force. Changing leaf\_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n\_samples / leaf\_size. For a specified `leaf\_size`, a leaf node is guaranteed to satisfy `leaf\_size <= n\_points <= 2 \* leaf\_size`, except in the case that `n\_samples < leaf\_size`.
-
-    @defaultValue `40`
-   */
-  leaf_size?: any
-
-  /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. ball\_tree.valid\_metrics gives a list of the metrics which are valid for BallTree. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for more information.
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: string
-}
-
-export interface BallTreeGetArraysOptions {}
-
-export interface BallTreeGetNCallsOptions {}
-
-export interface BallTreeGetTreeStatsOptions {}
-
-export interface BallTreeKernelDensityOptions {
-  /**
-    An array of points to query. Last dimension should match dimension of training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    the bandwidth of the kernel
-   */
-  h?: number
-
-  /**
-    specify the kernel to use. Options are - ‘gaussian’ - ‘tophat’ - ‘epanechnikov’ - ‘exponential’ - ‘linear’ - ‘cosine’ Default is kernel = ‘gaussian’
-
-    @defaultValue `'gaussian'`
-   */
-  kernel?: string
-
-  /**
-    Specify the desired absolute tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is zero (i.e. machine precision).
-
-    @defaultValue `0`
-   */
-  atol?: number
-
-  /**
-    Specify the desired relative tolerance of the result. If the true result is `K\_true`, then the returned result `K\_ret` satisfies `abs(K\_true \- K\_ret) < atol + rtol \* K\_ret` The default is `1e-8` (i.e. machine precision).
-
-    @defaultValue `1e-8`
-   */
-  rtol?: number
-
-  /**
-    If `true`, use a breadth-first search. If `false` (default) use a depth-first search. Breadth-first is generally faster for compact kernels and/or high tolerances.
-
-    @defaultValue `false`
-   */
-  breadth_first?: boolean
-
-  /**
-    Return the logarithm of the result. This can be more accurate than returning the result itself for narrow kernels.
-
-    @defaultValue `false`
-   */
-  return_log?: boolean
-}
-
-export interface BallTreeQueryOptions {
-  /**
-    An array of points to query
-   */
-  X?: ArrayLike[]
-
-  /**
-    The number of nearest neighbors to return
-
-    @defaultValue `1`
-   */
-  k?: number
-
-  /**
-    if `true`, return a tuple (d, i) of distances and indices if `false`, return array i
-
-    @defaultValue `true`
-   */
-  return_distance?: boolean
-
-  /**
-    if `true`, use the dual tree formalism for the query: a tree is built for the query points, and the pair of trees is used to efficiently search this space. This can lead to better performance as the number of points grows large.
-
-    @defaultValue `false`
-   */
-  dualtree?: boolean
-
-  /**
-    if `true`, then query the nodes in a breadth-first manner. Otherwise, query the nodes in a depth-first manner.
-
-    @defaultValue `false`
-   */
-  breadth_first?: boolean
-
-  /**
-    if `true`, then distances and indices of each point are sorted on return, so that the first column contains the closest points. Otherwise, neighbors are returned in an arbitrary order.
-
-    @defaultValue `true`
-   */
-  sort_results?: boolean
-}
-
-export interface BallTreeQueryRadiusOptions {
-  /**
-    An array of points to query
-   */
-  X?: ArrayLike[]
-
-  /**
-    r can be a single value, or an array of values of shape x.shape\[:-1\] if different radii are desired for each point.
-   */
-  r?: any
-
-  /**
-    if `true`, return distances to neighbors of each point if `false`, return only neighbors Note that unlike the query() method, setting return\_distance=`true` here adds to the computation time. Not all distances need to be calculated explicitly for return\_distance=`false`. Results are not sorted by default: see `sort\_results` keyword.
-
-    @defaultValue `false`
-   */
-  return_distance?: boolean
-
-  /**
-    if `true`, return only the count of points within distance r if `false`, return the indices of all points within distance r If return\_distance==`true`, setting count\_only=`true` will result in an error.
-
-    @defaultValue `false`
-   */
-  count_only?: boolean
-
-  /**
-    if `true`, the distances and indices will be sorted before being returned. If `false`, the results will not be sorted. If return\_distance == `false`, setting sort\_results = `true` will result in an error.
-
-    @defaultValue `false`
-   */
-  sort_results?: boolean
-}
-
-export interface BallTreeResetNCallsOptions {}
-
-export interface BallTreeTwoPointCorrelationOptions {
-  /**
-    An array of points to query. Last dimension should match dimension of training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    A one-dimensional array of distances
-   */
-  r?: ArrayLike
-
-  /**
-    If `true`, use a dualtree algorithm. Otherwise, use a single-tree algorithm. Dual tree algorithms can have better scaling for large N.
-
-    @defaultValue `false`
-   */
-  dualtree?: boolean
 }

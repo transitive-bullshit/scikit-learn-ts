@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../grid_search.html#randomized-parameter-search).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html)
  */
 export class RandomizedSearchCV {
   id: string
@@ -28,7 +28,87 @@ export class RandomizedSearchCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RandomizedSearchCVOptions) {
+  constructor(opts?: {
+    /**
+      An object of that type is instantiated for each grid point. This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
+     */
+    estimator?: any
+
+    /**
+      Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
+     */
+    param_distributions?: any
+
+    /**
+      Number of parameter settings that are sampled. n\_iter trades off runtime vs quality of the solution.
+
+      @defaultValue `10`
+     */
+    n_iter?: number
+
+    /**
+      Strategy to evaluate the performance of the cross-validated model on the test set.
+
+      If `scoring` represents a single score, one can use:
+     */
+    scoring?: string | any[] | any
+
+    /**
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Refit an estimator using the best found parameters on the whole dataset.
+
+      For multiple metric evaluation, this needs to be a `str` denoting the scorer that would be used to find the best parameters for refitting the estimator at the end.
+
+      Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best\_index\_` given the `cv\_results`. In that case, the `best\_estimator\_` and `best\_params\_` will be set according to the returned `best\_index\_` while the `best\_score\_` attribute will not be available.
+
+      The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `RandomizedSearchCV` instance.
+
+      Also for multiple metric evaluation, the attributes `best\_index\_`, `best\_score\_` and `best\_params\_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
+
+      See `scoring` parameter to know more about multiple metric evaluation.
+
+      @defaultValue `true`
+     */
+    refit?: boolean
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      Controls the verbosity: the higher, the more messages.
+     */
+    verbose?: number
+
+    /**
+      Controls the number of jobs that get dispatched during parallel execution. Reducing this number can be useful to avoid an explosion of memory consumption when more jobs get dispatched than CPUs can process. This parameter can be:
+
+      @defaultValue `'2*n_jobs'`
+     */
+    pre_dispatch?: string
+
+    /**
+      Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error.
+     */
+    error_score?: 'raise'
+
+    /**
+      If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+
+      @defaultValue `false`
+     */
+    return_train_score?: boolean
+  }) {
     this.id = `RandomizedSearchCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -123,9 +203,12 @@ ctor_RandomizedSearchCV = {k: v for k, v in ctor_RandomizedSearchCV.items() if v
 
     Only available if `refit=True` and the underlying estimator supports `decision\_function`.
    */
-  async decision_function(
-    opts: RandomizedSearchCVDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -157,7 +240,29 @@ pms_RandomizedSearchCV_decision_function = {k: v for k, v in pms_RandomizedSearc
   /**
     Run fit with all sets of parameters.
    */
-  async fit(opts: RandomizedSearchCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target relative to X for classification or regression; `undefined` for unsupervised learning.
+     */
+    y?: ArrayLike[]
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
+     */
+    groups?: ArrayLike
+
+    /**
+      Parameters passed to the `fit` method of the estimator.
+
+      If a fit parameter is an array-like whose length is equal to `num\_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample\_weight](../../glossary.html#term-sample_weight) parameter is split because `len(sample\_weights) \= len(X)`.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -195,9 +300,12 @@ pms_RandomizedSearchCV_fit = {k: v for k, v in pms_RandomizedSearchCV_fit.items(
 
     Only available if the underlying estimator implements `inverse\_transform` and `refit=True`.
    */
-  async inverse_transform(
-    opts: RandomizedSearchCVInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async inverse_transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    Xt?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -231,7 +339,12 @@ pms_RandomizedSearchCV_inverse_transform = {k: v for k, v in pms_RandomizedSearc
 
     Only available if `refit=True` and the underlying estimator supports `predict`.
    */
-  async predict(opts: RandomizedSearchCVPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -263,9 +376,12 @@ pms_RandomizedSearchCV_predict = {k: v for k, v in pms_RandomizedSearchCV_predic
 
     Only available if `refit=True` and the underlying estimator supports `predict\_log\_proba`.
    */
-  async predict_log_proba(
-    opts: RandomizedSearchCVPredictLogProbaOptions
-  ): Promise<NDArray> {
+  async predict_log_proba(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -299,9 +415,12 @@ pms_RandomizedSearchCV_predict_log_proba = {k: v for k, v in pms_RandomizedSearc
 
     Only available if `refit=True` and the underlying estimator supports `predict\_proba`.
    */
-  async predict_proba(
-    opts: RandomizedSearchCVPredictProbaOptions
-  ): Promise<NDArray> {
+  async predict_proba(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -335,7 +454,17 @@ pms_RandomizedSearchCV_predict_proba = {k: v for k, v in pms_RandomizedSearchCV_
 
     This uses the score defined by `scoring` where provided, and the `best\_estimator\_.score` method otherwise.
    */
-  async score(opts: RandomizedSearchCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target relative to X for classification or regression; `undefined` for unsupervised learning.
+     */
+    y?: ArrayLike[]
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -369,9 +498,12 @@ pms_RandomizedSearchCV_score = {k: v for k, v in pms_RandomizedSearchCV_score.it
 
     Only available if `refit=True` and the underlying estimator supports `score\_samples`.
    */
-  async score_samples(
-    opts: RandomizedSearchCVScoreSamplesOptions
-  ): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -405,9 +537,12 @@ pms_RandomizedSearchCV_score_samples = {k: v for k, v in pms_RandomizedSearchCV_
 
     Only available if the underlying estimator supports `transform` and `refit=True`.
    */
-  async transform(
-    opts: RandomizedSearchCVTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RandomizedSearchCV instance has already been disposed'
@@ -723,171 +858,4 @@ pms_RandomizedSearchCV_transform = {k: v for k, v in pms_RandomizedSearchCV_tran
         ._py`attr_RandomizedSearchCV_feature_names_in_.tolist() if hasattr(attr_RandomizedSearchCV_feature_names_in_, 'tolist') else attr_RandomizedSearchCV_feature_names_in_`
     })()
   }
-}
-
-export interface RandomizedSearchCVOptions {
-  /**
-    An object of that type is instantiated for each grid point. This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
-   */
-  estimator?: any
-
-  /**
-    Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
-   */
-  param_distributions?: any
-
-  /**
-    Number of parameter settings that are sampled. n\_iter trades off runtime vs quality of the solution.
-
-    @defaultValue `10`
-   */
-  n_iter?: number
-
-  /**
-    Strategy to evaluate the performance of the cross-validated model on the test set.
-
-    If `scoring` represents a single score, one can use:
-   */
-  scoring?: string | any[] | any
-
-  /**
-    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Refit an estimator using the best found parameters on the whole dataset.
-
-    For multiple metric evaluation, this needs to be a `str` denoting the scorer that would be used to find the best parameters for refitting the estimator at the end.
-
-    Where there are considerations other than maximum score in choosing a best estimator, `refit` can be set to a function which returns the selected `best\_index\_` given the `cv\_results`. In that case, the `best\_estimator\_` and `best\_params\_` will be set according to the returned `best\_index\_` while the `best\_score\_` attribute will not be available.
-
-    The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `RandomizedSearchCV` instance.
-
-    Also for multiple metric evaluation, the attributes `best\_index\_`, `best\_score\_` and `best\_params\_` will only be available if `refit` is set and all of them will be determined w.r.t this specific scorer.
-
-    See `scoring` parameter to know more about multiple metric evaluation.
-
-    @defaultValue `true`
-   */
-  refit?: boolean
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    Controls the verbosity: the higher, the more messages.
-   */
-  verbose?: number
-
-  /**
-    Controls the number of jobs that get dispatched during parallel execution. Reducing this number can be useful to avoid an explosion of memory consumption when more jobs get dispatched than CPUs can process. This parameter can be:
-
-    @defaultValue `'2*n_jobs'`
-   */
-  pre_dispatch?: string
-
-  /**
-    Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error.
-   */
-  error_score?: 'raise'
-
-  /**
-    If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
-
-    @defaultValue `false`
-   */
-  return_train_score?: boolean
-}
-
-export interface RandomizedSearchCVDecisionFunctionOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface RandomizedSearchCVFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target relative to X for classification or regression; `undefined` for unsupervised learning.
-   */
-  y?: ArrayLike[]
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-   */
-  groups?: ArrayLike
-
-  /**
-    Parameters passed to the `fit` method of the estimator.
-
-    If a fit parameter is an array-like whose length is equal to `num\_samples` then it will be split across CV groups along with `X` and `y`. For example, the [sample\_weight](../../glossary.html#term-sample_weight) parameter is split because `len(sample\_weights) \= len(X)`.
-   */
-  fit_params?: any
-}
-
-export interface RandomizedSearchCVInverseTransformOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  Xt?: any
-}
-
-export interface RandomizedSearchCVPredictOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface RandomizedSearchCVPredictLogProbaOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface RandomizedSearchCVPredictProbaOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface RandomizedSearchCVScoreOptions {
-  /**
-    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target relative to X for classification or regression; `undefined` for unsupervised learning.
-   */
-  y?: ArrayLike[]
-}
-
-export interface RandomizedSearchCVScoreSamplesOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface RandomizedSearchCVTransformOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
 }

@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / GradientBoostingRegressor
-
-# Class: GradientBoostingRegressor
+# GradientBoostingRegressor
 
 Gradient Boosting for regression.
 
@@ -10,256 +8,248 @@ This estimator builds an additive model in a forward stage-wise fashion; it allo
 
 Read more in the [User Guide](../ensemble.html#gradient-boosting).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](GradientBoostingRegressor.md#constructor)
-
-### Properties
-
-- [\_isDisposed](GradientBoostingRegressor.md#_isdisposed)
-- [\_isInitialized](GradientBoostingRegressor.md#_isinitialized)
-- [\_py](GradientBoostingRegressor.md#_py)
-- [id](GradientBoostingRegressor.md#id)
-- [opts](GradientBoostingRegressor.md#opts)
-
-### Accessors
-
-- [estimators\_](GradientBoostingRegressor.md#estimators_)
-- [feature\_names\_in\_](GradientBoostingRegressor.md#feature_names_in_)
-- [init\_](GradientBoostingRegressor.md#init_)
-- [loss\_](GradientBoostingRegressor.md#loss_)
-- [max\_features\_](GradientBoostingRegressor.md#max_features_)
-- [n\_estimators\_](GradientBoostingRegressor.md#n_estimators_)
-- [n\_features\_in\_](GradientBoostingRegressor.md#n_features_in_)
-- [oob\_improvement\_](GradientBoostingRegressor.md#oob_improvement_)
-- [py](GradientBoostingRegressor.md#py)
-- [train\_score\_](GradientBoostingRegressor.md#train_score_)
-
-### Methods
-
-- [apply](GradientBoostingRegressor.md#apply)
-- [dispose](GradientBoostingRegressor.md#dispose)
-- [fit](GradientBoostingRegressor.md#fit)
-- [init](GradientBoostingRegressor.md#init)
-- [predict](GradientBoostingRegressor.md#predict)
-- [score](GradientBoostingRegressor.md#score)
-- [staged\_predict](GradientBoostingRegressor.md#staged_predict)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new GradientBoostingRegressor**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new GradientBoostingRegressor(opts?: object): GradientBoostingRegressor;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`GradientBoostingRegressorOptions`](../interfaces/GradientBoostingRegressorOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alpha?` | `number` | The alpha-quantile of the huber loss function and the quantile loss function. Only if `loss='huber'` or `loss='quantile'`. Values must be in the range `(0.0, 1.0)`.  `Default Value`  `0.9` |
+| `opts.ccp_alpha?` | `any` | Complexity parameter used for Minimal Cost-Complexity Pruning. The subtree with the largest cost complexity that is smaller than `ccp\_alpha` will be chosen. By default, no pruning is performed. Values must be in the range `\[0.0, inf)`. See [Minimal Cost-Complexity Pruning](../tree.html#minimal-cost-complexity-pruning) for details.  `Default Value`  `0` |
+| `opts.criterion?` | `"squared_error"` \| `"friedman_mse"` | The function to measure the quality of a split. Supported criteria are “friedman\_mse” for the mean squared error with improvement score by Friedman, “squared\_error” for mean squared error. The default value of “friedman\_mse” is generally the best as it can provide a better approximation in some cases.  `Default Value`  `'friedman_mse'` |
+| `opts.init?` | `"zero"` | An estimator object that is used to compute the initial predictions. `init` has to provide [fit](../../glossary.html#term-fit) and [predict](../../glossary.html#term-predict). If ‘zero’, the initial raw predictions are set to zero. By default a `DummyEstimator` is used, predicting either the average target value (for loss=’squared\_error’), or a quantile for the other losses. |
+| `opts.learning_rate?` | `number` | Learning rate shrinks the contribution of each tree by `learning\_rate`. There is a trade-off between learning\_rate and n\_estimators. Values must be in the range `\[0.0, inf)`.  `Default Value`  `0.1` |
+| `opts.loss?` | `"quantile"` \| `"squared_error"` \| `"absolute_error"` \| `"huber"` | Loss function to be optimized. ‘squared\_error’ refers to the squared error for regression. ‘absolute\_error’ refers to the absolute error of regression and is a robust loss function. ‘huber’ is a combination of the two. ‘quantile’ allows quantile regression (use `alpha` to specify the quantile).  `Default Value`  `'squared_error'` |
+| `opts.max_depth?` | `number` | Maximum depth of the individual regression estimators. The maximum depth limits the number of nodes in the tree. Tune this parameter for best performance; the best value depends on the interaction of the input variables. If `undefined`, then nodes are expanded until all leaves are pure or until all leaves contain less than min\_samples\_split samples. If int, values must be in the range `\[1, inf)`.  `Default Value`  `3` |
+| `opts.max_features?` | `number` \| `"auto"` \| `"sqrt"` \| `"log2"` | The number of features to consider when looking for the best split: |
+| `opts.max_leaf_nodes?` | `number` | Grow trees with `max\_leaf\_nodes` in best-first fashion. Best nodes are defined as relative reduction in impurity. Values must be in the range `\[2, inf)`. If `undefined`, then unlimited number of leaf nodes. |
+| `opts.min_impurity_decrease?` | `number` | A node will be split if this split induces a decrease of the impurity greater than or equal to this value. Values must be in the range `\[0.0, inf)`.  The weighted impurity decrease equation is the following:  `Default Value`  `0` |
+| `opts.min_samples_leaf?` | `number` | The minimum number of samples required to be at a leaf node. A split point at any depth will only be considered if it leaves at least `min\_samples\_leaf` training samples in each of the left and right branches. This may have the effect of smoothing the model, especially in regression.  `Default Value`  `1` |
+| `opts.min_samples_split?` | `number` | The minimum number of samples required to split an internal node:  `Default Value`  `2` |
+| `opts.min_weight_fraction_leaf?` | `number` | The minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node. Samples have equal weight when sample\_weight is not provided. Values must be in the range `\[0.0, 0.5\]`.  `Default Value`  `0` |
+| `opts.n_estimators?` | `number` | The number of boosting stages to perform. Gradient boosting is fairly robust to over-fitting so a large number usually results in better performance. Values must be in the range `\[1, inf)`.  `Default Value`  `100` |
+| `opts.n_iter_no_change?` | `number` | `n\_iter\_no\_change` is used to decide if early stopping will be used to terminate training when validation score is not improving. By default it is set to `undefined` to disable early stopping. If set to a number, it will set aside `validation\_fraction` size of the training data as validation and terminate training when validation score is not improving in all of the previous `n\_iter\_no\_change` numbers of iterations. Values must be in the range `\[1, inf)`. |
+| `opts.random_state?` | `number` | Controls the random seed given to each Tree estimator at each boosting iteration. In addition, it controls the random permutation of the features at each split (see Notes for more details). It also controls the random splitting of the training data to obtain a validation set if `n\_iter\_no\_change` is not `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.subsample?` | `number` | The fraction of samples to be used for fitting the individual base learners. If smaller than 1.0 this results in Stochastic Gradient Boosting. `subsample` interacts with the parameter `n\_estimators`. Choosing `subsample < 1.0` leads to a reduction of variance and an increase in bias. Values must be in the range `(0.0, 1.0\]`.  `Default Value`  `1` |
+| `opts.tol?` | `number` | Tolerance for the early stopping. When the loss is not improving by at least tol for `n\_iter\_no\_change` iterations (if set to a number), the training stops. Values must be in the range `\[0.0, inf)`.  `Default Value`  `0.0001` |
+| `opts.validation_fraction?` | `number` | The proportion of training data to set aside as validation set for early stopping. Values must be in the range `(0.0, 1.0)`. Only used if `n\_iter\_no\_change` is set to an integer.  `Default Value`  `0.1` |
+| `opts.verbose?` | `number` | Enable verbose output. If 1 then it prints progress and performance once in a while (the more trees the lower the frequency). If greater than 1 then it prints progress and performance for every tree. Values must be in the range `\[0, inf)`.  `Default Value`  `0` |
+| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).  `Default Value`  `false` |
 
-[generated/ensemble/GradientBoostingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L27)
+### Returns
+
+[`GradientBoostingRegressor`](GradientBoostingRegressor.md)
+
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L27)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/ensemble/GradientBoostingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L25)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L25)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/ensemble/GradientBoostingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L24)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L24)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/ensemble/GradientBoostingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L23)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L23)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/ensemble/GradientBoostingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L20)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L20)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/ensemble/GradientBoostingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L21)
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L21)
 
 ## Accessors
 
 ### estimators\_
 
-• `get` **estimators_**(): `Promise`<`any`[]\>
-
 The collection of fitted sub-estimators.
+
+#### Signature
+
+```ts
+estimators_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L606)
 
-[generated/ensemble/GradientBoostingRegressor.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L423)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L606)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L687)
 
-[generated/ensemble/GradientBoostingRegressor.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L504)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L687)
 
 ### init\_
 
-• `get` **init_**(): `Promise`<`any`\>
-
 The estimator that provides the initial predictions. Set via the `init` argument or `loss.init\_estimator`.
+
+#### Signature
+
+```ts
+init_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L579)
 
-[generated/ensemble/GradientBoostingRegressor.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L396)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L579)
 
 ### loss\_
 
-• `get` **loss_**(): `Promise`<`any`\>
-
 The concrete `LossFunction` object.
+
+#### Signature
+
+```ts
+loss_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L552)
 
-[generated/ensemble/GradientBoostingRegressor.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L369)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L552)
 
 ### max\_features\_
 
-• `get` **max_features_**(): `Promise`<`number`\>
-
 The inferred value of max\_features.
+
+#### Signature
+
+```ts
+max_features_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L714)
 
-[generated/ensemble/GradientBoostingRegressor.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L531)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L714)
 
 ### n\_estimators\_
 
-• `get` **n_estimators_**(): `Promise`<`number`\>
-
 The number of estimators as selected by early stopping (if `n\_iter\_no\_change` is specified). Otherwise it is set to `n\_estimators`.
+
+#### Signature
+
+```ts
+n_estimators_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L633)
 
-[generated/ensemble/GradientBoostingRegressor.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L450)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L633)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L660)
 
-[generated/ensemble/GradientBoostingRegressor.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L477)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L660)
 
 ### oob\_improvement\_
 
-• `get` **oob_improvement_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The improvement in loss (= deviance) on the out-of-bag samples relative to the previous iteration. `oob\_improvement\_\[0\]` is the improvement in loss of the first stage over the `init` estimator. Only available if `subsample < 1.0`
+
+#### Signature
+
+```ts
+oob_improvement_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L498)
 
-[generated/ensemble/GradientBoostingRegressor.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L315)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L498)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L171)
 
-[generated/ensemble/GradientBoostingRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L32)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -271,97 +261,108 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L175)
 
-[generated/ensemble/GradientBoostingRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L36)
-
-___
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L171) [generated/ensemble/GradientBoostingRegressor.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L175)
 
 ### train\_score\_
 
-• `get` **train_score_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The i-th score `train\_score\_\[i\]` is the deviance (= loss) of the model at iteration `i` on the in-bag sample. If `subsample \== 1` this is the deviance on the training data.
+
+#### Signature
+
+```ts
+train_score_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L525)
 
-[generated/ensemble/GradientBoostingRegressor.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L342)
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L525)
 
 ## Methods
 
-### apply
-
-▸ **apply**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### apply()
 
 Apply trees in the ensemble to X, return leaf indices.
 
+#### Signature
+
+```ts
+apply(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GradientBoostingRegressorApplyOptions`](../interfaces/GradientBoostingRegressorApplyOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input samples. Internally, its dtype will be converted to `dtype=np.float32`. If a sparse matrix is provided, it will be converted to a sparse `csr\_matrix`. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L275)
 
-[generated/ensemble/GradientBoostingRegressor.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L136)
-
-___
-
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L258)
 
-[generated/ensemble/GradientBoostingRegressor.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L119)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the gradient boosting model.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GradientBoostingRegressorFitOptions`](../interfaces/GradientBoostingRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
+| `opts.monitor?` | `any` | The monitor is called after each iteration with the current iteration, a reference to the estimator and the local variables of `\_fit\_stages` as keyword arguments `callable(i, self, locals())`. If the callable returns `true` the fitting procedure is stopped. The monitor can be used for various things such as computing held-out estimates, early stopping, model introspect, and snapshoting. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. If `undefined`, then samples are equally weighted. Splits that would create child nodes with net zero or negative weight are ignored while searching for a split in each node. In the case of classification, splits are also ignored if they would result in any single class carrying a negative weight in either child node. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (strings or integers in classification, real numbers in regression) For classification, labels must correspond to classes. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L312)
 
-[generated/ensemble/GradientBoostingRegressor.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L170)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -371,78 +372,81 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L184)
 
-[generated/ensemble/GradientBoostingRegressor.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L45)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### predict()
 
 Predict regression target for X.
 
+#### Signature
+
+```ts
+predict(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GradientBoostingRegressorPredictOptions`](../interfaces/GradientBoostingRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L368)
 
-[generated/ensemble/GradientBoostingRegressor.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L206)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GradientBoostingRegressorScoreOptions`](../interfaces/GradientBoostingRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L407)
 
-[generated/ensemble/GradientBoostingRegressor.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L242)
-
-___
-
-### staged\_predict
-
-▸ **staged_predict**(`opts`): `Promise`<`any`[]\>
+### staged\_predict()
 
 Predict regression target at each stage for X.
 
 This method allows monitoring (i.e. determine error on testing set) after each stage.
 
+#### Signature
+
+```ts
+staged_predict(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`GradientBoostingRegressorStagedPredictOptions`](../interfaces/GradientBoostingRegressorStagedPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input samples. Internally, it will be converted to `dtype=np.float32` and if a sparse matrix is provided to a sparse `csr\_matrix`. |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
-
-[generated/ensemble/GradientBoostingRegressor.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L280)
+Defined in:  [generated/ensemble/GradientBoostingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/GradientBoostingRegressor.ts#L460)

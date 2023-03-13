@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing_targets.html#preprocessing-targets).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
  */
 export class LabelEncoder {
   id: string
@@ -22,7 +22,12 @@ export class LabelEncoder {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LabelEncoderOptions) {
+  constructor(opts?: {
+    /**
+      Holds the label for each class.
+     */
+    classes_?: NDArray
+  }) {
     this.id = `LabelEncoder${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +102,12 @@ ctor_LabelEncoder = {k: v for k, v in ctor_LabelEncoder.items() if v is not None
   /**
     Fit label encoder.
    */
-  async fit(opts: LabelEncoderFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelEncoder instance has already been disposed')
     }
@@ -125,9 +135,12 @@ pms_LabelEncoder_fit = {k: v for k, v in pms_LabelEncoder_fit.items() if v is no
   /**
     Fit label encoder and return encoded labels.
    */
-  async fit_transform(
-    opts: LabelEncoderFitTransformOptions
-  ): Promise<ArrayLike> {
+  async fit_transform(opts: {
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This LabelEncoder instance has already been disposed')
     }
@@ -155,9 +168,12 @@ pms_LabelEncoder_fit_transform = {k: v for k, v in pms_LabelEncoder_fit_transfor
   /**
     Transform labels back to original encoding.
    */
-  async inverse_transform(
-    opts: LabelEncoderInverseTransformOptions
-  ): Promise<NDArray> {
+  async inverse_transform(opts: {
+    /**
+      Target values.
+     */
+    y?: NDArray
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LabelEncoder instance has already been disposed')
     }
@@ -189,7 +205,12 @@ pms_LabelEncoder_inverse_transform = {k: v for k, v in pms_LabelEncoder_inverse_
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: LabelEncoderSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelEncoder instance has already been disposed')
     }
@@ -217,7 +238,12 @@ pms_LabelEncoder_set_output = {k: v for k, v in pms_LabelEncoder_set_output.item
   /**
     Transform labels to normalized encoding.
    */
-  async transform(opts: LabelEncoderTransformOptions): Promise<ArrayLike> {
+  async transform(opts: {
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This LabelEncoder instance has already been disposed')
     }
@@ -241,46 +267,4 @@ pms_LabelEncoder_transform = {k: v for k, v in pms_LabelEncoder_transform.items(
     return this
       ._py`res_LabelEncoder_transform.tolist() if hasattr(res_LabelEncoder_transform, 'tolist') else res_LabelEncoder_transform`
   }
-}
-
-export interface LabelEncoderOptions {
-  /**
-    Holds the label for each class.
-   */
-  classes_?: NDArray
-}
-
-export interface LabelEncoderFitOptions {
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-}
-
-export interface LabelEncoderFitTransformOptions {
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-}
-
-export interface LabelEncoderInverseTransformOptions {
-  /**
-    Target values.
-   */
-  y?: NDArray
-}
-
-export interface LabelEncoderSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface LabelEncoderTransformOptions {
-  /**
-    Target values.
-   */
-  y?: ArrayLike
 }

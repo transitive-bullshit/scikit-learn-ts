@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#perceptron).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html)
  */
 export class Perceptron {
   id: string
@@ -20,7 +20,117 @@ export class Perceptron {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PerceptronOptions) {
+  constructor(opts?: {
+    /**
+      The penalty (aka regularization term) to be used.
+     */
+    penalty?: 'l2' | 'l1' | 'elasticnet'
+
+    /**
+      Constant that multiplies the regularization term if regularization is used.
+
+      @defaultValue `0.0001`
+     */
+    alpha?: number
+
+    /**
+      The Elastic Net mixing parameter, with `0 <= l1\_ratio <= 1`. `l1\_ratio=0` corresponds to L2 penalty, `l1\_ratio=1` to L1. Only used if `penalty='elasticnet'`.
+
+      @defaultValue `0.15`
+     */
+    l1_ratio?: number
+
+    /**
+      Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.Perceptron.partial_fit "sklearn.linear_model.Perceptron.partial_fit") method.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol).
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Whether or not the training data should be shuffled after each epoch.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      The verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Constant by which the updates are multiplied.
+
+      @defaultValue `1`
+     */
+    eta0?: number
+
+    /**
+      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+
+      @defaultValue `0`
+     */
+    random_state?: number
+
+    /**
+      Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
+
+      @defaultValue `false`
+     */
+    early_stopping?: boolean
+
+    /**
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      Number of iterations with no improvement to wait before early stopping.
+
+      @defaultValue `5`
+     */
+    n_iter_no_change?: number
+
+    /**
+      Preset for the class\_weight fit parameter.
+
+      Weights associated with classes. If not given, all classes are supposed to have weight one.
+
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+  }) {
     this.id = `Perceptron${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -117,9 +227,12 @@ ctor_Perceptron = {k: v for k, v in ctor_Perceptron.items() if v is not None}`
 
     The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
    */
-  async decision_function(
-    opts: PerceptronDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix for which we want to get the confidence scores.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Perceptron instance has already been disposed')
     }
@@ -149,7 +262,7 @@ pms_Perceptron_decision_function = {k: v for k, v in pms_Perceptron_decision_fun
 
     Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
-  async densify(opts: PerceptronDensifyOptions): Promise<any> {
+  async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Perceptron instance has already been disposed')
     }
@@ -175,7 +288,32 @@ pms_Perceptron_densify = {k: v for k, v in pms_Perceptron_densify.items() if v i
   /**
     Fit linear model with Stochastic Gradient Descent.
    */
-  async fit(opts: PerceptronFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Target values.
+     */
+    y?: NDArray
+
+    /**
+      The initial coefficients to warm-start the optimization.
+     */
+    coef_init?: NDArray[]
+
+    /**
+      The initial intercept to warm-start the optimization.
+     */
+    intercept_init?: NDArray
+
+    /**
+      Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Perceptron instance has already been disposed')
     }
@@ -213,7 +351,27 @@ pms_Perceptron_fit = {k: v for k, v in pms_Perceptron_fit.items() if v is not No
 
     Internally, this method uses `max\_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence, early stopping, and learning rate adjustments should be handled by the user.
    */
-  async partial_fit(opts: PerceptronPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Subset of the training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Subset of the target values.
+     */
+    y?: NDArray
+
+    /**
+      Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+     */
+    classes?: NDArray
+
+    /**
+      Weights applied to individual samples. If not provided, uniform weights are assumed.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Perceptron instance has already been disposed')
     }
@@ -245,7 +403,12 @@ pms_Perceptron_partial_fit = {k: v for k, v in pms_Perceptron_partial_fit.items(
   /**
     Predict class labels for samples in X.
    */
-  async predict(opts: PerceptronPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to get the predictions.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Perceptron instance has already been disposed')
     }
@@ -275,7 +438,22 @@ pms_Perceptron_predict = {k: v for k, v in pms_Perceptron_predict.items() if v i
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: PerceptronScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This Perceptron instance has already been disposed')
     }
@@ -311,7 +489,7 @@ pms_Perceptron_score = {k: v for k, v in pms_Perceptron_score.items() if v is no
 
     The `intercept\_` member is not converted.
    */
-  async sparsify(opts: PerceptronSparsifyOptions): Promise<any> {
+  async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Perceptron instance has already been disposed')
     }
@@ -523,199 +701,3 @@ pms_Perceptron_sparsify = {k: v for k, v in pms_Perceptron_sparsify.items() if v
     })()
   }
 }
-
-export interface PerceptronOptions {
-  /**
-    The penalty (aka regularization term) to be used.
-   */
-  penalty?: 'l2' | 'l1' | 'elasticnet'
-
-  /**
-    Constant that multiplies the regularization term if regularization is used.
-
-    @defaultValue `0.0001`
-   */
-  alpha?: number
-
-  /**
-    The Elastic Net mixing parameter, with `0 <= l1\_ratio <= 1`. `l1\_ratio=0` corresponds to L2 penalty, `l1\_ratio=1` to L1. Only used if `penalty='elasticnet'`.
-
-    @defaultValue `0.15`
-   */
-  l1_ratio?: number
-
-  /**
-    Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.Perceptron.partial_fit "sklearn.linear_model.Perceptron.partial_fit") method.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The stopping criterion. If it is not `undefined`, the iterations will stop when (loss > previous\_loss - tol).
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Whether or not the training data should be shuffled after each epoch.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    The verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Constant by which the updates are multiplied.
-
-    @defaultValue `1`
-   */
-  eta0?: number
-
-  /**
-    The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Used to shuffle the training data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-
-    @defaultValue `0`
-   */
-  random_state?: number
-
-  /**
-    Whether to use early stopping to terminate training when validation. score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
-
-    @defaultValue `false`
-   */
-  early_stopping?: boolean
-
-  /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    Number of iterations with no improvement to wait before early stopping.
-
-    @defaultValue `5`
-   */
-  n_iter_no_change?: number
-
-  /**
-    Preset for the class\_weight fit parameter.
-
-    Weights associated with classes. If not given, all classes are supposed to have weight one.
-
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-}
-
-export interface PerceptronDecisionFunctionOptions {
-  /**
-    The data matrix for which we want to get the confidence scores.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface PerceptronDensifyOptions {}
-
-export interface PerceptronFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Target values.
-   */
-  y?: NDArray
-
-  /**
-    The initial coefficients to warm-start the optimization.
-   */
-  coef_init?: NDArray[]
-
-  /**
-    The initial intercept to warm-start the optimization.
-   */
-  intercept_init?: NDArray
-
-  /**
-    Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface PerceptronPartialFitOptions {
-  /**
-    Subset of the training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Subset of the target values.
-   */
-  y?: NDArray
-
-  /**
-    Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
-   */
-  classes?: NDArray
-
-  /**
-    Weights applied to individual samples. If not provided, uniform weights are assumed.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface PerceptronPredictOptions {
-  /**
-    The data matrix for which we want to get the predictions.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface PerceptronScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface PerceptronSparsifyOptions {}

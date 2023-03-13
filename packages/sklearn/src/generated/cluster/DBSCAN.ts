@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#dbscan).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html)
  */
 export class DBSCAN {
   id: string
@@ -22,7 +22,57 @@ export class DBSCAN {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DBSCANOptions) {
+  constructor(opts?: {
+    /**
+      The maximum distance between two samples for one to be considered as in the neighborhood of the other. This is not a maximum bound on the distances of points within a cluster. This is the most important DBSCAN parameter to choose appropriately for your data set and distance function.
+
+      @defaultValue `0.5`
+     */
+    eps?: number
+
+    /**
+      The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
+
+      @defaultValue `5`
+     */
+    min_samples?: number
+
+    /**
+      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors for DBSCAN.
+
+      @defaultValue `'euclidean'`
+     */
+    metric?: any
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      The algorithm to be used by the NearestNeighbors module to compute pointwise distances and find nearest neighbors. See NearestNeighbors module documentation for details.
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
+
+    /**
+      Leaf size passed to BallTree or cKDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+      @defaultValue `30`
+     */
+    leaf_size?: number
+
+    /**
+      The power of the Minkowski metric to be used to calculate distance between points. If `undefined`, then `p=2` (equivalent to the Euclidean distance).
+     */
+    p?: number
+
+    /**
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `DBSCAN${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -104,7 +154,22 @@ ctor_DBSCAN = {k: v for k, v in ctor_DBSCAN.items() if v is not None}`
   /**
     Perform DBSCAN clustering from features, or distance matrix.
    */
-  async fit(opts: DBSCANFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training instances to cluster, or distances between instances if `metric='precomputed'`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: any
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Weight of each sample, such that a sample with a weight of at least `min\_samples` is by itself a core sample; a sample with a negative weight may inhibit its eps-neighbor from being core. Note that weights are absolute, and default to 1.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DBSCAN instance has already been disposed')
     }
@@ -136,7 +201,22 @@ pms_DBSCAN_fit = {k: v for k, v in pms_DBSCAN_fit.items() if v is not None}`
   /**
     Compute clusters from a data or distance matrix and predict labels.
    */
-  async fit_predict(opts: DBSCANFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Training instances to cluster, or distances between instances if `metric='precomputed'`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: any
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Weight of each sample, such that a sample with a weight of at least `min\_samples` is by itself a core sample; a sample with a negative weight may inhibit its eps-neighbor from being core. Note that weights are absolute, and default to 1.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This DBSCAN instance has already been disposed')
     }
@@ -282,90 +362,4 @@ pms_DBSCAN_fit_predict = {k: v for k, v in pms_DBSCAN_fit_predict.items() if v i
         ._py`attr_DBSCAN_feature_names_in_.tolist() if hasattr(attr_DBSCAN_feature_names_in_, 'tolist') else attr_DBSCAN_feature_names_in_`
     })()
   }
-}
-
-export interface DBSCANOptions {
-  /**
-    The maximum distance between two samples for one to be considered as in the neighborhood of the other. This is not a maximum bound on the distances of points within a cluster. This is the most important DBSCAN parameter to choose appropriately for your data set and distance function.
-
-    @defaultValue `0.5`
-   */
-  eps?: number
-
-  /**
-    The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
-
-    @defaultValue `5`
-   */
-  min_samples?: number
-
-  /**
-    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If metric is “precomputed”, X is assumed to be a distance matrix and must be square. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors for DBSCAN.
-
-    @defaultValue `'euclidean'`
-   */
-  metric?: any
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    The algorithm to be used by the NearestNeighbors module to compute pointwise distances and find nearest neighbors. See NearestNeighbors module documentation for details.
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
-
-  /**
-    Leaf size passed to BallTree or cKDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-    @defaultValue `30`
-   */
-  leaf_size?: number
-
-  /**
-    The power of the Minkowski metric to be used to calculate distance between points. If `undefined`, then `p=2` (equivalent to the Euclidean distance).
-   */
-  p?: number
-
-  /**
-    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface DBSCANFitOptions {
-  /**
-    Training instances to cluster, or distances between instances if `metric='precomputed'`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: any
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Weight of each sample, such that a sample with a weight of at least `min\_samples` is by itself a core sample; a sample with a negative weight may inhibit its eps-neighbor from being core. Note that weights are absolute, and default to 1.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface DBSCANFitPredictOptions {
-  /**
-    Training instances to cluster, or distances between instances if `metric='precomputed'`. If a sparse matrix is provided, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: any
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Weight of each sample, such that a sample with a weight of at least `min\_samples` is by itself a core sample; a sample with a negative weight may inhibit its eps-neighbor from being core. Note that weights are absolute, and default to 1.
-   */
-  sample_weight?: ArrayLike
 }

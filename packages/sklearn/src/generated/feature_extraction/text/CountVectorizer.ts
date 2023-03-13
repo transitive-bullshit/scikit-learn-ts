@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_extraction.html#text-feature-extraction).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
  */
 export class CountVectorizer {
   id: string
@@ -24,7 +24,120 @@ export class CountVectorizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: CountVectorizerOptions) {
+  constructor(opts?: {
+    /**
+      If `'filename'`, the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
+
+      @defaultValue `'content'`
+     */
+    input?: 'filename' | 'file' | 'content'
+
+    /**
+      If bytes or files are given to analyze, this encoding is used to decode.
+
+      @defaultValue `'utf-8'`
+     */
+    encoding?: string
+
+    /**
+      Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given `encoding`. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
+
+      @defaultValue `'strict'`
+     */
+    decode_error?: 'strict' | 'ignore' | 'replace'
+
+    /**
+      Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. `undefined` (default) does nothing.
+
+      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
+     */
+    strip_accents?: 'ascii' | 'unicode'
+
+    /**
+      Convert all characters to lowercase before tokenizing.
+
+      @defaultValue `true`
+     */
+    lowercase?: boolean
+
+    /**
+      Override the preprocessing (strip\_accents and lowercase) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
+     */
+    preprocessor?: any
+
+    /**
+      Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
+     */
+    tokenizer?: any
+
+    /**
+      If ‘english’, a built-in stop word list for English is used. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](../feature_extraction.html#stop-words)).
+
+      If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
+
+      If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
+     */
+    stop_words?: 'english' | any[]
+
+    /**
+      Regular expression denoting what constitutes a “token”, only used if `analyzer \== 'word'`. The default regexp select tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
+
+      If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
+     */
+    token_pattern?: string
+
+    /**
+      The lower and upper boundary of the range of n-values for different word n-grams or char n-grams to be extracted. All values of n such such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
+     */
+    ngram_range?: any
+
+    /**
+      Whether the feature should be made of word n-gram or character n-grams. Option ‘char\_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
+
+      If a callable is passed it is used to extract the sequence of features out of the raw, unprocessed input.
+
+      @defaultValue `'word'`
+     */
+    analyzer?: 'word' | 'char' | 'char_wb'
+
+    /**
+      When building the vocabulary ignore terms that have a document frequency strictly higher than the given threshold (corpus-specific stop words). If float, the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
+
+      @defaultValue `1`
+     */
+    max_df?: number
+
+    /**
+      When building the vocabulary ignore terms that have a document frequency strictly lower than the given threshold. This value is also called cut-off in the literature. If float, the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
+
+      @defaultValue `1`
+     */
+    min_df?: number
+
+    /**
+      If not `undefined`, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
+
+      This parameter is ignored if vocabulary is not `undefined`.
+     */
+    max_features?: number
+
+    /**
+      Either a Mapping (e.g., a dict) where keys are terms and values are indices in the feature matrix, or an iterable over terms. If not given, a vocabulary is determined from the input documents. Indices in the mapping should not be repeated and should not have any gap between 0 and the largest index.
+     */
+    vocabulary?: any
+
+    /**
+      If `true`, all non zero counts are set to 1. This is useful for discrete probabilistic models that model binary events rather than integer counts.
+
+      @defaultValue `false`
+     */
+    binary?: boolean
+
+    /**
+      Type of the matrix returned by fit\_transform() or transform().
+     */
+    dtype?: any
+  }) {
     this.id = `CountVectorizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -119,9 +232,7 @@ ctor_CountVectorizer = {k: v for k, v in ctor_CountVectorizer.items() if v is no
 
     The callable handles preprocessing, tokenization, and n-grams generation.
    */
-  async build_analyzer(
-    opts: CountVectorizerBuildAnalyzerOptions
-  ): Promise<any> {
+  async build_analyzer(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -149,9 +260,7 @@ pms_CountVectorizer_build_analyzer = {k: v for k, v in pms_CountVectorizer_build
   /**
     Return a function to preprocess the text before tokenization.
    */
-  async build_preprocessor(
-    opts: CountVectorizerBuildPreprocessorOptions
-  ): Promise<any> {
+  async build_preprocessor(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -179,9 +288,7 @@ pms_CountVectorizer_build_preprocessor = {k: v for k, v in pms_CountVectorizer_b
   /**
     Return a function that splits a string into a sequence of tokens.
    */
-  async build_tokenizer(
-    opts: CountVectorizerBuildTokenizerOptions
-  ): Promise<any> {
+  async build_tokenizer(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -211,7 +318,12 @@ pms_CountVectorizer_build_tokenizer = {k: v for k, v in pms_CountVectorizer_buil
 
     The decoding strategy depends on the vectorizer parameters.
    */
-  async decode(opts: CountVectorizerDecodeOptions): Promise<any> {
+  async decode(opts: {
+    /**
+      The string to decode.
+     */
+    doc?: string
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -239,7 +351,17 @@ pms_CountVectorizer_decode = {k: v for k, v in pms_CountVectorizer_decode.items(
   /**
     Learn a vocabulary dictionary of all tokens in the raw documents.
    */
-  async fit(opts: CountVectorizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      An iterable which generates either str, unicode or file objects.
+     */
+    raw_documents?: any
+
+    /**
+      This parameter is ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -269,9 +391,17 @@ pms_CountVectorizer_fit = {k: v for k, v in pms_CountVectorizer_fit.items() if v
 
     This is equivalent to fit followed by transform, but more efficiently implemented.
    */
-  async fit_transform(
-    opts: CountVectorizerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      An iterable which generates either str, unicode or file objects.
+     */
+    raw_documents?: any
+
+    /**
+      This parameter is ignored.
+     */
+    y?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -299,9 +429,12 @@ pms_CountVectorizer_fit_transform = {k: v for k, v in pms_CountVectorizer_fit_tr
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: CountVectorizerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -332,7 +465,7 @@ pms_CountVectorizer_get_feature_names_out = {k: v for k, v in pms_CountVectorize
   /**
     Build or fetch the effective stop words list.
    */
-  async get_stop_words(opts: CountVectorizerGetStopWordsOptions): Promise<any> {
+  async get_stop_words(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -360,9 +493,12 @@ pms_CountVectorizer_get_stop_words = {k: v for k, v in pms_CountVectorizer_get_s
   /**
     Return terms per document with nonzero entries in X.
    */
-  async inverse_transform(
-    opts: CountVectorizerInverseTransformOptions
-  ): Promise<any[]> {
+  async inverse_transform(opts: {
+    /**
+      Document-term matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -394,9 +530,12 @@ pms_CountVectorizer_inverse_transform = {k: v for k, v in pms_CountVectorizer_in
 
     Extract token counts out of raw text documents using the vocabulary fitted with fit or the one provided to the constructor.
    */
-  async transform(
-    opts: CountVectorizerTransformOptions
-  ): Promise<SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      An iterable which generates either str, unicode or file objects.
+     */
+    raw_documents?: any
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This CountVectorizer instance has already been disposed')
     }
@@ -495,179 +634,4 @@ pms_CountVectorizer_transform = {k: v for k, v in pms_CountVectorizer_transform.
         ._py`attr_CountVectorizer_stop_words_.tolist() if hasattr(attr_CountVectorizer_stop_words_, 'tolist') else attr_CountVectorizer_stop_words_`
     })()
   }
-}
-
-export interface CountVectorizerOptions {
-  /**
-    If `'filename'`, the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
-
-    @defaultValue `'content'`
-   */
-  input?: 'filename' | 'file' | 'content'
-
-  /**
-    If bytes or files are given to analyze, this encoding is used to decode.
-
-    @defaultValue `'utf-8'`
-   */
-  encoding?: string
-
-  /**
-    Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given `encoding`. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
-
-    @defaultValue `'strict'`
-   */
-  decode_error?: 'strict' | 'ignore' | 'replace'
-
-  /**
-    Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. `undefined` (default) does nothing.
-
-    Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
-   */
-  strip_accents?: 'ascii' | 'unicode'
-
-  /**
-    Convert all characters to lowercase before tokenizing.
-
-    @defaultValue `true`
-   */
-  lowercase?: boolean
-
-  /**
-    Override the preprocessing (strip\_accents and lowercase) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
-   */
-  preprocessor?: any
-
-  /**
-    Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
-   */
-  tokenizer?: any
-
-  /**
-    If ‘english’, a built-in stop word list for English is used. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](../feature_extraction.html#stop-words)).
-
-    If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
-
-    If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
-   */
-  stop_words?: 'english' | any[]
-
-  /**
-    Regular expression denoting what constitutes a “token”, only used if `analyzer \== 'word'`. The default regexp select tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
-
-    If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
-   */
-  token_pattern?: string
-
-  /**
-    The lower and upper boundary of the range of n-values for different word n-grams or char n-grams to be extracted. All values of n such such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
-   */
-  ngram_range?: any
-
-  /**
-    Whether the feature should be made of word n-gram or character n-grams. Option ‘char\_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
-
-    If a callable is passed it is used to extract the sequence of features out of the raw, unprocessed input.
-
-    @defaultValue `'word'`
-   */
-  analyzer?: 'word' | 'char' | 'char_wb'
-
-  /**
-    When building the vocabulary ignore terms that have a document frequency strictly higher than the given threshold (corpus-specific stop words). If float, the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
-
-    @defaultValue `1`
-   */
-  max_df?: number
-
-  /**
-    When building the vocabulary ignore terms that have a document frequency strictly lower than the given threshold. This value is also called cut-off in the literature. If float, the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
-
-    @defaultValue `1`
-   */
-  min_df?: number
-
-  /**
-    If not `undefined`, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
-
-    This parameter is ignored if vocabulary is not `undefined`.
-   */
-  max_features?: number
-
-  /**
-    Either a Mapping (e.g., a dict) where keys are terms and values are indices in the feature matrix, or an iterable over terms. If not given, a vocabulary is determined from the input documents. Indices in the mapping should not be repeated and should not have any gap between 0 and the largest index.
-   */
-  vocabulary?: any
-
-  /**
-    If `true`, all non zero counts are set to 1. This is useful for discrete probabilistic models that model binary events rather than integer counts.
-
-    @defaultValue `false`
-   */
-  binary?: boolean
-
-  /**
-    Type of the matrix returned by fit\_transform() or transform().
-   */
-  dtype?: any
-}
-
-export interface CountVectorizerBuildAnalyzerOptions {}
-
-export interface CountVectorizerBuildPreprocessorOptions {}
-
-export interface CountVectorizerBuildTokenizerOptions {}
-
-export interface CountVectorizerDecodeOptions {
-  /**
-    The string to decode.
-   */
-  doc?: string
-}
-
-export interface CountVectorizerFitOptions {
-  /**
-    An iterable which generates either str, unicode or file objects.
-   */
-  raw_documents?: any
-
-  /**
-    This parameter is ignored.
-   */
-  y?: any
-}
-
-export interface CountVectorizerFitTransformOptions {
-  /**
-    An iterable which generates either str, unicode or file objects.
-   */
-  raw_documents?: any
-
-  /**
-    This parameter is ignored.
-   */
-  y?: any
-}
-
-export interface CountVectorizerGetFeatureNamesOutOptions {
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  input_features?: any
-}
-
-export interface CountVectorizerGetStopWordsOptions {}
-
-export interface CountVectorizerInverseTransformOptions {
-  /**
-    Document-term matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface CountVectorizerTransformOptions {
-  /**
-    An iterable which generates either str, unicode or file objects.
-   */
-  raw_documents?: any
 }

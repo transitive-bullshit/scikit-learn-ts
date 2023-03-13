@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#bayesian-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ARDRegression.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ARDRegression.html)
  */
 export class ARDRegression {
   id: string
@@ -22,7 +22,84 @@ export class ARDRegression {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ARDRegressionOptions) {
+  constructor(opts?: {
+    /**
+      Maximum number of iterations.
+
+      @defaultValue `300`
+     */
+    n_iter?: number
+
+    /**
+      Stop the algorithm if w has converged.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Hyper-parameter : shape parameter for the Gamma distribution prior over the alpha parameter.
+
+      @defaultValue `0.000001`
+     */
+    alpha_1?: number
+
+    /**
+      Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the alpha parameter.
+
+      @defaultValue `0.000001`
+     */
+    alpha_2?: number
+
+    /**
+      Hyper-parameter : shape parameter for the Gamma distribution prior over the lambda parameter.
+
+      @defaultValue `0.000001`
+     */
+    lambda_1?: number
+
+    /**
+      Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the lambda parameter.
+
+      @defaultValue `0.000001`
+     */
+    lambda_2?: number
+
+    /**
+      If `true`, compute the objective function at each step of the model.
+
+      @defaultValue `false`
+     */
+    compute_score?: boolean
+
+    /**
+      Threshold for removing (pruning) weights with high precision from the computation.
+
+      @defaultValue `10`
+     */
+    threshold_lambda?: number
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      Verbose mode when fitting the model.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `ARDRegression${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +186,17 @@ ctor_ARDRegression = {k: v for k, v in ctor_ARDRegression.items() if v is not No
 
     Iterative procedure to maximize the evidence
    */
-  async fit(opts: ARDRegressionFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (integers). Will be cast to X’s dtype if necessary.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ARDRegression instance has already been disposed')
     }
@@ -141,7 +228,19 @@ pms_ARDRegression_fit = {k: v for k, v in pms_ARDRegression_fit.items() if v is 
 
     In addition to the mean of the predictive distribution, also its standard deviation can be returned.
    */
-  async predict(opts: ARDRegressionPredictOptions): Promise<ArrayLike> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Whether to return the standard deviation of posterior prediction.
+
+      @defaultValue `false`
+     */
+    return_std?: boolean
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This ARDRegression instance has already been disposed')
     }
@@ -173,7 +272,22 @@ pms_ARDRegression_predict = {k: v for k, v in pms_ARDRegression_predict.items() 
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: ARDRegressionScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This ARDRegression instance has already been disposed')
     }
@@ -441,126 +555,4 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
         ._py`attr_ARDRegression_feature_names_in_.tolist() if hasattr(attr_ARDRegression_feature_names_in_, 'tolist') else attr_ARDRegression_feature_names_in_`
     })()
   }
-}
-
-export interface ARDRegressionOptions {
-  /**
-    Maximum number of iterations.
-
-    @defaultValue `300`
-   */
-  n_iter?: number
-
-  /**
-    Stop the algorithm if w has converged.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Hyper-parameter : shape parameter for the Gamma distribution prior over the alpha parameter.
-
-    @defaultValue `0.000001`
-   */
-  alpha_1?: number
-
-  /**
-    Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the alpha parameter.
-
-    @defaultValue `0.000001`
-   */
-  alpha_2?: number
-
-  /**
-    Hyper-parameter : shape parameter for the Gamma distribution prior over the lambda parameter.
-
-    @defaultValue `0.000001`
-   */
-  lambda_1?: number
-
-  /**
-    Hyper-parameter : inverse scale parameter (rate parameter) for the Gamma distribution prior over the lambda parameter.
-
-    @defaultValue `0.000001`
-   */
-  lambda_2?: number
-
-  /**
-    If `true`, compute the objective function at each step of the model.
-
-    @defaultValue `false`
-   */
-  compute_score?: boolean
-
-  /**
-    Threshold for removing (pruning) weights with high precision from the computation.
-
-    @defaultValue `10`
-   */
-  threshold_lambda?: number
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    Verbose mode when fitting the model.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface ARDRegressionFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (integers). Will be cast to X’s dtype if necessary.
-   */
-  y?: ArrayLike
-}
-
-export interface ARDRegressionPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Whether to return the standard deviation of posterior prediction.
-
-    @defaultValue `false`
-   */
-  return_std?: boolean
-}
-
-export interface ARDRegressionScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -1,153 +1,120 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / RBF
-
-# Class: RBF
+# RBF
 
 Radial basis function kernel (aka squared-exponential kernel).
 
 The RBF kernel is a stationary kernel. It is also known as the “squared exponential” kernel. It is parameterized by a length scale parameter \\(l>0\\), which can either be a scalar (isotropic variant of the kernel) or a vector with the same number of dimensions as the inputs X (anisotropic variant of the kernel). The kernel is given by:
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.RBF.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](RBF.md#constructor)
-
-### Properties
-
-- [\_isDisposed](RBF.md#_isdisposed)
-- [\_isInitialized](RBF.md#_isinitialized)
-- [\_py](RBF.md#_py)
-- [id](RBF.md#id)
-- [opts](RBF.md#opts)
-
-### Accessors
-
-- [anisotropic](RBF.md#anisotropic)
-- [hyperparameter\_length\_scale](RBF.md#hyperparameter_length_scale)
-- [py](RBF.md#py)
-
-### Methods
-
-- [\_\_call\_\_](RBF.md#__call__)
-- [clone\_with\_theta](RBF.md#clone_with_theta)
-- [diag](RBF.md#diag)
-- [dispose](RBF.md#dispose)
-- [init](RBF.md#init)
-- [is\_stationary](RBF.md#is_stationary)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.RBF.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new RBF**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new RBF(opts?: object): RBF;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`RBFOptions`](../interfaces/RBFOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.length_scale?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | The length scale of the kernel. If a float, an isotropic kernel is used. If an array, an anisotropic kernel is used where each dimension of l defines the length-scale of the respective feature dimension.  `Default Value`  `1` |
+| `opts.length_scale_bounds?` | `"fixed"` | The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning. |
 
-[generated/gaussian_process/kernels/RBF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L23)
+### Returns
+
+[`RBF`](RBF.md)
+
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L23)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/RBF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L21)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L21)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/RBF.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L20)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L20)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/RBF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L19)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L19)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/RBF.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L16)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L16)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/RBF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L17)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L17)
 
 ## Accessors
 
 ### anisotropic
 
-• `get` **anisotropic**(): `Promise`<`any`\>
+#### Signature
+
+```ts
+anisotropic(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L252)
 
-[generated/gaussian_process/kernels/RBF.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L213)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L252)
 
 ### hyperparameter\_length\_scale
 
-• `get` **hyperparameter_length_scale**(): `Promise`<`any`\>
+#### Signature
+
+```ts
+hyperparameter_length_scale(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L272)
 
-[generated/gaussian_process/kernels/RBF.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L233)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L272)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L40)
 
-[generated/gaussian_process/kernels/RBF.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L28)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -159,105 +126,114 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L44)
 
-[generated/gaussian_process/kernels/RBF.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L32)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L40) [generated/gaussian\_process/kernels/RBF.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L44)
 
 ## Methods
 
-### \_\_call\_\_
-
-▸ **__call__**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### \_\_call\_\_()
 
 Return the kernel k(X, Y) and optionally its gradient.
 
+#### Signature
+
+```ts
+__call__(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RBFCallOptions`](../interfaces/RBFCallOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y?` | [`ArrayLike`](../types/ArrayLike.md)[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead. |
+| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.  `Default Value`  `false` |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L113)
 
-[generated/gaussian_process/kernels/RBF.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L101)
-
-___
-
-### clone\_with\_theta
-
-▸ **clone_with_theta**(`opts`): `Promise`<`any`\>
+### clone\_with\_theta()
 
 Returns a clone of self with given hyperparameters theta.
 
+#### Signature
+
+```ts
+clone_with_theta(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RBFCloneWithThetaOptions`](../interfaces/RBFCloneWithThetaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.theta?` | [`ArrayLike`](../types/ArrayLike.md) | The hyperparameters |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L162)
 
-[generated/gaussian_process/kernels/RBF.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L133)
-
-___
-
-### diag
-
-▸ **diag**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### diag()
 
 Returns the diagonal of the kernel k(X, X).
 
 The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
 
+#### Signature
+
+```ts
+diag(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`RBFDiagOptions`](../interfaces/RBFDiagOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L197)
 
-[generated/gaussian_process/kernels/RBF.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L163)
-
-___
-
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L96)
 
-[generated/gaussian_process/kernels/RBF.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L84)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -267,30 +243,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L53)
 
-[generated/gaussian_process/kernels/RBF.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L41)
-
-___
-
-### is\_stationary
-
-▸ **is_stationary**(`opts`): `Promise`<`any`\>
+### is\_stationary()
 
 Returns whether the kernel is stationary.
+
+#### Signature
+
+```ts
+is_stationary(opts: object): Promise<any>;
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`RBFIsStationaryOptions`](../interfaces/RBFIsStationaryOptions.md) |
+| `opts` | `object` |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/gaussian_process/kernels/RBF.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L190)
+Defined in:  [generated/gaussian\_process/kernels/RBF.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/RBF.ts#L229)

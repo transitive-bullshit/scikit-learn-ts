@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The anomaly score of each sample is called the Local Outlier Factor. It measures the local deviation of the density of a given sample with respect to its neighbors. It is local in that the anomaly score depends on how isolated the object is with respect to the surrounding neighborhood. More precisely, locality is given by k-nearest neighbors, whose distance is used to estimate the local density. By comparing the local density of a sample to the local densities of its neighbors, one can identify samples that have a substantially lower density than their neighbors. These are considered outliers.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html)
  */
 export class LocalOutlierFactor {
   id: string
@@ -20,7 +20,70 @@ export class LocalOutlierFactor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LocalOutlierFactorOptions) {
+  constructor(opts?: {
+    /**
+      Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries. If n\_neighbors is larger than the number of samples provided, all samples will be used.
+
+      @defaultValue `20`
+     */
+    n_neighbors?: number
+
+    /**
+      Algorithm used to compute the nearest neighbors:
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
+
+    /**
+      Leaf is size passed to [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+      @defaultValue `30`
+     */
+    leaf_size?: number
+
+    /**
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+
+      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+
+      If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: string
+
+    /**
+      Parameter for the Minkowski metric from `sklearn.metrics.pairwise.pairwise\_distances`. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+
+      @defaultValue `2`
+     */
+    p?: number
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      The amount of contamination of the data set, i.e. the proportion of outliers in the data set. When fitting this is used to define the threshold on the scores of the samples.
+
+      @defaultValue `'auto'`
+     */
+    contamination?: 'auto' | number
+
+    /**
+      By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=`false`). Set novelty to `true` if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision\_function and score\_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
+
+      @defaultValue `false`
+     */
+    novelty?: boolean
+
+    /**
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `LocalOutlierFactor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -113,9 +176,12 @@ ctor_LocalOutlierFactor = {k: v for k, v in ctor_LocalOutlierFactor.items() if v
 
     **Only available for novelty detection (when novelty is set to `true`).** The shift offset allows a zero threshold for being an outlier. The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point.
    */
-  async decision_function(
-    opts: LocalOutlierFactorDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LocalOutlierFactor instance has already been disposed'
@@ -148,7 +214,17 @@ pms_LocalOutlierFactor_decision_function = {k: v for k, v in pms_LocalOutlierFac
   /**
     Fit the local outlier factor detector from the training dataset.
    */
-  async fit(opts: LocalOutlierFactorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LocalOutlierFactor instance has already been disposed'
@@ -180,9 +256,17 @@ pms_LocalOutlierFactor_fit = {k: v for k, v in pms_LocalOutlierFactor_fit.items(
 
     **Not available for novelty detection (when novelty is set to `true`).** Label is 1 for an inlier and -1 for an outlier according to the LOF score and the contamination parameter.
    */
-  async fit_predict(
-    opts: LocalOutlierFactorFitPredictOptions
-  ): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LocalOutlierFactor instance has already been disposed'
@@ -216,9 +300,24 @@ pms_LocalOutlierFactor_fit_predict = {k: v for k, v in pms_LocalOutlierFactor_fi
 
     Returns indices of and distances to the neighbors of each point.
    */
-  async kneighbors(
-    opts: LocalOutlierFactorKneighborsOptions
-  ): Promise<NDArray[]> {
+  async kneighbors(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Number of neighbors required for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Whether or not to return the distances.
+
+      @defaultValue `true`
+     */
+    return_distance?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LocalOutlierFactor instance has already been disposed'
@@ -250,9 +349,24 @@ pms_LocalOutlierFactor_kneighbors = {k: v for k, v in pms_LocalOutlierFactor_kne
   /**
     Compute the (weighted) graph of k-Neighbors for points in X.
    */
-  async kneighbors_graph(
-    opts: LocalOutlierFactorKneighborsGraphOptions
-  ): Promise<any[]> {
+  async kneighbors_graph(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
+     */
+    X?: any
+
+    /**
+      Number of neighbors for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
+
+      @defaultValue `'connectivity'`
+     */
+    mode?: 'connectivity' | 'distance'
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LocalOutlierFactor instance has already been disposed'
@@ -289,7 +403,12 @@ pms_LocalOutlierFactor_kneighbors_graph = {k: v for k, v in pms_LocalOutlierFact
 
     **Only available for novelty detection (when novelty is set to `true`).** This method allows to generalize prediction to *new observations* (not in the training set). Note that the result of `clf.fit(X)` then `clf.predict(X)` with `novelty=True` may differ from the result obtained by `clf.fit\_predict(X)` with `novelty=False`.
    */
-  async predict(opts: LocalOutlierFactorPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LocalOutlierFactor instance has already been disposed'
@@ -323,9 +442,12 @@ pms_LocalOutlierFactor_predict = {k: v for k, v in pms_LocalOutlierFactor_predic
 
     **Only available for novelty detection (when novelty is set to `true`).** The argument X is supposed to contain *new data*: if X contains a point from training, it considers the later in its own neighborhood. Also, the samples in X are not considered in the neighborhood of any point. Because of this, the scores obtained via `score\_samples` may differ from the standard LOF scores. The standard LOF scores for the training data is available via the `negative\_outlier\_factor\_` attribute.
    */
-  async score_samples(
-    opts: LocalOutlierFactorScoreSamplesOptions
-  ): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LocalOutlierFactor instance has already been disposed'
@@ -571,152 +693,4 @@ pms_LocalOutlierFactor_score_samples = {k: v for k, v in pms_LocalOutlierFactor_
         ._py`attr_LocalOutlierFactor_n_samples_fit_.tolist() if hasattr(attr_LocalOutlierFactor_n_samples_fit_, 'tolist') else attr_LocalOutlierFactor_n_samples_fit_`
     })()
   }
-}
-
-export interface LocalOutlierFactorOptions {
-  /**
-    Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.LocalOutlierFactor.kneighbors "sklearn.neighbors.LocalOutlierFactor.kneighbors") queries. If n\_neighbors is larger than the number of samples provided, all samples will be used.
-
-    @defaultValue `20`
-   */
-  n_neighbors?: number
-
-  /**
-    Algorithm used to compute the nearest neighbors:
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
-
-  /**
-    Leaf is size passed to [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-    @defaultValue `30`
-   */
-  leaf_size?: number
-
-  /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
-
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
-
-    If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: string
-
-  /**
-    Parameter for the Minkowski metric from `sklearn.metrics.pairwise.pairwise\_distances`. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
-
-    @defaultValue `2`
-   */
-  p?: number
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    The amount of contamination of the data set, i.e. the proportion of outliers in the data set. When fitting this is used to define the threshold on the scores of the samples.
-
-    @defaultValue `'auto'`
-   */
-  contamination?: 'auto' | number
-
-  /**
-    By default, LocalOutlierFactor is only meant to be used for outlier detection (novelty=`false`). Set novelty to `true` if you want to use LocalOutlierFactor for novelty detection. In this case be aware that you should only use predict, decision\_function and score\_samples on new unseen data and not on the training set; and note that the results obtained this way may differ from the standard LOF results.
-
-    @defaultValue `false`
-   */
-  novelty?: boolean
-
-  /**
-    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface LocalOutlierFactorDecisionFunctionOptions {
-  /**
-    The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface LocalOutlierFactorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface LocalOutlierFactorFitPredictOptions {
-  /**
-    The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface LocalOutlierFactorKneighborsOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Number of neighbors required for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Whether or not to return the distances.
-
-    @defaultValue `true`
-   */
-  return_distance?: boolean
-}
-
-export interface LocalOutlierFactorKneighborsGraphOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
-   */
-  X?: any
-
-  /**
-    Number of neighbors for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
-
-    @defaultValue `'connectivity'`
-   */
-  mode?: 'connectivity' | 'distance'
-}
-
-export interface LocalOutlierFactorPredictOptions {
-  /**
-    The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface LocalOutlierFactorScoreSamplesOptions {
-  /**
-    The query sample or samples to compute the Local Outlier Factor w.r.t. the training samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

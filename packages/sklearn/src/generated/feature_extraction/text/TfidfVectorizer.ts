@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_extraction.html#text-feature-extraction).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
  */
 export class TfidfVectorizer {
   id: string
@@ -22,7 +22,148 @@ export class TfidfVectorizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: TfidfVectorizerOptions) {
+  constructor(opts?: {
+    /**
+      If `'filename'`, the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
+
+      @defaultValue `'content'`
+     */
+    input?: 'filename' | 'file' | 'content'
+
+    /**
+      If bytes or files are given to analyze, this encoding is used to decode.
+
+      @defaultValue `'utf-8'`
+     */
+    encoding?: string
+
+    /**
+      Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given `encoding`. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
+
+      @defaultValue `'strict'`
+     */
+    decode_error?: 'strict' | 'ignore' | 'replace'
+
+    /**
+      Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. `undefined` (default) does nothing.
+
+      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
+     */
+    strip_accents?: 'ascii' | 'unicode'
+
+    /**
+      Convert all characters to lowercase before tokenizing.
+
+      @defaultValue `true`
+     */
+    lowercase?: boolean
+
+    /**
+      Override the preprocessing (string transformation) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
+     */
+    preprocessor?: any
+
+    /**
+      Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
+     */
+    tokenizer?: any
+
+    /**
+      Whether the feature should be made of word or character n-grams. Option ‘char\_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
+
+      If a callable is passed it is used to extract the sequence of features out of the raw, unprocessed input.
+
+      @defaultValue `'word'`
+     */
+    analyzer?: 'word' | 'char' | 'char_wb'
+
+    /**
+      If a string, it is passed to \_check\_stop\_list and the appropriate stop list is returned. ‘english’ is currently the only supported string value. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](../feature_extraction.html#stop-words)).
+
+      If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
+
+      If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
+     */
+    stop_words?: 'english' | any[]
+
+    /**
+      Regular expression denoting what constitutes a “token”, only used if `analyzer \== 'word'`. The default regexp selects tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
+
+      If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
+     */
+    token_pattern?: string
+
+    /**
+      The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
+     */
+    ngram_range?: any
+
+    /**
+      When building the vocabulary ignore terms that have a document frequency strictly higher than the given threshold (corpus-specific stop words). If float in range \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
+
+      @defaultValue `1`
+     */
+    max_df?: number
+
+    /**
+      When building the vocabulary ignore terms that have a document frequency strictly lower than the given threshold. This value is also called cut-off in the literature. If float in range of \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
+
+      @defaultValue `1`
+     */
+    min_df?: number
+
+    /**
+      If not `undefined`, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
+
+      This parameter is ignored if vocabulary is not `undefined`.
+     */
+    max_features?: number
+
+    /**
+      Either a Mapping (e.g., a dict) where keys are terms and values are indices in the feature matrix, or an iterable over terms. If not given, a vocabulary is determined from the input documents.
+     */
+    vocabulary?: any
+
+    /**
+      If `true`, all non-zero term counts are set to 1. This does not mean outputs will have only 0/1 values, only that the tf term in tf-idf is binary. (Set idf and normalization to `false` to get 0/1 outputs).
+
+      @defaultValue `false`
+     */
+    binary?: boolean
+
+    /**
+      Type of the matrix returned by fit\_transform() or transform().
+     */
+    dtype?: any
+
+    /**
+      Each output row will have unit norm, either:
+
+      @defaultValue `'l2'`
+     */
+    norm?: 'l1' | 'l2'
+
+    /**
+      Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
+
+      @defaultValue `true`
+     */
+    use_idf?: boolean
+
+    /**
+      Smooth idf weights by adding one to document frequencies, as if an extra document was seen containing every term in the collection exactly once. Prevents zero divisions.
+
+      @defaultValue `true`
+     */
+    smooth_idf?: boolean
+
+    /**
+      Apply sublinear tf scaling, i.e. replace tf with 1 + log(tf).
+
+      @defaultValue `false`
+     */
+    sublinear_tf?: boolean
+  }) {
     this.id = `TfidfVectorizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -121,9 +262,7 @@ ctor_TfidfVectorizer = {k: v for k, v in ctor_TfidfVectorizer.items() if v is no
 
     The callable handles preprocessing, tokenization, and n-grams generation.
    */
-  async build_analyzer(
-    opts: TfidfVectorizerBuildAnalyzerOptions
-  ): Promise<any> {
+  async build_analyzer(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -151,9 +290,7 @@ pms_TfidfVectorizer_build_analyzer = {k: v for k, v in pms_TfidfVectorizer_build
   /**
     Return a function to preprocess the text before tokenization.
    */
-  async build_preprocessor(
-    opts: TfidfVectorizerBuildPreprocessorOptions
-  ): Promise<any> {
+  async build_preprocessor(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -181,9 +318,7 @@ pms_TfidfVectorizer_build_preprocessor = {k: v for k, v in pms_TfidfVectorizer_b
   /**
     Return a function that splits a string into a sequence of tokens.
    */
-  async build_tokenizer(
-    opts: TfidfVectorizerBuildTokenizerOptions
-  ): Promise<any> {
+  async build_tokenizer(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -213,7 +348,12 @@ pms_TfidfVectorizer_build_tokenizer = {k: v for k, v in pms_TfidfVectorizer_buil
 
     The decoding strategy depends on the vectorizer parameters.
    */
-  async decode(opts: TfidfVectorizerDecodeOptions): Promise<any> {
+  async decode(opts: {
+    /**
+      The string to decode.
+     */
+    doc?: string
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -241,7 +381,17 @@ pms_TfidfVectorizer_decode = {k: v for k, v in pms_TfidfVectorizer_decode.items(
   /**
     Learn vocabulary and idf from training set.
    */
-  async fit(opts: TfidfVectorizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      An iterable which generates either str, unicode or file objects.
+     */
+    raw_documents?: any
+
+    /**
+      This parameter is not needed to compute tfidf.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -271,7 +421,17 @@ pms_TfidfVectorizer_fit = {k: v for k, v in pms_TfidfVectorizer_fit.items() if v
 
     This is equivalent to fit followed by transform, but more efficiently implemented.
    */
-  async fit_transform(opts: TfidfVectorizerFitTransformOptions): Promise<any> {
+  async fit_transform(opts: {
+    /**
+      An iterable which generates either str, unicode or file objects.
+     */
+    raw_documents?: any
+
+    /**
+      This parameter is ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -299,9 +459,12 @@ pms_TfidfVectorizer_fit_transform = {k: v for k, v in pms_TfidfVectorizer_fit_tr
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: TfidfVectorizerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -332,7 +495,7 @@ pms_TfidfVectorizer_get_feature_names_out = {k: v for k, v in pms_TfidfVectorize
   /**
     Build or fetch the effective stop words list.
    */
-  async get_stop_words(opts: TfidfVectorizerGetStopWordsOptions): Promise<any> {
+  async get_stop_words(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -360,9 +523,12 @@ pms_TfidfVectorizer_get_stop_words = {k: v for k, v in pms_TfidfVectorizer_get_s
   /**
     Return terms per document with nonzero entries in X.
    */
-  async inverse_transform(
-    opts: TfidfVectorizerInverseTransformOptions
-  ): Promise<any[]> {
+  async inverse_transform(opts: {
+    /**
+      Document-term matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -394,7 +560,12 @@ pms_TfidfVectorizer_inverse_transform = {k: v for k, v in pms_TfidfVectorizer_in
 
     Uses the vocabulary and document frequencies (df) learned by fit (or fit\_transform).
    */
-  async transform(opts: TfidfVectorizerTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      An iterable which generates either str, unicode or file objects.
+     */
+    raw_documents?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This TfidfVectorizer instance has already been disposed')
     }
@@ -493,207 +664,4 @@ pms_TfidfVectorizer_transform = {k: v for k, v in pms_TfidfVectorizer_transform.
         ._py`attr_TfidfVectorizer_stop_words_.tolist() if hasattr(attr_TfidfVectorizer_stop_words_, 'tolist') else attr_TfidfVectorizer_stop_words_`
     })()
   }
-}
-
-export interface TfidfVectorizerOptions {
-  /**
-    If `'filename'`, the sequence passed as an argument to fit is expected to be a list of filenames that need reading to fetch the raw content to analyze.
-
-    @defaultValue `'content'`
-   */
-  input?: 'filename' | 'file' | 'content'
-
-  /**
-    If bytes or files are given to analyze, this encoding is used to decode.
-
-    @defaultValue `'utf-8'`
-   */
-  encoding?: string
-
-  /**
-    Instruction on what to do if a byte sequence is given to analyze that contains characters not of the given `encoding`. By default, it is ‘strict’, meaning that a UnicodeDecodeError will be raised. Other values are ‘ignore’ and ‘replace’.
-
-    @defaultValue `'strict'`
-   */
-  decode_error?: 'strict' | 'ignore' | 'replace'
-
-  /**
-    Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any characters. `undefined` (default) does nothing.
-
-    Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
-   */
-  strip_accents?: 'ascii' | 'unicode'
-
-  /**
-    Convert all characters to lowercase before tokenizing.
-
-    @defaultValue `true`
-   */
-  lowercase?: boolean
-
-  /**
-    Override the preprocessing (string transformation) stage while preserving the tokenizing and n-grams generation steps. Only applies if `analyzer` is not callable.
-   */
-  preprocessor?: any
-
-  /**
-    Override the string tokenization step while preserving the preprocessing and n-grams generation steps. Only applies if `analyzer \== 'word'`.
-   */
-  tokenizer?: any
-
-  /**
-    Whether the feature should be made of word or character n-grams. Option ‘char\_wb’ creates character n-grams only from text inside word boundaries; n-grams at the edges of words are padded with space.
-
-    If a callable is passed it is used to extract the sequence of features out of the raw, unprocessed input.
-
-    @defaultValue `'word'`
-   */
-  analyzer?: 'word' | 'char' | 'char_wb'
-
-  /**
-    If a string, it is passed to \_check\_stop\_list and the appropriate stop list is returned. ‘english’ is currently the only supported string value. There are several known issues with ‘english’ and you should consider an alternative (see [Using stop words](../feature_extraction.html#stop-words)).
-
-    If a list, that list is assumed to contain stop words, all of which will be removed from the resulting tokens. Only applies if `analyzer \== 'word'`.
-
-    If `undefined`, no stop words will be used. In this case, setting `max\_df` to a higher value, such as in the range (0.7, 1.0), can automatically detect and filter stop words based on intra corpus document frequency of terms.
-   */
-  stop_words?: 'english' | any[]
-
-  /**
-    Regular expression denoting what constitutes a “token”, only used if `analyzer \== 'word'`. The default regexp selects tokens of 2 or more alphanumeric characters (punctuation is completely ignored and always treated as a token separator).
-
-    If there is a capturing group in token\_pattern then the captured group content, not the entire match, becomes the token. At most one capturing group is permitted.
-   */
-  token_pattern?: string
-
-  /**
-    The lower and upper boundary of the range of n-values for different n-grams to be extracted. All values of n such that min\_n <= n <= max\_n will be used. For example an `ngram\_range` of `(1, 1)` means only unigrams, `(1, 2)` means unigrams and bigrams, and `(2, 2)` means only bigrams. Only applies if `analyzer` is not callable.
-   */
-  ngram_range?: any
-
-  /**
-    When building the vocabulary ignore terms that have a document frequency strictly higher than the given threshold (corpus-specific stop words). If float in range \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
-
-    @defaultValue `1`
-   */
-  max_df?: number
-
-  /**
-    When building the vocabulary ignore terms that have a document frequency strictly lower than the given threshold. This value is also called cut-off in the literature. If float in range of \[0.0, 1.0\], the parameter represents a proportion of documents, integer absolute counts. This parameter is ignored if vocabulary is not `undefined`.
-
-    @defaultValue `1`
-   */
-  min_df?: number
-
-  /**
-    If not `undefined`, build a vocabulary that only consider the top `max\_features` ordered by term frequency across the corpus. Otherwise, all features are used.
-
-    This parameter is ignored if vocabulary is not `undefined`.
-   */
-  max_features?: number
-
-  /**
-    Either a Mapping (e.g., a dict) where keys are terms and values are indices in the feature matrix, or an iterable over terms. If not given, a vocabulary is determined from the input documents.
-   */
-  vocabulary?: any
-
-  /**
-    If `true`, all non-zero term counts are set to 1. This does not mean outputs will have only 0/1 values, only that the tf term in tf-idf is binary. (Set idf and normalization to `false` to get 0/1 outputs).
-
-    @defaultValue `false`
-   */
-  binary?: boolean
-
-  /**
-    Type of the matrix returned by fit\_transform() or transform().
-   */
-  dtype?: any
-
-  /**
-    Each output row will have unit norm, either:
-
-    @defaultValue `'l2'`
-   */
-  norm?: 'l1' | 'l2'
-
-  /**
-    Enable inverse-document-frequency reweighting. If `false`, idf(t) = 1.
-
-    @defaultValue `true`
-   */
-  use_idf?: boolean
-
-  /**
-    Smooth idf weights by adding one to document frequencies, as if an extra document was seen containing every term in the collection exactly once. Prevents zero divisions.
-
-    @defaultValue `true`
-   */
-  smooth_idf?: boolean
-
-  /**
-    Apply sublinear tf scaling, i.e. replace tf with 1 + log(tf).
-
-    @defaultValue `false`
-   */
-  sublinear_tf?: boolean
-}
-
-export interface TfidfVectorizerBuildAnalyzerOptions {}
-
-export interface TfidfVectorizerBuildPreprocessorOptions {}
-
-export interface TfidfVectorizerBuildTokenizerOptions {}
-
-export interface TfidfVectorizerDecodeOptions {
-  /**
-    The string to decode.
-   */
-  doc?: string
-}
-
-export interface TfidfVectorizerFitOptions {
-  /**
-    An iterable which generates either str, unicode or file objects.
-   */
-  raw_documents?: any
-
-  /**
-    This parameter is not needed to compute tfidf.
-   */
-  y?: any
-}
-
-export interface TfidfVectorizerFitTransformOptions {
-  /**
-    An iterable which generates either str, unicode or file objects.
-   */
-  raw_documents?: any
-
-  /**
-    This parameter is ignored.
-   */
-  y?: any
-}
-
-export interface TfidfVectorizerGetFeatureNamesOutOptions {
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  input_features?: any
-}
-
-export interface TfidfVectorizerGetStopWordsOptions {}
-
-export interface TfidfVectorizerInverseTransformOptions {
-  /**
-    Document-term matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface TfidfVectorizerTransformOptions {
-  /**
-    An iterable which generates either str, unicode or file objects.
-   */
-  raw_documents?: any
 }

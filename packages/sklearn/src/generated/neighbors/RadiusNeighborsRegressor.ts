@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neighbors.html#regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsRegressor.html)
  */
 export class RadiusNeighborsRegressor {
   id: string
@@ -22,7 +22,63 @@ export class RadiusNeighborsRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RadiusNeighborsRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors "sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors") queries.
+
+      @defaultValue `1`
+     */
+    radius?: number
+
+    /**
+      Weight function used in prediction. Possible values:
+
+      @defaultValue `'uniform'`
+     */
+    weights?: 'uniform' | 'distance'
+
+    /**
+      Algorithm used to compute the nearest neighbors:
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
+
+    /**
+      Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+      @defaultValue `30`
+     */
+    leaf_size?: number
+
+    /**
+      Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+
+      @defaultValue `2`
+     */
+    p?: number
+
+    /**
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+
+      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+
+      If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: string
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `RadiusNeighborsRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +163,17 @@ ctor_RadiusNeighborsRegressor = {k: v for k, v in ctor_RadiusNeighborsRegressor.
   /**
     Fit the radius neighbors regressor from the training dataset.
    */
-  async fit(opts: RadiusNeighborsRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RadiusNeighborsRegressor instance has already been disposed'
@@ -139,9 +205,12 @@ pms_RadiusNeighborsRegressor_fit = {k: v for k, v in pms_RadiusNeighborsRegresso
   /**
     Predict the target for the provided data.
    */
-  async predict(
-    opts: RadiusNeighborsRegressorPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Test samples.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RadiusNeighborsRegressor instance has already been disposed'
@@ -177,9 +246,31 @@ pms_RadiusNeighborsRegressor_predict = {k: v for k, v in pms_RadiusNeighborsRegr
 
     The result points are *not* necessarily sorted by distance to their query point.
    */
-  async radius_neighbors(
-    opts: RadiusNeighborsRegressorRadiusNeighborsOptions
-  ): Promise<any> {
+  async radius_neighbors(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: any
+
+    /**
+      Limiting distance of neighbors to return. The default is the value passed to the constructor.
+     */
+    radius?: number
+
+    /**
+      Whether or not to return the distances.
+
+      @defaultValue `true`
+     */
+    return_distance?: boolean
+
+    /**
+      If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
+
+      @defaultValue `false`
+     */
+    sort_results?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RadiusNeighborsRegressor instance has already been disposed'
@@ -215,9 +306,31 @@ pms_RadiusNeighborsRegressor_radius_neighbors = {k: v for k, v in pms_RadiusNeig
 
     Neighborhoods are restricted the points at a distance lower than radius.
    */
-  async radius_neighbors_graph(
-    opts: RadiusNeighborsRegressorRadiusNeighborsGraphOptions
-  ): Promise<any[]> {
+  async radius_neighbors_graph(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Radius of neighborhoods. The default is the value passed to the constructor.
+     */
+    radius?: number
+
+    /**
+      Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
+
+      @defaultValue `'connectivity'`
+     */
+    mode?: 'connectivity' | 'distance'
+
+    /**
+      If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.
+
+      @defaultValue `false`
+     */
+    sort_results?: boolean
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This RadiusNeighborsRegressor instance has already been disposed'
@@ -256,7 +369,22 @@ pms_RadiusNeighborsRegressor_radius_neighbors_graph = {k: v for k, v in pms_Radi
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: RadiusNeighborsRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This RadiusNeighborsRegressor instance has already been disposed'
@@ -423,150 +551,4 @@ pms_RadiusNeighborsRegressor_score = {k: v for k, v in pms_RadiusNeighborsRegres
         ._py`attr_RadiusNeighborsRegressor_n_samples_fit_.tolist() if hasattr(attr_RadiusNeighborsRegressor_n_samples_fit_, 'tolist') else attr_RadiusNeighborsRegressor_n_samples_fit_`
     })()
   }
-}
-
-export interface RadiusNeighborsRegressorOptions {
-  /**
-    Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors "sklearn.neighbors.RadiusNeighborsRegressor.radius_neighbors") queries.
-
-    @defaultValue `1`
-   */
-  radius?: number
-
-  /**
-    Weight function used in prediction. Possible values:
-
-    @defaultValue `'uniform'`
-   */
-  weights?: 'uniform' | 'distance'
-
-  /**
-    Algorithm used to compute the nearest neighbors:
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
-
-  /**
-    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-    @defaultValue `30`
-   */
-  leaf_size?: number
-
-  /**
-    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
-
-    @defaultValue `2`
-   */
-  p?: number
-
-  /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
-
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
-
-    If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: string
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface RadiusNeighborsRegressorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike | SparseMatrix
-}
-
-export interface RadiusNeighborsRegressorPredictOptions {
-  /**
-    Test samples.
-   */
-  X?: any
-}
-
-export interface RadiusNeighborsRegressorRadiusNeighborsOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: any
-
-  /**
-    Limiting distance of neighbors to return. The default is the value passed to the constructor.
-   */
-  radius?: number
-
-  /**
-    Whether or not to return the distances.
-
-    @defaultValue `true`
-   */
-  return_distance?: boolean
-
-  /**
-    If `true`, the distances and indices will be sorted by increasing distances before being returned. If `false`, the results may not be sorted. If `return\_distance=False`, setting `sort\_results=True` will result in an error.
-
-    @defaultValue `false`
-   */
-  sort_results?: boolean
-}
-
-export interface RadiusNeighborsRegressorRadiusNeighborsGraphOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Radius of neighborhoods. The default is the value passed to the constructor.
-   */
-  radius?: number
-
-  /**
-    Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
-
-    @defaultValue `'connectivity'`
-   */
-  mode?: 'connectivity' | 'distance'
-
-  /**
-    If `true`, in each row of the result, the non-zero entries will be sorted by increasing distances. If `false`, the non-zero entries may not be sorted. Only used with mode=’distance’.
-
-    @defaultValue `false`
-   */
-  sort_results?: boolean
-}
-
-export interface RadiusNeighborsRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

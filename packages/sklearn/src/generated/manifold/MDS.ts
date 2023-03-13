@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../manifold.html#multidimensional-scaling).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html)
  */
 export class MDS {
   id: string
@@ -20,7 +20,73 @@ export class MDS {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MDSOptions) {
+  constructor(opts?: {
+    /**
+      Number of dimensions in which to immerse the dissimilarities.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      If `true`, perform metric MDS; otherwise, perform nonmetric MDS. When `false` (i.e. non-metric MDS), dissimilarities with 0 are considered as missing values.
+
+      @defaultValue `true`
+     */
+    metric?: boolean
+
+    /**
+      Number of times the SMACOF algorithm will be run with different initializations. The final results will be the best output of the runs, determined by the run with the smallest final stress.
+
+      @defaultValue `4`
+     */
+    n_init?: number
+
+    /**
+      Maximum number of iterations of the SMACOF algorithm for a single run.
+
+      @defaultValue `300`
+     */
+    max_iter?: number
+
+    /**
+      Level of verbosity.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Relative tolerance with respect to stress at which to declare convergence. The value of `eps` should be tuned separately depending on whether or not `normalized\_stress` is being used.
+
+      @defaultValue `0.001`
+     */
+    eps?: number
+
+    /**
+      The number of jobs to use for the computation. If multiple initializations are used (`n\_init`), each run of the algorithm is computed in parallel.
+
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Dissimilarity measure to use:
+
+      @defaultValue `'euclidean'`
+     */
+    dissimilarity?: 'euclidean' | 'precomputed'
+
+    /**
+      Whether use and return normed stress value (Stress-1) instead of raw stress calculated by default. Only supported in non-metric MDS.
+     */
+    normalized_stress?: boolean
+  }) {
     this.id = `MDS${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -104,7 +170,22 @@ ctor_MDS = {k: v for k, v in ctor_MDS.items() if v is not None}`
   /**
     Compute the position of the points in the embedding space.
    */
-  async fit(opts: MDSFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Starting configuration of the embedding to initialize the SMACOF algorithm. By default, the algorithm is initialized with a randomly chosen array.
+     */
+    init?: NDArray[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MDS instance has already been disposed')
     }
@@ -135,7 +216,22 @@ pms_MDS_fit = {k: v for k, v in pms_MDS_fit.items() if v is not None}`
   /**
     Fit the data from `X`, and returns the embedded coordinates.
    */
-  async fit_transform(opts: MDSFitTransformOptions): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Starting configuration of the embedding to initialize the SMACOF algorithm. By default, the algorithm is initialized with a randomly chosen array.
+     */
+    init?: NDArray[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MDS instance has already been disposed')
     }
@@ -300,106 +396,4 @@ pms_MDS_fit_transform = {k: v for k, v in pms_MDS_fit_transform.items() if v is 
         ._py`attr_MDS_n_iter_.tolist() if hasattr(attr_MDS_n_iter_, 'tolist') else attr_MDS_n_iter_`
     })()
   }
-}
-
-export interface MDSOptions {
-  /**
-    Number of dimensions in which to immerse the dissimilarities.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    If `true`, perform metric MDS; otherwise, perform nonmetric MDS. When `false` (i.e. non-metric MDS), dissimilarities with 0 are considered as missing values.
-
-    @defaultValue `true`
-   */
-  metric?: boolean
-
-  /**
-    Number of times the SMACOF algorithm will be run with different initializations. The final results will be the best output of the runs, determined by the run with the smallest final stress.
-
-    @defaultValue `4`
-   */
-  n_init?: number
-
-  /**
-    Maximum number of iterations of the SMACOF algorithm for a single run.
-
-    @defaultValue `300`
-   */
-  max_iter?: number
-
-  /**
-    Level of verbosity.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Relative tolerance with respect to stress at which to declare convergence. The value of `eps` should be tuned separately depending on whether or not `normalized\_stress` is being used.
-
-    @defaultValue `0.001`
-   */
-  eps?: number
-
-  /**
-    The number of jobs to use for the computation. If multiple initializations are used (`n\_init`), each run of the algorithm is computed in parallel.
-
-    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Determines the random number generator used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Dissimilarity measure to use:
-
-    @defaultValue `'euclidean'`
-   */
-  dissimilarity?: 'euclidean' | 'precomputed'
-
-  /**
-    Whether use and return normed stress value (Stress-1) instead of raw stress calculated by default. Only supported in non-metric MDS.
-   */
-  normalized_stress?: boolean
-}
-
-export interface MDSFitOptions {
-  /**
-    Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Starting configuration of the embedding to initialize the SMACOF algorithm. By default, the algorithm is initialized with a randomly chosen array.
-   */
-  init?: NDArray[]
-}
-
-export interface MDSFitTransformOptions {
-  /**
-    Input data. If `dissimilarity=='precomputed'`, the input should be the dissimilarity matrix.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Starting configuration of the embedding to initialize the SMACOF algorithm. By default, the algorithm is initialized with a randomly chosen array.
-   */
-  init?: NDArray[]
 }

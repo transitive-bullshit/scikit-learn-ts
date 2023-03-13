@@ -1,176 +1,144 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / SelectFromModel
-
-# Class: SelectFromModel
+# SelectFromModel
 
 Meta-transformer for selecting features based on importance weights.
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SelectFromModel.md#constructor)
-
-### Properties
-
-- [\_isDisposed](SelectFromModel.md#_isdisposed)
-- [\_isInitialized](SelectFromModel.md#_isinitialized)
-- [\_py](SelectFromModel.md#_py)
-- [id](SelectFromModel.md#id)
-- [opts](SelectFromModel.md#opts)
-
-### Accessors
-
-- [estimator\_](SelectFromModel.md#estimator_)
-- [feature\_names\_in\_](SelectFromModel.md#feature_names_in_)
-- [max\_features\_](SelectFromModel.md#max_features_)
-- [py](SelectFromModel.md#py)
-
-### Methods
-
-- [dispose](SelectFromModel.md#dispose)
-- [fit](SelectFromModel.md#fit)
-- [fit\_transform](SelectFromModel.md#fit_transform)
-- [get\_feature\_names\_out](SelectFromModel.md#get_feature_names_out)
-- [get\_support](SelectFromModel.md#get_support)
-- [init](SelectFromModel.md#init)
-- [inverse\_transform](SelectFromModel.md#inverse_transform)
-- [partial\_fit](SelectFromModel.md#partial_fit)
-- [set\_output](SelectFromModel.md#set_output)
-- [transform](SelectFromModel.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new SelectFromModel**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new SelectFromModel(opts?: object): SelectFromModel;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`SelectFromModelOptions`](../interfaces/SelectFromModelOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.estimator?` | `any` | The base estimator from which the transformer is built. This can be both a fitted (if `prefit` is set to `true`) or a non-fitted estimator. The estimator should have a `feature\_importances\_` or `coef\_` attribute after fitting. Otherwise, the `importance\_getter` parameter should be used. |
+| `opts.importance_getter?` | `string` | If ‘auto’, uses the feature importance either through a `coef\_` attribute or `feature\_importances\_` attribute of estimator.  Also accepts a string that specifies an attribute name/path for extracting feature importance (implemented with `attrgetter`). For example, give `regressor\_.coef\_` in case of [`TransformedTargetRegressor`](sklearn.compose.TransformedTargetRegressor.html#sklearn.compose.TransformedTargetRegressor "sklearn.compose.TransformedTargetRegressor") or `named\_steps.clf.feature\_importances\_` in case of [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") with its last step named `clf`.  If `callable`, overrides the default feature importance getter. The callable is passed with the fitted estimator and it should return importance for each feature.  `Default Value`  `'auto'` |
+| `opts.max_features?` | `number` | The maximum number of features to select. |
+| `opts.norm_order?` | `any` | Order of the norm used to filter the vectors of coefficients below `threshold` in the case where the `coef\_` attribute of the estimator is of dimension 2.  `Default Value`  `1` |
+| `opts.prefit?` | `boolean` | Whether a prefit model is expected to be passed into the constructor directly or not. If `true`, `estimator` must be a fitted estimator. If `false`, `estimator` is fitted and updated by calling `fit` and `partial\_fit`, respectively.  `Default Value`  `false` |
+| `opts.threshold?` | `string` \| `number` | The threshold value to use for feature selection. Features whose absolute importance value is greater or equal are kept while the others are discarded. If “median” (resp. “mean”), then the `threshold` value is the median (resp. the mean) of the feature importances. A scaling factor (e.g., “1.25\*mean”) may also be used. If `undefined` and if the estimator has a parameter penalty set to l1, either explicitly or implicitly (e.g, Lasso), the threshold used is 1e-5. Otherwise, “mean” is used by default. |
 
-[generated/feature_selection/SelectFromModel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L21)
+### Returns
+
+[`SelectFromModel`](SelectFromModel.md)
+
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L21)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/feature_selection/SelectFromModel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L19)
-
-___
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L19)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/feature_selection/SelectFromModel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L18)
-
-___
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L18)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/feature_selection/SelectFromModel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L17)
-
-___
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L17)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/feature_selection/SelectFromModel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L14)
-
-___
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L14)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/feature_selection/SelectFromModel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L15)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L15)
 
 ## Accessors
 
 ### estimator\_
 
-• `get` **estimator_**(): `Promise`<`any`\>
-
 The base estimator from which the transformer is built. This attribute exist only when `fit` has been called.
+
+#### Signature
+
+```ts
+estimator_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L457)
 
-[generated/feature_selection/SelectFromModel.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L351)
-
-___
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L457)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L507)
 
-[generated/feature_selection/SelectFromModel.ts:401](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L401)
-
-___
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L507)
 
 ### max\_features\_
 
-• `get` **max_features_**(): `Promise`<`number`\>
-
 Maximum number of features calculated during [fit](../../glossary.html#term-fit). Only defined if the `max\_features` is not `undefined`.
+
+#### Signature
+
+```ts
+max_features_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L482)
 
-[generated/feature_selection/SelectFromModel.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L376)
-
-___
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L482)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66)
 
-[generated/feature_selection/SelectFromModel.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L26)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -182,127 +150,139 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L70)
 
-[generated/feature_selection/SelectFromModel.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L30)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L66) [generated/feature\_selection/SelectFromModel.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L70)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L123)
 
-[generated/feature_selection/SelectFromModel.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L83)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the SelectFromModel meta-transformer.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelFitOptions`](../interfaces/SelectFromModelFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The training input samples. |
+| `opts.fit_params?` | `any` | Other estimator specific parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target values (integers that correspond to classes in classification, real numbers in regression). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L140)
 
-[generated/feature_selection/SelectFromModel.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L100)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelFitTransformOptions`](../interfaces/SelectFromModelFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L189)
 
-[generated/feature_selection/SelectFromModel.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L134)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Mask feature names according to selected features.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelGetFeatureNamesOutOptions`](../interfaces/SelectFromModelGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L236)
 
-[generated/feature_selection/SelectFromModel.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L168)
-
-___
-
-### get\_support
-
-▸ **get_support**(`opts`): `Promise`<`any`\>
+### get\_support()
 
 Get a mask, or integer index, of the features selected.
 
+#### Signature
+
+```ts
+get_support(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelGetSupportOptions`](../interfaces/SelectFromModelGetSupportOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.indices?` | `boolean` | If `true`, the return value will be an array of integers, rather than a boolean mask.  `Default Value`  `false` |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L272)
 
-[generated/feature_selection/SelectFromModel.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L201)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -312,98 +292,102 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L79)
 
-[generated/feature_selection/SelectFromModel.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L39)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<`any`\>
+### inverse\_transform()
 
 Reverse the transformation operation.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelInverseTransformOptions`](../interfaces/SelectFromModelInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The input samples. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L307)
 
-[generated/feature_selection/SelectFromModel.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L229)
-
-___
-
-### partial\_fit
-
-▸ **partial_fit**(`opts`): `Promise`<`any`\>
+### partial\_fit()
 
 Fit the SelectFromModel meta-transformer only once.
 
+#### Signature
+
+```ts
+partial_fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelPartialFitOptions`](../interfaces/SelectFromModelPartialFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The training input samples. |
+| `opts.fit_params?` | `any` | Other estimator specific parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target values (integers that correspond to classes in classification, real numbers in regression). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L342)
 
-[generated/feature_selection/SelectFromModel.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L261)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelSetOutputOptions`](../interfaces/SelectFromModelSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L391)
 
-[generated/feature_selection/SelectFromModel.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L295)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<`any`\>
+### transform()
 
 Reduce X to the selected features.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SelectFromModelTransformOptions`](../interfaces/SelectFromModelTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | The input samples. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/feature_selection/SelectFromModel.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L323)
+Defined in:  [generated/feature\_selection/SelectFromModel.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_selection/SelectFromModel.ts#L424)

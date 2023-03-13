@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../../visualizations.html#visualizations).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html)
  */
 export class PrecisionRecallDisplay {
   id: string
@@ -22,7 +22,32 @@ export class PrecisionRecallDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PrecisionRecallDisplayOptions) {
+  constructor(opts?: {
+    /**
+      Precision values.
+     */
+    precision?: NDArray
+
+    /**
+      Recall values.
+     */
+    recall?: NDArray
+
+    /**
+      Average precision. If `undefined`, the average precision is not shown.
+     */
+    average_precision?: number
+
+    /**
+      Name of estimator. If `undefined`, then the estimator name is not shown.
+     */
+    estimator_name?: string
+
+    /**
+      The class considered as the positive class. If `undefined`, the class will not be shown in the legend.
+     */
+    pos_label?: string | number
+  }) {
     this.id = `PrecisionRecallDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,9 +134,54 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
   /**
     Plot precision-recall curve given an estimator and some data.
    */
-  async from_estimator(
-    opts: PrecisionRecallDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+     */
+    estimator?: any
+
+    /**
+      Input values.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
+     */
+    pos_label?: string | number
+
+    /**
+      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
+
+      @defaultValue `'auto'`
+     */
+    response_method?: 'predict_proba' | 'decision_function' | 'auto'
+
+    /**
+      Name for labeling curve. If `undefined`, no name is used.
+     */
+    name?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot`.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PrecisionRecallDisplay instance has already been disposed'
@@ -156,9 +226,42 @@ pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecal
   /**
     Plot precision-recall curve given binary class predictions.
    */
-  async from_predictions(
-    opts: PrecisionRecallDisplayFromPredictionsOptions
-  ): Promise<any> {
+  async from_predictions(opts: {
+    /**
+      True binary labels.
+     */
+    y_true?: ArrayLike
+
+    /**
+      Estimated probabilities or output of decision function.
+     */
+    y_pred?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      The class considered as the positive class when computing the precision and recall metrics.
+     */
+    pos_label?: string | number
+
+    /**
+      Name for labeling curve. If `undefined`, name will be set to `"Classifier"`.
+     */
+    name?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot`.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PrecisionRecallDisplay instance has already been disposed'
@@ -203,7 +306,22 @@ pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRec
 
     Extra keyword arguments will be passed to matplotlib’s `plot`.
    */
-  async plot(opts: PrecisionRecallDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Name of precision recall curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
+     */
+    name?: string
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot`.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This PrecisionRecallDisplay instance has already been disposed'
@@ -312,134 +430,4 @@ pms_PrecisionRecallDisplay_plot = {k: v for k, v in pms_PrecisionRecallDisplay_p
         ._py`attr_PrecisionRecallDisplay_figure_.tolist() if hasattr(attr_PrecisionRecallDisplay_figure_, 'tolist') else attr_PrecisionRecallDisplay_figure_`
     })()
   }
-}
-
-export interface PrecisionRecallDisplayOptions {
-  /**
-    Precision values.
-   */
-  precision?: NDArray
-
-  /**
-    Recall values.
-   */
-  recall?: NDArray
-
-  /**
-    Average precision. If `undefined`, the average precision is not shown.
-   */
-  average_precision?: number
-
-  /**
-    Name of estimator. If `undefined`, then the estimator name is not shown.
-   */
-  estimator_name?: string
-
-  /**
-    The class considered as the positive class. If `undefined`, the class will not be shown in the legend.
-   */
-  pos_label?: string | number
-}
-
-export interface PrecisionRecallDisplayFromEstimatorOptions {
-  /**
-    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
-   */
-  estimator?: any
-
-  /**
-    Input values.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
-   */
-  pos_label?: string | number
-
-  /**
-    Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
-
-    @defaultValue `'auto'`
-   */
-  response_method?: 'predict_proba' | 'decision_function' | 'auto'
-
-  /**
-    Name for labeling curve. If `undefined`, no name is used.
-   */
-  name?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Keyword arguments to be passed to matplotlib’s `plot`.
-   */
-  kwargs?: any
-}
-
-export interface PrecisionRecallDisplayFromPredictionsOptions {
-  /**
-    True binary labels.
-   */
-  y_true?: ArrayLike
-
-  /**
-    Estimated probabilities or output of decision function.
-   */
-  y_pred?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    The class considered as the positive class when computing the precision and recall metrics.
-   */
-  pos_label?: string | number
-
-  /**
-    Name for labeling curve. If `undefined`, name will be set to `"Classifier"`.
-   */
-  name?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Keyword arguments to be passed to matplotlib’s `plot`.
-   */
-  kwargs?: any
-}
-
-export interface PrecisionRecallDisplayPlotOptions {
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Name of precision recall curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown.
-   */
-  name?: string
-
-  /**
-    Keyword arguments to be passed to matplotlib’s `plot`.
-   */
-  kwargs?: any
 }

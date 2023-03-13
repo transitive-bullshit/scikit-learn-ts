@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note: If a lambda is used as the function, then the resulting transformer will not be pickleable.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html)
  */
 export class FunctionTransformer {
   id: string
@@ -22,7 +22,55 @@ export class FunctionTransformer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: FunctionTransformerOptions) {
+  constructor(opts?: {
+    /**
+      The callable to use for the transformation. This will be passed the same arguments as transform, with args and kwargs forwarded. If func is `undefined`, then func will be the identity function.
+     */
+    func?: any
+
+    /**
+      The callable to use for the inverse transformation. This will be passed the same arguments as inverse transform, with args and kwargs forwarded. If inverse\_func is `undefined`, then inverse\_func will be the identity function.
+     */
+    inverse_func?: any
+
+    /**
+      Indicate that the input X array should be checked before calling `func`. The possibilities are:
+
+      @defaultValue `false`
+     */
+    validate?: boolean
+
+    /**
+      Indicate that func accepts a sparse matrix as input. If validate is `false`, this has no effect. Otherwise, if accept\_sparse is false, sparse matrix inputs will cause an exception to be raised.
+
+      @defaultValue `false`
+     */
+    accept_sparse?: boolean
+
+    /**
+      Whether to check that or `func` followed by `inverse\_func` leads to the original inputs. It can be used for a sanity check, raising a warning when the condition is not fulfilled.
+
+      @defaultValue `true`
+     */
+    check_inverse?: boolean
+
+    /**
+      Determines the list of feature names that will be returned by the `get\_feature\_names\_out` method. If it is ‘one-to-one’, then the output feature names will be equal to the input feature names. If it is a callable, then it must take two positional arguments: this `FunctionTransformer` (`self`) and an array-like of input feature names (`input\_features`). It must return an array-like of output feature names. The `get\_feature\_names\_out` method is only defined if `feature\_names\_out` is not `undefined`.
+
+      See `get\_feature\_names\_out` for more details.
+     */
+    feature_names_out?: 'one-to-one'
+
+    /**
+      Dictionary of additional keyword arguments to pass to func.
+     */
+    kw_args?: any
+
+    /**
+      Dictionary of additional keyword arguments to pass to inverse\_func.
+     */
+    inv_kw_args?: any
+  }) {
     this.id = `FunctionTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -113,7 +161,17 @@ ctor_FunctionTransformer = {k: v for k, v in ctor_FunctionTransformer.items() if
 
     If `validate` is `true`, `X` will be checked.
    */
-  async fit(opts: FunctionTransformerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Input array.
+     */
+    X?: any
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This FunctionTransformer instance has already been disposed'
@@ -145,9 +203,22 @@ pms_FunctionTransformer_fit = {k: v for k, v in pms_FunctionTransformer_fit.item
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: FunctionTransformerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This FunctionTransformer instance has already been disposed'
@@ -185,9 +256,12 @@ pms_FunctionTransformer_fit_transform = {k: v for k, v in pms_FunctionTransforme
 
     This method is only defined if `feature\_names\_out` is not `undefined`.
    */
-  async get_feature_names_out(
-    opts: FunctionTransformerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input feature names.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This FunctionTransformer instance has already been disposed'
@@ -220,9 +294,12 @@ pms_FunctionTransformer_get_feature_names_out = {k: v for k, v in pms_FunctionTr
   /**
     Transform X using the inverse function.
    */
-  async inverse_transform(
-    opts: FunctionTransformerInverseTransformOptions
-  ): Promise<ArrayLike> {
+  async inverse_transform(opts: {
+    /**
+      Input array.
+     */
+    X?: any
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This FunctionTransformer instance has already been disposed'
@@ -257,7 +334,12 @@ pms_FunctionTransformer_inverse_transform = {k: v for k, v in pms_FunctionTransf
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: FunctionTransformerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This FunctionTransformer instance has already been disposed'
@@ -289,9 +371,12 @@ pms_FunctionTransformer_set_output = {k: v for k, v in pms_FunctionTransformer_s
   /**
     Transform X using the forward function.
    */
-  async transform(
-    opts: FunctionTransformerTransformOptions
-  ): Promise<ArrayLike> {
+  async transform(opts: {
+    /**
+      Input array.
+     */
+    X?: any
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This FunctionTransformer instance has already been disposed'
@@ -371,111 +456,4 @@ pms_FunctionTransformer_transform = {k: v for k, v in pms_FunctionTransformer_tr
         ._py`attr_FunctionTransformer_feature_names_in_.tolist() if hasattr(attr_FunctionTransformer_feature_names_in_, 'tolist') else attr_FunctionTransformer_feature_names_in_`
     })()
   }
-}
-
-export interface FunctionTransformerOptions {
-  /**
-    The callable to use for the transformation. This will be passed the same arguments as transform, with args and kwargs forwarded. If func is `undefined`, then func will be the identity function.
-   */
-  func?: any
-
-  /**
-    The callable to use for the inverse transformation. This will be passed the same arguments as inverse transform, with args and kwargs forwarded. If inverse\_func is `undefined`, then inverse\_func will be the identity function.
-   */
-  inverse_func?: any
-
-  /**
-    Indicate that the input X array should be checked before calling `func`. The possibilities are:
-
-    @defaultValue `false`
-   */
-  validate?: boolean
-
-  /**
-    Indicate that func accepts a sparse matrix as input. If validate is `false`, this has no effect. Otherwise, if accept\_sparse is false, sparse matrix inputs will cause an exception to be raised.
-
-    @defaultValue `false`
-   */
-  accept_sparse?: boolean
-
-  /**
-    Whether to check that or `func` followed by `inverse\_func` leads to the original inputs. It can be used for a sanity check, raising a warning when the condition is not fulfilled.
-
-    @defaultValue `true`
-   */
-  check_inverse?: boolean
-
-  /**
-    Determines the list of feature names that will be returned by the `get\_feature\_names\_out` method. If it is ‘one-to-one’, then the output feature names will be equal to the input feature names. If it is a callable, then it must take two positional arguments: this `FunctionTransformer` (`self`) and an array-like of input feature names (`input\_features`). It must return an array-like of output feature names. The `get\_feature\_names\_out` method is only defined if `feature\_names\_out` is not `undefined`.
-
-    See `get\_feature\_names\_out` for more details.
-   */
-  feature_names_out?: 'one-to-one'
-
-  /**
-    Dictionary of additional keyword arguments to pass to func.
-   */
-  kw_args?: any
-
-  /**
-    Dictionary of additional keyword arguments to pass to inverse\_func.
-   */
-  inv_kw_args?: any
-}
-
-export interface FunctionTransformerFitOptions {
-  /**
-    Input array.
-   */
-  X?: any
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface FunctionTransformerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface FunctionTransformerGetFeatureNamesOutOptions {
-  /**
-    Input feature names.
-   */
-  input_features?: any
-}
-
-export interface FunctionTransformerInverseTransformOptions {
-  /**
-    Input array.
-   */
-  X?: any
-}
-
-export interface FunctionTransformerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface FunctionTransformerTransformOptions {
-  /**
-    Input array.
-   */
-  X?: any
 }

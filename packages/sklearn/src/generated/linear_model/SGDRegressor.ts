@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../sgd.html#sgd).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html)
  */
 export class SGDRegressor {
   id: string
@@ -26,7 +26,144 @@ export class SGDRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SGDRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The loss function to be used. The possible values are ‘squared\_error’, ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’
+
+      The ‘squared\_error’ refers to the ordinary least squares fit. ‘huber’ modifies ‘squared\_error’ to focus less on getting outliers correct by switching from squared to linear loss past a distance of epsilon. ‘epsilon\_insensitive’ ignores errors less than epsilon and is linear past that; this is the loss function used in SVR. ‘squared\_epsilon\_insensitive’ is the same but becomes squared loss past a tolerance of epsilon.
+
+      More details about the losses formulas can be found in the [User Guide](../sgd.html#sgd-mathematical-formulation).
+
+      @defaultValue `'squared_error'`
+     */
+    loss?: string
+
+    /**
+      The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is the standard regularizer for linear SVM models. ‘l1’ and ‘elasticnet’ might bring sparsity to the model (feature selection) not achievable with ‘l2’. No penalty is added when set to `undefined`.
+
+      @defaultValue `'l2'`
+     */
+    penalty?: 'l2' | 'l1' | 'elasticnet'
+
+    /**
+      Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when set to `learning\_rate` is set to ‘optimal’.
+
+      @defaultValue `0.0001`
+     */
+    alpha?: number
+
+    /**
+      The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’.
+
+      @defaultValue `0.15`
+     */
+    l1_ratio?: number
+
+    /**
+      Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDRegressor.partial_fit "sklearn.linear_model.SGDRegressor.partial_fit") method.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Whether or not the training data should be shuffled after each epoch.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      The verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold.
+
+      @defaultValue `0.1`
+     */
+    epsilon?: number
+
+    /**
+      Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The learning rate schedule:
+
+      @defaultValue `'invscaling'`
+     */
+    learning_rate?: string
+
+    /**
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.01.
+
+      @defaultValue `0.01`
+     */
+    eta0?: number
+
+    /**
+      The exponent for inverse scaling learning rate.
+
+      @defaultValue `0.25`
+     */
+    power_t?: number
+
+    /**
+      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs.
+
+      @defaultValue `false`
+     */
+    early_stopping?: boolean
+
+    /**
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
+
+      @defaultValue `5`
+     */
+    n_iter_no_change?: number
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples.
+
+      @defaultValue `false`
+     */
+    average?: boolean | number
+  }) {
     this.id = `SGDRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -123,7 +260,7 @@ ctor_SGDRegressor = {k: v for k, v in ctor_SGDRegressor.items() if v is not None
 
     Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
-  async densify(opts: SGDRegressorDensifyOptions): Promise<any> {
+  async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDRegressor instance has already been disposed')
     }
@@ -149,7 +286,32 @@ pms_SGDRegressor_densify = {k: v for k, v in pms_SGDRegressor_densify.items() if
   /**
     Fit linear model with Stochastic Gradient Descent.
    */
-  async fit(opts: SGDRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Target values.
+     */
+    y?: NDArray
+
+    /**
+      The initial coefficients to warm-start the optimization.
+     */
+    coef_init?: NDArray
+
+    /**
+      The initial intercept to warm-start the optimization.
+     */
+    intercept_init?: NDArray
+
+    /**
+      Weights applied to individual samples (1. for unweighted).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDRegressor instance has already been disposed')
     }
@@ -187,7 +349,22 @@ pms_SGDRegressor_fit = {k: v for k, v in pms_SGDRegressor_fit.items() if v is no
 
     Internally, this method uses `max\_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence and early stopping should be handled by the user.
    */
-  async partial_fit(opts: SGDRegressorPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Subset of training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Subset of target values.
+     */
+    y?: any[]
+
+    /**
+      Weights applied to individual samples. If not provided, uniform weights are assumed.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDRegressor instance has already been disposed')
     }
@@ -217,7 +394,12 @@ pms_SGDRegressor_partial_fit = {k: v for k, v in pms_SGDRegressor_partial_fit.it
   /**
     Predict using the linear model.
    */
-  async predict(opts: SGDRegressorPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDRegressor instance has already been disposed')
     }
@@ -247,7 +429,22 @@ pms_SGDRegressor_predict = {k: v for k, v in pms_SGDRegressor_predict.items() if
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: SGDRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This SGDRegressor instance has already been disposed')
     }
@@ -283,7 +480,7 @@ pms_SGDRegressor_score = {k: v for k, v in pms_SGDRegressor_score.items() if v i
 
     The `intercept\_` member is not converted.
    */
-  async sparsify(opts: SGDRegressorSparsifyOptions): Promise<any> {
+  async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDRegressor instance has already been disposed')
     }
@@ -450,214 +647,3 @@ pms_SGDRegressor_sparsify = {k: v for k, v in pms_SGDRegressor_sparsify.items() 
     })()
   }
 }
-
-export interface SGDRegressorOptions {
-  /**
-    The loss function to be used. The possible values are ‘squared\_error’, ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’
-
-    The ‘squared\_error’ refers to the ordinary least squares fit. ‘huber’ modifies ‘squared\_error’ to focus less on getting outliers correct by switching from squared to linear loss past a distance of epsilon. ‘epsilon\_insensitive’ ignores errors less than epsilon and is linear past that; this is the loss function used in SVR. ‘squared\_epsilon\_insensitive’ is the same but becomes squared loss past a tolerance of epsilon.
-
-    More details about the losses formulas can be found in the [User Guide](../sgd.html#sgd-mathematical-formulation).
-
-    @defaultValue `'squared_error'`
-   */
-  loss?: string
-
-  /**
-    The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is the standard regularizer for linear SVM models. ‘l1’ and ‘elasticnet’ might bring sparsity to the model (feature selection) not achievable with ‘l2’. No penalty is added when set to `undefined`.
-
-    @defaultValue `'l2'`
-   */
-  penalty?: 'l2' | 'l1' | 'elasticnet'
-
-  /**
-    Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when set to `learning\_rate` is set to ‘optimal’.
-
-    @defaultValue `0.0001`
-   */
-  alpha?: number
-
-  /**
-    The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’.
-
-    @defaultValue `0.15`
-   */
-  l1_ratio?: number
-
-  /**
-    Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDRegressor.partial_fit "sklearn.linear_model.SGDRegressor.partial_fit") method.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Whether or not the training data should be shuffled after each epoch.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    The verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold.
-
-    @defaultValue `0.1`
-   */
-  epsilon?: number
-
-  /**
-    Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The learning rate schedule:
-
-    @defaultValue `'invscaling'`
-   */
-  learning_rate?: string
-
-  /**
-    The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.01.
-
-    @defaultValue `0.01`
-   */
-  eta0?: number
-
-  /**
-    The exponent for inverse scaling learning rate.
-
-    @defaultValue `0.25`
-   */
-  power_t?: number
-
-  /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs.
-
-    @defaultValue `false`
-   */
-  early_stopping?: boolean
-
-  /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter.
-
-    @defaultValue `5`
-   */
-  n_iter_no_change?: number
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples.
-
-    @defaultValue `false`
-   */
-  average?: boolean | number
-}
-
-export interface SGDRegressorDensifyOptions {}
-
-export interface SGDRegressorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Target values.
-   */
-  y?: NDArray
-
-  /**
-    The initial coefficients to warm-start the optimization.
-   */
-  coef_init?: NDArray
-
-  /**
-    The initial intercept to warm-start the optimization.
-   */
-  intercept_init?: NDArray
-
-  /**
-    Weights applied to individual samples (1. for unweighted).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDRegressorPartialFitOptions {
-  /**
-    Subset of training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Subset of target values.
-   */
-  y?: any[]
-
-  /**
-    Weights applied to individual samples. If not provided, uniform weights are assumed.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDRegressorPredictOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface SGDRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDRegressorSparsifyOptions {}

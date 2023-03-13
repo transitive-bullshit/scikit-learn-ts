@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   In addition to standard scikit-learn estimator API, [`GaussianProcessRegressor`](#sklearn.gaussian_process.GaussianProcessRegressor "sklearn.gaussian_process.GaussianProcessRegressor"):
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html)
  */
 export class GaussianProcessRegressor {
   id: string
@@ -22,7 +22,52 @@ export class GaussianProcessRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GaussianProcessRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
+     */
+    kernel?: any
+
+    /**
+      Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a `WhiteKernel`. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with [`Ridge`](sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge "sklearn.linear_model.Ridge").
+
+      @defaultValue `1e-10`
+     */
+    alpha?: number | NDArray
+
+    /**
+      Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:
+
+      @defaultValue `'fmin_l_bfgs_b'`
+     */
+    optimizer?: 'fmin_l_bfgs_b'
+
+    /**
+      The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n\_restarts\_optimizer \== 0` implies that one run is performed.
+
+      @defaultValue `0`
+     */
+    n_restarts_optimizer?: number
+
+    /**
+      Whether or not to normalize the target values `y` by removing the mean and scaling to unit-variance. This is recommended for cases where zero-mean, unit-variance priors are used. Note that, in this implementation, the normalisation is reversed before the GP predictions are reported.
+
+      @defaultValue `false`
+     */
+    normalize_y?: boolean
+
+    /**
+      If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
+
+      @defaultValue `true`
+     */
+    copy_X_train?: boolean
+
+    /**
+      Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `GaussianProcessRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -111,7 +156,17 @@ ctor_GaussianProcessRegressor = {k: v for k, v in ctor_GaussianProcessRegressor.
   /**
     Fit Gaussian process regression model.
    */
-  async fit(opts: GaussianProcessRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Feature vectors or other representations of training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessRegressor instance has already been disposed'
@@ -143,9 +198,26 @@ pms_GaussianProcessRegressor_fit = {k: v for k, v in pms_GaussianProcessRegresso
   /**
     Return log-marginal likelihood of theta for training data.
    */
-  async log_marginal_likelihood(
-    opts: GaussianProcessRegressorLogMarginalLikelihoodOptions
-  ): Promise<number> {
+  async log_marginal_likelihood(opts: {
+    /**
+      Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
+     */
+    theta?: any
+
+    /**
+      If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. If `true`, theta must not be `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+
+    /**
+      If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.
+
+      @defaultValue `true`
+     */
+    clone_kernel?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessRegressor instance has already been disposed'
@@ -182,9 +254,26 @@ pms_GaussianProcessRegressor_log_marginal_likelihood = {k: v for k, v in pms_Gau
 
     We can also predict based on an unfitted model by using the GP prior. In addition to the mean of the predictive distribution, optionally also returns its standard deviation (`return\_std=True`) or covariance (`return\_cov=True`). Note that at most one of the two can be requested.
    */
-  async predict(
-    opts: GaussianProcessRegressorPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Query points where the GP is evaluated.
+     */
+    X?: ArrayLike[]
+
+    /**
+      If `true`, the standard-deviation of the predictive distribution at the query points is returned along with the mean.
+
+      @defaultValue `false`
+     */
+    return_std?: boolean
+
+    /**
+      If `true`, the covariance of the joint predictive distribution at the query points is returned along with the mean.
+
+      @defaultValue `false`
+     */
+    return_cov?: boolean
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessRegressor instance has already been disposed'
@@ -218,7 +307,26 @@ pms_GaussianProcessRegressor_predict = {k: v for k, v in pms_GaussianProcessRegr
   /**
     Draw samples from Gaussian process and evaluate at X.
    */
-  async sample_y(opts: GaussianProcessRegressorSampleYOptions): Promise<any> {
+  async sample_y(opts: {
+    /**
+      Query points where the GP is evaluated.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Number of samples drawn from the Gaussian process per query point.
+
+      @defaultValue `1`
+     */
+    n_samples?: number
+
+    /**
+      Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+
+      @defaultValue `0`
+     */
+    random_state?: number
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessRegressor instance has already been disposed'
@@ -254,7 +362,22 @@ pms_GaussianProcessRegressor_sample_y = {k: v for k, v in pms_GaussianProcessReg
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: GaussianProcessRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessRegressor instance has already been disposed'
@@ -502,143 +625,4 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
         ._py`attr_GaussianProcessRegressor_feature_names_in_.tolist() if hasattr(attr_GaussianProcessRegressor_feature_names_in_, 'tolist') else attr_GaussianProcessRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface GaussianProcessRegressorOptions {
-  /**
-    The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”.
-   */
-  kernel?: any
-
-  /**
-    Value added to the diagonal of the kernel matrix during fitting. This can prevent a potential numerical issue during fitting, by ensuring that the calculated values form a positive definite matrix. It can also be interpreted as the variance of additional Gaussian measurement noise on the training observations. Note that this is different from using a `WhiteKernel`. If an array is passed, it must have the same number of entries as the data used for fitting and is used as datapoint-dependent noise level. Allowing to specify the noise level directly as a parameter is mainly for convenience and for consistency with [`Ridge`](sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge "sklearn.linear_model.Ridge").
-
-    @defaultValue `1e-10`
-   */
-  alpha?: number | NDArray
-
-  /**
-    Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:
-
-    @defaultValue `'fmin_l_bfgs_b'`
-   */
-  optimizer?: 'fmin_l_bfgs_b'
-
-  /**
-    The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n\_restarts\_optimizer \== 0` implies that one run is performed.
-
-    @defaultValue `0`
-   */
-  n_restarts_optimizer?: number
-
-  /**
-    Whether or not to normalize the target values `y` by removing the mean and scaling to unit-variance. This is recommended for cases where zero-mean, unit-variance priors are used. Note that, in this implementation, the normalisation is reversed before the GP predictions are reported.
-
-    @defaultValue `false`
-   */
-  normalize_y?: boolean
-
-  /**
-    If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
-
-    @defaultValue `true`
-   */
-  copy_X_train?: boolean
-
-  /**
-    Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface GaussianProcessRegressorFitOptions {
-  /**
-    Feature vectors or other representations of training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-}
-
-export interface GaussianProcessRegressorLogMarginalLikelihoodOptions {
-  /**
-    Kernel hyperparameters for which the log-marginal likelihood is evaluated. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
-   */
-  theta?: any
-
-  /**
-    If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. If `true`, theta must not be `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-
-  /**
-    If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.
-
-    @defaultValue `true`
-   */
-  clone_kernel?: boolean
-}
-
-export interface GaussianProcessRegressorPredictOptions {
-  /**
-    Query points where the GP is evaluated.
-   */
-  X?: ArrayLike[]
-
-  /**
-    If `true`, the standard-deviation of the predictive distribution at the query points is returned along with the mean.
-
-    @defaultValue `false`
-   */
-  return_std?: boolean
-
-  /**
-    If `true`, the covariance of the joint predictive distribution at the query points is returned along with the mean.
-
-    @defaultValue `false`
-   */
-  return_cov?: boolean
-}
-
-export interface GaussianProcessRegressorSampleYOptions {
-  /**
-    Query points where the GP is evaluated.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Number of samples drawn from the Gaussian process per query point.
-
-    @defaultValue `1`
-   */
-  n_samples?: number
-
-  /**
-    Determines random number generation to randomly draw samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-
-    @defaultValue `0`
-   */
-  random_state?: number
-}
-
-export interface GaussianProcessRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

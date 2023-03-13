@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../semi_supervised.html#label-propagation).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelPropagation.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelPropagation.html)
  */
 export class LabelPropagation {
   id: string
@@ -20,7 +20,45 @@ export class LabelPropagation {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LabelPropagationOptions) {
+  constructor(opts?: {
+    /**
+      String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.
+
+      @defaultValue `'rbf'`
+     */
+    kernel?: 'knn' | 'rbf'
+
+    /**
+      Parameter for rbf kernel.
+
+      @defaultValue `20`
+     */
+    gamma?: number
+
+    /**
+      Parameter for knn kernel which need to be strictly positive.
+
+      @defaultValue `7`
+     */
+    n_neighbors?: number
+
+    /**
+      Change maximum number of iterations allowed.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      Convergence tolerance: threshold to consider the system at steady state.
+     */
+    tol?: number
+
+    /**
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `LabelPropagation${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +139,17 @@ ctor_LabelPropagation = {k: v for k, v in ctor_LabelPropagation.items() if v is 
   /**
     Fit a semi-supervised label propagation model to X.
    */
-  async fit(opts: LabelPropagationFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LabelPropagation instance has already been disposed'
@@ -133,7 +181,12 @@ pms_LabelPropagation_fit = {k: v for k, v in pms_LabelPropagation_fit.items() if
   /**
     Perform inductive inference across the model.
    */
-  async predict(opts: LabelPropagationPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LabelPropagation instance has already been disposed'
@@ -165,9 +218,12 @@ pms_LabelPropagation_predict = {k: v for k, v in pms_LabelPropagation_predict.it
 
     Compute the probability estimates for each single sample in X and each possible outcome seen during training (categorical distribution).
    */
-  async predict_proba(
-    opts: LabelPropagationPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LabelPropagation instance has already been disposed'
@@ -201,7 +257,22 @@ pms_LabelPropagation_predict_proba = {k: v for k, v in pms_LabelPropagation_pred
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: LabelPropagationScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This LabelPropagation instance has already been disposed'
@@ -418,87 +489,4 @@ pms_LabelPropagation_score = {k: v for k, v in pms_LabelPropagation_score.items(
         ._py`attr_LabelPropagation_n_iter_.tolist() if hasattr(attr_LabelPropagation_n_iter_, 'tolist') else attr_LabelPropagation_n_iter_`
     })()
   }
-}
-
-export interface LabelPropagationOptions {
-  /**
-    String identifier for kernel function to use or the kernel function itself. Only ‘rbf’ and ‘knn’ strings are valid inputs. The function passed should take two inputs, each of shape (n\_samples, n\_features), and return a (n\_samples, n\_samples) shaped weight matrix.
-
-    @defaultValue `'rbf'`
-   */
-  kernel?: 'knn' | 'rbf'
-
-  /**
-    Parameter for rbf kernel.
-
-    @defaultValue `20`
-   */
-  gamma?: number
-
-  /**
-    Parameter for knn kernel which need to be strictly positive.
-
-    @defaultValue `7`
-   */
-  n_neighbors?: number
-
-  /**
-    Change maximum number of iterations allowed.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    Convergence tolerance: threshold to consider the system at steady state.
-   */
-  tol?: number
-
-  /**
-    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface LabelPropagationFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target class values with unlabeled points marked as -1. All unlabeled samples will be transductively assigned labels internally, which are stored in `transduction\_`.
-   */
-  y?: ArrayLike
-}
-
-export interface LabelPropagationPredictOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LabelPropagationPredictProbaOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LabelPropagationScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../biclustering.html#spectral-coclustering).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralCoclustering.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralCoclustering.html)
  */
 export class SpectralCoclustering {
   id: string
@@ -26,7 +26,54 @@ export class SpectralCoclustering {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SpectralCoclusteringOptions) {
+  constructor(opts?: {
+    /**
+      The number of biclusters to find.
+
+      @defaultValue `3`
+     */
+    n_clusters?: number
+
+    /**
+      Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.10.1)"), which is more accurate, but possibly slower in some cases.
+
+      @defaultValue `'randomized'`
+     */
+    svd_method?: 'randomized' | 'arpack'
+
+    /**
+      Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized\`.
+     */
+    n_svd_vecs?: number
+
+    /**
+      Whether to use mini-batch k-means, which is faster but may get different results.
+
+      @defaultValue `false`
+     */
+    mini_batch?: boolean
+
+    /**
+      Method for initialization of k-means algorithm; defaults to ‘k-means++’.
+
+      @defaultValue `'k-means++'`
+     */
+    init?: NDArray[]
+
+    /**
+      Number of random initializations that are tried with the k-means algorithm.
+
+      If mini-batch k-means is used, the best initialization is chosen and the algorithm runs once. Otherwise, the algorithm is run for each initialization and the best solution chosen.
+
+      @defaultValue `10`
+     */
+    n_init?: number
+
+    /**
+      Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `SpectralCoclustering${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -113,7 +160,17 @@ ctor_SpectralCoclustering = {k: v for k, v in ctor_SpectralCoclustering.items() 
   /**
     Create a biclustering for X.
    */
-  async fit(opts: SpectralCoclusteringFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralCoclustering instance has already been disposed'
@@ -145,9 +202,12 @@ pms_SpectralCoclustering_fit = {k: v for k, v in pms_SpectralCoclustering_fit.it
 
     Only works if `rows\_` and `columns\_` attributes exist.
    */
-  async get_indices(
-    opts: SpectralCoclusteringGetIndicesOptions
-  ): Promise<NDArray> {
+  async get_indices(opts: {
+    /**
+      The index of the cluster.
+     */
+    i?: number
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralCoclustering instance has already been disposed'
@@ -179,7 +239,12 @@ pms_SpectralCoclustering_get_indices = {k: v for k, v in pms_SpectralCoclusterin
   /**
     Shape of the `i`’th bicluster.
    */
-  async get_shape(opts: SpectralCoclusteringGetShapeOptions): Promise<number> {
+  async get_shape(opts: {
+    /**
+      The index of the cluster.
+     */
+    i?: number
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralCoclustering instance has already been disposed'
@@ -211,9 +276,17 @@ pms_SpectralCoclustering_get_shape = {k: v for k, v in pms_SpectralCoclustering_
   /**
     Return the submatrix corresponding to bicluster `i`.
    */
-  async get_submatrix(
-    opts: SpectralCoclusteringGetSubmatrixOptions
-  ): Promise<NDArray[]> {
+  async get_submatrix(opts: {
+    /**
+      The index of the cluster.
+     */
+    i?: number
+
+    /**
+      The data.
+     */
+    data?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralCoclustering instance has already been disposed'
@@ -405,91 +478,4 @@ pms_SpectralCoclustering_get_submatrix = {k: v for k, v in pms_SpectralCocluster
         ._py`attr_SpectralCoclustering_feature_names_in_.tolist() if hasattr(attr_SpectralCoclustering_feature_names_in_, 'tolist') else attr_SpectralCoclustering_feature_names_in_`
     })()
   }
-}
-
-export interface SpectralCoclusteringOptions {
-  /**
-    The number of biclusters to find.
-
-    @defaultValue `3`
-   */
-  n_clusters?: number
-
-  /**
-    Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.10.1)"), which is more accurate, but possibly slower in some cases.
-
-    @defaultValue `'randomized'`
-   */
-  svd_method?: 'randomized' | 'arpack'
-
-  /**
-    Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized\`.
-   */
-  n_svd_vecs?: number
-
-  /**
-    Whether to use mini-batch k-means, which is faster but may get different results.
-
-    @defaultValue `false`
-   */
-  mini_batch?: boolean
-
-  /**
-    Method for initialization of k-means algorithm; defaults to ‘k-means++’.
-
-    @defaultValue `'k-means++'`
-   */
-  init?: NDArray[]
-
-  /**
-    Number of random initializations that are tried with the k-means algorithm.
-
-    If mini-batch k-means is used, the best initialization is chosen and the algorithm runs once. Otherwise, the algorithm is run for each initialization and the best solution chosen.
-
-    @defaultValue `10`
-   */
-  n_init?: number
-
-  /**
-    Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface SpectralCoclusteringFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SpectralCoclusteringGetIndicesOptions {
-  /**
-    The index of the cluster.
-   */
-  i?: number
-}
-
-export interface SpectralCoclusteringGetShapeOptions {
-  /**
-    The index of the cluster.
-   */
-  i?: number
-}
-
-export interface SpectralCoclusteringGetSubmatrixOptions {
-  /**
-    The index of the cluster.
-   */
-  i?: number
-
-  /**
-    The data.
-   */
-  data?: ArrayLike[]
 }

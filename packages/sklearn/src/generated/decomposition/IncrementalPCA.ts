@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../decomposition.html#incrementalpca).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html)
  */
 export class IncrementalPCA {
   id: string
@@ -28,7 +28,33 @@ export class IncrementalPCA {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: IncrementalPCAOptions) {
+  constructor(opts?: {
+    /**
+      Number of components to keep. If `n\_components` is `undefined`, then `n\_components` is set to `min(n\_samples, n\_features)`.
+     */
+    n_components?: number
+
+    /**
+      When `true` (`false` by default) the `components\_` vectors are divided by `n\_samples` times `components\_` to ensure uncorrelated outputs with unit component-wise variances.
+
+      Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometimes improve the predictive accuracy of the downstream estimators by making data respect some hard-wired assumptions.
+
+      @defaultValue `false`
+     */
+    whiten?: boolean
+
+    /**
+      If `false`, X will be overwritten. `copy=False` can be used to save memory but is unsafe for general use.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      The number of samples to use for each batch. Only used when calling `fit`. If `batch\_size` is `undefined`, then `batch\_size` is inferred from the data and set to `5 \* n\_features`, to provide a balance between approximation accuracy and memory consumption.
+     */
+    batch_size?: number
+  }) {
     this.id = `IncrementalPCA${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +131,17 @@ ctor_IncrementalPCA = {k: v for k, v in ctor_IncrementalPCA.items() if v is not 
   /**
     Fit the model with X, using minibatches of size batch\_size.
    */
-  async fit(opts: IncrementalPCAFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -135,7 +171,22 @@ pms_IncrementalPCA_fit = {k: v for k, v in pms_IncrementalPCA_fit.items() if v i
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: IncrementalPCAFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -169,7 +220,12 @@ pms_IncrementalPCA_fit_transform = {k: v for k, v in pms_IncrementalPCA_fit_tran
 
     `cov \= components\_.T \* S\*\*2 \* components\_ + sigma2 \* eye(n\_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
    */
-  async get_covariance(opts: IncrementalPCAGetCovarianceOptions): Promise<any> {
+  async get_covariance(opts: {
+    /**
+      Estimated covariance of data.
+     */
+    cov?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -199,9 +255,12 @@ pms_IncrementalPCA_get_covariance = {k: v for k, v in pms_IncrementalPCA_get_cov
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: IncrementalPCAGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.IncrementalPCA.fit "sklearn.decomposition.IncrementalPCA.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -234,7 +293,12 @@ pms_IncrementalPCA_get_feature_names_out = {k: v for k, v in pms_IncrementalPCA_
 
     Equals the inverse of the covariance but computed with the matrix inversion lemma for efficiency.
    */
-  async get_precision(opts: IncrementalPCAGetPrecisionOptions): Promise<any> {
+  async get_precision(opts: {
+    /**
+      Estimated precision of data.
+     */
+    precision?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -264,9 +328,12 @@ pms_IncrementalPCA_get_precision = {k: v for k, v in pms_IncrementalPCA_get_prec
 
     In other words, return an input `X\_original` whose transform would be X.
    */
-  async inverse_transform(
-    opts: IncrementalPCAInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_components` is the number of components.
+     */
+    X?: ArrayLike[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -296,7 +363,24 @@ pms_IncrementalPCA_inverse_transform = {k: v for k, v in pms_IncrementalPCA_inve
   /**
     Incremental fit with X. All of X is processed as a single batch.
    */
-  async partial_fit(opts: IncrementalPCAPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Run check\_array on X.
+
+      @defaultValue `true`
+     */
+    check_input?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -328,7 +412,12 @@ pms_IncrementalPCA_partial_fit = {k: v for k, v in pms_IncrementalPCA_partial_fi
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: IncrementalPCASetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -358,7 +447,12 @@ pms_IncrementalPCA_set_output = {k: v for k, v in pms_IncrementalPCA_set_output.
 
     X is projected on the first principal components previously extracted from a training set, using minibatches of size batch\_size if X is sparse.
    */
-  async transform(opts: IncrementalPCATransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This IncrementalPCA instance has already been disposed')
     }
@@ -678,122 +772,4 @@ pms_IncrementalPCA_transform = {k: v for k, v in pms_IncrementalPCA_transform.it
         ._py`attr_IncrementalPCA_feature_names_in_.tolist() if hasattr(attr_IncrementalPCA_feature_names_in_, 'tolist') else attr_IncrementalPCA_feature_names_in_`
     })()
   }
-}
-
-export interface IncrementalPCAOptions {
-  /**
-    Number of components to keep. If `n\_components` is `undefined`, then `n\_components` is set to `min(n\_samples, n\_features)`.
-   */
-  n_components?: number
-
-  /**
-    When `true` (`false` by default) the `components\_` vectors are divided by `n\_samples` times `components\_` to ensure uncorrelated outputs with unit component-wise variances.
-
-    Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometimes improve the predictive accuracy of the downstream estimators by making data respect some hard-wired assumptions.
-
-    @defaultValue `false`
-   */
-  whiten?: boolean
-
-  /**
-    If `false`, X will be overwritten. `copy=False` can be used to save memory but is unsafe for general use.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    The number of samples to use for each batch. Only used when calling `fit`. If `batch\_size` is `undefined`, then `batch\_size` is inferred from the data and set to `5 \* n\_features`, to provide a balance between approximation accuracy and memory consumption.
-   */
-  batch_size?: number
-}
-
-export interface IncrementalPCAFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface IncrementalPCAFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface IncrementalPCAGetCovarianceOptions {
-  /**
-    Estimated covariance of data.
-   */
-  cov?: any
-}
-
-export interface IncrementalPCAGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.IncrementalPCA.fit "sklearn.decomposition.IncrementalPCA.fit").
-   */
-  input_features?: any
-}
-
-export interface IncrementalPCAGetPrecisionOptions {
-  /**
-    Estimated precision of data.
-   */
-  precision?: any
-}
-
-export interface IncrementalPCAInverseTransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_components` is the number of components.
-   */
-  X?: ArrayLike[]
-}
-
-export interface IncrementalPCAPartialFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Run check\_array on X.
-
-    @defaultValue `true`
-   */
-  check_input?: boolean
-}
-
-export interface IncrementalPCASetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface IncrementalPCATransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

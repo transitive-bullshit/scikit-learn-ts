@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_extraction.html#image-feature-extraction).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.image.PatchExtractor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.image.PatchExtractor.html)
  */
 export class PatchExtractor {
   id: string
@@ -20,7 +20,22 @@ export class PatchExtractor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PatchExtractorOptions) {
+  constructor(opts?: {
+    /**
+      The dimensions of one patch.
+     */
+    patch_size?: any
+
+    /**
+      The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches.
+     */
+    max_patches?: number
+
+    /**
+      Determines the random number generator used for random sampling when `max\_patches is not None`. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `PatchExtractor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +114,17 @@ ctor_PatchExtractor = {k: v for k, v in ctor_PatchExtractor.items() if v is not 
 
     This method is just there to implement the usual API and hence work in pipelines.
    */
-  async fit(opts: PatchExtractorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PatchExtractor instance has already been disposed')
     }
@@ -127,7 +152,12 @@ pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v i
   /**
     Transform the image samples in `X` into a matrix of patch data.
    */
-  async transform(opts: PatchExtractorTransformOptions): Promise<any[]> {
+  async transform(opts: {
+    /**
+      Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n\_channels=3`.
+     */
+    X?: NDArray[][]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This PatchExtractor instance has already been disposed')
     }
@@ -151,40 +181,4 @@ pms_PatchExtractor_transform = {k: v for k, v in pms_PatchExtractor_transform.it
     return this
       ._py`res_PatchExtractor_transform.tolist() if hasattr(res_PatchExtractor_transform, 'tolist') else res_PatchExtractor_transform`
   }
-}
-
-export interface PatchExtractorOptions {
-  /**
-    The dimensions of one patch.
-   */
-  patch_size?: any
-
-  /**
-    The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches.
-   */
-  max_patches?: number
-
-  /**
-    Determines the random number generator used for random sampling when `max\_patches is not None`. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface PatchExtractorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface PatchExtractorTransformOptions {
-  /**
-    Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n\_channels=3`.
-   */
-  X?: NDArray[][]
 }

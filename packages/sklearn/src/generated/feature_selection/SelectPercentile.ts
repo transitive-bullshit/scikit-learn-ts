@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html)
  */
 export class SelectPercentile {
   id: string
@@ -20,7 +20,19 @@ export class SelectPercentile {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SelectPercentileOptions) {
+  constructor(opts?: {
+    /**
+      Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
+     */
+    score_func?: any
+
+    /**
+      Percent of features to keep.
+
+      @defaultValue `10`
+     */
+    percentile?: number
+  }) {
     this.id = `SelectPercentile${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +109,17 @@ ctor_SelectPercentile = {k: v for k, v in ctor_SelectPercentile.items() if v is 
   /**
     Run score function on (X, y) and get the appropriate features.
    */
-  async fit(opts: SelectPercentileFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelectPercentile instance has already been disposed'
@@ -131,9 +153,22 @@ pms_SelectPercentile_fit = {k: v for k, v in pms_SelectPercentile_fit.items() if
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: SelectPercentileFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SelectPercentile instance has already been disposed'
@@ -169,9 +204,12 @@ pms_SelectPercentile_fit_transform = {k: v for k, v in pms_SelectPercentile_fit_
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: SelectPercentileGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelectPercentile instance has already been disposed'
@@ -204,7 +242,14 @@ pms_SelectPercentile_get_feature_names_out = {k: v for k, v in pms_SelectPercent
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(opts: SelectPercentileGetSupportOptions): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelectPercentile instance has already been disposed'
@@ -234,9 +279,12 @@ pms_SelectPercentile_get_support = {k: v for k, v in pms_SelectPercentile_get_su
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(
-    opts: SelectPercentileInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelectPercentile instance has already been disposed'
@@ -270,7 +318,12 @@ pms_SelectPercentile_inverse_transform = {k: v for k, v in pms_SelectPercentile_
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SelectPercentileSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelectPercentile instance has already been disposed'
@@ -300,7 +353,12 @@ pms_SelectPercentile_set_output = {k: v for k, v in pms_SelectPercentile_set_out
   /**
     Reduce X to the selected features.
    */
-  async transform(opts: SelectPercentileTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelectPercentile instance has already been disposed'
@@ -434,84 +492,4 @@ pms_SelectPercentile_transform = {k: v for k, v in pms_SelectPercentile_transfor
         ._py`attr_SelectPercentile_feature_names_in_.tolist() if hasattr(attr_SelectPercentile_feature_names_in_, 'tolist') else attr_SelectPercentile_feature_names_in_`
     })()
   }
-}
-
-export interface SelectPercentileOptions {
-  /**
-    Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues) or a single array with scores. Default is f\_classif (see below “See Also”). The default function only works with classification tasks.
-   */
-  score_func?: any
-
-  /**
-    Percent of features to keep.
-
-    @defaultValue `10`
-   */
-  percentile?: number
-}
-
-export interface SelectPercentileFitOptions {
-  /**
-    The training input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-}
-
-export interface SelectPercentileFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SelectPercentileGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface SelectPercentileGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface SelectPercentileInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface SelectPercentileSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SelectPercentileTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

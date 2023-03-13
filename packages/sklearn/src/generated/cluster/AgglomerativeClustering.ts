@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#hierarchical-clustering).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
  */
 export class AgglomerativeClustering {
   id: string
@@ -22,7 +22,62 @@ export class AgglomerativeClustering {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: AgglomerativeClusteringOptions) {
+  constructor(opts?: {
+    /**
+      The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.
+
+      @defaultValue `2`
+     */
+    n_clusters?: number
+
+    /**
+      The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
+
+      @defaultValue `'euclidean'`
+     */
+    affinity?: string
+
+    /**
+      Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
+     */
+    metric?: string
+
+    /**
+      Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
+     */
+    memory?: string
+
+    /**
+      Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
+     */
+    connectivity?: ArrayLike
+
+    /**
+      Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.
+
+      @defaultValue `'auto'`
+     */
+    compute_full_tree?: 'auto' | boolean
+
+    /**
+      Which linkage criterion to use. The linkage criterion determines which distance to use between sets of observation. The algorithm will merge the pairs of cluster that minimize this criterion.
+
+      @defaultValue `'ward'`
+     */
+    linkage?: 'ward' | 'complete' | 'average' | 'single'
+
+    /**
+      The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
+     */
+    distance_threshold?: number
+
+    /**
+      Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
+
+      @defaultValue `false`
+     */
+    compute_distances?: boolean
+  }) {
     this.id = `AgglomerativeClustering${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +164,17 @@ ctor_AgglomerativeClustering = {k: v for k, v in ctor_AgglomerativeClustering.it
   /**
     Fit the hierarchical clustering from features, or distance matrix.
    */
-  async fit(opts: AgglomerativeClusteringFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training instances to cluster, or distances between instances if `metric='precomputed'`.
+     */
+    X?: ArrayLike
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This AgglomerativeClustering instance has already been disposed'
@@ -141,9 +206,17 @@ pms_AgglomerativeClustering_fit = {k: v for k, v in pms_AgglomerativeClustering_
 
     In addition to fitting, this method also return the result of the clustering assignment for each sample in the training set.
    */
-  async fit_predict(
-    opts: AgglomerativeClusteringFitPredictOptions
-  ): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Training instances to cluster, or distances between instances if `affinity='precomputed'`.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This AgglomerativeClustering instance has already been disposed'
@@ -388,85 +461,4 @@ pms_AgglomerativeClustering_fit_predict = {k: v for k, v in pms_AgglomerativeClu
         ._py`attr_AgglomerativeClustering_distances_.tolist() if hasattr(attr_AgglomerativeClustering_distances_, 'tolist') else attr_AgglomerativeClustering_distances_`
     })()
   }
-}
-
-export interface AgglomerativeClusteringOptions {
-  /**
-    The number of clusters to find. It must be `undefined` if `distance\_threshold` is not `undefined`.
-
-    @defaultValue `2`
-   */
-  n_clusters?: number
-
-  /**
-    The metric to use when calculating distance between instances in a feature array. If metric is a string or callable, it must be one of the options allowed by [`sklearn.metrics.pairwise\_distances`](sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances "sklearn.metrics.pairwise_distances") for its metric parameter. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix (instead of a similarity matrix) is needed as input for the fit method.
-
-    @defaultValue `'euclidean'`
-   */
-  affinity?: string
-
-  /**
-    Metric used to compute the linkage. Can be “euclidean”, “l1”, “l2”, “manhattan”, “cosine”, or “precomputed”. If set to `undefined` then “euclidean” is used. If linkage is “ward”, only “euclidean” is accepted. If “precomputed”, a distance matrix is needed as input for the fit method.
-   */
-  metric?: string
-
-  /**
-    Used to cache the output of the computation of the tree. By default, no caching is done. If a string is given, it is the path to the caching directory.
-   */
-  memory?: string
-
-  /**
-    Connectivity matrix. Defines for each sample the neighboring samples following a given structure of the data. This can be a connectivity matrix itself or a callable that transforms the data into a connectivity matrix, such as derived from `kneighbors\_graph`. Default is `undefined`, i.e, the hierarchical clustering algorithm is unstructured.
-   */
-  connectivity?: ArrayLike
-
-  /**
-    Stop early the construction of the tree at `n\_clusters`. This is useful to decrease computation time if the number of clusters is not small compared to the number of samples. This option is useful only when specifying a connectivity matrix. Note also that when varying the number of clusters and using caching, it may be advantageous to compute the full tree. It must be `true` if `distance\_threshold` is not `undefined`. By default `compute\_full\_tree` is “auto”, which is equivalent to `true` when `distance\_threshold` is not `undefined` or that `n\_clusters` is inferior to the maximum between 100 or `0.02 \* n\_samples`. Otherwise, “auto” is equivalent to `false`.
-
-    @defaultValue `'auto'`
-   */
-  compute_full_tree?: 'auto' | boolean
-
-  /**
-    Which linkage criterion to use. The linkage criterion determines which distance to use between sets of observation. The algorithm will merge the pairs of cluster that minimize this criterion.
-
-    @defaultValue `'ward'`
-   */
-  linkage?: 'ward' | 'complete' | 'average' | 'single'
-
-  /**
-    The linkage distance threshold at or above which clusters will not be merged. If not `undefined`, `n\_clusters` must be `undefined` and `compute\_full\_tree` must be `true`.
-   */
-  distance_threshold?: number
-
-  /**
-    Computes distances between clusters even if `distance\_threshold` is not used. This can be used to make dendrogram visualization, but introduces a computational and memory overhead.
-
-    @defaultValue `false`
-   */
-  compute_distances?: boolean
-}
-
-export interface AgglomerativeClusteringFitOptions {
-  /**
-    Training instances to cluster, or distances between instances if `metric='precomputed'`.
-   */
-  X?: ArrayLike
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface AgglomerativeClusteringFitPredictOptions {
-  /**
-    Training instances to cluster, or distances between instances if `affinity='precomputed'`.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
 }

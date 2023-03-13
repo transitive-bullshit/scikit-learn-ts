@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../kernel_approximation.html#nystroem-kernel-approx).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.Nystroem.html)
  */
 export class Nystroem {
   id: string
@@ -22,7 +22,53 @@ export class Nystroem {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: NystroemOptions) {
+  constructor(opts?: {
+    /**
+      Kernel map to be approximated. A callable should accept two arguments and the keyword arguments passed to this object as `kernel\_params`, and should return a floating point number.
+
+      @defaultValue `'rbf'`
+     */
+    kernel?: string
+
+    /**
+      Gamma parameter for the RBF, laplacian, polynomial, exponential chi2 and sigmoid kernels. Interpretation of the default value is left to the kernel; see the documentation for sklearn.metrics.pairwise. Ignored by other kernels.
+     */
+    gamma?: number
+
+    /**
+      Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.
+     */
+    coef0?: number
+
+    /**
+      Degree of the polynomial kernel. Ignored by other kernels.
+     */
+    degree?: number
+
+    /**
+      Additional parameters (keyword arguments) for kernel function passed as callable object.
+     */
+    kernel_params?: any
+
+    /**
+      Number of features to construct. How many data points will be used to construct the mapping.
+
+      @defaultValue `100`
+     */
+    n_components?: number
+
+    /**
+      Pseudo-random number generator to control the uniform sampling without replacement of `n\_components` of the training data to construct the basis kernel. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n\_jobs` even slices and computing them in parallel.
+
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `Nystroem${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -106,7 +152,17 @@ ctor_Nystroem = {k: v for k, v in ctor_Nystroem.items() if v is not None}`
 
     Samples a subset of training points, computes kernel on these and computes normalization matrix.
    */
-  async fit(opts: NystroemFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Nystroem instance has already been disposed')
     }
@@ -136,7 +192,22 @@ pms_Nystroem_fit = {k: v for k, v in pms_Nystroem_fit.items() if v is not None}`
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: NystroemFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This Nystroem instance has already been disposed')
     }
@@ -170,9 +241,12 @@ pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items(
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: NystroemGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.Nystroem.fit "sklearn.kernel_approximation.Nystroem.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Nystroem instance has already been disposed')
     }
@@ -204,7 +278,12 @@ pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: NystroemSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Nystroem instance has already been disposed')
     }
@@ -234,7 +313,12 @@ pms_Nystroem_set_output = {k: v for k, v in pms_Nystroem_set_output.items() if v
 
     Computes an approximate feature map using the kernel between some training points and X.
    */
-  async transform(opts: NystroemTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Data to transform.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This Nystroem instance has already been disposed')
     }
@@ -381,102 +465,4 @@ pms_Nystroem_transform = {k: v for k, v in pms_Nystroem_transform.items() if v i
         ._py`attr_Nystroem_feature_names_in_.tolist() if hasattr(attr_Nystroem_feature_names_in_, 'tolist') else attr_Nystroem_feature_names_in_`
     })()
   }
-}
-
-export interface NystroemOptions {
-  /**
-    Kernel map to be approximated. A callable should accept two arguments and the keyword arguments passed to this object as `kernel\_params`, and should return a floating point number.
-
-    @defaultValue `'rbf'`
-   */
-  kernel?: string
-
-  /**
-    Gamma parameter for the RBF, laplacian, polynomial, exponential chi2 and sigmoid kernels. Interpretation of the default value is left to the kernel; see the documentation for sklearn.metrics.pairwise. Ignored by other kernels.
-   */
-  gamma?: number
-
-  /**
-    Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.
-   */
-  coef0?: number
-
-  /**
-    Degree of the polynomial kernel. Ignored by other kernels.
-   */
-  degree?: number
-
-  /**
-    Additional parameters (keyword arguments) for kernel function passed as callable object.
-   */
-  kernel_params?: any
-
-  /**
-    Number of features to construct. How many data points will be used to construct the mapping.
-
-    @defaultValue `100`
-   */
-  n_components?: number
-
-  /**
-    Pseudo-random number generator to control the uniform sampling without replacement of `n\_components` of the training data to construct the basis kernel. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n\_jobs` even slices and computing them in parallel.
-
-    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface NystroemFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-}
-
-export interface NystroemFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface NystroemGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.Nystroem.fit "sklearn.kernel_approximation.Nystroem.fit").
-   */
-  input_features?: any
-}
-
-export interface NystroemSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface NystroemTransformOptions {
-  /**
-    Data to transform.
-   */
-  X?: ArrayLike[]
 }

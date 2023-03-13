@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   LinearRegression fits a linear model with coefficients w = (w1, …, wp) to minimize the residual sum of squares between the observed targets in the dataset, and the targets predicted by the linear approximation.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
  */
 export class LinearRegression {
   id: string
@@ -20,7 +20,33 @@ export class LinearRegression {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LinearRegressionOptions) {
+  constructor(opts?: {
+    /**
+      Whether to calculate the intercept for this model. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      When set to `true`, forces the coefficients to be positive. This option is only supported for dense arrays.
+
+      @defaultValue `false`
+     */
+    positive?: boolean
+  }) {
     this.id = `LinearRegression${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +125,22 @@ ctor_LinearRegression = {k: v for k, v in ctor_LinearRegression.items() if v is 
   /**
     Fit linear model.
    */
-  async fit(opts: LinearRegressionFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values. Will be cast to X’s dtype if necessary.
+     */
+    y?: ArrayLike
+
+    /**
+      Individual weights for each sample.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearRegression instance has already been disposed'
@@ -133,7 +174,12 @@ pms_LinearRegression_fit = {k: v for k, v in pms_LinearRegression_fit.items() if
   /**
     Predict using the linear model.
    */
-  async predict(opts: LinearRegressionPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearRegression instance has already been disposed'
@@ -165,7 +211,22 @@ pms_LinearRegression_predict = {k: v for k, v in pms_LinearRegression_predict.it
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: LinearRegressionScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearRegression instance has already been disposed'
@@ -357,73 +418,4 @@ pms_LinearRegression_score = {k: v for k, v in pms_LinearRegression_score.items(
         ._py`attr_LinearRegression_feature_names_in_.tolist() if hasattr(attr_LinearRegression_feature_names_in_, 'tolist') else attr_LinearRegression_feature_names_in_`
     })()
   }
-}
-
-export interface LinearRegressionOptions {
-  /**
-    Whether to calculate the intercept for this model. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    The number of jobs to use for the computation. This will only provide speedup in case of sufficiently large problems, that is if firstly `n\_targets > 1` and secondly `X` is sparse or if `positive` is set to `true`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    When set to `true`, forces the coefficients to be positive. This option is only supported for dense arrays.
-
-    @defaultValue `false`
-   */
-  positive?: boolean
-}
-
-export interface LinearRegressionFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values. Will be cast to X’s dtype if necessary.
-   */
-  y?: ArrayLike
-
-  /**
-    Individual weights for each sample.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface LinearRegressionPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface LinearRegressionScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

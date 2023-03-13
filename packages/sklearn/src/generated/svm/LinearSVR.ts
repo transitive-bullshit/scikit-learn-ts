@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../svm.html#svm-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html)
  */
 export class LinearSVR {
   id: string
@@ -24,7 +24,75 @@ export class LinearSVR {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LinearSVROptions) {
+  constructor(opts?: {
+    /**
+      Epsilon parameter in the epsilon-insensitive loss function. Note that the value of this parameter depends on the scale of the target variable y. If unsure, set `epsilon=0`.
+
+      @defaultValue `0`
+     */
+    epsilon?: number
+
+    /**
+      Tolerance for stopping criteria.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive.
+
+      @defaultValue `1`
+     */
+    C?: number
+
+    /**
+      Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the L1 loss, while the squared epsilon-insensitive loss (‘squared\_epsilon\_insensitive’) is the L2 loss.
+
+      @defaultValue `'epsilon_insensitive'`
+     */
+    loss?: 'epsilon_insensitive' | 'squared_epsilon_insensitive'
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be already centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      When self.fit\_intercept is `true`, instance vector x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
+
+      @defaultValue `1`
+     */
+    intercept_scaling?: number
+
+    /**
+      Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features.
+
+      @defaultValue `true`
+     */
+    dual?: boolean
+
+    /**
+      Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in liblinear that, if enabled, may not work properly in a multithreaded context.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The maximum number of iterations to be run.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+  }) {
     this.id = `LinearSVR${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -108,7 +176,22 @@ ctor_LinearSVR = {k: v for k, v in ctor_LinearSVR.items() if v is not None}`
   /**
     Fit the model according to the given training data.
    */
-  async fit(opts: LinearSVRFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target vector relative to X.
+     */
+    y?: ArrayLike
+
+    /**
+      Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LinearSVR instance has already been disposed')
     }
@@ -140,7 +223,12 @@ pms_LinearSVR_fit = {k: v for k, v in pms_LinearSVR_fit.items() if v is not None
   /**
     Predict using the linear model.
    */
-  async predict(opts: LinearSVRPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LinearSVR instance has already been disposed')
     }
@@ -168,7 +256,22 @@ pms_LinearSVR_predict = {k: v for k, v in pms_LinearSVR_predict.items() if v is 
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: LinearSVRScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LinearSVR instance has already been disposed')
     }
@@ -317,115 +420,4 @@ pms_LinearSVR_score = {k: v for k, v in pms_LinearSVR_score.items() if v is not 
         ._py`attr_LinearSVR_n_iter_.tolist() if hasattr(attr_LinearSVR_n_iter_, 'tolist') else attr_LinearSVR_n_iter_`
     })()
   }
-}
-
-export interface LinearSVROptions {
-  /**
-    Epsilon parameter in the epsilon-insensitive loss function. Note that the value of this parameter depends on the scale of the target variable y. If unsure, set `epsilon=0`.
-
-    @defaultValue `0`
-   */
-  epsilon?: number
-
-  /**
-    Tolerance for stopping criteria.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive.
-
-    @defaultValue `1`
-   */
-  C?: number
-
-  /**
-    Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the L1 loss, while the squared epsilon-insensitive loss (‘squared\_epsilon\_insensitive’) is the L2 loss.
-
-    @defaultValue `'epsilon_insensitive'`
-   */
-  loss?: 'epsilon_insensitive' | 'squared_epsilon_insensitive'
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be already centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    When self.fit\_intercept is `true`, instance vector x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
-
-    @defaultValue `1`
-   */
-  intercept_scaling?: number
-
-  /**
-    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features.
-
-    @defaultValue `true`
-   */
-  dual?: boolean
-
-  /**
-    Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in liblinear that, if enabled, may not work properly in a multithreaded context.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The maximum number of iterations to be run.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-}
-
-export interface LinearSVRFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target vector relative to X.
-   */
-  y?: ArrayLike
-
-  /**
-    Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface LinearSVRPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface LinearSVRScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

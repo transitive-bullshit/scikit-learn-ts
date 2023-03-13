@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / LeavePGroupsOut
-
-# Class: LeavePGroupsOut
+# LeavePGroupsOut
 
 Leave P Group(s) Out cross-validator
 
@@ -12,116 +10,84 @@ The difference between LeavePGroupsOut and LeaveOneGroupOut is that the former b
 
 Read more in the [User Guide](../cross_validation.html#leave-p-groups-out).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePGroupsOut.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](LeavePGroupsOut.md#constructor)
-
-### Properties
-
-- [\_isDisposed](LeavePGroupsOut.md#_isdisposed)
-- [\_isInitialized](LeavePGroupsOut.md#_isinitialized)
-- [\_py](LeavePGroupsOut.md#_py)
-- [id](LeavePGroupsOut.md#id)
-- [opts](LeavePGroupsOut.md#opts)
-
-### Accessors
-
-- [py](LeavePGroupsOut.md#py)
-
-### Methods
-
-- [dispose](LeavePGroupsOut.md#dispose)
-- [get\_n\_splits](LeavePGroupsOut.md#get_n_splits)
-- [init](LeavePGroupsOut.md#init)
-- [split](LeavePGroupsOut.md#split)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePGroupsOut.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new LeavePGroupsOut**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new LeavePGroupsOut(opts?: object): LeavePGroupsOut;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`LeavePGroupsOutOptions`](../interfaces/LeavePGroupsOutOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.n_groups?` | `number` | Number of groups (`p`) to leave out in the test split. |
 
-[generated/model_selection/LeavePGroupsOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L29)
+### Returns
+
+[`LeavePGroupsOut`](LeavePGroupsOut.md)
+
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/LeavePGroupsOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L27)
-
-___
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L27)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/model_selection/LeavePGroupsOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L26)
-
-___
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L26)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/model_selection/LeavePGroupsOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L25)
-
-___
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L25)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/model_selection/LeavePGroupsOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L22)
-
-___
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L22)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/model_selection/LeavePGroupsOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L23)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L23)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L39)
 
-[generated/model_selection/LeavePGroupsOut.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L34)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -133,59 +99,66 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L43)
 
-[generated/model_selection/LeavePGroupsOut.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L38)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L39) [generated/model\_selection/LeavePGroupsOut.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L43)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L92)
 
-[generated/model_selection/LeavePGroupsOut.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L87)
-
-___
-
-### get\_n\_splits
-
-▸ **get_n_splits**(`opts`): `Promise`<`number`\>
+### get\_n\_splits()
 
 Returns the number of splitting iterations in the cross-validator
 
+#### Signature
+
+```ts
+get_n_splits(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LeavePGroupsOutGetNSplitsOptions`](../interfaces/LeavePGroupsOutGetNSplitsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Always ignored, exists for compatibility. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted. |
+| `opts.y?` | `any` | Always ignored, exists for compatibility. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L109)
 
-[generated/model_selection/LeavePGroupsOut.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L104)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -195,30 +168,31 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L52)
 
-[generated/model_selection/LeavePGroupsOut.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L47)
-
-___
-
-### split
-
-▸ **split**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### split()
 
 Generate indices to split data into training and test set.
 
+#### Signature
+
+```ts
+split(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`LeavePGroupsOutSplitOptions`](../interfaces/LeavePGroupsOutSplitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.groups?` | [`ArrayLike`](../types/ArrayLike.md) | Group labels for the samples used while splitting the dataset into train/test set. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target variable for supervised learning problems. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/model_selection/LeavePGroupsOut.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L134)
+Defined in:  [generated/model\_selection/LeavePGroupsOut.ts:154](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/model_selection/LeavePGroupsOut.ts#L154)

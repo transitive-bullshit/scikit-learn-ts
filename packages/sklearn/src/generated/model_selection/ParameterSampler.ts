@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../grid_search.html#grid-search).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterSampler.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ParameterSampler.html)
  */
 export class ParameterSampler {
   id: string
@@ -22,7 +22,22 @@ export class ParameterSampler {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ParameterSamplerOptions) {
+  constructor(opts?: {
+    /**
+      Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
+     */
+    param_distributions?: any
+
+    /**
+      Number of parameter settings that are produced.
+     */
+    n_iter?: number
+
+    /**
+      Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `ParameterSampler${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -124,21 +139,4 @@ ctor_ParameterSampler = {k: v for k, v in ctor_ParameterSampler.items() if v is 
         ._py`attr_ParameterSampler_params.tolist() if hasattr(attr_ParameterSampler_params, 'tolist') else attr_ParameterSampler_params`
     })()
   }
-}
-
-export interface ParameterSamplerOptions {
-  /**
-    Dictionary with parameters names (`str`) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly. If a list of dicts is given, first a dict is sampled uniformly, and then a parameter is sampled using that dict as above.
-   */
-  param_distributions?: any
-
-  /**
-    Number of parameter settings that are produced.
-   */
-  n_iter?: number
-
-  /**
-    Pseudo random number generator state used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
 }

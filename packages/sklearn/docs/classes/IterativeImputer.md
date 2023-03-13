@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / IterativeImputer
-
-# Class: IterativeImputer
+# IterativeImputer
 
 Multivariate imputer that estimates each feature from all the others.
 
@@ -8,239 +6,224 @@ A strategy for imputing missing values by modeling each feature with missing val
 
 Read more in the [User Guide](../impute.html#iterative-imputer).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](IterativeImputer.md#constructor)
-
-### Properties
-
-- [\_isDisposed](IterativeImputer.md#_isdisposed)
-- [\_isInitialized](IterativeImputer.md#_isinitialized)
-- [\_py](IterativeImputer.md#_py)
-- [id](IterativeImputer.md#id)
-- [opts](IterativeImputer.md#opts)
-
-### Accessors
-
-- [feature\_names\_in\_](IterativeImputer.md#feature_names_in_)
-- [imputation\_sequence\_](IterativeImputer.md#imputation_sequence_)
-- [indicator\_](IterativeImputer.md#indicator_)
-- [initial\_imputer\_](IterativeImputer.md#initial_imputer_)
-- [n\_features\_in\_](IterativeImputer.md#n_features_in_)
-- [n\_features\_with\_missing\_](IterativeImputer.md#n_features_with_missing_)
-- [n\_iter\_](IterativeImputer.md#n_iter_)
-- [py](IterativeImputer.md#py)
-- [random\_state\_](IterativeImputer.md#random_state_)
-
-### Methods
-
-- [dispose](IterativeImputer.md#dispose)
-- [fit](IterativeImputer.md#fit)
-- [fit\_transform](IterativeImputer.md#fit_transform)
-- [get\_feature\_names\_out](IterativeImputer.md#get_feature_names_out)
-- [init](IterativeImputer.md#init)
-- [set\_output](IterativeImputer.md#set_output)
-- [transform](IterativeImputer.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new IterativeImputer**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new IterativeImputer(opts?: object): IterativeImputer;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`IterativeImputerOptions`](../interfaces/IterativeImputerOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.add_indicator?` | `boolean` | If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.  `Default Value`  `false` |
+| `opts.estimator?` | `any` | The estimator to use at each step of the round-robin imputation. If `sample\_posterior=True`, the estimator must support `return\_std` in its `predict` method. |
+| `opts.imputation_order?` | `"random"` \| `"ascending"` \| `"descending"` \| `"roman"` \| `"arabic"` | The order in which the features will be imputed. Possible values:  `Default Value`  `'ascending'` |
+| `opts.initial_strategy?` | `"most_frequent"` \| `"constant"` \| `"mean"` \| `"median"` | Which strategy to use to initialize the missing values. Same as the `strategy` parameter in [`SimpleImputer`](sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer "sklearn.impute.SimpleImputer").  `Default Value`  `'mean'` |
+| `opts.keep_empty_features?` | `boolean` | If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0` except when `initial\_strategy="constant"` in which case `fill\_value` will be used instead.  `Default Value`  `false` |
+| `opts.max_iter?` | `number` | Maximum number of imputation rounds to perform before returning the imputations computed during the final round. A round is a single imputation of each feature with missing values. The stopping criterion is met once `max(abs(X\_t \- X\_{t-1}))/max(abs(X\[known\_vals\])) < tol`, where `X\_t` is `X` at iteration `t`. Note that early stopping is only applied if `sample\_posterior=False`.  `Default Value`  `10` |
+| `opts.max_value?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | Maximum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one max value for each feature. The default is `np.inf`. |
+| `opts.min_value?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | Minimum possible imputed value. Broadcast to shape `(n\_features,)` if scalar. If array-like, expects shape `(n\_features,)`, one min value for each feature. The default is `\-np.inf`. |
+| `opts.missing_values?` | `number` | The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`. |
+| `opts.n_nearest_features?` | `number` | Number of other features to use to estimate the missing values of each feature column. Nearness between features is measured using the absolute correlation coefficient between each feature pair (after initial imputation). To ensure coverage of features throughout the imputation process, the neighbor features are not necessarily nearest, but are drawn with probability proportional to correlation for each imputed target feature. Can provide significant speed-up when the number of features is huge. If `undefined`, all features will be used. |
+| `opts.random_state?` | `number` | The seed of the pseudo random number generator to use. Randomizes selection of estimator features if `n\_nearest\_features` is not `undefined`, the `imputation\_order` if `random`, and the sampling from posterior if `sample\_posterior=True`. Use an integer for determinism. See [the Glossary](../../glossary.html#term-random_state). |
+| `opts.sample_posterior?` | `boolean` | Whether to sample from the (Gaussian) predictive posterior of the fitted estimator for each imputation. Estimator must support `return\_std` in its `predict` method if set to `true`. Set to `true` if using `IterativeImputer` for multiple imputations.  `Default Value`  `false` |
+| `opts.skip_complete?` | `boolean` | If `true` then features with missing values during [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") which did not have any missing values during [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") will be imputed with the initial imputation method only. Set to `true` if you have many features with no missing values at both [`fit`](#sklearn.impute.IterativeImputer.fit "sklearn.impute.IterativeImputer.fit") and [`transform`](#sklearn.impute.IterativeImputer.transform "sklearn.impute.IterativeImputer.transform") time to save compute.  `Default Value`  `false` |
+| `opts.tol?` | `number` | Tolerance of the stopping condition.  `Default Value`  `0.001` |
+| `opts.verbose?` | `number` | Verbosity flag, controls the debug messages that are issued as functions are evaluated. The higher, the more verbose. Can be 0, 1, or 2.  `Default Value`  `0` |
 
-[generated/impute/IterativeImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L25)
+### Returns
+
+[`IterativeImputer`](IterativeImputer.md)
+
+Defined in:  [generated/impute/IterativeImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/impute/IterativeImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L23)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/impute/IterativeImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L22)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/impute/IterativeImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L21)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/impute/IterativeImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L18)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/impute/IterativeImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L19)
+Defined in:  [generated/impute/IterativeImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L19)
 
 ## Accessors
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L526)
 
-[generated/impute/IterativeImputer.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L397)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L526)
 
 ### imputation\_sequence\_
 
-• `get` **imputation_sequence_**(): `Promise`<`any`\>
-
 Each tuple has `(feat\_idx, neighbor\_feat\_idx, estimator)`, where `feat\_idx` is the current feature to be imputed, `neighbor\_feat\_idx` is the array of other features used to impute the current feature, and `estimator` is the trained estimator used for the imputation. Length is `self.n\_features\_with\_missing\_ \* self.n\_iter\_`.
+
+#### Signature
+
+```ts
+imputation_sequence_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L445)
 
-[generated/impute/IterativeImputer.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L316)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:445](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L445)
 
 ### indicator\_
 
-• `get` **indicator_**(): `Promise`<`any`\>
-
 Indicator used to add binary indicators for missing values. `undefined` if `add\_indicator=False`.
+
+#### Signature
+
+```ts
+indicator_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L580)
 
-[generated/impute/IterativeImputer.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L451)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L580)
 
 ### initial\_imputer\_
 
-• `get` **initial_imputer_**(): `Promise`<`any`\>
-
 Imputer used to initialize the missing values.
+
+#### Signature
+
+```ts
+initial_imputer_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L418)
 
-[generated/impute/IterativeImputer.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L289)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L418)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L499)
 
-[generated/impute/IterativeImputer.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L370)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L499)
 
 ### n\_features\_with\_missing\_
 
-• `get` **n_features_with_missing_**(): `Promise`<`number`\>
-
 Number of features with missing values.
+
+#### Signature
+
+```ts
+n_features_with_missing_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L553)
 
-[generated/impute/IterativeImputer.ts:424](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L424)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L553)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 Number of iteration rounds that occurred. Will be less than `self.max\_iter` if early stopping criterion was reached.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L472)
 
-[generated/impute/IterativeImputer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L343)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L472)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L128)
 
-[generated/impute/IterativeImputer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -252,119 +235,130 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L132)
 
-[generated/impute/IterativeImputer.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L34)
-
-___
+Defined in:  [generated/impute/IterativeImputer.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L128) [generated/impute/IterativeImputer.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L132)
 
 ### random\_state\_
 
-• `get` **random_state_**(): `Promise`<`any`\>
-
 RandomState instance that is generated either from a seed, the random number generator or by `np.random`.
+
+#### Signature
+
+```ts
+random_state_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L607)
 
-[generated/impute/IterativeImputer.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L478)
+Defined in:  [generated/impute/IterativeImputer.ts:607](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L607)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L207)
 
-[generated/impute/IterativeImputer.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L109)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the imputer on `X` and return self.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`IterativeImputerFitOptions`](../interfaces/IterativeImputerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L224)
 
-[generated/impute/IterativeImputer.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L126)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### fit\_transform()
 
 Fit the imputer on `X` and return the transformed `X`.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`IterativeImputerFitTransformOptions`](../interfaces/IterativeImputerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L264)
 
-[generated/impute/IterativeImputer.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L156)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`IterativeImputerGetFeatureNamesOutOptions`](../interfaces/IterativeImputerGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L306)
 
-[generated/impute/IterativeImputer.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L190)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -374,56 +368,56 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L141)
 
-[generated/impute/IterativeImputer.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L43)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`IterativeImputerSetOutputOptions`](../interfaces/IterativeImputerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/impute/IterativeImputer.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L346)
 
-[generated/impute/IterativeImputer.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L227)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### transform()
 
 Impute all missing values in `X`.
 
 Note that this is stochastic, and that if `random\_state` is not fixed, repeated calls, or permuted input, results will differ.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`IterativeImputerTransformOptions`](../interfaces/IterativeImputerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The input data to complete. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/impute/IterativeImputer.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/impute/IterativeImputer.ts#L259)
+Defined in:  [generated/impute/IterativeImputer.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/impute/IterativeImputer.ts#L383)

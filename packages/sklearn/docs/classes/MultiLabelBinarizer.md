@@ -1,141 +1,106 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / MultiLabelBinarizer
-
-# Class: MultiLabelBinarizer
+# MultiLabelBinarizer
 
 Transform between iterable of iterables and a multilabel format.
 
 Although a list of sets or tuples is a very intuitive format for multilabel data, it is unwieldy to process. This transformer converts between this intuitive format and the supported multilabel format: a (samples x classes) binary matrix indicating the presence of a class label.
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MultiLabelBinarizer.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MultiLabelBinarizer.md#constructor)
-
-### Properties
-
-- [\_isDisposed](MultiLabelBinarizer.md#_isdisposed)
-- [\_isInitialized](MultiLabelBinarizer.md#_isinitialized)
-- [\_py](MultiLabelBinarizer.md#_py)
-- [id](MultiLabelBinarizer.md#id)
-- [opts](MultiLabelBinarizer.md#opts)
-
-### Accessors
-
-- [classes\_](MultiLabelBinarizer.md#classes_)
-- [py](MultiLabelBinarizer.md#py)
-
-### Methods
-
-- [dispose](MultiLabelBinarizer.md#dispose)
-- [fit](MultiLabelBinarizer.md#fit)
-- [fit\_transform](MultiLabelBinarizer.md#fit_transform)
-- [init](MultiLabelBinarizer.md#init)
-- [inverse\_transform](MultiLabelBinarizer.md#inverse_transform)
-- [set\_output](MultiLabelBinarizer.md#set_output)
-- [transform](MultiLabelBinarizer.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MultiLabelBinarizer.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new MultiLabelBinarizer**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new MultiLabelBinarizer(opts?: object): MultiLabelBinarizer;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`MultiLabelBinarizerOptions`](../interfaces/MultiLabelBinarizerOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.classes?` | [`ArrayLike`](../types/ArrayLike.md) | Indicates an ordering for the class labels. All entries should be unique (cannot contain duplicate classes). |
+| `opts.sparse_output?` | `boolean` | Set to `true` if output binary array is desired in CSR sparse format.  `Default Value`  `false` |
 
-[generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
+### Returns
+
+[`MultiLabelBinarizer`](MultiLabelBinarizer.md)
+
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L23)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21)
-
-___
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L21)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20)
-
-___
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L20)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19)
-
-___
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L19)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16)
-
-___
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L16)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L17)
 
 ## Accessors
 
 ### classes\_
 
-• `get` **classes_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 A copy of the `classes` parameter when provided. Otherwise it corresponds to the sorted set of classes found when fitting.
+
+#### Signature
+
+```ts
+classes_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L300)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L267)
-
-___
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L300)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L28)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -147,81 +112,87 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L44)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L32)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L40) [generated/preprocessing/MultiLabelBinarizer.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L44)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L99)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L87)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the label sets binarizer, storing [classes\_](../../glossary.html#term-classes_).
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiLabelBinarizerFitOptions`](../interfaces/MultiLabelBinarizerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.y?` | `any` | A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L116)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L104)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### fit\_transform()
 
 Fit the label sets binarizer and transform the given label sets.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiLabelBinarizerFitTransformOptions`](../interfaces/MultiLabelBinarizerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.y?` | `any` | A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L151)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L134)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -231,76 +202,77 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L53)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L41)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<`any`\>
+### inverse\_transform()
 
 Transform the given indicator matrix into label sets.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiLabelBinarizerInverseTransformOptions`](../interfaces/MultiLabelBinarizerInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.yt?` | [`ArrayLike`](../types/ArrayLike.md) | A matrix containing only 1s ands 0s. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L188)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L168)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiLabelBinarizerSetOutputOptions`](../interfaces/MultiLabelBinarizerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L228)
 
-[generated/preprocessing/MultiLabelBinarizer.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L205)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<`any`\>
+### transform()
 
 Transform the given label sets.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MultiLabelBinarizerTransformOptions`](../interfaces/MultiLabelBinarizerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.y?` | `any` | A set of labels (any orderable and hashable object) for each sample. If the `classes` parameter is set, `y` will not be iterated. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/preprocessing/MultiLabelBinarizer.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L237)
+Defined in:  [generated/preprocessing/MultiLabelBinarizer.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/MultiLabelBinarizer.ts#L265)

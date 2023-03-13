@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / SpectralEmbedding
-
-# Class: SpectralEmbedding
+# SpectralEmbedding
 
 Spectral embedding for non-linear dimensionality reduction.
 
@@ -10,201 +8,181 @@ Note : Laplacian Eigenmaps is the actual algorithm implemented here.
 
 Read more in the [User Guide](../manifold.html#spectral-embedding).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SpectralEmbedding.md#constructor)
-
-### Properties
-
-- [\_isDisposed](SpectralEmbedding.md#_isdisposed)
-- [\_isInitialized](SpectralEmbedding.md#_isinitialized)
-- [\_py](SpectralEmbedding.md#_py)
-- [id](SpectralEmbedding.md#id)
-- [opts](SpectralEmbedding.md#opts)
-
-### Accessors
-
-- [affinity\_matrix\_](SpectralEmbedding.md#affinity_matrix_)
-- [embedding\_](SpectralEmbedding.md#embedding_)
-- [feature\_names\_in\_](SpectralEmbedding.md#feature_names_in_)
-- [n\_features\_in\_](SpectralEmbedding.md#n_features_in_)
-- [n\_neighbors\_](SpectralEmbedding.md#n_neighbors_)
-- [py](SpectralEmbedding.md#py)
-
-### Methods
-
-- [dispose](SpectralEmbedding.md#dispose)
-- [fit](SpectralEmbedding.md#fit)
-- [fit\_transform](SpectralEmbedding.md#fit_transform)
-- [init](SpectralEmbedding.md#init)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.SpectralEmbedding.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new SpectralEmbedding**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new SpectralEmbedding(opts?: object): SpectralEmbedding;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`SpectralEmbeddingOptions`](../interfaces/SpectralEmbeddingOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.affinity?` | `"precomputed"` \| `"rbf"` \| `"nearest_neighbors"` \| `"precomputed_nearest_neighbors"` | ‘nearest\_neighbors’ : construct the affinity matrix by computing a graph of nearest neighbors.  `Default Value`  `'nearest_neighbors'` |
+| `opts.eigen_solver?` | `"arpack"` \| `"lobpcg"` \| `"amg"` | The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems. If `undefined`, then `'arpack'` is used. |
+| `opts.eigen_tol?` | `number` | Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:  `Default Value`  `'auto'` |
+| `opts.gamma?` | `number` | Kernel coefficient for rbf kernel. If `undefined`, gamma will be set to 1/n\_features. |
+| `opts.n_components?` | `number` | The dimension of the projected subspace.  `Default Value`  `2` |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.n_neighbors?` | `number` | Number of nearest neighbors for nearest\_neighbors graph building. If `undefined`, n\_neighbors will be set to max(n\_samples/10, 1). |
+| `opts.random_state?` | `number` | A pseudo random number generator used for the initialization of the lobpcg eigen vectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)). |
 
-[generated/manifold/SpectralEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L27)
+### Returns
+
+[`SpectralEmbedding`](SpectralEmbedding.md)
+
+Defined in:  [generated/manifold/SpectralEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L27)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/manifold/SpectralEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L25)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L25)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/manifold/SpectralEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L24)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L24)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/manifold/SpectralEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L23)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L23)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/manifold/SpectralEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L20)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L20)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/manifold/SpectralEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L21)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L21)
 
 ## Accessors
 
 ### affinity\_matrix\_
 
-• `get` **affinity_matrix_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Affinity\_matrix constructed from samples or precomputed.
+
+#### Signature
+
+```ts
+affinity_matrix_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L275)
 
-[generated/manifold/SpectralEmbedding.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L203)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L275)
 
 ### embedding\_
 
-• `get` **embedding_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Spectral embedding of the training matrix.
+
+#### Signature
+
+```ts
+embedding_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L248)
 
-[generated/manifold/SpectralEmbedding.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L176)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L248)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L329)
 
-[generated/manifold/SpectralEmbedding.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L257)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L329)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L302)
 
-[generated/manifold/SpectralEmbedding.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L230)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L302)
 
 ### n\_neighbors\_
 
-• `get` **n_neighbors_**(): `Promise`<`number`\>
-
 Number of nearest neighbors effectively used.
+
+#### Signature
+
+```ts
+n_neighbors_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L356)
 
-[generated/manifold/SpectralEmbedding.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L284)
-
-___
+Defined in:  [generated/manifold/SpectralEmbedding.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L356)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L82)
 
-[generated/manifold/SpectralEmbedding.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L32)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -216,81 +194,89 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L86)
 
-[generated/manifold/SpectralEmbedding.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L36)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L82) [generated/manifold/SpectralEmbedding.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L86)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L145)
 
-[generated/manifold/SpectralEmbedding.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L95)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model from data in X.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SpectralEmbeddingFitOptions`](../interfaces/SpectralEmbeddingFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.  If affinity is “precomputed” X : {array-like, sparse matrix}, shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L162)
 
-[generated/manifold/SpectralEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L112)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### fit\_transform()
 
 Fit the model from data in X and transform X.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SpectralEmbeddingFitTransformOptions`](../interfaces/SpectralEmbeddingFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.  If affinity is “precomputed” X : {array-like, sparse matrix} of shape (n\_samples, n\_samples), Interpret X as precomputed adjacency graph computed from samples. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/manifold/SpectralEmbedding.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L204)
 
-[generated/manifold/SpectralEmbedding.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L142)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -300,8 +286,6 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
-
-[generated/manifold/SpectralEmbedding.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L45)
+Defined in:  [generated/manifold/SpectralEmbedding.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L95)

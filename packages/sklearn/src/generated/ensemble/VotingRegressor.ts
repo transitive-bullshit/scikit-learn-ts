@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../ensemble.html#voting-regressor).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingRegressor.html)
  */
 export class VotingRegressor {
   id: string
@@ -22,7 +22,29 @@ export class VotingRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: VotingRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Invoking the `fit` method on the `VotingRegressor` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingRegressor.set_params "sklearn.ensemble.VotingRegressor.set_params").
+     */
+    estimators?: any
+
+    /**
+      Sequence of weights (`float` or `int`) to weight the occurrences of predicted values before averaging. Uses uniform weights if `undefined`.
+     */
+    weights?: ArrayLike
+
+    /**
+      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      If `true`, the time elapsed while fitting will be printed as it is completed.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `VotingRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +123,22 @@ ctor_VotingRegressor = {k: v for k, v in ctor_VotingRegressor.items() if v is no
   /**
     Fit the estimators.
    */
-  async fit(opts: VotingRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
     }
@@ -135,9 +172,22 @@ pms_VotingRegressor_fit = {k: v for k, v in pms_VotingRegressor_fit.items() if v
 
     Return predictions for X for each estimator.
    */
-  async fit_transform(
-    opts: VotingRegressorFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: NDArray
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
     }
@@ -169,9 +219,12 @@ pms_VotingRegressor_fit_transform = {k: v for k, v in pms_VotingRegressor_fit_tr
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: VotingRegressorGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
     }
@@ -204,7 +257,12 @@ pms_VotingRegressor_get_feature_names_out = {k: v for k, v in pms_VotingRegresso
 
     The predicted regression target of an input sample is computed as the mean predicted regression targets of the estimators in the ensemble.
    */
-  async predict(opts: VotingRegressorPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
     }
@@ -234,7 +292,22 @@ pms_VotingRegressor_predict = {k: v for k, v in pms_VotingRegressor_predict.item
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: VotingRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
     }
@@ -268,7 +341,12 @@ pms_VotingRegressor_score = {k: v for k, v in pms_VotingRegressor_score.items() 
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: VotingRegressorSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
     }
@@ -296,7 +374,12 @@ pms_VotingRegressor_set_output = {k: v for k, v in pms_VotingRegressor_set_outpu
   /**
     Return predictions for X for each estimator.
    */
-  async transform(opts: VotingRegressorTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This VotingRegressor instance has already been disposed')
     }
@@ -395,107 +478,4 @@ pms_VotingRegressor_transform = {k: v for k, v in pms_VotingRegressor_transform.
         ._py`attr_VotingRegressor_feature_names_in_.tolist() if hasattr(attr_VotingRegressor_feature_names_in_, 'tolist') else attr_VotingRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface VotingRegressorOptions {
-  /**
-    Invoking the `fit` method on the `VotingRegressor` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingRegressor.set_params "sklearn.ensemble.VotingRegressor.set_params").
-   */
-  estimators?: any
-
-  /**
-    Sequence of weights (`float` or `int`) to weight the occurrences of predicted values before averaging. Uses uniform weights if `undefined`.
-   */
-  weights?: ArrayLike
-
-  /**
-    The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    If `true`, the time elapsed while fitting will be printed as it is completed.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface VotingRegressorFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface VotingRegressorFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: NDArray
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface VotingRegressorGetFeatureNamesOutOptions {
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  input_features?: any
-}
-
-export interface VotingRegressorPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface VotingRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface VotingRegressorSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface VotingRegressorTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

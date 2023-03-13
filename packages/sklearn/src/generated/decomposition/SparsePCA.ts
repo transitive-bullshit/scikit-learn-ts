@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../decomposition.html#sparsepca).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparsePCA.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparsePCA.html)
  */
 export class SparsePCA {
   id: string
@@ -22,7 +22,74 @@ export class SparsePCA {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SparsePCAOptions) {
+  constructor(opts?: {
+    /**
+      Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`.
+     */
+    n_components?: number
+
+    /**
+      Sparsity controlling parameter. Higher values lead to sparser components.
+
+      @defaultValue `1`
+     */
+    alpha?: number
+
+    /**
+      Amount of ridge shrinkage to apply in order to improve conditioning when calling the transform method.
+
+      @defaultValue `0.01`
+     */
+    ridge_alpha?: number
+
+    /**
+      Maximum number of iterations to perform.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      Tolerance for the stopping condition.
+
+      @defaultValue `1e-8`
+     */
+    tol?: number
+
+    /**
+      Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear\_model.lars\_path) cd: uses the coordinate descent method to compute the Lasso solution (linear\_model.Lasso). Lars will be faster if the estimated components are sparse.
+
+      @defaultValue `'lars'`
+     */
+    method?: 'lars' | 'cd'
+
+    /**
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Initial values for the loadings for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
+     */
+    U_init?: NDArray[]
+
+    /**
+      Initial values for the components for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
+     */
+    V_init?: NDArray[]
+
+    /**
+      Controls the verbosity; the higher, the more messages. Defaults to 0.
+
+      @defaultValue `false`
+     */
+    verbose?: number | boolean
+
+    /**
+      Used during dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `SparsePCA${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -108,7 +175,17 @@ ctor_SparsePCA = {k: v for k, v in ctor_SparsePCA.items() if v is not None}`
   /**
     Fit the model from data in X.
    */
-  async fit(opts: SparsePCAFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
     }
@@ -138,7 +215,22 @@ pms_SparsePCA_fit = {k: v for k, v in pms_SparsePCA_fit.items() if v is not None
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: SparsePCAFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
     }
@@ -172,9 +264,12 @@ pms_SparsePCA_fit_transform = {k: v for k, v in pms_SparsePCA_fit_transform.item
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: SparsePCAGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.SparsePCA.fit "sklearn.decomposition.SparsePCA.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
     }
@@ -207,9 +302,12 @@ pms_SparsePCA_get_feature_names_out = {k: v for k, v in pms_SparsePCA_get_featur
 
     This inversion is an approximation due to the loss of information induced by the forward decomposition.
    */
-  async inverse_transform(
-    opts: SparsePCAInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      Data in the latent space.
+     */
+    X?: NDArray[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
     }
@@ -239,7 +337,12 @@ pms_SparsePCA_inverse_transform = {k: v for k, v in pms_SparsePCA_inverse_transf
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SparsePCASetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
     }
@@ -271,7 +374,12 @@ pms_SparsePCA_set_output = {k: v for k, v in pms_SparsePCA_set_output.items() if
 
     Note that Sparse PCA components orthogonality is not enforced as in PCA hence one cannot use a simple linear projection.
    */
-  async transform(opts: SparsePCATransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Test data to be transformed, must have the same number of features as the data used to train the model.
+     */
+    X?: NDArray[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This SparsePCA instance has already been disposed')
     }
@@ -462,130 +570,4 @@ pms_SparsePCA_transform = {k: v for k, v in pms_SparsePCA_transform.items() if v
         ._py`attr_SparsePCA_feature_names_in_.tolist() if hasattr(attr_SparsePCA_feature_names_in_, 'tolist') else attr_SparsePCA_feature_names_in_`
     })()
   }
-}
-
-export interface SparsePCAOptions {
-  /**
-    Number of sparse atoms to extract. If `undefined`, then `n\_components` is set to `n\_features`.
-   */
-  n_components?: number
-
-  /**
-    Sparsity controlling parameter. Higher values lead to sparser components.
-
-    @defaultValue `1`
-   */
-  alpha?: number
-
-  /**
-    Amount of ridge shrinkage to apply in order to improve conditioning when calling the transform method.
-
-    @defaultValue `0.01`
-   */
-  ridge_alpha?: number
-
-  /**
-    Maximum number of iterations to perform.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    Tolerance for the stopping condition.
-
-    @defaultValue `1e-8`
-   */
-  tol?: number
-
-  /**
-    Method to be used for optimization. lars: uses the least angle regression method to solve the lasso problem (linear\_model.lars\_path) cd: uses the coordinate descent method to compute the Lasso solution (linear\_model.Lasso). Lars will be faster if the estimated components are sparse.
-
-    @defaultValue `'lars'`
-   */
-  method?: 'lars' | 'cd'
-
-  /**
-    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Initial values for the loadings for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
-   */
-  U_init?: NDArray[]
-
-  /**
-    Initial values for the components for warm restart scenarios. Only used if `U\_init` and `V\_init` are not `undefined`.
-   */
-  V_init?: NDArray[]
-
-  /**
-    Controls the verbosity; the higher, the more messages. Defaults to 0.
-
-    @defaultValue `false`
-   */
-  verbose?: number | boolean
-
-  /**
-    Used during dictionary learning. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface SparsePCAFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SparsePCAFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SparsePCAGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.SparsePCA.fit "sklearn.decomposition.SparsePCA.fit").
-   */
-  input_features?: any
-}
-
-export interface SparsePCAInverseTransformOptions {
-  /**
-    Data in the latent space.
-   */
-  X?: NDArray[]
-}
-
-export interface SparsePCASetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SparsePCATransformOptions {
-  /**
-    Test data to be transformed, must have the same number of features as the data used to train the model.
-   */
-  X?: NDArray[]
 }

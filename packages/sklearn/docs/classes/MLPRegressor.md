@@ -1,329 +1,325 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / MLPRegressor
-
-# Class: MLPRegressor
+# MLPRegressor
 
 Multi-layer Perceptron regressor.
 
 This model optimizes the squared error using LBFGS or stochastic gradient descent.
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](MLPRegressor.md#constructor)
-
-### Properties
-
-- [\_isDisposed](MLPRegressor.md#_isdisposed)
-- [\_isInitialized](MLPRegressor.md#_isinitialized)
-- [\_py](MLPRegressor.md#_py)
-- [id](MLPRegressor.md#id)
-- [opts](MLPRegressor.md#opts)
-
-### Accessors
-
-- [best\_loss\_](MLPRegressor.md#best_loss_)
-- [best\_validation\_score\_](MLPRegressor.md#best_validation_score_)
-- [coefs\_](MLPRegressor.md#coefs_)
-- [feature\_names\_in\_](MLPRegressor.md#feature_names_in_)
-- [intercepts\_](MLPRegressor.md#intercepts_)
-- [loss\_](MLPRegressor.md#loss_)
-- [loss\_curve\_](MLPRegressor.md#loss_curve_)
-- [n\_features\_in\_](MLPRegressor.md#n_features_in_)
-- [n\_iter\_](MLPRegressor.md#n_iter_)
-- [n\_layers\_](MLPRegressor.md#n_layers_)
-- [n\_outputs\_](MLPRegressor.md#n_outputs_)
-- [out\_activation\_](MLPRegressor.md#out_activation_)
-- [py](MLPRegressor.md#py)
-- [t\_](MLPRegressor.md#t_)
-- [validation\_scores\_](MLPRegressor.md#validation_scores_)
-
-### Methods
-
-- [dispose](MLPRegressor.md#dispose)
-- [fit](MLPRegressor.md#fit)
-- [init](MLPRegressor.md#init)
-- [partial\_fit](MLPRegressor.md#partial_fit)
-- [predict](MLPRegressor.md#predict)
-- [score](MLPRegressor.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new MLPRegressor**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new MLPRegressor(opts?: object): MLPRegressor;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`MLPRegressorOptions`](../interfaces/MLPRegressorOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.activation?` | `"identity"` \| `"logistic"` \| `"tanh"` \| `"relu"` | Activation function for the hidden layer.  `Default Value`  `'relu'` |
+| `opts.alpha?` | `number` | Strength of the L2 regularization term. The L2 regularization term is divided by the sample size when added to the loss.  `Default Value`  `0.0001` |
+| `opts.batch_size?` | `number` | Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the regressor will not use minibatch. When set to “auto”, `batch\_size=min(200, n\_samples)`.  `Default Value`  `'auto'` |
+| `opts.beta_1?` | `number` | Exponential decay rate for estimates of first moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.  `Default Value`  `0.9` |
+| `opts.beta_2?` | `number` | Exponential decay rate for estimates of second moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.  `Default Value`  `0.999` |
+| `opts.early_stopping?` | `boolean` | Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside `validation\_fraction` of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs. Only effective when solver=’sgd’ or ‘adam’.  `Default Value`  `false` |
+| `opts.epsilon?` | `number` | Value for numerical stability in adam. Only used when solver=’adam’.  `Default Value`  `1e-8` |
+| `opts.hidden_layer_sizes?` | `any` | The ith element represents the number of neurons in the ith hidden layer. |
+| `opts.learning_rate?` | `"constant"` \| `"invscaling"` \| `"adaptive"` | Learning rate schedule for weight updates.  `Default Value`  `'constant'` |
+| `opts.learning_rate_init?` | `number` | The initial learning rate used. It controls the step-size in updating the weights. Only used when solver=’sgd’ or ‘adam’.  `Default Value`  `0.001` |
+| `opts.max_fun?` | `number` | Only used when solver=’lbfgs’. Maximum number of function calls. The solver iterates until convergence (determined by `tol`), number of iterations reaches max\_iter, or this number of function calls. Note that number of function calls will be greater than or equal to the number of iterations for the MLPRegressor.  `Default Value`  `15000` |
+| `opts.max_iter?` | `number` | Maximum number of iterations. The solver iterates until convergence (determined by ‘tol’) or this number of iterations. For stochastic solvers (‘sgd’, ‘adam’), note that this determines the number of epochs (how many times each data point will be used), not the number of gradient steps.  `Default Value`  `200` |
+| `opts.momentum?` | `number` | Momentum for gradient descent update. Should be between 0 and 1. Only used when solver=’sgd’.  `Default Value`  `0.9` |
+| `opts.n_iter_no_change?` | `number` | Maximum number of epochs to not meet `tol` improvement. Only effective when solver=’sgd’ or ‘adam’.  `Default Value`  `10` |
+| `opts.nesterovs_momentum?` | `boolean` | Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and momentum > 0.  `Default Value`  `true` |
+| `opts.power_t?` | `number` | The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning\_rate is set to ‘invscaling’. Only used when solver=’sgd’.  `Default Value`  `0.5` |
+| `opts.random_state?` | `number` | Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.shuffle?` | `boolean` | Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or ‘adam’.  `Default Value`  `true` |
+| `opts.solver?` | `"lbfgs"` \| `"sgd"` \| `"adam"` | The solver for weight optimization.  `Default Value`  `'adam'` |
+| `opts.tol?` | `number` | Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive iterations, unless `learning\_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.  `Default Value`  `0.0001` |
+| `opts.validation_fraction?` | `number` | The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.  `Default Value`  `0.1` |
+| `opts.verbose?` | `boolean` | Whether to print progress messages to stdout.  `Default Value`  `false` |
+| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).  `Default Value`  `false` |
 
-[generated/neural_network/MLPRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L23)
+### Returns
+
+[`MLPRegressor`](MLPRegressor.md)
+
+Defined in:  [generated/neural\_network/MLPRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L23)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/neural_network/MLPRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L21)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L21)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/neural_network/MLPRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L20)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L20)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/neural_network/MLPRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L19)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L19)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/neural_network/MLPRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L16)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L16)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/neural_network/MLPRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L17)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L17)
 
 ## Accessors
 
 ### best\_loss\_
 
-• `get` **best_loss_**(): `Promise`<`number`\>
-
 The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set to `undefined`. Refer to the `best\_validation\_score\_` fitted attribute instead. Only accessible when solver=’sgd’ or ‘adam’.
+
+#### Signature
+
+```ts
+best_loss_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L470)
 
-[generated/neural_network/MLPRegressor.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L273)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L470)
 
 ### best\_validation\_score\_
 
-• `get` **best_validation_score_**(): `Promise`<`number`\>
-
 The best validation score (i.e. R2 score) that triggered the early stopping. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`. Only accessible when solver=’sgd’ or ‘adam’.
+
+#### Signature
+
+```ts
+best_validation_score_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L545)
 
-[generated/neural_network/MLPRegressor.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L348)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:545](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L545)
 
 ### coefs\_
 
-• `get` **coefs_**(): `Promise`<`any`[]\>
-
 The ith element in the list represents the weight matrix corresponding to layer i.
+
+#### Signature
+
+```ts
+coefs_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L593)
 
-[generated/neural_network/MLPRegressor.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L396)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L593)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L666)
 
-[generated/neural_network/MLPRegressor.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L469)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:666](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L666)
 
 ### intercepts\_
 
-• `get` **intercepts_**(): `Promise`<`any`[]\>
-
 The ith element in the list represents the bias vector corresponding to layer i + 1.
+
+#### Signature
+
+```ts
+intercepts_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L616)
 
-[generated/neural_network/MLPRegressor.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L419)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L616)
 
 ### loss\_
 
-• `get` **loss_**(): `Promise`<`number`\>
-
 The current loss computed with the loss function.
+
+#### Signature
+
+```ts
+loss_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L447)
 
-[generated/neural_network/MLPRegressor.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L250)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L447)
 
 ### loss\_curve\_
 
-• `get` **loss_curve_**(): `Promise`<`any`[]\>
-
 Loss value evaluated at the end of each training step. The ith element in the list represents the loss at the ith iteration. Only accessible when solver=’sgd’ or ‘adam’.
+
+#### Signature
+
+```ts
+loss_curve_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L495)
 
-[generated/neural_network/MLPRegressor.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L298)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L495)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L641)
 
-[generated/neural_network/MLPRegressor.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L444)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L641)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 The number of iterations the solver has run.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L691)
 
-[generated/neural_network/MLPRegressor.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L494)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:691](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L691)
 
 ### n\_layers\_
 
-• `get` **n_layers_**(): `Promise`<`number`\>
-
 Number of layers.
+
+#### Signature
+
+```ts
+n_layers_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L714)
 
-[generated/neural_network/MLPRegressor.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L517)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L714)
 
 ### n\_outputs\_
 
-• `get` **n_outputs_**(): `Promise`<`number`\>
-
 Number of outputs.
+
+#### Signature
+
+```ts
+n_outputs_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
 
-[generated/neural_network/MLPRegressor.ts:542](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L542)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L739)
 
 ### out\_activation\_
 
-• `get` **out_activation_**(): `Promise`<`string`\>
-
 Name of the output activation function.
+
+#### Signature
+
+```ts
+out_activation_(): Promise<string>;
+```
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L764)
 
-[generated/neural_network/MLPRegressor.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L567)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L764)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185)
 
-[generated/neural_network/MLPRegressor.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L28)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -335,91 +331,101 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L189)
 
-[generated/neural_network/MLPRegressor.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L32)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185) [generated/neural\_network/MLPRegressor.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L189)
 
 ### t\_
 
-• `get` **t_**(): `Promise`<`number`\>
-
 The number of training samples seen by the solver during fitting. Mathematically equals `n\_iters \* X.shape\[0\]`, it means `time\_step` and it is used by optimizer’s learning rate scheduler.
+
+#### Signature
+
+```ts
+t_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L570)
 
-[generated/neural_network/MLPRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L373)
-
-___
+Defined in:  [generated/neural\_network/MLPRegressor.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L570)
 
 ### validation\_scores\_
 
-• `get` **validation_scores_**(): `Promise`<`any`[]\>
-
 The score at each iteration on a held-out validation set. The score reported is the R2 score. Only available if `early\_stopping=True`, otherwise the attribute is set to `undefined`. Only accessible when solver=’sgd’ or ‘adam’.
+
+#### Signature
+
+```ts
+validation_scores_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L520)
 
-[generated/neural_network/MLPRegressor.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L323)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L520)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L268)
 
-[generated/neural_network/MLPRegressor.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L111)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model to data matrix X and target(s) y.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MLPRegressorFitOptions`](../interfaces/MLPRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target values (class labels in classification, real numbers in regression). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L285)
 
-[generated/neural_network/MLPRegressor.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L128)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -429,76 +435,80 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L198)
 
-[generated/neural_network/MLPRegressor.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L41)
-
-___
-
-### partial\_fit
-
-▸ **partial_fit**(`opts`): `Promise`<`any`\>
+### partial\_fit()
 
 Update the model with a single iteration over the given data.
 
+#### Signature
+
+```ts
+partial_fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MLPRegressorPartialFitOptions`](../interfaces/MLPRegressorPartialFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | The target values. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L325)
 
-[generated/neural_network/MLPRegressor.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L158)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### predict()
 
 Predict using the multi-layer perceptron model.
 
+#### Signature
+
+```ts
+predict(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MLPRegressorPredictOptions`](../interfaces/MLPRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input data. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/neural\_network/MLPRegressor.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L365)
 
-[generated/neural_network/MLPRegressor.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L188)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`MLPRegressorScoreOptions`](../interfaces/MLPRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/neural_network/MLPRegressor.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L218)
+Defined in:  [generated/neural\_network/MLPRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L400)

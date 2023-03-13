@@ -1,5 +1,3 @@
-sklearn / [Exports](modules.md)
-
 <a href="https://github.com/transitive-bullshit/scikit-learn-ts">
   <img alt="sklearn ts logo" src="/media/scikit-learn-ts-social.png">
   <h1 align="center">scikit-learn-ts</h1>

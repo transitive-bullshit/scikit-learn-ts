@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The implementation is based on [\[1\]](#re25e5648fc37-1) and [\[2\]](#re25e5648fc37-2).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html)
  */
 export class LatentDirichletAllocation {
   id: string
@@ -20,7 +20,113 @@ export class LatentDirichletAllocation {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LatentDirichletAllocationOptions) {
+  constructor(opts?: {
+    /**
+      Number of topics.
+
+      @defaultValue `10`
+     */
+    n_components?: number
+
+    /**
+      Prior of document topic distribution `theta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `alpha`.
+     */
+    doc_topic_prior?: number
+
+    /**
+      Prior of topic word distribution `beta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `eta`.
+     */
+    topic_word_prior?: number
+
+    /**
+      Method used to update `\_component`. Only used in [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method. In general, if the data size is large, the online update will be much faster than the batch update.
+
+      Valid options:
+
+      @defaultValue `'batch'`
+     */
+    learning_method?: 'batch' | 'online'
+
+    /**
+      It is a parameter that control learning rate in the online learning method. The value should be set between (0.5, 1.0\] to guarantee asymptotic convergence. When the value is 0.0 and batch\_size is `n\_samples`, the update method is same as batch learning. In the literature, this is called kappa.
+
+      @defaultValue `0.7`
+     */
+    learning_decay?: number
+
+    /**
+      A (positive) parameter that downweights early iterations in online learning. It should be greater than 1.0. In the literature, this is called tau\_0.
+
+      @defaultValue `10`
+     */
+    learning_offset?: number
+
+    /**
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method, and not the [`partial\_fit`](#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method.
+
+      @defaultValue `10`
+     */
+    max_iter?: number
+
+    /**
+      Number of documents to use in each EM iteration. Only used in online learning.
+
+      @defaultValue `128`
+     */
+    batch_size?: number
+
+    /**
+      How often to evaluate perplexity. Only used in `fit` method. set it to 0 or negative number to not evaluate perplexity in training at all. Evaluating perplexity can help you check convergence in training process, but it will also increase total training time. Evaluating perplexity in every iteration might increase training time up to two-fold.
+
+      @defaultValue `-1`
+     */
+    evaluate_every?: number
+
+    /**
+      Total number of documents. Only used in the [`partial\_fit`](#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method.
+
+      @defaultValue `1000000`
+     */
+    total_samples?: number
+
+    /**
+      Perplexity tolerance in batch learning. Only used when `evaluate\_every` is greater than 0.
+
+      @defaultValue `0.1`
+     */
+    perp_tol?: number
+
+    /**
+      Stopping tolerance for updating document topic distribution in E-step.
+
+      @defaultValue `0.001`
+     */
+    mean_change_tol?: number
+
+    /**
+      Max number of iterations for updating document topic distribution in the E-step.
+
+      @defaultValue `100`
+     */
+    max_doc_update_iter?: number
+
+    /**
+      The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Verbosity level.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `LatentDirichletAllocation${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -123,7 +229,17 @@ ctor_LatentDirichletAllocation = {k: v for k, v in ctor_LatentDirichletAllocatio
 
     When `learning\_method` is ‘online’, use mini-batch update. Otherwise, use batch update.
    */
-  async fit(opts: LatentDirichletAllocationFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Document word matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -155,9 +271,22 @@ pms_LatentDirichletAllocation_fit = {k: v for k, v in pms_LatentDirichletAllocat
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: LatentDirichletAllocationFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -196,9 +325,12 @@ pms_LatentDirichletAllocation_fit_transform = {k: v for k, v in pms_LatentDirich
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: LatentDirichletAllocationGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -231,9 +363,17 @@ pms_LatentDirichletAllocation_get_feature_names_out = {k: v for k, v in pms_Late
   /**
     Online VB with Mini-Batch update.
    */
-  async partial_fit(
-    opts: LatentDirichletAllocationPartialFitOptions
-  ): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Document word matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -268,9 +408,17 @@ pms_LatentDirichletAllocation_partial_fit = {k: v for k, v in pms_LatentDirichle
 
     Perplexity is defined as exp(-1. \* log-likelihood per word)
    */
-  async perplexity(
-    opts: LatentDirichletAllocationPerplexityOptions
-  ): Promise<number> {
+  async perplexity(opts: {
+    /**
+      Document word matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Do sub-sampling or not.
+     */
+    sub_sampling?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -305,7 +453,17 @@ pms_LatentDirichletAllocation_perplexity = {k: v for k, v in pms_LatentDirichlet
   /**
     Calculate approximate log-likelihood as score.
    */
-  async score(opts: LatentDirichletAllocationScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Document word matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -339,9 +497,12 @@ pms_LatentDirichletAllocation_score = {k: v for k, v in pms_LatentDirichletAlloc
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(
-    opts: LatentDirichletAllocationSetOutputOptions
-  ): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -374,9 +535,12 @@ pms_LatentDirichletAllocation_set_output = {k: v for k, v in pms_LatentDirichlet
   /**
     Transform data X according to the fitted model.
    */
-  async transform(
-    opts: LatentDirichletAllocationTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Document word matrix.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LatentDirichletAllocation instance has already been disposed'
@@ -675,198 +839,4 @@ pms_LatentDirichletAllocation_transform = {k: v for k, v in pms_LatentDirichletA
         ._py`attr_LatentDirichletAllocation_topic_word_prior_.tolist() if hasattr(attr_LatentDirichletAllocation_topic_word_prior_, 'tolist') else attr_LatentDirichletAllocation_topic_word_prior_`
     })()
   }
-}
-
-export interface LatentDirichletAllocationOptions {
-  /**
-    Number of topics.
-
-    @defaultValue `10`
-   */
-  n_components?: number
-
-  /**
-    Prior of document topic distribution `theta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `alpha`.
-   */
-  doc_topic_prior?: number
-
-  /**
-    Prior of topic word distribution `beta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `eta`.
-   */
-  topic_word_prior?: number
-
-  /**
-    Method used to update `\_component`. Only used in [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method. In general, if the data size is large, the online update will be much faster than the batch update.
-
-    Valid options:
-
-    @defaultValue `'batch'`
-   */
-  learning_method?: 'batch' | 'online'
-
-  /**
-    It is a parameter that control learning rate in the online learning method. The value should be set between (0.5, 1.0\] to guarantee asymptotic convergence. When the value is 0.0 and batch\_size is `n\_samples`, the update method is same as batch learning. In the literature, this is called kappa.
-
-    @defaultValue `0.7`
-   */
-  learning_decay?: number
-
-  /**
-    A (positive) parameter that downweights early iterations in online learning. It should be greater than 1.0. In the literature, this is called tau\_0.
-
-    @defaultValue `10`
-   */
-  learning_offset?: number
-
-  /**
-    The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method, and not the [`partial\_fit`](#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method.
-
-    @defaultValue `10`
-   */
-  max_iter?: number
-
-  /**
-    Number of documents to use in each EM iteration. Only used in online learning.
-
-    @defaultValue `128`
-   */
-  batch_size?: number
-
-  /**
-    How often to evaluate perplexity. Only used in `fit` method. set it to 0 or negative number to not evaluate perplexity in training at all. Evaluating perplexity can help you check convergence in training process, but it will also increase total training time. Evaluating perplexity in every iteration might increase training time up to two-fold.
-
-    @defaultValue `-1`
-   */
-  evaluate_every?: number
-
-  /**
-    Total number of documents. Only used in the [`partial\_fit`](#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method.
-
-    @defaultValue `1000000`
-   */
-  total_samples?: number
-
-  /**
-    Perplexity tolerance in batch learning. Only used when `evaluate\_every` is greater than 0.
-
-    @defaultValue `0.1`
-   */
-  perp_tol?: number
-
-  /**
-    Stopping tolerance for updating document topic distribution in E-step.
-
-    @defaultValue `0.001`
-   */
-  mean_change_tol?: number
-
-  /**
-    Max number of iterations for updating document topic distribution in the E-step.
-
-    @defaultValue `100`
-   */
-  max_doc_update_iter?: number
-
-  /**
-    The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Verbosity level.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface LatentDirichletAllocationFitOptions {
-  /**
-    Document word matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface LatentDirichletAllocationFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface LatentDirichletAllocationGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit").
-   */
-  input_features?: any
-}
-
-export interface LatentDirichletAllocationPartialFitOptions {
-  /**
-    Document word matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface LatentDirichletAllocationPerplexityOptions {
-  /**
-    Document word matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Do sub-sampling or not.
-   */
-  sub_sampling?: boolean
-}
-
-export interface LatentDirichletAllocationScoreOptions {
-  /**
-    Document word matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface LatentDirichletAllocationSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface LatentDirichletAllocationTransformOptions {
-  /**
-    Document word matrix.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

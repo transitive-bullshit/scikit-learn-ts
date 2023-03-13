@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../../visualizations.html#visualizations).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DetCurveDisplay.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DetCurveDisplay.html)
  */
 export class DetCurveDisplay {
   id: string
@@ -22,7 +22,27 @@ export class DetCurveDisplay {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DetCurveDisplayOptions) {
+  constructor(opts?: {
+    /**
+      False positive rate.
+     */
+    fpr?: NDArray
+
+    /**
+      False negative rate.
+     */
+    fnr?: NDArray
+
+    /**
+      Name of estimator. If `undefined`, the estimator name is not shown.
+     */
+    estimator_name?: string
+
+    /**
+      The label of the positive class.
+     */
+    pos_label?: string | number
+  }) {
     this.id = `DetCurveDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,9 +123,52 @@ ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is no
 
     Read more in the [User Guide](../../visualizations.html#visualizations).
    */
-  async from_estimator(
-    opts: DetCurveDisplayFromEstimatorOptions
-  ): Promise<any> {
+  async from_estimator(opts: {
+    /**
+      Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
+     */
+    estimator?: any
+
+    /**
+      Input values.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the predicted target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
+     */
+    response_method?: 'decision_function' | 'auto’} default=’auto'
+
+    /**
+      The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
+     */
+    pos_label?: string | number
+
+    /**
+      Name of DET curve for labeling. If `undefined`, use the name of the estimator.
+     */
+    name?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Additional keywords arguments passed to matplotlib `plot` function.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DetCurveDisplay instance has already been disposed')
     }
@@ -151,9 +214,42 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
 
     Read more in the [User Guide](../../visualizations.html#visualizations).
    */
-  async from_predictions(
-    opts: DetCurveDisplayFromPredictionsOptions
-  ): Promise<any> {
+  async from_predictions(opts: {
+    /**
+      True labels.
+     */
+    y_true?: ArrayLike
+
+    /**
+      Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by `decision\_function` on some classifiers).
+     */
+    y_pred?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
+     */
+    pos_label?: string | number
+
+    /**
+      Name of DET curve for labeling. If `undefined`, name will be set to `"Classifier"`.
+     */
+    name?: string
+
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Additional keywords arguments passed to matplotlib `plot` function.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DetCurveDisplay instance has already been disposed')
     }
@@ -194,7 +290,22 @@ pms_DetCurveDisplay_from_predictions = {k: v for k, v in pms_DetCurveDisplay_fro
   /**
     Plot visualization.
    */
-  async plot(opts: DetCurveDisplayPlotOptions): Promise<any> {
+  async plot(opts: {
+    /**
+      Axes object to plot on. If `undefined`, a new figure and axes is created.
+     */
+    ax?: any
+
+    /**
+      Name of DET curve for labeling. If `undefined`, use `estimator\_name` if it is not `undefined`, otherwise no labeling is shown.
+     */
+    name?: string
+
+    /**
+      Additional keywords arguments passed to matplotlib `plot` function.
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DetCurveDisplay instance has already been disposed')
     }
@@ -291,127 +402,4 @@ pms_DetCurveDisplay_plot = {k: v for k, v in pms_DetCurveDisplay_plot.items() if
         ._py`attr_DetCurveDisplay_figure_.tolist() if hasattr(attr_DetCurveDisplay_figure_, 'tolist') else attr_DetCurveDisplay_figure_`
     })()
   }
-}
-
-export interface DetCurveDisplayOptions {
-  /**
-    False positive rate.
-   */
-  fpr?: NDArray
-
-  /**
-    False negative rate.
-   */
-  fnr?: NDArray
-
-  /**
-    Name of estimator. If `undefined`, the estimator name is not shown.
-   */
-  estimator_name?: string
-
-  /**
-    The label of the positive class.
-   */
-  pos_label?: string | number
-}
-
-export interface DetCurveDisplayFromEstimatorOptions {
-  /**
-    Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier.
-   */
-  estimator?: any
-
-  /**
-    Input values.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the predicted target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
-   */
-  response_method?: 'decision_function' | 'auto’} default=’auto'
-
-  /**
-    The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
-   */
-  pos_label?: string | number
-
-  /**
-    Name of DET curve for labeling. If `undefined`, use the name of the estimator.
-   */
-  name?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Additional keywords arguments passed to matplotlib `plot` function.
-   */
-  kwargs?: any
-}
-
-export interface DetCurveDisplayFromPredictionsOptions {
-  /**
-    True labels.
-   */
-  y_true?: ArrayLike
-
-  /**
-    Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by `decision\_function` on some classifiers).
-   */
-  y_pred?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
-   */
-  pos_label?: string | number
-
-  /**
-    Name of DET curve for labeling. If `undefined`, name will be set to `"Classifier"`.
-   */
-  name?: string
-
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Additional keywords arguments passed to matplotlib `plot` function.
-   */
-  kwargs?: any
-}
-
-export interface DetCurveDisplayPlotOptions {
-  /**
-    Axes object to plot on. If `undefined`, a new figure and axes is created.
-   */
-  ax?: any
-
-  /**
-    Name of DET curve for labeling. If `undefined`, use `estimator\_name` if it is not `undefined`, otherwise no labeling is shown.
-   */
-  name?: string
-
-  /**
-    Additional keywords arguments passed to matplotlib `plot` function.
-   */
-  kwargs?: any
 }

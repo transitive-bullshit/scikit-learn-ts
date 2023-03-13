@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../sgd.html#sgd).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)
  */
 export class SGDClassifier {
   id: string
@@ -26,7 +26,164 @@ export class SGDClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SGDClassifierOptions) {
+  constructor(opts?: {
+    /**
+      The loss function to be used.
+
+      @defaultValue `'hinge'`
+     */
+    loss?:
+      | 'hinge'
+      | 'log_loss'
+      | 'log'
+      | 'modified_huber'
+      | 'squared_hinge'
+      | 'perceptron'
+      | 'squared_error'
+      | 'huber'
+      | 'epsilon_insensitive'
+      | 'squared_epsilon_insensitive'
+
+    /**
+      The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is the standard regularizer for linear SVM models. ‘l1’ and ‘elasticnet’ might bring sparsity to the model (feature selection) not achievable with ‘l2’. No penalty is added when set to `undefined`.
+
+      @defaultValue `'l2'`
+     */
+    penalty?: 'l2' | 'l1' | 'elasticnet'
+
+    /**
+      Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when `learning\_rate` is set to ‘optimal’. Values must be in the range `\[0.0, inf)`.
+
+      @defaultValue `0.0001`
+     */
+    alpha?: number
+
+    /**
+      The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’. Values must be in the range `\[0.0, 1.0\]`.
+
+      @defaultValue `0.15`
+     */
+    l1_ratio?: number
+
+    /**
+      Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDClassifier.partial_fit "sklearn.linear_model.SGDClassifier.partial_fit") method. Values must be in the range `\[1, inf)`.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+
+    /**
+      The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter. Values must be in the range `\[0.0, inf)`.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      Whether or not the training data should be shuffled after each epoch.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      The verbosity level. Values must be in the range `\[0, inf)`.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold. Values must be in the range `\[0.0, inf)`.
+
+      @defaultValue `0.1`
+     */
+    epsilon?: number
+
+    /**
+      The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Integer values must be in the range `\[0, 2\*\*32 \- 1\]`.
+     */
+    random_state?: number
+
+    /**
+      The learning rate schedule:
+
+      @defaultValue `'optimal'`
+     */
+    learning_rate?: string
+
+    /**
+      The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’. Values must be in the range `(0.0, inf)`.
+
+      @defaultValue `0`
+     */
+    eta0?: number
+
+    /**
+      The exponent for inverse scaling learning rate \[default 0.5\]. Values must be in the range `(-inf, inf)`.
+
+      @defaultValue `0.5`
+     */
+    power_t?: number
+
+    /**
+      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
+
+      @defaultValue `false`
+     */
+    early_stopping?: boolean
+
+    /**
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`. Values must be in the range `(0.0, 1.0)`.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter. Integer values must be in the range `\[1, max\_iter)`.
+
+      @defaultValue `5`
+     */
+    n_iter_no_change?: number
+
+    /**
+      Preset for the class\_weight fit parameter.
+
+      Weights associated with classes. If not given, all classes are supposed to have weight one.
+
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples. Integer values must be in the range `\[1, n\_samples\]`.
+
+      @defaultValue `false`
+     */
+    average?: boolean | number
+  }) {
     this.id = `SGDClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -127,9 +284,12 @@ ctor_SGDClassifier = {k: v for k, v in ctor_SGDClassifier.items() if v is not No
 
     The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
    */
-  async decision_function(
-    opts: SGDClassifierDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix for which we want to get the confidence scores.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -161,7 +321,7 @@ pms_SGDClassifier_decision_function = {k: v for k, v in pms_SGDClassifier_decisi
 
     Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
-  async densify(opts: SGDClassifierDensifyOptions): Promise<any> {
+  async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -187,7 +347,32 @@ pms_SGDClassifier_densify = {k: v for k, v in pms_SGDClassifier_densify.items() 
   /**
     Fit linear model with Stochastic Gradient Descent.
    */
-  async fit(opts: SGDClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Target values.
+     */
+    y?: NDArray
+
+    /**
+      The initial coefficients to warm-start the optimization.
+     */
+    coef_init?: NDArray[]
+
+    /**
+      The initial intercept to warm-start the optimization.
+     */
+    intercept_init?: NDArray
+
+    /**
+      Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -225,7 +410,27 @@ pms_SGDClassifier_fit = {k: v for k, v in pms_SGDClassifier_fit.items() if v is 
 
     Internally, this method uses `max\_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence, early stopping, and learning rate adjustments should be handled by the user.
    */
-  async partial_fit(opts: SGDClassifierPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Subset of the training data.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Subset of the target values.
+     */
+    y?: NDArray
+
+    /**
+      Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
+     */
+    classes?: NDArray
+
+    /**
+      Weights applied to individual samples. If not provided, uniform weights are assumed.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -257,7 +462,12 @@ pms_SGDClassifier_partial_fit = {k: v for k, v in pms_SGDClassifier_partial_fit.
   /**
     Predict class labels for samples in X.
    */
-  async predict(opts: SGDClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to get the predictions.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -291,9 +501,12 @@ pms_SGDClassifier_predict = {k: v for k, v in pms_SGDClassifier_predict.items() 
 
     See `predict\_proba` for details.
    */
-  async predict_log_proba(
-    opts: SGDClassifierPredictLogProbaOptions
-  ): Promise<ArrayLike> {
+  async predict_log_proba(opts: {
+    /**
+      Input data for prediction.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -329,7 +542,12 @@ pms_SGDClassifier_predict_log_proba = {k: v for k, v in pms_SGDClassifier_predic
 
     Binary probability estimates for loss=”modified\_huber” are given by (clip(decision\_function(X), -1, 1) + 1) / 2. For other loss functions it is necessary to perform proper probability calibration by wrapping the classifier with [`CalibratedClassifierCV`](sklearn.calibration.CalibratedClassifierCV.html#sklearn.calibration.CalibratedClassifierCV "sklearn.calibration.CalibratedClassifierCV") instead.
    */
-  async predict_proba(opts: SGDClassifierPredictProbaOptions): Promise<any> {
+  async predict_proba(opts: {
+    /**
+      Input data for prediction.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -359,7 +577,22 @@ pms_SGDClassifier_predict_proba = {k: v for k, v in pms_SGDClassifier_predict_pr
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: SGDClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -395,7 +628,7 @@ pms_SGDClassifier_score = {k: v for k, v in pms_SGDClassifier_score.items() if v
 
     The `intercept\_` member is not converted.
    */
-  async sparsify(opts: SGDClassifierSparsifyOptions): Promise<any> {
+  async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SGDClassifier instance has already been disposed')
     }
@@ -606,260 +839,3 @@ pms_SGDClassifier_sparsify = {k: v for k, v in pms_SGDClassifier_sparsify.items(
     })()
   }
 }
-
-export interface SGDClassifierOptions {
-  /**
-    The loss function to be used.
-
-    @defaultValue `'hinge'`
-   */
-  loss?:
-    | 'hinge'
-    | 'log_loss'
-    | 'log'
-    | 'modified_huber'
-    | 'squared_hinge'
-    | 'perceptron'
-    | 'squared_error'
-    | 'huber'
-    | 'epsilon_insensitive'
-    | 'squared_epsilon_insensitive'
-
-  /**
-    The penalty (aka regularization term) to be used. Defaults to ‘l2’ which is the standard regularizer for linear SVM models. ‘l1’ and ‘elasticnet’ might bring sparsity to the model (feature selection) not achievable with ‘l2’. No penalty is added when set to `undefined`.
-
-    @defaultValue `'l2'`
-   */
-  penalty?: 'l2' | 'l1' | 'elasticnet'
-
-  /**
-    Constant that multiplies the regularization term. The higher the value, the stronger the regularization. Also used to compute the learning rate when `learning\_rate` is set to ‘optimal’. Values must be in the range `\[0.0, inf)`.
-
-    @defaultValue `0.0001`
-   */
-  alpha?: number
-
-  /**
-    The Elastic Net mixing parameter, with 0 <= l1\_ratio <= 1. l1\_ratio=0 corresponds to L2 penalty, l1\_ratio=1 to L1. Only used if `penalty` is ‘elasticnet’. Values must be in the range `\[0.0, 1.0\]`.
-
-    @defaultValue `0.15`
-   */
-  l1_ratio?: number
-
-  /**
-    Whether the intercept should be estimated or not. If `false`, the data is assumed to be already centered.
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the `fit` method, and not the [`partial\_fit`](#sklearn.linear_model.SGDClassifier.partial_fit "sklearn.linear_model.SGDClassifier.partial_fit") method. Values must be in the range `\[1, inf)`.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-
-  /**
-    The stopping criterion. If it is not `undefined`, training will stop when (loss > best\_loss - tol) for `n\_iter\_no\_change` consecutive epochs. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter. Values must be in the range `\[0.0, inf)`.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    Whether or not the training data should be shuffled after each epoch.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    The verbosity level. Values must be in the range `\[0, inf)`.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Epsilon in the epsilon-insensitive loss functions; only if `loss` is ‘huber’, ‘epsilon\_insensitive’, or ‘squared\_epsilon\_insensitive’. For ‘huber’, determines the threshold at which it becomes less important to get the prediction exactly right. For epsilon-insensitive, any differences between the current prediction and the correct label are ignored if they are less than this threshold. Values must be in the range `\[0.0, inf)`.
-
-    @defaultValue `0.1`
-   */
-  epsilon?: number
-
-  /**
-    The number of CPUs to use to do the OVA (One Versus All, for multi-class problems) computation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Used for shuffling the data, when `shuffle` is set to `true`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Integer values must be in the range `\[0, 2\*\*32 \- 1\]`.
-   */
-  random_state?: number
-
-  /**
-    The learning rate schedule:
-
-    @defaultValue `'optimal'`
-   */
-  learning_rate?: string
-
-  /**
-    The initial learning rate for the ‘constant’, ‘invscaling’ or ‘adaptive’ schedules. The default value is 0.0 as eta0 is not used by the default schedule ‘optimal’. Values must be in the range `(0.0, inf)`.
-
-    @defaultValue `0`
-   */
-  eta0?: number
-
-  /**
-    The exponent for inverse scaling learning rate \[default 0.5\]. Values must be in the range `(-inf, inf)`.
-
-    @defaultValue `0.5`
-   */
-  power_t?: number
-
-  /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside a stratified fraction of training data as validation and terminate training when validation score returned by the `score` method is not improving by at least tol for n\_iter\_no\_change consecutive epochs.
-
-    @defaultValue `false`
-   */
-  early_stopping?: boolean
-
-  /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if `early\_stopping` is `true`. Values must be in the range `(0.0, 1.0)`.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    Number of iterations with no improvement to wait before stopping fitting. Convergence is checked against the training loss or the validation loss depending on the `early\_stopping` parameter. Integer values must be in the range `\[1, max\_iter)`.
-
-    @defaultValue `5`
-   */
-  n_iter_no_change?: number
-
-  /**
-    Preset for the class\_weight fit parameter.
-
-    Weights associated with classes. If not given, all classes are supposed to have weight one.
-
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    Repeatedly calling fit or partial\_fit when warm\_start is `true` can result in a different solution than when calling fit a single time because of the way the data is shuffled. If a dynamic learning rate is used, the learning rate is adapted depending on the number of samples already seen. Calling `fit` resets this counter, while `partial\_fit` will result in increasing the existing counter.
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    When set to `true`, computes the averaged SGD weights across all updates and stores the result in the `coef\_` attribute. If set to an int greater than 1, averaging will begin once the total number of samples seen reaches `average`. So `average=10` will begin averaging after seeing 10 samples. Integer values must be in the range `\[1, n\_samples\]`.
-
-    @defaultValue `false`
-   */
-  average?: boolean | number
-}
-
-export interface SGDClassifierDecisionFunctionOptions {
-  /**
-    The data matrix for which we want to get the confidence scores.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SGDClassifierDensifyOptions {}
-
-export interface SGDClassifierFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Target values.
-   */
-  y?: NDArray
-
-  /**
-    The initial coefficients to warm-start the optimization.
-   */
-  coef_init?: NDArray[]
-
-  /**
-    The initial intercept to warm-start the optimization.
-   */
-  intercept_init?: NDArray
-
-  /**
-    Weights applied to individual samples. If not provided, uniform weights are assumed. These weights will be multiplied with class\_weight (passed through the constructor) if class\_weight is specified.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDClassifierPartialFitOptions {
-  /**
-    Subset of the training data.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Subset of the target values.
-   */
-  y?: NDArray
-
-  /**
-    Classes across all calls to partial\_fit. Can be obtained by via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is required for the first call to partial\_fit and can be omitted in the subsequent calls. Note that y doesn’t need to contain all labels in `classes`.
-   */
-  classes?: NDArray
-
-  /**
-    Weights applied to individual samples. If not provided, uniform weights are assumed.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDClassifierPredictOptions {
-  /**
-    The data matrix for which we want to get the predictions.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SGDClassifierPredictLogProbaOptions {
-  /**
-    Input data for prediction.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SGDClassifierPredictProbaOptions {
-  /**
-    Input data for prediction.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface SGDClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface SGDClassifierSparsifyOptions {}

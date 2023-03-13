@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This model optimizes the squared error using LBFGS or stochastic gradient descent.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
  */
 export class MLPRegressor {
   id: string
@@ -20,7 +20,164 @@ export class MLPRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MLPRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The ith element represents the number of neurons in the ith hidden layer.
+     */
+    hidden_layer_sizes?: any
+
+    /**
+      Activation function for the hidden layer.
+
+      @defaultValue `'relu'`
+     */
+    activation?: 'identity' | 'logistic' | 'tanh' | 'relu'
+
+    /**
+      The solver for weight optimization.
+
+      @defaultValue `'adam'`
+     */
+    solver?: 'lbfgs' | 'sgd' | 'adam'
+
+    /**
+      Strength of the L2 regularization term. The L2 regularization term is divided by the sample size when added to the loss.
+
+      @defaultValue `0.0001`
+     */
+    alpha?: number
+
+    /**
+      Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the regressor will not use minibatch. When set to “auto”, `batch\_size=min(200, n\_samples)`.
+
+      @defaultValue `'auto'`
+     */
+    batch_size?: number
+
+    /**
+      Learning rate schedule for weight updates.
+
+      @defaultValue `'constant'`
+     */
+    learning_rate?: 'constant' | 'invscaling' | 'adaptive'
+
+    /**
+      The initial learning rate used. It controls the step-size in updating the weights. Only used when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `0.001`
+     */
+    learning_rate_init?: number
+
+    /**
+      The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning\_rate is set to ‘invscaling’. Only used when solver=’sgd’.
+
+      @defaultValue `0.5`
+     */
+    power_t?: number
+
+    /**
+      Maximum number of iterations. The solver iterates until convergence (determined by ‘tol’) or this number of iterations. For stochastic solvers (‘sgd’, ‘adam’), note that this determines the number of epochs (how many times each data point will be used), not the number of gradient steps.
+
+      @defaultValue `200`
+     */
+    max_iter?: number
+
+    /**
+      Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `true`
+     */
+    shuffle?: boolean
+
+    /**
+      Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive iterations, unless `learning\_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Whether to print progress messages to stdout.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      Momentum for gradient descent update. Should be between 0 and 1. Only used when solver=’sgd’.
+
+      @defaultValue `0.9`
+     */
+    momentum?: number
+
+    /**
+      Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and momentum > 0.
+
+      @defaultValue `true`
+     */
+    nesterovs_momentum?: boolean
+
+    /**
+      Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside `validation\_fraction` of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs. Only effective when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `false`
+     */
+    early_stopping?: boolean
+
+    /**
+      The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      Exponential decay rate for estimates of first moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
+
+      @defaultValue `0.9`
+     */
+    beta_1?: number
+
+    /**
+      Exponential decay rate for estimates of second moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
+
+      @defaultValue `0.999`
+     */
+    beta_2?: number
+
+    /**
+      Value for numerical stability in adam. Only used when solver=’adam’.
+
+      @defaultValue `1e-8`
+     */
+    epsilon?: number
+
+    /**
+      Maximum number of epochs to not meet `tol` improvement. Only effective when solver=’sgd’ or ‘adam’.
+
+      @defaultValue `10`
+     */
+    n_iter_no_change?: number
+
+    /**
+      Only used when solver=’lbfgs’. Maximum number of function calls. The solver iterates until convergence (determined by `tol`), number of iterations reaches max\_iter, or this number of function calls. Note that number of function calls will be greater than or equal to the number of iterations for the MLPRegressor.
+
+      @defaultValue `15000`
+     */
+    max_fun?: number
+  }) {
     this.id = `MLPRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -125,7 +282,17 @@ ctor_MLPRegressor = {k: v for k, v in ctor_MLPRegressor.items() if v is not None
   /**
     Fit the model to data matrix X and target(s) y.
    */
-  async fit(opts: MLPRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input data.
+     */
+    X?: NDArray | SparseMatrix[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MLPRegressor instance has already been disposed')
     }
@@ -155,7 +322,17 @@ pms_MLPRegressor_fit = {k: v for k, v in pms_MLPRegressor_fit.items() if v is no
   /**
     Update the model with a single iteration over the given data.
    */
-  async partial_fit(opts: MLPRegressorPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      The target values.
+     */
+    y?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This MLPRegressor instance has already been disposed')
     }
@@ -185,7 +362,12 @@ pms_MLPRegressor_partial_fit = {k: v for k, v in pms_MLPRegressor_partial_fit.it
   /**
     Predict using the multi-layer perceptron model.
    */
-  async predict(opts: MLPRegressorPredictOptions): Promise<NDArray[]> {
+  async predict(opts: {
+    /**
+      The input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This MLPRegressor instance has already been disposed')
     }
@@ -215,7 +397,22 @@ pms_MLPRegressor_predict = {k: v for k, v in pms_MLPRegressor_predict.items() if
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: MLPRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This MLPRegressor instance has already been disposed')
     }
@@ -585,211 +782,4 @@ pms_MLPRegressor_score = {k: v for k, v in pms_MLPRegressor_score.items() if v i
         ._py`attr_MLPRegressor_out_activation_.tolist() if hasattr(attr_MLPRegressor_out_activation_, 'tolist') else attr_MLPRegressor_out_activation_`
     })()
   }
-}
-
-export interface MLPRegressorOptions {
-  /**
-    The ith element represents the number of neurons in the ith hidden layer.
-   */
-  hidden_layer_sizes?: any
-
-  /**
-    Activation function for the hidden layer.
-
-    @defaultValue `'relu'`
-   */
-  activation?: 'identity' | 'logistic' | 'tanh' | 'relu'
-
-  /**
-    The solver for weight optimization.
-
-    @defaultValue `'adam'`
-   */
-  solver?: 'lbfgs' | 'sgd' | 'adam'
-
-  /**
-    Strength of the L2 regularization term. The L2 regularization term is divided by the sample size when added to the loss.
-
-    @defaultValue `0.0001`
-   */
-  alpha?: number
-
-  /**
-    Size of minibatches for stochastic optimizers. If the solver is ‘lbfgs’, the regressor will not use minibatch. When set to “auto”, `batch\_size=min(200, n\_samples)`.
-
-    @defaultValue `'auto'`
-   */
-  batch_size?: number
-
-  /**
-    Learning rate schedule for weight updates.
-
-    @defaultValue `'constant'`
-   */
-  learning_rate?: 'constant' | 'invscaling' | 'adaptive'
-
-  /**
-    The initial learning rate used. It controls the step-size in updating the weights. Only used when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `0.001`
-   */
-  learning_rate_init?: number
-
-  /**
-    The exponent for inverse scaling learning rate. It is used in updating effective learning rate when the learning\_rate is set to ‘invscaling’. Only used when solver=’sgd’.
-
-    @defaultValue `0.5`
-   */
-  power_t?: number
-
-  /**
-    Maximum number of iterations. The solver iterates until convergence (determined by ‘tol’) or this number of iterations. For stochastic solvers (‘sgd’, ‘adam’), note that this determines the number of epochs (how many times each data point will be used), not the number of gradient steps.
-
-    @defaultValue `200`
-   */
-  max_iter?: number
-
-  /**
-    Whether to shuffle samples in each iteration. Only used when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `true`
-   */
-  shuffle?: boolean
-
-  /**
-    Determines random number generation for weights and bias initialization, train-test split if early stopping is used, and batch sampling when solver=’sgd’ or ‘adam’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Tolerance for the optimization. When the loss or score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive iterations, unless `learning\_rate` is set to ‘adaptive’, convergence is considered to be reached and training stops.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Whether to print progress messages to stdout.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit as initialization, otherwise, just erase the previous solution. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    Momentum for gradient descent update. Should be between 0 and 1. Only used when solver=’sgd’.
-
-    @defaultValue `0.9`
-   */
-  momentum?: number
-
-  /**
-    Whether to use Nesterov’s momentum. Only used when solver=’sgd’ and momentum > 0.
-
-    @defaultValue `true`
-   */
-  nesterovs_momentum?: boolean
-
-  /**
-    Whether to use early stopping to terminate training when validation score is not improving. If set to `true`, it will automatically set aside `validation\_fraction` of training data as validation and terminate training when validation score is not improving by at least `tol` for `n\_iter\_no\_change` consecutive epochs. Only effective when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `false`
-   */
-  early_stopping?: boolean
-
-  /**
-    The proportion of training data to set aside as validation set for early stopping. Must be between 0 and 1. Only used if early\_stopping is `true`.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    Exponential decay rate for estimates of first moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
-
-    @defaultValue `0.9`
-   */
-  beta_1?: number
-
-  /**
-    Exponential decay rate for estimates of second moment vector in adam, should be in \[0, 1). Only used when solver=’adam’.
-
-    @defaultValue `0.999`
-   */
-  beta_2?: number
-
-  /**
-    Value for numerical stability in adam. Only used when solver=’adam’.
-
-    @defaultValue `1e-8`
-   */
-  epsilon?: number
-
-  /**
-    Maximum number of epochs to not meet `tol` improvement. Only effective when solver=’sgd’ or ‘adam’.
-
-    @defaultValue `10`
-   */
-  n_iter_no_change?: number
-
-  /**
-    Only used when solver=’lbfgs’. Maximum number of function calls. The solver iterates until convergence (determined by `tol`), number of iterations reaches max\_iter, or this number of function calls. Note that number of function calls will be greater than or equal to the number of iterations for the MLPRegressor.
-
-    @defaultValue `15000`
-   */
-  max_fun?: number
-}
-
-export interface MLPRegressorFitOptions {
-  /**
-    The input data.
-   */
-  X?: NDArray | SparseMatrix[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: NDArray
-}
-
-export interface MLPRegressorPartialFitOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    The target values.
-   */
-  y?: NDArray
-}
-
-export interface MLPRegressorPredictOptions {
-  /**
-    The input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface MLPRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / PCA
-
-# Class: PCA
+# PCA
 
 Principal component analysis (PCA).
 
@@ -14,303 +12,280 @@ Notice that this class does not support sparse input. See [`TruncatedSVD`](sklea
 
 Read more in the [User Guide](../decomposition.html#pca).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](PCA.md#constructor)
-
-### Properties
-
-- [\_isDisposed](PCA.md#_isdisposed)
-- [\_isInitialized](PCA.md#_isinitialized)
-- [\_py](PCA.md#_py)
-- [id](PCA.md#id)
-- [opts](PCA.md#opts)
-
-### Accessors
-
-- [components\_](PCA.md#components_)
-- [explained\_variance\_](PCA.md#explained_variance_)
-- [explained\_variance\_ratio\_](PCA.md#explained_variance_ratio_)
-- [feature\_names\_in\_](PCA.md#feature_names_in_)
-- [mean\_](PCA.md#mean_)
-- [n\_components\_](PCA.md#n_components_)
-- [n\_features\_](PCA.md#n_features_)
-- [n\_features\_in\_](PCA.md#n_features_in_)
-- [n\_samples\_](PCA.md#n_samples_)
-- [noise\_variance\_](PCA.md#noise_variance_)
-- [py](PCA.md#py)
-- [singular\_values\_](PCA.md#singular_values_)
-
-### Methods
-
-- [dispose](PCA.md#dispose)
-- [fit](PCA.md#fit)
-- [fit\_transform](PCA.md#fit_transform)
-- [get\_covariance](PCA.md#get_covariance)
-- [get\_feature\_names\_out](PCA.md#get_feature_names_out)
-- [get\_precision](PCA.md#get_precision)
-- [init](PCA.md#init)
-- [inverse\_transform](PCA.md#inverse_transform)
-- [score](PCA.md#score)
-- [score\_samples](PCA.md#score_samples)
-- [set\_output](PCA.md#set_output)
-- [transform](PCA.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new PCA**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new PCA(opts?: object): PCA;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`PCAOptions`](../interfaces/PCAOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.copy?` | `boolean` | If `false`, data passed to fit are overwritten and running fit(X).transform(X) will not yield the expected results, use fit\_transform(X) instead.  `Default Value`  `true` |
+| `opts.iterated_power?` | `number` \| `"auto"` | Number of iterations for the power method computed by svd\_solver == ‘randomized’. Must be of range \[0, infinity).  `Default Value`  `'auto'` |
+| `opts.n_components?` | `number` \| `"mle"` | Number of components to keep. if n\_components is not set all components are kept: |
+| `opts.n_oversamples?` | `number` | This parameter is only relevant when `svd\_solver="randomized"`. It corresponds to the additional number of random vectors to sample the range of `X` so as to ensure proper conditioning. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.  `Default Value`  `10` |
+| `opts.power_iteration_normalizer?` | `"auto"` \| `"QR"` \| `"LU"` \| `"none"` | Power iteration normalizer for randomized SVD solver. Not used by ARPACK. See [`randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd") for more details.  `Default Value`  `'auto'` |
+| `opts.random_state?` | `number` | Used when the ‘arpack’ or ‘randomized’ solvers are used. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.svd_solver?` | `"auto"` \| `"full"` \| `"randomized"` \| `"arpack"` | The solver is selected by a default policy based on `X.shape` and `n\_components`: if the input data is larger than 500x500 and the number of components to extract is lower than 80% of the smallest dimension of the data, then the more efficient ‘randomized’ method is enabled. Otherwise the exact full SVD is computed and optionally truncated afterwards.  `Default Value`  `'auto'` |
+| `opts.tol?` | `number` | Tolerance for singular values computed by svd\_solver == ‘arpack’. Must be of range \[0.0, infinity).  `Default Value`  `0` |
+| `opts.whiten?` | `boolean` | When `true` (`false` by default) the `components\_` vectors are multiplied by the square root of n\_samples and then divided by the singular values to ensure uncorrelated outputs with unit component-wise variances.  Whitening will remove some information from the transformed signal (the relative variance scales of the components) but can sometime improve the predictive accuracy of the downstream estimators by making their data respect some hard-wired assumptions.  `Default Value`  `false` |
 
-[generated/decomposition/PCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L31)
+### Returns
+
+[`PCA`](PCA.md)
+
+Defined in:  [generated/decomposition/PCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L31)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/PCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L29)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L29)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/decomposition/PCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L28)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L28)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/decomposition/PCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L27)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L27)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/decomposition/PCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L24)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L24)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/decomposition/PCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L25)
+Defined in:  [generated/decomposition/PCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L25)
 
 ## Accessors
 
 ### components\_
 
-• `get` **components_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Principal axes in feature space, representing the directions of maximum variance in the data. Equivalently, the right singular vectors of the centered input data, parallel to its eigenvectors. The components are sorted by decreasing `explained\_variance\_`.
+
+#### Signature
+
+```ts
+components_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L536)
 
-[generated/decomposition/PCA.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L412)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L536)
 
 ### explained\_variance\_
-
-• `get` **explained_variance_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
 
 The amount of variance explained by each of the selected components. The variance estimation uses `n\_samples \- 1` degrees of freedom.
 
 Equal to n\_components largest eigenvalues of the covariance matrix of X.
 
+#### Signature
+
+```ts
+explained_variance_(): Promise<ArrayLike>;
+```
+
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L561)
 
-[generated/decomposition/PCA.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L437)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L561)
 
 ### explained\_variance\_ratio\_
-
-• `get` **explained_variance_ratio_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
 
 Percentage of variance explained by each of the selected components.
 
 If `n\_components` is not set then all components are stored and the sum of the ratios is equal to 1.0.
 
+#### Signature
+
+```ts
+explained_variance_ratio_(): Promise<ArrayLike>;
+```
+
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L588)
 
-[generated/decomposition/PCA.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L464)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L588)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L776)
 
-[generated/decomposition/PCA.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L652)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:776](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L776)
 
 ### mean\_
-
-• `get` **mean_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
 
 Per-feature empirical mean, estimated from the training set.
 
 Equal to `X.mean(axis=0)`.
 
+#### Signature
+
+```ts
+mean_(): Promise<ArrayLike>;
+```
+
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L638)
 
-[generated/decomposition/PCA.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L514)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L638)
 
 ### n\_components\_
 
-• `get` **n_components_**(): `Promise`<`number`\>
-
 The estimated number of components. When n\_components is set to ‘mle’ or a number between 0 and 1 (with svd\_solver == ‘full’) this number is estimated from input data. Otherwise it equals the parameter n\_components, or the lesser value of n\_features and n\_samples if n\_components is `undefined`.
+
+#### Signature
+
+```ts
+n_components_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L660)
 
-[generated/decomposition/PCA.ts:536](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L536)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L660)
 
 ### n\_features\_
 
-• `get` **n_features_**(): `Promise`<`number`\>
-
 Number of features in the training data.
+
+#### Signature
+
+```ts
+n_features_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L683)
 
-[generated/decomposition/PCA.ts:559](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L559)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L683)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L753)
 
-[generated/decomposition/PCA.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L629)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L753)
 
 ### n\_samples\_
 
-• `get` **n_samples_**(): `Promise`<`number`\>
-
 Number of samples in the training data.
+
+#### Signature
+
+```ts
+n_samples_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L706)
 
-[generated/decomposition/PCA.ts:582](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L582)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L706)
 
 ### noise\_variance\_
-
-• `get` **noise_variance_**(): `Promise`<`number`\>
 
 The estimated noise covariance following the Probabilistic PCA model from Tipping and Bishop 1999. See “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf). It is required to compute the estimated data covariance and score samples.
 
 Equal to the average of (min(n\_features, n\_samples) - n\_components) smallest eigenvalues of the covariance matrix of X.
 
+#### Signature
+
+```ts
+noise_variance_(): Promise<number>;
+```
+
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L730)
 
-[generated/decomposition/PCA.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L606)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:730](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L730)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L97)
 
-[generated/decomposition/PCA.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L36)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -322,169 +297,182 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L101)
 
-[generated/decomposition/PCA.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L40)
-
-___
+Defined in:  [generated/decomposition/PCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L97) [generated/decomposition/PCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L101)
 
 ### singular\_values\_
 
-• `get` **singular_values_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The singular values corresponding to each of the selected components. The singular values are equal to the 2-norms of the `n\_components` variables in the lower-dimensional space.
+
+#### Signature
+
+```ts
+singular_values_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L613)
 
-[generated/decomposition/PCA.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L489)
+Defined in:  [generated/decomposition/PCA.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L613)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L159)
 
-[generated/decomposition/PCA.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L98)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the model with X.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAFitOptions`](../interfaces/PCAFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Ignored. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L176)
 
-[generated/decomposition/PCA.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L115)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### fit\_transform()
 
 Fit the model with X and apply the dimensionality reduction on X.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAFitTransformOptions`](../interfaces/PCAFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
+| `opts.y?` | `any` | Ignored. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L213)
 
-[generated/decomposition/PCA.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L142)
-
-___
-
-### get\_covariance
-
-▸ **get_covariance**(`opts`): `Promise`<`any`\>
+### get\_covariance()
 
 Compute data covariance with the generative model.
 
 `cov \= components\_.T \* S\*\*2 \* components\_ + sigma2 \* eye(n\_features)` where S\*\*2 contains the explained variances, and sigma2 contains the noise variances.
 
+#### Signature
+
+```ts
+get_covariance(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAGetCovarianceOptions`](../interfaces/PCAGetCovarianceOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.cov?` | `any` | Estimated covariance of data. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L253)
 
-[generated/decomposition/PCA.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L172)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
 The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAGetFeatureNamesOutOptions`](../interfaces/PCAGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.PCA.fit "sklearn.decomposition.PCA.fit"). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L288)
 
-[generated/decomposition/PCA.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L202)
-
-___
-
-### get\_precision
-
-▸ **get_precision**(`opts`): `Promise`<`any`\>
+### get\_precision()
 
 Compute data precision matrix with the generative model.
 
 Equals the inverse of the covariance but computed with the matrix inversion lemma for efficiency.
 
+#### Signature
+
+```ts
+get_precision(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAGetPrecisionOptions`](../interfaces/PCAGetPrecisionOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.precision?` | `any` | Estimated precision of data. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L323)
 
-[generated/decomposition/PCA.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L234)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -494,128 +482,132 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L110)
 
-[generated/decomposition/PCA.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L49)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<`any`\>
+### inverse\_transform()
 
 Transform data back to its original space.
 
 In other words, return an input `X\_original` whose transform would be X.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAInverseTransformOptions`](../interfaces/PCAInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | New data, where `n\_samples` is the number of samples and `n\_components` is the number of components. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L358)
 
-[generated/decomposition/PCA.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L264)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the average log-likelihood of all samples.
 
 See. “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf)
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAScoreOptions`](../interfaces/PCAScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The data. |
+| `opts.y?` | `any` | Ignored. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L393)
 
-[generated/decomposition/PCA.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L294)
-
-___
-
-### score\_samples
-
-▸ **score_samples**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### score\_samples()
 
 Return the log-likelihood of each sample.
 
 See. “Pattern Recognition and Machine Learning” by C. Bishop, 12.2.1 p. 574 or [http://www.miketipping.com/papers/met-mppca.pdf](http://www.miketipping.com/papers/met-mppca.pdf)
 
+#### Signature
+
+```ts
+score_samples(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCAScoreSamplesOptions`](../interfaces/PCAScoreSamplesOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The data. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L433)
 
-[generated/decomposition/PCA.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L324)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCASetOutputOptions`](../interfaces/PCASetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/decomposition/PCA.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L468)
 
-[generated/decomposition/PCA.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L354)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### transform()
 
 Apply dimensionality reduction to X.
 
 X is projected on the first principal components previously extracted from a training set.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PCATransformOptions`](../interfaces/PCATransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | New data, where `n\_samples` is the number of samples and `n\_features` is the number of features. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
-
-[generated/decomposition/PCA.ts:384](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/decomposition/PCA.ts#L384)
+Defined in:  [generated/decomposition/PCA.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/decomposition/PCA.ts#L503)

@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../gaussian_process.html#gaussian-process).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier.html)
  */
 export class GaussianProcessClassifier {
   id: string
@@ -26,7 +26,64 @@ export class GaussianProcessClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GaussianProcessClassifierOptions) {
+  constructor(opts?: {
+    /**
+      The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel “1.0 \* RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a `CompoundKernel`.
+     */
+    kernel?: any
+
+    /**
+      Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:
+
+      @defaultValue `'fmin_l_bfgs_b'`
+     */
+    optimizer?: 'fmin_l_bfgs_b'
+
+    /**
+      The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n\_restarts\_optimizer=0 implies that one run is performed.
+
+      @defaultValue `0`
+     */
+    n_restarts_optimizer?: number
+
+    /**
+      The maximum number of iterations in Newton’s method for approximating the posterior during predict. Smaller values will reduce computation time at the cost of worse results.
+
+      @defaultValue `100`
+     */
+    max_iter_predict?: number
+
+    /**
+      If warm-starts are enabled, the solution of the last Newton iteration on the Laplace approximation of the posterior mode is used as initialization for the next call of \_posterior\_mode(). This can speed up convergence when \_posterior\_mode is called several times on similar problems as in hyperparameter optimization. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
+
+      @defaultValue `true`
+     */
+    copy_X_train?: boolean
+
+    /**
+      Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Specifies how multi-class classification problems are handled. Supported are ‘one\_vs\_rest’ and ‘one\_vs\_one’. In ‘one\_vs\_rest’, one binary Gaussian process classifier is fitted for each class, which is trained to separate this class from the rest. In ‘one\_vs\_one’, one binary Gaussian process classifier is fitted for each pair of classes, which is trained to separate these two classes. The predictions of these binary predictors are combined into multi-class predictions. Note that ‘one\_vs\_one’ does not support predicting probability estimates.
+
+      @defaultValue `'one_vs_rest'`
+     */
+    multi_class?: 'one_vs_rest' | 'one_vs_one'
+
+    /**
+      The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `GaussianProcessClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -117,7 +174,17 @@ ctor_GaussianProcessClassifier = {k: v for k, v in ctor_GaussianProcessClassifie
   /**
     Fit Gaussian process classification model.
    */
-  async fit(opts: GaussianProcessClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Feature vectors or other representations of training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values, must be binary.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessClassifier instance has already been disposed'
@@ -151,9 +218,26 @@ pms_GaussianProcessClassifier_fit = {k: v for k, v in pms_GaussianProcessClassif
 
     In the case of multi-class classification, the mean log-marginal likelihood of the one-versus-rest classifiers are returned.
    */
-  async log_marginal_likelihood(
-    opts: GaussianProcessClassifierLogMarginalLikelihoodOptions
-  ): Promise<number> {
+  async log_marginal_likelihood(opts: {
+    /**
+      Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
+     */
+    theta?: ArrayLike
+
+    /**
+      If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. Note that gradient computation is not supported for non-binary classification. If `true`, theta must not be `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+
+    /**
+      If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.
+
+      @defaultValue `true`
+     */
+    clone_kernel?: boolean
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessClassifier instance has already been disposed'
@@ -188,9 +272,12 @@ pms_GaussianProcessClassifier_log_marginal_likelihood = {k: v for k, v in pms_Ga
   /**
     Perform classification on an array of test vectors X.
    */
-  async predict(
-    opts: GaussianProcessClassifierPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Query points where the GP is evaluated for classification.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessClassifier instance has already been disposed'
@@ -222,9 +309,12 @@ pms_GaussianProcessClassifier_predict = {k: v for k, v in pms_GaussianProcessCla
   /**
     Return probability estimates for the test vector X.
    */
-  async predict_proba(
-    opts: GaussianProcessClassifierPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      Query points where the GP is evaluated for classification.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessClassifier instance has already been disposed'
@@ -259,7 +349,22 @@ pms_GaussianProcessClassifier_predict_proba = {k: v for k, v in pms_GaussianProc
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: GaussianProcessClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GaussianProcessClassifier instance has already been disposed'
@@ -453,127 +558,4 @@ pms_GaussianProcessClassifier_score = {k: v for k, v in pms_GaussianProcessClass
         ._py`attr_GaussianProcessClassifier_feature_names_in_.tolist() if hasattr(attr_GaussianProcessClassifier_feature_names_in_, 'tolist') else attr_GaussianProcessClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface GaussianProcessClassifierOptions {
-  /**
-    The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel “1.0 \* RBF(1.0)” is used as default. Note that the kernel’s hyperparameters are optimized during fitting. Also kernel cannot be a `CompoundKernel`.
-   */
-  kernel?: any
-
-  /**
-    Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:
-
-    @defaultValue `'fmin_l_bfgs_b'`
-   */
-  optimizer?: 'fmin_l_bfgs_b'
-
-  /**
-    The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that n\_restarts\_optimizer=0 implies that one run is performed.
-
-    @defaultValue `0`
-   */
-  n_restarts_optimizer?: number
-
-  /**
-    The maximum number of iterations in Newton’s method for approximating the posterior during predict. Smaller values will reduce computation time at the cost of worse results.
-
-    @defaultValue `100`
-   */
-  max_iter_predict?: number
-
-  /**
-    If warm-starts are enabled, the solution of the last Newton iteration on the Laplace approximation of the posterior mode is used as initialization for the next call of \_posterior\_mode(). This can speed up convergence when \_posterior\_mode is called several times on similar problems as in hyperparameter optimization. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.
-
-    @defaultValue `true`
-   */
-  copy_X_train?: boolean
-
-  /**
-    Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Specifies how multi-class classification problems are handled. Supported are ‘one\_vs\_rest’ and ‘one\_vs\_one’. In ‘one\_vs\_rest’, one binary Gaussian process classifier is fitted for each class, which is trained to separate this class from the rest. In ‘one\_vs\_one’, one binary Gaussian process classifier is fitted for each pair of classes, which is trained to separate these two classes. The predictions of these binary predictors are combined into multi-class predictions. Note that ‘one\_vs\_one’ does not support predicting probability estimates.
-
-    @defaultValue `'one_vs_rest'`
-   */
-  multi_class?: 'one_vs_rest' | 'one_vs_one'
-
-  /**
-    The number of jobs to use for the computation: the specified multiclass problems are computed in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface GaussianProcessClassifierFitOptions {
-  /**
-    Feature vectors or other representations of training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values, must be binary.
-   */
-  y?: ArrayLike
-}
-
-export interface GaussianProcessClassifierLogMarginalLikelihoodOptions {
-  /**
-    Kernel hyperparameters for which the log-marginal likelihood is evaluated. In the case of multi-class classification, theta may be the hyperparameters of the compound kernel or of an individual kernel. In the latter case, all individual kernel get assigned the same theta values. If `undefined`, the precomputed log\_marginal\_likelihood of `self.kernel\_.theta` is returned.
-   */
-  theta?: ArrayLike
-
-  /**
-    If `true`, the gradient of the log-marginal likelihood with respect to the kernel hyperparameters at position theta is returned additionally. Note that gradient computation is not supported for non-binary classification. If `true`, theta must not be `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-
-  /**
-    If `true`, the kernel attribute is copied. If `false`, the kernel attribute is modified, but may result in a performance improvement.
-
-    @defaultValue `true`
-   */
-  clone_kernel?: boolean
-}
-
-export interface GaussianProcessClassifierPredictOptions {
-  /**
-    Query points where the GP is evaluated for classification.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianProcessClassifierPredictProbaOptions {
-  /**
-    Query points where the GP is evaluated for classification.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianProcessClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

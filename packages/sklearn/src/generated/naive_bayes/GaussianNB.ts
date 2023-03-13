@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Can perform online updates to model parameters via [`partial\_fit`](#sklearn.naive_bayes.GaussianNB.partial_fit "sklearn.naive_bayes.GaussianNB.partial_fit"). For details on algorithm used to update feature means and variance online, see Stanford CS tech report STAN-CS-79-773 by Chan, Golub, and LeVeque:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html)
  */
 export class GaussianNB {
   id: string
@@ -20,7 +20,19 @@ export class GaussianNB {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GaussianNBOptions) {
+  constructor(opts?: {
+    /**
+      Prior probabilities of the classes. If specified, the priors are not adjusted according to the data.
+     */
+    priors?: ArrayLike
+
+    /**
+      Portion of the largest variance of all features that is added to variances for calculation stability.
+
+      @defaultValue `1e-9`
+     */
+    var_smoothing?: number
+  }) {
     this.id = `GaussianNB${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +109,22 @@ ctor_GaussianNB = {k: v for k, v in ctor_GaussianNB.items() if v is not None}`
   /**
     Fit Gaussian Naive Bayes according to X, y.
    */
-  async fit(opts: GaussianNBFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Weights applied to individual samples (1. for unweighted).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianNB instance has already been disposed')
     }
@@ -135,7 +162,29 @@ pms_GaussianNB_fit = {k: v for k, v in pms_GaussianNB_fit.items() if v is not No
 
     This method has some performance and numerical stability overhead, hence it is better to call partial\_fit on chunks of data that are as large as possible (as long as fitting in the memory budget) to hide the overhead.
    */
-  async partial_fit(opts: GaussianNBPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      List of all the classes that can possibly appear in the y vector.
+
+      Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
+     */
+    classes?: ArrayLike
+
+    /**
+      Weights applied to individual samples (1. for unweighted).
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This GaussianNB instance has already been disposed')
     }
@@ -171,7 +220,12 @@ pms_GaussianNB_partial_fit = {k: v for k, v in pms_GaussianNB_partial_fit.items(
   /**
     Perform classification on an array of test vectors X.
    */
-  async predict(opts: GaussianNBPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This GaussianNB instance has already been disposed')
     }
@@ -201,9 +255,12 @@ pms_GaussianNB_predict = {k: v for k, v in pms_GaussianNB_predict.items() if v i
 
     For each row x of X and class y, the joint log probability is given by `log P(x, y) \= log P(y) + log P(x|y),` where `log P(y)` is the class prior probability and `log P(x|y)` is the class-conditional probability.
    */
-  async predict_joint_log_proba(
-    opts: GaussianNBPredictJointLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_joint_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This GaussianNB instance has already been disposed')
     }
@@ -233,9 +290,12 @@ pms_GaussianNB_predict_joint_log_proba = {k: v for k, v in pms_GaussianNB_predic
   /**
     Return log-probability estimates for the test vector X.
    */
-  async predict_log_proba(
-    opts: GaussianNBPredictLogProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_log_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This GaussianNB instance has already been disposed')
     }
@@ -263,9 +323,12 @@ pms_GaussianNB_predict_log_proba = {k: v for k, v in pms_GaussianNB_predict_log_
   /**
     Return probability estimates for the test vector X.
    */
-  async predict_proba(
-    opts: GaussianNBPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This GaussianNB instance has already been disposed')
     }
@@ -295,7 +358,22 @@ pms_GaussianNB_predict_proba = {k: v for k, v in pms_GaussianNB_predict_proba.it
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: GaussianNBScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This GaussianNB instance has already been disposed')
     }
@@ -515,104 +593,4 @@ pms_GaussianNB_score = {k: v for k, v in pms_GaussianNB_score.items() if v is no
         ._py`attr_GaussianNB_theta_.tolist() if hasattr(attr_GaussianNB_theta_, 'tolist') else attr_GaussianNB_theta_`
     })()
   }
-}
-
-export interface GaussianNBOptions {
-  /**
-    Prior probabilities of the classes. If specified, the priors are not adjusted according to the data.
-   */
-  priors?: ArrayLike
-
-  /**
-    Portion of the largest variance of all features that is added to variances for calculation stability.
-
-    @defaultValue `1e-9`
-   */
-  var_smoothing?: number
-}
-
-export interface GaussianNBFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Weights applied to individual samples (1. for unweighted).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface GaussianNBPartialFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    List of all the classes that can possibly appear in the y vector.
-
-    Must be provided at the first call to partial\_fit, can be omitted in subsequent calls.
-   */
-  classes?: ArrayLike
-
-  /**
-    Weights applied to individual samples (1. for unweighted).
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface GaussianNBPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianNBPredictJointLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianNBPredictLogProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianNBPredictProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-}
-
-export interface GaussianNBScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

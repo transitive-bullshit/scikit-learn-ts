@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Examples
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DistanceMetric.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DistanceMetric.html)
  */
 export class DistanceMetric {
   id: string
@@ -22,7 +22,12 @@ export class DistanceMetric {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DistanceMetricOptions) {
+  constructor(opts?: {
+    /**
+      True distance.
+     */
+    dist?: any
+  }) {
     this.id = `DistanceMetric${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +104,12 @@ ctor_DistanceMetric = {k: v for k, v in ctor_DistanceMetric.items() if v is not 
 
     The surrogate distance is any measure that yields the same rank as the distance, but is more efficient to compute. For example, the rank-preserving surrogate distance of the Euclidean metric is the squared-euclidean distance.
    */
-  async dist_to_rdist(opts: DistanceMetricDistToRdistOptions): Promise<any> {
+  async dist_to_rdist(opts: {
+    /**
+      True distance.
+     */
+    dist?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DistanceMetric instance has already been disposed')
     }
@@ -129,7 +139,17 @@ pms_DistanceMetric_dist_to_rdist = {k: v for k, v in pms_DistanceMetric_dist_to_
 
     See the docstring of DistanceMetric for a list of available metrics.
    */
-  async get_metric(opts: DistanceMetricGetMetricOptions): Promise<any> {
+  async get_metric(opts: {
+    /**
+      The distance metric to use
+     */
+    metric?: string
+
+    /**
+      additional arguments will be passed to the requested metric
+     */
+    kwargs?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DistanceMetric instance has already been disposed')
     }
@@ -159,7 +179,17 @@ pms_DistanceMetric_get_metric = {k: v for k, v in pms_DistanceMetric_get_metric.
 
     This is a convenience routine for the sake of testing. For many metrics, the utilities in scipy.spatial.distance.cdist and scipy.spatial.distance.pdist will be faster.
    */
-  async pairwise(opts: DistanceMetricPairwiseOptions): Promise<NDArray[]> {
+  async pairwise(opts: {
+    /**
+      Input data.
+     */
+    X?: NDArray | any[]
+
+    /**
+      Input data. If not specified, then Y=X.
+     */
+    Y?: NDArray | any[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This DistanceMetric instance has already been disposed')
     }
@@ -191,7 +221,12 @@ pms_DistanceMetric_pairwise = {k: v for k, v in pms_DistanceMetric_pairwise.item
 
     The surrogate distance is any measure that yields the same rank as the distance, but is more efficient to compute. For example, the rank-preserving surrogate distance of the Euclidean metric is the squared-euclidean distance.
    */
-  async rdist_to_dist(opts: DistanceMetricRdistToDistOptions): Promise<any> {
+  async rdist_to_dist(opts: {
+    /**
+      Surrogate distance.
+     */
+    rdist?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DistanceMetric instance has already been disposed')
     }
@@ -215,49 +250,4 @@ pms_DistanceMetric_rdist_to_dist = {k: v for k, v in pms_DistanceMetric_rdist_to
     return this
       ._py`res_DistanceMetric_rdist_to_dist.tolist() if hasattr(res_DistanceMetric_rdist_to_dist, 'tolist') else res_DistanceMetric_rdist_to_dist`
   }
-}
-
-export interface DistanceMetricOptions {
-  /**
-    True distance.
-   */
-  dist?: any
-}
-
-export interface DistanceMetricDistToRdistOptions {
-  /**
-    True distance.
-   */
-  dist?: any
-}
-
-export interface DistanceMetricGetMetricOptions {
-  /**
-    The distance metric to use
-   */
-  metric?: string
-
-  /**
-    additional arguments will be passed to the requested metric
-   */
-  kwargs?: any
-}
-
-export interface DistanceMetricPairwiseOptions {
-  /**
-    Input data.
-   */
-  X?: NDArray | any[]
-
-  /**
-    Input data. If not specified, then Y=X.
-   */
-  Y?: NDArray | any[]
-}
-
-export interface DistanceMetricRdistToDistOptions {
-  /**
-    Surrogate distance.
-   */
-  rdist?: any
 }

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Can be used as part of a product-kernel where it scales the magnitude of the other factor (kernel) or as part of a sum-kernel, where it modifies the mean of the Gaussian process.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.ConstantKernel.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.ConstantKernel.html)
  */
 export class ConstantKernel {
   id: string
@@ -20,7 +20,19 @@ export class ConstantKernel {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ConstantKernelOptions) {
+  constructor(opts?: {
+    /**
+      The constant value which defines the covariance: k(x\_1, x\_2) = constant\_value
+
+      @defaultValue `1`
+     */
+    constant_value?: number
+
+    /**
+      The lower and upper bound on `constant\_value`. If set to “fixed”, `constant\_value` cannot be changed during hyperparameter tuning.
+     */
+    constant_value_bounds?: 'fixed'
+  }) {
     this.id = `ConstantKernel${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +109,24 @@ ctor_ConstantKernel = {k: v for k, v in ctor_ConstantKernel.items() if v is not 
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: ConstantKernelCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: ArrayLike[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This ConstantKernel instance has already been disposed')
     }
@@ -129,9 +158,12 @@ pms_ConstantKernel___call__ = {k: v for k, v in pms_ConstantKernel___call__.item
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(
-    opts: ConstantKernelCloneWithThetaOptions
-  ): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ConstantKernel instance has already been disposed')
     }
@@ -164,7 +196,12 @@ pms_ConstantKernel_clone_with_theta = {k: v for k, v in pms_ConstantKernel_clone
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: ConstantKernelDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Argument to the kernel.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This ConstantKernel instance has already been disposed')
     }
@@ -192,7 +229,7 @@ pms_ConstantKernel_diag = {k: v for k, v in pms_ConstantKernel_diag.items() if v
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: ConstantKernelIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ConstantKernel instance has already been disposed')
     }
@@ -237,52 +274,3 @@ pms_ConstantKernel_is_stationary = {k: v for k, v in pms_ConstantKernel_is_stati
     })()
   }
 }
-
-export interface ConstantKernelOptions {
-  /**
-    The constant value which defines the covariance: k(x\_1, x\_2) = constant\_value
-
-    @defaultValue `1`
-   */
-  constant_value?: number
-
-  /**
-    The lower and upper bound on `constant\_value`. If set to “fixed”, `constant\_value` cannot be changed during hyperparameter tuning.
-   */
-  constant_value_bounds?: 'fixed'
-}
-
-export interface ConstantKernelCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: ArrayLike[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface ConstantKernelCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface ConstantKernelDiagOptions {
-  /**
-    Argument to the kernel.
-   */
-  X?: ArrayLike[]
-}
-
-export interface ConstantKernelIsStationaryOptions {}

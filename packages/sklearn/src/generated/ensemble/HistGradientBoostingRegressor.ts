@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../ensemble.html#histogram-based-gradient-boosting).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html)
  */
 export class HistGradientBoostingRegressor {
   id: string
@@ -26,7 +26,141 @@ export class HistGradientBoostingRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: HistGradientBoostingRegressorOptions) {
+  constructor(opts?: {
+    /**
+      The loss function to use in the boosting process. Note that the “squared error” and “poisson” losses actually implement “half least squares loss” and “half poisson deviance” to simplify the computation of the gradient. Furthermore, “poisson” loss internally uses a log-link and requires `y >= 0`. “quantile” uses the pinball loss.
+
+      @defaultValue `'squared_error'`
+     */
+    loss?: 'squared_error' | 'absolute_error' | 'poisson' | 'quantile'
+
+    /**
+      If loss is “quantile”, this parameter specifies which quantile to be estimated and must be between 0 and 1.
+     */
+    quantile?: number
+
+    /**
+      The learning rate, also known as *shrinkage*. This is used as a multiplicative factor for the leaves values. Use `1` for no shrinkage.
+
+      @defaultValue `0.1`
+     */
+    learning_rate?: number
+
+    /**
+      The maximum number of iterations of the boosting process, i.e. the maximum number of trees.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      The maximum number of leaves for each tree. Must be strictly greater than 1. If `undefined`, there is no maximum limit.
+
+      @defaultValue `31`
+     */
+    max_leaf_nodes?: number
+
+    /**
+      The maximum depth of each tree. The depth of a tree is the number of edges to go from the root to the deepest leaf. Depth isn’t constrained by default.
+     */
+    max_depth?: number
+
+    /**
+      The minimum number of samples per leaf. For small datasets with less than a few hundred samples, it is recommended to lower this value since only very shallow trees would be built.
+
+      @defaultValue `20`
+     */
+    min_samples_leaf?: number
+
+    /**
+      The L2 regularization parameter. Use `0` for no regularization (default).
+
+      @defaultValue `0`
+     */
+    l2_regularization?: number
+
+    /**
+      The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max\_bins` bins. In addition to the `max\_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255.
+
+      @defaultValue `255`
+     */
+    max_bins?: number
+
+    /**
+      Indicates the categorical features.
+     */
+    categorical_features?: number
+
+    /**
+      Monotonic constraint to enforce on each feature are specified using the following integer values:
+     */
+    monotonic_cst?: any[] | any
+
+    /**
+      Specify interaction constraints, the sets of features which can interact with each other in child node splits.
+
+      Each item specifies the set of feature indices that are allowed to interact with each other. If there are more features than specified in these constraints, they are treated as if they were specified as an additional set.
+
+      The strings “pairwise” and “no\_interactions” are shorthands for allowing only pairwise or no interactions, respectively.
+
+      For instance, with 5 features in total, `interaction\_cst=\[{0, 1}\]` is equivalent to `interaction\_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4.
+     */
+    interaction_cst?: 'pairwise' | 'no_interaction'
+
+    /**
+      When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](../../glossary.html#term-warm_start).
+
+      @defaultValue `false`
+     */
+    warm_start?: boolean
+
+    /**
+      If ‘auto’, early stopping is enabled if the sample size is larger than 10000. If `true`, early stopping is enabled, otherwise early stopping is disabled.
+
+      @defaultValue `'auto'`
+     */
+    early_stopping?: 'auto' | boolean
+
+    /**
+      Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)). If `undefined`, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed.
+
+      @defaultValue `'loss'`
+     */
+    scoring?: string
+
+    /**
+      Proportion (or absolute size) of training data to set aside as validation data for early stopping. If `undefined`, early stopping is done on the training data. Only used if early stopping is performed.
+
+      @defaultValue `0.1`
+     */
+    validation_fraction?: number
+
+    /**
+      Used to determine when to “early stop”. The fitting process is stopped when none of the last `n\_iter\_no\_change` scores are better than the `n\_iter\_no\_change \- 1` -th-to-last one, up to some tolerance. Only used if early stopping is performed.
+
+      @defaultValue `10`
+     */
+    n_iter_no_change?: number
+
+    /**
+      The absolute tolerance to use when comparing scores during early stopping. The higher the tolerance, the more likely we are to early stop: higher tolerance means that it will be harder for subsequent iterations to be considered an improvement upon the reference score.
+
+      @defaultValue `1e-7`
+     */
+    tol?: number
+
+    /**
+      The verbosity level. If not zero, print some information about the fitting process.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `HistGradientBoostingRegressor${
       crypto.randomUUID().split('-')[0]
     }`
@@ -141,7 +275,22 @@ ctor_HistGradientBoostingRegressor = {k: v for k, v in ctor_HistGradientBoosting
   /**
     Fit the gradient boosting model.
    */
-  async fit(opts: HistGradientBoostingRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Weights of training data.
+     */
+    sample_weight?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This HistGradientBoostingRegressor instance has already been disposed'
@@ -177,9 +326,12 @@ pms_HistGradientBoostingRegressor_fit = {k: v for k, v in pms_HistGradientBoosti
   /**
     Predict values for X.
    */
-  async predict(
-    opts: HistGradientBoostingRegressorPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This HistGradientBoostingRegressor instance has already been disposed'
@@ -213,9 +365,22 @@ pms_HistGradientBoostingRegressor_predict = {k: v for k, v in pms_HistGradientBo
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(
-    opts: HistGradientBoostingRegressorScoreOptions
-  ): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This HistGradientBoostingRegressor instance has already been disposed'
@@ -254,9 +419,12 @@ pms_HistGradientBoostingRegressor_score = {k: v for k, v in pms_HistGradientBoos
 
     This method allows monitoring (i.e. determine error on testing set) after each stage.
    */
-  async staged_predict(
-    opts: HistGradientBoostingRegressorStagedPredictOptions
-  ): Promise<any[]> {
+  async staged_predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike[]
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This HistGradientBoostingRegressor instance has already been disposed'
@@ -474,188 +642,4 @@ pms_HistGradientBoostingRegressor_staged_predict = {k: v for k, v in pms_HistGra
         ._py`attr_HistGradientBoostingRegressor_feature_names_in_.tolist() if hasattr(attr_HistGradientBoostingRegressor_feature_names_in_, 'tolist') else attr_HistGradientBoostingRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface HistGradientBoostingRegressorOptions {
-  /**
-    The loss function to use in the boosting process. Note that the “squared error” and “poisson” losses actually implement “half least squares loss” and “half poisson deviance” to simplify the computation of the gradient. Furthermore, “poisson” loss internally uses a log-link and requires `y >= 0`. “quantile” uses the pinball loss.
-
-    @defaultValue `'squared_error'`
-   */
-  loss?: 'squared_error' | 'absolute_error' | 'poisson' | 'quantile'
-
-  /**
-    If loss is “quantile”, this parameter specifies which quantile to be estimated and must be between 0 and 1.
-   */
-  quantile?: number
-
-  /**
-    The learning rate, also known as *shrinkage*. This is used as a multiplicative factor for the leaves values. Use `1` for no shrinkage.
-
-    @defaultValue `0.1`
-   */
-  learning_rate?: number
-
-  /**
-    The maximum number of iterations of the boosting process, i.e. the maximum number of trees.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    The maximum number of leaves for each tree. Must be strictly greater than 1. If `undefined`, there is no maximum limit.
-
-    @defaultValue `31`
-   */
-  max_leaf_nodes?: number
-
-  /**
-    The maximum depth of each tree. The depth of a tree is the number of edges to go from the root to the deepest leaf. Depth isn’t constrained by default.
-   */
-  max_depth?: number
-
-  /**
-    The minimum number of samples per leaf. For small datasets with less than a few hundred samples, it is recommended to lower this value since only very shallow trees would be built.
-
-    @defaultValue `20`
-   */
-  min_samples_leaf?: number
-
-  /**
-    The L2 regularization parameter. Use `0` for no regularization (default).
-
-    @defaultValue `0`
-   */
-  l2_regularization?: number
-
-  /**
-    The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max\_bins` bins. In addition to the `max\_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255.
-
-    @defaultValue `255`
-   */
-  max_bins?: number
-
-  /**
-    Indicates the categorical features.
-   */
-  categorical_features?: number
-
-  /**
-    Monotonic constraint to enforce on each feature are specified using the following integer values:
-   */
-  monotonic_cst?: any[] | any
-
-  /**
-    Specify interaction constraints, the sets of features which can interact with each other in child node splits.
-
-    Each item specifies the set of feature indices that are allowed to interact with each other. If there are more features than specified in these constraints, they are treated as if they were specified as an additional set.
-
-    The strings “pairwise” and “no\_interactions” are shorthands for allowing only pairwise or no interactions, respectively.
-
-    For instance, with 5 features in total, `interaction\_cst=\[{0, 1}\]` is equivalent to `interaction\_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4.
-   */
-  interaction_cst?: 'pairwise' | 'no_interaction'
-
-  /**
-    When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](../../glossary.html#term-warm_start).
-
-    @defaultValue `false`
-   */
-  warm_start?: boolean
-
-  /**
-    If ‘auto’, early stopping is enabled if the sample size is larger than 10000. If `true`, early stopping is enabled, otherwise early stopping is disabled.
-
-    @defaultValue `'auto'`
-   */
-  early_stopping?: 'auto' | boolean
-
-  /**
-    Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)). If `undefined`, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed.
-
-    @defaultValue `'loss'`
-   */
-  scoring?: string
-
-  /**
-    Proportion (or absolute size) of training data to set aside as validation data for early stopping. If `undefined`, early stopping is done on the training data. Only used if early stopping is performed.
-
-    @defaultValue `0.1`
-   */
-  validation_fraction?: number
-
-  /**
-    Used to determine when to “early stop”. The fitting process is stopped when none of the last `n\_iter\_no\_change` scores are better than the `n\_iter\_no\_change \- 1` -th-to-last one, up to some tolerance. Only used if early stopping is performed.
-
-    @defaultValue `10`
-   */
-  n_iter_no_change?: number
-
-  /**
-    The absolute tolerance to use when comparing scores during early stopping. The higher the tolerance, the more likely we are to early stop: higher tolerance means that it will be harder for subsequent iterations to be considered an improvement upon the reference score.
-
-    @defaultValue `1e-7`
-   */
-  tol?: number
-
-  /**
-    The verbosity level. If not zero, print some information about the fitting process.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface HistGradientBoostingRegressorFitOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Weights of training data.
-   */
-  sample_weight?: any
-}
-
-export interface HistGradientBoostingRegressorPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike
-}
-
-export interface HistGradientBoostingRegressorScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface HistGradientBoostingRegressorStagedPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike[]
 }

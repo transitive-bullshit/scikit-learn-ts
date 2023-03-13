@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSCanonical.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSCanonical.html)
  */
 export class PLSCanonical {
   id: string
@@ -20,7 +20,49 @@ export class PLSCanonical {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PLSCanonicalOptions) {
+  constructor(opts?: {
+    /**
+      Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      Whether to scale `X` and `Y`.
+
+      @defaultValue `true`
+     */
+    scale?: boolean
+
+    /**
+      The algorithm used to estimate the first singular vectors of the cross-covariance matrix. ‘nipals’ uses the power method while ‘svd’ will compute the whole SVD.
+
+      @defaultValue `'nipals'`
+     */
+    algorithm?: 'nipals' | 'svd'
+
+    /**
+      The maximum number of iterations of the power method when `algorithm='nipals'`. Ignored otherwise.
+
+      @defaultValue `500`
+     */
+    max_iter?: number
+
+    /**
+      The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
+
+      @defaultValue `0.000001`
+     */
+    tol?: number
+
+    /**
+      Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `PLSCanonical${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +141,17 @@ ctor_PLSCanonical = {k: v for k, v in ctor_PLSCanonical.items() if v is not None
   /**
     Fit model to data.
    */
-  async fit(opts: PLSCanonicalFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+     */
+    Y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -129,9 +181,17 @@ pms_PLSCanonical_fit = {k: v for k, v in pms_PLSCanonical_fit.items() if v is no
   /**
     Learn and apply the dimension reduction on the train data.
    */
-  async fit_transform(
-    opts: PLSCanonicalFitTransformOptions
-  ): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
+     */
+    y?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -163,9 +223,12 @@ pms_PLSCanonical_fit_transform = {k: v for k, v in pms_PLSCanonical_fit_transfor
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: PLSCanonicalGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.PLSCanonical.fit "sklearn.cross_decomposition.PLSCanonical.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -196,9 +259,17 @@ pms_PLSCanonical_get_feature_names_out = {k: v for k, v in pms_PLSCanonical_get_
   /**
     Transform data back to its original space.
    */
-  async inverse_transform(
-    opts: PLSCanonicalInverseTransformOptions
-  ): Promise<NDArray[]> {
+  async inverse_transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+     */
+    X?: ArrayLike[]
+
+    /**
+      New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
+     */
+    Y?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -230,7 +301,19 @@ pms_PLSCanonical_inverse_transform = {k: v for k, v in pms_PLSCanonical_inverse_
   /**
     Predict targets of given samples.
    */
-  async predict(opts: PLSCanonicalPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Whether to copy `X` and `Y`, or perform in-place normalization.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -262,7 +345,22 @@ pms_PLSCanonical_predict = {k: v for k, v in pms_PLSCanonical_predict.items() if
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: PLSCanonicalScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -296,7 +394,12 @@ pms_PLSCanonical_score = {k: v for k, v in pms_PLSCanonical_score.items() if v i
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: PLSCanonicalSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -324,7 +427,24 @@ pms_PLSCanonical_set_output = {k: v for k, v in pms_PLSCanonical_set_output.item
   /**
     Apply the dimension reduction.
    */
-  async transform(opts: PLSCanonicalTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      Samples to transform.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target vectors.
+     */
+    Y?: ArrayLike[]
+
+    /**
+      Whether to copy `X` and `Y`, or perform in-place normalization.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSCanonical instance has already been disposed')
     }
@@ -600,148 +720,4 @@ pms_PLSCanonical_transform = {k: v for k, v in pms_PLSCanonical_transform.items(
         ._py`attr_PLSCanonical_feature_names_in_.tolist() if hasattr(attr_PLSCanonical_feature_names_in_, 'tolist') else attr_PLSCanonical_feature_names_in_`
     })()
   }
-}
-
-export interface PLSCanonicalOptions {
-  /**
-    Number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    Whether to scale `X` and `Y`.
-
-    @defaultValue `true`
-   */
-  scale?: boolean
-
-  /**
-    The algorithm used to estimate the first singular vectors of the cross-covariance matrix. ‘nipals’ uses the power method while ‘svd’ will compute the whole SVD.
-
-    @defaultValue `'nipals'`
-   */
-  algorithm?: 'nipals' | 'svd'
-
-  /**
-    The maximum number of iterations of the power method when `algorithm='nipals'`. Ignored otherwise.
-
-    @defaultValue `500`
-   */
-  max_iter?: number
-
-  /**
-    The tolerance used as convergence criteria in the power method: the algorithm stops whenever the squared norm of `u\_i \- u\_{i-1}` is less than `tol`, where `u` corresponds to the left singular vector.
-
-    @defaultValue `0.000001`
-   */
-  tol?: number
-
-  /**
-    Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface PLSCanonicalFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
-   */
-  Y?: ArrayLike
-}
-
-export interface PLSCanonicalFitTransformOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target vectors, where `n\_samples` is the number of samples and `n\_targets` is the number of response variables.
-   */
-  y?: ArrayLike[]
-}
-
-export interface PLSCanonicalGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.PLSCanonical.fit "sklearn.cross_decomposition.PLSCanonical.fit").
-   */
-  input_features?: any
-}
-
-export interface PLSCanonicalInverseTransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
-   */
-  X?: ArrayLike[]
-
-  /**
-    New target, where `n\_samples` is the number of samples and `n\_components` is the number of pls components.
-   */
-  Y?: ArrayLike[]
-}
-
-export interface PLSCanonicalPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Whether to copy `X` and `Y`, or perform in-place normalization.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface PLSCanonicalScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface PLSCanonicalSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface PLSCanonicalTransformOptions {
-  /**
-    Samples to transform.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target vectors.
-   */
-  Y?: ArrayLike[]
-
-  /**
-    Whether to copy `X` and `Y`, or perform in-place normalization.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
 }

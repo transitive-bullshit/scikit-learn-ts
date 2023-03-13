@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / HistGradientBoostingRegressor
-
-# Class: HistGradientBoostingRegressor
+# HistGradientBoostingRegressor
 
 Histogram-based Gradient Boosting Regression Tree.
 
@@ -12,205 +10,193 @@ This implementation is inspired by [LightGBM](https://github.com/Microsoft/Light
 
 Read more in the [User Guide](../ensemble.html#histogram-based-gradient-boosting).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](HistGradientBoostingRegressor.md#constructor)
-
-### Properties
-
-- [\_isDisposed](HistGradientBoostingRegressor.md#_isdisposed)
-- [\_isInitialized](HistGradientBoostingRegressor.md#_isinitialized)
-- [\_py](HistGradientBoostingRegressor.md#_py)
-- [id](HistGradientBoostingRegressor.md#id)
-- [opts](HistGradientBoostingRegressor.md#opts)
-
-### Accessors
-
-- [do\_early\_stopping\_](HistGradientBoostingRegressor.md#do_early_stopping_)
-- [feature\_names\_in\_](HistGradientBoostingRegressor.md#feature_names_in_)
-- [is\_categorical\_](HistGradientBoostingRegressor.md#is_categorical_)
-- [n\_features\_in\_](HistGradientBoostingRegressor.md#n_features_in_)
-- [n\_trees\_per\_iteration\_](HistGradientBoostingRegressor.md#n_trees_per_iteration_)
-- [py](HistGradientBoostingRegressor.md#py)
-- [train\_score\_](HistGradientBoostingRegressor.md#train_score_)
-- [validation\_score\_](HistGradientBoostingRegressor.md#validation_score_)
-
-### Methods
-
-- [dispose](HistGradientBoostingRegressor.md#dispose)
-- [fit](HistGradientBoostingRegressor.md#fit)
-- [init](HistGradientBoostingRegressor.md#init)
-- [predict](HistGradientBoostingRegressor.md#predict)
-- [score](HistGradientBoostingRegressor.md#score)
-- [staged\_predict](HistGradientBoostingRegressor.md#staged_predict)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new HistGradientBoostingRegressor**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new HistGradientBoostingRegressor(opts?: object): HistGradientBoostingRegressor;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`HistGradientBoostingRegressorOptions`](../interfaces/HistGradientBoostingRegressorOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.categorical_features?` | `number` | Indicates the categorical features. |
+| `opts.early_stopping?` | `boolean` \| `"auto"` | If ‘auto’, early stopping is enabled if the sample size is larger than 10000. If `true`, early stopping is enabled, otherwise early stopping is disabled.  `Default Value`  `'auto'` |
+| `opts.interaction_cst?` | `"pairwise"` \| `"no_interaction"` | Specify interaction constraints, the sets of features which can interact with each other in child node splits.  Each item specifies the set of feature indices that are allowed to interact with each other. If there are more features than specified in these constraints, they are treated as if they were specified as an additional set.  The strings “pairwise” and “no\_interactions” are shorthands for allowing only pairwise or no interactions, respectively.  For instance, with 5 features in total, `interaction\_cst=\[{0, 1}\]` is equivalent to `interaction\_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4. |
+| `opts.l2_regularization?` | `number` | The L2 regularization parameter. Use `0` for no regularization (default).  `Default Value`  `0` |
+| `opts.learning_rate?` | `number` | The learning rate, also known as *shrinkage*. This is used as a multiplicative factor for the leaves values. Use `1` for no shrinkage.  `Default Value`  `0.1` |
+| `opts.loss?` | `"quantile"` \| `"squared_error"` \| `"absolute_error"` \| `"poisson"` | The loss function to use in the boosting process. Note that the “squared error” and “poisson” losses actually implement “half least squares loss” and “half poisson deviance” to simplify the computation of the gradient. Furthermore, “poisson” loss internally uses a log-link and requires `y >= 0`. “quantile” uses the pinball loss.  `Default Value`  `'squared_error'` |
+| `opts.max_bins?` | `number` | The maximum number of bins to use for non-missing values. Before training, each feature of the input array `X` is binned into integer-valued bins, which allows for a much faster training stage. Features with a small number of unique values may use less than `max\_bins` bins. In addition to the `max\_bins` bins, one more bin is always reserved for missing values. Must be no larger than 255.  `Default Value`  `255` |
+| `opts.max_depth?` | `number` | The maximum depth of each tree. The depth of a tree is the number of edges to go from the root to the deepest leaf. Depth isn’t constrained by default. |
+| `opts.max_iter?` | `number` | The maximum number of iterations of the boosting process, i.e. the maximum number of trees.  `Default Value`  `100` |
+| `opts.max_leaf_nodes?` | `number` | The maximum number of leaves for each tree. Must be strictly greater than 1. If `undefined`, there is no maximum limit.  `Default Value`  `31` |
+| `opts.min_samples_leaf?` | `number` | The minimum number of samples per leaf. For small datasets with less than a few hundred samples, it is recommended to lower this value since only very shallow trees would be built.  `Default Value`  `20` |
+| `opts.monotonic_cst?` | `any` | Monotonic constraint to enforce on each feature are specified using the following integer values: |
+| `opts.n_iter_no_change?` | `number` | Used to determine when to “early stop”. The fitting process is stopped when none of the last `n\_iter\_no\_change` scores are better than the `n\_iter\_no\_change \- 1` -th-to-last one, up to some tolerance. Only used if early stopping is performed.  `Default Value`  `10` |
+| `opts.quantile?` | `number` | If loss is “quantile”, this parameter specifies which quantile to be estimated and must be between 0 and 1. |
+| `opts.random_state?` | `number` | Pseudo-random number generator to control the subsampling in the binning process, and the train/validation data split if early stopping is enabled. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.scoring?` | `string` | Scoring parameter to use for early stopping. It can be a single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)). If `undefined`, the estimator’s default scorer is used. If `scoring='loss'`, early stopping is checked w.r.t the loss value. Only used if early stopping is performed.  `Default Value`  `'loss'` |
+| `opts.tol?` | `number` | The absolute tolerance to use when comparing scores during early stopping. The higher the tolerance, the more likely we are to early stop: higher tolerance means that it will be harder for subsequent iterations to be considered an improvement upon the reference score.  `Default Value`  `1e-7` |
+| `opts.validation_fraction?` | `number` | Proportion (or absolute size) of training data to set aside as validation data for early stopping. If `undefined`, early stopping is done on the training data. Only used if early stopping is performed.  `Default Value`  `0.1` |
+| `opts.verbose?` | `number` | The verbosity level. If not zero, print some information about the fitting process.  `Default Value`  `0` |
+| `opts.warm_start?` | `boolean` | When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](../../glossary.html#term-warm_start).  `Default Value`  `false` |
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L29)
+### Returns
+
+[`HistGradientBoostingRegressor`](HistGradientBoostingRegressor.md)
+
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/ensemble/HistGradientBoostingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L27)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L27)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/ensemble/HistGradientBoostingRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L26)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L26)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/ensemble/HistGradientBoostingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L25)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L25)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/ensemble/HistGradientBoostingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L22)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L22)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/ensemble/HistGradientBoostingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L23)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L23)
 
 ## Accessors
 
 ### do\_early\_stopping\_
 
-• `get` **do_early_stopping_**(): `Promise`<`boolean`\>
-
 Indicates whether early stopping is used during training.
+
+#### Signature
+
+```ts
+do_early_stopping_(): Promise<boolean>;
+```
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L460)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L292)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L460)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L622)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L454)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L622)
 
 ### is\_categorical\_
 
-• `get` **is_categorical_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Boolean mask for the categorical features. `undefined` if there are no categorical features.
+
+#### Signature
+
+```ts
+is_categorical_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L568)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L400)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L568)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L595)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L427)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L595)
 
 ### n\_trees\_per\_iteration\_
 
-• `get` **n_trees_per_iteration_**(): `Promise`<`number`\>
-
 The number of tree that are built at each iteration. For regressors, this is always 1.
+
+#### Signature
+
+```ts
+n_trees_per_iteration_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L487)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L319)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L487)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L170)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L36)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -222,91 +208,102 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L174)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L40)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L170) [generated/ensemble/HistGradientBoostingRegressor.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L174)
 
 ### train\_score\_
 
-• `get` **train_score_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The scores at each iteration on the training data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. If `scoring` is not ‘loss’, scores are computed on a subset of at most 10 000 samples. Empty if no early stopping.
+
+#### Signature
+
+```ts
+train_score_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L514)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L346)
-
-___
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L514)
 
 ### validation\_score\_
 
-• `get` **validation_score_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The scores at each iteration on the held-out validation data. The first entry is the score of the ensemble before the first iteration. Scores are computed according to the `scoring` parameter. Empty if no early stopping or if `validation\_fraction` is `undefined`.
+
+#### Signature
+
+```ts
+validation_score_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L541)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L373)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L541)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L261)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L127)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the gradient boosting model.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`HistGradientBoostingRegressorFitOptions`](../interfaces/HistGradientBoostingRegressorFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The input samples. |
+| `opts.sample_weight?` | `any` | Weights of training data. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L278)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L144)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -316,78 +313,81 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L183)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L49)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### predict()
 
 Predict values for X.
 
+#### Signature
+
+```ts
+predict(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`HistGradientBoostingRegressorPredictOptions`](../interfaces/HistGradientBoostingRegressorPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | The input samples. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L329)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L180)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`HistGradientBoostingRegressorScoreOptions`](../interfaces/HistGradientBoostingRegressorScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L368)
 
-[generated/ensemble/HistGradientBoostingRegressor.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L216)
-
-___
-
-### staged\_predict
-
-▸ **staged_predict**(`opts`): `Promise`<`any`[]\>
+### staged\_predict()
 
 Predict regression target for each iteration.
 
 This method allows monitoring (i.e. determine error on testing set) after each stage.
 
+#### Signature
+
+```ts
+staged_predict(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`HistGradientBoostingRegressorStagedPredictOptions`](../interfaces/HistGradientBoostingRegressorStagedPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | The input samples. |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
-
-[generated/ensemble/HistGradientBoostingRegressor.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L257)
+Defined in:  [generated/ensemble/HistGradientBoostingRegressor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/ensemble/HistGradientBoostingRegressor.ts#L422)

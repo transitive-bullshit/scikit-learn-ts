@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The fitted model can also be used to reduce the dimensionality of the input by projecting it to the most discriminative directions, using the `transform` method.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
  */
 export class LinearDiscriminantAnalysis {
   id: string
@@ -24,7 +24,50 @@ export class LinearDiscriminantAnalysis {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LinearDiscriminantAnalysisOptions) {
+  constructor(opts?: {
+    /**
+      ‘svd’: Singular value decomposition (default). Does not compute the covariance matrix, therefore this solver is recommended for data with a large number of features.
+
+      @defaultValue `'svd'`
+     */
+    solver?: 'svd' | 'lsqr' | 'eigen'
+
+    /**
+      None: no shrinkage (default).
+     */
+    shrinkage?: 'auto' | number
+
+    /**
+      The class prior probabilities. By default, the class proportions are inferred from the training data.
+     */
+    priors?: ArrayLike
+
+    /**
+      Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If `undefined`, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
+     */
+    n_components?: number
+
+    /**
+      If `true`, explicitly compute the weighted within-class covariance matrix when solver is ‘svd’. The matrix is always computed and stored for the other solvers.
+
+      @defaultValue `false`
+     */
+    store_covariance?: boolean
+
+    /**
+      Absolute threshold for a singular value of X to be considered significant, used to estimate the rank of X. Dimensions whose singular values are non-significant are discarded. Only used if solver is ‘svd’.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      If not `undefined`, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../classes.html#module-sklearn.covariance "sklearn.covariance"). if `undefined` the shrinkage parameter drives the estimate.
+
+      This should be left to `undefined` if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
+     */
+    covariance_estimator?: any
+  }) {
     this.id = `LinearDiscriminantAnalysis${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -115,9 +158,12 @@ ctor_LinearDiscriminantAnalysis = {k: v for k, v in ctor_LinearDiscriminantAnaly
 
     The decision function is equal (up to a constant factor) to the log-posterior of the model, i.e. `log p(y \= k | x)`. In a binary classification setting this instead corresponds to the difference `log p(y \= 1 | x) \- log p(y \= 0 | x)`. See [Mathematical formulation of the LDA and QDA classifiers](../lda_qda.html#lda-qda-math).
    */
-  async decision_function(
-    opts: LinearDiscriminantAnalysisDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      Array of samples (test vectors).
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -150,7 +196,17 @@ pms_LinearDiscriminantAnalysis_decision_function = {k: v for k, v in pms_LinearD
   /**
     Fit the Linear Discriminant Analysis model.
    */
-  async fit(opts: LinearDiscriminantAnalysisFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -186,9 +242,22 @@ pms_LinearDiscriminantAnalysis_fit = {k: v for k, v in pms_LinearDiscriminantAna
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: LinearDiscriminantAnalysisFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -227,9 +296,12 @@ pms_LinearDiscriminantAnalysis_fit_transform = {k: v for k, v in pms_LinearDiscr
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: LinearDiscriminantAnalysisGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.discriminant_analysis.LinearDiscriminantAnalysis.fit "sklearn.discriminant_analysis.LinearDiscriminantAnalysis.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -262,9 +334,12 @@ pms_LinearDiscriminantAnalysis_get_feature_names_out = {k: v for k, v in pms_Lin
   /**
     Predict class labels for samples in X.
    */
-  async predict(
-    opts: LinearDiscriminantAnalysisPredictOptions
-  ): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to get the predictions.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -296,9 +371,12 @@ pms_LinearDiscriminantAnalysis_predict = {k: v for k, v in pms_LinearDiscriminan
   /**
     Estimate log probability.
    */
-  async predict_log_proba(
-    opts: LinearDiscriminantAnalysisPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -331,9 +409,12 @@ pms_LinearDiscriminantAnalysis_predict_log_proba = {k: v for k, v in pms_LinearD
   /**
     Estimate probability.
    */
-  async predict_proba(
-    opts: LinearDiscriminantAnalysisPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -368,7 +449,22 @@ pms_LinearDiscriminantAnalysis_predict_proba = {k: v for k, v in pms_LinearDiscr
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: LinearDiscriminantAnalysisScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -406,9 +502,12 @@ pms_LinearDiscriminantAnalysis_score = {k: v for k, v in pms_LinearDiscriminantA
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(
-    opts: LinearDiscriminantAnalysisSetOutputOptions
-  ): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -441,9 +540,12 @@ pms_LinearDiscriminantAnalysis_set_output = {k: v for k, v in pms_LinearDiscrimi
   /**
     Project data to maximize class separation.
    */
-  async transform(
-    opts: LinearDiscriminantAnalysisTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LinearDiscriminantAnalysis instance has already been disposed'
@@ -769,144 +871,4 @@ pms_LinearDiscriminantAnalysis_transform = {k: v for k, v in pms_LinearDiscrimin
         ._py`attr_LinearDiscriminantAnalysis_feature_names_in_.tolist() if hasattr(attr_LinearDiscriminantAnalysis_feature_names_in_, 'tolist') else attr_LinearDiscriminantAnalysis_feature_names_in_`
     })()
   }
-}
-
-export interface LinearDiscriminantAnalysisOptions {
-  /**
-    ‘svd’: Singular value decomposition (default). Does not compute the covariance matrix, therefore this solver is recommended for data with a large number of features.
-
-    @defaultValue `'svd'`
-   */
-  solver?: 'svd' | 'lsqr' | 'eigen'
-
-  /**
-    None: no shrinkage (default).
-   */
-  shrinkage?: 'auto' | number
-
-  /**
-    The class prior probabilities. By default, the class proportions are inferred from the training data.
-   */
-  priors?: ArrayLike
-
-  /**
-    Number of components (<= min(n\_classes - 1, n\_features)) for dimensionality reduction. If `undefined`, will be set to min(n\_classes - 1, n\_features). This parameter only affects the `transform` method.
-   */
-  n_components?: number
-
-  /**
-    If `true`, explicitly compute the weighted within-class covariance matrix when solver is ‘svd’. The matrix is always computed and stored for the other solvers.
-
-    @defaultValue `false`
-   */
-  store_covariance?: boolean
-
-  /**
-    Absolute threshold for a singular value of X to be considered significant, used to estimate the rank of X. Dimensions whose singular values are non-significant are discarded. Only used if solver is ‘svd’.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    If not `undefined`, `covariance\_estimator` is used to estimate the covariance matrices instead of relying on the empirical covariance estimator (with potential shrinkage). The object should have a fit method and a `covariance\_` attribute like the estimators in [`sklearn.covariance`](../classes.html#module-sklearn.covariance "sklearn.covariance"). if `undefined` the shrinkage parameter drives the estimate.
-
-    This should be left to `undefined` if `shrinkage` is used. Note that `covariance\_estimator` works only with ‘lsqr’ and ‘eigen’ solvers.
-   */
-  covariance_estimator?: any
-}
-
-export interface LinearDiscriminantAnalysisDecisionFunctionOptions {
-  /**
-    Array of samples (test vectors).
-   */
-  X?: ArrayLike[]
-}
-
-export interface LinearDiscriminantAnalysisFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-}
-
-export interface LinearDiscriminantAnalysisFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface LinearDiscriminantAnalysisGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.discriminant_analysis.LinearDiscriminantAnalysis.fit "sklearn.discriminant_analysis.LinearDiscriminantAnalysis.fit").
-   */
-  input_features?: any
-}
-
-export interface LinearDiscriminantAnalysisPredictOptions {
-  /**
-    The data matrix for which we want to get the predictions.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface LinearDiscriminantAnalysisPredictLogProbaOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LinearDiscriminantAnalysisPredictProbaOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface LinearDiscriminantAnalysisScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface LinearDiscriminantAnalysisSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface LinearDiscriminantAnalysisTransformOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
 }

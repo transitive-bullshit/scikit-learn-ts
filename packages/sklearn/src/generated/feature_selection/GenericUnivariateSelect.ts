@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_selection.html#univariate-feature-selection).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.GenericUnivariateSelect.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.GenericUnivariateSelect.html)
  */
 export class GenericUnivariateSelect {
   id: string
@@ -20,7 +20,26 @@ export class GenericUnivariateSelect {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GenericUnivariateSelectOptions) {
+  constructor(opts?: {
+    /**
+      Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). For modes ‘percentile’ or ‘kbest’ it can return a single array scores.
+     */
+    score_func?: any
+
+    /**
+      Feature selection mode.
+
+      @defaultValue `'percentile'`
+     */
+    mode?: 'percentile' | 'k_best' | 'fpr' | 'fdr' | 'fwe'
+
+    /**
+      Parameter of the corresponding mode.
+
+      @defaultValue `0.00001`
+     */
+    param?: 'all' | number | number
+  }) {
     this.id = `GenericUnivariateSelect${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +120,17 @@ ctor_GenericUnivariateSelect = {k: v for k, v in ctor_GenericUnivariateSelect.it
   /**
     Run score function on (X, y) and get the appropriate features.
    */
-  async fit(opts: GenericUnivariateSelectFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The training input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target values (class labels in classification, real numbers in regression).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GenericUnivariateSelect instance has already been disposed'
@@ -135,9 +164,22 @@ pms_GenericUnivariateSelect_fit = {k: v for k, v in pms_GenericUnivariateSelect_
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: GenericUnivariateSelectFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This GenericUnivariateSelect instance has already been disposed'
@@ -174,9 +216,12 @@ pms_GenericUnivariateSelect_fit_transform = {k: v for k, v in pms_GenericUnivari
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: GenericUnivariateSelectGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GenericUnivariateSelect instance has already been disposed'
@@ -209,9 +254,14 @@ pms_GenericUnivariateSelect_get_feature_names_out = {k: v for k, v in pms_Generi
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(
-    opts: GenericUnivariateSelectGetSupportOptions
-  ): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GenericUnivariateSelect instance has already been disposed'
@@ -243,9 +293,12 @@ pms_GenericUnivariateSelect_get_support = {k: v for k, v in pms_GenericUnivariat
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(
-    opts: GenericUnivariateSelectInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GenericUnivariateSelect instance has already been disposed'
@@ -280,9 +333,12 @@ pms_GenericUnivariateSelect_inverse_transform = {k: v for k, v in pms_GenericUni
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(
-    opts: GenericUnivariateSelectSetOutputOptions
-  ): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GenericUnivariateSelect instance has already been disposed'
@@ -314,7 +370,12 @@ pms_GenericUnivariateSelect_set_output = {k: v for k, v in pms_GenericUnivariate
   /**
     Reduce X to the selected features.
    */
-  async transform(opts: GenericUnivariateSelectTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This GenericUnivariateSelect instance has already been disposed'
@@ -450,91 +511,4 @@ pms_GenericUnivariateSelect_transform = {k: v for k, v in pms_GenericUnivariateS
         ._py`attr_GenericUnivariateSelect_feature_names_in_.tolist() if hasattr(attr_GenericUnivariateSelect_feature_names_in_, 'tolist') else attr_GenericUnivariateSelect_feature_names_in_`
     })()
   }
-}
-
-export interface GenericUnivariateSelectOptions {
-  /**
-    Function taking two arrays X and y, and returning a pair of arrays (scores, pvalues). For modes ‘percentile’ or ‘kbest’ it can return a single array scores.
-   */
-  score_func?: any
-
-  /**
-    Feature selection mode.
-
-    @defaultValue `'percentile'`
-   */
-  mode?: 'percentile' | 'k_best' | 'fpr' | 'fdr' | 'fwe'
-
-  /**
-    Parameter of the corresponding mode.
-
-    @defaultValue `0.00001`
-   */
-  param?: 'all' | number | number
-}
-
-export interface GenericUnivariateSelectFitOptions {
-  /**
-    The training input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target values (class labels in classification, real numbers in regression).
-   */
-  y?: ArrayLike
-}
-
-export interface GenericUnivariateSelectFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface GenericUnivariateSelectGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface GenericUnivariateSelectGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface GenericUnivariateSelectInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface GenericUnivariateSelectSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface GenericUnivariateSelectTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

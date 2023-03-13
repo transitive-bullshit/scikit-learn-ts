@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This warning occurs when some input data needs to be converted or interpreted in a way that may not match the user’s expectations.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataConversionWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataConversionWarning.html)
  */
 export class DataConversionWarning {
   id: string
@@ -20,7 +20,7 @@ export class DataConversionWarning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DataConversionWarningOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `DataConversionWarning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,9 +99,7 @@ ctor_DataConversionWarning = {k: v for k, v in ctor_DataConversionWarning.items(
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(
-    opts: DataConversionWarningWithTracebackOptions
-  ): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DataConversionWarning instance has already been disposed'
@@ -128,9 +126,3 @@ pms_DataConversionWarning_with_traceback = {k: v for k, v in pms_DataConversionW
       ._py`res_DataConversionWarning_with_traceback.tolist() if hasattr(res_DataConversionWarning_with_traceback, 'tolist') else res_DataConversionWarning_with_traceback`
   }
 }
-
-export interface DataConversionWarningOptions {
-  args?: any
-}
-
-export interface DataConversionWarningWithTracebackOptions {}

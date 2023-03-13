@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#ransac-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html)
  */
 export class RANSACRegressor {
   id: string
@@ -22,7 +22,84 @@ export class RANSACRegressor {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RANSACRegressorOptions) {
+  constructor(opts?: {
+    /**
+      Base estimator object which implements the following methods:
+     */
+    estimator?: any
+
+    /**
+      Minimum number of samples chosen randomly from original data. Treated as an absolute number of samples for `min\_samples >= 1`, treated as a relative number `ceil(min\_samples \* X.shape\[0\])` for `min\_samples < 1`. This is typically chosen as the minimal number of samples necessary to estimate the given `estimator`. By default a `sklearn.linear\_model.LinearRegression()` estimator is assumed and `min\_samples` is chosen as `X.shape\[1\] + 1`. This parameter is highly dependent upon the model, so if a `estimator` other than `linear\_model.LinearRegression` is used, the user must provide a value.
+     */
+    min_samples?: number
+
+    /**
+      Maximum residual for a data sample to be classified as an inlier. By default the threshold is chosen as the MAD (median absolute deviation) of the target values `y`. Points whose residuals are strictly equal to the threshold are considered as inliers.
+     */
+    residual_threshold?: number
+
+    /**
+      This function is called with the randomly selected data before the model is fitted to it: `is\_data\_valid(X, y)`. If its return value is `false` the current randomly chosen sub-sample is skipped.
+     */
+    is_data_valid?: any
+
+    /**
+      This function is called with the estimated model and the randomly selected data: `is\_model\_valid(model, X, y)`. If its return value is `false` the current randomly chosen sub-sample is skipped. Rejecting samples with this function is computationally costlier than with `is\_data\_valid`. `is\_model\_valid` should therefore only be used if the estimated model is needed for making the rejection decision.
+     */
+    is_model_valid?: any
+
+    /**
+      Maximum number of iterations for random sample selection.
+
+      @defaultValue `100`
+     */
+    max_trials?: number
+
+    /**
+      Maximum number of iterations that can be skipped due to finding zero inliers or invalid data defined by `is\_data\_valid` or invalid models defined by `is\_model\_valid`.
+     */
+    max_skips?: number
+
+    /**
+      Stop iteration if at least this number of inliers are found.
+     */
+    stop_n_inliers?: number
+
+    /**
+      Stop iteration if score is greater equal than this threshold.
+     */
+    stop_score?: number
+
+    /**
+      RANSAC iteration stops if at least one outlier-free set of the training data is sampled in RANSAC. This requires to generate at least N samples (iterations):
+
+      @defaultValue `0.99`
+     */
+    stop_probability?: number
+
+    /**
+      String inputs, ‘absolute\_error’ and ‘squared\_error’ are supported which find the absolute error and squared error per sample respectively.
+
+      If `loss` is a callable, then it should be a function that takes two arrays as inputs, the true and predicted value and returns a 1-D array with the i-th value of the array corresponding to the loss on `X\[i\]`.
+
+      If the loss on a sample is greater than the `residual\_threshold`, then this sample is classified as an outlier.
+
+      @defaultValue `'absolute_error'`
+     */
+    loss?: string
+
+    /**
+      The generator used to initialize the centers. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Use `estimator` instead.
+
+      @defaultValue `'deprecated'`
+     */
+    base_estimator?: any
+  }) {
     this.id = `RANSACRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -115,7 +192,22 @@ ctor_RANSACRegressor = {k: v for k, v in ctor_RANSACRegressor.items() if v is no
   /**
     Fit estimator using RANSAC algorithm.
    */
-  async fit(opts: RANSACRegressorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Individual weights for each sample raises error if sample\_weight is passed and estimator fit method does not support it.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RANSACRegressor instance has already been disposed')
     }
@@ -149,7 +241,12 @@ pms_RANSACRegressor_fit = {k: v for k, v in pms_RANSACRegressor_fit.items() if v
 
     This is a wrapper for `estimator\_.predict(X)`.
    */
-  async predict(opts: RANSACRegressorPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Input data.
+     */
+    X?: any[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RANSACRegressor instance has already been disposed')
     }
@@ -179,7 +276,17 @@ pms_RANSACRegressor_predict = {k: v for k, v in pms_RANSACRegressor_predict.item
 
     This is a wrapper for `estimator\_.score(X, y)`.
    */
-  async score(opts: RANSACRegressorScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Training data.
+     */
+    X?: any[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This RANSACRegressor instance has already been disposed')
     }
@@ -405,119 +512,4 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
         ._py`attr_RANSACRegressor_feature_names_in_.tolist() if hasattr(attr_RANSACRegressor_feature_names_in_, 'tolist') else attr_RANSACRegressor_feature_names_in_`
     })()
   }
-}
-
-export interface RANSACRegressorOptions {
-  /**
-    Base estimator object which implements the following methods:
-   */
-  estimator?: any
-
-  /**
-    Minimum number of samples chosen randomly from original data. Treated as an absolute number of samples for `min\_samples >= 1`, treated as a relative number `ceil(min\_samples \* X.shape\[0\])` for `min\_samples < 1`. This is typically chosen as the minimal number of samples necessary to estimate the given `estimator`. By default a `sklearn.linear\_model.LinearRegression()` estimator is assumed and `min\_samples` is chosen as `X.shape\[1\] + 1`. This parameter is highly dependent upon the model, so if a `estimator` other than `linear\_model.LinearRegression` is used, the user must provide a value.
-   */
-  min_samples?: number
-
-  /**
-    Maximum residual for a data sample to be classified as an inlier. By default the threshold is chosen as the MAD (median absolute deviation) of the target values `y`. Points whose residuals are strictly equal to the threshold are considered as inliers.
-   */
-  residual_threshold?: number
-
-  /**
-    This function is called with the randomly selected data before the model is fitted to it: `is\_data\_valid(X, y)`. If its return value is `false` the current randomly chosen sub-sample is skipped.
-   */
-  is_data_valid?: any
-
-  /**
-    This function is called with the estimated model and the randomly selected data: `is\_model\_valid(model, X, y)`. If its return value is `false` the current randomly chosen sub-sample is skipped. Rejecting samples with this function is computationally costlier than with `is\_data\_valid`. `is\_model\_valid` should therefore only be used if the estimated model is needed for making the rejection decision.
-   */
-  is_model_valid?: any
-
-  /**
-    Maximum number of iterations for random sample selection.
-
-    @defaultValue `100`
-   */
-  max_trials?: number
-
-  /**
-    Maximum number of iterations that can be skipped due to finding zero inliers or invalid data defined by `is\_data\_valid` or invalid models defined by `is\_model\_valid`.
-   */
-  max_skips?: number
-
-  /**
-    Stop iteration if at least this number of inliers are found.
-   */
-  stop_n_inliers?: number
-
-  /**
-    Stop iteration if score is greater equal than this threshold.
-   */
-  stop_score?: number
-
-  /**
-    RANSAC iteration stops if at least one outlier-free set of the training data is sampled in RANSAC. This requires to generate at least N samples (iterations):
-
-    @defaultValue `0.99`
-   */
-  stop_probability?: number
-
-  /**
-    String inputs, ‘absolute\_error’ and ‘squared\_error’ are supported which find the absolute error and squared error per sample respectively.
-
-    If `loss` is a callable, then it should be a function that takes two arrays as inputs, the true and predicted value and returns a 1-D array with the i-th value of the array corresponding to the loss on `X\[i\]`.
-
-    If the loss on a sample is greater than the `residual\_threshold`, then this sample is classified as an outlier.
-
-    @defaultValue `'absolute_error'`
-   */
-  loss?: string
-
-  /**
-    The generator used to initialize the centers. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Use `estimator` instead.
-
-    @defaultValue `'deprecated'`
-   */
-  base_estimator?: any
-}
-
-export interface RANSACRegressorFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Individual weights for each sample raises error if sample\_weight is passed and estimator fit method does not support it.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface RANSACRegressorPredictOptions {
-  /**
-    Input data.
-   */
-  X?: any[]
-}
-
-export interface RANSACRegressorScoreOptions {
-  /**
-    Training data.
-   */
-  X?: any[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
 }

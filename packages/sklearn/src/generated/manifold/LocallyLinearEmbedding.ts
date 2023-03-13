@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../manifold.html#locally-linear-embedding).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html)
  */
 export class LocallyLinearEmbedding {
   id: string
@@ -20,7 +20,87 @@ export class LocallyLinearEmbedding {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LocallyLinearEmbeddingOptions) {
+  constructor(opts?: {
+    /**
+      Number of neighbors to consider for each point.
+
+      @defaultValue `5`
+     */
+    n_neighbors?: number
+
+    /**
+      Number of coordinates for the manifold.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      Regularization constant, multiplies the trace of the local covariance matrix of the distances.
+
+      @defaultValue `0.001`
+     */
+    reg?: number
+
+    /**
+      The solver used to compute the eigenvectors. The available options are:
+
+      @defaultValue `'auto'`
+     */
+    eigen_solver?: 'auto' | 'arpack' | 'dense'
+
+    /**
+      Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
+
+      @defaultValue `0.000001`
+     */
+    tol?: number
+
+    /**
+      Maximum number of iterations for the arpack solver. Not used if eigen\_solver==’dense’.
+
+      @defaultValue `100`
+     */
+    max_iter?: number
+
+    /**
+      `standard`: use the standard locally linear embedding algorithm. see reference [\[1\]](#r62e36dd1b056-1)
+
+      @defaultValue `'standard'`
+     */
+    method?: 'standard' | 'hessian' | 'modified' | 'ltsa'
+
+    /**
+      Tolerance for Hessian eigenmapping method. Only used if `method \== 'hessian'`.
+
+      @defaultValue `0.0001`
+     */
+    hessian_tol?: number
+
+    /**
+      Tolerance for modified LLE method. Only used if `method \== 'modified'`.
+
+      @defaultValue `1e-12`
+     */
+    modified_tol?: number
+
+    /**
+      Algorithm to use for nearest neighbors search, passed to [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") instance.
+
+      @defaultValue `'auto'`
+     */
+    neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
+
+    /**
+      Determines the random number generator when `eigen\_solver` == ‘arpack’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `LocallyLinearEmbedding${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -113,7 +193,17 @@ ctor_LocallyLinearEmbedding = {k: v for k, v in ctor_LocallyLinearEmbedding.item
   /**
     Compute the embedding vectors for data X.
    */
-  async fit(opts: LocallyLinearEmbeddingFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training set.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LocallyLinearEmbedding instance has already been disposed'
@@ -143,9 +233,17 @@ pms_LocallyLinearEmbedding_fit = {k: v for k, v in pms_LocallyLinearEmbedding_fi
   /**
     Compute the embedding vectors for data X and transform X.
    */
-  async fit_transform(
-    opts: LocallyLinearEmbeddingFitTransformOptions
-  ): Promise<ArrayLike> {
+  async fit_transform(opts: {
+    /**
+      Training set.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This LocallyLinearEmbedding instance has already been disposed'
@@ -180,9 +278,12 @@ pms_LocallyLinearEmbedding_fit_transform = {k: v for k, v in pms_LocallyLinearEm
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: LocallyLinearEmbeddingGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.manifold.LocallyLinearEmbedding.fit "sklearn.manifold.LocallyLinearEmbedding.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LocallyLinearEmbedding instance has already been disposed'
@@ -217,7 +318,12 @@ pms_LocallyLinearEmbedding_get_feature_names_out = {k: v for k, v in pms_Locally
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: LocallyLinearEmbeddingSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This LocallyLinearEmbedding instance has already been disposed'
@@ -249,9 +355,12 @@ pms_LocallyLinearEmbedding_set_output = {k: v for k, v in pms_LocallyLinearEmbed
   /**
     Transform new points into embedding space.
    */
-  async transform(
-    opts: LocallyLinearEmbeddingTransformOptions
-  ): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Training set.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This LocallyLinearEmbedding instance has already been disposed'
@@ -414,131 +523,4 @@ pms_LocallyLinearEmbedding_transform = {k: v for k, v in pms_LocallyLinearEmbedd
         ._py`attr_LocallyLinearEmbedding_nbrs_.tolist() if hasattr(attr_LocallyLinearEmbedding_nbrs_, 'tolist') else attr_LocallyLinearEmbedding_nbrs_`
     })()
   }
-}
-
-export interface LocallyLinearEmbeddingOptions {
-  /**
-    Number of neighbors to consider for each point.
-
-    @defaultValue `5`
-   */
-  n_neighbors?: number
-
-  /**
-    Number of coordinates for the manifold.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    Regularization constant, multiplies the trace of the local covariance matrix of the distances.
-
-    @defaultValue `0.001`
-   */
-  reg?: number
-
-  /**
-    The solver used to compute the eigenvectors. The available options are:
-
-    @defaultValue `'auto'`
-   */
-  eigen_solver?: 'auto' | 'arpack' | 'dense'
-
-  /**
-    Tolerance for ‘arpack’ method Not used if eigen\_solver==’dense’.
-
-    @defaultValue `0.000001`
-   */
-  tol?: number
-
-  /**
-    Maximum number of iterations for the arpack solver. Not used if eigen\_solver==’dense’.
-
-    @defaultValue `100`
-   */
-  max_iter?: number
-
-  /**
-    `standard`: use the standard locally linear embedding algorithm. see reference [\[1\]](#r62e36dd1b056-1)
-
-    @defaultValue `'standard'`
-   */
-  method?: 'standard' | 'hessian' | 'modified' | 'ltsa'
-
-  /**
-    Tolerance for Hessian eigenmapping method. Only used if `method \== 'hessian'`.
-
-    @defaultValue `0.0001`
-   */
-  hessian_tol?: number
-
-  /**
-    Tolerance for modified LLE method. Only used if `method \== 'modified'`.
-
-    @defaultValue `1e-12`
-   */
-  modified_tol?: number
-
-  /**
-    Algorithm to use for nearest neighbors search, passed to [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") instance.
-
-    @defaultValue `'auto'`
-   */
-  neighbors_algorithm?: 'auto' | 'brute' | 'kd_tree' | 'ball_tree'
-
-  /**
-    Determines the random number generator when `eigen\_solver` == ‘arpack’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface LocallyLinearEmbeddingFitOptions {
-  /**
-    Training set.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface LocallyLinearEmbeddingFitTransformOptions {
-  /**
-    Training set.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface LocallyLinearEmbeddingGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.manifold.LocallyLinearEmbedding.fit "sklearn.manifold.LocallyLinearEmbedding.fit").
-   */
-  input_features?: any
-}
-
-export interface LocallyLinearEmbeddingSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface LocallyLinearEmbeddingTransformOptions {
-  /**
-    Training set.
-   */
-  X?: ArrayLike[]
 }

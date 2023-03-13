@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../calibration.html#calibration).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html)
  */
 export class CalibratedClassifierCV {
   id: string
@@ -26,7 +26,49 @@ export class CalibratedClassifierCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: CalibratedClassifierCVOptions) {
+  constructor(opts?: {
+    /**
+      The classifier whose output need to be calibrated to provide more accurate `predict\_proba` outputs. The default classifier is a [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
+     */
+    estimator?: any
+
+    /**
+      The method to use for calibration. Can be ‘sigmoid’ which corresponds to Platt’s method (i.e. a logistic regression model) or ‘isotonic’ which is a non-parametric approach. It is not advised to use isotonic calibration with too few calibration samples `(<<1000)` since it tends to overfit.
+
+      @defaultValue `'sigmoid'`
+     */
+    method?: 'sigmoid' | 'isotonic'
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number | 'prefit'
+
+    /**
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors.
+
+      Base estimator clones are fitted in parallel across cross-validation iterations. Therefore parallelism happens only when `cv != "prefit"`.
+
+      See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Determines how the calibrator is fitted when `cv` is not `'prefit'`. Ignored if `cv='prefit'`.
+
+      If `true`, the `estimator` is fitted using training data, and calibrated using testing data, for each `cv` fold. The final estimator is an ensemble of `n\_cv` fitted classifier and calibrator pairs, where `n\_cv` is the number of cross-validation folds. The output is the average predicted probabilities of all pairs.
+
+      If `false`, `cv` is used to compute unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. At prediction time, the classifier used is the `estimator` trained on all the data. Note that this method is also internally implemented in [`sklearn.svm`](../classes.html#module-sklearn.svm "sklearn.svm") estimators with the `probabilities=True` parameter.
+
+      @defaultValue `true`
+     */
+    ensemble?: boolean
+
+    /**
+      This parameter is deprecated. Use `estimator` instead.
+     */
+    base_estimator?: any
+  }) {
     this.id = `CalibratedClassifierCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,7 +151,27 @@ ctor_CalibratedClassifierCV = {k: v for k, v in ctor_CalibratedClassifierCV.item
   /**
     Fit the calibrated model.
    */
-  async fit(opts: CalibratedClassifierCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted.
+     */
+    sample_weight?: ArrayLike
+
+    /**
+      Parameters to pass to the `fit` method of the underlying classifier.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This CalibratedClassifierCV instance has already been disposed'
@@ -147,7 +209,12 @@ pms_CalibratedClassifierCV_fit = {k: v for k, v in pms_CalibratedClassifierCV_fi
 
     The predicted class is the class that has the highest probability, and can thus be different from the prediction of the uncalibrated classifier.
    */
-  async predict(opts: CalibratedClassifierCVPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The samples, as accepted by `estimator.predict`.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This CalibratedClassifierCV instance has already been disposed'
@@ -181,9 +248,12 @@ pms_CalibratedClassifierCV_predict = {k: v for k, v in pms_CalibratedClassifierC
 
     This function returns calibrated probabilities of classification according to each class on an array of test vectors X.
    */
-  async predict_proba(
-    opts: CalibratedClassifierCVPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      The samples, as accepted by `estimator.predict\_proba`.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This CalibratedClassifierCV instance has already been disposed'
@@ -218,7 +288,22 @@ pms_CalibratedClassifierCV_predict_proba = {k: v for k, v in pms_CalibratedClass
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: CalibratedClassifierCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This CalibratedClassifierCV instance has already been disposed'
@@ -356,101 +441,4 @@ pms_CalibratedClassifierCV_score = {k: v for k, v in pms_CalibratedClassifierCV_
         ._py`attr_CalibratedClassifierCV_calibrated_classifiers_.tolist() if hasattr(attr_CalibratedClassifierCV_calibrated_classifiers_, 'tolist') else attr_CalibratedClassifierCV_calibrated_classifiers_`
     })()
   }
-}
-
-export interface CalibratedClassifierCVOptions {
-  /**
-    The classifier whose output need to be calibrated to provide more accurate `predict\_proba` outputs. The default classifier is a [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
-   */
-  estimator?: any
-
-  /**
-    The method to use for calibration. Can be ‘sigmoid’ which corresponds to Platt’s method (i.e. a logistic regression model) or ‘isotonic’ which is a non-parametric approach. It is not advised to use isotonic calibration with too few calibration samples `(<<1000)` since it tends to overfit.
-
-    @defaultValue `'sigmoid'`
-   */
-  method?: 'sigmoid' | 'isotonic'
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number | 'prefit'
-
-  /**
-    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors.
-
-    Base estimator clones are fitted in parallel across cross-validation iterations. Therefore parallelism happens only when `cv != "prefit"`.
-
-    See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Determines how the calibrator is fitted when `cv` is not `'prefit'`. Ignored if `cv='prefit'`.
-
-    If `true`, the `estimator` is fitted using training data, and calibrated using testing data, for each `cv` fold. The final estimator is an ensemble of `n\_cv` fitted classifier and calibrator pairs, where `n\_cv` is the number of cross-validation folds. The output is the average predicted probabilities of all pairs.
-
-    If `false`, `cv` is used to compute unbiased predictions, via [`cross\_val\_predict`](sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict "sklearn.model_selection.cross_val_predict"), which are then used for calibration. At prediction time, the classifier used is the `estimator` trained on all the data. Note that this method is also internally implemented in [`sklearn.svm`](../classes.html#module-sklearn.svm "sklearn.svm") estimators with the `probabilities=True` parameter.
-
-    @defaultValue `true`
-   */
-  ensemble?: boolean
-
-  /**
-    This parameter is deprecated. Use `estimator` instead.
-   */
-  base_estimator?: any
-}
-
-export interface CalibratedClassifierCVFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted.
-   */
-  sample_weight?: ArrayLike
-
-  /**
-    Parameters to pass to the `fit` method of the underlying classifier.
-   */
-  fit_params?: any
-}
-
-export interface CalibratedClassifierCVPredictOptions {
-  /**
-    The samples, as accepted by `estimator.predict`.
-   */
-  X?: ArrayLike[]
-}
-
-export interface CalibratedClassifierCVPredictProbaOptions {
-  /**
-    The samples, as accepted by `estimator.predict\_proba`.
-   */
-  X?: ArrayLike[]
-}
-
-export interface CalibratedClassifierCVScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#ridge-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeCV.html)
  */
 export class RidgeCV {
   id: string
@@ -24,7 +24,50 @@ export class RidgeCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RidgeCVOptions) {
+  constructor(opts?: {
+    /**
+      Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If using Leave-One-Out cross-validation, alphas must be positive.
+     */
+    alphas?: ArrayLike
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If `undefined`, the negative mean squared error if cv is ‘auto’ or `undefined` (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
+     */
+    scoring?: string
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      Flag indicating which strategy to use when performing Leave-One-Out Cross-Validation. Options are:
+
+      @defaultValue `'auto'`
+     */
+    gcv_mode?: 'auto' | 'svd' | 'eigen'
+
+    /**
+      Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
+
+      @defaultValue `false`
+     */
+    store_cv_values?: boolean
+
+    /**
+      Flag indicating whether to optimize the alpha value (picked from the `alphas` parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to `true`, after fitting, the `alpha\_` attribute will contain a value for each target. When set to `false`, a single alpha is used for all targets.
+
+      @defaultValue `false`
+     */
+    alpha_per_target?: boolean
+  }) {
     this.id = `RidgeCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -104,7 +147,22 @@ ctor_RidgeCV = {k: v for k, v in ctor_RidgeCV.items() if v is not None}`
   /**
     Fit Ridge regression model with cv.
    */
-  async fit(opts: RidgeCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data. If using GCV, will be cast to float64 if necessary.
+     */
+    X?: NDArray[]
+
+    /**
+      Target values. Will be cast to X’s dtype if necessary.
+     */
+    y?: NDArray
+
+    /**
+      Individual weights for each sample. If given a float, every sample will have the same weight.
+     */
+    sample_weight?: number | NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RidgeCV instance has already been disposed')
     }
@@ -136,7 +194,12 @@ pms_RidgeCV_fit = {k: v for k, v in pms_RidgeCV_fit.items() if v is not None}`
   /**
     Predict using the linear model.
    */
-  async predict(opts: RidgeCVPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RidgeCV instance has already been disposed')
     }
@@ -164,7 +227,22 @@ pms_RidgeCV_predict = {k: v for k, v in pms_RidgeCV_predict.items() if v is not 
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: RidgeCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This RidgeCV instance has already been disposed')
     }
@@ -355,90 +433,4 @@ pms_RidgeCV_score = {k: v for k, v in pms_RidgeCV_score.items() if v is not None
         ._py`attr_RidgeCV_feature_names_in_.tolist() if hasattr(attr_RidgeCV_feature_names_in_, 'tolist') else attr_RidgeCV_feature_names_in_`
     })()
   }
-}
-
-export interface RidgeCVOptions {
-  /**
-    Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC"). If using Leave-One-Out cross-validation, alphas must be positive.
-   */
-  alphas?: ArrayLike
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`. If `undefined`, the negative mean squared error if cv is ‘auto’ or `undefined` (i.e. when using leave-one-out cross-validation), and r2 score otherwise.
-   */
-  scoring?: string
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    Flag indicating which strategy to use when performing Leave-One-Out Cross-Validation. Options are:
-
-    @defaultValue `'auto'`
-   */
-  gcv_mode?: 'auto' | 'svd' | 'eigen'
-
-  /**
-    Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
-
-    @defaultValue `false`
-   */
-  store_cv_values?: boolean
-
-  /**
-    Flag indicating whether to optimize the alpha value (picked from the `alphas` parameter list) for each target separately (for multi-output settings: multiple prediction targets). When set to `true`, after fitting, the `alpha\_` attribute will contain a value for each target. When set to `false`, a single alpha is used for all targets.
-
-    @defaultValue `false`
-   */
-  alpha_per_target?: boolean
-}
-
-export interface RidgeCVFitOptions {
-  /**
-    Training data. If using GCV, will be cast to float64 if necessary.
-   */
-  X?: NDArray[]
-
-  /**
-    Target values. Will be cast to X’s dtype if necessary.
-   */
-  y?: NDArray
-
-  /**
-    Individual weights for each sample. If given a float, every sample will have the same weight.
-   */
-  sample_weight?: number | NDArray
-}
-
-export interface RidgeCVPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface RidgeCVScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

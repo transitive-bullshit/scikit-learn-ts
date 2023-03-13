@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#omp).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.OrthogonalMatchingPursuitCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.OrthogonalMatchingPursuitCV.html)
  */
 export class OrthogonalMatchingPursuitCV {
   id: string
@@ -22,7 +22,50 @@ export class OrthogonalMatchingPursuitCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OrthogonalMatchingPursuitCVOptions) {
+  constructor(opts?: {
+    /**
+      Whether the design matrix X must be copied by the algorithm. A false value is only helpful if X is already Fortran-ordered, otherwise a copy is made anyway.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
+
+      @defaultValue `false`
+     */
+    normalize?: boolean
+
+    /**
+      Maximum numbers of iterations to perform, therefore maximum features to include. 10% of `n\_features` but at least 5 if available.
+     */
+    max_iter?: number
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Sets the verbosity amount.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+  }) {
     this.id = `OrthogonalMatchingPursuitCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +150,17 @@ ctor_OrthogonalMatchingPursuitCV = {k: v for k, v in ctor_OrthogonalMatchingPurs
   /**
     Fit the model using X, y as training data.
    */
-  async fit(opts: OrthogonalMatchingPursuitCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values. Will be cast to X’s dtype if necessary.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OrthogonalMatchingPursuitCV instance has already been disposed'
@@ -141,7 +194,12 @@ pms_OrthogonalMatchingPursuitCV_fit = {k: v for k, v in pms_OrthogonalMatchingPu
   /**
     Predict using the linear model.
    */
-  async predict(opts: OrthogonalMatchingPursuitCVPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OrthogonalMatchingPursuitCV instance has already been disposed'
@@ -175,7 +233,22 @@ pms_OrthogonalMatchingPursuitCV_predict = {k: v for k, v in pms_OrthogonalMatchi
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: OrthogonalMatchingPursuitCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This OrthogonalMatchingPursuitCV instance has already been disposed'
@@ -369,85 +442,4 @@ pms_OrthogonalMatchingPursuitCV_score = {k: v for k, v in pms_OrthogonalMatching
         ._py`attr_OrthogonalMatchingPursuitCV_feature_names_in_.tolist() if hasattr(attr_OrthogonalMatchingPursuitCV_feature_names_in_, 'tolist') else attr_OrthogonalMatchingPursuitCV_feature_names_in_`
     })()
   }
-}
-
-export interface OrthogonalMatchingPursuitCVOptions {
-  /**
-    Whether the design matrix X must be copied by the algorithm. A false value is only helpful if X is already Fortran-ordered, otherwise a copy is made anyway.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-    @defaultValue `false`
-   */
-  normalize?: boolean
-
-  /**
-    Maximum numbers of iterations to perform, therefore maximum features to include. 10% of `n\_features` but at least 5 if available.
-   */
-  max_iter?: number
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Sets the verbosity amount.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-}
-
-export interface OrthogonalMatchingPursuitCVFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values. Will be cast to X’s dtype if necessary.
-   */
-  y?: ArrayLike
-}
-
-export interface OrthogonalMatchingPursuitCVPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface OrthogonalMatchingPursuitCVScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

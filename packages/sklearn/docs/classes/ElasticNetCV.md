@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / ElasticNetCV
-
-# Class: ElasticNetCV
+# ElasticNetCV
 
 Elastic Net model with iterative fitting along a regularization path.
 
@@ -8,288 +6,278 @@ See glossary entry for [cross-validation estimator](../../glossary.html#term-cro
 
 Read more in the [User Guide](../linear_model.html#elastic-net).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNetCV.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](ElasticNetCV.md#constructor)
-
-### Properties
-
-- [\_isDisposed](ElasticNetCV.md#_isdisposed)
-- [\_isInitialized](ElasticNetCV.md#_isinitialized)
-- [\_py](ElasticNetCV.md#_py)
-- [id](ElasticNetCV.md#id)
-- [opts](ElasticNetCV.md#opts)
-
-### Accessors
-
-- [alpha\_](ElasticNetCV.md#alpha_)
-- [alphas\_](ElasticNetCV.md#alphas_)
-- [coef\_](ElasticNetCV.md#coef_)
-- [dual\_gap\_](ElasticNetCV.md#dual_gap_)
-- [feature\_names\_in\_](ElasticNetCV.md#feature_names_in_)
-- [intercept\_](ElasticNetCV.md#intercept_)
-- [l1\_ratio\_](ElasticNetCV.md#l1_ratio_)
-- [mse\_path\_](ElasticNetCV.md#mse_path_)
-- [n\_features\_in\_](ElasticNetCV.md#n_features_in_)
-- [n\_iter\_](ElasticNetCV.md#n_iter_)
-- [py](ElasticNetCV.md#py)
-
-### Methods
-
-- [dispose](ElasticNetCV.md#dispose)
-- [fit](ElasticNetCV.md#fit)
-- [init](ElasticNetCV.md#init)
-- [path](ElasticNetCV.md#path)
-- [predict](ElasticNetCV.md#predict)
-- [score](ElasticNetCV.md#score)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNetCV.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new ElasticNetCV**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new ElasticNetCV(opts?: object): ElasticNetCV;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`ElasticNetCVOptions`](../interfaces/ElasticNetCVOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.alphas?` | [`ArrayLike`](../types/ArrayLike.md) | List of alphas where to compute the models. If `undefined` alphas are set automatically. |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.cv?` | `number` | Determines the cross-validation splitting strategy. Possible inputs for cv are: |
+| `opts.eps?` | `number` | Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.  `Default Value`  `0.001` |
+| `opts.fit_intercept?` | `boolean` | Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).  `Default Value`  `true` |
+| `opts.l1_ratio?` | `number` | Float between 0 and 1 passed to ElasticNet (scaling between l1 and l2 penalties). For `l1\_ratio \= 0` the penalty is an L2 penalty. For `l1\_ratio \= 1` it is an L1 penalty. For `0 < l1\_ratio < 1`, the penalty is a combination of L1 and L2 This parameter can be a list, in which case the different values are tested by cross-validation and the one giving the best prediction score is used. Note that a good choice of list of values for l1\_ratio is often to put more values close to 1 (i.e. Lasso) and less close to 0 (i.e. Ridge), as in `\[.1, .5, .7, .9, .95, .99, 1\]`.  `Default Value`  `0.5` |
+| `opts.max_iter?` | `number` | The maximum number of iterations.  `Default Value`  `1000` |
+| `opts.n_alphas?` | `number` | Number of alphas along the regularization path, used for each l1\_ratio.  `Default Value`  `100` |
+| `opts.n_jobs?` | `number` | Number of CPUs to use during the cross validation. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.positive?` | `boolean` | When set to `true`, forces the coefficients to be positive.  `Default Value`  `false` |
+| `opts.precompute?` | `boolean` \| [`ArrayLike`](../types/ArrayLike.md)[] \| `"auto"` | Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.  `Default Value`  `'auto'` |
+| `opts.random_state?` | `number` | The seed of the pseudo random number generator that selects a random feature to update. Used when `selection` == ‘random’. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.selection?` | `"random"` \| `"cyclic"` | If set to ‘random’, a random coefficient is updated every iteration rather than looping over features sequentially by default. This (setting to ‘random’) often leads to significantly faster convergence especially when tol is higher than 1e-4.  `Default Value`  `'cyclic'` |
+| `opts.tol?` | `number` | The tolerance for the optimization: if the updates are smaller than `tol`, the optimization code checks the dual gap for optimality and continues until it is smaller than `tol`.  `Default Value`  `0.0001` |
+| `opts.verbose?` | `number` \| `boolean` | Amount of verbosity.  `Default Value`  `0` |
 
-[generated/linear_model/ElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L25)
+### Returns
+
+[`ElasticNetCV`](ElasticNetCV.md)
+
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/linear_model/ElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L23)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/linear_model/ElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L22)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/linear_model/ElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L21)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/linear_model/ElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L18)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/linear_model/ElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L19)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L19)
 
 ## Accessors
 
 ### alpha\_
 
-• `get` **alpha_**(): `Promise`<`number`\>
-
 The amount of penalization chosen by cross validation.
+
+#### Signature
+
+```ts
+alpha_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L487)
 
-[generated/linear_model/ElasticNetCV.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L262)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L487)
 
 ### alphas\_
 
-• `get` **alphas_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The grid of alphas used for fitting, for each l1\_ratio.
+
+#### Signature
+
+```ts
+alphas_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L608)
 
-[generated/linear_model/ElasticNetCV.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L383)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:608](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L608)
 
 ### coef\_
 
-• `get` **coef_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Parameter vector (w in the cost function formula).
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L535)
 
-[generated/linear_model/ElasticNetCV.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L310)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L535)
 
 ### dual\_gap\_
 
-• `get` **dual_gap_**(): `Promise`<`number`\>
-
 The dual gaps at the end of the optimization for the optimal alpha.
+
+#### Signature
+
+```ts
+dual_gap_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L631)
 
-[generated/linear_model/ElasticNetCV.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L406)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L631)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L704)
 
-[generated/linear_model/ElasticNetCV.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L479)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L704)
 
 ### intercept\_
 
-• `get` **intercept_**(): `Promise`<`number` \| [`ArrayLike`](../modules.md#arraylike)[]\>
-
 Independent term in the decision function.
+
+#### Signature
+
+```ts
+intercept_(): Promise<number | ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<`number` \| [`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<`number` \| [`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L558)
 
-[generated/linear_model/ElasticNetCV.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L333)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L558)
 
 ### l1\_ratio\_
 
-• `get` **l1_ratio_**(): `Promise`<`number`\>
-
 The compromise between l1 and l2 penalization chosen by cross validation.
+
+#### Signature
+
+```ts
+l1_ratio_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L510)
 
-[generated/linear_model/ElasticNetCV.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L285)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L510)
 
 ### mse\_path\_
 
-• `get` **mse_path_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[][]\>
-
 Mean square error for the test set on each fold, varying l1\_ratio and alpha.
+
+#### Signature
+
+```ts
+mse_path_(): Promise<ArrayLike[][]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[][]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[][]\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L583)
 
-[generated/linear_model/ElasticNetCV.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L358)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:583](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L583)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L679)
 
-[generated/linear_model/ElasticNetCV.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L454)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L679)
 
 ### n\_iter\_
 
-• `get` **n_iter_**(): `Promise`<`number`\>
-
 Number of iterations run by the coordinate descent solver to reach the specified tolerance for the optimal alpha.
+
+#### Signature
+
+```ts
+n_iter_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L656)
 
-[generated/linear_model/ElasticNetCV.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L431)
-
-___
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L656)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L127)
 
-[generated/linear_model/ElasticNetCV.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -301,61 +289,68 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L131)
 
-[generated/linear_model/ElasticNetCV.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L34)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L127) [generated/linear\_model/ElasticNetCV.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L131)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L194)
 
-[generated/linear_model/ElasticNetCV.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L97)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit linear model with coordinate descent.
 
 Fit is on grid of alphas and best alpha estimated by cross-validation.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ElasticNetCVFitOptions`](../interfaces/ElasticNetCVFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If y is mono-output, X can be sparse. |
+| `opts.sample_weight?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | Sample weights used for fitting and evaluation of the weighted mean squared error of each cv-fold. Note that the cross validated MSE that is finally used to find the best model is the unweighted mean over the (weighted) MSEs of each test fold. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L213)
 
-[generated/linear_model/ElasticNetCV.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L116)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -365,17 +360,11 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L140)
 
-[generated/linear_model/ElasticNetCV.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L43)
-
-___
-
-### path
-
-▸ **path**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### path()
 
 Compute elastic net path with coordinate descent.
 
@@ -383,62 +372,85 @@ The elastic net optimization function varies for mono and multi-outputs.
 
 For mono-output tasks it is:
 
+#### Signature
+
+```ts
+path(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ElasticNetCVPathOptions`](../interfaces/ElasticNetCVPathOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Training data. Pass directly as Fortran-contiguous data to avoid unnecessary memory duplication. If `y` is mono-output then `X` can be sparse. |
+| `opts.Xy?` | [`ArrayLike`](../types/ArrayLike.md) | Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed. |
+| `opts.alphas?` | [`ArrayLike`](../types/ArrayLike.md) | List of alphas where to compute the models. If `undefined` alphas are set automatically. |
+| `opts.check_input?` | `boolean` | If set to `false`, the input validation checks are skipped (including the Gram matrix when provided). It is assumed that they are handled by the caller.  `Default Value`  `true` |
+| `opts.coef_init?` | [`ArrayLike`](../types/ArrayLike.md) | The initial values of the coefficients. |
+| `opts.copy_X?` | `boolean` | If `true`, X will be copied; else, it may be overwritten.  `Default Value`  `true` |
+| `opts.eps?` | `number` | Length of the path. `eps=1e-3` means that `alpha\_min / alpha\_max \= 1e-3`.  `Default Value`  `0.001` |
+| `opts.l1_ratio?` | `number` | Number between 0 and 1 passed to elastic net (scaling between l1 and l2 penalties). `l1\_ratio=1` corresponds to the Lasso.  `Default Value`  `0.5` |
+| `opts.n_alphas?` | `number` | Number of alphas along the regularization path.  `Default Value`  `100` |
+| `opts.params?` | `any` | Keyword arguments passed to the coordinate descent solver. |
+| `opts.positive?` | `boolean` | If set to `true`, forces coefficients to be positive. (Only allowed when `y.ndim \== 1`).  `Default Value`  `false` |
+| `opts.precompute?` | `boolean` \| [`ArrayLike`](../types/ArrayLike.md)[] \| `"auto"` | Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.  `Default Value`  `'auto'` |
+| `opts.return_n_iter?` | `boolean` | Whether to return the number of iterations or not.  `Default Value`  `false` |
+| `opts.verbose?` | `number` \| `boolean` | Amount of verbosity.  `Default Value`  `false` |
+| `opts.y?` | `any` | Target values. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L264)
 
-[generated/linear_model/ElasticNetCV.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L152)
-
-___
-
-### predict
-
-▸ **predict**(`opts`): `Promise`<`any`\>
+### predict()
 
 Predict using the linear model.
 
+#### Signature
+
+```ts
+predict(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ElasticNetCVPredictOptions`](../interfaces/ElasticNetCVPredictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Samples. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L405)
 
-[generated/linear_model/ElasticNetCV.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L200)
-
-___
-
-### score
-
-▸ **score**(`opts`): `Promise`<`number`\>
+### score()
 
 Return the coefficient of determination of the prediction.
 
 The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
 
+#### Signature
+
+```ts
+score(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ElasticNetCVScoreOptions`](../interfaces/ElasticNetCVScoreOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | True values for `X`. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
-
-[generated/linear_model/ElasticNetCV.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L230)
+Defined in:  [generated/linear\_model/ElasticNetCV.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/linear_model/ElasticNetCV.ts#L440)

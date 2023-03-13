@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing.html#preprocessing-binarization).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html)
  */
 export class Binarizer {
   id: string
@@ -26,7 +26,21 @@ export class Binarizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BinarizerOptions) {
+  constructor(opts?: {
+    /**
+      Feature values below or equal to this are replaced by 0, above it by 1. Threshold may not be less than 0 for operations on sparse matrices.
+
+      @defaultValue `0`
+     */
+    threshold?: number
+
+    /**
+      Set to `false` to perform inplace binarization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `Binarizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -102,7 +116,17 @@ ctor_Binarizer = {k: v for k, v in ctor_Binarizer.items() if v is not None}`
 
     This method allows to: (i) validate the estimator’s parameters and (ii) be consistent with the scikit-learn transformer API.
    */
-  async fit(opts: BinarizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Binarizer instance has already been disposed')
     }
@@ -132,7 +156,22 @@ pms_Binarizer_fit = {k: v for k, v in pms_Binarizer_fit.items() if v is not None
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: BinarizerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This Binarizer instance has already been disposed')
     }
@@ -164,9 +203,12 @@ pms_Binarizer_fit_transform = {k: v for k, v in pms_Binarizer_fit_transform.item
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: BinarizerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Binarizer instance has already been disposed')
     }
@@ -199,7 +241,12 @@ pms_Binarizer_get_feature_names_out = {k: v for k, v in pms_Binarizer_get_featur
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: BinarizerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Binarizer instance has already been disposed')
     }
@@ -227,9 +274,17 @@ pms_Binarizer_set_output = {k: v for k, v in pms_Binarizer_set_output.items() if
   /**
     Binarize each element of X.
    */
-  async transform(
-    opts: BinarizerTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data to binarize, element by element. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Copy the input X or not.
+     */
+    copy?: boolean
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This Binarizer instance has already been disposed')
     }
@@ -305,75 +360,4 @@ pms_Binarizer_transform = {k: v for k, v in pms_Binarizer_transform.items() if v
         ._py`attr_Binarizer_feature_names_in_.tolist() if hasattr(attr_Binarizer_feature_names_in_, 'tolist') else attr_Binarizer_feature_names_in_`
     })()
   }
-}
-
-export interface BinarizerOptions {
-  /**
-    Feature values below or equal to this are replaced by 0, above it by 1. Threshold may not be less than 0 for operations on sparse matrices.
-
-    @defaultValue `0`
-   */
-  threshold?: number
-
-  /**
-    Set to `false` to perform inplace binarization and avoid a copy (if the input is already a numpy array or a scipy.sparse CSR matrix).
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface BinarizerFitOptions {
-  /**
-    The data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-}
-
-export interface BinarizerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface BinarizerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface BinarizerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface BinarizerTransformOptions {
-  /**
-    The data to binarize, element by element. scipy.sparse matrices should be in CSR format to avoid an un-necessary copy.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Copy the input X or not.
-   */
-  copy?: boolean
 }

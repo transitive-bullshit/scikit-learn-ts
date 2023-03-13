@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   For example, in random projection, this warning is raised when the number of components, which quantifies the dimensionality of the target projection space, is higher than the number of features, which quantifies the dimensionality of the original source space, to imply that the dimensionality of the problem will not be reduced.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataDimensionalityWarning.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.exceptions.DataDimensionalityWarning.html)
  */
 export class DataDimensionalityWarning {
   id: string
@@ -20,7 +20,7 @@ export class DataDimensionalityWarning {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DataDimensionalityWarningOptions) {
+  constructor(opts?: { args?: any }) {
     this.id = `DataDimensionalityWarning${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,9 +99,7 @@ ctor_DataDimensionalityWarning = {k: v for k, v in ctor_DataDimensionalityWarnin
   /**
     Exception.with\_traceback(tb) – set self.\_\_traceback\_\_ to tb and return self.
    */
-  async with_traceback(
-    opts: DataDimensionalityWarningWithTracebackOptions
-  ): Promise<any> {
+  async with_traceback(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This DataDimensionalityWarning instance has already been disposed'
@@ -128,9 +126,3 @@ pms_DataDimensionalityWarning_with_traceback = {k: v for k, v in pms_DataDimensi
       ._py`res_DataDimensionalityWarning_with_traceback.tolist() if hasattr(res_DataDimensionalityWarning_with_traceback, 'tolist') else res_DataDimensionalityWarning_with_traceback`
   }
 }
-
-export interface DataDimensionalityWarningOptions {
-  args?: any
-}
-
-export interface DataDimensionalityWarningWithTracebackOptions {}

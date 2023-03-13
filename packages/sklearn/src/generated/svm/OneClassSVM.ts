@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../outlier_detection.html#outlier-detection).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html)
  */
 export class OneClassSVM {
   id: string
@@ -24,7 +24,77 @@ export class OneClassSVM {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OneClassSVMOptions) {
+  constructor(opts?: {
+    /**
+      Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix.
+
+      @defaultValue `'rbf'`
+     */
+    kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'precomputed'
+
+    /**
+      Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels.
+
+      @defaultValue `3`
+     */
+    degree?: number
+
+    /**
+      Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
+
+      @defaultValue `'scale'`
+     */
+    gamma?: 'scale' | 'auto' | number
+
+    /**
+      Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.
+
+      @defaultValue `0`
+     */
+    coef0?: number
+
+    /**
+      Tolerance for stopping criterion.
+
+      @defaultValue `0.001`
+     */
+    tol?: number
+
+    /**
+      An upper bound on the fraction of training errors and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\]. By default 0.5 will be taken.
+
+      @defaultValue `0.5`
+     */
+    nu?: number
+
+    /**
+      Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
+
+      @defaultValue `true`
+     */
+    shrinking?: boolean
+
+    /**
+      Specify the size of the kernel cache (in MB).
+
+      @defaultValue `200`
+     */
+    cache_size?: number
+
+    /**
+      Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+
+    /**
+      Hard limit on iterations within solver, or -1 for no limit.
+
+      @defaultValue `-1`
+     */
+    max_iter?: number
+  }) {
     this.id = `OneClassSVM${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,9 +179,12 @@ ctor_OneClassSVM = {k: v for k, v in ctor_OneClassSVM.items() if v is not None}`
 
     Signed distance is positive for an inlier and negative for an outlier.
    */
-  async decision_function(
-    opts: OneClassSVMDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OneClassSVM instance has already been disposed')
     }
@@ -139,7 +212,22 @@ pms_OneClassSVM_decision_function = {k: v for k, v in pms_OneClassSVM_decision_f
   /**
     Detect the soft boundary of the set of samples X.
    */
-  async fit(opts: OneClassSVMFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Set of samples, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This OneClassSVM instance has already been disposed')
     }
@@ -173,7 +261,17 @@ pms_OneClassSVM_fit = {k: v for k, v in pms_OneClassSVM_fit.items() if v is not 
 
     Returns -1 for outliers and 1 for inliers.
    */
-  async fit_predict(opts: OneClassSVMFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OneClassSVM instance has already been disposed')
     }
@@ -203,7 +301,12 @@ pms_OneClassSVM_fit_predict = {k: v for k, v in pms_OneClassSVM_fit_predict.item
 
     For a one-class model, +1 or -1 is returned.
    */
-  async predict(opts: OneClassSVMPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OneClassSVM instance has already been disposed')
     }
@@ -231,7 +334,12 @@ pms_OneClassSVM_predict = {k: v for k, v in pms_OneClassSVM_predict.items() if v
   /**
     Raw scoring function of the samples.
    */
-  async score_samples(opts: OneClassSVMScoreSamplesOptions): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      The data matrix.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This OneClassSVM instance has already been disposed')
     }
@@ -524,126 +632,4 @@ pms_OneClassSVM_score_samples = {k: v for k, v in pms_OneClassSVM_score_samples.
         ._py`attr_OneClassSVM_support_vectors_.tolist() if hasattr(attr_OneClassSVM_support_vectors_, 'tolist') else attr_OneClassSVM_support_vectors_`
     })()
   }
-}
-
-export interface OneClassSVMOptions {
-  /**
-    Specifies the kernel type to be used in the algorithm. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix.
-
-    @defaultValue `'rbf'`
-   */
-  kernel?: 'linear' | 'poly' | 'rbf' | 'sigmoid' | 'precomputed'
-
-  /**
-    Degree of the polynomial kernel function (‘poly’). Must be non-negative. Ignored by all other kernels.
-
-    @defaultValue `3`
-   */
-  degree?: number
-
-  /**
-    Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’.
-
-    @defaultValue `'scale'`
-   */
-  gamma?: 'scale' | 'auto' | number
-
-  /**
-    Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.
-
-    @defaultValue `0`
-   */
-  coef0?: number
-
-  /**
-    Tolerance for stopping criterion.
-
-    @defaultValue `0.001`
-   */
-  tol?: number
-
-  /**
-    An upper bound on the fraction of training errors and a lower bound of the fraction of support vectors. Should be in the interval (0, 1\]. By default 0.5 will be taken.
-
-    @defaultValue `0.5`
-   */
-  nu?: number
-
-  /**
-    Whether to use the shrinking heuristic. See the [User Guide](../svm.html#shrinking-svm).
-
-    @defaultValue `true`
-   */
-  shrinking?: boolean
-
-  /**
-    Specify the size of the kernel cache (in MB).
-
-    @defaultValue `200`
-   */
-  cache_size?: number
-
-  /**
-    Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-
-  /**
-    Hard limit on iterations within solver, or -1 for no limit.
-
-    @defaultValue `-1`
-   */
-  max_iter?: number
-}
-
-export interface OneClassSVMDecisionFunctionOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
-}
-
-export interface OneClassSVMFitOptions {
-  /**
-    Set of samples, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    Per-sample weights. Rescale C per sample. Higher weights force the classifier to put more emphasis on these points.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface OneClassSVMFitPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface OneClassSVMPredictOptions {
-  /**
-    For kernel=”precomputed”, the expected shape of X is (n\_samples\_test, n\_samples\_train).
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface OneClassSVMScoreSamplesOptions {
-  /**
-    The data matrix.
-   */
-  X?: ArrayLike[]
 }

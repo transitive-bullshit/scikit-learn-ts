@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#cross-validation).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html)
  */
 export class StratifiedGroupKFold {
   id: string
@@ -26,7 +26,26 @@ export class StratifiedGroupKFold {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: StratifiedGroupKFoldOptions) {
+  constructor(opts?: {
+    /**
+      Number of folds. Must be at least 2.
+
+      @defaultValue `5`
+     */
+    n_splits?: number
+
+    /**
+      Whether to shuffle each class’s samples before splitting into batches. Note that the samples within each split will not be shuffled. This implementation can only shuffle groups that have approximately the same y distribution, no global shuffle will be performed.
+
+      @defaultValue `false`
+     */
+    shuffle?: boolean
+
+    /**
+      When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold for each class. Otherwise, leave `random\_state` as `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `StratifiedGroupKFold${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,9 +126,22 @@ ctor_StratifiedGroupKFold = {k: v for k, v in ctor_StratifiedGroupKFold.items() 
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(
-    opts: StratifiedGroupKFoldGetNSplitsOptions
-  ): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This StratifiedGroupKFold instance has already been disposed'
@@ -141,7 +173,22 @@ pms_StratifiedGroupKFold_get_n_splits = {k: v for k, v in pms_StratifiedGroupKFo
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: StratifiedGroupKFoldSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This StratifiedGroupKFold instance has already been disposed'
@@ -171,59 +218,4 @@ pms_StratifiedGroupKFold_split = {k: v for k, v in pms_StratifiedGroupKFold_spli
     return this
       ._py`res_StratifiedGroupKFold_split.tolist() if hasattr(res_StratifiedGroupKFold_split, 'tolist') else res_StratifiedGroupKFold_split`
   }
-}
-
-export interface StratifiedGroupKFoldOptions {
-  /**
-    Number of folds. Must be at least 2.
-
-    @defaultValue `5`
-   */
-  n_splits?: number
-
-  /**
-    Whether to shuffle each class’s samples before splitting into batches. Note that the samples within each split will not be shuffled. This implementation can only shuffle groups that have approximately the same y distribution, no global shuffle will be performed.
-
-    @defaultValue `false`
-   */
-  shuffle?: boolean
-
-  /**
-    When `shuffle` is `true`, `random\_state` affects the ordering of the indices, which controls the randomness of each fold for each class. Otherwise, leave `random\_state` as `undefined`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface StratifiedGroupKFoldGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface StratifiedGroupKFoldSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

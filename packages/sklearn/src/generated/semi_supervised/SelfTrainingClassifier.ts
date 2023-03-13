@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../semi_supervised.html#self-training).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.SelfTrainingClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.SelfTrainingClassifier.html)
  */
 export class SelfTrainingClassifier {
   id: string
@@ -24,7 +24,47 @@ export class SelfTrainingClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SelfTrainingClassifierOptions) {
+  constructor(opts?: {
+    /**
+      An estimator object implementing `fit` and `predict\_proba`. Invoking the `fit` method will fit a clone of the passed estimator, which will be stored in the `base\_estimator\_` attribute.
+     */
+    base_estimator?: any
+
+    /**
+      The decision threshold for use with `criterion='threshold'`. Should be in \[0, 1). When using the `'threshold'` criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
+
+      @defaultValue `0.75`
+     */
+    threshold?: number
+
+    /**
+      The selection criterion used to select which labels to add to the training set. If `'threshold'`, pseudo-labels with prediction probabilities above `threshold` are added to the dataset. If `'k\_best'`, the `k\_best` pseudo-labels with highest prediction probabilities are added to the dataset. When using the ‘threshold’ criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
+
+      @defaultValue `'threshold'`
+     */
+    criterion?: 'threshold' | 'k_best'
+
+    /**
+      The amount of samples to add in each iteration. Only used when `criterion='k\_best'`.
+
+      @defaultValue `10`
+     */
+    k_best?: number
+
+    /**
+      Maximum number of iterations allowed. Should be greater than or equal to 0. If it is `undefined`, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.
+
+      @defaultValue `10`
+     */
+    max_iter?: number
+
+    /**
+      Enable verbose output.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `SelfTrainingClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,9 +147,12 @@ ctor_SelfTrainingClassifier = {k: v for k, v in ctor_SelfTrainingClassifier.item
   /**
     Call decision function of the `base\_estimator`.
    */
-  async decision_function(
-    opts: SelfTrainingClassifierDecisionFunctionOptions
-  ): Promise<NDArray[]> {
+  async decision_function(opts: {
+    /**
+      Array representing the data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SelfTrainingClassifier instance has already been disposed'
@@ -142,7 +185,17 @@ pms_SelfTrainingClassifier_decision_function = {k: v for k, v in pms_SelfTrainin
   /**
     Fit self-training classifier using `X`, `y` as training data.
    */
-  async fit(opts: SelfTrainingClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Array representing the data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Array representing the labels. Unlabeled samples should have the label -1.
+     */
+    y?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SelfTrainingClassifier instance has already been disposed'
@@ -174,7 +227,12 @@ pms_SelfTrainingClassifier_fit = {k: v for k, v in pms_SelfTrainingClassifier_fi
   /**
     Predict the classes of `X`.
    */
-  async predict(opts: SelfTrainingClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Array representing the data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This SelfTrainingClassifier instance has already been disposed'
@@ -206,9 +264,12 @@ pms_SelfTrainingClassifier_predict = {k: v for k, v in pms_SelfTrainingClassifie
   /**
     Predict log probability for each possible outcome.
    */
-  async predict_log_proba(
-    opts: SelfTrainingClassifierPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      Array representing the data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SelfTrainingClassifier instance has already been disposed'
@@ -241,9 +302,12 @@ pms_SelfTrainingClassifier_predict_log_proba = {k: v for k, v in pms_SelfTrainin
   /**
     Predict probability for each possible outcome.
    */
-  async predict_proba(
-    opts: SelfTrainingClassifierPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      Array representing the data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SelfTrainingClassifier instance has already been disposed'
@@ -276,7 +340,17 @@ pms_SelfTrainingClassifier_predict_proba = {k: v for k, v in pms_SelfTrainingCla
   /**
     Call score on the `base\_estimator`.
    */
-  async score(opts: SelfTrainingClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Array representing the data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Array representing the labels.
+     */
+    y?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This SelfTrainingClassifier instance has already been disposed'
@@ -522,98 +596,4 @@ pms_SelfTrainingClassifier_score = {k: v for k, v in pms_SelfTrainingClassifier_
         ._py`attr_SelfTrainingClassifier_termination_condition_.tolist() if hasattr(attr_SelfTrainingClassifier_termination_condition_, 'tolist') else attr_SelfTrainingClassifier_termination_condition_`
     })()
   }
-}
-
-export interface SelfTrainingClassifierOptions {
-  /**
-    An estimator object implementing `fit` and `predict\_proba`. Invoking the `fit` method will fit a clone of the passed estimator, which will be stored in the `base\_estimator\_` attribute.
-   */
-  base_estimator?: any
-
-  /**
-    The decision threshold for use with `criterion='threshold'`. Should be in \[0, 1). When using the `'threshold'` criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
-
-    @defaultValue `0.75`
-   */
-  threshold?: number
-
-  /**
-    The selection criterion used to select which labels to add to the training set. If `'threshold'`, pseudo-labels with prediction probabilities above `threshold` are added to the dataset. If `'k\_best'`, the `k\_best` pseudo-labels with highest prediction probabilities are added to the dataset. When using the ‘threshold’ criterion, a [well calibrated classifier](../calibration.html#calibration) should be used.
-
-    @defaultValue `'threshold'`
-   */
-  criterion?: 'threshold' | 'k_best'
-
-  /**
-    The amount of samples to add in each iteration. Only used when `criterion='k\_best'`.
-
-    @defaultValue `10`
-   */
-  k_best?: number
-
-  /**
-    Maximum number of iterations allowed. Should be greater than or equal to 0. If it is `undefined`, the classifier will continue to predict labels until no new pseudo-labels are added, or all unlabeled samples have been labeled.
-
-    @defaultValue `10`
-   */
-  max_iter?: number
-
-  /**
-    Enable verbose output.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface SelfTrainingClassifierDecisionFunctionOptions {
-  /**
-    Array representing the data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SelfTrainingClassifierFitOptions {
-  /**
-    Array representing the data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Array representing the labels. Unlabeled samples should have the label -1.
-   */
-  y?: ArrayLike | SparseMatrix
-}
-
-export interface SelfTrainingClassifierPredictOptions {
-  /**
-    Array representing the data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SelfTrainingClassifierPredictLogProbaOptions {
-  /**
-    Array representing the data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SelfTrainingClassifierPredictProbaOptions {
-  /**
-    Array representing the data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface SelfTrainingClassifierScoreOptions {
-  /**
-    Array representing the data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Array representing the labels.
-   */
-  y?: ArrayLike
 }

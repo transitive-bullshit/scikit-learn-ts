@@ -20,7 +20,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#group-shuffle-split).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html)
  */
 export class GroupShuffleSplit {
   id: string
@@ -30,7 +30,31 @@ export class GroupShuffleSplit {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: GroupShuffleSplitOptions) {
+  constructor(opts?: {
+    /**
+      Number of re-shuffling & splitting iterations.
+
+      @defaultValue `5`
+     */
+    n_splits?: number
+
+    /**
+      If float, should be between 0.0 and 1.0 and represent the proportion of groups to include in the test split (rounded up). If int, represents the absolute number of test groups. If `undefined`, the value is set to the complement of the train size. The default will change in version 0.21. It will remain 0.2 only if `train\_size` is unspecified, otherwise it will complement the specified `train\_size`.
+
+      @defaultValue `0.2`
+     */
+    test_size?: number
+
+    /**
+      If float, should be between 0.0 and 1.0 and represent the proportion of the groups to include in the train split. If int, represents the absolute number of train groups. If `undefined`, the value is automatically set to the complement of the test size.
+     */
+    train_size?: number
+
+    /**
+      Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `GroupShuffleSplit${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,9 +133,22 @@ ctor_GroupShuffleSplit = {k: v for k, v in ctor_GroupShuffleSplit.items() if v i
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(
-    opts: GroupShuffleSplitGetNSplitsOptions
-  ): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This GroupShuffleSplit instance has already been disposed'
@@ -143,7 +180,22 @@ pms_GroupShuffleSplit_get_n_splits = {k: v for k, v in pms_GroupShuffleSplit_get
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: GroupShuffleSplitSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This GroupShuffleSplit instance has already been disposed'
@@ -173,64 +225,4 @@ pms_GroupShuffleSplit_split = {k: v for k, v in pms_GroupShuffleSplit_split.item
     return this
       ._py`res_GroupShuffleSplit_split.tolist() if hasattr(res_GroupShuffleSplit_split, 'tolist') else res_GroupShuffleSplit_split`
   }
-}
-
-export interface GroupShuffleSplitOptions {
-  /**
-    Number of re-shuffling & splitting iterations.
-
-    @defaultValue `5`
-   */
-  n_splits?: number
-
-  /**
-    If float, should be between 0.0 and 1.0 and represent the proportion of groups to include in the test split (rounded up). If int, represents the absolute number of test groups. If `undefined`, the value is set to the complement of the train size. The default will change in version 0.21. It will remain 0.2 only if `train\_size` is unspecified, otherwise it will complement the specified `train\_size`.
-
-    @defaultValue `0.2`
-   */
-  test_size?: number
-
-  /**
-    If float, should be between 0.0 and 1.0 and represent the proportion of the groups to include in the train split. If int, represents the absolute number of train groups. If `undefined`, the value is automatically set to the complement of the test size.
-   */
-  train_size?: number
-
-  /**
-    Controls the randomness of the training and testing indices produced. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface GroupShuffleSplitGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface GroupShuffleSplitSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

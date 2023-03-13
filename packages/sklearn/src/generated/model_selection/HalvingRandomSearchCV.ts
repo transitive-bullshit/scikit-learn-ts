@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User guide](../grid_search.html#successive-halving-user-guide).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.HalvingRandomSearchCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.HalvingRandomSearchCV.html)
  */
 export class HalvingRandomSearchCV {
   id: string
@@ -24,7 +24,107 @@ export class HalvingRandomSearchCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: HalvingRandomSearchCVOptions) {
+  constructor(opts?: {
+    /**
+      This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
+     */
+    estimator?: any
+
+    /**
+      Dictionary with parameters names (string) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly.
+     */
+    param_distributions?: any
+
+    /**
+      The number of candidate parameters to sample, at the first iteration. Using ‘exhaust’ will sample enough candidates so that the last iteration uses as many resources as possible, based on `min\_resources`, `max\_resources` and `factor`. In this case, `min\_resources` cannot be ‘exhaust’.
+
+      @defaultValue `'exhaust'`
+     */
+    n_candidates?: number
+
+    /**
+      The ‘halving’ parameter, which determines the proportion of candidates that are selected for each subsequent iteration. For example, `factor=3` means that only one third of the candidates are selected.
+
+      @defaultValue `3`
+     */
+    factor?: number
+
+    /**
+      Defines the resource that increases with each iteration. By default, the resource is the number of samples. It can also be set to any parameter of the base estimator that accepts positive integer values, e.g. ‘n\_iterations’ or ‘n\_estimators’ for a gradient boosting estimator. In this case `max\_resources` cannot be ‘auto’ and must be set explicitly.
+
+      @defaultValue `'n_samples'`
+     */
+    resource?: 'n_samples' | string
+
+    /**
+      The maximum number of resources that any candidate is allowed to use for a given iteration. By default, this is set `n\_samples` when `resource='n\_samples'` (default), else an error is raised.
+
+      @defaultValue `'auto'`
+     */
+    max_resources?: number
+
+    /**
+      The minimum amount of resource that any candidate is allowed to use for a given iteration. Equivalently, this defines the amount of resources `r0` that are allocated for each candidate at the first iteration.
+
+      @defaultValue `'smallest'`
+     */
+    min_resources?: 'exhaust' | 'smallest' | number
+
+    /**
+      This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `true`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `false` by default, which means that the last iteration may evaluate more than `factor` candidates. See [Aggressive elimination of candidates](../grid_search.html#aggressive-elimination) for more details.
+
+      @defaultValue `false`
+     */
+    aggressive_elimination?: boolean
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+
+      @defaultValue `5`
+     */
+    cv?: number
+
+    /**
+      A single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
+     */
+    scoring?: string
+
+    /**
+      If `true`, refit an estimator using the best found parameters on the whole dataset.
+
+      The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `HalvingRandomSearchCV` instance.
+
+      @defaultValue `true`
+     */
+    refit?: boolean
+
+    /**
+      Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error. Default is `np.nan`.
+     */
+    error_score?: 'raise'
+
+    /**
+      If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
+
+      @defaultValue `false`
+     */
+    return_train_score?: boolean
+
+    /**
+      Pseudo random number generator state used for subsampling the dataset when `resources != 'n\_samples'`. Also used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Controls the verbosity: the higher, the more messages.
+     */
+    verbose?: number
+  }) {
     this.id = `HalvingRandomSearchCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -123,9 +223,12 @@ ctor_HalvingRandomSearchCV = {k: v for k, v in ctor_HalvingRandomSearchCV.items(
 
     Only available if `refit=True` and the underlying estimator supports `decision\_function`.
    */
-  async decision_function(
-    opts: HalvingRandomSearchCVDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -157,7 +260,27 @@ pms_HalvingRandomSearchCV_decision_function = {k: v for k, v in pms_HalvingRando
   /**
     Run fit with all sets of parameters.
    */
-  async fit(opts: HalvingRandomSearchCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike
+
+    /**
+      Target relative to X for classification or regression; `undefined` for unsupervised learning.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
+     */
+    groups?: ArrayLike
+
+    /**
+      Parameters passed to the `fit` method of the estimator.
+     */
+    fit_params?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -193,9 +316,12 @@ pms_HalvingRandomSearchCV_fit = {k: v for k, v in pms_HalvingRandomSearchCV_fit.
 
     Only available if the underlying estimator implements `inverse\_transform` and `refit=True`.
    */
-  async inverse_transform(
-    opts: HalvingRandomSearchCVInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async inverse_transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    Xt?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -229,7 +355,12 @@ pms_HalvingRandomSearchCV_inverse_transform = {k: v for k, v in pms_HalvingRando
 
     Only available if `refit=True` and the underlying estimator supports `predict`.
    */
-  async predict(opts: HalvingRandomSearchCVPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -261,9 +392,12 @@ pms_HalvingRandomSearchCV_predict = {k: v for k, v in pms_HalvingRandomSearchCV_
 
     Only available if `refit=True` and the underlying estimator supports `predict\_log\_proba`.
    */
-  async predict_log_proba(
-    opts: HalvingRandomSearchCVPredictLogProbaOptions
-  ): Promise<NDArray> {
+  async predict_log_proba(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -297,9 +431,12 @@ pms_HalvingRandomSearchCV_predict_log_proba = {k: v for k, v in pms_HalvingRando
 
     Only available if `refit=True` and the underlying estimator supports `predict\_proba`.
    */
-  async predict_proba(
-    opts: HalvingRandomSearchCVPredictProbaOptions
-  ): Promise<NDArray> {
+  async predict_proba(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -333,7 +470,17 @@ pms_HalvingRandomSearchCV_predict_proba = {k: v for k, v in pms_HalvingRandomSea
 
     This uses the score defined by `scoring` where provided, and the `best\_estimator\_.score` method otherwise.
    */
-  async score(opts: HalvingRandomSearchCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target relative to X for classification or regression; `undefined` for unsupervised learning.
+     */
+    y?: ArrayLike[]
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -367,9 +514,12 @@ pms_HalvingRandomSearchCV_score = {k: v for k, v in pms_HalvingRandomSearchCV_sc
 
     Only available if `refit=True` and the underlying estimator supports `score\_samples`.
    */
-  async score_samples(
-    opts: HalvingRandomSearchCVScoreSamplesOptions
-  ): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      Data to predict on. Must fulfill input requirements of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -403,9 +553,12 @@ pms_HalvingRandomSearchCV_score_samples = {k: v for k, v in pms_HalvingRandomSea
 
     Only available if the underlying estimator supports `transform` and `refit=True`.
    */
-  async transform(
-    opts: HalvingRandomSearchCVTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      Must fulfill the input assumptions of the underlying estimator.
+     */
+    X?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This HalvingRandomSearchCV instance has already been disposed'
@@ -923,189 +1076,4 @@ pms_HalvingRandomSearchCV_transform = {k: v for k, v in pms_HalvingRandomSearchC
         ._py`attr_HalvingRandomSearchCV_feature_names_in_.tolist() if hasattr(attr_HalvingRandomSearchCV_feature_names_in_, 'tolist') else attr_HalvingRandomSearchCV_feature_names_in_`
     })()
   }
-}
-
-export interface HalvingRandomSearchCVOptions {
-  /**
-    This is assumed to implement the scikit-learn estimator interface. Either estimator needs to provide a `score` function, or `scoring` must be passed.
-   */
-  estimator?: any
-
-  /**
-    Dictionary with parameters names (string) as keys and distributions or lists of parameters to try. Distributions must provide a `rvs` method for sampling (such as those from scipy.stats.distributions). If a list is given, it is sampled uniformly.
-   */
-  param_distributions?: any
-
-  /**
-    The number of candidate parameters to sample, at the first iteration. Using ‘exhaust’ will sample enough candidates so that the last iteration uses as many resources as possible, based on `min\_resources`, `max\_resources` and `factor`. In this case, `min\_resources` cannot be ‘exhaust’.
-
-    @defaultValue `'exhaust'`
-   */
-  n_candidates?: number
-
-  /**
-    The ‘halving’ parameter, which determines the proportion of candidates that are selected for each subsequent iteration. For example, `factor=3` means that only one third of the candidates are selected.
-
-    @defaultValue `3`
-   */
-  factor?: number
-
-  /**
-    Defines the resource that increases with each iteration. By default, the resource is the number of samples. It can also be set to any parameter of the base estimator that accepts positive integer values, e.g. ‘n\_iterations’ or ‘n\_estimators’ for a gradient boosting estimator. In this case `max\_resources` cannot be ‘auto’ and must be set explicitly.
-
-    @defaultValue `'n_samples'`
-   */
-  resource?: 'n_samples' | string
-
-  /**
-    The maximum number of resources that any candidate is allowed to use for a given iteration. By default, this is set `n\_samples` when `resource='n\_samples'` (default), else an error is raised.
-
-    @defaultValue `'auto'`
-   */
-  max_resources?: number
-
-  /**
-    The minimum amount of resource that any candidate is allowed to use for a given iteration. Equivalently, this defines the amount of resources `r0` that are allocated for each candidate at the first iteration.
-
-    @defaultValue `'smallest'`
-   */
-  min_resources?: 'exhaust' | 'smallest' | number
-
-  /**
-    This is only relevant in cases where there isn’t enough resources to reduce the remaining candidates to at most `factor` after the last iteration. If `true`, then the search process will ‘replay’ the first iteration for as long as needed until the number of candidates is small enough. This is `false` by default, which means that the last iteration may evaluate more than `factor` candidates. See [Aggressive elimination of candidates](../grid_search.html#aggressive-elimination) for more details.
-
-    @defaultValue `false`
-   */
-  aggressive_elimination?: boolean
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-
-    @defaultValue `5`
-   */
-  cv?: number
-
-  /**
-    A single string (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set. If `undefined`, the estimator’s score method is used.
-   */
-  scoring?: string
-
-  /**
-    If `true`, refit an estimator using the best found parameters on the whole dataset.
-
-    The refitted estimator is made available at the `best\_estimator\_` attribute and permits using `predict` directly on this `HalvingRandomSearchCV` instance.
-
-    @defaultValue `true`
-   */
-  refit?: boolean
-
-  /**
-    Value to assign to the score if an error occurs in estimator fitting. If set to ‘raise’, the error is raised. If a numeric value is given, FitFailedWarning is raised. This parameter does not affect the refit step, which will always raise the error. Default is `np.nan`.
-   */
-  error_score?: 'raise'
-
-  /**
-    If `false`, the `cv\_results\_` attribute will not include training scores. Computing training scores is used to get insights on how different parameter settings impact the overfitting/underfitting trade-off. However computing the scores on the training set can be computationally expensive and is not strictly required to select the parameters that yield the best generalization performance.
-
-    @defaultValue `false`
-   */
-  return_train_score?: boolean
-
-  /**
-    Pseudo random number generator state used for subsampling the dataset when `resources != 'n\_samples'`. Also used for random uniform sampling from lists of possible values instead of scipy.stats distributions. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Controls the verbosity: the higher, the more messages.
-   */
-  verbose?: number
-}
-
-export interface HalvingRandomSearchCVDecisionFunctionOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface HalvingRandomSearchCVFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike
-
-  /**
-    Target relative to X for classification or regression; `undefined` for unsupervised learning.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. Only used in conjunction with a “Group” [cv](../../glossary.html#term-cv) instance (e.g., [`GroupKFold`](sklearn.model_selection.GroupKFold.html#sklearn.model_selection.GroupKFold "sklearn.model_selection.GroupKFold")).
-   */
-  groups?: ArrayLike
-
-  /**
-    Parameters passed to the `fit` method of the estimator.
-   */
-  fit_params?: any
-}
-
-export interface HalvingRandomSearchCVInverseTransformOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  Xt?: any
-}
-
-export interface HalvingRandomSearchCVPredictOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface HalvingRandomSearchCVPredictLogProbaOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface HalvingRandomSearchCVPredictProbaOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface HalvingRandomSearchCVScoreOptions {
-  /**
-    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target relative to X for classification or regression; `undefined` for unsupervised learning.
-   */
-  y?: ArrayLike[]
-}
-
-export interface HalvingRandomSearchCVScoreSamplesOptions {
-  /**
-    Data to predict on. Must fulfill input requirements of the underlying estimator.
-   */
-  X?: any
-}
-
-export interface HalvingRandomSearchCVTransformOptions {
-  /**
-    Must fulfill the input assumptions of the underlying estimator.
-   */
-  X?: any
 }

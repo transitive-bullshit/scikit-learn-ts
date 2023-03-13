@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../preprocessing_targets.html#preprocessing-targets).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html)
  */
 export class LabelBinarizer {
   id: string
@@ -26,7 +26,28 @@ export class LabelBinarizer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LabelBinarizerOptions) {
+  constructor(opts?: {
+    /**
+      Value with which negative labels must be encoded.
+
+      @defaultValue `0`
+     */
+    neg_label?: number
+
+    /**
+      Value with which positive labels must be encoded.
+
+      @defaultValue `1`
+     */
+    pos_label?: number
+
+    /**
+      True if the returned array from transform is desired to be in sparse CSR format.
+
+      @defaultValue `false`
+     */
+    sparse_output?: boolean
+  }) {
     this.id = `LabelBinarizer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +124,12 @@ ctor_LabelBinarizer = {k: v for k, v in ctor_LabelBinarizer.items() if v is not 
   /**
     Fit label binarizer.
    */
-  async fit(opts: LabelBinarizerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification.
+     */
+    y?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelBinarizer instance has already been disposed')
     }
@@ -133,9 +159,12 @@ pms_LabelBinarizer_fit = {k: v for k, v in pms_LabelBinarizer_fit.items() if v i
 
     The output of transform is sometimes referred to as the 1-of-K coding scheme.
    */
-  async fit_transform(
-    opts: LabelBinarizerFitTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async fit_transform(opts: {
+    /**
+      Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
+     */
+    y?: NDArray | SparseMatrix
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This LabelBinarizer instance has already been disposed')
     }
@@ -163,9 +192,21 @@ pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_tran
   /**
     Transform binary labels back to multi-class labels.
    */
-  async inverse_transform(
-    opts: LabelBinarizerInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix> {
+  async inverse_transform(opts: {
+    /**
+      Target values. All sparse matrices are converted to CSR before inverse transformation.
+     */
+    Y?: NDArray | SparseMatrix[]
+
+    /**
+      Threshold used in the binary and multi-label cases.
+
+      Use 0 when `Y` contains the output of decision\_function (classifier). Use 0.5 when `Y` contains the output of predict\_proba.
+
+      If `undefined`, the threshold is assumed to be half way between neg\_label and pos\_label.
+     */
+    threshold?: number
+  }): Promise<NDArray | SparseMatrix> {
     if (this._isDisposed) {
       throw new Error('This LabelBinarizer instance has already been disposed')
     }
@@ -199,7 +240,12 @@ pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inve
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: LabelBinarizerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LabelBinarizer instance has already been disposed')
     }
@@ -229,9 +275,12 @@ pms_LabelBinarizer_set_output = {k: v for k, v in pms_LabelBinarizer_set_output.
 
     The output of transform is sometimes referred to by some authors as the 1-of-K coding scheme.
    */
-  async transform(
-    opts: LabelBinarizerTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
+     */
+    y?: SparseMatrix
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This LabelBinarizer instance has already been disposed')
     }
@@ -330,71 +379,4 @@ pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.it
         ._py`attr_LabelBinarizer_sparse_input_.tolist() if hasattr(attr_LabelBinarizer_sparse_input_, 'tolist') else attr_LabelBinarizer_sparse_input_`
     })()
   }
-}
-
-export interface LabelBinarizerOptions {
-  /**
-    Value with which negative labels must be encoded.
-
-    @defaultValue `0`
-   */
-  neg_label?: number
-
-  /**
-    Value with which positive labels must be encoded.
-
-    @defaultValue `1`
-   */
-  pos_label?: number
-
-  /**
-    True if the returned array from transform is desired to be in sparse CSR format.
-
-    @defaultValue `false`
-   */
-  sparse_output?: boolean
-}
-
-export interface LabelBinarizerFitOptions {
-  /**
-    Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification.
-   */
-  y?: NDArray
-}
-
-export interface LabelBinarizerFitTransformOptions {
-  /**
-    Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
-   */
-  y?: NDArray | SparseMatrix
-}
-
-export interface LabelBinarizerInverseTransformOptions {
-  /**
-    Target values. All sparse matrices are converted to CSR before inverse transformation.
-   */
-  Y?: NDArray | SparseMatrix[]
-
-  /**
-    Threshold used in the binary and multi-label cases.
-
-    Use 0 when `Y` contains the output of decision\_function (classifier). Use 0.5 when `Y` contains the output of predict\_proba.
-
-    If `undefined`, the threshold is assumed to be half way between neg\_label and pos\_label.
-   */
-  threshold?: number
-}
-
-export interface LabelBinarizerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface LabelBinarizerTransformOptions {
-  /**
-    Target values. The 2-d matrix should only contain 0 and 1, represents multilabel classification. Sparse matrix can be CSR, CSC, COO, DOK, or LIL.
-   */
-  y?: SparseMatrix
 }

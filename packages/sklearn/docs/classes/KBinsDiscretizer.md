@@ -1,193 +1,164 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / KBinsDiscretizer
-
-# Class: KBinsDiscretizer
+# KBinsDiscretizer
 
 Bin continuous data into intervals.
 
 Read more in the [User Guide](../preprocessing.html#preprocessing-discretization).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KBinsDiscretizer.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](KBinsDiscretizer.md#constructor)
-
-### Properties
-
-- [\_isDisposed](KBinsDiscretizer.md#_isdisposed)
-- [\_isInitialized](KBinsDiscretizer.md#_isinitialized)
-- [\_py](KBinsDiscretizer.md#_py)
-- [id](KBinsDiscretizer.md#id)
-- [opts](KBinsDiscretizer.md#opts)
-
-### Accessors
-
-- [bin\_edges\_](KBinsDiscretizer.md#bin_edges_)
-- [feature\_names\_in\_](KBinsDiscretizer.md#feature_names_in_)
-- [n\_bins\_](KBinsDiscretizer.md#n_bins_)
-- [n\_features\_in\_](KBinsDiscretizer.md#n_features_in_)
-- [py](KBinsDiscretizer.md#py)
-
-### Methods
-
-- [dispose](KBinsDiscretizer.md#dispose)
-- [fit](KBinsDiscretizer.md#fit)
-- [fit\_transform](KBinsDiscretizer.md#fit_transform)
-- [get\_feature\_names\_out](KBinsDiscretizer.md#get_feature_names_out)
-- [init](KBinsDiscretizer.md#init)
-- [inverse\_transform](KBinsDiscretizer.md#inverse_transform)
-- [set\_output](KBinsDiscretizer.md#set_output)
-- [transform](KBinsDiscretizer.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KBinsDiscretizer.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new KBinsDiscretizer**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new KBinsDiscretizer(opts?: object): KBinsDiscretizer;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`KBinsDiscretizerOptions`](../interfaces/KBinsDiscretizerOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.dtype?` | `any` | The desired data-type for the output. If `undefined`, output dtype is consistent with input dtype. Only np.float32 and np.float64 are supported. |
+| `opts.encode?` | `"onehot"` \| `"onehot-dense"` \| `"ordinal"` | Method used to encode the transformed result.  `Default Value`  `'onehot'` |
+| `opts.n_bins?` | `number` \| [`ArrayLike`](../types/ArrayLike.md) | The number of bins to produce. Raises ValueError if `n\_bins < 2`.  `Default Value`  `5` |
+| `opts.random_state?` | `number` | Determines random number generation for subsampling. Pass an int for reproducible results across multiple function calls. See the `subsample` parameter for more details. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.strategy?` | `"uniform"` \| `"quantile"` \| `"kmeans"` | Strategy used to define the widths of the bins.  `Default Value`  `'quantile'` |
+| `opts.subsample?` | `number` | Maximum number of samples, used to fit the model, for computational efficiency. Used when `strategy="quantile"`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples. |
 
-[generated/preprocessing/KBinsDiscretizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L23)
+### Returns
+
+[`KBinsDiscretizer`](KBinsDiscretizer.md)
+
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L23)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/KBinsDiscretizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L21)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L21)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/preprocessing/KBinsDiscretizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L20)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L20)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/preprocessing/KBinsDiscretizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L19)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L19)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/preprocessing/KBinsDiscretizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L16)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L16)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/preprocessing/KBinsDiscretizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L17)
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L17)
 
 ## Accessors
 
 ### bin\_edges\_
 
-• `get` **bin_edges_**(): `Promise`<`any`[]\>
-
 The edges of each bin. Contain arrays of varying shapes `(n\_bins\_, )` Ignored features will have empty arrays.
+
+#### Signature
+
+```ts
+bin_edges_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L385)
 
-[generated/preprocessing/KBinsDiscretizer.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L310)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L385)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L466)
 
-[generated/preprocessing/KBinsDiscretizer.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L391)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L466)
 
 ### n\_bins\_
 
-• `get` **n_bins_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Number of bins per feature. Bins whose width are too small (i.e., <= 1e-8) are removed with a warning.
+
+#### Signature
+
+```ts
+n_bins_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L412)
 
-[generated/preprocessing/KBinsDiscretizer.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L337)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L412)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L439)
 
-[generated/preprocessing/KBinsDiscretizer.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L364)
-
-___
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L439)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L64)
 
-[generated/preprocessing/KBinsDiscretizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L28)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -199,105 +170,115 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L68)
 
-[generated/preprocessing/KBinsDiscretizer.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L32)
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L64) [generated/preprocessing/KBinsDiscretizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L68)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L125)
 
-[generated/preprocessing/KBinsDiscretizer.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L89)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Fit the estimator.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KBinsDiscretizerFitOptions`](../interfaces/KBinsDiscretizerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Data to be discretized. |
+| `opts.y?` | `any` | Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline"). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L142)
 
-[generated/preprocessing/KBinsDiscretizer.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L106)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`[]\>
+### fit\_transform()
 
 Fit to data, then transform it.
 
 Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KBinsDiscretizerFitTransformOptions`](../interfaces/KBinsDiscretizerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Input samples. |
+| `opts.fit_params?` | `any` | Additional fit parameters. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values (`undefined` for unsupervised transformations). |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L184)
 
-[generated/preprocessing/KBinsDiscretizer.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L138)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KBinsDiscretizerGetFeatureNamesOutOptions`](../interfaces/KBinsDiscretizerGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Input features. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L235)
 
-[generated/preprocessing/KBinsDiscretizer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L176)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -307,78 +288,79 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L77)
 
-[generated/preprocessing/KBinsDiscretizer.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L41)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### inverse\_transform()
 
 Transform discretized data back to original feature space.
 
 Note that this function does not regenerate the original data due to discretization rounding.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KBinsDiscretizerInverseTransformOptions`](../interfaces/KBinsDiscretizerInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.Xt?` | [`ArrayLike`](../types/ArrayLike.md)[] | Transformed data in the binned space. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L275)
 
-[generated/preprocessing/KBinsDiscretizer.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L213)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KBinsDiscretizerSetOutputOptions`](../interfaces/KBinsDiscretizerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L315)
 
-[generated/preprocessing/KBinsDiscretizer.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L250)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### transform()
 
 Discretize the data.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`KBinsDiscretizerTransformOptions`](../interfaces/KBinsDiscretizerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Data to be discretized. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
-
-[generated/preprocessing/KBinsDiscretizer.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L280)
+Defined in:  [generated/preprocessing/KBinsDiscretizer.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/preprocessing/KBinsDiscretizer.ts#L350)

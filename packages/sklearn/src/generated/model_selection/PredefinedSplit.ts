@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#predefined-split).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.PredefinedSplit.html)
  */
 export class PredefinedSplit {
   id: string
@@ -22,7 +22,12 @@ export class PredefinedSplit {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PredefinedSplitOptions) {
+  constructor(opts?: {
+    /**
+      The entry `test\_fold\[i\]` represents the index of the test set that sample `i` belongs to. It is possible to exclude sample `i` from any test set (i.e. include sample `i` in every training set) by setting `test\_fold\[i\]` equal to -1.
+     */
+    test_fold?: ArrayLike
+  }) {
     this.id = `PredefinedSplit${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +102,22 @@ ctor_PredefinedSplit = {k: v for k, v in ctor_PredefinedSplit.items() if v is no
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(opts: PredefinedSplitGetNSplitsOptions): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This PredefinedSplit instance has already been disposed')
     }
@@ -125,7 +145,22 @@ pms_PredefinedSplit_get_n_splits = {k: v for k, v in pms_PredefinedSplit_get_n_s
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: PredefinedSplitSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    groups?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This PredefinedSplit instance has already been disposed')
     }
@@ -149,45 +184,4 @@ pms_PredefinedSplit_split = {k: v for k, v in pms_PredefinedSplit_split.items() 
     return this
       ._py`res_PredefinedSplit_split.tolist() if hasattr(res_PredefinedSplit_split, 'tolist') else res_PredefinedSplit_split`
   }
-}
-
-export interface PredefinedSplitOptions {
-  /**
-    The entry `test\_fold\[i\]` represents the index of the test set that sample `i` belongs to. It is possible to exclude sample `i` from any test set (i.e. include sample `i` in every training set) by setting `test\_fold\[i\]` equal to -1.
-   */
-  test_fold?: ArrayLike
-}
-
-export interface PredefinedSplitGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
-}
-
-export interface PredefinedSplitSplitOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  groups?: any
 }

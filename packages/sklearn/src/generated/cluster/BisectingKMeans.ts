@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#bisect-k-means).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.BisectingKMeans.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.BisectingKMeans.html)
  */
 export class BisectingKMeans {
   id: string
@@ -20,7 +20,81 @@ export class BisectingKMeans {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BisectingKMeansOptions) {
+  constructor(opts?: {
+    /**
+      The number of clusters to form as well as the number of centroids to generate.
+
+      @defaultValue `8`
+     */
+    n_clusters?: number
+
+    /**
+      Method for initialization:
+
+      ‘k-means++’ : selects initial cluster centers for k-mean clustering in a smart way to speed up convergence. See section Notes in k\_init for more details.
+
+      ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.
+
+      If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.
+
+      @defaultValue `'random'`
+     */
+    init?: 'k-means++' | 'random'
+
+    /**
+      Number of time the inner k-means algorithm will be run with different centroid seeds in each bisection. That will result producing for each bisection best output of n\_init consecutive runs in terms of inertia.
+
+      @defaultValue `1`
+     */
+    n_init?: number
+
+    /**
+      Determines random number generation for centroid initialization in inner K-Means. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      Maximum number of iterations of the inner k-means algorithm at each bisection.
+
+      @defaultValue `300`
+     */
+    max_iter?: number
+
+    /**
+      Verbosity mode.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Relative tolerance with regards to Frobenius norm of the difference in the cluster centers of two consecutive iterations to declare convergence. Used in inner k-means algorithm at each bisection to pick best possible clusters.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      When pre-computing distances it is more numerically accurate to center the data first. If copy\_x is `true` (default), then the original data is not modified. If `false`, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy\_x is `false`. If the original data is sparse, but not in CSR format, a copy will be made even if copy\_x is `false`.
+
+      @defaultValue `true`
+     */
+    copy_x?: boolean
+
+    /**
+      Inner K-means algorithm used in bisection. The classical EM-style algorithm is `"lloyd"`. The `"elkan"` variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape `(n\_samples, n\_clusters)`.
+
+      @defaultValue `'lloyd'`
+     */
+    algorithm?: 'lloyd' | 'elkan'
+
+    /**
+      Defines how bisection should be performed:
+
+      @defaultValue `'biggest_inertia'`
+     */
+    bisecting_strategy?: 'biggest_inertia' | 'largest_cluster'
+  }) {
     this.id = `BisectingKMeans${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +177,22 @@ ctor_BisectingKMeans = {k: v for k, v in ctor_BisectingKMeans.items() if v is no
   /**
     Compute bisecting k-means clustering.
    */
-  async fit(opts: BisectingKMeansFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training instances to cluster.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -137,7 +226,22 @@ pms_BisectingKMeans_fit = {k: v for k, v in pms_BisectingKMeans_fit.items() if v
 
     Convenience method; equivalent to calling fit(X) followed by predict(X).
    */
-  async fit_predict(opts: BisectingKMeansFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      New data to transform.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -171,9 +275,22 @@ pms_BisectingKMeans_fit_predict = {k: v for k, v in pms_BisectingKMeans_fit_pred
 
     Equivalent to fit(X).transform(X), but more efficiently implemented.
    */
-  async fit_transform(
-    opts: BisectingKMeansFitTransformOptions
-  ): Promise<NDArray[]> {
+  async fit_transform(opts: {
+    /**
+      New data to transform.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -207,9 +324,12 @@ pms_BisectingKMeans_fit_transform = {k: v for k, v in pms_BisectingKMeans_fit_tr
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: BisectingKMeansGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.BisectingKMeans.fit "sklearn.cluster.BisectingKMeans.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -244,7 +364,12 @@ pms_BisectingKMeans_get_feature_names_out = {k: v for k, v in pms_BisectingKMean
 
     In the vector quantization literature, `cluster\_centers\_` is called the code book and each value returned by `predict` is the index of the closest code in the code book.
    */
-  async predict(opts: BisectingKMeansPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      New data to predict.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -272,7 +397,22 @@ pms_BisectingKMeans_predict = {k: v for k, v in pms_BisectingKMeans_predict.item
   /**
     Opposite of the value of X on the K-means objective.
    */
-  async score(opts: BisectingKMeansScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      New data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+
+    /**
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -306,7 +446,12 @@ pms_BisectingKMeans_score = {k: v for k, v in pms_BisectingKMeans_score.items() 
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: BisectingKMeansSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -336,7 +481,12 @@ pms_BisectingKMeans_set_output = {k: v for k, v in pms_BisectingKMeans_set_outpu
 
     In the new space, each dimension is the distance to the cluster centers. Note that even if X is sparse, the array returned by `transform` will typically be dense.
    */
-  async transform(opts: BisectingKMeansTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      New data to transform.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This BisectingKMeans instance has already been disposed')
     }
@@ -485,176 +635,4 @@ pms_BisectingKMeans_transform = {k: v for k, v in pms_BisectingKMeans_transform.
         ._py`attr_BisectingKMeans_feature_names_in_.tolist() if hasattr(attr_BisectingKMeans_feature_names_in_, 'tolist') else attr_BisectingKMeans_feature_names_in_`
     })()
   }
-}
-
-export interface BisectingKMeansOptions {
-  /**
-    The number of clusters to form as well as the number of centroids to generate.
-
-    @defaultValue `8`
-   */
-  n_clusters?: number
-
-  /**
-    Method for initialization:
-
-    ‘k-means++’ : selects initial cluster centers for k-mean clustering in a smart way to speed up convergence. See section Notes in k\_init for more details.
-
-    ‘random’: choose `n\_clusters` observations (rows) at random from data for the initial centroids.
-
-    If a callable is passed, it should take arguments X, n\_clusters and a random state and return an initialization.
-
-    @defaultValue `'random'`
-   */
-  init?: 'k-means++' | 'random'
-
-  /**
-    Number of time the inner k-means algorithm will be run with different centroid seeds in each bisection. That will result producing for each bisection best output of n\_init consecutive runs in terms of inertia.
-
-    @defaultValue `1`
-   */
-  n_init?: number
-
-  /**
-    Determines random number generation for centroid initialization in inner K-Means. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    Maximum number of iterations of the inner k-means algorithm at each bisection.
-
-    @defaultValue `300`
-   */
-  max_iter?: number
-
-  /**
-    Verbosity mode.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Relative tolerance with regards to Frobenius norm of the difference in the cluster centers of two consecutive iterations to declare convergence. Used in inner k-means algorithm at each bisection to pick best possible clusters.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    When pre-computing distances it is more numerically accurate to center the data first. If copy\_x is `true` (default), then the original data is not modified. If `false`, the original data is modified, and put back before the function returns, but small numerical differences may be introduced by subtracting and then adding the data mean. Note that if the original data is not C-contiguous, a copy will be made even if copy\_x is `false`. If the original data is sparse, but not in CSR format, a copy will be made even if copy\_x is `false`.
-
-    @defaultValue `true`
-   */
-  copy_x?: boolean
-
-  /**
-    Inner K-means algorithm used in bisection. The classical EM-style algorithm is `"lloyd"`. The `"elkan"` variation can be more efficient on some datasets with well-defined clusters, by using the triangle inequality. However it’s more memory intensive due to the allocation of an extra array of shape `(n\_samples, n\_clusters)`.
-
-    @defaultValue `'lloyd'`
-   */
-  algorithm?: 'lloyd' | 'elkan'
-
-  /**
-    Defines how bisection should be performed:
-
-    @defaultValue `'biggest_inertia'`
-   */
-  bisecting_strategy?: 'biggest_inertia' | 'largest_cluster'
-}
-
-export interface BisectingKMeansFitOptions {
-  /**
-    Training instances to cluster.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BisectingKMeansFitPredictOptions {
-  /**
-    New data to transform.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BisectingKMeansFitTransformOptions {
-  /**
-    New data to transform.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BisectingKMeansGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.BisectingKMeans.fit "sklearn.cluster.BisectingKMeans.fit").
-   */
-  input_features?: any
-}
-
-export interface BisectingKMeansPredictOptions {
-  /**
-    New data to predict.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BisectingKMeansScoreOptions {
-  /**
-    New data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-
-  /**
-    The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface BisectingKMeansSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface BisectingKMeansTransformOptions {
-  /**
-    New data to transform.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#ridge-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifierCV.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifierCV.html)
  */
 export class RidgeClassifierCV {
   id: string
@@ -24,7 +24,43 @@ export class RidgeClassifierCV {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RidgeClassifierCVOptions) {
+  constructor(opts?: {
+    /**
+      Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
+     */
+    alphas?: ArrayLike
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
+     */
+    scoring?: string
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
+
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
+
+      @defaultValue `false`
+     */
+    store_cv_values?: boolean
+  }) {
     this.id = `RidgeClassifierCV${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -109,9 +145,12 @@ ctor_RidgeClassifierCV = {k: v for k, v in ctor_RidgeClassifierCV.items() if v i
 
     The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
    */
-  async decision_function(
-    opts: RidgeClassifierCVDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix for which we want to get the confidence scores.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RidgeClassifierCV instance has already been disposed'
@@ -144,7 +183,22 @@ pms_RidgeClassifierCV_decision_function = {k: v for k, v in pms_RidgeClassifierC
   /**
     Fit Ridge classifier with cv.
    */
-  async fit(opts: RidgeClassifierCVFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. When using GCV, will be cast to float64 if necessary.
+     */
+    X?: NDArray[]
+
+    /**
+      Target values. Will be cast to X’s dtype if necessary.
+     */
+    y?: NDArray
+
+    /**
+      Individual weights for each sample. If given a float, every sample will have the same weight.
+     */
+    sample_weight?: number | NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This RidgeClassifierCV instance has already been disposed'
@@ -178,7 +232,12 @@ pms_RidgeClassifierCV_fit = {k: v for k, v in pms_RidgeClassifierCV_fit.items() 
   /**
     Predict class labels for samples in `X`.
    */
-  async predict(opts: RidgeClassifierCVPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to predict the targets.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This RidgeClassifierCV instance has already been disposed'
@@ -210,7 +269,22 @@ pms_RidgeClassifierCV_predict = {k: v for k, v in pms_RidgeClassifierCV_predict.
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: RidgeClassifierCVScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This RidgeClassifierCV instance has already been disposed'
@@ -431,90 +505,4 @@ pms_RidgeClassifierCV_score = {k: v for k, v in pms_RidgeClassifierCV_score.item
         ._py`attr_RidgeClassifierCV_feature_names_in_.tolist() if hasattr(attr_RidgeClassifierCV_feature_names_in_, 'tolist') else attr_RidgeClassifierCV_feature_names_in_`
     })()
   }
-}
-
-export interface RidgeClassifierCVOptions {
-  /**
-    Array of alpha values to try. Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
-   */
-  alphas?: ArrayLike
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    A string (see model evaluation documentation) or a scorer callable object / function with signature `scorer(estimator, X, y)`.
-   */
-  scoring?: string
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
-
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    Flag indicating if the cross-validation values corresponding to each alpha should be stored in the `cv\_values\_` attribute (see below). This flag is only compatible with `cv=None` (i.e. using Leave-One-Out Cross-Validation).
-
-    @defaultValue `false`
-   */
-  store_cv_values?: boolean
-}
-
-export interface RidgeClassifierCVDecisionFunctionOptions {
-  /**
-    The data matrix for which we want to get the confidence scores.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface RidgeClassifierCVFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features. When using GCV, will be cast to float64 if necessary.
-   */
-  X?: NDArray[]
-
-  /**
-    Target values. Will be cast to X’s dtype if necessary.
-   */
-  y?: NDArray
-
-  /**
-    Individual weights for each sample. If given a float, every sample will have the same weight.
-   */
-  sample_weight?: number | NDArray
-}
-
-export interface RidgeClassifierCVPredictOptions {
-  /**
-    The data matrix for which we want to predict the targets.
-   */
-  X?: ArrayLike[]
-}
-
-export interface RidgeClassifierCVScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

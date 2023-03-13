@@ -18,7 +18,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../model_evaluation.html#dummy-estimators).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html)
  */
 export class DummyClassifier {
   id: string
@@ -28,7 +28,24 @@ export class DummyClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: DummyClassifierOptions) {
+  constructor(opts?: {
+    /**
+      Strategy to use to generate predictions.
+
+      @defaultValue `'prior'`
+     */
+    strategy?: 'most_frequent' | 'prior' | 'stratified' | 'uniform' | 'constant'
+
+    /**
+      Controls the randomness to generate the predictions when `strategy='stratified'` or `strategy='uniform'`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The explicit constant as predicted by the “constant” strategy. This parameter is useful only for the “constant” strategy.
+     */
+    constant?: number | string | ArrayLike
+  }) {
     this.id = `DummyClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +124,22 @@ ctor_DummyClassifier = {k: v for k, v in ctor_DummyClassifier.items() if v is no
   /**
     Fit the baseline classifier.
    */
-  async fit(opts: DummyClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DummyClassifier instance has already been disposed')
     }
@@ -139,7 +171,12 @@ pms_DummyClassifier_fit = {k: v for k, v in pms_DummyClassifier_fit.items() if v
   /**
     Perform classification on test vectors X.
    */
-  async predict(opts: DummyClassifierPredictOptions): Promise<ArrayLike> {
+  async predict(opts: {
+    /**
+      Test data.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This DummyClassifier instance has already been disposed')
     }
@@ -167,9 +204,12 @@ pms_DummyClassifier_predict = {k: v for k, v in pms_DummyClassifier_predict.item
   /**
     Return log probability estimates for the test vectors X.
    */
-  async predict_log_proba(
-    opts: DummyClassifierPredictLogProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_log_proba(opts: {
+    /**
+      Training data.
+     */
+    X?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This DummyClassifier instance has already been disposed')
     }
@@ -199,9 +239,12 @@ pms_DummyClassifier_predict_log_proba = {k: v for k, v in pms_DummyClassifier_pr
   /**
     Return probability estimates for the test vectors X.
    */
-  async predict_proba(
-    opts: DummyClassifierPredictProbaOptions
-  ): Promise<NDArray[]> {
+  async predict_proba(opts: {
+    /**
+      Test data.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This DummyClassifier instance has already been disposed')
     }
@@ -231,7 +274,22 @@ pms_DummyClassifier_predict_proba = {k: v for k, v in pms_DummyClassifier_predic
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: DummyClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since DummyClassifier operates independently of the sampled observations.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for X.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This DummyClassifier instance has already been disposed')
     }
@@ -384,78 +442,4 @@ pms_DummyClassifier_score = {k: v for k, v in pms_DummyClassifier_score.items() 
         ._py`attr_DummyClassifier_sparse_output_.tolist() if hasattr(attr_DummyClassifier_sparse_output_, 'tolist') else attr_DummyClassifier_sparse_output_`
     })()
   }
-}
-
-export interface DummyClassifierOptions {
-  /**
-    Strategy to use to generate predictions.
-
-    @defaultValue `'prior'`
-   */
-  strategy?: 'most_frequent' | 'prior' | 'stratified' | 'uniform' | 'constant'
-
-  /**
-    Controls the randomness to generate the predictions when `strategy='stratified'` or `strategy='uniform'`. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The explicit constant as predicted by the “constant” strategy. This parameter is useful only for the “constant” strategy.
-   */
-  constant?: number | string | ArrayLike
-}
-
-export interface DummyClassifierFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface DummyClassifierPredictOptions {
-  /**
-    Test data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface DummyClassifierPredictLogProbaOptions {
-  /**
-    Training data.
-   */
-  X?: any
-}
-
-export interface DummyClassifierPredictProbaOptions {
-  /**
-    Test data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface DummyClassifierScoreOptions {
-  /**
-    Test samples. Passing `undefined` as test samples gives the same result as passing real test samples, since DummyClassifier operates independently of the sampled observations.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for X.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

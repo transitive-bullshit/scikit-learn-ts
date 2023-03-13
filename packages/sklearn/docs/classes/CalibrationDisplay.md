@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / CalibrationDisplay
-
-# Class: CalibrationDisplay
+# CalibrationDisplay
 
 Calibration curve (also known as reliability diagram) visualization.
 
@@ -8,168 +6,142 @@ It is recommended to use [`from\_estimator`](#sklearn.calibration.CalibrationDis
 
 Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](CalibrationDisplay.md#constructor)
-
-### Properties
-
-- [\_isDisposed](CalibrationDisplay.md#_isdisposed)
-- [\_isInitialized](CalibrationDisplay.md#_isinitialized)
-- [\_py](CalibrationDisplay.md#_py)
-- [id](CalibrationDisplay.md#id)
-- [opts](CalibrationDisplay.md#opts)
-
-### Accessors
-
-- [ax\_](CalibrationDisplay.md#ax_)
-- [figure\_](CalibrationDisplay.md#figure_)
-- [line\_](CalibrationDisplay.md#line_)
-- [py](CalibrationDisplay.md#py)
-
-### Methods
-
-- [dispose](CalibrationDisplay.md#dispose)
-- [from\_estimator](CalibrationDisplay.md#from_estimator)
-- [from\_predictions](CalibrationDisplay.md#from_predictions)
-- [init](CalibrationDisplay.md#init)
-- [plot](CalibrationDisplay.md#plot)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibrationDisplay.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new CalibrationDisplay**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new CalibrationDisplay(opts?: object): CalibrationDisplay;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`CalibrationDisplayOptions`](../interfaces/CalibrationDisplayOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.estimator_name?` | `string` | Name of estimator. If `undefined`, the estimator name is not shown. |
+| `opts.pos_label?` | `string` \| `number` | The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
+| `opts.prob_pred?` | [`ArrayLike`](../types/ArrayLike.md) | The mean predicted probability in each bin. |
+| `opts.prob_true?` | [`ArrayLike`](../types/ArrayLike.md) | The proportion of samples whose class is the positive class (fraction of positives), in each bin. |
+| `opts.y_prob?` | [`ArrayLike`](../types/ArrayLike.md) | Probability estimates for the positive class, for each sample. |
 
-[generated/calibration/CalibrationDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L25)
+### Returns
+
+[`CalibrationDisplay`](CalibrationDisplay.md)
+
+Defined in:  [generated/calibration/CalibrationDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/calibration/CalibrationDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L23)
-
-___
+Defined in:  [generated/calibration/CalibrationDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/calibration/CalibrationDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L22)
-
-___
+Defined in:  [generated/calibration/CalibrationDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/calibration/CalibrationDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L21)
-
-___
+Defined in:  [generated/calibration/CalibrationDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/calibration/CalibrationDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L18)
-
-___
+Defined in:  [generated/calibration/CalibrationDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/calibration/CalibrationDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L19)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L19)
 
 ## Accessors
 
 ### ax\_
 
-• `get` **ax_**(): `Promise`<`any`\>
-
 Axes with calibration curve.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L426)
 
-[generated/calibration/CalibrationDisplay.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L276)
-
-___
+Defined in:  [generated/calibration/CalibrationDisplay.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L426)
 
 ### figure\_
 
-• `get` **figure_**(): `Promise`<`any`\>
-
 Figure containing the curve.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L453)
 
-[generated/calibration/CalibrationDisplay.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L303)
-
-___
+Defined in:  [generated/calibration/CalibrationDisplay.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L453)
 
 ### line\_
 
-• `get` **line_**(): `Promise`<`any`\>
-
 Calibration curve.
+
+#### Signature
+
+```ts
+line_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L399)
 
-[generated/calibration/CalibrationDisplay.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L249)
-
-___
+Defined in:  [generated/calibration/CalibrationDisplay.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L399)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L55)
 
-[generated/calibration/CalibrationDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -181,33 +153,31 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L59)
 
-[generated/calibration/CalibrationDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L34)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L55) [generated/calibration/CalibrationDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L59)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L122)
 
-[generated/calibration/CalibrationDisplay.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L97)
-
-___
-
-### from\_estimator
-
-▸ **from_estimator**(`opts`): `Promise`<`any`\>
+### from\_estimator()
 
 Plot calibration curve using a binary classifier and data.
 
@@ -217,25 +187,35 @@ Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://mat
 
 Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
 
+#### Signature
+
+```ts
+from_estimator(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`CalibrationDisplayFromEstimatorOptions`](../interfaces/CalibrationDisplayFromEstimatorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Input values. |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.estimator?` | `any` | Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. The classifier must have a [predict\_proba](../../glossary.html#term-predict_proba) method. |
+| `opts.kwargs?` | `any` | Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)"). |
+| `opts.n_bins?` | `number` | Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.  `Default Value`  `5` |
+| `opts.name?` | `string` | Name for labeling curve. If `undefined`, the name of the estimator is used. |
+| `opts.pos_label?` | `string` \| `number` | The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
+| `opts.ref_line?` | `boolean` | If `true`, plots a reference line representing a perfectly calibrated classifier.  `Default Value`  `true` |
+| `opts.strategy?` | `"uniform"` \| `"quantile"` | Strategy used to define the widths of the bins.  `Default Value`  `'uniform'` |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Binary target values. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L145)
 
-[generated/calibration/CalibrationDisplay.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L120)
-
-___
-
-### from\_predictions
-
-▸ **from_predictions**(`opts`): `Promise`<`any`\>
+### from\_predictions()
 
 Plot calibration curve using true labels and predicted probabilities.
 
@@ -245,29 +225,44 @@ Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://mat
 
 Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
 
+#### Signature
+
+```ts
+from_predictions(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`CalibrationDisplayFromPredictionsOptions`](../interfaces/CalibrationDisplayFromPredictionsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.kwargs?` | `any` | Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)"). |
+| `opts.n_bins?` | `number` | Number of bins to discretize the \[0, 1\] interval into when calculating the calibration curve. A bigger number requires more data.  `Default Value`  `5` |
+| `opts.name?` | `string` | Name for labeling curve. |
+| `opts.pos_label?` | `string` \| `number` | The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
+| `opts.ref_line?` | `boolean` | If `true`, plots a reference line representing a perfectly calibrated classifier.  `Default Value`  `true` |
+| `opts.strategy?` | `"uniform"` \| `"quantile"` | Strategy used to define the widths of the bins.  `Default Value`  `'uniform'` |
+| `opts.y_prob?` | [`ArrayLike`](../types/ArrayLike.md) | The predicted probabilities of the positive class. |
+| `opts.y_true?` | [`ArrayLike`](../types/ArrayLike.md) | True labels. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L249)
 
-[generated/calibration/CalibrationDisplay.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L170)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -277,32 +272,34 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/calibration/CalibrationDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L68)
 
-[generated/calibration/CalibrationDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L43)
-
-___
-
-### plot
-
-▸ **plot**(`opts`): `Promise`<`any`\>
+### plot()
 
 Plot visualization.
 
 Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
 
+#### Signature
+
+```ts
+plot(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`CalibrationDisplayPlotOptions`](../interfaces/CalibrationDisplayPlotOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.kwargs?` | `any` | Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)"). |
+| `opts.name?` | `string` | Name for labeling curve. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown. |
+| `opts.ref_line?` | `boolean` | If `true`, plots a reference line representing a perfectly calibrated classifier.  `Default Value`  `true` |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/calibration/CalibrationDisplay.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L217)
+Defined in:  [generated/calibration/CalibrationDisplay.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/calibration/CalibrationDisplay.ts#L345)

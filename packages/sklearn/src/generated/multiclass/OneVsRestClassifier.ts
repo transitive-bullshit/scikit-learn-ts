@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../multiclass.html#ovr-classification).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html)
  */
 export class OneVsRestClassifier {
   id: string
@@ -24,7 +24,26 @@ export class OneVsRestClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: OneVsRestClassifierOptions) {
+  constructor(opts?: {
+    /**
+      A regressor or a classifier that implements [fit](../../glossary.html#term-fit). When a classifier is passed, [decision\_function](../../glossary.html#term-decision_function) will be used in priority and it will fallback to [predict\_proba](../../glossary.html#term-predict_proba) if it is not available. When a regressor is passed, [predict](../../glossary.html#term-predict) is used.
+     */
+    estimator?: any
+
+    /**
+      The number of jobs to use for the computation: the `n\_classes` one-vs-rest problems are computed in parallel.
+
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      The verbosity level, if non zero, progress messages are printed. Below 50, the output is sent to stderr. Otherwise, the output is sent to stdout. The frequency of the messages increases with the verbosity level, reporting all iterations at 10. See [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.3.0.dev0)") for more details.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+  }) {
     this.id = `OneVsRestClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,9 +126,12 @@ ctor_OneVsRestClassifier = {k: v for k, v in ctor_OneVsRestClassifier.items() if
 
     Return the distance of each sample from the decision boundary for each class. This can only be used with estimators which implement the `decision\_function` method.
    */
-  async decision_function(
-    opts: OneVsRestClassifierDecisionFunctionOptions
-  ): Promise<ArrayLike[]> {
+  async decision_function(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsRestClassifier instance has already been disposed'
@@ -142,7 +164,17 @@ pms_OneVsRestClassifier_decision_function = {k: v for k, v in pms_OneVsRestClass
   /**
     Fit underlying estimators.
    */
-  async fit(opts: OneVsRestClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Multi-class targets. An indicator matrix turns on multilabel classification.
+     */
+    y?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsRestClassifier instance has already been disposed'
@@ -176,7 +208,22 @@ pms_OneVsRestClassifier_fit = {k: v for k, v in pms_OneVsRestClassifier_fit.item
 
     Should be used when memory is inefficient to train all data. Chunks of data can be passed in several iteration.
    */
-  async partial_fit(opts: OneVsRestClassifierPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Multi-class targets. An indicator matrix turns on multilabel classification.
+     */
+    y?: ArrayLike | SparseMatrix
+
+    /**
+      Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls.
+     */
+    classes?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsRestClassifier instance has already been disposed'
@@ -212,9 +259,12 @@ pms_OneVsRestClassifier_partial_fit = {k: v for k, v in pms_OneVsRestClassifier_
   /**
     Predict multi-class targets using underlying estimators.
    */
-  async predict(
-    opts: OneVsRestClassifierPredictOptions
-  ): Promise<ArrayLike | SparseMatrix> {
+  async predict(opts: {
+    /**
+      Data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike | SparseMatrix> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsRestClassifier instance has already been disposed'
@@ -250,9 +300,12 @@ pms_OneVsRestClassifier_predict = {k: v for k, v in pms_OneVsRestClassifier_pred
 
     In the single label multiclass case, the rows of the returned matrix sum to 1.
    */
-  async predict_proba(
-    opts: OneVsRestClassifierPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsRestClassifier instance has already been disposed'
@@ -286,7 +339,22 @@ pms_OneVsRestClassifier_predict_proba = {k: v for k, v in pms_OneVsRestClassifie
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: OneVsRestClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This OneVsRestClassifier instance has already been disposed'
@@ -451,92 +519,4 @@ pms_OneVsRestClassifier_score = {k: v for k, v in pms_OneVsRestClassifier_score.
         ._py`attr_OneVsRestClassifier_feature_names_in_.tolist() if hasattr(attr_OneVsRestClassifier_feature_names_in_, 'tolist') else attr_OneVsRestClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface OneVsRestClassifierOptions {
-  /**
-    A regressor or a classifier that implements [fit](../../glossary.html#term-fit). When a classifier is passed, [decision\_function](../../glossary.html#term-decision_function) will be used in priority and it will fallback to [predict\_proba](../../glossary.html#term-predict_proba) if it is not available. When a regressor is passed, [predict](../../glossary.html#term-predict) is used.
-   */
-  estimator?: any
-
-  /**
-    The number of jobs to use for the computation: the `n\_classes` one-vs-rest problems are computed in parallel.
-
-    `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    The verbosity level, if non zero, progress messages are printed. Below 50, the output is sent to stderr. Otherwise, the output is sent to stdout. The frequency of the messages increases with the verbosity level, reporting all iterations at 10. See [`joblib.Parallel`](https://joblib.readthedocs.io/en/latest/generated/joblib.Parallel.html#joblib.Parallel "(in joblib v1.3.0.dev0)") for more details.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-}
-
-export interface OneVsRestClassifierDecisionFunctionOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
-}
-
-export interface OneVsRestClassifierFitOptions {
-  /**
-    Data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Multi-class targets. An indicator matrix turns on multilabel classification.
-   */
-  y?: ArrayLike | SparseMatrix
-}
-
-export interface OneVsRestClassifierPartialFitOptions {
-  /**
-    Data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Multi-class targets. An indicator matrix turns on multilabel classification.
-   */
-  y?: ArrayLike | SparseMatrix
-
-  /**
-    Classes across all calls to partial\_fit. Can be obtained via `np.unique(y\_all)`, where y\_all is the target vector of the entire dataset. This argument is only required in the first call of partial\_fit and can be omitted in the subsequent calls.
-   */
-  classes?: any
-}
-
-export interface OneVsRestClassifierPredictOptions {
-  /**
-    Data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface OneVsRestClassifierPredictProbaOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface OneVsRestClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

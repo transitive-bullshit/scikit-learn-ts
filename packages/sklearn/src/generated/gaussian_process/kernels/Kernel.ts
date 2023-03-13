@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Base class for all kernels.
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Kernel.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Kernel.html)
  */
 export class Kernel {
   id: string
@@ -18,7 +18,7 @@ export class Kernel {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KernelOptions) {
+  constructor(opts?: {}) {
     this.id = `Kernel${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -90,7 +90,7 @@ ctor_Kernel = {k: v for k, v in ctor_Kernel.items() if v is not None}`
   /**
     Evaluate the kernel.
    */
-  async __call__(opts: KernelCallOptions): Promise<any> {
+  async __call__(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Kernel instance has already been disposed')
     }
@@ -116,7 +116,12 @@ pms_Kernel___call__ = {k: v for k, v in pms_Kernel___call__.items() if v is not 
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(opts: KernelCloneWithThetaOptions): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Kernel instance has already been disposed')
     }
@@ -146,7 +151,12 @@ pms_Kernel_clone_with_theta = {k: v for k, v in pms_Kernel_clone_with_theta.item
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: KernelDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Kernel instance has already been disposed')
     }
@@ -174,7 +184,7 @@ pms_Kernel_diag = {k: v for k, v in pms_Kernel_diag.items() if v is not None}`
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: KernelIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Kernel instance has already been disposed')
     }
@@ -197,23 +207,3 @@ pms_Kernel_is_stationary = {k: v for k, v in pms_Kernel_is_stationary.items() if
       ._py`res_Kernel_is_stationary.tolist() if hasattr(res_Kernel_is_stationary, 'tolist') else res_Kernel_is_stationary`
   }
 }
-
-export interface KernelOptions {}
-
-export interface KernelCallOptions {}
-
-export interface KernelCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface KernelDiagOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: ArrayLike
-}
-
-export interface KernelIsStationaryOptions {}

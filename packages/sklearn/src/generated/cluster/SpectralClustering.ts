@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   When calling `fit`, an affinity matrix is constructed using either a kernel function such the Gaussian (aka RBF) kernel with Euclidean distance `d(X, X)`:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralClustering.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralClustering.html)
  */
 export class SpectralClustering {
   id: string
@@ -24,7 +24,102 @@ export class SpectralClustering {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SpectralClusteringOptions) {
+  constructor(opts?: {
+    /**
+      The dimension of the projection subspace.
+
+      @defaultValue `8`
+     */
+    n_clusters?: number
+
+    /**
+      The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems, but may also lead to instabilities. If `undefined`, then `'arpack'` is used. See [\[4\]](#r5f6cbeb1558e-4) for more details regarding `'lobpcg'`.
+     */
+    eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
+
+    /**
+      Number of eigenvectors to use for the spectral embedding. If `undefined`, defaults to `n\_clusters`.
+     */
+    n_components?: number
+
+    /**
+      A pseudo random number generator used for the initialization of the lobpcg eigenvectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
+     */
+    random_state?: number
+
+    /**
+      Number of time the k-means algorithm will be run with different centroid seeds. The final results will be the best output of n\_init consecutive runs in terms of inertia. Only used if `assign\_labels='kmeans'`.
+
+      @defaultValue `10`
+     */
+    n_init?: number
+
+    /**
+      Kernel coefficient for rbf, poly, sigmoid, laplacian and chi2 kernels. Ignored for `affinity='nearest\_neighbors'`.
+
+      @defaultValue `1`
+     */
+    gamma?: number
+
+    /**
+      ‘nearest\_neighbors’: construct the affinity matrix by computing a graph of nearest neighbors.
+
+      @defaultValue `'rbf'`
+     */
+    affinity?: string
+
+    /**
+      Number of neighbors to use when constructing the affinity matrix using the nearest neighbors method. Ignored for `affinity='rbf'`.
+
+      @defaultValue `10`
+     */
+    n_neighbors?: number
+
+    /**
+      Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:
+
+      @defaultValue `'auto'`
+     */
+    eigen_tol?: number
+
+    /**
+      The strategy for assigning labels in the embedding space. There are two ways to assign labels after the Laplacian embedding. k-means is a popular choice, but it can be sensitive to initialization. Discretization is another approach which is less sensitive to random initialization [\[3\]](#r5f6cbeb1558e-3). The cluster\_qr method [\[5\]](#r5f6cbeb1558e-5) directly extract clusters from eigenvectors in spectral clustering. In contrast to k-means and discretization, cluster\_qr has no tuning parameters and runs no iterations, yet may outperform k-means and discretization in terms of both quality and speed.
+
+      @defaultValue `'kmeans'`
+     */
+    assign_labels?: 'kmeans' | 'discretize' | 'cluster_qr'
+
+    /**
+      Degree of the polynomial kernel. Ignored by other kernels.
+
+      @defaultValue `3`
+     */
+    degree?: number
+
+    /**
+      Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.
+
+      @defaultValue `1`
+     */
+    coef0?: number
+
+    /**
+      Parameters (keyword arguments) and values for kernel passed as callable object. Ignored by other kernels.
+     */
+    kernel_params?: any
+
+    /**
+      The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Verbosity mode.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `SpectralClustering${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -119,7 +214,17 @@ ctor_SpectralClustering = {k: v for k, v in ctor_SpectralClustering.items() if v
   /**
     Perform spectral clustering from features, or affinity matrix.
    */
-  async fit(opts: SpectralClusteringFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed\_nearest\_neighbors`. If a sparse matrix is provided in a format other than `csr\_matrix`, `csc\_matrix`, or `coo\_matrix`, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralClustering instance has already been disposed'
@@ -149,9 +254,17 @@ pms_SpectralClustering_fit = {k: v for k, v in pms_SpectralClustering_fit.items(
   /**
     Perform spectral clustering on `X` and return cluster labels.
    */
-  async fit_predict(
-    opts: SpectralClusteringFitPredictOptions
-  ): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed\_nearest\_neighbors`. If a sparse matrix is provided in a format other than `csr\_matrix`, `csc\_matrix`, or `coo\_matrix`, it will be converted into a sparse `csr\_matrix`.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This SpectralClustering instance has already been disposed'
@@ -287,125 +400,4 @@ pms_SpectralClustering_fit_predict = {k: v for k, v in pms_SpectralClustering_fi
         ._py`attr_SpectralClustering_feature_names_in_.tolist() if hasattr(attr_SpectralClustering_feature_names_in_, 'tolist') else attr_SpectralClustering_feature_names_in_`
     })()
   }
-}
-
-export interface SpectralClusteringOptions {
-  /**
-    The dimension of the projection subspace.
-
-    @defaultValue `8`
-   */
-  n_clusters?: number
-
-  /**
-    The eigenvalue decomposition strategy to use. AMG requires pyamg to be installed. It can be faster on very large, sparse problems, but may also lead to instabilities. If `undefined`, then `'arpack'` is used. See [\[4\]](#r5f6cbeb1558e-4) for more details regarding `'lobpcg'`.
-   */
-  eigen_solver?: 'arpack' | 'lobpcg' | 'amg'
-
-  /**
-    Number of eigenvectors to use for the spectral embedding. If `undefined`, defaults to `n\_clusters`.
-   */
-  n_components?: number
-
-  /**
-    A pseudo random number generator used for the initialization of the lobpcg eigenvectors decomposition when `eigen\_solver \== 'amg'`, and for the K-Means initialization. Use an int to make the results deterministic across calls (See [Glossary](../../glossary.html#term-random_state)).
-   */
-  random_state?: number
-
-  /**
-    Number of time the k-means algorithm will be run with different centroid seeds. The final results will be the best output of n\_init consecutive runs in terms of inertia. Only used if `assign\_labels='kmeans'`.
-
-    @defaultValue `10`
-   */
-  n_init?: number
-
-  /**
-    Kernel coefficient for rbf, poly, sigmoid, laplacian and chi2 kernels. Ignored for `affinity='nearest\_neighbors'`.
-
-    @defaultValue `1`
-   */
-  gamma?: number
-
-  /**
-    ‘nearest\_neighbors’: construct the affinity matrix by computing a graph of nearest neighbors.
-
-    @defaultValue `'rbf'`
-   */
-  affinity?: string
-
-  /**
-    Number of neighbors to use when constructing the affinity matrix using the nearest neighbors method. Ignored for `affinity='rbf'`.
-
-    @defaultValue `10`
-   */
-  n_neighbors?: number
-
-  /**
-    Stopping criterion for eigendecomposition of the Laplacian matrix. If `eigen\_tol="auto"` then the passed tolerance will depend on the `eigen\_solver`:
-
-    @defaultValue `'auto'`
-   */
-  eigen_tol?: number
-
-  /**
-    The strategy for assigning labels in the embedding space. There are two ways to assign labels after the Laplacian embedding. k-means is a popular choice, but it can be sensitive to initialization. Discretization is another approach which is less sensitive to random initialization [\[3\]](#r5f6cbeb1558e-3). The cluster\_qr method [\[5\]](#r5f6cbeb1558e-5) directly extract clusters from eigenvectors in spectral clustering. In contrast to k-means and discretization, cluster\_qr has no tuning parameters and runs no iterations, yet may outperform k-means and discretization in terms of both quality and speed.
-
-    @defaultValue `'kmeans'`
-   */
-  assign_labels?: 'kmeans' | 'discretize' | 'cluster_qr'
-
-  /**
-    Degree of the polynomial kernel. Ignored by other kernels.
-
-    @defaultValue `3`
-   */
-  degree?: number
-
-  /**
-    Zero coefficient for polynomial and sigmoid kernels. Ignored by other kernels.
-
-    @defaultValue `1`
-   */
-  coef0?: number
-
-  /**
-    Parameters (keyword arguments) and values for kernel passed as callable object. Ignored by other kernels.
-   */
-  kernel_params?: any
-
-  /**
-    The number of parallel jobs to run when `affinity='nearest\_neighbors'` or `affinity='precomputed\_nearest\_neighbors'`. The neighbors search will be done in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Verbosity mode.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface SpectralClusteringFitOptions {
-  /**
-    Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed\_nearest\_neighbors`. If a sparse matrix is provided in a format other than `csr\_matrix`, `csc\_matrix`, or `coo\_matrix`, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SpectralClusteringFitPredictOptions {
-  /**
-    Training instances to cluster, similarities / affinities between instances if `affinity='precomputed'`, or distances between instances if `affinity='precomputed\_nearest\_neighbors`. If a sparse matrix is provided in a format other than `csr\_matrix`, `csc\_matrix`, or `coo\_matrix`, it will be converted into a sparse `csr\_matrix`.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
 }

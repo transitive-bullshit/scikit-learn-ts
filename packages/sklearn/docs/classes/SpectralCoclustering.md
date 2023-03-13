@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / SpectralCoclustering
-
-# Class: SpectralCoclustering
+# SpectralCoclustering
 
 Spectral Co-Clustering algorithm (Dhillon, 2001).
 
@@ -12,188 +10,162 @@ Supports sparse matrices, as long as they are nonnegative.
 
 Read more in the [User Guide](../biclustering.html#spectral-coclustering).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralCoclustering.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SpectralCoclustering.md#constructor)
-
-### Properties
-
-- [\_isDisposed](SpectralCoclustering.md#_isdisposed)
-- [\_isInitialized](SpectralCoclustering.md#_isinitialized)
-- [\_py](SpectralCoclustering.md#_py)
-- [id](SpectralCoclustering.md#id)
-- [opts](SpectralCoclustering.md#opts)
-
-### Accessors
-
-- [column\_labels\_](SpectralCoclustering.md#column_labels_)
-- [columns\_](SpectralCoclustering.md#columns_)
-- [feature\_names\_in\_](SpectralCoclustering.md#feature_names_in_)
-- [n\_features\_in\_](SpectralCoclustering.md#n_features_in_)
-- [py](SpectralCoclustering.md#py)
-- [row\_labels\_](SpectralCoclustering.md#row_labels_)
-- [rows\_](SpectralCoclustering.md#rows_)
-
-### Methods
-
-- [dispose](SpectralCoclustering.md#dispose)
-- [fit](SpectralCoclustering.md#fit)
-- [get\_indices](SpectralCoclustering.md#get_indices)
-- [get\_shape](SpectralCoclustering.md#get_shape)
-- [get\_submatrix](SpectralCoclustering.md#get_submatrix)
-- [init](SpectralCoclustering.md#init)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.SpectralCoclustering.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new SpectralCoclustering**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new SpectralCoclustering(opts?: object): SpectralCoclustering;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`SpectralCoclusteringOptions`](../interfaces/SpectralCoclusteringOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.init?` | [`ArrayLike`](../types/ArrayLike.md)[] | Method for initialization of k-means algorithm; defaults to ‘k-means++’.  `Default Value`  `'k-means++'` |
+| `opts.mini_batch?` | `boolean` | Whether to use mini-batch k-means, which is faster but may get different results.  `Default Value`  `false` |
+| `opts.n_clusters?` | `number` | The number of biclusters to find.  `Default Value`  `3` |
+| `opts.n_init?` | `number` | Number of random initializations that are tried with the k-means algorithm.  If mini-batch k-means is used, the best initialization is chosen and the algorithm runs once. Otherwise, the algorithm is run for each initialization and the best solution chosen.  `Default Value`  `10` |
+| `opts.n_svd_vecs?` | `number` | Number of vectors to use in calculating the SVD. Corresponds to `ncv` when `svd\_method=arpack` and `n\_oversamples` when `svd\_method` is ‘randomized`. |
+| `opts.random_state?` | `number` | Used for randomizing the singular value decomposition and the k-means initialization. Use an int to make the randomness deterministic. See [Glossary](../../glossary.html#term-random_state). |
+| `opts.svd_method?` | `"randomized"` \| `"arpack"` | Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.10.1)"), which is more accurate, but possibly slower in some cases.  `Default Value`  `'randomized'` |
 
-[generated/cluster/SpectralCoclustering.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L29)
+### Returns
+
+[`SpectralCoclustering`](SpectralCoclustering.md)
+
+Defined in:  [generated/cluster/SpectralCoclustering.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L29)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/cluster/SpectralCoclustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L27)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L27)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/cluster/SpectralCoclustering.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L26)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L26)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/cluster/SpectralCoclustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L25)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L25)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/cluster/SpectralCoclustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L22)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L22)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/cluster/SpectralCoclustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L23)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L23)
 
 ## Accessors
 
 ### column\_labels\_
 
-• `get` **column_labels_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The bicluster label of each column.
+
+#### Signature
+
+```ts
+column_labels_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L404)
 
-[generated/cluster/SpectralCoclustering.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L331)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L404)
 
 ### columns\_
 
-• `get` **columns_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Results of the clustering, like `rows`.
+
+#### Signature
+
+```ts
+columns_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L350)
 
-[generated/cluster/SpectralCoclustering.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L277)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L350)
 
 ### feature\_names\_in\_
 
-• `get` **feature_names_in_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+
+#### Signature
+
+```ts
+feature_names_in_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L458)
 
-[generated/cluster/SpectralCoclustering.ts:385](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L385)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L458)
 
 ### n\_features\_in\_
 
-• `get` **n_features_in_**(): `Promise`<`number`\>
-
 Number of features seen during [fit](../../glossary.html#term-fit).
+
+#### Signature
+
+```ts
+n_features_in_(): Promise<number>;
+```
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L431)
 
-[generated/cluster/SpectralCoclustering.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L358)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L431)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L81)
 
-[generated/cluster/SpectralCoclustering.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L34)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -205,159 +177,173 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L85)
 
-[generated/cluster/SpectralCoclustering.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L38)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L81) [generated/cluster/SpectralCoclustering.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L85)
 
 ### row\_labels\_
 
-• `get` **row_labels_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
-
 The bicluster label of each row.
+
+#### Signature
+
+```ts
+row_labels_(): Promise<ArrayLike>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L377)
 
-[generated/cluster/SpectralCoclustering.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L304)
-
-___
+Defined in:  [generated/cluster/SpectralCoclustering.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L377)
 
 ### rows\_
 
-• `get` **rows_**(): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
-
 Results of the clustering. `rows\[i, r\]` is `true` if cluster `i` contains row `r`. Available only after calling `fit`.
+
+#### Signature
+
+```ts
+rows_(): Promise<ArrayLike[]>;
+```
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L323)
 
-[generated/cluster/SpectralCoclustering.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L250)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L323)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L146)
 
-[generated/cluster/SpectralCoclustering.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L99)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Create a biclustering for X.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SpectralCoclusteringFitOptions`](../interfaces/SpectralCoclusteringFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Training data. |
+| `opts.y?` | `any` | Not used, present for API consistency by convention. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L163)
 
-[generated/cluster/SpectralCoclustering.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L116)
-
-___
-
-### get\_indices
-
-▸ **get_indices**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### get\_indices()
 
 Row and column indices of the `i`’th bicluster.
 
 Only works if `rows\_` and `columns\_` attributes exist.
 
+#### Signature
+
+```ts
+get_indices(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SpectralCoclusteringGetIndicesOptions`](../interfaces/SpectralCoclusteringGetIndicesOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.i?` | `number` | The index of the cluster. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L205)
 
-[generated/cluster/SpectralCoclustering.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L148)
-
-___
-
-### get\_shape
-
-▸ **get_shape**(`opts`): `Promise`<`number`\>
+### get\_shape()
 
 Shape of the `i`’th bicluster.
 
+#### Signature
+
+```ts
+get_shape(opts: object): Promise<number>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SpectralCoclusteringGetShapeOptions`](../interfaces/SpectralCoclusteringGetShapeOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.i?` | `number` | The index of the cluster. |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L242)
 
-[generated/cluster/SpectralCoclustering.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L182)
-
-___
-
-### get\_submatrix
-
-▸ **get_submatrix**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### get\_submatrix()
 
 Return the submatrix corresponding to bicluster `i`.
 
+#### Signature
+
+```ts
+get_submatrix(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`SpectralCoclusteringGetSubmatrixOptions`](../interfaces/SpectralCoclusteringGetSubmatrixOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.data?` | [`ArrayLike`](../types/ArrayLike.md)[] | The data. |
+| `opts.i?` | `number` | The index of the cluster. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/cluster/SpectralCoclustering.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L279)
 
-[generated/cluster/SpectralCoclustering.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L214)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -367,8 +353,6 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
-
-[generated/cluster/SpectralCoclustering.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L47)
+Defined in:  [generated/cluster/SpectralCoclustering.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/cluster/SpectralCoclustering.ts#L94)

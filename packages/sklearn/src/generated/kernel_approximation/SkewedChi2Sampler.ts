@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../kernel_approximation.html#skewed-chi-kernel-approx).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.SkewedChi2Sampler.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_approximation.SkewedChi2Sampler.html)
  */
 export class SkewedChi2Sampler {
   id: string
@@ -20,7 +20,26 @@ export class SkewedChi2Sampler {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SkewedChi2SamplerOptions) {
+  constructor(opts?: {
+    /**
+      “skewedness” parameter of the kernel. Needs to be cross-validated.
+
+      @defaultValue `1`
+     */
+    skewedness?: number
+
+    /**
+      Number of Monte Carlo samples per original feature. Equals the dimensionality of the computed feature space.
+
+      @defaultValue `100`
+     */
+    n_components?: number
+
+    /**
+      Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }) {
     this.id = `SkewedChi2Sampler${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +120,17 @@ ctor_SkewedChi2Sampler = {k: v for k, v in ctor_SkewedChi2Sampler.items() if v i
 
     Samples random projection according to n\_features.
    */
-  async fit(opts: SkewedChi2SamplerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SkewedChi2Sampler instance has already been disposed'
@@ -133,9 +162,22 @@ pms_SkewedChi2Sampler_fit = {k: v for k, v in pms_SkewedChi2Sampler_fit.items() 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: SkewedChi2SamplerFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SkewedChi2Sampler instance has already been disposed'
@@ -173,9 +215,12 @@ pms_SkewedChi2Sampler_fit_transform = {k: v for k, v in pms_SkewedChi2Sampler_fi
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: SkewedChi2SamplerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.SkewedChi2Sampler.fit "sklearn.kernel_approximation.SkewedChi2Sampler.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SkewedChi2Sampler instance has already been disposed'
@@ -210,7 +255,12 @@ pms_SkewedChi2Sampler_get_feature_names_out = {k: v for k, v in pms_SkewedChi2Sa
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SkewedChi2SamplerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SkewedChi2Sampler instance has already been disposed'
@@ -240,7 +290,12 @@ pms_SkewedChi2Sampler_set_output = {k: v for k, v in pms_SkewedChi2Sampler_set_o
   /**
     Apply the approximate feature map to X.
    */
-  async transform(opts: SkewedChi2SamplerTransformOptions): Promise<ArrayLike> {
+  async transform(opts: {
+    /**
+      New data, where `n\_samples` is the number of samples and `n\_features` is the number of features. All values of X must be strictly greater than “-skewedness”.
+     */
+    X?: ArrayLike
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This SkewedChi2Sampler instance has already been disposed'
@@ -374,75 +429,4 @@ pms_SkewedChi2Sampler_transform = {k: v for k, v in pms_SkewedChi2Sampler_transf
         ._py`attr_SkewedChi2Sampler_feature_names_in_.tolist() if hasattr(attr_SkewedChi2Sampler_feature_names_in_, 'tolist') else attr_SkewedChi2Sampler_feature_names_in_`
     })()
   }
-}
-
-export interface SkewedChi2SamplerOptions {
-  /**
-    “skewedness” parameter of the kernel. Needs to be cross-validated.
-
-    @defaultValue `1`
-   */
-  skewedness?: number
-
-  /**
-    Number of Monte Carlo samples per original feature. Equals the dimensionality of the computed feature space.
-
-    @defaultValue `100`
-   */
-  n_components?: number
-
-  /**
-    Pseudo-random number generator to control the generation of the random weights and random offset when fitting the training data. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface SkewedChi2SamplerFitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-}
-
-export interface SkewedChi2SamplerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SkewedChi2SamplerGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.SkewedChi2Sampler.fit "sklearn.kernel_approximation.SkewedChi2Sampler.fit").
-   */
-  input_features?: any
-}
-
-export interface SkewedChi2SamplerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SkewedChi2SamplerTransformOptions {
-  /**
-    New data, where `n\_samples` is the number of samples and `n\_features` is the number of features. All values of X must be strictly greater than “-skewedness”.
-   */
-  X?: ArrayLike
 }

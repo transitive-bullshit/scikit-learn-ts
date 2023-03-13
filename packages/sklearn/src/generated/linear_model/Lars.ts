@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#least-angle-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lars.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lars.html)
  */
 export class Lars {
   id: string
@@ -20,7 +20,71 @@ export class Lars {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LarsOptions) {
+  constructor(opts?: {
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      Sets the verbosity amount.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean | number
+
+    /**
+      This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
+
+      @defaultValue `false`
+     */
+    normalize?: boolean
+
+    /**
+      Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
+
+      @defaultValue `'auto'`
+     */
+    precompute?: boolean | 'auto' | ArrayLike
+
+    /**
+      Target number of non-zero coefficients. Use `np.inf` for no limit.
+
+      @defaultValue `500`
+     */
+    n_nonzero_coefs?: number
+
+    /**
+      The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
+     */
+    eps?: number
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      If `true` the full path is stored in the `coef\_path\_` attribute. If you compute the solution for a large problem or many targets, setting `fit\_path` to `false` will lead to a speedup, especially with a small alpha.
+
+      @defaultValue `true`
+     */
+    fit_path?: boolean
+
+    /**
+      Upper bound on a uniform noise parameter to be added to the `y` values, to satisfy the model’s assumption of one-at-a-time computations. Might help with stability.
+     */
+    jitter?: number
+
+    /**
+      Determines random number generation for jittering. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Ignored if `jitter` is `undefined`.
+     */
+    random_state?: number
+  }) {
     this.id = `Lars${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -104,7 +168,22 @@ ctor_Lars = {k: v for k, v in ctor_Lars.items() if v is not None}`
   /**
     Fit the model using X, y as training data.
    */
-  async fit(opts: LarsFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
+     */
+    Xy?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Lars instance has already been disposed')
     }
@@ -135,7 +214,12 @@ pms_Lars_fit = {k: v for k, v in pms_Lars_fit.items() if v is not None}`
   /**
     Predict using the linear model.
    */
-  async predict(opts: LarsPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Samples.
+     */
+    X?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Lars instance has already been disposed')
     }
@@ -163,7 +247,22 @@ pms_Lars_predict = {k: v for k, v in pms_Lars_predict.items() if v is not None}`
 
     The coefficient of determination \\(R^2\\) is defined as \\((1 - \\frac{u}{v})\\), where \\(u\\) is the residual sum of squares `((y\_true \- y\_pred)\*\* 2).sum()` and \\(v\\) is the total sum of squares `((y\_true \- y\_true.mean()) \*\* 2).sum()`. The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse). A constant model that always predicts the expected value of `y`, disregarding the input features, would get a \\(R^2\\) score of 0.0.
    */
-  async score(opts: LarsScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True values for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This Lars instance has already been disposed')
     }
@@ -373,111 +472,4 @@ pms_Lars_score = {k: v for k, v in pms_Lars_score.items() if v is not None}`
         ._py`attr_Lars_feature_names_in_.tolist() if hasattr(attr_Lars_feature_names_in_, 'tolist') else attr_Lars_feature_names_in_`
     })()
   }
-}
-
-export interface LarsOptions {
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    Sets the verbosity amount.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean | number
-
-  /**
-    This parameter is ignored when `fit\_intercept` is set to `false`. If `true`, the regressors X will be normalized before regression by subtracting the mean and dividing by the l2-norm. If you wish to standardize, please use [`StandardScaler`](sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler "sklearn.preprocessing.StandardScaler") before calling `fit` on an estimator with `normalize=False`.
-
-    @defaultValue `false`
-   */
-  normalize?: boolean
-
-  /**
-    Whether to use a precomputed Gram matrix to speed up calculations. If set to `'auto'` let us decide. The Gram matrix can also be passed as argument.
-
-    @defaultValue `'auto'`
-   */
-  precompute?: boolean | 'auto' | ArrayLike
-
-  /**
-    Target number of non-zero coefficients. Use `np.inf` for no limit.
-
-    @defaultValue `500`
-   */
-  n_nonzero_coefs?: number
-
-  /**
-    The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Unlike the `tol` parameter in some iterative optimization-based algorithms, this parameter does not control the tolerance of the optimization.
-   */
-  eps?: number
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    If `true` the full path is stored in the `coef\_path\_` attribute. If you compute the solution for a large problem or many targets, setting `fit\_path` to `false` will lead to a speedup, especially with a small alpha.
-
-    @defaultValue `true`
-   */
-  fit_path?: boolean
-
-  /**
-    Upper bound on a uniform noise parameter to be added to the `y` values, to satisfy the model’s assumption of one-at-a-time computations. Might help with stability.
-   */
-  jitter?: number
-
-  /**
-    Determines random number generation for jittering. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state). Ignored if `jitter` is `undefined`.
-   */
-  random_state?: number
-}
-
-export interface LarsFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Xy = np.dot(X.T, y) that can be precomputed. It is useful only when the Gram matrix is precomputed.
-   */
-  Xy?: ArrayLike
-}
-
-export interface LarsPredictOptions {
-  /**
-    Samples.
-   */
-  X?: ArrayLike | SparseMatrix
-}
-
-export interface LarsScoreOptions {
-  /**
-    Test samples. For some estimators this may be a precomputed kernel matrix or a list of generic objects instead with shape `(n\_samples, n\_samples\_fitted)`, where `n\_samples\_fitted` is the number of samples used in the fitting for the estimator.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True values for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

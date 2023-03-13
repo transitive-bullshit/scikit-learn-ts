@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / PrecisionRecallDisplay
-
-# Class: PrecisionRecallDisplay
+# PrecisionRecallDisplay
 
 Precision Recall visualization.
 
@@ -8,168 +6,142 @@ It is recommend to use [`from\_estimator`](#sklearn.metrics.PrecisionRecallDispl
 
 Read more in the [User Guide](../../visualizations.html#visualizations).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](PrecisionRecallDisplay.md#constructor)
-
-### Properties
-
-- [\_isDisposed](PrecisionRecallDisplay.md#_isdisposed)
-- [\_isInitialized](PrecisionRecallDisplay.md#_isinitialized)
-- [\_py](PrecisionRecallDisplay.md#_py)
-- [id](PrecisionRecallDisplay.md#id)
-- [opts](PrecisionRecallDisplay.md#opts)
-
-### Accessors
-
-- [ax\_](PrecisionRecallDisplay.md#ax_)
-- [figure\_](PrecisionRecallDisplay.md#figure_)
-- [line\_](PrecisionRecallDisplay.md#line_)
-- [py](PrecisionRecallDisplay.md#py)
-
-### Methods
-
-- [dispose](PrecisionRecallDisplay.md#dispose)
-- [from\_estimator](PrecisionRecallDisplay.md#from_estimator)
-- [from\_predictions](PrecisionRecallDisplay.md#from_predictions)
-- [init](PrecisionRecallDisplay.md#init)
-- [plot](PrecisionRecallDisplay.md#plot)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.PrecisionRecallDisplay.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new PrecisionRecallDisplay**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new PrecisionRecallDisplay(opts?: object): PrecisionRecallDisplay;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`PrecisionRecallDisplayOptions`](../interfaces/PrecisionRecallDisplayOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.average_precision?` | `number` | Average precision. If `undefined`, the average precision is not shown. |
+| `opts.estimator_name?` | `string` | Name of estimator. If `undefined`, then the estimator name is not shown. |
+| `opts.pos_label?` | `string` \| `number` | The class considered as the positive class. If `undefined`, the class will not be shown in the legend. |
+| `opts.precision?` | [`ArrayLike`](../types/ArrayLike.md) | Precision values. |
+| `opts.recall?` | [`ArrayLike`](../types/ArrayLike.md) | Recall values. |
 
-[generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
+### Returns
+
+[`PrecisionRecallDisplay`](PrecisionRecallDisplay.md)
+
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L25)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L23)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L22)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L21)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L18)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L19)
 
 ## Accessors
 
 ### ax\_
 
-• `get` **ax_**(): `Promise`<`any`\>
-
 Axes with precision recall curve.
+
+#### Signature
+
+```ts
+ax_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L383)
 
-[generated/metrics/PrecisionRecallDisplay.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L265)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L383)
 
 ### figure\_
 
-• `get` **figure_**(): `Promise`<`any`\>
-
 Figure containing the curve.
+
+#### Signature
+
+```ts
+figure_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L410)
 
-[generated/metrics/PrecisionRecallDisplay.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L292)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:410](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L410)
 
 ### line\_
 
-• `get` **line_**(): `Promise`<`any`\>
-
 Precision recall curve.
+
+#### Signature
+
+```ts
+line_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L356)
 
-[generated/metrics/PrecisionRecallDisplay.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L238)
-
-___
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L356)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L55)
 
-[generated/metrics/PrecisionRecallDisplay.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L30)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -181,81 +153,101 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L59)
 
-[generated/metrics/PrecisionRecallDisplay.ts:34](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L34)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L55) [generated/metrics/PrecisionRecallDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L59)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L120)
 
-[generated/metrics/PrecisionRecallDisplay.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L95)
-
-___
-
-### from\_estimator
-
-▸ **from_estimator**(`opts`): `Promise`<`any`\>
+### from\_estimator()
 
 Plot precision-recall curve given an estimator and some data.
 
+#### Signature
+
+```ts
+from_estimator(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PrecisionRecallDisplayFromEstimatorOptions`](../interfaces/PrecisionRecallDisplayFromEstimatorOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Input values. |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.estimator?` | `any` | Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. |
+| `opts.kwargs?` | `any` | Keyword arguments to be passed to matplotlib’s `plot`. |
+| `opts.name?` | `string` | Name for labeling curve. If `undefined`, no name is used. |
+| `opts.pos_label?` | `string` \| `number` | The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
+| `opts.response_method?` | `"auto"` \| `"predict_proba"` \| `"decision_function"` | Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.  `Default Value`  `'auto'` |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:137](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L137)
 
-[generated/metrics/PrecisionRecallDisplay.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L112)
-
-___
-
-### from\_predictions
-
-▸ **from_predictions**(`opts`): `Promise`<`any`\>
+### from\_predictions()
 
 Plot precision-recall curve given binary class predictions.
 
+#### Signature
+
+```ts
+from_predictions(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PrecisionRecallDisplayFromPredictionsOptions`](../interfaces/PrecisionRecallDisplayFromPredictionsOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.kwargs?` | `any` | Keyword arguments to be passed to matplotlib’s `plot`. |
+| `opts.name?` | `string` | Name for labeling curve. If `undefined`, name will be set to `"Classifier"`. |
+| `opts.pos_label?` | `string` \| `number` | The class considered as the positive class when computing the precision and recall metrics. |
+| `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
+| `opts.y_pred?` | [`ArrayLike`](../types/ArrayLike.md) | Estimated probabilities or output of decision function. |
+| `opts.y_true?` | [`ArrayLike`](../types/ArrayLike.md) | True binary labels. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L229)
 
-[generated/metrics/PrecisionRecallDisplay.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L159)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -265,32 +257,33 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L68)
 
-[generated/metrics/PrecisionRecallDisplay.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L43)
-
-___
-
-### plot
-
-▸ **plot**(`opts`): `Promise`<`any`\>
+### plot()
 
 Plot visualization.
 
 Extra keyword arguments will be passed to matplotlib’s `plot`.
 
+#### Signature
+
+```ts
+plot(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`PrecisionRecallDisplayPlotOptions`](../interfaces/PrecisionRecallDisplayPlotOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.kwargs?` | `any` | Keyword arguments to be passed to matplotlib’s `plot`. |
+| `opts.name?` | `string` | Name of precision recall curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/metrics/PrecisionRecallDisplay.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L206)
+Defined in:  [generated/metrics/PrecisionRecallDisplay.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/metrics/PrecisionRecallDisplay.ts#L309)

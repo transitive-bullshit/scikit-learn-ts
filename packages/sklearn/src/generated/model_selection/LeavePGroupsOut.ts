@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#leave-p-groups-out).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePGroupsOut.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePGroupsOut.html)
  */
 export class LeavePGroupsOut {
   id: string
@@ -26,7 +26,12 @@ export class LeavePGroupsOut {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LeavePGroupsOutOptions) {
+  constructor(opts?: {
+    /**
+      Number of groups (`p`) to leave out in the test split.
+     */
+    n_groups?: number
+  }) {
     this.id = `LeavePGroupsOut${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +106,22 @@ ctor_LeavePGroupsOut = {k: v for k, v in ctor_LeavePGroupsOut.items() if v is no
   /**
     Returns the number of splitting iterations in the cross-validator
    */
-  async get_n_splits(opts: LeavePGroupsOutGetNSplitsOptions): Promise<number> {
+  async get_n_splits(opts: {
+    /**
+      Always ignored, exists for compatibility.
+     */
+    X?: any
+
+    /**
+      Always ignored, exists for compatibility.
+     */
+    y?: any
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted.
+     */
+    groups?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LeavePGroupsOut instance has already been disposed')
     }
@@ -131,7 +151,22 @@ pms_LeavePGroupsOut_get_n_splits = {k: v for k, v in pms_LeavePGroupsOut_get_n_s
   /**
     Generate indices to split data into training and test set.
    */
-  async split(opts: LeavePGroupsOutSplitOptions): Promise<NDArray> {
+  async split(opts: {
+    /**
+      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike[]
+
+    /**
+      The target variable for supervised learning problems.
+     */
+    y?: ArrayLike
+
+    /**
+      Group labels for the samples used while splitting the dataset into train/test set.
+     */
+    groups?: ArrayLike
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LeavePGroupsOut instance has already been disposed')
     }
@@ -159,45 +194,4 @@ pms_LeavePGroupsOut_split = {k: v for k, v in pms_LeavePGroupsOut_split.items() 
     return this
       ._py`res_LeavePGroupsOut_split.tolist() if hasattr(res_LeavePGroupsOut_split, 'tolist') else res_LeavePGroupsOut_split`
   }
-}
-
-export interface LeavePGroupsOutOptions {
-  /**
-    Number of groups (`p`) to leave out in the test split.
-   */
-  n_groups?: number
-}
-
-export interface LeavePGroupsOutGetNSplitsOptions {
-  /**
-    Always ignored, exists for compatibility.
-   */
-  X?: any
-
-  /**
-    Always ignored, exists for compatibility.
-   */
-  y?: any
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted.
-   */
-  groups?: ArrayLike
-}
-
-export interface LeavePGroupsOutSplitOptions {
-  /**
-    Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike[]
-
-  /**
-    The target variable for supervised learning problems.
-   */
-  y?: ArrayLike
-
-  /**
-    Group labels for the samples used while splitting the dataset into train/test set.
-   */
-  groups?: ArrayLike
 }

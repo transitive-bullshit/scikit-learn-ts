@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_decomposition.html#cross-decomposition).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSSVD.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSSVD.html)
  */
 export class PLSSVD {
   id: string
@@ -22,7 +22,28 @@ export class PLSSVD {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: PLSSVDOptions) {
+  constructor(opts?: {
+    /**
+      The number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
+
+      @defaultValue `2`
+     */
+    n_components?: number
+
+    /**
+      Whether to scale `X` and `Y`.
+
+      @defaultValue `true`
+     */
+    scale?: boolean
+
+    /**
+      Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `PLSSVD${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -98,7 +119,17 @@ ctor_PLSSVD = {k: v for k, v in ctor_PLSSVD.items() if v is not None}`
   /**
     Fit model to data.
    */
-  async fit(opts: PLSSVDFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Targets.
+     */
+    Y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSSVD instance has already been disposed')
     }
@@ -128,7 +159,17 @@ pms_PLSSVD_fit = {k: v for k, v in pms_PLSSVD_fit.items() if v is not None}`
   /**
     Learn and apply the dimensionality reduction.
    */
-  async fit_transform(opts: PLSSVDFitTransformOptions): Promise<ArrayLike> {
+  async fit_transform(opts: {
+    /**
+      Training samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Targets.
+     */
+    y?: ArrayLike
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This PLSSVD instance has already been disposed')
     }
@@ -160,9 +201,12 @@ pms_PLSSVD_fit_transform = {k: v for k, v in pms_PLSSVD_fit_transform.items() if
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: PLSSVDGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.PLSSVD.fit "sklearn.cross_decomposition.PLSSVD.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSSVD instance has already been disposed')
     }
@@ -192,7 +236,12 @@ pms_PLSSVD_get_feature_names_out = {k: v for k, v in pms_PLSSVD_get_feature_name
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: PLSSVDSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This PLSSVD instance has already been disposed')
     }
@@ -220,7 +269,17 @@ pms_PLSSVD_set_output = {k: v for k, v in pms_PLSSVD_set_output.items() if v is 
   /**
     Apply the dimensionality reduction.
    */
-  async transform(opts: PLSSVDTransformOptions): Promise<ArrayLike> {
+  async transform(opts: {
+    /**
+      Samples to be transformed.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Targets.
+     */
+    Y?: ArrayLike
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error('This PLSSVD instance has already been disposed')
     }
@@ -340,77 +399,4 @@ pms_PLSSVD_transform = {k: v for k, v in pms_PLSSVD_transform.items() if v is no
         ._py`attr_PLSSVD_feature_names_in_.tolist() if hasattr(attr_PLSSVD_feature_names_in_, 'tolist') else attr_PLSSVD_feature_names_in_`
     })()
   }
-}
-
-export interface PLSSVDOptions {
-  /**
-    The number of components to keep. Should be in `\[1, min(n\_samples, n\_features, n\_targets)\]`.
-
-    @defaultValue `2`
-   */
-  n_components?: number
-
-  /**
-    Whether to scale `X` and `Y`.
-
-    @defaultValue `true`
-   */
-  scale?: boolean
-
-  /**
-    Whether to copy `X` and `Y` in fit before applying centering, and potentially scaling. If `false`, these operations will be done inplace, modifying both arrays.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface PLSSVDFitOptions {
-  /**
-    Training samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Targets.
-   */
-  Y?: ArrayLike
-}
-
-export interface PLSSVDFitTransformOptions {
-  /**
-    Training samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Targets.
-   */
-  y?: ArrayLike
-}
-
-export interface PLSSVDGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.PLSSVD.fit "sklearn.cross_decomposition.PLSSVD.fit").
-   */
-  input_features?: any
-}
-
-export interface PLSSVDSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface PLSSVDTransformOptions {
-  /**
-    Samples to be transformed.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Targets.
-   */
-  Y?: ArrayLike
 }

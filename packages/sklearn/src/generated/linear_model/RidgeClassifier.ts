@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../linear_model.html#ridge-regression).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html)
  */
 export class RidgeClassifier {
   id: string
@@ -22,7 +22,74 @@ export class RidgeClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: RidgeClassifierOptions) {
+  constructor(opts?: {
+    /**
+      Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
+
+      @defaultValue `1`
+     */
+    alpha?: number
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (e.g. data is expected to be already centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      If `true`, X will be copied; else, it may be overwritten.
+
+      @defaultValue `true`
+     */
+    copy_X?: boolean
+
+    /**
+      Maximum number of iterations for conjugate gradient solver. The default value is determined by scipy.sparse.linalg.
+     */
+    max_iter?: number
+
+    /**
+      Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ and ‘cholesky’.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
+
+      The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      Solver to use in the computational routines:
+
+      @defaultValue `'auto'`
+     */
+    solver?:
+      | 'auto'
+      | 'svd'
+      | 'cholesky'
+      | 'lsqr'
+      | 'sparse_cg'
+      | 'sag'
+      | 'saga'
+      | 'lbfgs'
+
+    /**
+      When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
+
+      @defaultValue `false`
+     */
+    positive?: boolean
+
+    /**
+      Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
+     */
+    random_state?: number
+  }) {
     this.id = `RidgeClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,9 +174,12 @@ ctor_RidgeClassifier = {k: v for k, v in ctor_RidgeClassifier.items() if v is no
 
     The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
    */
-  async decision_function(
-    opts: RidgeClassifierDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix for which we want to get the confidence scores.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This RidgeClassifier instance has already been disposed')
     }
@@ -139,7 +209,22 @@ pms_RidgeClassifier_decision_function = {k: v for k, v in pms_RidgeClassifier_de
   /**
     Fit Ridge classifier model.
    */
-  async fit(opts: RidgeClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: NDArray | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: NDArray
+
+    /**
+      Individual weights for each sample. If given a float, every sample will have the same weight.
+     */
+    sample_weight?: number | NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This RidgeClassifier instance has already been disposed')
     }
@@ -171,7 +256,12 @@ pms_RidgeClassifier_fit = {k: v for k, v in pms_RidgeClassifier_fit.items() if v
   /**
     Predict class labels for samples in `X`.
    */
-  async predict(opts: RidgeClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to predict the targets.
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This RidgeClassifier instance has already been disposed')
     }
@@ -201,7 +291,22 @@ pms_RidgeClassifier_predict = {k: v for k, v in pms_RidgeClassifier_predict.item
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: RidgeClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This RidgeClassifier instance has already been disposed')
     }
@@ -354,121 +459,4 @@ pms_RidgeClassifier_score = {k: v for k, v in pms_RidgeClassifier_score.items() 
         ._py`attr_RidgeClassifier_feature_names_in_.tolist() if hasattr(attr_RidgeClassifier_feature_names_in_, 'tolist') else attr_RidgeClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface RidgeClassifierOptions {
-  /**
-    Regularization strength; must be a positive float. Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization. Alpha corresponds to `1 / (2C)` in other linear models such as [`LogisticRegression`](sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression "sklearn.linear_model.LogisticRegression") or [`LinearSVC`](sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC").
-
-    @defaultValue `1`
-   */
-  alpha?: number
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (e.g. data is expected to be already centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    If `true`, X will be copied; else, it may be overwritten.
-
-    @defaultValue `true`
-   */
-  copy_X?: boolean
-
-  /**
-    Maximum number of iterations for conjugate gradient solver. The default value is determined by scipy.sparse.linalg.
-   */
-  max_iter?: number
-
-  /**
-    Precision of the solution. Note that `tol` has no effect for solvers ‘svd’ and ‘cholesky’.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Weights associated with classes in the form `{class\_label: weight}`. If not given, all classes are supposed to have weight one.
-
-    The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    Solver to use in the computational routines:
-
-    @defaultValue `'auto'`
-   */
-  solver?:
-    | 'auto'
-    | 'svd'
-    | 'cholesky'
-    | 'lsqr'
-    | 'sparse_cg'
-    | 'sag'
-    | 'saga'
-    | 'lbfgs'
-
-  /**
-    When set to `true`, forces the coefficients to be positive. Only ‘lbfgs’ solver is supported in this case.
-
-    @defaultValue `false`
-   */
-  positive?: boolean
-
-  /**
-    Used when `solver` == ‘sag’ or ‘saga’ to shuffle the data. See [Glossary](../../glossary.html#term-random_state) for details.
-   */
-  random_state?: number
-}
-
-export interface RidgeClassifierDecisionFunctionOptions {
-  /**
-    The data matrix for which we want to get the confidence scores.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface RidgeClassifierFitOptions {
-  /**
-    Training data.
-   */
-  X?: NDArray | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: NDArray
-
-  /**
-    Individual weights for each sample. If given a float, every sample will have the same weight.
-   */
-  sample_weight?: number | NDArray
-}
-
-export interface RidgeClassifierPredictOptions {
-  /**
-    The data matrix for which we want to predict the targets.
-   */
-  X?: ArrayLike[]
-}
-
-export interface RidgeClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

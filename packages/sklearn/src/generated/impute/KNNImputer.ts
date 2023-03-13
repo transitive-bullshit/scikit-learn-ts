@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../impute.html#knnimpute).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html)
  */
 export class KNNImputer {
   id: string
@@ -22,7 +22,54 @@ export class KNNImputer {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KNNImputerOptions) {
+  constructor(opts?: {
+    /**
+      The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to np.nan, since `pd.NA` will be converted to np.nan.
+     */
+    missing_values?: number | string
+
+    /**
+      Number of neighboring samples to use for imputation.
+
+      @defaultValue `5`
+     */
+    n_neighbors?: number
+
+    /**
+      Weight function used in prediction. Possible values:
+
+      @defaultValue `'uniform'`
+     */
+    weights?: 'uniform' | 'distance'
+
+    /**
+      Distance metric for searching neighbors. Possible values:
+
+      @defaultValue `'nan_euclidean'`
+     */
+    metric?: 'nan_euclidean'
+
+    /**
+      If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
+
+      @defaultValue `false`
+     */
+    add_indicator?: boolean
+
+    /**
+      If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0`.
+
+      @defaultValue `false`
+     */
+    keep_empty_features?: boolean
+  }) {
     this.id = `KNNImputer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +150,17 @@ ctor_KNNImputer = {k: v for k, v in ctor_KNNImputer.items() if v is not None}`
   /**
     Fit the imputer on X.
    */
-  async fit(opts: KNNImputerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: any
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KNNImputer instance has already been disposed')
     }
@@ -133,7 +190,22 @@ pms_KNNImputer_fit = {k: v for k, v in pms_KNNImputer_fit.items() if v is not No
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: KNNImputerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This KNNImputer instance has already been disposed')
     }
@@ -165,9 +237,12 @@ pms_KNNImputer_fit_transform = {k: v for k, v in pms_KNNImputer_fit_transform.it
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: KNNImputerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KNNImputer instance has already been disposed')
     }
@@ -200,7 +275,12 @@ pms_KNNImputer_get_feature_names_out = {k: v for k, v in pms_KNNImputer_get_feat
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: KNNImputerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KNNImputer instance has already been disposed')
     }
@@ -228,7 +308,12 @@ pms_KNNImputer_set_output = {k: v for k, v in pms_KNNImputer_set_output.items() 
   /**
     Impute all missing values in X.
    */
-  async transform(opts: KNNImputerTransformOptions): Promise<ArrayLike[]> {
+  async transform(opts: {
+    /**
+      The input data to complete.
+     */
+    X?: ArrayLike[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This KNNImputer instance has already been disposed')
     }
@@ -325,103 +410,4 @@ pms_KNNImputer_transform = {k: v for k, v in pms_KNNImputer_transform.items() if
         ._py`attr_KNNImputer_feature_names_in_.tolist() if hasattr(attr_KNNImputer_feature_names_in_, 'tolist') else attr_KNNImputer_feature_names_in_`
     })()
   }
-}
-
-export interface KNNImputerOptions {
-  /**
-    The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to np.nan, since `pd.NA` will be converted to np.nan.
-   */
-  missing_values?: number | string
-
-  /**
-    Number of neighboring samples to use for imputation.
-
-    @defaultValue `5`
-   */
-  n_neighbors?: number
-
-  /**
-    Weight function used in prediction. Possible values:
-
-    @defaultValue `'uniform'`
-   */
-  weights?: 'uniform' | 'distance'
-
-  /**
-    Distance metric for searching neighbors. Possible values:
-
-    @defaultValue `'nan_euclidean'`
-   */
-  metric?: 'nan_euclidean'
-
-  /**
-    If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    If `true`, a [`MissingIndicator`](sklearn.impute.MissingIndicator.html#sklearn.impute.MissingIndicator "sklearn.impute.MissingIndicator") transform will stack onto the output of the imputer’s transform. This allows a predictive estimator to account for missingness despite imputation. If a feature has no missing values at fit/train time, the feature won’t appear on the missing indicator even if there are missing values at transform/test time.
-
-    @defaultValue `false`
-   */
-  add_indicator?: boolean
-
-  /**
-    If `true`, features that consist exclusively of missing values when `fit` is called are returned in results when `transform` is called. The imputed value is always `0`.
-
-    @defaultValue `false`
-   */
-  keep_empty_features?: boolean
-}
-
-export interface KNNImputerFitOptions {
-  /**
-    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: any
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface KNNImputerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface KNNImputerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface KNNImputerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface KNNImputerTransformOptions {
-  /**
-    The input data to complete.
-   */
-  X?: ArrayLike[]
 }

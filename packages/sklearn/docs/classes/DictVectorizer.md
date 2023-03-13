@@ -1,6 +1,4 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / DictVectorizer
-
-# Class: DictVectorizer
+# DictVectorizer
 
 Transforms lists of feature-value mappings to vectors.
 
@@ -16,139 +14,105 @@ Features that do not occur in a sample (mapping) will have a zero value in the r
 
 Read more in the [User Guide](../feature_extraction.html#dict-feature-extraction).
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](DictVectorizer.md#constructor)
-
-### Properties
-
-- [\_isDisposed](DictVectorizer.md#_isdisposed)
-- [\_isInitialized](DictVectorizer.md#_isinitialized)
-- [\_py](DictVectorizer.md#_py)
-- [id](DictVectorizer.md#id)
-- [opts](DictVectorizer.md#opts)
-
-### Accessors
-
-- [feature\_names\_](DictVectorizer.md#feature_names_)
-- [py](DictVectorizer.md#py)
-- [vocabulary\_](DictVectorizer.md#vocabulary_)
-
-### Methods
-
-- [dispose](DictVectorizer.md#dispose)
-- [fit](DictVectorizer.md#fit)
-- [fit\_transform](DictVectorizer.md#fit_transform)
-- [get\_feature\_names\_out](DictVectorizer.md#get_feature_names_out)
-- [init](DictVectorizer.md#init)
-- [inverse\_transform](DictVectorizer.md#inverse_transform)
-- [restrict](DictVectorizer.md#restrict)
-- [set\_output](DictVectorizer.md#set_output)
-- [transform](DictVectorizer.md#transform)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new DictVectorizer**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new DictVectorizer(opts?: object): DictVectorizer;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`DictVectorizerOptions`](../interfaces/DictVectorizerOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.dtype?` | `any` | The type of feature values. Passed to Numpy array/scipy.sparse matrix constructors as the dtype argument. |
+| `opts.separator?` | `string` | Separator string used when constructing new features for one-hot coding.  `Default Value`  `'='` |
+| `opts.sort?` | `boolean` | Whether `feature\_names\_` and `vocabulary\_` should be sorted when fitting.  `Default Value`  `true` |
+| `opts.sparse?` | `boolean` | Whether transform should produce scipy.sparse matrices.  `Default Value`  `true` |
 
-[generated/feature_extraction/DictVectorizer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L33)
+### Returns
+
+[`DictVectorizer`](DictVectorizer.md)
+
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L33)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/feature_extraction/DictVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L31)
-
-___
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L31)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/feature_extraction/DictVectorizer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L30)
-
-___
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L30)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/feature_extraction/DictVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L29)
-
-___
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L29)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/feature_extraction/DictVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L26)
-
-___
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L26)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/feature_extraction/DictVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L27)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L27)
 
 ## Accessors
 
 ### feature\_names\_
 
-• `get` **feature_names_**(): `Promise`<`any`[]\>
-
 A list of length n\_features containing the feature names (e.g., “f=ham” and “f=spam”).
+
+#### Signature
+
+```ts
+feature_names_(): Promise<any[]>;
+```
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L433)
 
-[generated/feature_extraction/DictVectorizer.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L356)
-
-___
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L433)
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L64)
 
-[generated/feature_extraction/DictVectorizer.ts:38](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L38)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -160,121 +124,132 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L68)
 
-[generated/feature_extraction/DictVectorizer.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L42)
-
-___
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L64) [generated/feature\_extraction/DictVectorizer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L68)
 
 ### vocabulary\_
 
-• `get` **vocabulary_**(): `Promise`<`any`\>
-
 A dictionary mapping feature names to feature indices.
+
+#### Signature
+
+```ts
+vocabulary_(): Promise<any>;
+```
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L408)
 
-[generated/feature_extraction/DictVectorizer.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L331)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L408)
 
 ## Methods
 
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L119)
 
-[generated/feature_extraction/DictVectorizer.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L93)
-
-___
-
-### fit
-
-▸ **fit**(`opts`): `Promise`<`any`\>
+### fit()
 
 Learn a list of feature name -> indices mappings.
 
+#### Signature
+
+```ts
+fit(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DictVectorizerFitOptions`](../interfaces/DictVectorizerFitOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype). |
+| `opts.y?` | `any` | Ignored parameter. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L136)
 
-[generated/feature_extraction/DictVectorizer.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L110)
-
-___
-
-### fit\_transform
-
-▸ **fit_transform**(`opts`): `Promise`<`any`\>
+### fit\_transform()
 
 Learn a list of feature name -> indices mappings and transform X.
 
 Like fit(X) followed by transform(X), but does not require materializing X in memory.
 
+#### Signature
+
+```ts
+fit_transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DictVectorizerFitTransformOptions`](../interfaces/DictVectorizerFitTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any` | Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype). |
+| `opts.y?` | `any` | Ignored parameter. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L176)
 
-[generated/feature_extraction/DictVectorizer.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L140)
-
-___
-
-### get\_feature\_names\_out
-
-▸ **get_feature_names_out**(`opts`): `Promise`<`any`\>
+### get\_feature\_names\_out()
 
 Get output feature names for transformation.
 
+#### Signature
+
+```ts
+get_feature_names_out(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DictVectorizerGetFeatureNamesOutOptions`](../interfaces/DictVectorizerGetFeatureNamesOutOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.input_features?` | `any` | Not used, present here for API consistency by convention. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L214)
 
-[generated/feature_extraction/DictVectorizer.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L170)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -284,17 +259,11 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L77)
 
-[generated/feature_extraction/DictVectorizer.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L51)
-
-___
-
-### inverse\_transform
-
-▸ **inverse_transform**(`opts`): `Promise`<`any`[]\>
+### inverse\_transform()
 
 Transform array or sparse matrix X back to feature mappings.
 
@@ -302,88 +271,98 @@ X must have been produced by this DictVectorizer’s transform or fit\_transform
 
 In the case of one-hot/one-of-K coding, the constructed feature names and values are returned rather than the original ones.
 
+#### Signature
+
+```ts
+inverse_transform(opts: object): Promise<any[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DictVectorizerInverseTransformOptions`](../interfaces/DictVectorizerInverseTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Sample matrix. |
+| `opts.dict_type?` | `any` | Constructor for feature mappings. Must conform to the collections.Mapping API. |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L254)
 
-[generated/feature_extraction/DictVectorizer.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L207)
-
-___
-
-### restrict
-
-▸ **restrict**(`opts`): `Promise`<`any`\>
+### restrict()
 
 Restrict the features to those in support using feature selection.
 
 This function modifies the estimator in-place.
 
+#### Signature
+
+```ts
+restrict(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DictVectorizerRestrictOptions`](../interfaces/DictVectorizerRestrictOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.indices?` | `boolean` | Whether support is a list of indices.  `Default Value`  `false` |
+| `opts.support?` | [`ArrayLike`](../types/ArrayLike.md) | Boolean mask or list of indices (as returned by the get\_support member of feature selectors). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L298)
 
-[generated/feature_extraction/DictVectorizer.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L243)
-
-___
-
-### set\_output
-
-▸ **set_output**(`opts`): `Promise`<`any`\>
+### set\_output()
 
 Set output container.
 
 See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
 
+#### Signature
+
+```ts
+set_output(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DictVectorizerSetOutputOptions`](../interfaces/DictVectorizerSetOutputOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.transform?` | `"default"` \| `"pandas"` | Configure output of `transform` and `fit\_transform`. |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L340)
 
-[generated/feature_extraction/DictVectorizer.ts:273](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L273)
-
-___
-
-### transform
-
-▸ **transform**(`opts`): `Promise`<`any`\>
+### transform()
 
 Transform feature->value dicts to array or sparse matrix.
 
 Named features not encountered during fit or fit\_transform will be silently ignored.
 
+#### Signature
+
+```ts
+transform(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`DictVectorizerTransformOptions`](../interfaces/DictVectorizerTransformOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | `any`[] | Dict(s) or Mapping(s) from feature names (arbitrary Python objects) to feature values (strings or convertible to dtype). |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/feature_extraction/DictVectorizer.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L303)
+Defined in:  [generated/feature\_extraction/DictVectorizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/feature_extraction/DictVectorizer.ts#L375)

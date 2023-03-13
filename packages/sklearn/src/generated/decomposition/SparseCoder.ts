@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Each row of the result is the solution to a sparse coding problem. The goal is to find a sparse array `code` such that:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparseCoder.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparseCoder.html)
  */
 export class SparseCoder {
   id: string
@@ -22,7 +22,60 @@ export class SparseCoder {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SparseCoderOptions) {
+  constructor(opts?: {
+    /**
+      The dictionary atoms used for sparse coding. Lines are assumed to be normalized to unit norm.
+     */
+    dictionary?: NDArray[]
+
+    /**
+      Algorithm used to transform the data:
+
+      @defaultValue `'omp'`
+     */
+    transform_algorithm?:
+      | 'lasso_lars'
+      | 'lasso_cd'
+      | 'lars'
+      | 'omp'
+      | 'threshold'
+
+    /**
+      Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'` and is overridden by `alpha` in the `omp` case. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
+     */
+    transform_n_nonzero_coefs?: number
+
+    /**
+      If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `algorithm='omp'`, `alpha` is the tolerance parameter: the value of the reconstruction error targeted. In this case, it overrides `n\_nonzero\_coefs`. If `undefined`, default to 1.
+     */
+    transform_alpha?: number
+
+    /**
+      Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
+
+      @defaultValue `false`
+     */
+    split_sign?: boolean
+
+    /**
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Whether to enforce positivity when finding the code.
+
+      @defaultValue `false`
+     */
+    positive_code?: boolean
+
+    /**
+      Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `lasso\_lars`.
+
+      @defaultValue `1000`
+     */
+    transform_max_iter?: number
+  }) {
     this.id = `SparseCoder${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -111,7 +164,17 @@ ctor_SparseCoder = {k: v for k, v in ctor_SparseCoder.items() if v is not None}`
 
     This method is just there to implement the usual API and hence work in pipelines.
    */
-  async fit(opts: SparseCoderFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Not used, present for API consistency by convention.
+     */
+    X?: any
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparseCoder instance has already been disposed')
     }
@@ -141,7 +204,22 @@ pms_SparseCoder_fit = {k: v for k, v in pms_SparseCoder_fit.items() if v is not 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: SparseCoderFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This SparseCoder instance has already been disposed')
     }
@@ -175,9 +253,12 @@ pms_SparseCoder_fit_transform = {k: v for k, v in pms_SparseCoder_fit_transform.
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: SparseCoderGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.SparseCoder.fit "sklearn.decomposition.SparseCoder.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparseCoder instance has already been disposed')
     }
@@ -210,7 +291,12 @@ pms_SparseCoder_get_feature_names_out = {k: v for k, v in pms_SparseCoder_get_fe
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: SparseCoderSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This SparseCoder instance has already been disposed')
     }
@@ -240,7 +326,17 @@ pms_SparseCoder_set_output = {k: v for k, v in pms_SparseCoder_set_output.items(
 
     Coding method is determined by the object parameter `transform\_algorithm`.
    */
-  async transform(opts: SparseCoderTransformOptions): Promise<NDArray[]> {
+  async transform(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: NDArray[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This SparseCoder instance has already been disposed')
     }
@@ -289,109 +385,4 @@ pms_SparseCoder_transform = {k: v for k, v in pms_SparseCoder_transform.items() 
         ._py`attr_SparseCoder_feature_names_in_.tolist() if hasattr(attr_SparseCoder_feature_names_in_, 'tolist') else attr_SparseCoder_feature_names_in_`
     })()
   }
-}
-
-export interface SparseCoderOptions {
-  /**
-    The dictionary atoms used for sparse coding. Lines are assumed to be normalized to unit norm.
-   */
-  dictionary?: NDArray[]
-
-  /**
-    Algorithm used to transform the data:
-
-    @defaultValue `'omp'`
-   */
-  transform_algorithm?: 'lasso_lars' | 'lasso_cd' | 'lars' | 'omp' | 'threshold'
-
-  /**
-    Number of nonzero coefficients to target in each column of the solution. This is only used by `algorithm='lars'` and `algorithm='omp'` and is overridden by `alpha` in the `omp` case. If `undefined`, then `transform\_n\_nonzero\_coefs=int(n\_features / 10)`.
-   */
-  transform_n_nonzero_coefs?: number
-
-  /**
-    If `algorithm='lasso\_lars'` or `algorithm='lasso\_cd'`, `alpha` is the penalty applied to the L1 norm. If `algorithm='threshold'`, `alpha` is the absolute value of the threshold below which coefficients will be squashed to zero. If `algorithm='omp'`, `alpha` is the tolerance parameter: the value of the reconstruction error targeted. In this case, it overrides `n\_nonzero\_coefs`. If `undefined`, default to 1.
-   */
-  transform_alpha?: number
-
-  /**
-    Whether to split the sparse feature vector into the concatenation of its negative part and its positive part. This can improve the performance of downstream classifiers.
-
-    @defaultValue `false`
-   */
-  split_sign?: boolean
-
-  /**
-    Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Whether to enforce positivity when finding the code.
-
-    @defaultValue `false`
-   */
-  positive_code?: boolean
-
-  /**
-    Maximum number of iterations to perform if `algorithm='lasso\_cd'` or `lasso\_lars`.
-
-    @defaultValue `1000`
-   */
-  transform_max_iter?: number
-}
-
-export interface SparseCoderFitOptions {
-  /**
-    Not used, present for API consistency by convention.
-   */
-  X?: any
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface SparseCoderFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SparseCoderGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.SparseCoder.fit "sklearn.decomposition.SparseCoder.fit").
-   */
-  input_features?: any
-}
-
-export interface SparseCoderSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SparseCoderTransformOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: NDArray[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
 }

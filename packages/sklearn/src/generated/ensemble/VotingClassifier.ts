@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../ensemble.html#voting-classifier).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html)
  */
 export class VotingClassifier {
   id: string
@@ -20,7 +20,43 @@ export class VotingClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: VotingClassifierOptions) {
+  constructor(opts?: {
+    /**
+      Invoking the `fit` method on the `VotingClassifier` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingClassifier.set_params "sklearn.ensemble.VotingClassifier.set_params").
+     */
+    estimators?: any
+
+    /**
+      If ‘hard’, uses predicted class labels for majority rule voting. Else if ‘soft’, predicts the class label based on the argmax of the sums of the predicted probabilities, which is recommended for an ensemble of well-calibrated classifiers.
+
+      @defaultValue `'hard'`
+     */
+    voting?: 'hard' | 'soft'
+
+    /**
+      Sequence of weights (`float` or `int`) to weight the occurrences of predicted class labels (`hard` voting) or class probabilities before averaging (`soft` voting). Uses uniform weights if `undefined`.
+     */
+    weights?: ArrayLike
+
+    /**
+      The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+
+    /**
+      Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten\_transform=`true`, transform method returns matrix with shape (n\_samples, n\_classifiers \* n\_classes). If flatten\_transform=`false`, it returns (n\_classifiers, n\_samples, n\_classes).
+
+      @defaultValue `true`
+     */
+    flatten_transform?: boolean
+
+    /**
+      If `true`, the time elapsed while fitting will be printed as it is completed.
+
+      @defaultValue `false`
+     */
+    verbose?: boolean
+  }) {
     this.id = `VotingClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +139,22 @@ ctor_VotingClassifier = {k: v for k, v in ctor_VotingClassifier.items() if v is 
   /**
     Fit the estimators.
    */
-  async fit(opts: VotingClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -139,9 +190,22 @@ pms_VotingClassifier_fit = {k: v for k, v in pms_VotingClassifier_fit.items() if
 
     Return predictions for X for each estimator.
    */
-  async fit_transform(
-    opts: VotingClassifierFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: NDArray
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -177,9 +241,12 @@ pms_VotingClassifier_fit_transform = {k: v for k, v in pms_VotingClassifier_fit_
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: VotingClassifierGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -212,7 +279,12 @@ pms_VotingClassifier_get_feature_names_out = {k: v for k, v in pms_VotingClassif
   /**
     Predict class labels for X.
    */
-  async predict(opts: VotingClassifierPredictOptions): Promise<ArrayLike> {
+  async predict(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -242,9 +314,12 @@ pms_VotingClassifier_predict = {k: v for k, v in pms_VotingClassifier_predict.it
   /**
     Compute probabilities of possible outcomes for samples in X.
    */
-  async predict_proba(
-    opts: VotingClassifierPredictProbaOptions
-  ): Promise<ArrayLike[]> {
+  async predict_proba(opts: {
+    /**
+      The input samples.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -278,7 +353,22 @@ pms_VotingClassifier_predict_proba = {k: v for k, v in pms_VotingClassifier_pred
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: VotingClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -314,7 +404,12 @@ pms_VotingClassifier_score = {k: v for k, v in pms_VotingClassifier_score.items(
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: VotingClassifierSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -344,7 +439,12 @@ pms_VotingClassifier_set_output = {k: v for k, v in pms_VotingClassifier_set_out
   /**
     Return class labels or probabilities for X for each estimator.
    */
-  async transform(opts: VotingClassifierTransformOptions): Promise<any> {
+  async transform(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This VotingClassifier instance has already been disposed'
@@ -503,128 +603,4 @@ pms_VotingClassifier_transform = {k: v for k, v in pms_VotingClassifier_transfor
         ._py`attr_VotingClassifier_feature_names_in_.tolist() if hasattr(attr_VotingClassifier_feature_names_in_, 'tolist') else attr_VotingClassifier_feature_names_in_`
     })()
   }
-}
-
-export interface VotingClassifierOptions {
-  /**
-    Invoking the `fit` method on the `VotingClassifier` will fit clones of those original estimators that will be stored in the class attribute `self.estimators\_`. An estimator can be set to `'drop'` using [`set\_params`](#sklearn.ensemble.VotingClassifier.set_params "sklearn.ensemble.VotingClassifier.set_params").
-   */
-  estimators?: any
-
-  /**
-    If ‘hard’, uses predicted class labels for majority rule voting. Else if ‘soft’, predicts the class label based on the argmax of the sums of the predicted probabilities, which is recommended for an ensemble of well-calibrated classifiers.
-
-    @defaultValue `'hard'`
-   */
-  voting?: 'hard' | 'soft'
-
-  /**
-    Sequence of weights (`float` or `int`) to weight the occurrences of predicted class labels (`hard` voting) or class probabilities before averaging (`soft` voting). Uses uniform weights if `undefined`.
-   */
-  weights?: ArrayLike
-
-  /**
-    The number of jobs to run in parallel for `fit`. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-
-  /**
-    Affects shape of transform output only when voting=’soft’ If voting=’soft’ and flatten\_transform=`true`, transform method returns matrix with shape (n\_samples, n\_classifiers \* n\_classes). If flatten\_transform=`false`, it returns (n\_classifiers, n\_samples, n\_classes).
-
-    @defaultValue `true`
-   */
-  flatten_transform?: boolean
-
-  /**
-    If `true`, the time elapsed while fitting will be printed as it is completed.
-
-    @defaultValue `false`
-   */
-  verbose?: boolean
-}
-
-export interface VotingClassifierFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights. If `undefined`, then samples are equally weighted. Note that this is supported only if all underlying estimators support sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface VotingClassifierFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: NDArray
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface VotingClassifierGetFeatureNamesOutOptions {
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  input_features?: any
-}
-
-export interface VotingClassifierPredictOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface VotingClassifierPredictProbaOptions {
-  /**
-    The input samples.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface VotingClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface VotingClassifierSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface VotingClassifierTransformOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

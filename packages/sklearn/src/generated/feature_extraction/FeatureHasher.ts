@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_extraction.html#feature-hashing).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html)
  */
 export class FeatureHasher {
   id: string
@@ -26,7 +26,33 @@ export class FeatureHasher {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: FeatureHasherOptions) {
+  constructor(opts?: {
+    /**
+      The number of features (columns) in the output matrices. Small numbers of features are likely to cause hash collisions, but large numbers will cause larger coefficient dimensions in linear learners.
+
+      @defaultValue `2`
+     */
+    n_features?: number
+
+    /**
+      Choose a string from {‘dict’, ‘pair’, ‘string’}. Either “dict” (the default) to accept dictionaries over (feature\_name, value); “pair” to accept pairs of (feature\_name, value); or “string” to accept single strings. feature\_name should be a string, while value should be a number. In the case of “string”, a value of 1 is implied. The feature\_name is hashed to find the appropriate column for the feature. The value’s sign might be flipped in the output (but see non\_negative, below).
+
+      @defaultValue `'dict'`
+     */
+    input_type?: string
+
+    /**
+      The type of feature values. Passed to scipy.sparse matrix constructors as the dtype argument. Do not set this to bool, np.boolean or any unsigned integer type.
+     */
+    dtype?: any
+
+    /**
+      When `true`, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
+
+      @defaultValue `true`
+     */
+    alternate_sign?: boolean
+  }) {
     this.id = `FeatureHasher${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +131,17 @@ ctor_FeatureHasher = {k: v for k, v in ctor_FeatureHasher.items() if v is not No
 
     This method allows to: (i) validate the estimator’s parameters and (ii) be consistent with the scikit-learn transformer API.
    */
-  async fit(opts: FeatureHasherFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    X?: any
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FeatureHasher instance has already been disposed')
     }
@@ -135,7 +171,22 @@ pms_FeatureHasher_fit = {k: v for k, v in pms_FeatureHasher_fit.items() if v is 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: FeatureHasherFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This FeatureHasher instance has already been disposed')
     }
@@ -169,7 +220,12 @@ pms_FeatureHasher_fit_transform = {k: v for k, v in pms_FeatureHasher_fit_transf
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: FeatureHasherSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This FeatureHasher instance has already been disposed')
     }
@@ -197,9 +253,12 @@ pms_FeatureHasher_set_output = {k: v for k, v in pms_FeatureHasher_set_output.it
   /**
     Transform a sequence of instances to a scipy.sparse matrix.
    */
-  async transform(
-    opts: FeatureHasherTransformOptions
-  ): Promise<SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      Samples. Each sample must be iterable an (e.g., a list or tuple) containing/generating feature names (and optionally values, see the input\_type constructor argument) which will be hashed. raw\_X need not support the len function, so it can be the result of a generator; n\_samples is determined on the fly.
+     */
+    raw_X?: any
+  }): Promise<SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This FeatureHasher instance has already been disposed')
     }
@@ -223,75 +282,4 @@ pms_FeatureHasher_transform = {k: v for k, v in pms_FeatureHasher_transform.item
     return this
       ._py`res_FeatureHasher_transform.tolist() if hasattr(res_FeatureHasher_transform, 'tolist') else res_FeatureHasher_transform`
   }
-}
-
-export interface FeatureHasherOptions {
-  /**
-    The number of features (columns) in the output matrices. Small numbers of features are likely to cause hash collisions, but large numbers will cause larger coefficient dimensions in linear learners.
-
-    @defaultValue `2`
-   */
-  n_features?: number
-
-  /**
-    Choose a string from {‘dict’, ‘pair’, ‘string’}. Either “dict” (the default) to accept dictionaries over (feature\_name, value); “pair” to accept pairs of (feature\_name, value); or “string” to accept single strings. feature\_name should be a string, while value should be a number. In the case of “string”, a value of 1 is implied. The feature\_name is hashed to find the appropriate column for the feature. The value’s sign might be flipped in the output (but see non\_negative, below).
-
-    @defaultValue `'dict'`
-   */
-  input_type?: string
-
-  /**
-    The type of feature values. Passed to scipy.sparse matrix constructors as the dtype argument. Do not set this to bool, np.boolean or any unsigned integer type.
-   */
-  dtype?: any
-
-  /**
-    When `true`, an alternating sign is added to the features as to approximately conserve the inner product in the hashed space even for small n\_features. This approach is similar to sparse random projection.
-
-    @defaultValue `true`
-   */
-  alternate_sign?: boolean
-}
-
-export interface FeatureHasherFitOptions {
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  X?: any
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface FeatureHasherFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface FeatureHasherSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface FeatureHasherTransformOptions {
-  /**
-    Samples. Each sample must be iterable an (e.g., a list or tuple) containing/generating feature names (and optionally values, see the input\_type constructor argument) which will be hashed. raw\_X need not support the len function, so it can be the result of a generator; n\_samples is determined on the fly.
-   */
-  raw_X?: any
 }

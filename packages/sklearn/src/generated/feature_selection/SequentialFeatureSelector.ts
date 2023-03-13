@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../feature_selection.html#sequential-feature-selection).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html)
  */
 export class SequentialFeatureSelector {
   id: string
@@ -22,7 +22,54 @@ export class SequentialFeatureSelector {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: SequentialFeatureSelectorOptions) {
+  constructor(opts?: {
+    /**
+      An unfitted estimator.
+     */
+    estimator?: any
+
+    /**
+      If `"auto"`, the behaviour depends on the `tol` parameter:
+
+      @defaultValue `'warn'`
+     */
+    n_features_to_select?: 'auto' | number | number
+
+    /**
+      If the score is not incremented by at least `tol` between two consecutive feature additions or removals, stop adding or removing.
+
+      `tol` can be negative when removing features using `direction="backward"`. It can be useful to reduce the number of features at the cost of a small decrease in the score.
+
+      `tol` is enabled only when `n\_features\_to\_select` is `"auto"`.
+     */
+    tol?: number
+
+    /**
+      Whether to perform forward selection or backward selection.
+
+      @defaultValue `'forward'`
+     */
+    direction?: 'forward' | 'backward'
+
+    /**
+      A single str (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set.
+
+      NOTE that when using a custom scorer, it should return a single value.
+
+      If `undefined`, the estimator’s score method is used.
+     */
+    scoring?: string
+
+    /**
+      Determines the cross-validation splitting strategy. Possible inputs for cv are:
+     */
+    cv?: number
+
+    /**
+      Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+     */
+    n_jobs?: number
+  }) {
     this.id = `SequentialFeatureSelector${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -107,7 +154,17 @@ ctor_SequentialFeatureSelector = {k: v for k, v in ctor_SequentialFeatureSelecto
   /**
     Learn the features to select from X.
    */
-  async fit(opts: SequentialFeatureSelectorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values. This parameter may be ignored for unsupervised learning.
+     */
+    y?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -141,9 +198,22 @@ pms_SequentialFeatureSelector_fit = {k: v for k, v in pms_SequentialFeatureSelec
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(
-    opts: SequentialFeatureSelectorFitTransformOptions
-  ): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -180,9 +250,12 @@ pms_SequentialFeatureSelector_fit_transform = {k: v for k, v in pms_SequentialFe
   /**
     Mask feature names according to selected features.
    */
-  async get_feature_names_out(
-    opts: SequentialFeatureSelectorGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -215,9 +288,14 @@ pms_SequentialFeatureSelector_get_feature_names_out = {k: v for k, v in pms_Sequ
   /**
     Get a mask, or integer index, of the features selected.
    */
-  async get_support(
-    opts: SequentialFeatureSelectorGetSupportOptions
-  ): Promise<any> {
+  async get_support(opts: {
+    /**
+      If `true`, the return value will be an array of integers, rather than a boolean mask.
+
+      @defaultValue `false`
+     */
+    indices?: boolean
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -249,9 +327,12 @@ pms_SequentialFeatureSelector_get_support = {k: v for k, v in pms_SequentialFeat
   /**
     Reverse the transformation operation.
    */
-  async inverse_transform(
-    opts: SequentialFeatureSelectorInverseTransformOptions
-  ): Promise<any> {
+  async inverse_transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -286,9 +367,12 @@ pms_SequentialFeatureSelector_inverse_transform = {k: v for k, v in pms_Sequenti
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(
-    opts: SequentialFeatureSelectorSetOutputOptions
-  ): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -321,9 +405,12 @@ pms_SequentialFeatureSelector_set_output = {k: v for k, v in pms_SequentialFeatu
   /**
     Reduce X to the selected features.
    */
-  async transform(
-    opts: SequentialFeatureSelectorTransformOptions
-  ): Promise<any> {
+  async transform(opts: {
+    /**
+      The input samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This SequentialFeatureSelector instance has already been disposed'
@@ -460,119 +547,4 @@ pms_SequentialFeatureSelector_transform = {k: v for k, v in pms_SequentialFeatur
         ._py`attr_SequentialFeatureSelector_support_.tolist() if hasattr(attr_SequentialFeatureSelector_support_, 'tolist') else attr_SequentialFeatureSelector_support_`
     })()
   }
-}
-
-export interface SequentialFeatureSelectorOptions {
-  /**
-    An unfitted estimator.
-   */
-  estimator?: any
-
-  /**
-    If `"auto"`, the behaviour depends on the `tol` parameter:
-
-    @defaultValue `'warn'`
-   */
-  n_features_to_select?: 'auto' | number | number
-
-  /**
-    If the score is not incremented by at least `tol` between two consecutive feature additions or removals, stop adding or removing.
-
-    `tol` can be negative when removing features using `direction="backward"`. It can be useful to reduce the number of features at the cost of a small decrease in the score.
-
-    `tol` is enabled only when `n\_features\_to\_select` is `"auto"`.
-   */
-  tol?: number
-
-  /**
-    Whether to perform forward selection or backward selection.
-
-    @defaultValue `'forward'`
-   */
-  direction?: 'forward' | 'backward'
-
-  /**
-    A single str (see [The scoring parameter: defining model evaluation rules](../model_evaluation.html#scoring-parameter)) or a callable (see [Defining your scoring strategy from metric functions](../model_evaluation.html#scoring)) to evaluate the predictions on the test set.
-
-    NOTE that when using a custom scorer, it should return a single value.
-
-    If `undefined`, the estimator’s score method is used.
-   */
-  scoring?: string
-
-  /**
-    Determines the cross-validation splitting strategy. Possible inputs for cv are:
-   */
-  cv?: number
-
-  /**
-    Number of jobs to run in parallel. When evaluating a new feature to add or remove, the cross-validation procedure is parallel over the folds. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
-   */
-  n_jobs?: number
-}
-
-export interface SequentialFeatureSelectorFitOptions {
-  /**
-    Training vectors, where `n\_samples` is the number of samples and `n\_features` is the number of predictors.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values. This parameter may be ignored for unsupervised learning.
-   */
-  y?: ArrayLike
-}
-
-export interface SequentialFeatureSelectorFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface SequentialFeatureSelectorGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface SequentialFeatureSelectorGetSupportOptions {
-  /**
-    If `true`, the return value will be an array of integers, rather than a boolean mask.
-
-    @defaultValue `false`
-   */
-  indices?: boolean
-}
-
-export interface SequentialFeatureSelectorInverseTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
-}
-
-export interface SequentialFeatureSelectorSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface SequentialFeatureSelectorTransformOptions {
-  /**
-    The input samples.
-   */
-  X?: any
 }

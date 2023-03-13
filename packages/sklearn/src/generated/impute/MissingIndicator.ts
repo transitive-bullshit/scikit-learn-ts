@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../impute.html#impute).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.impute.MissingIndicator.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.impute.MissingIndicator.html)
  */
 export class MissingIndicator {
   id: string
@@ -22,7 +22,33 @@ export class MissingIndicator {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: MissingIndicatorOptions) {
+  constructor(opts?: {
+    /**
+      The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
+     */
+    missing_values?: number | string
+
+    /**
+      Whether the imputer mask should represent all or a subset of features.
+
+      @defaultValue `'missing-only'`
+     */
+    features?: 'missing-only' | 'all'
+
+    /**
+      Whether the imputer mask format should be sparse or dense.
+
+      @defaultValue `'auto'`
+     */
+    sparse?: boolean | 'auto'
+
+    /**
+      If `true`, [`transform`](#sklearn.impute.MissingIndicator.transform "sklearn.impute.MissingIndicator.transform") will raise an error when there are features with missing values that have no missing values in [`fit`](#sklearn.impute.MissingIndicator.fit "sklearn.impute.MissingIndicator.fit"). This is applicable only when `features='missing-only'`.
+
+      @defaultValue `true`
+     */
+    error_on_new?: boolean
+  }) {
     this.id = `MissingIndicator${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -101,7 +127,17 @@ ctor_MissingIndicator = {k: v for k, v in ctor_MissingIndicator.items() if v is 
   /**
     Fit the transformer on `X`.
    */
-  async fit(opts: MissingIndicatorFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MissingIndicator instance has already been disposed'
@@ -131,9 +167,17 @@ pms_MissingIndicator_fit = {k: v for k, v in pms_MissingIndicator_fit.items() if
   /**
     Generate missing values indicator for `X`.
    */
-  async fit_transform(
-    opts: MissingIndicatorFitTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async fit_transform(opts: {
+    /**
+      The input data to complete.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This MissingIndicator instance has already been disposed'
@@ -165,9 +209,12 @@ pms_MissingIndicator_fit_transform = {k: v for k, v in pms_MissingIndicator_fit_
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: MissingIndicatorGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MissingIndicator instance has already been disposed'
@@ -202,7 +249,12 @@ pms_MissingIndicator_get_feature_names_out = {k: v for k, v in pms_MissingIndica
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: MissingIndicatorSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This MissingIndicator instance has already been disposed'
@@ -232,9 +284,12 @@ pms_MissingIndicator_set_output = {k: v for k, v in pms_MissingIndicator_set_out
   /**
     Generate missing values indicator for `X`.
    */
-  async transform(
-    opts: MissingIndicatorTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The input data to complete.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This MissingIndicator instance has already been disposed'
@@ -341,77 +396,4 @@ pms_MissingIndicator_transform = {k: v for k, v in pms_MissingIndicator_transfor
         ._py`attr_MissingIndicator_feature_names_in_.tolist() if hasattr(attr_MissingIndicator_feature_names_in_, 'tolist') else attr_MissingIndicator_feature_names_in_`
     })()
   }
-}
-
-export interface MissingIndicatorOptions {
-  /**
-    The placeholder for the missing values. All occurrences of `missing\_values` will be imputed. For pandas’ dataframes with nullable integer dtypes with missing values, `missing\_values` should be set to `np.nan`, since `pd.NA` will be converted to `np.nan`.
-   */
-  missing_values?: number | string
-
-  /**
-    Whether the imputer mask should represent all or a subset of features.
-
-    @defaultValue `'missing-only'`
-   */
-  features?: 'missing-only' | 'all'
-
-  /**
-    Whether the imputer mask format should be sparse or dense.
-
-    @defaultValue `'auto'`
-   */
-  sparse?: boolean | 'auto'
-
-  /**
-    If `true`, [`transform`](#sklearn.impute.MissingIndicator.transform "sklearn.impute.MissingIndicator.transform") will raise an error when there are features with missing values that have no missing values in [`fit`](#sklearn.impute.MissingIndicator.fit "sklearn.impute.MissingIndicator.fit"). This is applicable only when `features='missing-only'`.
-
-    @defaultValue `true`
-   */
-  error_on_new?: boolean
-}
-
-export interface MissingIndicatorFitOptions {
-  /**
-    Input data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface MissingIndicatorFitTransformOptions {
-  /**
-    The input data to complete.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface MissingIndicatorGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface MissingIndicatorSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface MissingIndicatorTransformOptions {
-  /**
-    The input data to complete.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

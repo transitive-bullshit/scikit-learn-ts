@@ -1,121 +1,86 @@
-[sklearn](../readme.md) / [Exports](../modules.md) / Exponentiation
-
-# Class: Exponentiation
+# Exponentiation
 
 The Exponentiation kernel takes one base kernel and a scalar parameter \\(p\\) and combines them via
 
-**`See`**
-
-https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Exponentiation.md#constructor)
-
-### Properties
-
-- [\_isDisposed](Exponentiation.md#_isdisposed)
-- [\_isInitialized](Exponentiation.md#_isinitialized)
-- [\_py](Exponentiation.md#_py)
-- [id](Exponentiation.md#id)
-- [opts](Exponentiation.md#opts)
-
-### Accessors
-
-- [py](Exponentiation.md#py)
-
-### Methods
-
-- [\_\_call\_\_](Exponentiation.md#__call__)
-- [clone\_with\_theta](Exponentiation.md#clone_with_theta)
-- [diag](Exponentiation.md#diag)
-- [dispose](Exponentiation.md#dispose)
-- [init](Exponentiation.md#init)
-- [is\_stationary](Exponentiation.md#is_stationary)
+[Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.Exponentiation.html)
 
 ## Constructors
 
-### constructor
+## constructor()
 
-• **new Exponentiation**(`opts?`)
+### Signature
 
-#### Parameters
+```ts
+new Exponentiation(opts?: object): Exponentiation;
+```
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`ExponentiationOptions`](../interfaces/ExponentiationOptions.md) |
+### Parameters
 
-#### Defined in
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | `object` | - |
+| `opts.exponent?` | `number` | The exponent for the base kernel |
+| `opts.kernel?` | `any` | The base kernel |
 
-[generated/gaussian_process/kernels/Exponentiation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L21)
+### Returns
+
+[`Exponentiation`](Exponentiation.md)
+
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L21)
 
 ## Properties
 
 ### \_isDisposed
 
-• **\_isDisposed**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/Exponentiation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L19)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L19)
 
 ### \_isInitialized
 
-• **\_isInitialized**: `boolean` = `false`
+> `boolean`  = `false`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/Exponentiation.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L18)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L18)
 
 ### \_py
 
-• **\_py**: `PythonBridge`
+> `PythonBridge`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/Exponentiation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L17)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L17)
 
 ### id
 
-• **id**: `string`
+> `string`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/Exponentiation.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L14)
-
-___
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L14)
 
 ### opts
 
-• **opts**: `any`
+> `any`
 
-#### Defined in
-
-[generated/gaussian_process/kernels/Exponentiation.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L15)
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L15)
 
 ## Accessors
 
 ### py
 
-• `get` **py**(): `PythonBridge`
+#### Signature
+
+```ts
+py(): PythonBridge;
+```
 
 #### Returns
 
 `PythonBridge`
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L36)
 
-[generated/gaussian_process/kernels/Exponentiation.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L26)
+#### Signature
 
-• `set` **py**(`pythonBridge`): `void`
+```ts
+py(pythonBridge: PythonBridge): void;
+```
 
 #### Parameters
 
@@ -127,105 +92,114 @@ ___
 
 `void`
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L40)
 
-[generated/gaussian_process/kernels/Exponentiation.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L30)
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:36](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L36) [generated/gaussian\_process/kernels/Exponentiation.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L40)
 
 ## Methods
 
-### \_\_call\_\_
-
-▸ **__call__**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+### \_\_call\_\_()
 
 Return the kernel k(X, Y) and optionally its gradient.
 
+#### Signature
+
+```ts
+__call__(opts: object): Promise<ArrayLike[]>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ExponentiationCallOptions`](../interfaces/ExponentiationCallOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Left argument of the returned kernel k(X, Y) |
+| `opts.Y?` | [`ArrayLike`](../types/ArrayLike.md)[] | Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) is evaluated instead. |
+| `opts.eval_gradient?` | `boolean` | Determines whether the gradient with respect to the log of the kernel hyperparameter is computed.  `Default Value`  `false` |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)[]\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L106)
 
-[generated/gaussian_process/kernels/Exponentiation.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L96)
-
-___
-
-### clone\_with\_theta
-
-▸ **clone_with_theta**(`opts`): `Promise`<`any`\>
+### clone\_with\_theta()
 
 Returns a clone of self with given hyperparameters theta.
 
+#### Signature
+
+```ts
+clone_with_theta(opts: object): Promise<any>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ExponentiationCloneWithThetaOptions`](../interfaces/ExponentiationCloneWithThetaOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.theta?` | [`ArrayLike`](../types/ArrayLike.md) | The hyperparameters |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L155)
 
-[generated/gaussian_process/kernels/Exponentiation.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L128)
-
-___
-
-### diag
-
-▸ **diag**(`opts`): `Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+### diag()
 
 Returns the diagonal of the kernel k(X, X).
 
 The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
 
+#### Signature
+
+```ts
+diag(opts: object): Promise<ArrayLike>;
+```
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | [`ExponentiationDiagOptions`](../interfaces/ExponentiationDiagOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.X?` | [`ArrayLike`](../types/ArrayLike.md)[] | Argument to the kernel. |
 
 #### Returns
 
-`Promise`<[`ArrayLike`](../modules.md#arraylike)\>
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L193)
 
-[generated/gaussian_process/kernels/Exponentiation.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L163)
-
-___
-
-### dispose
-
-▸ **dispose**(): `Promise`<`void`\>
+### dispose()
 
 Disposes of the underlying Python resources.
 
 Once `dispose()` is called, the instance is no longer usable.
 
+#### Signature
+
+```ts
+dispose(): Promise<void>;
+```
+
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L89)
 
-[generated/gaussian_process/kernels/Exponentiation.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L79)
-
-___
-
-### init
-
-▸ **init**(`py`): `Promise`<`void`\>
+### init()
 
 Initializes the underlying Python resources.
 
 This instance is not usable until the `Promise` returned by `init()` resolves.
+
+#### Signature
+
+```ts
+init(py: PythonBridge): Promise<void>;
+```
 
 #### Parameters
 
@@ -235,30 +209,28 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L49)
 
-[generated/gaussian_process/kernels/Exponentiation.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L39)
-
-___
-
-### is\_stationary
-
-▸ **is_stationary**(`opts`): `Promise`<`any`\>
+### is\_stationary()
 
 Returns whether the kernel is stationary.
+
+#### Signature
+
+```ts
+is_stationary(opts: object): Promise<any>;
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`ExponentiationIsStationaryOptions`](../interfaces/ExponentiationIsStationaryOptions.md) |
+| `opts` | `object` |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`\<`any`\>
 
-#### Defined in
-
-[generated/gaussian_process/kernels/Exponentiation.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/367336a/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L191)
+Defined in:  [generated/gaussian\_process/kernels/Exponentiation.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f6c1fce/packages/sklearn/src/generated/gaussian_process/kernels/Exponentiation.ts#L226)

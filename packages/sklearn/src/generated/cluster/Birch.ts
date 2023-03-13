@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../clustering.html#birch).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.cluster.Birch.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.Birch.html)
  */
 export class Birch {
   id: string
@@ -22,7 +22,42 @@ export class Birch {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: BirchOptions) {
+  constructor(opts?: {
+    /**
+      The radius of the subcluster obtained by merging a new sample and the closest subcluster should be lesser than the threshold. Otherwise a new subcluster is started. Setting this value to be very low promotes splitting and vice-versa.
+
+      @defaultValue `0.5`
+     */
+    threshold?: number
+
+    /**
+      Maximum number of CF subclusters in each node. If a new samples enters such that the number of subclusters exceed the branching\_factor then that node is split into two nodes with the subclusters redistributed in each. The parent subcluster of that node is removed and two new subclusters are added as parents of the 2 split nodes.
+
+      @defaultValue `50`
+     */
+    branching_factor?: number
+
+    /**
+      Number of clusters after the final clustering step, which treats the subclusters from the leaves as new samples.
+
+      @defaultValue `3`
+     */
+    n_clusters?: number
+
+    /**
+      Whether or not to compute labels for each fit.
+
+      @defaultValue `true`
+     */
+    compute_labels?: boolean
+
+    /**
+      Whether or not to make a copy of the given data. If set to `false`, the initial data will be overwritten.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+  }) {
     this.id = `Birch${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -102,7 +137,17 @@ ctor_Birch = {k: v for k, v in ctor_Birch.items() if v is not None}`
   /**
     Build a CF Tree for the input data.
    */
-  async fit(opts: BirchFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -130,7 +175,17 @@ pms_Birch_fit = {k: v for k, v in pms_Birch_fit.items() if v is not None}`
   /**
     Perform clustering on `X` and returns cluster labels.
    */
-  async fit_predict(opts: BirchFitPredictOptions): Promise<NDArray> {
+  async fit_predict(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Not used, present for API consistency by convention.
+     */
+    y?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -160,7 +215,22 @@ pms_Birch_fit_predict = {k: v for k, v in pms_Birch_fit_predict.items() if v is 
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: BirchFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -194,9 +264,12 @@ pms_Birch_fit_transform = {k: v for k, v in pms_Birch_fit_transform.items() if v
 
     The feature names out will prefixed by the lowercased class name. For example, if the transformer outputs 3 features, then the feature names out are: `\["class\_name0", "class\_name1", "class\_name2"\]`.
    */
-  async get_feature_names_out(
-    opts: BirchGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.Birch.fit "sklearn.cluster.Birch.fit").
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -224,7 +297,17 @@ pms_Birch_get_feature_names_out = {k: v for k, v in pms_Birch_get_feature_names_
   /**
     Online learning. Prevents rebuilding of CFTree from scratch.
    */
-  async partial_fit(opts: BirchPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      Input data. If X is not provided, only the global clustering step is done.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Not used, present here for API consistency by convention.
+     */
+    y?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -254,7 +337,12 @@ pms_Birch_partial_fit = {k: v for k, v in pms_Birch_partial_fit.items() if v is 
 
     Avoid computation of the row norms of X.
    */
-  async predict(opts: BirchPredictOptions): Promise<any> {
+  async predict(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -284,7 +372,12 @@ pms_Birch_predict = {k: v for k, v in pms_Birch_predict.items() if v is not None
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: BirchSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -314,9 +407,12 @@ pms_Birch_set_output = {k: v for k, v in pms_Birch_set_output.items() if v is no
 
     Each dimension represents the distance from the sample point to each cluster centroid.
    */
-  async transform(
-    opts: BirchTransformOptions
-  ): Promise<ArrayLike | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      Input data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<ArrayLike | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This Birch instance has already been disposed')
     }
@@ -505,122 +601,4 @@ pms_Birch_transform = {k: v for k, v in pms_Birch_transform.items() if v is not 
         ._py`attr_Birch_feature_names_in_.tolist() if hasattr(attr_Birch_feature_names_in_, 'tolist') else attr_Birch_feature_names_in_`
     })()
   }
-}
-
-export interface BirchOptions {
-  /**
-    The radius of the subcluster obtained by merging a new sample and the closest subcluster should be lesser than the threshold. Otherwise a new subcluster is started. Setting this value to be very low promotes splitting and vice-versa.
-
-    @defaultValue `0.5`
-   */
-  threshold?: number
-
-  /**
-    Maximum number of CF subclusters in each node. If a new samples enters such that the number of subclusters exceed the branching\_factor then that node is split into two nodes with the subclusters redistributed in each. The parent subcluster of that node is removed and two new subclusters are added as parents of the 2 split nodes.
-
-    @defaultValue `50`
-   */
-  branching_factor?: number
-
-  /**
-    Number of clusters after the final clustering step, which treats the subclusters from the leaves as new samples.
-
-    @defaultValue `3`
-   */
-  n_clusters?: number
-
-  /**
-    Whether or not to compute labels for each fit.
-
-    @defaultValue `true`
-   */
-  compute_labels?: boolean
-
-  /**
-    Whether or not to make a copy of the given data. If set to `false`, the initial data will be overwritten.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-}
-
-export interface BirchFitOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface BirchFitPredictOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Not used, present for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface BirchFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface BirchGetFeatureNamesOutOptions {
-  /**
-    Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.Birch.fit "sklearn.cluster.Birch.fit").
-   */
-  input_features?: any
-}
-
-export interface BirchPartialFitOptions {
-  /**
-    Input data. If X is not provided, only the global clustering step is done.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Not used, present here for API consistency by convention.
-   */
-  y?: any
-}
-
-export interface BirchPredictOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface BirchSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface BirchTransformOptions {
-  /**
-    Input data.
-   */
-  X?: ArrayLike | SparseMatrix[]
 }

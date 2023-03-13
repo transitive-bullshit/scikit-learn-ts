@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../density.html#kernel-density).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html)
  */
 export class KernelDensity {
   id: string
@@ -20,7 +20,76 @@ export class KernelDensity {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KernelDensityOptions) {
+  constructor(opts?: {
+    /**
+      The bandwidth of the kernel. If bandwidth is a float, it defines the bandwidth of the kernel. If bandwidth is a string, one of the estimation methods is implemented.
+
+      @defaultValue `1`
+     */
+    bandwidth?: number | 'scott' | 'silverman'
+
+    /**
+      The tree algorithm to use.
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'kd_tree' | 'ball_tree' | 'auto'
+
+    /**
+      The kernel to use.
+
+      @defaultValue `'gaussian'`
+     */
+    kernel?:
+      | 'gaussian'
+      | 'tophat'
+      | 'epanechnikov'
+      | 'exponential'
+      | 'linear'
+      | 'cosine'
+
+    /**
+      Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+
+      Not all metrics are valid with all algorithms: refer to the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") and [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). Note that the normalization of the density output is correct only for the Euclidean distance metric.
+
+      @defaultValue `'euclidean'`
+     */
+    metric?: string
+
+    /**
+      The desired absolute tolerance of the result. A larger tolerance will generally lead to faster execution.
+
+      @defaultValue `0`
+     */
+    atol?: number
+
+    /**
+      The desired relative tolerance of the result. A larger tolerance will generally lead to faster execution.
+
+      @defaultValue `0`
+     */
+    rtol?: number
+
+    /**
+      If true (default), use a breadth-first approach to the problem. Otherwise use a depth-first approach.
+
+      @defaultValue `true`
+     */
+    breadth_first?: boolean
+
+    /**
+      Specify the leaf size of the underlying tree. See [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") for details.
+
+      @defaultValue `40`
+     */
+    leaf_size?: number
+
+    /**
+      Additional parameters to be passed to the tree for use with the metric. For more information, see the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree").
+     */
+    metric_params?: any
+  }) {
     this.id = `KernelDensity${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -103,7 +172,22 @@ ctor_KernelDensity = {k: v for k, v in ctor_KernelDensity.items() if v is not No
   /**
     Fit the Kernel Density model on the data.
    */
-  async fit(opts: KernelDensityFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+     */
+    y?: any
+
+    /**
+      List of sample weights attached to the data X.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This KernelDensity instance has already been disposed')
     }
@@ -137,7 +221,19 @@ pms_KernelDensity_fit = {k: v for k, v in pms_KernelDensity_fit.items() if v is 
 
     Currently, this is implemented only for gaussian and tophat kernels.
    */
-  async sample(opts: KernelDensitySampleOptions): Promise<ArrayLike[]> {
+  async sample(opts: {
+    /**
+      Number of samples to generate.
+
+      @defaultValue `1`
+     */
+    n_samples?: number
+
+    /**
+      Determines random number generation used to generate random samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+  }): Promise<ArrayLike[]> {
     if (this._isDisposed) {
       throw new Error('This KernelDensity instance has already been disposed')
     }
@@ -165,7 +261,17 @@ pms_KernelDensity_sample = {k: v for k, v in pms_KernelDensity_sample.items() if
   /**
     Compute the total log-likelihood under the model.
    */
-  async score(opts: KernelDensityScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      List of n\_features-dimensional data points. Each row corresponds to a single data point.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
+     */
+    y?: any
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This KernelDensity instance has already been disposed')
     }
@@ -193,9 +299,12 @@ pms_KernelDensity_score = {k: v for k, v in pms_KernelDensity_score.items() if v
   /**
     Compute the log-likelihood of each sample under the model.
    */
-  async score_samples(
-    opts: KernelDensityScoreSamplesOptions
-  ): Promise<NDArray> {
+  async score_samples(opts: {
+    /**
+      An array of points to query. Last dimension should match dimension of training data (n\_features).
+     */
+    X?: ArrayLike[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This KernelDensity instance has already been disposed')
     }
@@ -317,125 +426,4 @@ pms_KernelDensity_score_samples = {k: v for k, v in pms_KernelDensity_score_samp
         ._py`attr_KernelDensity_bandwidth_.tolist() if hasattr(attr_KernelDensity_bandwidth_, 'tolist') else attr_KernelDensity_bandwidth_`
     })()
   }
-}
-
-export interface KernelDensityOptions {
-  /**
-    The bandwidth of the kernel. If bandwidth is a float, it defines the bandwidth of the kernel. If bandwidth is a string, one of the estimation methods is implemented.
-
-    @defaultValue `1`
-   */
-  bandwidth?: number | 'scott' | 'silverman'
-
-  /**
-    The tree algorithm to use.
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'kd_tree' | 'ball_tree' | 'auto'
-
-  /**
-    The kernel to use.
-
-    @defaultValue `'gaussian'`
-   */
-  kernel?:
-    | 'gaussian'
-    | 'tophat'
-    | 'epanechnikov'
-    | 'exponential'
-    | 'linear'
-    | 'cosine'
-
-  /**
-    Metric to use for distance computation. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
-
-    Not all metrics are valid with all algorithms: refer to the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") and [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree"). Note that the normalization of the density output is correct only for the Euclidean distance metric.
-
-    @defaultValue `'euclidean'`
-   */
-  metric?: string
-
-  /**
-    The desired absolute tolerance of the result. A larger tolerance will generally lead to faster execution.
-
-    @defaultValue `0`
-   */
-  atol?: number
-
-  /**
-    The desired relative tolerance of the result. A larger tolerance will generally lead to faster execution.
-
-    @defaultValue `0`
-   */
-  rtol?: number
-
-  /**
-    If true (default), use a breadth-first approach to the problem. Otherwise use a depth-first approach.
-
-    @defaultValue `true`
-   */
-  breadth_first?: boolean
-
-  /**
-    Specify the leaf size of the underlying tree. See [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree") for details.
-
-    @defaultValue `40`
-   */
-  leaf_size?: number
-
-  /**
-    Additional parameters to be passed to the tree for use with the metric. For more information, see the documentation of [`BallTree`](sklearn.neighbors.BallTree.html#sklearn.neighbors.BallTree "sklearn.neighbors.BallTree") or [`KDTree`](sklearn.neighbors.KDTree.html#sklearn.neighbors.KDTree "sklearn.neighbors.KDTree").
-   */
-  metric_params?: any
-}
-
-export interface KernelDensityFitOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
-   */
-  y?: any
-
-  /**
-    List of sample weights attached to the data X.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface KernelDensitySampleOptions {
-  /**
-    Number of samples to generate.
-
-    @defaultValue `1`
-   */
-  n_samples?: number
-
-  /**
-    Determines random number generation used to generate random samples. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-}
-
-export interface KernelDensityScoreOptions {
-  /**
-    List of n\_features-dimensional data points. Each row corresponds to a single data point.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
-   */
-  y?: any
-}
-
-export interface KernelDensityScoreSamplesOptions {
-  /**
-    An array of points to query. Last dimension should match dimension of training data (n\_features).
-   */
-  X?: ArrayLike[]
 }

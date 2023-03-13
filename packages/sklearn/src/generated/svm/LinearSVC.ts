@@ -14,7 +14,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../svm.html#svm-classification).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
  */
 export class LinearSVC {
   id: string
@@ -24,7 +24,87 @@ export class LinearSVC {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: LinearSVCOptions) {
+  constructor(opts?: {
+    /**
+      Specifies the norm used in the penalization. The ‘l2’ penalty is the standard used in SVC. The ‘l1’ leads to `coef\_` vectors that are sparse.
+
+      @defaultValue `'l2'`
+     */
+    penalty?: 'l1' | 'l2'
+
+    /**
+      Specifies the loss function. ‘hinge’ is the standard SVM loss (used e.g. by the SVC class) while ‘squared\_hinge’ is the square of the hinge loss. The combination of `penalty='l1'` and `loss='hinge'` is not supported.
+
+      @defaultValue `'squared_hinge'`
+     */
+    loss?: 'hinge' | 'squared_hinge'
+
+    /**
+      Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features.
+
+      @defaultValue `true`
+     */
+    dual?: boolean
+
+    /**
+      Tolerance for stopping criteria.
+
+      @defaultValue `0.0001`
+     */
+    tol?: number
+
+    /**
+      Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive.
+
+      @defaultValue `1`
+     */
+    C?: number
+
+    /**
+      Determines the multi-class strategy if `y` contains more than two classes. `"ovr"` trains n\_classes one-vs-rest classifiers, while `"crammer\_singer"` optimizes a joint objective over all classes. While `crammer\_singer` is interesting from a theoretical perspective as it is consistent, it is seldom used in practice as it rarely leads to better accuracy and is more expensive to compute. If `"crammer\_singer"` is chosen, the options loss, penalty and dual will be ignored.
+
+      @defaultValue `'ovr'`
+     */
+    multi_class?: 'ovr' | 'crammer_singer'
+
+    /**
+      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be already centered).
+
+      @defaultValue `true`
+     */
+    fit_intercept?: boolean
+
+    /**
+      When self.fit\_intercept is `true`, instance vector x becomes `\[x, self.intercept\_scaling\]`, i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
+
+      @defaultValue `1`
+     */
+    intercept_scaling?: number
+
+    /**
+      Set the parameter C of class i to `class\_weight\[i\]\*C` for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
+     */
+    class_weight?: any | 'balanced'
+
+    /**
+      Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in liblinear that, if enabled, may not work properly in a multithreaded context.
+
+      @defaultValue `0`
+     */
+    verbose?: number
+
+    /**
+      Controls the pseudo random number generation for shuffling the data for the dual coordinate descent (if `dual=True`). When `dual=False` the underlying implementation of [`LinearSVC`](#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC") is not random and `random\_state` has no effect on the results. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
+     */
+    random_state?: number
+
+    /**
+      The maximum number of iterations to be run.
+
+      @defaultValue `1000`
+     */
+    max_iter?: number
+  }) {
     this.id = `LinearSVC${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -114,9 +194,12 @@ ctor_LinearSVC = {k: v for k, v in ctor_LinearSVC.items() if v is not None}`
 
     The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
    */
-  async decision_function(
-    opts: LinearSVCDecisionFunctionOptions
-  ): Promise<NDArray> {
+  async decision_function(opts: {
+    /**
+      The data matrix for which we want to get the confidence scores.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LinearSVC instance has already been disposed')
     }
@@ -146,7 +229,7 @@ pms_LinearSVC_decision_function = {k: v for k, v in pms_LinearSVC_decision_funct
 
     Converts the `coef\_` member (back) to a numpy.ndarray. This is the default format of `coef\_` and is required for fitting, so calling this method is only required on models that have previously been sparsified; otherwise, it is a no-op.
    */
-  async densify(opts: LinearSVCDensifyOptions): Promise<any> {
+  async densify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LinearSVC instance has already been disposed')
     }
@@ -172,7 +255,22 @@ pms_LinearSVC_densify = {k: v for k, v in pms_LinearSVC_densify.items() if v is 
   /**
     Fit the model according to the given training data.
    */
-  async fit(opts: LinearSVCFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target vector relative to X.
+     */
+    y?: ArrayLike
+
+    /**
+      Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LinearSVC instance has already been disposed')
     }
@@ -204,7 +302,12 @@ pms_LinearSVC_fit = {k: v for k, v in pms_LinearSVC_fit.items() if v is not None
   /**
     Predict class labels for samples in X.
    */
-  async predict(opts: LinearSVCPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      The data matrix for which we want to get the predictions.
+     */
+    X?: ArrayLike | SparseMatrix[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This LinearSVC instance has already been disposed')
     }
@@ -234,7 +337,22 @@ pms_LinearSVC_predict = {k: v for k, v in pms_LinearSVC_predict.items() if v is 
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: LinearSVCScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error('This LinearSVC instance has already been disposed')
     }
@@ -270,7 +388,7 @@ pms_LinearSVC_score = {k: v for k, v in pms_LinearSVC_score.items() if v is not 
 
     The `intercept\_` member is not converted.
    */
-  async sparsify(opts: LinearSVCSparsifyOptions): Promise<any> {
+  async sparsify(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This LinearSVC instance has already been disposed')
     }
@@ -437,137 +555,3 @@ pms_LinearSVC_sparsify = {k: v for k, v in pms_LinearSVC_sparsify.items() if v i
     })()
   }
 }
-
-export interface LinearSVCOptions {
-  /**
-    Specifies the norm used in the penalization. The ‘l2’ penalty is the standard used in SVC. The ‘l1’ leads to `coef\_` vectors that are sparse.
-
-    @defaultValue `'l2'`
-   */
-  penalty?: 'l1' | 'l2'
-
-  /**
-    Specifies the loss function. ‘hinge’ is the standard SVM loss (used e.g. by the SVC class) while ‘squared\_hinge’ is the square of the hinge loss. The combination of `penalty='l1'` and `loss='hinge'` is not supported.
-
-    @defaultValue `'squared_hinge'`
-   */
-  loss?: 'hinge' | 'squared_hinge'
-
-  /**
-    Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features.
-
-    @defaultValue `true`
-   */
-  dual?: boolean
-
-  /**
-    Tolerance for stopping criteria.
-
-    @defaultValue `0.0001`
-   */
-  tol?: number
-
-  /**
-    Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive.
-
-    @defaultValue `1`
-   */
-  C?: number
-
-  /**
-    Determines the multi-class strategy if `y` contains more than two classes. `"ovr"` trains n\_classes one-vs-rest classifiers, while `"crammer\_singer"` optimizes a joint objective over all classes. While `crammer\_singer` is interesting from a theoretical perspective as it is consistent, it is seldom used in practice as it rarely leads to better accuracy and is more expensive to compute. If `"crammer\_singer"` is chosen, the options loss, penalty and dual will be ignored.
-
-    @defaultValue `'ovr'`
-   */
-  multi_class?: 'ovr' | 'crammer_singer'
-
-  /**
-    Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be already centered).
-
-    @defaultValue `true`
-   */
-  fit_intercept?: boolean
-
-  /**
-    When self.fit\_intercept is `true`, instance vector x becomes `\[x, self.intercept\_scaling\]`, i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
-
-    @defaultValue `1`
-   */
-  intercept_scaling?: number
-
-  /**
-    Set the parameter C of class i to `class\_weight\[i\]\*C` for SVC. If not given, all classes are supposed to have weight one. The “balanced” mode uses the values of y to automatically adjust weights inversely proportional to class frequencies in the input data as `n\_samples / (n\_classes \* np.bincount(y))`.
-   */
-  class_weight?: any | 'balanced'
-
-  /**
-    Enable verbose output. Note that this setting takes advantage of a per-process runtime setting in liblinear that, if enabled, may not work properly in a multithreaded context.
-
-    @defaultValue `0`
-   */
-  verbose?: number
-
-  /**
-    Controls the pseudo random number generation for shuffling the data for the dual coordinate descent (if `dual=True`). When `dual=False` the underlying implementation of [`LinearSVC`](#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC") is not random and `random\_state` has no effect on the results. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
-   */
-  random_state?: number
-
-  /**
-    The maximum number of iterations to be run.
-
-    @defaultValue `1000`
-   */
-  max_iter?: number
-}
-
-export interface LinearSVCDecisionFunctionOptions {
-  /**
-    The data matrix for which we want to get the confidence scores.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface LinearSVCDensifyOptions {}
-
-export interface LinearSVCFitOptions {
-  /**
-    Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target vector relative to X.
-   */
-  y?: ArrayLike
-
-  /**
-    Array of weights that are assigned to individual samples. If not provided, then each sample is given unit weight.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface LinearSVCPredictOptions {
-  /**
-    The data matrix for which we want to get the predictions.
-   */
-  X?: ArrayLike | SparseMatrix[]
-}
-
-export interface LinearSVCScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface LinearSVCSparsifyOptions {}

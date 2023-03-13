@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../neighbors.html#classification).
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
  */
 export class KNeighborsClassifier {
   id: string
@@ -20,7 +20,63 @@ export class KNeighborsClassifier {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: KNeighborsClassifierOptions) {
+  constructor(opts?: {
+    /**
+      Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.KNeighborsClassifier.kneighbors "sklearn.neighbors.KNeighborsClassifier.kneighbors") queries.
+
+      @defaultValue `5`
+     */
+    n_neighbors?: number
+
+    /**
+      Weight function used in prediction. Possible values:
+
+      @defaultValue `'uniform'`
+     */
+    weights?: 'uniform' | 'distance'
+
+    /**
+      Algorithm used to compute the nearest neighbors:
+
+      @defaultValue `'auto'`
+     */
+    algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
+
+    /**
+      Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+
+      @defaultValue `30`
+     */
+    leaf_size?: number
+
+    /**
+      Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
+
+      @defaultValue `2`
+     */
+    p?: number
+
+    /**
+      Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
+
+      If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
+
+      If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
+
+      @defaultValue `'minkowski'`
+     */
+    metric?: string
+
+    /**
+      Additional keyword arguments for the metric function.
+     */
+    metric_params?: any
+
+    /**
+      The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsClassifier.fit "sklearn.neighbors.KNeighborsClassifier.fit") method.
+     */
+    n_jobs?: number
+  }) {
     this.id = `KNeighborsClassifier${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -105,7 +161,17 @@ ctor_KNeighborsClassifier = {k: v for k, v in ctor_KNeighborsClassifier.items() 
   /**
     Fit the k-nearest neighbors classifier from the training dataset.
    */
-  async fit(opts: KNeighborsClassifierFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      Training data.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Target values.
+     */
+    y?: ArrayLike | SparseMatrix
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsClassifier instance has already been disposed'
@@ -139,9 +205,24 @@ pms_KNeighborsClassifier_fit = {k: v for k, v in pms_KNeighborsClassifier_fit.it
 
     Returns indices of and distances to the neighbors of each point.
    */
-  async kneighbors(
-    opts: KNeighborsClassifierKneighborsOptions
-  ): Promise<NDArray[]> {
+  async kneighbors(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
+     */
+    X?: ArrayLike | SparseMatrix
+
+    /**
+      Number of neighbors required for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Whether or not to return the distances.
+
+      @defaultValue `true`
+     */
+    return_distance?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsClassifier instance has already been disposed'
@@ -175,9 +256,24 @@ pms_KNeighborsClassifier_kneighbors = {k: v for k, v in pms_KNeighborsClassifier
   /**
     Compute the (weighted) graph of k-Neighbors for points in X.
    */
-  async kneighbors_graph(
-    opts: KNeighborsClassifierKneighborsGraphOptions
-  ): Promise<any[]> {
+  async kneighbors_graph(opts: {
+    /**
+      The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
+     */
+    X?: any
+
+    /**
+      Number of neighbors for each sample. The default is the value passed to the constructor.
+     */
+    n_neighbors?: number
+
+    /**
+      Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
+
+      @defaultValue `'connectivity'`
+     */
+    mode?: 'connectivity' | 'distance'
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsClassifier instance has already been disposed'
@@ -212,7 +308,12 @@ pms_KNeighborsClassifier_kneighbors_graph = {k: v for k, v in pms_KNeighborsClas
   /**
     Predict the class labels for the provided data.
    */
-  async predict(opts: KNeighborsClassifierPredictOptions): Promise<NDArray> {
+  async predict(opts: {
+    /**
+      Test samples.
+     */
+    X?: any
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsClassifier instance has already been disposed'
@@ -242,9 +343,12 @@ pms_KNeighborsClassifier_predict = {k: v for k, v in pms_KNeighborsClassifier_pr
   /**
     Return probability estimates for the test data X.
    */
-  async predict_proba(
-    opts: KNeighborsClassifierPredictProbaOptions
-  ): Promise<any> {
+  async predict_proba(opts: {
+    /**
+      Test samples.
+     */
+    X?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsClassifier instance has already been disposed'
@@ -278,7 +382,22 @@ pms_KNeighborsClassifier_predict_proba = {k: v for k, v in pms_KNeighborsClassif
 
     In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
    */
-  async score(opts: KNeighborsClassifierScoreOptions): Promise<number> {
+  async score(opts: {
+    /**
+      Test samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      True labels for `X`.
+     */
+    y?: ArrayLike
+
+    /**
+      Sample weights.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<number> {
     if (this._isDisposed) {
       throw new Error(
         'This KNeighborsClassifier instance has already been disposed'
@@ -497,143 +616,4 @@ pms_KNeighborsClassifier_score = {k: v for k, v in pms_KNeighborsClassifier_scor
         ._py`attr_KNeighborsClassifier_outputs_2d_.tolist() if hasattr(attr_KNeighborsClassifier_outputs_2d_, 'tolist') else attr_KNeighborsClassifier_outputs_2d_`
     })()
   }
-}
-
-export interface KNeighborsClassifierOptions {
-  /**
-    Number of neighbors to use by default for [`kneighbors`](#sklearn.neighbors.KNeighborsClassifier.kneighbors "sklearn.neighbors.KNeighborsClassifier.kneighbors") queries.
-
-    @defaultValue `5`
-   */
-  n_neighbors?: number
-
-  /**
-    Weight function used in prediction. Possible values:
-
-    @defaultValue `'uniform'`
-   */
-  weights?: 'uniform' | 'distance'
-
-  /**
-    Algorithm used to compute the nearest neighbors:
-
-    @defaultValue `'auto'`
-   */
-  algorithm?: 'auto' | 'ball_tree' | 'kd_tree' | 'brute'
-
-  /**
-    Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
-
-    @defaultValue `30`
-   */
-  leaf_size?: number
-
-  /**
-    Power parameter for the Minkowski metric. When p = 1, this is equivalent to using manhattan\_distance (l1), and euclidean\_distance (l2) for p = 2. For arbitrary p, minkowski\_distance (l\_p) is used.
-
-    @defaultValue `2`
-   */
-  p?: number
-
-  /**
-    Metric to use for distance computation. Default is “minkowski”, which results in the standard Euclidean distance when p = 2. See the documentation of [scipy.spatial.distance](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) and the metrics listed in [`distance\_metrics`](sklearn.metrics.pairwise.distance_metrics.html#sklearn.metrics.pairwise.distance_metrics "sklearn.metrics.pairwise.distance_metrics") for valid metric values.
-
-    If metric is “precomputed”, X is assumed to be a distance matrix and must be square during fit. X may be a [sparse graph](../../glossary.html#term-sparse-graph), in which case only “nonzero” elements may be considered neighbors.
-
-    If metric is a callable function, it takes two arrays representing 1D vectors as inputs and must return one value indicating the distance between those vectors. This works for Scipy’s metrics, but is less efficient than passing the metric name as a string.
-
-    @defaultValue `'minkowski'`
-   */
-  metric?: string
-
-  /**
-    Additional keyword arguments for the metric function.
-   */
-  metric_params?: any
-
-  /**
-    The number of parallel jobs to run for neighbors search. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. Doesn’t affect [`fit`](#sklearn.neighbors.KNeighborsClassifier.fit "sklearn.neighbors.KNeighborsClassifier.fit") method.
-   */
-  n_jobs?: number
-}
-
-export interface KNeighborsClassifierFitOptions {
-  /**
-    Training data.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Target values.
-   */
-  y?: ArrayLike | SparseMatrix
-}
-
-export interface KNeighborsClassifierKneighborsOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor.
-   */
-  X?: ArrayLike | SparseMatrix
-
-  /**
-    Number of neighbors required for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Whether or not to return the distances.
-
-    @defaultValue `true`
-   */
-  return_distance?: boolean
-}
-
-export interface KNeighborsClassifierKneighborsGraphOptions {
-  /**
-    The query point or points. If not provided, neighbors of each indexed point are returned. In this case, the query point is not considered its own neighbor. For `metric='precomputed'` the shape should be (n\_queries, n\_indexed). Otherwise the shape should be (n\_queries, n\_features).
-   */
-  X?: any
-
-  /**
-    Number of neighbors for each sample. The default is the value passed to the constructor.
-   */
-  n_neighbors?: number
-
-  /**
-    Type of returned matrix: ‘connectivity’ will return the connectivity matrix with ones and zeros, in ‘distance’ the edges are distances between points, type of distance depends on the selected metric parameter in NearestNeighbors class.
-
-    @defaultValue `'connectivity'`
-   */
-  mode?: 'connectivity' | 'distance'
-}
-
-export interface KNeighborsClassifierPredictOptions {
-  /**
-    Test samples.
-   */
-  X?: any
-}
-
-export interface KNeighborsClassifierPredictProbaOptions {
-  /**
-    Test samples.
-   */
-  X?: any
-}
-
-export interface KNeighborsClassifierScoreOptions {
-  /**
-    Test samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    True labels for `X`.
-   */
-  y?: ArrayLike
-
-  /**
-    Sample weights.
-   */
-  sample_weight?: ArrayLike
 }

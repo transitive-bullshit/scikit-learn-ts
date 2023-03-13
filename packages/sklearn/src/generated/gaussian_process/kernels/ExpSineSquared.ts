@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The ExpSineSquared kernel allows one to model functions which repeat themselves exactly. It is parameterized by a length scale parameter \\(l>0\\) and a periodicity parameter \\(p>0\\). Only the isotropic variant where \\(l\\) is a scalar is supported at the moment. The kernel is given by:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.ExpSineSquared.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.ExpSineSquared.html)
  */
 export class ExpSineSquared {
   id: string
@@ -20,7 +20,31 @@ export class ExpSineSquared {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: ExpSineSquaredOptions) {
+  constructor(opts?: {
+    /**
+      The length scale of the kernel.
+
+      @defaultValue `1`
+     */
+    length_scale?: any
+
+    /**
+      The periodicity of the kernel.
+
+      @defaultValue `1`
+     */
+    periodicity?: any
+
+    /**
+      The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
+     */
+    length_scale_bounds?: 'fixed'
+
+    /**
+      The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘periodicity’ cannot be changed during hyperparameter tuning.
+     */
+    periodicity_bounds?: 'fixed'
+  }) {
     this.id = `ExpSineSquared${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -99,7 +123,24 @@ ctor_ExpSineSquared = {k: v for k, v in ctor_ExpSineSquared.items() if v is not 
   /**
     Return the kernel k(X, Y) and optionally its gradient.
    */
-  async __call__(opts: ExpSineSquaredCallOptions): Promise<NDArray[]> {
+  async __call__(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: NDArray[]
+
+    /**
+      Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
+     */
+    Y?: NDArray[]
+
+    /**
+      Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
+
+      @defaultValue `false`
+     */
+    eval_gradient?: boolean
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error('This ExpSineSquared instance has already been disposed')
     }
@@ -131,9 +172,12 @@ pms_ExpSineSquared___call__ = {k: v for k, v in pms_ExpSineSquared___call__.item
   /**
     Returns a clone of self with given hyperparameters theta.
    */
-  async clone_with_theta(
-    opts: ExpSineSquaredCloneWithThetaOptions
-  ): Promise<any> {
+  async clone_with_theta(opts: {
+    /**
+      The hyperparameters
+     */
+    theta?: NDArray
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ExpSineSquared instance has already been disposed')
     }
@@ -166,7 +210,12 @@ pms_ExpSineSquared_clone_with_theta = {k: v for k, v in pms_ExpSineSquared_clone
 
     The result of this method is identical to np.diag(self(X)); however, it can be evaluated more efficiently since only the diagonal is evaluated.
    */
-  async diag(opts: ExpSineSquaredDiagOptions): Promise<NDArray> {
+  async diag(opts: {
+    /**
+      Left argument of the returned kernel k(X, Y)
+     */
+    X?: NDArray[]
+  }): Promise<NDArray> {
     if (this._isDisposed) {
       throw new Error('This ExpSineSquared instance has already been disposed')
     }
@@ -194,7 +243,7 @@ pms_ExpSineSquared_diag = {k: v for k, v in pms_ExpSineSquared_diag.items() if v
   /**
     Returns whether the kernel is stationary.
    */
-  async is_stationary(opts: ExpSineSquaredIsStationaryOptions): Promise<any> {
+  async is_stationary(opts: {}): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This ExpSineSquared instance has already been disposed')
     }
@@ -239,64 +288,3 @@ pms_ExpSineSquared_is_stationary = {k: v for k, v in pms_ExpSineSquared_is_stati
     })()
   }
 }
-
-export interface ExpSineSquaredOptions {
-  /**
-    The length scale of the kernel.
-
-    @defaultValue `1`
-   */
-  length_scale?: any
-
-  /**
-    The periodicity of the kernel.
-
-    @defaultValue `1`
-   */
-  periodicity?: any
-
-  /**
-    The lower and upper bound on ‘length\_scale’. If set to “fixed”, ‘length\_scale’ cannot be changed during hyperparameter tuning.
-   */
-  length_scale_bounds?: 'fixed'
-
-  /**
-    The lower and upper bound on ‘periodicity’. If set to “fixed”, ‘periodicity’ cannot be changed during hyperparameter tuning.
-   */
-  periodicity_bounds?: 'fixed'
-}
-
-export interface ExpSineSquaredCallOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: NDArray[]
-
-  /**
-    Right argument of the returned kernel k(X, Y). If `undefined`, k(X, X) if evaluated instead.
-   */
-  Y?: NDArray[]
-
-  /**
-    Determines whether the gradient with respect to the log of the kernel hyperparameter is computed. Only supported when Y is `undefined`.
-
-    @defaultValue `false`
-   */
-  eval_gradient?: boolean
-}
-
-export interface ExpSineSquaredCloneWithThetaOptions {
-  /**
-    The hyperparameters
-   */
-  theta?: NDArray
-}
-
-export interface ExpSineSquaredDiagOptions {
-  /**
-    Left argument of the returned kernel k(X, Y)
-   */
-  X?: NDArray[]
-}
-
-export interface ExpSineSquaredIsStationaryOptions {}

@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The standard score of a sample `x` is calculated as:
 
-  @see https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
+  [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)
  */
 export class StandardScaler {
   id: string
@@ -20,7 +20,28 @@ export class StandardScaler {
   _isInitialized: boolean = false
   _isDisposed: boolean = false
 
-  constructor(opts?: StandardScalerOptions) {
+  constructor(opts?: {
+    /**
+      If `false`, try to avoid a copy and do inplace scaling instead. This is not guaranteed to always work inplace; e.g. if the data is not a NumPy array or scipy.sparse CSR matrix, a copy may still be returned.
+
+      @defaultValue `true`
+     */
+    copy?: boolean
+
+    /**
+      If `true`, center the data before scaling. This does not work (and will raise an exception) when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
+
+      @defaultValue `true`
+     */
+    with_mean?: boolean
+
+    /**
+      If `true`, scale the data to unit variance (or equivalently, unit standard deviation).
+
+      @defaultValue `true`
+     */
+    with_std?: boolean
+  }) {
     this.id = `StandardScaler${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
   }
@@ -97,7 +118,22 @@ ctor_StandardScaler = {k: v for k, v in ctor_StandardScaler.items() if v is not 
   /**
     Compute the mean and std to be used for later scaling.
    */
-  async fit(opts: StandardScalerFitOptions): Promise<any> {
+  async fit(opts: {
+    /**
+      The data used to compute the mean and standard deviation used for later scaling along the features axis.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+
+    /**
+      Individual weights for each sample.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
     }
@@ -131,7 +167,22 @@ pms_StandardScaler_fit = {k: v for k, v in pms_StandardScaler_fit.items() if v i
 
     Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
    */
-  async fit_transform(opts: StandardScalerFitTransformOptions): Promise<any[]> {
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
     }
@@ -163,9 +214,12 @@ pms_StandardScaler_fit_transform = {k: v for k, v in pms_StandardScaler_fit_tran
   /**
     Get output feature names for transformation.
    */
-  async get_feature_names_out(
-    opts: StandardScalerGetFeatureNamesOutOptions
-  ): Promise<any> {
+  async get_feature_names_out(opts: {
+    /**
+      Input features.
+     */
+    input_features?: any
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
     }
@@ -196,9 +250,17 @@ pms_StandardScaler_get_feature_names_out = {k: v for k, v in pms_StandardScaler_
   /**
     Scale back the data to the original representation.
    */
-  async inverse_transform(
-    opts: StandardScalerInverseTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async inverse_transform(opts: {
+    /**
+      The data used to scale along the features axis.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Copy the input X or not.
+     */
+    copy?: boolean
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
     }
@@ -234,7 +296,22 @@ pms_StandardScaler_inverse_transform = {k: v for k, v in pms_StandardScaler_inve
 
     The algorithm for incremental mean and std is given in Equation 1.5a,b in Chan, Tony F., Gene H. Golub, and Randall J. LeVeque. “Algorithms for computing the sample variance: Analysis and recommendations.” The American Statistician 37.3 (1983): 242-247:
    */
-  async partial_fit(opts: StandardScalerPartialFitOptions): Promise<any> {
+  async partial_fit(opts: {
+    /**
+      The data used to compute the mean and standard deviation used for later scaling along the features axis.
+     */
+    X?: ArrayLike | SparseMatrix[]
+
+    /**
+      Ignored.
+     */
+    y?: any
+
+    /**
+      Individual weights for each sample.
+     */
+    sample_weight?: ArrayLike
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
     }
@@ -268,7 +345,12 @@ pms_StandardScaler_partial_fit = {k: v for k, v in pms_StandardScaler_partial_fi
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
    */
-  async set_output(opts: StandardScalerSetOutputOptions): Promise<any> {
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
     }
@@ -296,9 +378,17 @@ pms_StandardScaler_set_output = {k: v for k, v in pms_StandardScaler_set_output.
   /**
     Perform standardization by centering and scaling.
    */
-  async transform(
-    opts: StandardScalerTransformOptions
-  ): Promise<NDArray | SparseMatrix[]> {
+  async transform(opts: {
+    /**
+      The data used to scale along the features axis.
+     */
+    X?: SparseMatrix[]
+
+    /**
+      Copy the input X or not.
+     */
+    copy?: boolean
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This StandardScaler instance has already been disposed')
     }
@@ -468,116 +558,4 @@ pms_StandardScaler_transform = {k: v for k, v in pms_StandardScaler_transform.it
         ._py`attr_StandardScaler_n_samples_seen_.tolist() if hasattr(attr_StandardScaler_n_samples_seen_, 'tolist') else attr_StandardScaler_n_samples_seen_`
     })()
   }
-}
-
-export interface StandardScalerOptions {
-  /**
-    If `false`, try to avoid a copy and do inplace scaling instead. This is not guaranteed to always work inplace; e.g. if the data is not a NumPy array or scipy.sparse CSR matrix, a copy may still be returned.
-
-    @defaultValue `true`
-   */
-  copy?: boolean
-
-  /**
-    If `true`, center the data before scaling. This does not work (and will raise an exception) when attempted on sparse matrices, because centering them entails building a dense matrix which in common use cases is likely to be too large to fit in memory.
-
-    @defaultValue `true`
-   */
-  with_mean?: boolean
-
-  /**
-    If `true`, scale the data to unit variance (or equivalently, unit standard deviation).
-
-    @defaultValue `true`
-   */
-  with_std?: boolean
-}
-
-export interface StandardScalerFitOptions {
-  /**
-    The data used to compute the mean and standard deviation used for later scaling along the features axis.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-
-  /**
-    Individual weights for each sample.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface StandardScalerFitTransformOptions {
-  /**
-    Input samples.
-   */
-  X?: ArrayLike[]
-
-  /**
-    Target values (`undefined` for unsupervised transformations).
-   */
-  y?: ArrayLike
-
-  /**
-    Additional fit parameters.
-   */
-  fit_params?: any
-}
-
-export interface StandardScalerGetFeatureNamesOutOptions {
-  /**
-    Input features.
-   */
-  input_features?: any
-}
-
-export interface StandardScalerInverseTransformOptions {
-  /**
-    The data used to scale along the features axis.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Copy the input X or not.
-   */
-  copy?: boolean
-}
-
-export interface StandardScalerPartialFitOptions {
-  /**
-    The data used to compute the mean and standard deviation used for later scaling along the features axis.
-   */
-  X?: ArrayLike | SparseMatrix[]
-
-  /**
-    Ignored.
-   */
-  y?: any
-
-  /**
-    Individual weights for each sample.
-   */
-  sample_weight?: ArrayLike
-}
-
-export interface StandardScalerSetOutputOptions {
-  /**
-    Configure output of `transform` and `fit\_transform`.
-   */
-  transform?: 'default' | 'pandas'
-}
-
-export interface StandardScalerTransformOptions {
-  /**
-    The data used to scale along the features axis.
-   */
-  X?: SparseMatrix[]
-
-  /**
-    Copy the input X or not.
-   */
-  copy?: boolean
 }
