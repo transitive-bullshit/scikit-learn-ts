@@ -44,7 +44,8 @@ const config: DocsThemeConfig = {
     }
   },
   sidebar: {
-    titleComponent
+    titleComponent,
+    toggleButton: true
   },
   head: function useHead() {
     const config = useConfig()
