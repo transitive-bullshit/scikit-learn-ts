@@ -35,6 +35,9 @@ const config: DocsThemeConfig = {
       }
     }
   },
+  sidebar: {
+    titleComponent
+  },
   head: function useHead() {
     const { title } = useConfig()
     // const { route } = useRouter()
@@ -73,4 +76,16 @@ const config: DocsThemeConfig = {
     component: null
   }
 }
+
+// TODO: get memoization working here
+function titleComponent({
+  title
+}: {
+  title: string
+  type: string
+  route: string
+}) {
+  return <span>{title}</span>
+}
+
 export default config
