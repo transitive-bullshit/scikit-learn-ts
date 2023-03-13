@@ -1,4 +1,4 @@
-![sklearn ts logo](https://github.com/transitive-bullshit/scikit-learn-ts/raw/main/media/scikit-learn-ts-social.png)
+![sklearn ts logo](/social.png)
 
 <p align="center">
   <a href="https://www.npmjs.com/package/sklearn"><img alt="NPM" src="https://img.shields.io/npm/v/sklearn.svg" /></a>
