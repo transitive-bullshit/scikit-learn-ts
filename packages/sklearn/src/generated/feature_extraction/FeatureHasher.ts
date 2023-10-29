@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   This class is a low-memory alternative to DictVectorizer and CountVectorizer, intended for large-scale (online) learning and situations where memory is tight, e.g. when running prediction code on embedded devices.
 
+  For an efficiency comparision of the different feature extractors, see [FeatureHasher and DictVectorizer Comparison](../../auto_examples/text/plot_hashing_vs_dict_vectorizer.html#sphx-glr-auto-examples-text-plot-hashing-vs-dict-vectorizer-py).
+
   Read more in the [User Guide](../feature_extraction.html#feature-hashing).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html)
@@ -216,6 +218,43 @@ pms_FeatureHasher_fit_transform = {k: v for k, v in pms_FeatureHasher_fit_transf
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This FeatureHasher instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'FeatureHasher must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_FeatureHasher_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_FeatureHasher_get_metadata_routing = {k: v for k, v in pms_FeatureHasher_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_FeatureHasher_get_metadata_routing = bridgeFeatureHasher[${this.id}].get_metadata_routing(**pms_FeatureHasher_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_FeatureHasher_get_metadata_routing.tolist() if hasattr(res_FeatureHasher_get_metadata_routing, 'tolist') else res_FeatureHasher_get_metadata_routing`
+  }
+
+  /**
     Set output container.
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
@@ -248,6 +287,45 @@ pms_FeatureHasher_set_output = {k: v for k, v in pms_FeatureHasher_set_output.it
     // convert the result from python to node.js
     return this
       ._py`res_FeatureHasher_set_output.tolist() if hasattr(res_FeatureHasher_set_output, 'tolist') else res_FeatureHasher_set_output`
+  }
+
+  /**
+    Request metadata passed to the `transform` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_transform_request(opts: {
+    /**
+      Metadata routing for `raw\_X` parameter in `transform`.
+     */
+    raw_X?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This FeatureHasher instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'FeatureHasher must call init() before set_transform_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_FeatureHasher_set_transform_request = {'raw_X': ${
+      opts['raw_X'] ?? undefined
+    }}
+
+pms_FeatureHasher_set_transform_request = {k: v for k, v in pms_FeatureHasher_set_transform_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_FeatureHasher_set_transform_request = bridgeFeatureHasher[${this.id}].set_transform_request(**pms_FeatureHasher_set_transform_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_FeatureHasher_set_transform_request.tolist() if hasattr(res_FeatureHasher_set_transform_request, 'tolist') else res_FeatureHasher_set_transform_request`
   }
 
   /**

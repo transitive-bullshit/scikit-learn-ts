@@ -4,6 +4,8 @@ Linear Support Vector Regression.
 
 Similar to SVR with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.
 
+The main differences between [`LinearSVR`](#sklearn.svm.LinearSVR "sklearn.svm.LinearSVR") and [`SVR`](sklearn.svm.SVR.html#sklearn.svm.SVR "sklearn.svm.SVR") lie in the loss function used by default, and in the handling of intercept regularization between those two implementations.
+
 This class supports both dense and sparse input.
 
 Read more in the User Guide.
@@ -26,10 +28,10 @@ new LinearSVR(opts?: object): LinearSVR;
 | :------ | :------ | :------ |
 | `opts?` | `object` | - |
 | `opts.C?` | `number` | Regularization parameter. The strength of the regularization is inversely proportional to C. Must be strictly positive.  `Default Value`  `1` |
-| `opts.dual?` | `boolean` | Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features.  `Default Value`  `true` |
+| `opts.dual?` | `boolean` \| `"auto"` | Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features. `dual="auto"` will choose the value of the parameter automatically, based on the values of `n\_samples`, `n\_features` and `loss`. If `n\_samples` < `n\_features` and optimizer supports chosen `loss`, then dual will be set to `true`, otherwise it will be set to `false`.  `Default Value`  `true` |
 | `opts.epsilon?` | `number` | Epsilon parameter in the epsilon-insensitive loss function. Note that the value of this parameter depends on the scale of the target variable y. If unsure, set `epsilon=0`.  `Default Value`  `0` |
-| `opts.fit_intercept?` | `boolean` | Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be already centered).  `Default Value`  `true` |
-| `opts.intercept_scaling?` | `number` | When self.fit\_intercept is `true`, instance vector x becomes \[x, self.intercept\_scaling\], i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.  `Default Value`  `1` |
+| `opts.fit_intercept?` | `boolean` | Whether or not to fit an intercept. If set to `true`, the feature vector is extended to include an intercept term: `\[x\_1, ..., x\_n, 1\]`, where 1 corresponds to the intercept. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be already centered).  `Default Value`  `true` |
+| `opts.intercept_scaling?` | `number` | When `fit\_intercept` is `true`, the instance vector x becomes `\[x\_1, ..., x\_n, intercept\_scaling\]`, i.e. a “synthetic” feature with a constant value equal to `intercept\_scaling` is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight. Note that liblinear internally penalizes the intercept, treating it like any other term in the feature vector. To reduce the impact of the regularization on the intercept, the `intercept\_scaling` parameter can be set to a value greater than 1; the higher the value of `intercept\_scaling`, the lower the impact of regularization on it. Then, the weights become `\[w\_x\_1, ..., w\_x\_n, w\_intercept\*intercept\_scaling\]`, where `w\_x\_1, ..., w\_x\_n` represent the feature weights and the intercept weight is scaled by `intercept\_scaling`. This scaling allows the intercept term to have a different regularization behavior compared to the other features.  `Default Value`  `1` |
 | `opts.loss?` | `"epsilon_insensitive"` \| `"squared_epsilon_insensitive"` | Specifies the loss function. The epsilon-insensitive loss (standard SVR) is the L1 loss, while the squared epsilon-insensitive loss (‘squared\_epsilon\_insensitive’) is the L2 loss.  `Default Value`  `'epsilon_insensitive'` |
 | `opts.max_iter?` | `number` | The maximum number of iterations to be run.  `Default Value`  `1000` |
 | `opts.random_state?` | `number` | Controls the pseudo random number generation for shuffling the data. Pass an int for reproducible output across multiple function calls. See Glossary. |
@@ -40,7 +42,7 @@ new LinearSVR(opts?: object): LinearSVR;
 
 [`LinearSVR`](LinearSVR.md)
 
-Defined in:  [generated/svm/LinearSVR.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L27)
+Defined in:  [generated/svm/LinearSVR.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L29)
 
 ## Methods
 
@@ -60,7 +62,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/svm/LinearSVR.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L162)
+Defined in:  [generated/svm/LinearSVR.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L164)
 
 ### fit()
 
@@ -85,7 +87,32 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/svm/LinearSVR.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L179)
+Defined in:  [generated/svm/LinearSVR.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L181)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check User Guide on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/svm/LinearSVR.ts:230](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L230)
 
 ### init()
 
@@ -109,7 +136,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/svm/LinearSVR.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L113)
+Defined in:  [generated/svm/LinearSVR.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L115)
 
 ### predict()
 
@@ -132,7 +159,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/svm/LinearSVR.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L226)
+Defined in:  [generated/svm/LinearSVR.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L265)
 
 ### score()
 
@@ -159,7 +186,61 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/svm/LinearSVR.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L259)
+Defined in:  [generated/svm/LinearSVR.ts:298](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L298)
+
+### set\_fit\_request()
+
+Request metadata passed to the `fit` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_fit_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `fit`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/svm/LinearSVR.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L349)
+
+### set\_score\_request()
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_score_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/svm/LinearSVR.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L386)
 
 ## Properties
 
@@ -167,31 +248,31 @@ Defined in:  [generated/svm/LinearSVR.ts:259](https://github.com/transitive-bull
 
 > `boolean`  = `false`
 
-Defined in:  [generated/svm/LinearSVR.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L25)
+Defined in:  [generated/svm/LinearSVR.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/svm/LinearSVR.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L24)
+Defined in:  [generated/svm/LinearSVR.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/svm/LinearSVR.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L23)
+Defined in:  [generated/svm/LinearSVR.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/svm/LinearSVR.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L20)
+Defined in:  [generated/svm/LinearSVR.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/svm/LinearSVR.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L21)
+Defined in:  [generated/svm/LinearSVR.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L23)
 
 ## Accessors
 
@@ -211,7 +292,7 @@ coef_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/svm/LinearSVR.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L308)
+Defined in: [generated/svm/LinearSVR.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L421)
 
 ### feature\_names\_in\_
 
@@ -227,7 +308,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/svm/LinearSVR.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L379)
+Defined in: [generated/svm/LinearSVR.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L492)
 
 ### intercept\_
 
@@ -243,7 +324,7 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/svm/LinearSVR.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L331)
+Defined in: [generated/svm/LinearSVR.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L444)
 
 ### n\_features\_in\_
 
@@ -259,7 +340,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/svm/LinearSVR.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L354)
+Defined in: [generated/svm/LinearSVR.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L467)
 
 ### n\_iter\_
 
@@ -275,7 +356,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/svm/LinearSVR.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L404)
+Defined in: [generated/svm/LinearSVR.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L517)
 
 ### py
 
@@ -289,7 +370,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/svm/LinearSVR.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L100)
+Defined in:  [generated/svm/LinearSVR.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L102)
 
 #### Signature
 
@@ -307,4 +388,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/svm/LinearSVR.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/svm/LinearSVR.ts#L104)
+Defined in: [generated/svm/LinearSVR.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/LinearSVR.ts#L106)

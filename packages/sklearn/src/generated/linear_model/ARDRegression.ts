@@ -24,11 +24,9 @@ export class ARDRegression {
 
   constructor(opts?: {
     /**
-      Maximum number of iterations.
-
-      @defaultValue `300`
+      Maximum number of iterations. If `undefined`, it corresponds to `max\_iter=300`.
      */
-    n_iter?: number
+    max_iter?: number
 
     /**
       Stop the algorithm if w has converged.
@@ -99,6 +97,11 @@ export class ARDRegression {
       @defaultValue `false`
      */
     verbose?: boolean
+
+    /**
+      Maximum number of iterations.
+     */
+    n_iter?: number
   }) {
     this.id = `ARDRegression${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -140,8 +143,8 @@ except NameError: bridgeARDRegression = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_ARDRegression = {'n_iter': ${
-      this.opts['n_iter'] ?? undefined
+    await this._py.ex`ctor_ARDRegression = {'max_iter': ${
+      this.opts['max_iter'] ?? undefined
     }, 'tol': ${this.opts['tol'] ?? undefined}, 'alpha_1': ${
       this.opts['alpha_1'] ?? undefined
     }, 'alpha_2': ${this.opts['alpha_2'] ?? undefined}, 'lambda_1': ${
@@ -152,7 +155,9 @@ except NameError: bridgeARDRegression = {}
       this.opts['threshold_lambda'] ?? undefined
     }, 'fit_intercept': ${this.opts['fit_intercept'] ?? undefined}, 'copy_X': ${
       this.opts['copy_X'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}}
+    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'n_iter': ${
+      this.opts['n_iter'] ?? undefined
+    }}
 
 ctor_ARDRegression = {k: v for k, v in ctor_ARDRegression.items() if v is not None}`
 
@@ -221,6 +226,43 @@ pms_ARDRegression_fit = {k: v for k, v in pms_ARDRegression_fit.items() if v is 
     // convert the result from python to node.js
     return this
       ._py`res_ARDRegression_fit.tolist() if hasattr(res_ARDRegression_fit, 'tolist') else res_ARDRegression_fit`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This ARDRegression instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ARDRegression must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_ARDRegression_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_ARDRegression_get_metadata_routing = {k: v for k, v in pms_ARDRegression_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ARDRegression_get_metadata_routing = bridgeARDRegression[${this.id}].get_metadata_routing(**pms_ARDRegression_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ARDRegression_get_metadata_routing.tolist() if hasattr(res_ARDRegression_get_metadata_routing, 'tolist') else res_ARDRegression_get_metadata_routing`
   }
 
   /**
@@ -314,6 +356,84 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
     // convert the result from python to node.js
     return this
       ._py`res_ARDRegression_score.tolist() if hasattr(res_ARDRegression_score, 'tolist') else res_ARDRegression_score`
+  }
+
+  /**
+    Request metadata passed to the `predict` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_predict_request(opts: {
+    /**
+      Metadata routing for `return\_std` parameter in `predict`.
+     */
+    return_std?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This ARDRegression instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ARDRegression must call init() before set_predict_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_ARDRegression_set_predict_request = {'return_std': ${
+      opts['return_std'] ?? undefined
+    }}
+
+pms_ARDRegression_set_predict_request = {k: v for k, v in pms_ARDRegression_set_predict_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ARDRegression_set_predict_request = bridgeARDRegression[${this.id}].set_predict_request(**pms_ARDRegression_set_predict_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ARDRegression_set_predict_request.tolist() if hasattr(res_ARDRegression_set_predict_request, 'tolist') else res_ARDRegression_set_predict_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This ARDRegression instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ARDRegression must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_ARDRegression_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_ARDRegression_set_score_request = {k: v for k, v in pms_ARDRegression_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ARDRegression_set_score_request = bridgeARDRegression[${this.id}].set_score_request(**pms_ARDRegression_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ARDRegression_set_score_request.tolist() if hasattr(res_ARDRegression_set_score_request, 'tolist') else res_ARDRegression_set_score_request`
   }
 
   /**
@@ -428,6 +548,29 @@ pms_ARDRegression_score = {k: v for k, v in pms_ARDRegression_score.items() if v
       // convert the result from python to node.js
       return this
         ._py`attr_ARDRegression_scores_.tolist() if hasattr(attr_ARDRegression_scores_, 'tolist') else attr_ARDRegression_scores_`
+    })()
+  }
+
+  /**
+    The actual number of iterations to reach the stopping criterion.
+   */
+  get n_iter_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error('This ARDRegression instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('ARDRegression must call init() before accessing n_iter_')
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_ARDRegression_n_iter_ = bridgeARDRegression[${this.id}].n_iter_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_ARDRegression_n_iter_.tolist() if hasattr(attr_ARDRegression_n_iter_, 'tolist') else attr_ARDRegression_n_iter_`
     })()
   }
 

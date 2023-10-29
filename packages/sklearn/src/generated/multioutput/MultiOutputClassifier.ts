@@ -31,7 +31,7 @@ export class MultiOutputClassifier {
 
       When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -167,6 +167,46 @@ pms_MultiOutputClassifier_fit = {k: v for k, v in pms_MultiOutputClassifier_fit.
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputClassifier_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_MultiOutputClassifier_get_metadata_routing = {k: v for k, v in pms_MultiOutputClassifier_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_get_metadata_routing = bridgeMultiOutputClassifier[${this.id}].get_metadata_routing(**pms_MultiOutputClassifier_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_get_metadata_routing.tolist() if hasattr(res_MultiOutputClassifier_get_metadata_routing, 'tolist') else res_MultiOutputClassifier_get_metadata_routing`
+  }
+
+  /**
     Incrementally fit a separate model for each class output.
    */
   async partial_fit(opts: {
@@ -189,6 +229,13 @@ pms_MultiOutputClassifier_fit = {k: v for k, v in pms_MultiOutputClassifier_fit.
       Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters passed to the `estimator.partial\_fit` method of each sub-estimator.
+
+      Only available if `enable\_metadata\_routing=True`. See the [User Guide](../../metadata_routing.html#metadata-routing).
+     */
+    partial_fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -213,7 +260,11 @@ pms_MultiOutputClassifier_fit = {k: v for k, v in pms_MultiOutputClassifier_fit.
       opts['classes'] !== undefined
     } else None, 'sample_weight': np.array(${
       opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    }) if ${
+      opts['sample_weight'] !== undefined
+    } else None, 'partial_fit_params': ${
+      opts['partial_fit_params'] ?? undefined
+    }}
 
 pms_MultiOutputClassifier_partial_fit = {k: v for k, v in pms_MultiOutputClassifier_partial_fit.items() if v is not None}`
 
@@ -341,6 +392,95 @@ pms_MultiOutputClassifier_score = {k: v for k, v in pms_MultiOutputClassifier_sc
     // convert the result from python to node.js
     return this
       ._py`res_MultiOutputClassifier_score.tolist() if hasattr(res_MultiOutputClassifier_score, 'tolist') else res_MultiOutputClassifier_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputClassifier_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MultiOutputClassifier_set_fit_request = {k: v for k, v in pms_MultiOutputClassifier_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_set_fit_request = bridgeMultiOutputClassifier[${this.id}].set_fit_request(**pms_MultiOutputClassifier_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_set_fit_request.tolist() if hasattr(res_MultiOutputClassifier_set_fit_request, 'tolist') else res_MultiOutputClassifier_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `partial\_fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_partial_fit_request(opts: {
+    /**
+      Metadata routing for `classes` parameter in `partial\_fit`.
+     */
+    classes?: string | boolean
+
+    /**
+      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputClassifier must call init() before set_partial_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputClassifier_set_partial_fit_request = {'classes': ${
+      opts['classes'] ?? undefined
+    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+
+pms_MultiOutputClassifier_set_partial_fit_request = {k: v for k, v in pms_MultiOutputClassifier_set_partial_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputClassifier_set_partial_fit_request = bridgeMultiOutputClassifier[${this.id}].set_partial_fit_request(**pms_MultiOutputClassifier_set_partial_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputClassifier_set_partial_fit_request.tolist() if hasattr(res_MultiOutputClassifier_set_partial_fit_request, 'tolist') else res_MultiOutputClassifier_set_partial_fit_request`
   }
 
   /**

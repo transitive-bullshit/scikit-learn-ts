@@ -27,6 +27,7 @@ new GaussianProcessRegressor(opts?: object): GaussianProcessRegressor;
 | `opts.copy_X_train?` | `boolean` | If `true`, a persistent copy of the training data is stored in the object. Otherwise, just a reference to the training data is stored, which might cause predictions to change if the data is modified externally.  `Default Value`  `true` |
 | `opts.kernel?` | `any` | The kernel specifying the covariance function of the GP. If `undefined` is passed, the kernel `ConstantKernel(1.0, constant\_value\_bounds="fixed") \* RBF(1.0, length\_scale\_bounds="fixed")` is used as default. Note that the kernel hyperparameters are optimized during fitting unless the bounds are marked as “fixed”. |
 | `opts.n_restarts_optimizer?` | `number` | The number of restarts of the optimizer for finding the kernel’s parameters which maximize the log-marginal likelihood. The first run of the optimizer is performed from the kernel’s initial parameters, the remaining ones (if any) from thetas sampled log-uniform randomly from the space of allowed theta-values. If greater than 0, all bounds must be finite. Note that `n\_restarts\_optimizer \== 0` implies that one run is performed.  `Default Value`  `0` |
+| `opts.n_targets?` | `number` | The number of dimensions of the target values. Used to decide the number of outputs when sampling from the prior distributions (i.e. calling [`sample\_y`](#sklearn.gaussian_process.GaussianProcessRegressor.sample_y "sklearn.gaussian_process.GaussianProcessRegressor.sample_y") before [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit")). This parameter is ignored once [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit") has been called. |
 | `opts.normalize_y?` | `boolean` | Whether or not to normalize the target values `y` by removing the mean and scaling to unit-variance. This is recommended for cases where zero-mean, unit-variance priors are used. Note that, in this implementation, the normalisation is reversed before the GP predictions are reported.  `Default Value`  `false` |
 | `opts.optimizer?` | `"fmin_l_bfgs_b"` | Can either be one of the internally supported optimizers for optimizing the kernel’s parameters, specified by a string, or an externally defined optimizer passed as a callable. If a callable is passed, it must have the signature:  `Default Value`  `'fmin_l_bfgs_b'` |
 | `opts.random_state?` | `number` | Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
@@ -35,7 +36,7 @@ new GaussianProcessRegressor(opts?: object): GaussianProcessRegressor;
 
 [`GaussianProcessRegressor`](GaussianProcessRegressor.md)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L25)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L25)
 
 ## Methods
 
@@ -55,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L142)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L149)
 
 ### fit()
 
@@ -79,7 +80,32 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L159)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L166)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L210)
 
 ### init()
 
@@ -103,7 +129,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L88)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L93)
 
 ### log\_marginal\_likelihood()
 
@@ -128,7 +154,7 @@ log_marginal_likelihood(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L201)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L248)
 
 ### predict()
 
@@ -155,7 +181,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L257)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L304)
 
 ### sample\_y()
 
@@ -180,7 +206,7 @@ sample_y(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:310](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L310)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:357](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L357)
 
 ### score()
 
@@ -207,7 +233,62 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L365)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L412)
+
+### set\_predict\_request()
+
+Request metadata passed to the `predict` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_predict_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.return_cov?` | `string` \| `boolean` | Metadata routing for `return\_cov` parameter in `predict`. |
+| `opts.return_std?` | `string` \| `boolean` | Metadata routing for `return\_std` parameter in `predict`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:467](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L467)
+
+### set\_score\_request()
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_score_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L514)
 
 ## Properties
 
@@ -215,31 +296,31 @@ Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:365](https
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L23)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L22)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L21)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L18)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L19)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L19)
 
 ## Accessors
 
@@ -257,9 +338,9 @@ L_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L497)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L633)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L497)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L633)
 
 ### X\_train\_
 
@@ -275,9 +356,9 @@ X_train_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L416)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L552)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:416](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L416)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L552)
 
 ### alpha\_
 
@@ -293,9 +374,9 @@ alpha_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L524)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L660)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L524)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L660)
 
 ### feature\_names\_in\_
 
@@ -311,9 +392,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L605)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L741)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:605](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L605)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L741)
 
 ### kernel\_
 
@@ -329,9 +410,9 @@ kernel_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L470)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L606)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L470)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L606)
 
 ### log\_marginal\_likelihood\_value\_
 
@@ -347,9 +428,9 @@ log_marginal_likelihood_value_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L551)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L687)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L551)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L687)
 
 ### n\_features\_in\_
 
@@ -365,9 +446,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L578)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L714)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L578)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L714)
 
 ### py
 
@@ -381,7 +462,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L75)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L80)
 
 #### Signature
 
@@ -399,9 +480,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L79)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L84)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L75) [generated/gaussian\_process/GaussianProcessRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L79)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L80) [generated/gaussian\_process/GaussianProcessRegressor.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L84)
 
 ### y\_train\_
 
@@ -417,6 +498,6 @@ y_train_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L443)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L579)
 
-Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L443)
+Defined in:  [generated/gaussian\_process/GaussianProcessRegressor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/gaussian_process/GaussianProcessRegressor.ts#L579)

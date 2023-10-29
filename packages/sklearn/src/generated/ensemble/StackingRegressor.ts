@@ -275,6 +275,46 @@ pms_StackingRegressor_get_feature_names_out = {k: v for k, v in pms_StackingRegr
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This StackingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'StackingRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_StackingRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_StackingRegressor_get_metadata_routing = {k: v for k, v in pms_StackingRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_StackingRegressor_get_metadata_routing = bridgeStackingRegressor[${this.id}].get_metadata_routing(**pms_StackingRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_StackingRegressor_get_metadata_routing.tolist() if hasattr(res_StackingRegressor_get_metadata_routing, 'tolist') else res_StackingRegressor_get_metadata_routing`
+  }
+
+  /**
     Predict target for X.
    */
   async predict(opts: {
@@ -368,6 +408,48 @@ pms_StackingRegressor_score = {k: v for k, v in pms_StackingRegressor_score.item
   }
 
   /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This StackingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'StackingRegressor must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_StackingRegressor_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_StackingRegressor_set_fit_request = {k: v for k, v in pms_StackingRegressor_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_StackingRegressor_set_fit_request = bridgeStackingRegressor[${this.id}].set_fit_request(**pms_StackingRegressor_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_StackingRegressor_set_fit_request.tolist() if hasattr(res_StackingRegressor_set_fit_request, 'tolist') else res_StackingRegressor_set_fit_request`
+  }
+
+  /**
     Set output container.
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
@@ -402,6 +484,48 @@ pms_StackingRegressor_set_output = {k: v for k, v in pms_StackingRegressor_set_o
     // convert the result from python to node.js
     return this
       ._py`res_StackingRegressor_set_output.tolist() if hasattr(res_StackingRegressor_set_output, 'tolist') else res_StackingRegressor_set_output`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This StackingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'StackingRegressor must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_StackingRegressor_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_StackingRegressor_set_score_request = {k: v for k, v in pms_StackingRegressor_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_StackingRegressor_set_score_request = bridgeStackingRegressor[${this.id}].set_score_request(**pms_StackingRegressor_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_StackingRegressor_set_score_request.tolist() if hasattr(res_StackingRegressor_set_score_request, 'tolist') else res_StackingRegressor_set_score_request`
   }
 
   /**

@@ -1,8 +1,12 @@
 # DistanceMetric
 
-DistanceMetric class
+Uniform interface for fast distance metric functions.
 
-This class provides a uniform interface to fast distance metric functions. The various metrics can be accessed via the [`get\_metric`](#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") class method and the metric string identifier (see below).
+The `DistanceMetric` class provides a convenient way to compute pairwise distances between samples. It supports various distance metrics, such as Euclidean distance, Manhattan distance, and more.
+
+The `pairwise` method can be used to compute pairwise distances between samples in the input arrays. It returns a distance matrix representing the distances between all pairs of samples.
+
+The [`get\_metric`](#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") method allows you to retrieve a specific metric using its string identifier.
 
 Examples
 
@@ -23,13 +27,15 @@ new DistanceMetric(opts?: object): DistanceMetric;
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `opts?` | `object` | - |
-| `opts.dist?` | `any` | True distance. |
+| `opts.dtype?` | `any` | The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`. |
+| `opts.kwargs?` | `any` | Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric. |
+| `opts.metric?` | `string` | The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics. |
 
 ### Returns
 
 [`DistanceMetric`](DistanceMetric.md)
 
-Defined in:  [generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
+Defined in:  [generated/metrics/DistanceMetric.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L29)
 
 ## Methods
 
@@ -49,32 +55,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L88)
-
-### dist\_to\_rdist()
-
-Convert the true distance to the rank-preserving surrogate distance.
-
-The surrogate distance is any measure that yields the same rank as the distance, but is more efficient to compute. For example, the rank-preserving surrogate distance of the Euclidean metric is the squared-euclidean distance.
-
-#### Signature
-
-```ts
-dist_to_rdist(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.dist?` | `any` | True distance. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/DistanceMetric.ts:107](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L107)
+Defined in:  [generated/metrics/DistanceMetric.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L104)
 
 ### get\_metric()
 
@@ -93,14 +74,15 @@ get_metric(opts: object): Promise<any>;
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `opts` | `object` | - |
-| `opts.kwargs?` | `any` | additional arguments will be passed to the requested metric |
-| `opts.metric?` | `string` | The distance metric to use |
+| `opts.dtype?` | `any` | The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`. |
+| `opts.kwargs?` | `any` | Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric. |
+| `opts.metric?` | `string` | The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L142)
+Defined in:  [generated/metrics/DistanceMetric.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L123)
 
 ### init()
 
@@ -124,58 +106,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/DistanceMetric.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L48)
-
-### pairwise()
-
-Compute the pairwise distances between X and Y
-
-This is a convenience routine for the sake of testing. For many metrics, the utilities in scipy.spatial.distance.cdist and scipy.spatial.distance.pdist will be faster.
-
-#### Signature
-
-```ts
-pairwise(opts: object): Promise<ArrayLike[]>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.X?` | `ArrayLike` | Input data. |
-| `opts.Y?` | `ArrayLike` | Input data. If not specified, then Y=X. |
-
-#### Returns
-
-`Promise`\<`ArrayLike`[]\>
-
-Defined in:  [generated/metrics/DistanceMetric.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L182)
-
-### rdist\_to\_dist()
-
-Convert the rank-preserving surrogate distance to the distance.
-
-The surrogate distance is any measure that yields the same rank as the distance, but is more efficient to compute. For example, the rank-preserving surrogate distance of the Euclidean metric is the squared-euclidean distance.
-
-#### Signature
-
-```ts
-rdist_to_dist(opts: object): Promise<any>;
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `object` | - |
-| `opts.rdist?` | `any` | Surrogate distance. |
-
-#### Returns
-
-`Promise`\<`any`\>
-
-Defined in:  [generated/metrics/DistanceMetric.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L224)
+Defined in:  [generated/metrics/DistanceMetric.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L62)
 
 ## Properties
 
@@ -183,33 +114,49 @@ Defined in:  [generated/metrics/DistanceMetric.ts:224](https://github.com/transi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
+Defined in:  [generated/metrics/DistanceMetric.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
+Defined in:  [generated/metrics/DistanceMetric.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L21)
+Defined in:  [generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L18)
+Defined in:  [generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L19)
+Defined in:  [generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
 
 ## Accessors
+
+### metric\_obj
+
+An instance of the requested distance metric class.
+
+#### Signature
+
+```ts
+metric_obj(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in: [generated/metrics/DistanceMetric.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L168)
 
 ### py
 
@@ -223,7 +170,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/metrics/DistanceMetric.ts:35](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L35)
+Defined in:  [generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49)
 
 #### Signature
 
@@ -241,4 +188,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/metrics/DistanceMetric.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L39)
+Defined in: [generated/metrics/DistanceMetric.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L53)

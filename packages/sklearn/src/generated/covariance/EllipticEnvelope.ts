@@ -351,6 +351,45 @@ pms_EllipticEnvelope_fit_predict = {k: v for k, v in pms_EllipticEnvelope_fit_pr
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This EllipticEnvelope instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'EllipticEnvelope must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_EllipticEnvelope_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_EllipticEnvelope_get_metadata_routing = {k: v for k, v in pms_EllipticEnvelope_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_EllipticEnvelope_get_metadata_routing = bridgeEllipticEnvelope[${this.id}].get_metadata_routing(**pms_EllipticEnvelope_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_EllipticEnvelope_get_metadata_routing.tolist() if hasattr(res_EllipticEnvelope_get_metadata_routing, 'tolist') else res_EllipticEnvelope_get_metadata_routing`
+  }
+
+  /**
     Getter for the precision matrix.
    */
   async get_precision(opts: {
@@ -584,6 +623,48 @@ pms_EllipticEnvelope_score_samples = {k: v for k, v in pms_EllipticEnvelope_scor
     // convert the result from python to node.js
     return this
       ._py`res_EllipticEnvelope_score_samples.tolist() if hasattr(res_EllipticEnvelope_score_samples, 'tolist') else res_EllipticEnvelope_score_samples`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This EllipticEnvelope instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'EllipticEnvelope must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_EllipticEnvelope_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_EllipticEnvelope_set_score_request = {k: v for k, v in pms_EllipticEnvelope_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_EllipticEnvelope_set_score_request = bridgeEllipticEnvelope[${this.id}].set_score_request(**pms_EllipticEnvelope_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_EllipticEnvelope_set_score_request.tolist() if hasattr(res_EllipticEnvelope_set_score_request, 'tolist') else res_EllipticEnvelope_set_score_request`
   }
 
   /**

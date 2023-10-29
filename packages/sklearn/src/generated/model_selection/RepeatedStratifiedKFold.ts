@@ -120,6 +120,46 @@ ctor_RepeatedStratifiedKFold = {k: v for k, v in ctor_RepeatedStratifiedKFold.it
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This RepeatedStratifiedKFold instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RepeatedStratifiedKFold must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_RepeatedStratifiedKFold_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_RepeatedStratifiedKFold_get_metadata_routing = {k: v for k, v in pms_RepeatedStratifiedKFold_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RepeatedStratifiedKFold_get_metadata_routing = bridgeRepeatedStratifiedKFold[${this.id}].get_metadata_routing(**pms_RepeatedStratifiedKFold_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RepeatedStratifiedKFold_get_metadata_routing.tolist() if hasattr(res_RepeatedStratifiedKFold_get_metadata_routing, 'tolist') else res_RepeatedStratifiedKFold_get_metadata_routing`
+  }
+
+  /**
     Returns the number of splitting iterations in the cross-validator
    */
   async get_n_splits(opts: {

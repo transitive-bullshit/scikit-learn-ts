@@ -31,7 +31,6 @@ new PartialDependenceDisplay(opts?: object): PartialDependenceDisplay;
 | `opts.is_categorical?` | `any` | Whether each target feature in `features` is categorical or not. The list should be same size as `features`. If `undefined`, all features are assumed to be continuous. |
 | `opts.kind?` | `"average"` \| `"individual"` \| `"both"` | Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.  `Default Value`  `'average'` |
 | `opts.pd_results?` | `any` | Results of [`partial\_dependence`](sklearn.inspection.partial_dependence.html#sklearn.inspection.partial_dependence "sklearn.inspection.partial_dependence") for `features`. |
-| `opts.pdp_lim?` | `any` | Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined`, the limit will be inferred from the global minimum and maximum of all predictions. |
 | `opts.random_state?` | `number` | Controls the randomness of the selected samples when subsamples is not `undefined`. See Glossary for details. |
 | `opts.subsample?` | `number` | Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If float, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If int, represents the maximum absolute number of samples to use.  Note that the full dataset is still used to calculate partial dependence when `kind='both'`.  `Default Value`  `1000` |
 | `opts.target_idx?` | `number` | In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used. |
@@ -40,7 +39,7 @@ new PartialDependenceDisplay(opts?: object): PartialDependenceDisplay;
 
 [`PartialDependenceDisplay`](PartialDependenceDisplay.md)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
 
 ## Methods
 
@@ -60,7 +59,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L153)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L148)
 
 ### from\_estimator()
 
@@ -95,11 +94,12 @@ from_estimator(opts: object): Promise<any>;
 | `opts.line_kw?` | `any` | Dict with keywords passed to the `matplotlib.pyplot.plot` call. For one-way partial dependence plots. It can be used to define common properties for both `ice\_lines\_kw` and `pdp\_line\_kw`. |
 | `opts.method?` | `string` | The method used to calculate the averaged predictions:  `Default Value`  `'auto'` |
 | `opts.n_cols?` | `number` | The maximum number of columns in the grid plot. Only active when `ax` is a single axis or `undefined`.  `Default Value`  `3` |
-| `opts.n_jobs?` | `number` | The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.  `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.n_jobs?` | `number` | The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.  `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
 | `opts.pd_line_kw?` | `any` | Dictionary with keywords passed to the `matplotlib.pyplot.plot` call. For partial dependence in one-way partial dependence plots. The key value pairs defined in `pd\_line\_kw` takes priority over `line\_kw`. |
 | `opts.percentiles?` | `any` | The lower and upper percentile used to create the extreme values for the PDP axes. Must be in \[0, 1\]. |
 | `opts.random_state?` | `number` | Controls the randomness of the selected samples when subsamples is not `undefined` and `kind` is either `'both'` or `'individual'`. See Glossary for details. |
 | `opts.response_method?` | `"auto"` \| `"predict_proba"` \| `"decision_function"` | Specifies whether to use predict\_proba or decision\_function as the target response. For regressors this parameter is ignored and the response is always the output of predict. By default, predict\_proba is tried first and we revert to decision\_function if it doesn’t exist. If `method` is `'recursion'`, the response is always the output of decision\_function.  `Default Value`  `'auto'` |
+| `opts.sample_weight?` | `ArrayLike` | Sample weights are used to calculate weighted means when averaging the model output. If `undefined`, then samples are equally weighted. If `sample\_weight` is not `undefined`, then `method` will be set to `'brute'`. Note that `sample\_weight` is ignored for `kind='individual'`. |
 | `opts.subsample?` | `number` | Sampling for ICE curves when `kind` is ‘individual’ or ‘both’. If `float`, should be between 0.0 and 1.0 and represent the proportion of the dataset to be used to plot ICE curves. If `int`, represents the absolute number samples to use.  Note that the full dataset is still used to calculate averaged partial dependence when `kind='both'`.  `Default Value`  `1000` |
 | `opts.target?` | `number` | In a multiclass setting, specifies the class for which the PDPs should be computed. Note that for binary classification, the positive class (index 1) is always used. |
 | `opts.verbose?` | `number` | Verbose output during PD computations.  `Default Value`  `0` |
@@ -108,7 +108,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L174)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L169)
 
 ### init()
 
@@ -132,7 +132,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L101)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L96)
 
 ### plot()
 
@@ -164,7 +164,7 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L365)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L367)
 
 ## Properties
 
@@ -172,31 +172,31 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:365](https://gith
 
 > `boolean`  = `false`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21)
 
 ## Accessors
 
@@ -214,7 +214,7 @@ axes_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L484)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L486)
 
 ### bars\_
 
@@ -230,7 +230,7 @@ bars_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L619)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L621)
 
 ### bounding\_ax\_
 
@@ -246,7 +246,7 @@ bounding_ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L457)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L459)
 
 ### contours\_
 
@@ -262,7 +262,7 @@ contours_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L592)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L594)
 
 ### deciles\_hlines\_
 
@@ -278,7 +278,7 @@ deciles_hlines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L565)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L567)
 
 ### deciles\_vlines\_
 
@@ -294,7 +294,7 @@ deciles_vlines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L538)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L540)
 
 ### figure\_
 
@@ -310,7 +310,7 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L673)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L675)
 
 ### heatmaps\_
 
@@ -326,7 +326,7 @@ heatmaps_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L646)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L648)
 
 ### lines\_
 
@@ -342,7 +342,7 @@ lines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L511)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L513)
 
 ### py
 
@@ -356,7 +356,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L88)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83)
 
 #### Signature
 
@@ -374,4 +374,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/inspection/PartialDependenceDisplay.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L92)
+Defined in: [generated/inspection/PartialDependenceDisplay.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L87)

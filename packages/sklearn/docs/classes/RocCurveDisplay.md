@@ -25,7 +25,7 @@ new RocCurveDisplay(opts?: object): RocCurveDisplay;
 | `opts?` | `object` | - |
 | `opts.estimator_name?` | `string` | Name of estimator. If `undefined`, the estimator name is not shown. |
 | `opts.fpr?` | [`ArrayLike`](../types/ArrayLike.md) | False positive rate. |
-| `opts.pos_label?` | `string` \| `number` | The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
+| `opts.pos_label?` | `string` \| `number` \| `boolean` | The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
 | `opts.roc_auc?` | `number` | Area under ROC curve. If `undefined`, the roc\_auc score is not shown. |
 | `opts.tpr?` | [`ArrayLike`](../types/ArrayLike.md) | True positive rate. |
 
@@ -33,7 +33,7 @@ new RocCurveDisplay(opts?: object): RocCurveDisplay;
 
 [`RocCurveDisplay`](RocCurveDisplay.md)
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L25)
 
 ## Methods
 
@@ -53,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L114)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L114)
 
 ### from\_estimator()
 
@@ -72,11 +72,13 @@ from_estimator(opts: object): Promise<any>;
 | `opts` | `object` | - |
 | `opts.X?` | [`ArrayLike`](../types/ArrayLike.md) | Input values. |
 | `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.chance_level_kw?` | `any` | Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line. |
 | `opts.drop_intermediate?` | `boolean` | Whether to drop some suboptimal thresholds which would not appear on a plotted ROC curve. This is useful in order to create lighter ROC curves.  `Default Value`  `true` |
 | `opts.estimator?` | `any` | Fitted classifier or a fitted [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline") in which the last estimator is a classifier. |
 | `opts.kwargs?` | `any` | Keyword arguments to be passed to matplotlib’s `plot`. |
 | `opts.name?` | `string` | Name of ROC Curve for labeling. If `undefined`, use the name of the estimator. |
-| `opts.pos_label?` | `string` \| `number` | The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
+| `opts.plot_chance_level?` | `boolean` | Whether to plot the chance level.  `Default Value`  `false` |
+| `opts.pos_label?` | `string` \| `number` \| `boolean` | The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class. |
 | `opts.response_method?` | `"decision_function"` \| `"auto’} default=’auto"` | Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next. |
 | `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
 | `opts.y?` | [`ArrayLike`](../types/ArrayLike.md) | Target values. |
@@ -85,7 +87,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L131)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L131)
 
 ### from\_predictions()
 
@@ -105,10 +107,12 @@ from_predictions(opts: object): Promise<any>;
 | :------ | :------ | :------ |
 | `opts` | `object` | - |
 | `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.chance_level_kw?` | `any` | Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line. |
 | `opts.drop_intermediate?` | `boolean` | Whether to drop some suboptimal thresholds which would not appear on a plotted ROC curve. This is useful in order to create lighter ROC curves.  `Default Value`  `true` |
 | `opts.kwargs?` | `any` | Additional keywords arguments passed to matplotlib `plot` function. |
 | `opts.name?` | `string` | Name of ROC curve for labeling. If `undefined`, name will be set to `"Classifier"`. |
-| `opts.pos_label?` | `string` \| `number` | The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised. |
+| `opts.plot_chance_level?` | `boolean` | Whether to plot the chance level.  `Default Value`  `false` |
+| `opts.pos_label?` | `string` \| `number` \| `boolean` | The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised. |
 | `opts.sample_weight?` | [`ArrayLike`](../types/ArrayLike.md) | Sample weights. |
 | `opts.y_pred?` | [`ArrayLike`](../types/ArrayLike.md) | Target scores, can either be probability estimates of the positive class, confidence values, or non-thresholded measure of decisions (as returned by “decision\_function” on some classifiers). |
 | `opts.y_true?` | [`ArrayLike`](../types/ArrayLike.md) | True labels. |
@@ -117,7 +121,7 @@ from_predictions(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L231)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L245)
 
 ### init()
 
@@ -141,7 +145,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L68)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L68)
 
 ### plot()
 
@@ -161,14 +165,16 @@ plot(opts: object): Promise<any>;
 | :------ | :------ | :------ |
 | `opts` | `object` | - |
 | `opts.ax?` | `any` | Axes object to plot on. If `undefined`, a new figure and axes is created. |
+| `opts.chance_level_kw?` | `any` | Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line. |
 | `opts.kwargs?` | `any` | Keyword arguments to be passed to matplotlib’s `plot`. |
 | `opts.name?` | `string` | Name of ROC Curve for labeling. If `undefined`, use `estimator\_name` if not `undefined`, otherwise no labeling is shown. |
+| `opts.plot_chance_level?` | `boolean` | Whether to plot the chance level.  `Default Value`  `false` |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L320)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:348](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L348)
 
 ## Properties
 
@@ -176,31 +182,31 @@ Defined in:  [generated/metrics/RocCurveDisplay.ts:320](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -218,9 +224,27 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L388)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L455)
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L388)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L455)
+
+### chance\_level\_
+
+The chance level line. It is `undefined` if the chance level is not plotted.
+
+#### Signature
+
+```ts
+chance_level_(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/metrics/RocCurveDisplay.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L430)
+
+Defined in:  [generated/metrics/RocCurveDisplay.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L430)
 
 ### figure\_
 
@@ -236,9 +260,9 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L411)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L478)
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L411)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L478)
 
 ### line\_
 
@@ -254,9 +278,9 @@ line_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L365)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L407)
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L365)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L407)
 
 ### py
 
@@ -270,7 +294,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55)
 
 #### Signature
 
@@ -288,6 +312,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L59)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L59)
 
-Defined in:  [generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55) [generated/metrics/RocCurveDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L59)
+Defined in:  [generated/metrics/RocCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L55) [generated/metrics/RocCurveDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/metrics/RocCurveDisplay.ts#L59)

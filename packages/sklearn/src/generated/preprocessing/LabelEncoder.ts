@@ -166,6 +166,43 @@ pms_LabelEncoder_fit_transform = {k: v for k, v in pms_LabelEncoder_fit_transfor
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This LabelEncoder instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LabelEncoder must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_LabelEncoder_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_LabelEncoder_get_metadata_routing = {k: v for k, v in pms_LabelEncoder_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LabelEncoder_get_metadata_routing = bridgeLabelEncoder[${this.id}].get_metadata_routing(**pms_LabelEncoder_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LabelEncoder_get_metadata_routing.tolist() if hasattr(res_LabelEncoder_get_metadata_routing, 'tolist') else res_LabelEncoder_get_metadata_routing`
+  }
+
+  /**
     Transform labels back to original encoding.
    */
   async inverse_transform(opts: {

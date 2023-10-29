@@ -10,9 +10,9 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Several regression and binary classification algorithms are available in scikit-learn. A simple way to extend these algorithms to the multi-class classification case is to use the so-called one-vs-all scheme.
 
-  At learning time, this simply consists in learning one regressor or binary classifier per class. In doing so, one needs to convert multi-class labels to binary labels (belong or does not belong to the class). LabelBinarizer makes this process easy with the transform method.
+  At learning time, this simply consists in learning one regressor or binary classifier per class. In doing so, one needs to convert multi-class labels to binary labels (belong or does not belong to the class). `LabelBinarizer` makes this process easy with the transform method.
 
-  At prediction time, one assigns the class for which the corresponding model gave the greatest confidence. LabelBinarizer makes this easy with the inverse\_transform method.
+  At prediction time, one assigns the class for which the corresponding model gave the greatest confidence. `LabelBinarizer` makes this easy with the [`inverse\_transform`](#sklearn.preprocessing.LabelBinarizer.inverse_transform "sklearn.preprocessing.LabelBinarizer.inverse_transform") method.
 
   Read more in the [User Guide](../preprocessing_targets.html#preprocessing-targets).
 
@@ -190,6 +190,43 @@ pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_tran
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This LabelBinarizer instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LabelBinarizer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_LabelBinarizer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_LabelBinarizer_get_metadata_routing = {k: v for k, v in pms_LabelBinarizer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LabelBinarizer_get_metadata_routing = bridgeLabelBinarizer[${this.id}].get_metadata_routing(**pms_LabelBinarizer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LabelBinarizer_get_metadata_routing.tolist() if hasattr(res_LabelBinarizer_get_metadata_routing, 'tolist') else res_LabelBinarizer_get_metadata_routing`
+  }
+
+  /**
     Transform binary labels back to multi-class labels.
    */
   async inverse_transform(opts: {
@@ -201,7 +238,7 @@ pms_LabelBinarizer_fit_transform = {k: v for k, v in pms_LabelBinarizer_fit_tran
     /**
       Threshold used in the binary and multi-label cases.
 
-      Use 0 when `Y` contains the output of decision\_function (classifier). Use 0.5 when `Y` contains the output of predict\_proba.
+      Use 0 when `Y` contains the output of [decision\_function](../../glossary.html#term-decision_function) (classifier). Use 0.5 when `Y` contains the output of [predict\_proba](../../glossary.html#term-predict_proba).
 
       If `undefined`, the threshold is assumed to be half way between neg\_label and pos\_label.
      */
@@ -233,6 +270,46 @@ pms_LabelBinarizer_inverse_transform = {k: v for k, v in pms_LabelBinarizer_inve
     // convert the result from python to node.js
     return this
       ._py`res_LabelBinarizer_inverse_transform.tolist() if hasattr(res_LabelBinarizer_inverse_transform, 'tolist') else res_LabelBinarizer_inverse_transform`
+  }
+
+  /**
+    Request metadata passed to the `inverse\_transform` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_inverse_transform_request(opts: {
+    /**
+      Metadata routing for `threshold` parameter in `inverse\_transform`.
+     */
+    threshold?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This LabelBinarizer instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LabelBinarizer must call init() before set_inverse_transform_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_LabelBinarizer_set_inverse_transform_request = {'threshold': ${
+      opts['threshold'] ?? undefined
+    }}
+
+pms_LabelBinarizer_set_inverse_transform_request = {k: v for k, v in pms_LabelBinarizer_set_inverse_transform_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LabelBinarizer_set_inverse_transform_request = bridgeLabelBinarizer[${this.id}].set_inverse_transform_request(**pms_LabelBinarizer_set_inverse_transform_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LabelBinarizer_set_inverse_transform_request.tolist() if hasattr(res_LabelBinarizer_set_inverse_transform_request, 'tolist') else res_LabelBinarizer_set_inverse_transform_request`
   }
 
   /**
@@ -331,7 +408,7 @@ pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.it
   }
 
   /**
-    Represents the type of the target data as evaluated by utils.multiclass.type\_of\_target. Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
+    Represents the type of the target data as evaluated by [`type\_of\_target`](sklearn.utils.multiclass.type_of_target.html#sklearn.utils.multiclass.type_of_target "sklearn.utils.multiclass.type_of_target"). Possible type are ‘continuous’, ‘continuous-multioutput’, ‘binary’, ‘multiclass’, ‘multiclass-multioutput’, ‘multilabel-indicator’, and ‘unknown’.
    */
   get y_type_(): Promise<string> {
     if (this._isDisposed) {
@@ -356,7 +433,7 @@ pms_LabelBinarizer_transform = {k: v for k, v in pms_LabelBinarizer_transform.it
   }
 
   /**
-    True if the input data to transform is given as a sparse matrix, `false` otherwise.
+    `false` otherwise.
    */
   get sparse_input_(): Promise<boolean> {
     if (this._isDisposed) {

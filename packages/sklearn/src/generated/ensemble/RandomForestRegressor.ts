@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   A random forest is a meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the `max\_samples` parameter if `bootstrap=True` (default), otherwise the whole dataset is used to build each tree.
 
+  For a comparison between tree-based ensemble models see the example [Comparing Random Forests and Histogram Gradient Boosting models](../../auto_examples/ensemble/plot_forest_hist_grad_boosting_comparison.html#sphx-glr-auto-examples-ensemble-plot-forest-hist-grad-boosting-comparison-py).
+
   Read more in the [User Guide](../ensemble.html#forest).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
@@ -92,14 +94,14 @@ export class RandomForestRegressor {
     bootstrap?: boolean
 
     /**
-      Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=`true`.
+      Whether to use out-of-bag samples to estimate the generalization score. By default, [`r2\_score`](sklearn.metrics.r2_score.html#sklearn.metrics.r2_score "sklearn.metrics.r2_score") is used. Provide a callable with signature `metric(y\_true, y\_pred)` to use a custom metric. Only available if `bootstrap=True`.
 
       @defaultValue `false`
      */
     oob_score?: boolean
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomForestRegressor.fit "sklearn.ensemble.RandomForestRegressor.fit"), [`predict`](#sklearn.ensemble.RandomForestRegressor.predict "sklearn.ensemble.RandomForestRegressor.predict"), [`decision\_path`](#sklearn.ensemble.RandomForestRegressor.decision_path "sklearn.ensemble.RandomForestRegressor.decision_path") and [`apply`](#sklearn.ensemble.RandomForestRegressor.apply "sklearn.ensemble.RandomForestRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomForestRegressor.fit "sklearn.ensemble.RandomForestRegressor.fit"), [`predict`](#sklearn.ensemble.RandomForestRegressor.predict "sklearn.ensemble.RandomForestRegressor.predict"), [`decision\_path`](#sklearn.ensemble.RandomForestRegressor.decision_path "sklearn.ensemble.RandomForestRegressor.decision_path") and [`apply`](#sklearn.ensemble.RandomForestRegressor.apply "sklearn.ensemble.RandomForestRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -354,6 +356,46 @@ pms_RandomForestRegressor_fit = {k: v for k, v in pms_RandomForestRegressor_fit.
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This RandomForestRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RandomForestRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_RandomForestRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_RandomForestRegressor_get_metadata_routing = {k: v for k, v in pms_RandomForestRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RandomForestRegressor_get_metadata_routing = bridgeRandomForestRegressor[${this.id}].get_metadata_routing(**pms_RandomForestRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RandomForestRegressor_get_metadata_routing.tolist() if hasattr(res_RandomForestRegressor_get_metadata_routing, 'tolist') else res_RandomForestRegressor_get_metadata_routing`
+  }
+
+  /**
     Predict regression target for X.
 
     The predicted regression target of an input sample is computed as the mean predicted regression targets of the trees in the forest.
@@ -439,6 +481,90 @@ pms_RandomForestRegressor_score = {k: v for k, v in pms_RandomForestRegressor_sc
     // convert the result from python to node.js
     return this
       ._py`res_RandomForestRegressor_score.tolist() if hasattr(res_RandomForestRegressor_score, 'tolist') else res_RandomForestRegressor_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This RandomForestRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RandomForestRegressor must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_RandomForestRegressor_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_RandomForestRegressor_set_fit_request = {k: v for k, v in pms_RandomForestRegressor_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RandomForestRegressor_set_fit_request = bridgeRandomForestRegressor[${this.id}].set_fit_request(**pms_RandomForestRegressor_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RandomForestRegressor_set_fit_request.tolist() if hasattr(res_RandomForestRegressor_set_fit_request, 'tolist') else res_RandomForestRegressor_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This RandomForestRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RandomForestRegressor must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_RandomForestRegressor_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_RandomForestRegressor_set_score_request = {k: v for k, v in pms_RandomForestRegressor_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RandomForestRegressor_set_score_request = bridgeRandomForestRegressor[${this.id}].set_score_request(**pms_RandomForestRegressor_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RandomForestRegressor_set_score_request.tolist() if hasattr(res_RandomForestRegressor_set_score_request, 'tolist') else res_RandomForestRegressor_set_score_request`
   }
 
   /**

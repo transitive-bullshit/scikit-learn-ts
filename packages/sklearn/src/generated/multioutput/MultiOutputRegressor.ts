@@ -31,7 +31,7 @@ export class MultiOutputRegressor {
 
       When individual estimators are fast to train or predict, using `n\_jobs > 1` can result in slower performance due to the parallelism overhead.
 
-      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means `1` unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all available processes / threads. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -167,6 +167,46 @@ pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.it
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_MultiOutputRegressor_get_metadata_routing = {k: v for k, v in pms_MultiOutputRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputRegressor_get_metadata_routing = bridgeMultiOutputRegressor[${this.id}].get_metadata_routing(**pms_MultiOutputRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputRegressor_get_metadata_routing.tolist() if hasattr(res_MultiOutputRegressor_get_metadata_routing, 'tolist') else res_MultiOutputRegressor_get_metadata_routing`
+  }
+
+  /**
     Incrementally fit the model to data, for each output variable.
    */
   async partial_fit(opts: {
@@ -184,6 +224,13 @@ pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.it
       Sample weights. If `undefined`, then samples are equally weighted. Only supported if the underlying regressor supports sample weights.
      */
     sample_weight?: ArrayLike
+
+    /**
+      Parameters passed to the `estimator.partial\_fit` method of each sub-estimator.
+
+      Only available if `enable\_metadata\_routing=True`. See the [User Guide](../../metadata_routing.html#metadata-routing).
+     */
+    partial_fit_params?: any
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -204,7 +251,11 @@ pms_MultiOutputRegressor_fit = {k: v for k, v in pms_MultiOutputRegressor_fit.it
       opts['y'] ?? undefined
     }) if ${opts['y'] !== undefined} else None, 'sample_weight': np.array(${
       opts['sample_weight'] ?? undefined
-    }) if ${opts['sample_weight'] !== undefined} else None}
+    }) if ${
+      opts['sample_weight'] !== undefined
+    } else None, 'partial_fit_params': ${
+      opts['partial_fit_params'] ?? undefined
+    }}
 
 pms_MultiOutputRegressor_partial_fit = {k: v for k, v in pms_MultiOutputRegressor_partial_fit.items() if v is not None}`
 
@@ -301,6 +352,132 @@ pms_MultiOutputRegressor_score = {k: v for k, v in pms_MultiOutputRegressor_scor
     // convert the result from python to node.js
     return this
       ._py`res_MultiOutputRegressor_score.tolist() if hasattr(res_MultiOutputRegressor_score, 'tolist') else res_MultiOutputRegressor_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputRegressor must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputRegressor_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MultiOutputRegressor_set_fit_request = {k: v for k, v in pms_MultiOutputRegressor_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputRegressor_set_fit_request = bridgeMultiOutputRegressor[${this.id}].set_fit_request(**pms_MultiOutputRegressor_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputRegressor_set_fit_request.tolist() if hasattr(res_MultiOutputRegressor_set_fit_request, 'tolist') else res_MultiOutputRegressor_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `partial\_fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_partial_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputRegressor must call init() before set_partial_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputRegressor_set_partial_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MultiOutputRegressor_set_partial_fit_request = {k: v for k, v in pms_MultiOutputRegressor_set_partial_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputRegressor_set_partial_fit_request = bridgeMultiOutputRegressor[${this.id}].set_partial_fit_request(**pms_MultiOutputRegressor_set_partial_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputRegressor_set_partial_fit_request.tolist() if hasattr(res_MultiOutputRegressor_set_partial_fit_request, 'tolist') else res_MultiOutputRegressor_set_partial_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MultiOutputRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MultiOutputRegressor must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MultiOutputRegressor_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MultiOutputRegressor_set_score_request = {k: v for k, v in pms_MultiOutputRegressor_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MultiOutputRegressor_set_score_request = bridgeMultiOutputRegressor[${this.id}].set_score_request(**pms_MultiOutputRegressor_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MultiOutputRegressor_set_score_request.tolist() if hasattr(res_MultiOutputRegressor_set_score_request, 'tolist') else res_MultiOutputRegressor_set_score_request`
   }
 
   /**

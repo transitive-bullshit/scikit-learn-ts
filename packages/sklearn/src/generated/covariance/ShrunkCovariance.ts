@@ -218,6 +218,45 @@ pms_ShrunkCovariance_fit = {k: v for k, v in pms_ShrunkCovariance_fit.items() if
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This ShrunkCovariance instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ShrunkCovariance must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_ShrunkCovariance_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_ShrunkCovariance_get_metadata_routing = {k: v for k, v in pms_ShrunkCovariance_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ShrunkCovariance_get_metadata_routing = bridgeShrunkCovariance[${this.id}].get_metadata_routing(**pms_ShrunkCovariance_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ShrunkCovariance_get_metadata_routing.tolist() if hasattr(res_ShrunkCovariance_get_metadata_routing, 'tolist') else res_ShrunkCovariance_get_metadata_routing`
+  }
+
+  /**
     Getter for the precision matrix.
    */
   async get_precision(opts: {
@@ -332,6 +371,47 @@ pms_ShrunkCovariance_score = {k: v for k, v in pms_ShrunkCovariance_score.items(
     // convert the result from python to node.js
     return this
       ._py`res_ShrunkCovariance_score.tolist() if hasattr(res_ShrunkCovariance_score, 'tolist') else res_ShrunkCovariance_score`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `X\_test` parameter in `score`.
+     */
+    X_test?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This ShrunkCovariance instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ShrunkCovariance must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_ShrunkCovariance_set_score_request = {'X_test': ${
+      opts['X_test'] ?? undefined
+    }}
+
+pms_ShrunkCovariance_set_score_request = {k: v for k, v in pms_ShrunkCovariance_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ShrunkCovariance_set_score_request = bridgeShrunkCovariance[${this.id}].set_score_request(**pms_ShrunkCovariance_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ShrunkCovariance_set_score_request.tolist() if hasattr(res_ShrunkCovariance_set_score_request, 'tolist') else res_ShrunkCovariance_set_score_request`
   }
 
   /**

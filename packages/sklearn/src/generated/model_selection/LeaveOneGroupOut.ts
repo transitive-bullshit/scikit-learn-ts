@@ -26,19 +26,9 @@ export class LeaveOneGroupOut {
 
   constructor(opts?: {
     /**
-      Always ignored, exists for compatibility.
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
-    X?: any
-
-    /**
-      Always ignored, exists for compatibility.
-     */
-    y?: any
-
-    /**
-      Group labels for the samples used while splitting the dataset into train/test set. This ‘groups’ parameter must always be specified to calculate the number of splits, though the other parameters can be omitted.
-     */
-    groups?: ArrayLike
+    routing?: any
   }) {
     this.id = `LeaveOneGroupOut${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -82,11 +72,9 @@ except NameError: bridgeLeaveOneGroupOut = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LeaveOneGroupOut = {'X': ${
-      this.opts['X'] ?? undefined
-    }, 'y': ${this.opts['y'] ?? undefined}, 'groups': np.array(${
-      this.opts['groups'] ?? undefined
-    }) if ${this.opts['groups'] !== undefined} else None}
+    await this._py.ex`ctor_LeaveOneGroupOut = {'routing': ${
+      this.opts['routing'] ?? undefined
+    }}
 
 ctor_LeaveOneGroupOut = {k: v for k, v in ctor_LeaveOneGroupOut.items() if v is not None}`
 
@@ -113,6 +101,45 @@ ctor_LeaveOneGroupOut = {k: v for k, v in ctor_LeaveOneGroupOut.items() if v is 
     await this._py.ex`del bridgeLeaveOneGroupOut[${this.id}]`
 
     this._isDisposed = true
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This LeaveOneGroupOut instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LeaveOneGroupOut must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_LeaveOneGroupOut_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_LeaveOneGroupOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneGroupOut_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LeaveOneGroupOut_get_metadata_routing = bridgeLeaveOneGroupOut[${this.id}].get_metadata_routing(**pms_LeaveOneGroupOut_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LeaveOneGroupOut_get_metadata_routing.tolist() if hasattr(res_LeaveOneGroupOut_get_metadata_routing, 'tolist') else res_LeaveOneGroupOut_get_metadata_routing`
   }
 
   /**
@@ -163,6 +190,47 @@ pms_LeaveOneGroupOut_get_n_splits = {k: v for k, v in pms_LeaveOneGroupOut_get_n
   }
 
   /**
+    Request metadata passed to the `split` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_split_request(opts: {
+    /**
+      Metadata routing for `groups` parameter in `split`.
+     */
+    groups?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This LeaveOneGroupOut instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LeaveOneGroupOut must call init() before set_split_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_LeaveOneGroupOut_set_split_request = {'groups': ${
+      opts['groups'] ?? undefined
+    }}
+
+pms_LeaveOneGroupOut_set_split_request = {k: v for k, v in pms_LeaveOneGroupOut_set_split_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LeaveOneGroupOut_set_split_request = bridgeLeaveOneGroupOut[${this.id}].set_split_request(**pms_LeaveOneGroupOut_set_split_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LeaveOneGroupOut_set_split_request.tolist() if hasattr(res_LeaveOneGroupOut_set_split_request, 'tolist') else res_LeaveOneGroupOut_set_split_request`
+  }
+
+  /**
     Generate indices to split data into training and test set.
    */
   async split(opts: {
@@ -209,32 +277,5 @@ pms_LeaveOneGroupOut_split = {k: v for k, v in pms_LeaveOneGroupOut_split.items(
     // convert the result from python to node.js
     return this
       ._py`res_LeaveOneGroupOut_split.tolist() if hasattr(res_LeaveOneGroupOut_split, 'tolist') else res_LeaveOneGroupOut_split`
-  }
-
-  /**
-    Returns the number of splitting iterations in the cross-validator.
-   */
-  get n_splits(): Promise<number> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This LeaveOneGroupOut instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'LeaveOneGroupOut must call init() before accessing n_splits'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_LeaveOneGroupOut_n_splits = bridgeLeaveOneGroupOut[${this.id}].n_splits`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_LeaveOneGroupOut_n_splits.tolist() if hasattr(attr_LeaveOneGroupOut_n_splits, 'tolist') else attr_LeaveOneGroupOut_n_splits`
-    })()
   }
 }

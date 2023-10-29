@@ -41,13 +41,6 @@ export class SimpleImputer {
     fill_value?: string
 
     /**
-      Controls the verbosity of the imputer.
-
-      @defaultValue `0`
-     */
-    verbose?: number
-
-    /**
       If `true`, a copy of X will be created. If `false`, imputation will be done in-place whenever possible. Note that, in the following cases, a new copy will always be made, even if `copy=False`:
 
       @defaultValue `true`
@@ -112,9 +105,7 @@ except NameError: bridgeSimpleImputer = {}
       this.opts['missing_values'] ?? undefined
     }, 'strategy': ${this.opts['strategy'] ?? undefined}, 'fill_value': ${
       this.opts['fill_value'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'copy': ${
-      this.opts['copy'] ?? undefined
-    }, 'add_indicator': ${
+    }, 'copy': ${this.opts['copy'] ?? undefined}, 'add_indicator': ${
       this.opts['add_indicator'] ?? undefined
     }, 'keep_empty_features': ${this.opts['keep_empty_features'] ?? undefined}}
 
@@ -266,6 +257,43 @@ pms_SimpleImputer_get_feature_names_out = {k: v for k, v in pms_SimpleImputer_ge
     // convert the result from python to node.js
     return this
       ._py`res_SimpleImputer_get_feature_names_out.tolist() if hasattr(res_SimpleImputer_get_feature_names_out, 'tolist') else res_SimpleImputer_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SimpleImputer instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SimpleImputer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_SimpleImputer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SimpleImputer_get_metadata_routing = {k: v for k, v in pms_SimpleImputer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SimpleImputer_get_metadata_routing = bridgeSimpleImputer[${this.id}].get_metadata_routing(**pms_SimpleImputer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SimpleImputer_get_metadata_routing.tolist() if hasattr(res_SimpleImputer_get_metadata_routing, 'tolist') else res_SimpleImputer_get_metadata_routing`
   }
 
   /**

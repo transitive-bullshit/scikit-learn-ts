@@ -65,7 +65,7 @@ export class Nystroem {
     /**
       The number of jobs to use for the computation. This works by breaking down the kernel matrix into `n\_jobs` even slices and computing them in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -243,7 +243,7 @@ pms_Nystroem_fit_transform = {k: v for k, v in pms_Nystroem_fit_transform.items(
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.kernel_approximation.Nystroem.fit "sklearn.kernel_approximation.Nystroem.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -271,6 +271,41 @@ pms_Nystroem_get_feature_names_out = {k: v for k, v in pms_Nystroem_get_feature_
     // convert the result from python to node.js
     return this
       ._py`res_Nystroem_get_feature_names_out.tolist() if hasattr(res_Nystroem_get_feature_names_out, 'tolist') else res_Nystroem_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This Nystroem instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('Nystroem must call init() before get_metadata_routing()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_Nystroem_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_Nystroem_get_metadata_routing = {k: v for k, v in pms_Nystroem_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_Nystroem_get_metadata_routing = bridgeNystroem[${this.id}].get_metadata_routing(**pms_Nystroem_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_Nystroem_get_metadata_routing.tolist() if hasattr(res_Nystroem_get_metadata_routing, 'tolist') else res_Nystroem_get_metadata_routing`
   }
 
   /**

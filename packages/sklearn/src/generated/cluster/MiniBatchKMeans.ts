@@ -104,7 +104,7 @@ export class MiniBatchKMeans {
     /**
       Number of random initializations that are tried. In contrast to KMeans, the algorithm is only run once, using the best of the `n\_init` initializations as measured by inertia. Several runs are recommended for sparse high-dimensional problems (see [Clustering sparse data with k-means](../../auto_examples/text/plot_document_clustering.html#kmeans-sparse-high-dim)).
 
-      When `n\_init='auto'`, the number of runs depends on the value of init: 3 if using `init='random'`, 1 if using `init='k-means++'`.
+      When `n\_init='auto'`, the number of runs depends on the value of init: 3 if using `init='random'` or `init` is a callable; 1 if using `init='k-means++'` or `init` is an array-like.
 
       @defaultValue `3`
      */
@@ -217,7 +217,7 @@ ctor_MiniBatchKMeans = {k: v for k, v in ctor_MiniBatchKMeans.items() if v is no
     y?: any
 
     /**
-      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight. `sample\_weight` is not used during initialization if `init` is a callable or a user provided array.
      */
     sample_weight?: ArrayLike
   }): Promise<any> {
@@ -354,7 +354,7 @@ pms_MiniBatchKMeans_fit_transform = {k: v for k, v in pms_MiniBatchKMeans_fit_tr
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.MiniBatchKMeans.fit "sklearn.cluster.MiniBatchKMeans.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -386,6 +386,43 @@ pms_MiniBatchKMeans_get_feature_names_out = {k: v for k, v in pms_MiniBatchKMean
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This MiniBatchKMeans instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MiniBatchKMeans must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_MiniBatchKMeans_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_MiniBatchKMeans_get_metadata_routing = {k: v for k, v in pms_MiniBatchKMeans_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MiniBatchKMeans_get_metadata_routing = bridgeMiniBatchKMeans[${this.id}].get_metadata_routing(**pms_MiniBatchKMeans_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MiniBatchKMeans_get_metadata_routing.tolist() if hasattr(res_MiniBatchKMeans_get_metadata_routing, 'tolist') else res_MiniBatchKMeans_get_metadata_routing`
+  }
+
+  /**
     Update k means estimate on a single mini-batch X.
    */
   async partial_fit(opts: {
@@ -400,7 +437,7 @@ pms_MiniBatchKMeans_get_feature_names_out = {k: v for k, v in pms_MiniBatchKMean
     y?: any
 
     /**
-      The weights for each observation in X. If `undefined`, all observations are assigned equal weight.
+      The weights for each observation in X. If `undefined`, all observations are assigned equal weight. `sample\_weight` is not used during initialization if `init` is a callable or a user provided array.
      */
     sample_weight?: ArrayLike
   }): Promise<any> {
@@ -522,6 +559,45 @@ pms_MiniBatchKMeans_score = {k: v for k, v in pms_MiniBatchKMeans_score.items() 
   }
 
   /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This MiniBatchKMeans instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MiniBatchKMeans must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_MiniBatchKMeans_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MiniBatchKMeans_set_fit_request = {k: v for k, v in pms_MiniBatchKMeans_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MiniBatchKMeans_set_fit_request = bridgeMiniBatchKMeans[${this.id}].set_fit_request(**pms_MiniBatchKMeans_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MiniBatchKMeans_set_fit_request.tolist() if hasattr(res_MiniBatchKMeans_set_fit_request, 'tolist') else res_MiniBatchKMeans_set_fit_request`
+  }
+
+  /**
     Set output container.
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
@@ -554,6 +630,126 @@ pms_MiniBatchKMeans_set_output = {k: v for k, v in pms_MiniBatchKMeans_set_outpu
     // convert the result from python to node.js
     return this
       ._py`res_MiniBatchKMeans_set_output.tolist() if hasattr(res_MiniBatchKMeans_set_output, 'tolist') else res_MiniBatchKMeans_set_output`
+  }
+
+  /**
+    Request metadata passed to the `partial\_fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_partial_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This MiniBatchKMeans instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MiniBatchKMeans must call init() before set_partial_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MiniBatchKMeans_set_partial_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MiniBatchKMeans_set_partial_fit_request = {k: v for k, v in pms_MiniBatchKMeans_set_partial_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MiniBatchKMeans_set_partial_fit_request = bridgeMiniBatchKMeans[${this.id}].set_partial_fit_request(**pms_MiniBatchKMeans_set_partial_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MiniBatchKMeans_set_partial_fit_request.tolist() if hasattr(res_MiniBatchKMeans_set_partial_fit_request, 'tolist') else res_MiniBatchKMeans_set_partial_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `predict` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_predict_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `predict`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This MiniBatchKMeans instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MiniBatchKMeans must call init() before set_predict_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MiniBatchKMeans_set_predict_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MiniBatchKMeans_set_predict_request = {k: v for k, v in pms_MiniBatchKMeans_set_predict_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MiniBatchKMeans_set_predict_request = bridgeMiniBatchKMeans[${this.id}].set_predict_request(**pms_MiniBatchKMeans_set_predict_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MiniBatchKMeans_set_predict_request.tolist() if hasattr(res_MiniBatchKMeans_set_predict_request, 'tolist') else res_MiniBatchKMeans_set_predict_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This MiniBatchKMeans instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MiniBatchKMeans must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MiniBatchKMeans_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_MiniBatchKMeans_set_score_request = {k: v for k, v in pms_MiniBatchKMeans_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MiniBatchKMeans_set_score_request = bridgeMiniBatchKMeans[${this.id}].set_score_request(**pms_MiniBatchKMeans_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MiniBatchKMeans_set_score_request.tolist() if hasattr(res_MiniBatchKMeans_set_score_request, 'tolist') else res_MiniBatchKMeans_set_score_request`
   }
 
   /**

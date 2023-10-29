@@ -45,7 +45,7 @@ export class CalibratedClassifierCV {
     cv?: number | 'prefit'
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors.
 
       Base estimator clones are fitted in parallel across cross-validation iterations. Therefore parallelism happens only when `cv != "prefit"`.
 
@@ -205,6 +205,46 @@ pms_CalibratedClassifierCV_fit = {k: v for k, v in pms_CalibratedClassifierCV_fi
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.utils.metadata_routing.MetadataRouter "sklearn.utils.metadata_routing.MetadataRouter") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This CalibratedClassifierCV instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'CalibratedClassifierCV must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_CalibratedClassifierCV_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_CalibratedClassifierCV_get_metadata_routing = {k: v for k, v in pms_CalibratedClassifierCV_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_CalibratedClassifierCV_get_metadata_routing = bridgeCalibratedClassifierCV[${this.id}].get_metadata_routing(**pms_CalibratedClassifierCV_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_CalibratedClassifierCV_get_metadata_routing.tolist() if hasattr(res_CalibratedClassifierCV_get_metadata_routing, 'tolist') else res_CalibratedClassifierCV_get_metadata_routing`
+  }
+
+  /**
     Predict the target of new samples.
 
     The predicted class is the class that has the highest probability, and can thus be different from the prediction of the uncalibrated classifier.
@@ -332,6 +372,90 @@ pms_CalibratedClassifierCV_score = {k: v for k, v in pms_CalibratedClassifierCV_
     // convert the result from python to node.js
     return this
       ._py`res_CalibratedClassifierCV_score.tolist() if hasattr(res_CalibratedClassifierCV_score, 'tolist') else res_CalibratedClassifierCV_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This CalibratedClassifierCV instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'CalibratedClassifierCV must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_CalibratedClassifierCV_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_CalibratedClassifierCV_set_fit_request = {k: v for k, v in pms_CalibratedClassifierCV_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_CalibratedClassifierCV_set_fit_request = bridgeCalibratedClassifierCV[${this.id}].set_fit_request(**pms_CalibratedClassifierCV_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_CalibratedClassifierCV_set_fit_request.tolist() if hasattr(res_CalibratedClassifierCV_set_fit_request, 'tolist') else res_CalibratedClassifierCV_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This CalibratedClassifierCV instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'CalibratedClassifierCV must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_CalibratedClassifierCV_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_CalibratedClassifierCV_set_score_request = {k: v for k, v in pms_CalibratedClassifierCV_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_CalibratedClassifierCV_set_score_request = bridgeCalibratedClassifierCV[${this.id}].set_score_request(**pms_CalibratedClassifierCV_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_CalibratedClassifierCV_set_score_request.tolist() if hasattr(res_CalibratedClassifierCV_set_score_request, 'tolist') else res_CalibratedClassifierCV_set_score_request`
   }
 
   /**

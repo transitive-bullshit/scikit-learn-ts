@@ -28,19 +28,9 @@ export class LeaveOneOut {
 
   constructor(opts?: {
     /**
-      Training data, where `n\_samples` is the number of samples and `n\_features` is the number of features.
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
      */
-    X?: ArrayLike[]
-
-    /**
-      Always ignored, exists for compatibility.
-     */
-    y?: any
-
-    /**
-      Always ignored, exists for compatibility.
-     */
-    groups?: any
+    routing?: any
   }) {
     this.id = `LeaveOneOut${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -82,11 +72,9 @@ except NameError: bridgeLeaveOneOut = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_LeaveOneOut = {'X': np.array(${
-      this.opts['X'] ?? undefined
-    }) if ${this.opts['X'] !== undefined} else None, 'y': ${
-      this.opts['y'] ?? undefined
-    }, 'groups': ${this.opts['groups'] ?? undefined}}
+    await this._py.ex`ctor_LeaveOneOut = {'routing': ${
+      this.opts['routing'] ?? undefined
+    }}
 
 ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
 
@@ -113,6 +101,43 @@ ctor_LeaveOneOut = {k: v for k, v in ctor_LeaveOneOut.items() if v is not None}`
     await this._py.ex`del bridgeLeaveOneOut[${this.id}]`
 
     this._isDisposed = true
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This LeaveOneOut instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LeaveOneOut must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_LeaveOneOut_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_LeaveOneOut_get_metadata_routing = {k: v for k, v in pms_LeaveOneOut_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LeaveOneOut_get_metadata_routing = bridgeLeaveOneOut[${this.id}].get_metadata_routing(**pms_LeaveOneOut_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LeaveOneOut_get_metadata_routing.tolist() if hasattr(res_LeaveOneOut_get_metadata_routing, 'tolist') else res_LeaveOneOut_get_metadata_routing`
   }
 
   /**
@@ -205,28 +230,5 @@ pms_LeaveOneOut_split = {k: v for k, v in pms_LeaveOneOut_split.items() if v is 
     // convert the result from python to node.js
     return this
       ._py`res_LeaveOneOut_split.tolist() if hasattr(res_LeaveOneOut_split, 'tolist') else res_LeaveOneOut_split`
-  }
-
-  /**
-    Returns the number of splitting iterations in the cross-validator.
-   */
-  get n_splits(): Promise<number> {
-    if (this._isDisposed) {
-      throw new Error('This LeaveOneOut instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('LeaveOneOut must call init() before accessing n_splits')
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_LeaveOneOut_n_splits = bridgeLeaveOneOut[${this.id}].n_splits`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_LeaveOneOut_n_splits.tolist() if hasattr(attr_LeaveOneOut_n_splits, 'tolist') else attr_LeaveOneOut_n_splits`
-    })()
   }
 }

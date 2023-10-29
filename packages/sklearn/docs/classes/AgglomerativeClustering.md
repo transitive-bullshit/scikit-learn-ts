@@ -37,7 +37,7 @@ new AgglomerativeClustering(opts?: object): AgglomerativeClustering;
 
 [`AgglomerativeClustering`](AgglomerativeClustering.md)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L25)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L25)
 
 ## Methods
 
@@ -57,7 +57,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L150)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L150)
 
 ### fit()
 
@@ -81,7 +81,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L167)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L167)
 
 ### fit\_predict()
 
@@ -107,7 +107,32 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L209)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L209)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L254)
 
 ### init()
 
@@ -131,7 +156,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L98)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L98)
 
 ## Properties
 
@@ -139,31 +164,31 @@ Defined in:  [generated/cluster/AgglomerativeClustering.ts:98](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L23)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L22)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L21)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L18)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L19)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L19)
 
 ## Accessors
 
@@ -181,9 +206,9 @@ children_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L414)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L454)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L414)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L454)
 
 ### distances\_
 
@@ -199,9 +224,9 @@ distances_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L441)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L481)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L441)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L481)
 
 ### feature\_names\_in\_
 
@@ -217,9 +242,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L387)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L427)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L387)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L427)
 
 ### labels\_
 
@@ -235,9 +260,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L279)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L319)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L279)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L319)
 
 ### n\_clusters\_
 
@@ -253,9 +278,9 @@ n_clusters_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L252)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L292)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L252)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L292)
 
 ### n\_connected\_components\_
 
@@ -271,9 +296,9 @@ n_connected_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L333)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L373)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L333)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L373)
 
 ### n\_features\_in\_
 
@@ -289,9 +314,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L360)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L400)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L360)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L400)
 
 ### n\_leaves\_
 
@@ -307,9 +332,9 @@ n_leaves_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L306)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L346)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L306)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L346)
 
 ### py
 
@@ -323,7 +348,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L85)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L85)
 
 #### Signature
 
@@ -341,6 +366,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L89)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L89)
 
-Defined in:  [generated/cluster/AgglomerativeClustering.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L85) [generated/cluster/AgglomerativeClustering.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L89)
+Defined in:  [generated/cluster/AgglomerativeClustering.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L85) [generated/cluster/AgglomerativeClustering.ts:89](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AgglomerativeClustering.ts#L89)

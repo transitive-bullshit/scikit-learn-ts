@@ -79,7 +79,7 @@ export class DictionaryLearning {
     transform_alpha?: number
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -92,6 +92,11 @@ export class DictionaryLearning {
       Initial values for the dictionary, for warm restart. Only used if `code\_init` and `dict\_init` are not `undefined`.
      */
     dict_init?: NDArray[]
+
+    /**
+      Callable that gets invoked every five iterations.
+     */
+    callback?: any
 
     /**
       To control the verbosity of the procedure.
@@ -195,9 +200,11 @@ except NameError: bridgeDictionaryLearning = {}
       this.opts['code_init'] !== undefined
     } else None, 'dict_init': np.array(${
       this.opts['dict_init'] ?? undefined
-    }) if ${this.opts['dict_init'] !== undefined} else None, 'verbose': ${
-      this.opts['verbose'] ?? undefined
-    }, 'split_sign': ${this.opts['split_sign'] ?? undefined}, 'random_state': ${
+    }) if ${this.opts['dict_init'] !== undefined} else None, 'callback': ${
+      this.opts['callback'] ?? undefined
+    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'split_sign': ${
+      this.opts['split_sign'] ?? undefined
+    }, 'random_state': ${
       this.opts['random_state'] ?? undefined
     }, 'positive_code': ${
       this.opts['positive_code'] ?? undefined
@@ -273,26 +280,19 @@ pms_DictionaryLearning_fit = {k: v for k, v in pms_DictionaryLearning_fit.items(
   }
 
   /**
-    Fit to data, then transform it.
-
-    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+    Fit the model from data in X and return the transformed data.
    */
   async fit_transform(opts: {
     /**
-      Input samples.
+      Training vector, where `n\_samples` is the number of samples and `n\_features` is the number of features.
      */
     X?: ArrayLike[]
 
     /**
-      Target values (`undefined` for unsupervised transformations).
+      Not used, present for API consistency by convention.
      */
-    y?: ArrayLike
-
-    /**
-      Additional fit parameters.
-     */
-    fit_params?: any
-  }): Promise<any[]> {
+    y?: any
+  }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
         'This DictionaryLearning instance has already been disposed'
@@ -308,11 +308,7 @@ pms_DictionaryLearning_fit = {k: v for k, v in pms_DictionaryLearning_fit.items(
     // set up method params
     await this._py.ex`pms_DictionaryLearning_fit_transform = {'X': np.array(${
       opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
-      opts['y'] ?? undefined
-    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
-      opts['fit_params'] ?? undefined
-    }}
+    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_DictionaryLearning_fit_transform = {k: v for k, v in pms_DictionaryLearning_fit_transform.items() if v is not None}`
 
@@ -332,7 +328,7 @@ pms_DictionaryLearning_fit_transform = {k: v for k, v in pms_DictionaryLearning_
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.DictionaryLearning.fit "sklearn.decomposition.DictionaryLearning.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -363,6 +359,46 @@ pms_DictionaryLearning_get_feature_names_out = {k: v for k, v in pms_DictionaryL
     // convert the result from python to node.js
     return this
       ._py`res_DictionaryLearning_get_feature_names_out.tolist() if hasattr(res_DictionaryLearning_get_feature_names_out, 'tolist') else res_DictionaryLearning_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This DictionaryLearning instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'DictionaryLearning must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_DictionaryLearning_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_DictionaryLearning_get_metadata_routing = {k: v for k, v in pms_DictionaryLearning_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_DictionaryLearning_get_metadata_routing = bridgeDictionaryLearning[${this.id}].get_metadata_routing(**pms_DictionaryLearning_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_DictionaryLearning_get_metadata_routing.tolist() if hasattr(res_DictionaryLearning_get_metadata_routing, 'tolist') else res_DictionaryLearning_get_metadata_routing`
   }
 
   /**

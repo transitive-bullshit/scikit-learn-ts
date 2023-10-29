@@ -55,14 +55,14 @@ export class MiniBatchDictionaryLearning {
     fit_algorithm?: 'lars' | 'cd'
 
     /**
-      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
     /**
       Number of samples in each mini-batch.
 
-      @defaultValue `3`
+      @defaultValue `256`
      */
     batch_size?: number
 
@@ -369,7 +369,7 @@ pms_MiniBatchDictionaryLearning_fit_transform = {k: v for k, v in pms_MiniBatchD
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.MiniBatchDictionaryLearning.fit "sklearn.decomposition.MiniBatchDictionaryLearning.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -403,6 +403,46 @@ pms_MiniBatchDictionaryLearning_get_feature_names_out = {k: v for k, v in pms_Mi
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This MiniBatchDictionaryLearning instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'MiniBatchDictionaryLearning must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_MiniBatchDictionaryLearning_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_MiniBatchDictionaryLearning_get_metadata_routing = {k: v for k, v in pms_MiniBatchDictionaryLearning_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_MiniBatchDictionaryLearning_get_metadata_routing = bridgeMiniBatchDictionaryLearning[${this.id}].get_metadata_routing(**pms_MiniBatchDictionaryLearning_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_MiniBatchDictionaryLearning_get_metadata_routing.tolist() if hasattr(res_MiniBatchDictionaryLearning_get_metadata_routing, 'tolist') else res_MiniBatchDictionaryLearning_get_metadata_routing`
+  }
+
+  /**
     Update the model using the data in X as a mini-batch.
    */
   async partial_fit(opts: {
@@ -415,11 +455,6 @@ pms_MiniBatchDictionaryLearning_get_feature_names_out = {k: v for k, v in pms_Mi
       Not used, present for API consistency by convention.
      */
     y?: any
-
-    /**
-      The number of iteration on data batches that has been performed before this call to `partial\_fit`. This is optional: if no number is passed, the memory of the object is used.
-     */
-    iter_offset?: number
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -437,9 +472,7 @@ pms_MiniBatchDictionaryLearning_get_feature_names_out = {k: v for k, v in pms_Mi
     await this._py
       .ex`pms_MiniBatchDictionaryLearning_partial_fit = {'X': np.array(${
       opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${
-      opts['y'] ?? undefined
-    }, 'iter_offset': ${opts['iter_offset'] ?? undefined}}
+    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
 
 pms_MiniBatchDictionaryLearning_partial_fit = {k: v for k, v in pms_MiniBatchDictionaryLearning_partial_fit.items() if v is not None}`
 
@@ -560,33 +593,6 @@ pms_MiniBatchDictionaryLearning_transform = {k: v for k, v in pms_MiniBatchDicti
   }
 
   /**
-    Internal sufficient statistics that are kept by the algorithm. Keeping them is useful in online settings, to avoid losing the history of the evolution, but they shouldn’t have any use for the end user. `A` `(n\_components, n\_components)` is the dictionary covariance matrix. `B` `(n\_features, n\_components)` is the data approximation matrix.
-   */
-  get inner_stats_(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This MiniBatchDictionaryLearning instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'MiniBatchDictionaryLearning must call init() before accessing inner_stats_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_MiniBatchDictionaryLearning_inner_stats_ = bridgeMiniBatchDictionaryLearning[${this.id}].inner_stats_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_MiniBatchDictionaryLearning_inner_stats_.tolist() if hasattr(attr_MiniBatchDictionaryLearning_inner_stats_, 'tolist') else attr_MiniBatchDictionaryLearning_inner_stats_`
-    })()
-  }
-
-  /**
     Number of features seen during [fit](../../glossary.html#term-fit).
    */
   get n_features_in_(): Promise<number> {
@@ -664,60 +670,6 @@ pms_MiniBatchDictionaryLearning_transform = {k: v for k, v in pms_MiniBatchDicti
       // convert the result from python to node.js
       return this
         ._py`attr_MiniBatchDictionaryLearning_n_iter_.tolist() if hasattr(attr_MiniBatchDictionaryLearning_n_iter_, 'tolist') else attr_MiniBatchDictionaryLearning_n_iter_`
-    })()
-  }
-
-  /**
-    The number of iteration on data batches that has been performed before.
-   */
-  get iter_offset_(): Promise<number> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This MiniBatchDictionaryLearning instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'MiniBatchDictionaryLearning must call init() before accessing iter_offset_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_MiniBatchDictionaryLearning_iter_offset_ = bridgeMiniBatchDictionaryLearning[${this.id}].iter_offset_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_MiniBatchDictionaryLearning_iter_offset_.tolist() if hasattr(attr_MiniBatchDictionaryLearning_iter_offset_, 'tolist') else attr_MiniBatchDictionaryLearning_iter_offset_`
-    })()
-  }
-
-  /**
-    RandomState instance that is generated either from a seed, the random number generattor or by `np.random`.
-   */
-  get random_state_(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This MiniBatchDictionaryLearning instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'MiniBatchDictionaryLearning must call init() before accessing random_state_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_MiniBatchDictionaryLearning_random_state_ = bridgeMiniBatchDictionaryLearning[${this.id}].random_state_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_MiniBatchDictionaryLearning_random_state_.tolist() if hasattr(attr_MiniBatchDictionaryLearning_random_state_, 'tolist') else attr_MiniBatchDictionaryLearning_random_state_`
     })()
   }
 

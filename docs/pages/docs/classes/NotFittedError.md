@@ -27,7 +27,7 @@ new NotFittedError(opts?: object): NotFittedError;
 
 [`NotFittedError`](NotFittedError.md)
 
-Defined in:  [generated/exceptions/NotFittedError.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L23)
+Defined in:  [generated/exceptions/NotFittedError.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L23)
 
 ## Methods
 
@@ -47,7 +47,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/NotFittedError.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L81)
+Defined in:  [generated/exceptions/NotFittedError.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L81)
 
 ### init()
 
@@ -71,7 +71,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/NotFittedError.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L41)
+Defined in:  [generated/exceptions/NotFittedError.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L41)
 
 ### with\_traceback()
 
@@ -93,7 +93,7 @@ with_traceback(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/exceptions/NotFittedError.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L98)
+Defined in:  [generated/exceptions/NotFittedError.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L98)
 
 ## Properties
 
@@ -101,31 +101,31 @@ Defined in:  [generated/exceptions/NotFittedError.ts:98](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/NotFittedError.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L21)
+Defined in:  [generated/exceptions/NotFittedError.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/NotFittedError.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L20)
+Defined in:  [generated/exceptions/NotFittedError.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/exceptions/NotFittedError.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L19)
+Defined in:  [generated/exceptions/NotFittedError.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/exceptions/NotFittedError.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L16)
+Defined in:  [generated/exceptions/NotFittedError.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/exceptions/NotFittedError.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L17)
+Defined in:  [generated/exceptions/NotFittedError.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L17)
 
 ## Accessors
 
@@ -141,7 +141,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/exceptions/NotFittedError.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L28)
+Defined in:  [generated/exceptions/NotFittedError.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L28)
 
 #### Signature
 
@@ -159,4 +159,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/exceptions/NotFittedError.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L32)
+Defined in: [generated/exceptions/NotFittedError.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/NotFittedError.ts#L32)

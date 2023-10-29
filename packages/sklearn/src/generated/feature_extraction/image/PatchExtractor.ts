@@ -22,12 +22,12 @@ export class PatchExtractor {
 
   constructor(opts?: {
     /**
-      The dimensions of one patch.
+      The dimensions of one patch. If set to `undefined`, the patch size will be automatically set to `(img\_height // 10, img\_width // 10)`, where `img\_height` and `img\_width` are the dimensions of the input images.
      */
     patch_size?: any
 
     /**
-      The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches.
+      The maximum number of patches per image to extract. If `max\_patches` is a float in (0, 1), it is taken to mean a proportion of the total number of patches. If set to `undefined`, extract all possible patches.
      */
     max_patches?: number
 
@@ -110,15 +110,15 @@ ctor_PatchExtractor = {k: v for k, v in ctor_PatchExtractor.items() if v is not 
   }
 
   /**
-    Do nothing and return the estimator unchanged.
+    Only validate the parameters of the estimator.
 
-    This method is just there to implement the usual API and hence work in pipelines.
+    This method allows to: (i) validate the parameters of the estimator and (ii) be consistent with the scikit-learn transformer API.
    */
   async fit(opts: {
     /**
-      Training data.
+      Array of images from which to extract patches. For color images, the last dimension specifies the channel: a RGB image would have `n\_channels=3`.
      */
-    X?: ArrayLike[]
+    X?: NDArray[][]
 
     /**
       Not used, present for API consistency by convention.
@@ -147,6 +147,127 @@ pms_PatchExtractor_fit = {k: v for k, v in pms_PatchExtractor_fit.items() if v i
     // convert the result from python to node.js
     return this
       ._py`res_PatchExtractor_fit.tolist() if hasattr(res_PatchExtractor_fit, 'tolist') else res_PatchExtractor_fit`
+  }
+
+  /**
+    Fit to data, then transform it.
+
+    Fits transformer to `X` and `y` with optional parameters `fit\_params` and returns a transformed version of `X`.
+   */
+  async fit_transform(opts: {
+    /**
+      Input samples.
+     */
+    X?: ArrayLike[]
+
+    /**
+      Target values (`undefined` for unsupervised transformations).
+     */
+    y?: ArrayLike
+
+    /**
+      Additional fit parameters.
+     */
+    fit_params?: any
+  }): Promise<any[]> {
+    if (this._isDisposed) {
+      throw new Error('This PatchExtractor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('PatchExtractor must call init() before fit_transform()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_PatchExtractor_fit_transform = {'X': np.array(${
+      opts['X'] ?? undefined
+    }) if ${opts['X'] !== undefined} else None, 'y': np.array(${
+      opts['y'] ?? undefined
+    }) if ${opts['y'] !== undefined} else None, 'fit_params': ${
+      opts['fit_params'] ?? undefined
+    }}
+
+pms_PatchExtractor_fit_transform = {k: v for k, v in pms_PatchExtractor_fit_transform.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_PatchExtractor_fit_transform = bridgePatchExtractor[${this.id}].fit_transform(**pms_PatchExtractor_fit_transform)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_PatchExtractor_fit_transform.tolist() if hasattr(res_PatchExtractor_fit_transform, 'tolist') else res_PatchExtractor_fit_transform`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This PatchExtractor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'PatchExtractor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_PatchExtractor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_PatchExtractor_get_metadata_routing = {k: v for k, v in pms_PatchExtractor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_PatchExtractor_get_metadata_routing = bridgePatchExtractor[${this.id}].get_metadata_routing(**pms_PatchExtractor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_PatchExtractor_get_metadata_routing.tolist() if hasattr(res_PatchExtractor_get_metadata_routing, 'tolist') else res_PatchExtractor_get_metadata_routing`
+  }
+
+  /**
+    Set output container.
+
+    See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
+   */
+  async set_output(opts: {
+    /**
+      Configure output of `transform` and `fit\_transform`.
+     */
+    transform?: 'default' | 'pandas'
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This PatchExtractor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('PatchExtractor must call init() before set_output()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_PatchExtractor_set_output = {'transform': ${
+      opts['transform'] ?? undefined
+    }}
+
+pms_PatchExtractor_set_output = {k: v for k, v in pms_PatchExtractor_set_output.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_PatchExtractor_set_output = bridgePatchExtractor[${this.id}].set_output(**pms_PatchExtractor_set_output)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_PatchExtractor_set_output.tolist() if hasattr(res_PatchExtractor_set_output, 'tolist') else res_PatchExtractor_set_output`
   }
 
   /**

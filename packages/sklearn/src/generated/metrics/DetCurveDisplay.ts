@@ -41,7 +41,7 @@ export class DetCurveDisplay {
     /**
       The label of the positive class.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
   }) {
     this.id = `DetCurveDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -152,7 +152,7 @@ ctor_DetCurveDisplay = {k: v for k, v in ctor_DetCurveDisplay.items() if v is no
     /**
       The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
 
     /**
       Name of DET curve for labeling. If `undefined`, use the name of the estimator.
@@ -233,7 +233,7 @@ pms_DetCurveDisplay_from_estimator = {k: v for k, v in pms_DetCurveDisplay_from_
     /**
       The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
 
     /**
       Name of DET curve for labeling. If `undefined`, name will be set to `"Classifier"`.

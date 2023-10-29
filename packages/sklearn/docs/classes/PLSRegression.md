@@ -33,7 +33,7 @@ new PLSRegression(opts?: object): PLSRegression;
 
 [`PLSRegression`](PLSRegression.md)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L25)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L25)
 
 ## Methods
 
@@ -53,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L122)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L122)
 
 ### fit()
 
@@ -77,7 +77,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L139)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L139)
 
 ### fit\_transform()
 
@@ -101,7 +101,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L179)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L179)
 
 ### get\_feature\_names\_out()
 
@@ -120,13 +120,38 @@ get_feature_names_out(opts: object): Promise<any>;
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.cross_decomposition.PLSRegression.fit "sklearn.cross_decomposition.PLSRegression.fit"). |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L221)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L221)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L259)
 
 ### init()
 
@@ -150,7 +175,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L78)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L78)
 
 ### inverse\_transform()
 
@@ -174,7 +199,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L257)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L294)
 
 ### predict()
 
@@ -198,7 +223,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L299)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L336)
 
 ### score()
 
@@ -225,7 +250,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L343)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L380)
 
 ### set\_output()
 
@@ -250,7 +275,88 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L392)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:429](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L429)
+
+### set\_predict\_request()
+
+Request metadata passed to the `predict` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_predict_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.copy?` | `string` \| `boolean` | Metadata routing for `copy` parameter in `predict`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L466)
+
+### set\_score\_request()
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_score_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:505](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L505)
+
+### set\_transform\_request()
+
+Request metadata passed to the `transform` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_transform_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.copy?` | `string` \| `boolean` | Metadata routing for `copy` parameter in `transform`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L544)
 
 ### transform()
 
@@ -275,7 +381,7 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L425)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L579)
 
 ## Properties
 
@@ -283,33 +389,51 @@ Defined in:  [generated/cross\_decomposition/PLSRegression.ts:425](https://githu
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L23)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L22)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L21)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L18)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L19)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L19)
 
 ## Accessors
+
+### coef\_
+
+The coefficients of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
+
+#### Signature
+
+```ts
+coef_(): Promise<ArrayLike[]>;
+```
+
+#### Returns
+
+`Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
+
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:828](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L828)
+
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:828](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L828)
 
 ### feature\_names\_in\_
 
@@ -325,13 +449,13 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L747)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:924](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L924)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L747)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:924](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L924)
 
 ### intercept\_
 
-The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef\_ + intercept\_`.
+The intercepts of the linear model such that `Y` is approximated as `Y \= X @ coef\_.T + intercept\_`.
 
 #### Signature
 
@@ -343,9 +467,9 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L674)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:851](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L851)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:674](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L674)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:851](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L851)
 
 ### n\_features\_in\_
 
@@ -361,9 +485,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L722)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:899](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L899)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L722)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:899](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L899)
 
 ### n\_iter\_
 
@@ -379,9 +503,9 @@ n_iter_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L699)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:876](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L876)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L699)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:876](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L876)
 
 ### py
 
@@ -395,7 +519,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L65)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L65)
 
 #### Signature
 
@@ -413,9 +537,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L69)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L69)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L65) [generated/cross\_decomposition/PLSRegression.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L69)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L65) [generated/cross\_decomposition/PLSRegression.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L69)
 
 ### x\_loadings\_
 
@@ -431,9 +555,9 @@ x_loadings_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L524)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L678)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L524)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L678)
 
 ### x\_rotations\_
 
@@ -449,9 +573,9 @@ x_rotations_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L624)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:778](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L778)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L624)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:778](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L778)
 
 ### x\_scores\_
 
@@ -467,9 +591,9 @@ x_scores_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L574)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L728)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L574)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:728](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L728)
 
 ### x\_weights\_
 
@@ -485,9 +609,9 @@ x_weights_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L474)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L628)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L474)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L628)
 
 ### y\_loadings\_
 
@@ -503,9 +627,9 @@ y_loadings_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L549)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L703)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L549)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L703)
 
 ### y\_rotations\_
 
@@ -521,9 +645,9 @@ y_rotations_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L649)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:803](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L803)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:649](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L649)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:803](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L803)
 
 ### y\_scores\_
 
@@ -539,9 +663,9 @@ y_scores_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L599)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L753)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:599](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L599)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L753)
 
 ### y\_weights\_
 
@@ -557,6 +681,6 @@ y_weights_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L499)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L653)
 
-Defined in:  [generated/cross\_decomposition/PLSRegression.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L499)
+Defined in:  [generated/cross\_decomposition/PLSRegression.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/PLSRegression.ts#L653)

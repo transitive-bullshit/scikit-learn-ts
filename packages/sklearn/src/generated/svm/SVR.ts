@@ -229,6 +229,41 @@ pms_SVR_fit = {k: v for k, v in pms_SVR_fit.items() if v is not None}`
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SVR instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('SVR must call init() before get_metadata_routing()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_SVR_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SVR_get_metadata_routing = {k: v for k, v in pms_SVR_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SVR_get_metadata_routing = bridgeSVR[${this.id}].get_metadata_routing(**pms_SVR_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SVR_get_metadata_routing.tolist() if hasattr(res_SVR_get_metadata_routing, 'tolist') else res_SVR_get_metadata_routing`
+  }
+
+  /**
     Perform regression on samples in X.
 
     For an one-class model, +1 (inlier) or -1 (outlier) is returned.
@@ -310,6 +345,80 @@ pms_SVR_score = {k: v for k, v in pms_SVR_score.items() if v is not None}`
     // convert the result from python to node.js
     return this
       ._py`res_SVR_score.tolist() if hasattr(res_SVR_score, 'tolist') else res_SVR_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SVR instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('SVR must call init() before set_fit_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_SVR_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_SVR_set_fit_request = {k: v for k, v in pms_SVR_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SVR_set_fit_request = bridgeSVR[${this.id}].set_fit_request(**pms_SVR_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SVR_set_fit_request.tolist() if hasattr(res_SVR_set_fit_request, 'tolist') else res_SVR_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SVR instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('SVR must call init() before set_score_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_SVR_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_SVR_set_score_request = {k: v for k, v in pms_SVR_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SVR_set_score_request = bridgeSVR[${this.id}].set_score_request(**pms_SVR_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SVR_set_score_request.tolist() if hasattr(res_SVR_set_score_request, 'tolist') else res_SVR_set_score_request`
   }
 
   /**

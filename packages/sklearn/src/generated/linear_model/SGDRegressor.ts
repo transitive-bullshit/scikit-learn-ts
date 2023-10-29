@@ -345,6 +345,43 @@ pms_SGDRegressor_fit = {k: v for k, v in pms_SGDRegressor_fit.items() if v is no
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SGDRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SGDRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_SGDRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SGDRegressor_get_metadata_routing = {k: v for k, v in pms_SGDRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SGDRegressor_get_metadata_routing = bridgeSGDRegressor[${this.id}].get_metadata_routing(**pms_SGDRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SGDRegressor_get_metadata_routing.tolist() if hasattr(res_SGDRegressor_get_metadata_routing, 'tolist') else res_SGDRegressor_get_metadata_routing`
+  }
+
+  /**
     Perform one epoch of stochastic gradient descent on given samples.
 
     Internally, this method uses `max\_iter \= 1`. Therefore, it is not guaranteed that a minimum of the cost function is reached after calling it once. Matters such as objective convergence and early stopping should be handled by the user.
@@ -471,6 +508,134 @@ pms_SGDRegressor_score = {k: v for k, v in pms_SGDRegressor_score.items() if v i
     // convert the result from python to node.js
     return this
       ._py`res_SGDRegressor_score.tolist() if hasattr(res_SGDRegressor_score, 'tolist') else res_SGDRegressor_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `coef\_init` parameter in `fit`.
+     */
+    coef_init?: string | boolean
+
+    /**
+      Metadata routing for `intercept\_init` parameter in `fit`.
+     */
+    intercept_init?: string | boolean
+
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SGDRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('SGDRegressor must call init() before set_fit_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_SGDRegressor_set_fit_request = {'coef_init': ${
+      opts['coef_init'] ?? undefined
+    }, 'intercept_init': ${
+      opts['intercept_init'] ?? undefined
+    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+
+pms_SGDRegressor_set_fit_request = {k: v for k, v in pms_SGDRegressor_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SGDRegressor_set_fit_request = bridgeSGDRegressor[${this.id}].set_fit_request(**pms_SGDRegressor_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SGDRegressor_set_fit_request.tolist() if hasattr(res_SGDRegressor_set_fit_request, 'tolist') else res_SGDRegressor_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `partial\_fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_partial_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SGDRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SGDRegressor must call init() before set_partial_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_SGDRegressor_set_partial_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_SGDRegressor_set_partial_fit_request = {k: v for k, v in pms_SGDRegressor_set_partial_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SGDRegressor_set_partial_fit_request = bridgeSGDRegressor[${this.id}].set_partial_fit_request(**pms_SGDRegressor_set_partial_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SGDRegressor_set_partial_fit_request.tolist() if hasattr(res_SGDRegressor_set_partial_fit_request, 'tolist') else res_SGDRegressor_set_partial_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SGDRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SGDRegressor must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_SGDRegressor_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_SGDRegressor_set_score_request = {k: v for k, v in pms_SGDRegressor_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SGDRegressor_set_score_request = bridgeSGDRegressor[${this.id}].set_score_request(**pms_SGDRegressor_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SGDRegressor_set_score_request.tolist() if hasattr(res_SGDRegressor_set_score_request, 'tolist') else res_SGDRegressor_set_score_request`
   }
 
   /**

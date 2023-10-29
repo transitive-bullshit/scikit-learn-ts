@@ -31,7 +31,7 @@ new LatentDirichletAllocation(opts?: object): LatentDirichletAllocation;
 | `opts.max_iter?` | `number` | The maximum number of passes over the training data (aka epochs). It only impacts the behavior in the [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit") method, and not the [`partial\_fit`](#sklearn.decomposition.LatentDirichletAllocation.partial_fit "sklearn.decomposition.LatentDirichletAllocation.partial_fit") method.  `Default Value`  `10` |
 | `opts.mean_change_tol?` | `number` | Stopping tolerance for updating document topic distribution in E-step.  `Default Value`  `0.001` |
 | `opts.n_components?` | `number` | Number of topics.  `Default Value`  `10` |
-| `opts.n_jobs?` | `number` | The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
+| `opts.n_jobs?` | `number` | The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See Glossary for more details. |
 | `opts.perp_tol?` | `number` | Perplexity tolerance in batch learning. Only used when `evaluate\_every` is greater than 0.  `Default Value`  `0.1` |
 | `opts.random_state?` | `number` | Pass an int for reproducible results across multiple function calls. See Glossary. |
 | `opts.topic_word_prior?` | `number` | Prior of topic word distribution `beta`. If the value is `undefined`, defaults to `1 / n\_components`. In [\[1\]](#re25e5648fc37-1), this is called `eta`. |
@@ -42,7 +42,7 @@ new LatentDirichletAllocation(opts?: object): LatentDirichletAllocation;
 
 [`LatentDirichletAllocation`](LatentDirichletAllocation.md)
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L23)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L23)
 
 ## Methods
 
@@ -62,7 +62,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L213)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L213)
 
 ### fit()
 
@@ -88,7 +88,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L232)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L232)
 
 ### fit\_transform()
 
@@ -115,7 +115,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L274)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L274)
 
 ### get\_feature\_names\_out()
 
@@ -134,13 +134,38 @@ get_feature_names_out(opts: object): Promise<any>;
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit"). |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L328)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L328)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check User Guide on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L368)
 
 ### init()
 
@@ -164,7 +189,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L147)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L147)
 
 ### partial\_fit()
 
@@ -188,7 +213,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L366)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L406)
 
 ### perplexity()
 
@@ -214,7 +239,7 @@ perplexity(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L411)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:451](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L451)
 
 ### score()
 
@@ -238,7 +263,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L456)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L496)
 
 ### set\_output()
 
@@ -263,7 +288,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L500)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L540)
 
 ### transform()
 
@@ -286,7 +311,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L538)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L578)
 
 ## Properties
 
@@ -294,31 +319,31 @@ Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:538](https://
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L21)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L20)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L19)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L16)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L17)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L17)
 
 ## Accessors
 
@@ -336,7 +361,7 @@ bound_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L738)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:778](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L778)
 
 ### components\_
 
@@ -352,7 +377,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L576)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L616)
 
 ### doc\_topic\_prior\_
 
@@ -368,7 +393,7 @@ doc_topic_prior_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:765](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L765)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:805](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L805)
 
 ### exp\_dirichlet\_component\_
 
@@ -384,7 +409,7 @@ exp_dirichlet_component_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L603)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:643](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L643)
 
 ### feature\_names\_in\_
 
@@ -400,7 +425,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L684)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L724)
 
 ### n\_batch\_iter\_
 
@@ -416,7 +441,7 @@ n_batch_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:630](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L630)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L670)
 
 ### n\_features\_in\_
 
@@ -432,7 +457,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L657)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L697)
 
 ### n\_iter\_
 
@@ -448,7 +473,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L711)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:751](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L751)
 
 ### py
 
@@ -462,7 +487,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L134)
+Defined in:  [generated/decomposition/LatentDirichletAllocation.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L134)
 
 #### Signature
 
@@ -480,7 +505,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L138)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L138)
 
 ### random\_state\_
 
@@ -496,7 +521,7 @@ random_state_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:792](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L792)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:832](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L832)
 
 ### topic\_word\_prior\_
 
@@ -512,4 +537,4 @@ topic_word_prior_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/LatentDirichletAllocation.ts:819](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L819)
+Defined in: [generated/decomposition/LatentDirichletAllocation.ts:859](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/LatentDirichletAllocation.ts#L859)

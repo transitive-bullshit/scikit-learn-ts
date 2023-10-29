@@ -16,7 +16,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Note: a one-hot encoding of y labels should use a LabelBinarizer instead.
 
-  Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features).
+  Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features). For a comparison of different encoders, refer to: [Comparing Target Encoder with Other Encoders](../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
  */
@@ -78,6 +78,15 @@ export class OneHotEncoder {
       Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
      */
     max_categories?: number
+
+    /**
+      Callable with signature `def callable(input\_feature, category)` that returns a string. This is used to create feature names to be returned by [`get\_feature\_names\_out`](#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").
+
+      `"concat"` concatenates encoded feature name and category with `feature + "\_" + str(category)`.E.g. feature X with values 1, 6, 7 create feature names `X\_1, X\_6, X\_7`.
+
+      @defaultValue `'concat'`
+     */
+    feature_name_combiner?: 'concat'
   }) {
     this.id = `OneHotEncoder${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -131,7 +140,11 @@ except NameError: bridgeOneHotEncoder = {}
       this.opts['handle_unknown'] ?? undefined
     }, 'min_frequency': ${
       this.opts['min_frequency'] ?? undefined
-    }, 'max_categories': ${this.opts['max_categories'] ?? undefined}}
+    }, 'max_categories': ${
+      this.opts['max_categories'] ?? undefined
+    }, 'feature_name_combiner': ${
+      this.opts['feature_name_combiner'] ?? undefined
+    }}
 
 ctor_OneHotEncoder = {k: v for k, v in ctor_OneHotEncoder.items() if v is not None}`
 
@@ -281,6 +294,43 @@ pms_OneHotEncoder_get_feature_names_out = {k: v for k, v in pms_OneHotEncoder_ge
     // convert the result from python to node.js
     return this
       ._py`res_OneHotEncoder_get_feature_names_out.tolist() if hasattr(res_OneHotEncoder_get_feature_names_out, 'tolist') else res_OneHotEncoder_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This OneHotEncoder instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'OneHotEncoder must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_OneHotEncoder_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_OneHotEncoder_get_metadata_routing = {k: v for k, v in pms_OneHotEncoder_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_OneHotEncoder_get_metadata_routing = bridgeOneHotEncoder[${this.id}].get_metadata_routing(**pms_OneHotEncoder_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_OneHotEncoder_get_metadata_routing.tolist() if hasattr(res_OneHotEncoder_get_metadata_routing, 'tolist') else res_OneHotEncoder_get_metadata_routing`
   }
 
   /**
@@ -489,6 +539,31 @@ pms_OneHotEncoder_transform = {k: v for k, v in pms_OneHotEncoder_transform.item
       // convert the result from python to node.js
       return this
         ._py`attr_OneHotEncoder_feature_names_in_.tolist() if hasattr(attr_OneHotEncoder_feature_names_in_, 'tolist') else attr_OneHotEncoder_feature_names_in_`
+    })()
+  }
+
+  /**
+    Callable with signature `def callable(input\_feature, category)` that returns a string. This is used to create feature names to be returned by [`get\_feature\_names\_out`](#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").
+   */
+  get feature_name_combiner(): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This OneHotEncoder instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'OneHotEncoder must call init() before accessing feature_name_combiner'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_OneHotEncoder_feature_name_combiner = bridgeOneHotEncoder[${this.id}].feature_name_combiner`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_OneHotEncoder_feature_name_combiner.tolist() if hasattr(attr_OneHotEncoder_feature_name_combiner, 'tolist') else attr_OneHotEncoder_feature_name_combiner`
     })()
   }
 }

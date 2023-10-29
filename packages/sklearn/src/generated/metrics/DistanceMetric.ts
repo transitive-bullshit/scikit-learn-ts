@@ -6,9 +6,13 @@ import crypto from 'node:crypto'
 import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
 /**
-  DistanceMetric class
+  Uniform interface for fast distance metric functions.
 
-  This class provides a uniform interface to fast distance metric functions. The various metrics can be accessed via the [`get\_metric`](#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") class method and the metric string identifier (see below).
+  The `DistanceMetric` class provides a convenient way to compute pairwise distances between samples. It supports various distance metrics, such as Euclidean distance, Manhattan distance, and more.
+
+  The `pairwise` method can be used to compute pairwise distances between samples in the input arrays. It returns a distance matrix representing the distances between all pairs of samples.
+
+  The [`get\_metric`](#sklearn.metrics.DistanceMetric.get_metric "sklearn.metrics.DistanceMetric.get_metric") method allows you to retrieve a specific metric using its string identifier.
 
   Examples
 
@@ -24,9 +28,19 @@ export class DistanceMetric {
 
   constructor(opts?: {
     /**
-      True distance.
+      The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics.
      */
-    dist?: any
+    metric?: string
+
+    /**
+      The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`.
+     */
+    dtype?: any
+
+    /**
+      Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric.
+     */
+    kwargs?: any
   }) {
     this.id = `DistanceMetric${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -68,8 +82,10 @@ except NameError: bridgeDistanceMetric = {}
 `
 
     // set up constructor params
-    await this._py.ex`ctor_DistanceMetric = {'dist': ${
-      this.opts['dist'] ?? undefined
+    await this._py.ex`ctor_DistanceMetric = {'metric': ${
+      this.opts['metric'] ?? undefined
+    }, 'dtype': ${this.opts['dtype'] ?? undefined}, 'kwargs': ${
+      this.opts['kwargs'] ?? undefined
     }}
 
 ctor_DistanceMetric = {k: v for k, v in ctor_DistanceMetric.items() if v is not None}`
@@ -100,53 +116,23 @@ ctor_DistanceMetric = {k: v for k, v in ctor_DistanceMetric.items() if v is not 
   }
 
   /**
-    Convert the true distance to the rank-preserving surrogate distance.
-
-    The surrogate distance is any measure that yields the same rank as the distance, but is more efficient to compute. For example, the rank-preserving surrogate distance of the Euclidean metric is the squared-euclidean distance.
-   */
-  async dist_to_rdist(opts: {
-    /**
-      True distance.
-     */
-    dist?: any
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This DistanceMetric instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('DistanceMetric must call init() before dist_to_rdist()')
-    }
-
-    // set up method params
-    await this._py.ex`pms_DistanceMetric_dist_to_rdist = {'dist': ${
-      opts['dist'] ?? undefined
-    }}
-
-pms_DistanceMetric_dist_to_rdist = {k: v for k, v in pms_DistanceMetric_dist_to_rdist.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_DistanceMetric_dist_to_rdist = bridgeDistanceMetric[${this.id}].dist_to_rdist(**pms_DistanceMetric_dist_to_rdist)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_DistanceMetric_dist_to_rdist.tolist() if hasattr(res_DistanceMetric_dist_to_rdist, 'tolist') else res_DistanceMetric_dist_to_rdist`
-  }
-
-  /**
     Get the given distance metric from the string identifier.
 
     See the docstring of DistanceMetric for a list of available metrics.
    */
   async get_metric(opts: {
     /**
-      The distance metric to use
+      The string identifier or class name of the desired distance metric. See the documentation of the `DistanceMetric` class for a list of available metrics.
      */
     metric?: string
 
     /**
-      additional arguments will be passed to the requested metric
+      The data type of the input on which the metric will be applied. This affects the precision of the computed distances. By default, it is set to `np.float64`.
+     */
+    dtype?: any
+
+    /**
+      Additional keyword arguments that will be passed to the requested metric. These arguments can be used to customize the behavior of the specific metric.
      */
     kwargs?: any
   }): Promise<any> {
@@ -161,7 +147,9 @@ pms_DistanceMetric_dist_to_rdist = {k: v for k, v in pms_DistanceMetric_dist_to_
     // set up method params
     await this._py.ex`pms_DistanceMetric_get_metric = {'metric': ${
       opts['metric'] ?? undefined
-    }, 'kwargs': ${opts['kwargs'] ?? undefined}}
+    }, 'dtype': ${opts['dtype'] ?? undefined}, 'kwargs': ${
+      opts['kwargs'] ?? undefined
+    }}
 
 pms_DistanceMetric_get_metric = {k: v for k, v in pms_DistanceMetric_get_metric.items() if v is not None}`
 
@@ -175,79 +163,27 @@ pms_DistanceMetric_get_metric = {k: v for k, v in pms_DistanceMetric_get_metric.
   }
 
   /**
-    Compute the pairwise distances between X and Y
-
-    This is a convenience routine for the sake of testing. For many metrics, the utilities in scipy.spatial.distance.cdist and scipy.spatial.distance.pdist will be faster.
+    An instance of the requested distance metric class.
    */
-  async pairwise(opts: {
-    /**
-      Input data.
-     */
-    X?: NDArray | any[]
-
-    /**
-      Input data. If not specified, then Y=X.
-     */
-    Y?: NDArray | any[]
-  }): Promise<NDArray[]> {
+  get metric_obj(): Promise<any> {
     if (this._isDisposed) {
       throw new Error('This DistanceMetric instance has already been disposed')
     }
 
     if (!this._isInitialized) {
-      throw new Error('DistanceMetric must call init() before pairwise()')
+      throw new Error(
+        'DistanceMetric must call init() before accessing metric_obj'
+      )
     }
 
-    // set up method params
-    await this._py.ex`pms_DistanceMetric_pairwise = {'X': np.array(${
-      opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'Y': np.array(${
-      opts['Y'] ?? undefined
-    }) if ${opts['Y'] !== undefined} else None}
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_DistanceMetric_metric_obj = bridgeDistanceMetric[${this.id}].metric_obj`
 
-pms_DistanceMetric_pairwise = {k: v for k, v in pms_DistanceMetric_pairwise.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_DistanceMetric_pairwise = bridgeDistanceMetric[${this.id}].pairwise(**pms_DistanceMetric_pairwise)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_DistanceMetric_pairwise.tolist() if hasattr(res_DistanceMetric_pairwise, 'tolist') else res_DistanceMetric_pairwise`
-  }
-
-  /**
-    Convert the rank-preserving surrogate distance to the distance.
-
-    The surrogate distance is any measure that yields the same rank as the distance, but is more efficient to compute. For example, the rank-preserving surrogate distance of the Euclidean metric is the squared-euclidean distance.
-   */
-  async rdist_to_dist(opts: {
-    /**
-      Surrogate distance.
-     */
-    rdist?: any
-  }): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error('This DistanceMetric instance has already been disposed')
-    }
-
-    if (!this._isInitialized) {
-      throw new Error('DistanceMetric must call init() before rdist_to_dist()')
-    }
-
-    // set up method params
-    await this._py.ex`pms_DistanceMetric_rdist_to_dist = {'rdist': ${
-      opts['rdist'] ?? undefined
-    }}
-
-pms_DistanceMetric_rdist_to_dist = {k: v for k, v in pms_DistanceMetric_rdist_to_dist.items() if v is not None}`
-
-    // invoke method
-    await this._py
-      .ex`res_DistanceMetric_rdist_to_dist = bridgeDistanceMetric[${this.id}].rdist_to_dist(**pms_DistanceMetric_rdist_to_dist)`
-
-    // convert the result from python to node.js
-    return this
-      ._py`res_DistanceMetric_rdist_to_dist.tolist() if hasattr(res_DistanceMetric_rdist_to_dist, 'tolist') else res_DistanceMetric_rdist_to_dist`
+      // convert the result from python to node.js
+      return this
+        ._py`attr_DistanceMetric_metric_obj.tolist() if hasattr(attr_DistanceMetric_metric_obj, 'tolist') else attr_DistanceMetric_metric_obj`
+    })()
   }
 }

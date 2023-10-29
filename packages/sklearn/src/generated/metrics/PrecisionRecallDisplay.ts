@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   Precision Recall visualization.
 
-  It is recommend to use [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") to create a `PredictionRecallDisplay`. All parameters are stored as attributes.
+  It is recommend to use [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") to create a [`PrecisionRecallDisplay`](#sklearn.metrics.PrecisionRecallDisplay "sklearn.metrics.PrecisionRecallDisplay"). All parameters are stored as attributes.
 
   Read more in the [User Guide](../../visualizations.html#visualizations).
 
@@ -46,7 +46,12 @@ export class PrecisionRecallDisplay {
     /**
       The class considered as the positive class. If `undefined`, the class will not be shown in the legend.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
+
+    /**
+      The prevalence of the positive label. It is used for plotting the chance level line. If `undefined`, the chance level line will not be plotted even if `plot\_chance\_level` is set to `true` when plotting.
+     */
+    prevalence_pos_label?: number
   }) {
     this.id = `PrecisionRecallDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -102,7 +107,11 @@ except NameError: bridgePrecisionRecallDisplay = {}
       this.opts['average_precision'] ?? undefined
     }, 'estimator_name': ${
       this.opts['estimator_name'] ?? undefined
-    }, 'pos_label': ${this.opts['pos_label'] ?? undefined}}
+    }, 'pos_label': ${
+      this.opts['pos_label'] ?? undefined
+    }, 'prevalence_pos_label': ${
+      this.opts['prevalence_pos_label'] ?? undefined
+    }}
 
 ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.items() if v is not None}`
 
@@ -158,7 +167,14 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
     /**
       The class considered as the positive class when computing the precision and recall metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
+
+    /**
+      Whether to drop some suboptimal thresholds which would not appear on a plotted precision-recall curve. This is useful in order to create lighter precision-recall curves.
+
+      @defaultValue `false`
+     */
+    drop_intermediate?: boolean
 
     /**
       Specifies whether to use [predict\_proba](../../glossary.html#term-predict_proba) or [decision\_function](../../glossary.html#term-decision_function) as the target response. If set to ‘auto’, [predict\_proba](../../glossary.html#term-predict_proba) is tried first and if it does not exist [decision\_function](../../glossary.html#term-decision_function) is tried next.
@@ -176,6 +192,18 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
       Axes object to plot on. If `undefined`, a new figure and axes is created.
      */
     ax?: any
+
+    /**
+      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+
+      @defaultValue `false`
+     */
+    plot_chance_level?: boolean
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
+     */
+    chance_level_kw?: any
 
     /**
       Keyword arguments to be passed to matplotlib’s `plot`.
@@ -206,9 +234,13 @@ ctor_PrecisionRecallDisplay = {k: v for k, v in ctor_PrecisionRecallDisplay.item
       opts['sample_weight'] ?? undefined
     }) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${
       opts['pos_label'] ?? undefined
+    }, 'drop_intermediate': ${
+      opts['drop_intermediate'] ?? undefined
     }, 'response_method': ${opts['response_method'] ?? undefined}, 'name': ${
       opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${
+    }, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${
+      opts['plot_chance_level'] ?? undefined
+    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
       opts['kwargs'] ?? undefined
     }}
 
@@ -245,7 +277,14 @@ pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecal
     /**
       The class considered as the positive class when computing the precision and recall metrics.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
+
+    /**
+      Whether to drop some suboptimal thresholds which would not appear on a plotted precision-recall curve. This is useful in order to create lighter precision-recall curves.
+
+      @defaultValue `false`
+     */
+    drop_intermediate?: boolean
 
     /**
       Name for labeling curve. If `undefined`, name will be set to `"Classifier"`.
@@ -256,6 +295,18 @@ pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecal
       Axes object to plot on. If `undefined`, a new figure and axes is created.
      */
     ax?: any
+
+    /**
+      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+
+      @defaultValue `false`
+     */
+    plot_chance_level?: boolean
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
+     */
+    chance_level_kw?: any
 
     /**
       Keyword arguments to be passed to matplotlib’s `plot`.
@@ -286,9 +337,15 @@ pms_PrecisionRecallDisplay_from_estimator = {k: v for k, v in pms_PrecisionRecal
       opts['sample_weight'] ?? undefined
     }) if ${opts['sample_weight'] !== undefined} else None, 'pos_label': ${
       opts['pos_label'] ?? undefined
+    }, 'drop_intermediate': ${
+      opts['drop_intermediate'] ?? undefined
     }, 'name': ${opts['name'] ?? undefined}, 'ax': ${
       opts['ax'] ?? undefined
-    }, 'kwargs': ${opts['kwargs'] ?? undefined}}
+    }, 'plot_chance_level': ${
+      opts['plot_chance_level'] ?? undefined
+    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
+      opts['kwargs'] ?? undefined
+    }}
 
 pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRecallDisplay_from_predictions.items() if v is not None}`
 
@@ -318,6 +375,18 @@ pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRec
     name?: string
 
     /**
+      Whether to plot the chance level. The chance level is the prevalence of the positive label computed from the data passed during [`from\_estimator`](#sklearn.metrics.PrecisionRecallDisplay.from_estimator "sklearn.metrics.PrecisionRecallDisplay.from_estimator") or [`from\_predictions`](#sklearn.metrics.PrecisionRecallDisplay.from_predictions "sklearn.metrics.PrecisionRecallDisplay.from_predictions") call.
+
+      @defaultValue `false`
+     */
+    plot_chance_level?: boolean
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
+     */
+    chance_level_kw?: any
+
+    /**
       Keyword arguments to be passed to matplotlib’s `plot`.
      */
     kwargs?: any
@@ -335,7 +404,9 @@ pms_PrecisionRecallDisplay_from_predictions = {k: v for k, v in pms_PrecisionRec
     // set up method params
     await this._py.ex`pms_PrecisionRecallDisplay_plot = {'ax': ${
       opts['ax'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'kwargs': ${
+    }, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${
+      opts['plot_chance_level'] ?? undefined
+    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
       opts['kwargs'] ?? undefined
     }}
 
@@ -374,6 +445,33 @@ pms_PrecisionRecallDisplay_plot = {k: v for k, v in pms_PrecisionRecallDisplay_p
       // convert the result from python to node.js
       return this
         ._py`attr_PrecisionRecallDisplay_line_.tolist() if hasattr(attr_PrecisionRecallDisplay_line_, 'tolist') else attr_PrecisionRecallDisplay_line_`
+    })()
+  }
+
+  /**
+    The chance level line. It is `undefined` if the chance level is not plotted.
+   */
+  get chance_level_(): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This PrecisionRecallDisplay instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'PrecisionRecallDisplay must call init() before accessing chance_level_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_PrecisionRecallDisplay_chance_level_ = bridgePrecisionRecallDisplay[${this.id}].chance_level_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_PrecisionRecallDisplay_chance_level_.tolist() if hasattr(attr_PrecisionRecallDisplay_chance_level_, 'tolist') else attr_PrecisionRecallDisplay_chance_level_`
     })()
   }
 

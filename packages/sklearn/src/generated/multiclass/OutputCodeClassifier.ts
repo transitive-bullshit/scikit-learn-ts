@@ -8,7 +8,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 /**
   (Error-Correcting) Output-Code multiclass strategy.
 
-  Output-code based strategies consist in representing each class with a binary code (an array of 0s and 1s). At fitting time, one binary classifier per bit in the code book is fitted. At prediction time, the classifiers are used to project new points in the class space and the class closest to the points is chosen. The main advantage of these strategies is that the number of classifiers used can be controlled by the user, either for compressing the model (0 < code\_size < 1) or for making the model more robust to errors (code\_size > 1). See the documentation for more details.
+  Output-code based strategies consist in representing each class with a binary code (an array of 0s and 1s). At fitting time, one binary classifier per bit in the code book is fitted. At prediction time, the classifiers are used to project new points in the class space and the class closest to the points is chosen. The main advantage of these strategies is that the number of classifiers used can be controlled by the user, either for compressing the model (0 < `code\_size` < 1) or for making the model more robust to errors (`code\_size` > 1). See the documentation for more details.
 
   Read more in the [User Guide](../multiclass.html#ecoc).
 
@@ -43,7 +43,7 @@ export class OutputCodeClassifier {
     /**
       The number of jobs to use for the computation: the multiclass problems are computed in parallel.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -167,6 +167,46 @@ pms_OutputCodeClassifier_fit = {k: v for k, v in pms_OutputCodeClassifier_fit.it
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This OutputCodeClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'OutputCodeClassifier must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_OutputCodeClassifier_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_OutputCodeClassifier_get_metadata_routing = {k: v for k, v in pms_OutputCodeClassifier_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_OutputCodeClassifier_get_metadata_routing = bridgeOutputCodeClassifier[${this.id}].get_metadata_routing(**pms_OutputCodeClassifier_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_OutputCodeClassifier_get_metadata_routing.tolist() if hasattr(res_OutputCodeClassifier_get_metadata_routing, 'tolist') else res_OutputCodeClassifier_get_metadata_routing`
+  }
+
+  /**
     Predict multi-class targets using underlying estimators.
    */
   async predict(opts: {
@@ -250,6 +290,48 @@ pms_OutputCodeClassifier_score = {k: v for k, v in pms_OutputCodeClassifier_scor
     // convert the result from python to node.js
     return this
       ._py`res_OutputCodeClassifier_score.tolist() if hasattr(res_OutputCodeClassifier_score, 'tolist') else res_OutputCodeClassifier_score`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This OutputCodeClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'OutputCodeClassifier must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_OutputCodeClassifier_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_OutputCodeClassifier_set_score_request = {k: v for k, v in pms_OutputCodeClassifier_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_OutputCodeClassifier_set_score_request = bridgeOutputCodeClassifier[${this.id}].set_score_request(**pms_OutputCodeClassifier_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_OutputCodeClassifier_set_score_request.tolist() if hasattr(res_OutputCodeClassifier_set_score_request, 'tolist') else res_OutputCodeClassifier_set_score_request`
   }
 
   /**

@@ -33,7 +33,7 @@ new TransformedTargetRegressor(opts?: object): TransformedTargetRegressor;
 
 [`TransformedTargetRegressor`](TransformedTargetRegressor.md)
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L25)
 
 ## Methods
 
@@ -53,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L118)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L118)
 
 ### fit()
 
@@ -78,7 +78,32 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L135)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L135)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L188)
 
 ### init()
 
@@ -102,7 +127,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L70)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L70)
 
 ### predict()
 
@@ -128,7 +153,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L188)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L228)
 
 ### score()
 
@@ -155,7 +180,34 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L234)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L274)
+
+### set\_score\_request()
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_score_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L329)
 
 ## Properties
 
@@ -163,31 +215,31 @@ Defined in:  [generated/compose/TransformedTargetRegressor.ts:234](https://githu
 
 > `boolean`  = `false`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L19)
 
 ## Accessors
 
@@ -205,9 +257,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L339)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L421)
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L339)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L421)
 
 ### py
 
@@ -221,7 +273,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57)
 
 #### Signature
 
@@ -239,9 +291,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L61)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L61)
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57) [generated/compose/TransformedTargetRegressor.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L61)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L57) [generated/compose/TransformedTargetRegressor.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L61)
 
 ### regressor\_
 
@@ -257,9 +309,9 @@ regressor_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L285)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L367)
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L285)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L367)
 
 ### transformer\_
 
@@ -275,6 +327,6 @@ transformer_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L312)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L394)
 
-Defined in:  [generated/compose/TransformedTargetRegressor.ts:312](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L312)
+Defined in:  [generated/compose/TransformedTargetRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/compose/TransformedTargetRegressor.ts#L394)

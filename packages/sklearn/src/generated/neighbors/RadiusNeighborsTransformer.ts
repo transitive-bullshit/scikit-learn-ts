@@ -254,7 +254,7 @@ pms_RadiusNeighborsTransformer_fit_transform = {k: v for k, v in pms_RadiusNeigh
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.neighbors.RadiusNeighborsTransformer.fit "sklearn.neighbors.RadiusNeighborsTransformer.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -285,6 +285,46 @@ pms_RadiusNeighborsTransformer_get_feature_names_out = {k: v for k, v in pms_Rad
     // convert the result from python to node.js
     return this
       ._py`res_RadiusNeighborsTransformer_get_feature_names_out.tolist() if hasattr(res_RadiusNeighborsTransformer_get_feature_names_out, 'tolist') else res_RadiusNeighborsTransformer_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This RadiusNeighborsTransformer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RadiusNeighborsTransformer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_RadiusNeighborsTransformer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_RadiusNeighborsTransformer_get_metadata_routing = {k: v for k, v in pms_RadiusNeighborsTransformer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RadiusNeighborsTransformer_get_metadata_routing = bridgeRadiusNeighborsTransformer[${this.id}].get_metadata_routing(**pms_RadiusNeighborsTransformer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RadiusNeighborsTransformer_get_metadata_routing.tolist() if hasattr(res_RadiusNeighborsTransformer_get_metadata_routing, 'tolist') else res_RadiusNeighborsTransformer_get_metadata_routing`
   }
 
   /**

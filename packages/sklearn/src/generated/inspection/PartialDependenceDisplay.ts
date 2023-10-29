@@ -51,11 +51,6 @@ export class PartialDependenceDisplay {
     deciles?: any
 
     /**
-      Global min and max average predictions, such that all plots will have the same scale and y limits. `pdp\_lim\[1\]` is the global min and max for single partial dependence curves. `pdp\_lim\[2\]` is the global min and max for two-way partial dependence curves. If `undefined`, the limit will be inferred from the global minimum and maximum of all predictions.
-     */
-    pdp_lim?: any
-
-    /**
       Whether to plot the partial dependence averaged across all the samples in the dataset or one line per sample or both.
 
       @defaultValue `'average'`
@@ -131,9 +126,9 @@ except NameError: bridgePartialDependenceDisplay = {}
       this.opts['feature_names'] ?? undefined
     }, 'target_idx': ${this.opts['target_idx'] ?? undefined}, 'deciles': ${
       this.opts['deciles'] ?? undefined
-    }, 'pdp_lim': ${this.opts['pdp_lim'] ?? undefined}, 'kind': ${
-      this.opts['kind'] ?? undefined
-    }, 'subsample': ${this.opts['subsample'] ?? undefined}, 'random_state': ${
+    }, 'kind': ${this.opts['kind'] ?? undefined}, 'subsample': ${
+      this.opts['subsample'] ?? undefined
+    }, 'random_state': ${
       this.opts['random_state'] ?? undefined
     }, 'is_categorical': ${this.opts['is_categorical'] ?? undefined}}
 
@@ -188,6 +183,11 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     features?: string
 
     /**
+      Sample weights are used to calculate weighted means when averaging the model output. If `undefined`, then samples are equally weighted. If `sample\_weight` is not `undefined`, then `method` will be set to `'brute'`. Note that `sample\_weight` is ignored for `kind='individual'`.
+     */
+    sample_weight?: ArrayLike
+
+    /**
       Indicates the categorical features.
      */
     categorical_features?: ArrayLike | number
@@ -238,7 +238,7 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
     /**
       The number of CPUs to use to compute the partial dependences. Computation is parallelized over features specified by the `features` parameter.
 
-      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -322,7 +322,9 @@ ctor_PartialDependenceDisplay = {k: v for k, v in ctor_PartialDependenceDisplay.
       opts['X'] !== undefined
     } else None, 'features': ${
       opts['features'] ?? undefined
-    }, 'categorical_features': np.array(${
+    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
+      opts['sample_weight'] !== undefined
+    } else None, 'categorical_features': np.array(${
       opts['categorical_features'] ?? undefined
     }) if ${
       opts['categorical_features'] !== undefined

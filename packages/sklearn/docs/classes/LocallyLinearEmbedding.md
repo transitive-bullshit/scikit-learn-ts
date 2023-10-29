@@ -27,7 +27,7 @@ new LocallyLinearEmbedding(opts?: object): LocallyLinearEmbedding;
 | `opts.method?` | `"standard"` \| `"hessian"` \| `"modified"` \| `"ltsa"` | `standard`: use the standard locally linear embedding algorithm. see reference [\[1\]](#r62e36dd1b056-1)  `Default Value`  `'standard'` |
 | `opts.modified_tol?` | `number` | Tolerance for modified LLE method. Only used if `method \== 'modified'`.  `Default Value`  `1e-12` |
 | `opts.n_components?` | `number` | Number of coordinates for the manifold.  `Default Value`  `2` |
-| `opts.n_jobs?` | `number` | The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
+| `opts.n_jobs?` | `number` | The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details. |
 | `opts.n_neighbors?` | `number` | Number of neighbors to consider for each point.  `Default Value`  `5` |
 | `opts.neighbors_algorithm?` | `"auto"` \| `"ball_tree"` \| `"kd_tree"` \| `"brute"` | Algorithm to use for nearest neighbors search, passed to [`NearestNeighbors`](sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors "sklearn.neighbors.NearestNeighbors") instance.  `Default Value`  `'auto'` |
 | `opts.random_state?` | `number` | Determines the random number generator when `eigen\_solver` == ‘arpack’. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state). |
@@ -38,7 +38,7 @@ new LocallyLinearEmbedding(opts?: object): LocallyLinearEmbedding;
 
 [`LocallyLinearEmbedding`](LocallyLinearEmbedding.md)
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L23)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L23)
 
 ## Methods
 
@@ -58,7 +58,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L179)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L179)
 
 ### fit()
 
@@ -82,7 +82,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L196)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L196)
 
 ### fit\_transform()
 
@@ -106,7 +106,7 @@ fit_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L236)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L236)
 
 ### get\_feature\_names\_out()
 
@@ -125,13 +125,38 @@ get_feature_names_out(opts: object): Promise<any>;
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `opts` | `object` | - |
-| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in [`fit`](#sklearn.manifold.LocallyLinearEmbedding.fit "sklearn.manifold.LocallyLinearEmbedding.fit"). |
+| `opts.input_features?` | `any` | Only used to validate feature names with the names seen in `fit`. |
 
 #### Returns
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L281)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L281)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L321)
 
 ### init()
 
@@ -155,7 +180,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L121)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L121)
 
 ### set\_output()
 
@@ -180,7 +205,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L321)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L361)
 
 ### transform()
 
@@ -203,7 +228,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L358)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L398)
 
 ## Properties
 
@@ -211,31 +236,31 @@ Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:358](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L21)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L20)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L19)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L16)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L17)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L17)
 
 ## Accessors
 
@@ -253,9 +278,9 @@ embedding_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L395)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L435)
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L395)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L435)
 
 ### feature\_names\_in\_
 
@@ -271,9 +296,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L476)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L516)
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L476)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L516)
 
 ### n\_features\_in\_
 
@@ -289,9 +314,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L449)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L489)
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L449)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L489)
 
 ### nbrs\_
 
@@ -307,9 +332,9 @@ nbrs_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L503)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L543)
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L503)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L543)
 
 ### py
 
@@ -323,7 +348,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L108)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L108)
 
 #### Signature
 
@@ -341,9 +366,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L112)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L112)
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L108) [generated/manifold/LocallyLinearEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L112)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L108) [generated/manifold/LocallyLinearEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L112)
 
 ### reconstruction\_error\_
 
@@ -359,6 +384,6 @@ reconstruction_error_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L422)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L462)
 
-Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L422)
+Defined in:  [generated/manifold/LocallyLinearEmbedding.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/LocallyLinearEmbedding.ts#L462)

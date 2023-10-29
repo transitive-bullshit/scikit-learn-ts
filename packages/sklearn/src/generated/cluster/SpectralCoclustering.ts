@@ -35,7 +35,7 @@ export class SpectralCoclustering {
     n_clusters?: number
 
     /**
-      Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.10.1)"), which is more accurate, but possibly slower in some cases.
+      Selects the algorithm for finding singular vectors. May be ‘randomized’ or ‘arpack’. If ‘randomized’, use [`sklearn.utils.extmath.randomized\_svd`](sklearn.utils.extmath.randomized_svd.html#sklearn.utils.extmath.randomized_svd "sklearn.utils.extmath.randomized_svd"), which may be faster for large matrices. If ‘arpack’, use [`scipy.sparse.linalg.svds`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.svds.html#scipy.sparse.linalg.svds "(in SciPy v1.11.3)"), which is more accurate, but possibly slower in some cases.
 
       @defaultValue `'randomized'`
      */
@@ -234,6 +234,46 @@ pms_SpectralCoclustering_get_indices = {k: v for k, v in pms_SpectralCoclusterin
     // convert the result from python to node.js
     return this
       ._py`res_SpectralCoclustering_get_indices.tolist() if hasattr(res_SpectralCoclustering_get_indices, 'tolist') else res_SpectralCoclustering_get_indices`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This SpectralCoclustering instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SpectralCoclustering must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_SpectralCoclustering_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SpectralCoclustering_get_metadata_routing = {k: v for k, v in pms_SpectralCoclustering_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SpectralCoclustering_get_metadata_routing = bridgeSpectralCoclustering[${this.id}].get_metadata_routing(**pms_SpectralCoclustering_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SpectralCoclustering_get_metadata_routing.tolist() if hasattr(res_SpectralCoclustering_get_metadata_routing, 'tolist') else res_SpectralCoclustering_get_metadata_routing`
   }
 
   /**

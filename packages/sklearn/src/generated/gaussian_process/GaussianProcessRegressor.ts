@@ -64,6 +64,11 @@ export class GaussianProcessRegressor {
     copy_X_train?: boolean
 
     /**
+      The number of dimensions of the target values. Used to decide the number of outputs when sampling from the prior distributions (i.e. calling [`sample\_y`](#sklearn.gaussian_process.GaussianProcessRegressor.sample_y "sklearn.gaussian_process.GaussianProcessRegressor.sample_y") before [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit")). This parameter is ignored once [`fit`](#sklearn.gaussian_process.GaussianProcessRegressor.fit "sklearn.gaussian_process.GaussianProcessRegressor.fit") has been called.
+     */
+    n_targets?: number
+
+    /**
       Determines random number generation used to initialize the centers. Pass an int for reproducible results across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
      */
     random_state?: number
@@ -124,7 +129,9 @@ except NameError: bridgeGaussianProcessRegressor = {}
       this.opts['normalize_y'] ?? undefined
     }, 'copy_X_train': ${
       this.opts['copy_X_train'] ?? undefined
-    }, 'random_state': ${this.opts['random_state'] ?? undefined}}
+    }, 'n_targets': ${this.opts['n_targets'] ?? undefined}, 'random_state': ${
+      this.opts['random_state'] ?? undefined
+    }}
 
 ctor_GaussianProcessRegressor = {k: v for k, v in ctor_GaussianProcessRegressor.items() if v is not None}`
 
@@ -193,6 +200,46 @@ pms_GaussianProcessRegressor_fit = {k: v for k, v in pms_GaussianProcessRegresso
     // convert the result from python to node.js
     return this
       ._py`res_GaussianProcessRegressor_fit.tolist() if hasattr(res_GaussianProcessRegressor_fit, 'tolist') else res_GaussianProcessRegressor_fit`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GaussianProcessRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GaussianProcessRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_GaussianProcessRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_GaussianProcessRegressor_get_metadata_routing = {k: v for k, v in pms_GaussianProcessRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GaussianProcessRegressor_get_metadata_routing = bridgeGaussianProcessRegressor[${this.id}].get_metadata_routing(**pms_GaussianProcessRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GaussianProcessRegressor_get_metadata_routing.tolist() if hasattr(res_GaussianProcessRegressor_get_metadata_routing, 'tolist') else res_GaussianProcessRegressor_get_metadata_routing`
   }
 
   /**
@@ -408,6 +455,95 @@ pms_GaussianProcessRegressor_score = {k: v for k, v in pms_GaussianProcessRegres
     // convert the result from python to node.js
     return this
       ._py`res_GaussianProcessRegressor_score.tolist() if hasattr(res_GaussianProcessRegressor_score, 'tolist') else res_GaussianProcessRegressor_score`
+  }
+
+  /**
+    Request metadata passed to the `predict` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_predict_request(opts: {
+    /**
+      Metadata routing for `return\_cov` parameter in `predict`.
+     */
+    return_cov?: string | boolean
+
+    /**
+      Metadata routing for `return\_std` parameter in `predict`.
+     */
+    return_std?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GaussianProcessRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GaussianProcessRegressor must call init() before set_predict_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_GaussianProcessRegressor_set_predict_request = {'return_cov': ${
+      opts['return_cov'] ?? undefined
+    }, 'return_std': ${opts['return_std'] ?? undefined}}
+
+pms_GaussianProcessRegressor_set_predict_request = {k: v for k, v in pms_GaussianProcessRegressor_set_predict_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GaussianProcessRegressor_set_predict_request = bridgeGaussianProcessRegressor[${this.id}].set_predict_request(**pms_GaussianProcessRegressor_set_predict_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GaussianProcessRegressor_set_predict_request.tolist() if hasattr(res_GaussianProcessRegressor_set_predict_request, 'tolist') else res_GaussianProcessRegressor_set_predict_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GaussianProcessRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GaussianProcessRegressor must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_GaussianProcessRegressor_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_GaussianProcessRegressor_set_score_request = {k: v for k, v in pms_GaussianProcessRegressor_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GaussianProcessRegressor_set_score_request = bridgeGaussianProcessRegressor[${this.id}].set_score_request(**pms_GaussianProcessRegressor_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GaussianProcessRegressor_set_score_request.tolist() if hasattr(res_GaussianProcessRegressor_set_score_request, 'tolist') else res_GaussianProcessRegressor_set_score_request`
   }
 
   /**

@@ -10,6 +10,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.
 
+  The main differences between [`LinearSVC`](#sklearn.svm.LinearSVC "sklearn.svm.LinearSVC") and [`SVC`](sklearn.svm.SVC.html#sklearn.svm.SVC "sklearn.svm.SVC") lie in the loss function used by default, and in the handling of intercept regularization between those two implementations.
+
   This class supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme.
 
   Read more in the [User Guide](../svm.html#svm-classification).
@@ -40,11 +42,11 @@ export class LinearSVC {
     loss?: 'hinge' | 'squared_hinge'
 
     /**
-      Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features.
+      Select the algorithm to either solve the dual or primal optimization problem. Prefer dual=`false` when n\_samples > n\_features. `dual="auto"` will choose the value of the parameter automatically, based on the values of `n\_samples`, `n\_features`, `loss`, `multi\_class` and `penalty`. If `n\_samples` < `n\_features` and optimizer supports chosen `loss`, `multi\_class` and `penalty`, then dual will be set to `true`, otherwise it will be set to `false`.
 
       @defaultValue `true`
      */
-    dual?: boolean
+    dual?: 'auto' | boolean
 
     /**
       Tolerance for stopping criteria.
@@ -68,14 +70,14 @@ export class LinearSVC {
     multi_class?: 'ovr' | 'crammer_singer'
 
     /**
-      Whether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (i.e. data is expected to be already centered).
+      Whether or not to fit an intercept. If set to `true`, the feature vector is extended to include an intercept term: `\[x\_1, ..., x\_n, 1\]`, where 1 corresponds to the intercept. If set to `false`, no intercept will be used in calculations (i.e. data is expected to be already centered).
 
       @defaultValue `true`
      */
     fit_intercept?: boolean
 
     /**
-      When self.fit\_intercept is `true`, instance vector x becomes `\[x, self.intercept\_scaling\]`, i.e. a “synthetic” feature with constant value equals to intercept\_scaling is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept\_scaling has to be increased.
+      When `fit\_intercept` is `true`, the instance vector x becomes `\[x\_1, ..., x\_n, intercept\_scaling\]`, i.e. a “synthetic” feature with a constant value equal to `intercept\_scaling` is appended to the instance vector. The intercept becomes intercept\_scaling \* synthetic feature weight. Note that liblinear internally penalizes the intercept, treating it like any other term in the feature vector. To reduce the impact of the regularization on the intercept, the `intercept\_scaling` parameter can be set to a value greater than 1; the higher the value of `intercept\_scaling`, the lower the impact of regularization on it. Then, the weights become `\[w\_x\_1, ..., w\_x\_n, w\_intercept\*intercept\_scaling\]`, where `w\_x\_1, ..., w\_x\_n` represent the feature weights and the intercept weight is scaled by `intercept\_scaling`. This scaling allows the intercept term to have a different regularization behavior compared to the other features.
 
       @defaultValue `1`
      */
@@ -300,6 +302,43 @@ pms_LinearSVC_fit = {k: v for k, v in pms_LinearSVC_fit.items() if v is not None
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This LinearSVC instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LinearSVC must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_LinearSVC_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_LinearSVC_get_metadata_routing = {k: v for k, v in pms_LinearSVC_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LinearSVC_get_metadata_routing = bridgeLinearSVC[${this.id}].get_metadata_routing(**pms_LinearSVC_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LinearSVC_get_metadata_routing.tolist() if hasattr(res_LinearSVC_get_metadata_routing, 'tolist') else res_LinearSVC_get_metadata_routing`
+  }
+
+  /**
     Predict class labels for samples in X.
    */
   async predict(opts: {
@@ -379,6 +418,80 @@ pms_LinearSVC_score = {k: v for k, v in pms_LinearSVC_score.items() if v is not 
     // convert the result from python to node.js
     return this
       ._py`res_LinearSVC_score.tolist() if hasattr(res_LinearSVC_score, 'tolist') else res_LinearSVC_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This LinearSVC instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('LinearSVC must call init() before set_fit_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_LinearSVC_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_LinearSVC_set_fit_request = {k: v for k, v in pms_LinearSVC_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LinearSVC_set_fit_request = bridgeLinearSVC[${this.id}].set_fit_request(**pms_LinearSVC_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LinearSVC_set_fit_request.tolist() if hasattr(res_LinearSVC_set_fit_request, 'tolist') else res_LinearSVC_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This LinearSVC instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('LinearSVC must call init() before set_score_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_LinearSVC_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_LinearSVC_set_score_request = {k: v for k, v in pms_LinearSVC_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LinearSVC_set_score_request = bridgeLinearSVC[${this.id}].set_score_request(**pms_LinearSVC_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LinearSVC_set_score_request.tolist() if hasattr(res_LinearSVC_set_score_request, 'tolist') else res_LinearSVC_set_score_request`
   }
 
   /**

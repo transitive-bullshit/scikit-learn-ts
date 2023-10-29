@@ -256,6 +256,46 @@ pms_SpectralBiclustering_get_indices = {k: v for k, v in pms_SpectralBiclusterin
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This SpectralBiclustering instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SpectralBiclustering must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_SpectralBiclustering_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SpectralBiclustering_get_metadata_routing = {k: v for k, v in pms_SpectralBiclustering_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SpectralBiclustering_get_metadata_routing = bridgeSpectralBiclustering[${this.id}].get_metadata_routing(**pms_SpectralBiclustering_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SpectralBiclustering_get_metadata_routing.tolist() if hasattr(res_SpectralBiclustering_get_metadata_routing, 'tolist') else res_SpectralBiclustering_get_metadata_routing`
+  }
+
+  /**
     Shape of the `i`’th bicluster.
    */
   async get_shape(opts: {

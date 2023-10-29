@@ -268,7 +268,7 @@ pms_FeatureAgglomeration_fit_transform = {k: v for k, v in pms_FeatureAgglomerat
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.cluster.FeatureAgglomeration.fit "sklearn.cluster.FeatureAgglomeration.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -302,13 +302,58 @@ pms_FeatureAgglomeration_get_feature_names_out = {k: v for k, v in pms_FeatureAg
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This FeatureAgglomeration instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'FeatureAgglomeration must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_FeatureAgglomeration_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_FeatureAgglomeration_get_metadata_routing = {k: v for k, v in pms_FeatureAgglomeration_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_FeatureAgglomeration_get_metadata_routing = bridgeFeatureAgglomeration[${this.id}].get_metadata_routing(**pms_FeatureAgglomeration_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_FeatureAgglomeration_get_metadata_routing.tolist() if hasattr(res_FeatureAgglomeration_get_metadata_routing, 'tolist') else res_FeatureAgglomeration_get_metadata_routing`
+  }
+
+  /**
     Inverse the transformation and return a vector of size `n\_features`.
    */
   async inverse_transform(opts: {
     /**
       The values to be assigned to each cluster of samples.
      */
-    Xred?: ArrayLike[]
+    Xt?: ArrayLike[]
+
+    /**
+      Use `Xt` instead.
+     */
+    Xred?: any
   }): Promise<NDArray[]> {
     if (this._isDisposed) {
       throw new Error(
@@ -324,9 +369,11 @@ pms_FeatureAgglomeration_get_feature_names_out = {k: v for k, v in pms_FeatureAg
 
     // set up method params
     await this._py
-      .ex`pms_FeatureAgglomeration_inverse_transform = {'Xred': np.array(${
+      .ex`pms_FeatureAgglomeration_inverse_transform = {'Xt': np.array(${
+      opts['Xt'] ?? undefined
+    }) if ${opts['Xt'] !== undefined} else None, 'Xred': ${
       opts['Xred'] ?? undefined
-    }) if ${opts['Xred'] !== undefined} else None}
+    }}
 
 pms_FeatureAgglomeration_inverse_transform = {k: v for k, v in pms_FeatureAgglomeration_inverse_transform.items() if v is not None}`
 

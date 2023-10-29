@@ -110,7 +110,7 @@ export class GradientBoostingRegressor {
     /**
       The number of features to consider when looking for the best split:
      */
-    max_features?: 'auto' | 'sqrt' | 'log2' | number | number
+    max_features?: 'sqrt' | 'log2' | number | number
 
     /**
       The alpha-quantile of the huber loss function and the quantile loss function. Only if `loss='huber'` or `loss='quantile'`. Values must be in the range `(0.0, 1.0)`.
@@ -363,6 +363,46 @@ pms_GradientBoostingRegressor_fit = {k: v for k, v in pms_GradientBoostingRegres
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_GradientBoostingRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_GradientBoostingRegressor_get_metadata_routing = {k: v for k, v in pms_GradientBoostingRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GradientBoostingRegressor_get_metadata_routing = bridgeGradientBoostingRegressor[${this.id}].get_metadata_routing(**pms_GradientBoostingRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GradientBoostingRegressor_get_metadata_routing.tolist() if hasattr(res_GradientBoostingRegressor_get_metadata_routing, 'tolist') else res_GradientBoostingRegressor_get_metadata_routing`
+  }
+
+  /**
     Predict regression target for X.
    */
   async predict(opts: {
@@ -453,6 +493,95 @@ pms_GradientBoostingRegressor_score = {k: v for k, v in pms_GradientBoostingRegr
   }
 
   /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `monitor` parameter in `fit`.
+     */
+    monitor?: string | boolean
+
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingRegressor must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_GradientBoostingRegressor_set_fit_request = {'monitor': ${
+      opts['monitor'] ?? undefined
+    }, 'sample_weight': ${opts['sample_weight'] ?? undefined}}
+
+pms_GradientBoostingRegressor_set_fit_request = {k: v for k, v in pms_GradientBoostingRegressor_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GradientBoostingRegressor_set_fit_request = bridgeGradientBoostingRegressor[${this.id}].set_fit_request(**pms_GradientBoostingRegressor_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GradientBoostingRegressor_set_fit_request.tolist() if hasattr(res_GradientBoostingRegressor_set_fit_request, 'tolist') else res_GradientBoostingRegressor_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingRegressor must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_GradientBoostingRegressor_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_GradientBoostingRegressor_set_score_request = {k: v for k, v in pms_GradientBoostingRegressor_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GradientBoostingRegressor_set_score_request = bridgeGradientBoostingRegressor[${this.id}].set_score_request(**pms_GradientBoostingRegressor_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GradientBoostingRegressor_set_score_request.tolist() if hasattr(res_GradientBoostingRegressor_set_score_request, 'tolist') else res_GradientBoostingRegressor_set_score_request`
+  }
+
+  /**
     Predict regression target at each stage for X.
 
     This method allows monitoring (i.e. determine error on testing set) after each stage.
@@ -493,7 +622,7 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The improvement in loss (= deviance) on the out-of-bag samples relative to the previous iteration. `oob\_improvement\_\[0\]` is the improvement in loss of the first stage over the `init` estimator. Only available if `subsample < 1.0`
+    The improvement in loss on the out-of-bag samples relative to the previous iteration. `oob\_improvement\_\[0\]` is the improvement in loss of the first stage over the `init` estimator. Only available if `subsample < 1.0`.
    */
   get oob_improvement_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -520,7 +649,61 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
   }
 
   /**
-    The i-th score `train\_score\_\[i\]` is the deviance (= loss) of the model at iteration `i` on the in-bag sample. If `subsample \== 1` this is the deviance on the training data.
+    The full history of the loss values on the out-of-bag samples. Only available if `subsample < 1.0`.
+   */
+  get oob_scores_(): Promise<NDArray> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingRegressor must call init() before accessing oob_scores_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_GradientBoostingRegressor_oob_scores_ = bridgeGradientBoostingRegressor[${this.id}].oob_scores_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_GradientBoostingRegressor_oob_scores_.tolist() if hasattr(attr_GradientBoostingRegressor_oob_scores_, 'tolist') else attr_GradientBoostingRegressor_oob_scores_`
+    })()
+  }
+
+  /**
+    The last value of the loss on the out-of-bag samples. It is the same as `oob\_scores\_\[-1\]`. Only available if `subsample < 1.0`.
+   */
+  get oob_score_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GradientBoostingRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GradientBoostingRegressor must call init() before accessing oob_score_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_GradientBoostingRegressor_oob_score_ = bridgeGradientBoostingRegressor[${this.id}].oob_score_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_GradientBoostingRegressor_oob_score_.tolist() if hasattr(attr_GradientBoostingRegressor_oob_score_, 'tolist') else attr_GradientBoostingRegressor_oob_score_`
+    })()
+  }
+
+  /**
+    The i-th score `train\_score\_\[i\]` is the loss of the model at iteration `i` on the in-bag sample. If `subsample \== 1` this is the loss on the training data.
    */
   get train_score_(): Promise<NDArray> {
     if (this._isDisposed) {
@@ -543,33 +726,6 @@ pms_GradientBoostingRegressor_staged_predict = {k: v for k, v in pms_GradientBoo
       // convert the result from python to node.js
       return this
         ._py`attr_GradientBoostingRegressor_train_score_.tolist() if hasattr(attr_GradientBoostingRegressor_train_score_, 'tolist') else attr_GradientBoostingRegressor_train_score_`
-    })()
-  }
-
-  /**
-    The concrete `LossFunction` object.
-   */
-  get loss_(): Promise<any> {
-    if (this._isDisposed) {
-      throw new Error(
-        'This GradientBoostingRegressor instance has already been disposed'
-      )
-    }
-
-    if (!this._isInitialized) {
-      throw new Error(
-        'GradientBoostingRegressor must call init() before accessing loss_'
-      )
-    }
-
-    return (async () => {
-      // invoke accessor
-      await this._py
-        .ex`attr_GradientBoostingRegressor_loss_ = bridgeGradientBoostingRegressor[${this.id}].loss_`
-
-      // convert the result from python to node.js
-      return this
-        ._py`attr_GradientBoostingRegressor_loss_.tolist() if hasattr(attr_GradientBoostingRegressor_loss_, 'tolist') else attr_GradientBoostingRegressor_loss_`
     })()
   }
 

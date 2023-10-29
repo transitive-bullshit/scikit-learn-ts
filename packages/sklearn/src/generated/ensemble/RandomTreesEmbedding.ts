@@ -82,7 +82,7 @@ export class RandomTreesEmbedding {
     sparse_output?: boolean
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.RandomTreesEmbedding.fit "sklearn.ensemble.RandomTreesEmbedding.fit"), [`transform`](#sklearn.ensemble.RandomTreesEmbedding.transform "sklearn.ensemble.RandomTreesEmbedding.transform"), [`decision\_path`](#sklearn.ensemble.RandomTreesEmbedding.decision_path "sklearn.ensemble.RandomTreesEmbedding.decision_path") and [`apply`](#sklearn.ensemble.RandomTreesEmbedding.apply "sklearn.ensemble.RandomTreesEmbedding.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -404,6 +404,88 @@ pms_RandomTreesEmbedding_get_feature_names_out = {k: v for k, v in pms_RandomTre
     // convert the result from python to node.js
     return this
       ._py`res_RandomTreesEmbedding_get_feature_names_out.tolist() if hasattr(res_RandomTreesEmbedding_get_feature_names_out, 'tolist') else res_RandomTreesEmbedding_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This RandomTreesEmbedding instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RandomTreesEmbedding must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_RandomTreesEmbedding_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_RandomTreesEmbedding_get_metadata_routing = {k: v for k, v in pms_RandomTreesEmbedding_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RandomTreesEmbedding_get_metadata_routing = bridgeRandomTreesEmbedding[${this.id}].get_metadata_routing(**pms_RandomTreesEmbedding_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RandomTreesEmbedding_get_metadata_routing.tolist() if hasattr(res_RandomTreesEmbedding_get_metadata_routing, 'tolist') else res_RandomTreesEmbedding_get_metadata_routing`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This RandomTreesEmbedding instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RandomTreesEmbedding must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_RandomTreesEmbedding_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_RandomTreesEmbedding_set_fit_request = {k: v for k, v in pms_RandomTreesEmbedding_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RandomTreesEmbedding_set_fit_request = bridgeRandomTreesEmbedding[${this.id}].set_fit_request(**pms_RandomTreesEmbedding_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RandomTreesEmbedding_set_fit_request.tolist() if hasattr(res_RandomTreesEmbedding_set_fit_request, 'tolist') else res_RandomTreesEmbedding_set_fit_request`
   }
 
   /**

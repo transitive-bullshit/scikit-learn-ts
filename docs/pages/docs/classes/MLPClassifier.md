@@ -49,7 +49,7 @@ new MLPClassifier(opts?: object): MLPClassifier;
 
 [`MLPClassifier`](MLPClassifier.md)
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L23)
 
 ## Methods
 
@@ -69,7 +69,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L268)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:268](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L268)
 
 ### fit()
 
@@ -93,7 +93,32 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L285)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L285)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check User Guide on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/neural\_network/MLPClassifier.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L327)
 
 ### init()
 
@@ -117,7 +142,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L198)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L198)
 
 ### partial\_fit()
 
@@ -142,7 +167,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L325)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L362)
 
 ### predict()
 
@@ -165,7 +190,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L372)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L409)
 
 ### predict\_log\_proba()
 
@@ -188,7 +213,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L405)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L442)
 
 ### predict\_proba()
 
@@ -211,7 +236,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L440)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L477)
 
 ### score()
 
@@ -238,7 +263,61 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L475)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L512)
+
+### set\_partial\_fit\_request()
+
+Request metadata passed to the `partial\_fit` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_partial_fit_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.classes?` | `string` \| `boolean` | Metadata routing for `classes` parameter in `partial\_fit`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/neural\_network/MLPClassifier.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L563)
+
+### set\_score\_request()
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_score_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/neural\_network/MLPClassifier.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L602)
 
 ## Properties
 
@@ -246,37 +325,37 @@ Defined in:  [generated/neural\_network/MLPClassifier.ts:475](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L17)
 
 ## Accessors
 
 ### best\_loss\_
 
-The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set ot `undefined`. Refer to the `best\_validation\_score\_` fitted attribute instead.
+The minimum loss reached by the solver throughout fitting. If `early\_stopping=True`, this attribute is set to `undefined`. Refer to the `best\_validation\_score\_` fitted attribute instead.
 
 #### Signature
 
@@ -288,7 +367,7 @@ best_loss_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L570)
+Defined in: [generated/neural\_network/MLPClassifier.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L685)
 
 ### best\_validation\_score\_
 
@@ -304,7 +383,7 @@ best_validation_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L645)
+Defined in: [generated/neural\_network/MLPClassifier.ts:760](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L760)
 
 ### classes\_
 
@@ -320,7 +399,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L522)
+Defined in: [generated/neural\_network/MLPClassifier.ts:637](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L637)
 
 ### coefs\_
 
@@ -336,7 +415,7 @@ coefs_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:693](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L693)
+Defined in: [generated/neural\_network/MLPClassifier.ts:808](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L808)
 
 ### feature\_names\_in\_
 
@@ -352,7 +431,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L766)
+Defined in: [generated/neural\_network/MLPClassifier.ts:881](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L881)
 
 ### intercepts\_
 
@@ -368,7 +447,7 @@ intercepts_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L716)
+Defined in: [generated/neural\_network/MLPClassifier.ts:831](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L831)
 
 ### loss\_
 
@@ -384,7 +463,7 @@ loss_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L547)
+Defined in: [generated/neural\_network/MLPClassifier.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L662)
 
 ### loss\_curve\_
 
@@ -400,7 +479,7 @@ loss_curve_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L595)
+Defined in: [generated/neural\_network/MLPClassifier.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L710)
 
 ### n\_features\_in\_
 
@@ -416,7 +495,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L741)
+Defined in: [generated/neural\_network/MLPClassifier.ts:856](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L856)
 
 ### n\_iter\_
 
@@ -432,7 +511,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L791)
+Defined in: [generated/neural\_network/MLPClassifier.ts:906](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L906)
 
 ### n\_layers\_
 
@@ -448,7 +527,7 @@ n_layers_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:814](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L814)
+Defined in: [generated/neural\_network/MLPClassifier.ts:929](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L929)
 
 ### n\_outputs\_
 
@@ -464,7 +543,7 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:839](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L839)
+Defined in: [generated/neural\_network/MLPClassifier.ts:954](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L954)
 
 ### out\_activation\_
 
@@ -480,7 +559,7 @@ out_activation_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L864)
+Defined in: [generated/neural\_network/MLPClassifier.ts:979](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L979)
 
 ### py
 
@@ -494,7 +573,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neural\_network/MLPClassifier.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L185)
+Defined in:  [generated/neural\_network/MLPClassifier.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L185)
 
 #### Signature
 
@@ -512,7 +591,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L189)
+Defined in: [generated/neural\_network/MLPClassifier.ts:189](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L189)
 
 ### t\_
 
@@ -528,7 +607,7 @@ t_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:670](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L670)
+Defined in: [generated/neural\_network/MLPClassifier.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L785)
 
 ### validation\_scores\_
 
@@ -544,4 +623,4 @@ validation_scores_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/neural\_network/MLPClassifier.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L620)
+Defined in: [generated/neural\_network/MLPClassifier.ts:735](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neural_network/MLPClassifier.ts#L735)

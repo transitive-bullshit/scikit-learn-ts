@@ -29,7 +29,7 @@ export class RANSACRegressor {
     estimator?: any
 
     /**
-      Minimum number of samples chosen randomly from original data. Treated as an absolute number of samples for `min\_samples >= 1`, treated as a relative number `ceil(min\_samples \* X.shape\[0\])` for `min\_samples < 1`. This is typically chosen as the minimal number of samples necessary to estimate the given `estimator`. By default a `sklearn.linear\_model.LinearRegression()` estimator is assumed and `min\_samples` is chosen as `X.shape\[1\] + 1`. This parameter is highly dependent upon the model, so if a `estimator` other than `linear\_model.LinearRegression` is used, the user must provide a value.
+      Minimum number of samples chosen randomly from original data. Treated as an absolute number of samples for `min\_samples >= 1`, treated as a relative number `ceil(min\_samples \* X.shape\[0\])` for `min\_samples < 1`. This is typically chosen as the minimal number of samples necessary to estimate the given `estimator`. By default a [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") estimator is assumed and `min\_samples` is chosen as `X.shape\[1\] + 1`. This parameter is highly dependent upon the model, so if a `estimator` other than [`LinearRegression`](sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression "sklearn.linear_model.LinearRegression") is used, the user must provide a value.
      */
     min_samples?: number
 
@@ -92,13 +92,6 @@ export class RANSACRegressor {
       The generator used to initialize the centers. Pass an int for reproducible output across multiple function calls. See [Glossary](../../glossary.html#term-random_state).
      */
     random_state?: number
-
-    /**
-      Use `estimator` instead.
-
-      @defaultValue `'deprecated'`
-     */
-    base_estimator?: any
   }) {
     this.id = `RANSACRegressor${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -160,7 +153,7 @@ except NameError: bridgeRANSACRegressor = {}
       this.opts['stop_probability'] ?? undefined
     }, 'loss': ${this.opts['loss'] ?? undefined}, 'random_state': ${
       this.opts['random_state'] ?? undefined
-    }, 'base_estimator': ${this.opts['base_estimator'] ?? undefined}}
+    }}
 
 ctor_RANSACRegressor = {k: v for k, v in ctor_RANSACRegressor.items() if v is not None}`
 
@@ -234,6 +227,43 @@ pms_RANSACRegressor_fit = {k: v for k, v in pms_RANSACRegressor_fit.items() if v
     // convert the result from python to node.js
     return this
       ._py`res_RANSACRegressor_fit.tolist() if hasattr(res_RANSACRegressor_fit, 'tolist') else res_RANSACRegressor_fit`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This RANSACRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RANSACRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_RANSACRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_RANSACRegressor_get_metadata_routing = {k: v for k, v in pms_RANSACRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RANSACRegressor_get_metadata_routing = bridgeRANSACRegressor[${this.id}].get_metadata_routing(**pms_RANSACRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RANSACRegressor_get_metadata_routing.tolist() if hasattr(res_RANSACRegressor_get_metadata_routing, 'tolist') else res_RANSACRegressor_get_metadata_routing`
   }
 
   /**
@@ -311,6 +341,45 @@ pms_RANSACRegressor_score = {k: v for k, v in pms_RANSACRegressor_score.items() 
     // convert the result from python to node.js
     return this
       ._py`res_RANSACRegressor_score.tolist() if hasattr(res_RANSACRegressor_score, 'tolist') else res_RANSACRegressor_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This RANSACRegressor instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RANSACRegressor must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_RANSACRegressor_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_RANSACRegressor_set_fit_request = {k: v for k, v in pms_RANSACRegressor_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RANSACRegressor_set_fit_request = bridgeRANSACRegressor[${this.id}].set_fit_request(**pms_RANSACRegressor_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RANSACRegressor_set_fit_request.tolist() if hasattr(res_RANSACRegressor_set_fit_request, 'tolist') else res_RANSACRegressor_set_fit_request`
   }
 
   /**

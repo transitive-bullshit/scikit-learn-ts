@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. The features are converted to ordinal integers. This results in a single column of integers (0 to n\_categories - 1) per feature.
 
-  Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features).
+  Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features). For a comparison of different encoders, refer to: [Comparing Target Encoder with Other Encoders](../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html)
  */
@@ -51,6 +51,18 @@ export class OrdinalEncoder {
       Encoded value of missing categories. If set to `np.nan`, then the `dtype` parameter must be a float dtype.
      */
     encoded_missing_value?: number
+
+    /**
+      Specifies the minimum frequency below which a category will be considered infrequent.
+     */
+    min_frequency?: number
+
+    /**
+      Specifies an upper limit to the number of output categories for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features.
+
+      `max\_categories` do **not** take into account missing or unknown categories. Setting `unknown\_value` or `encoded\_missing\_value` to an integer will increase the number of unique integer codes by one each. This can result in up to `max\_categories + 2` integer codes.
+     */
+    max_categories?: number
   }) {
     this.id = `OrdinalEncoder${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -100,7 +112,9 @@ except NameError: bridgeOrdinalEncoder = {}
       this.opts['unknown_value'] ?? undefined
     }, 'encoded_missing_value': ${
       this.opts['encoded_missing_value'] ?? undefined
-    }}
+    }, 'min_frequency': ${
+      this.opts['min_frequency'] ?? undefined
+    }, 'max_categories': ${this.opts['max_categories'] ?? undefined}}
 
 ctor_OrdinalEncoder = {k: v for k, v in ctor_OrdinalEncoder.items() if v is not None}`
 
@@ -250,6 +264,43 @@ pms_OrdinalEncoder_get_feature_names_out = {k: v for k, v in pms_OrdinalEncoder_
     // convert the result from python to node.js
     return this
       ._py`res_OrdinalEncoder_get_feature_names_out.tolist() if hasattr(res_OrdinalEncoder_get_feature_names_out, 'tolist') else res_OrdinalEncoder_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This OrdinalEncoder instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'OrdinalEncoder must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_OrdinalEncoder_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_OrdinalEncoder_get_metadata_routing = {k: v for k, v in pms_OrdinalEncoder_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_OrdinalEncoder_get_metadata_routing = bridgeOrdinalEncoder[${this.id}].get_metadata_routing(**pms_OrdinalEncoder_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_OrdinalEncoder_get_metadata_routing.tolist() if hasattr(res_OrdinalEncoder_get_metadata_routing, 'tolist') else res_OrdinalEncoder_get_metadata_routing`
   }
 
   /**

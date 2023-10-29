@@ -46,7 +46,7 @@ export class CalibrationDisplay {
     /**
       The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
   }) {
     this.id = `CalibrationDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -138,7 +138,7 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
 
     A calibration curve, also known as a reliability diagram, uses inputs from a binary classifier and plots the average predicted probability for each bin against the fraction of positive classes, on the y-axis.
 
-    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.0)").
 
     Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
    */
@@ -175,7 +175,7 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
     /**
       The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
 
     /**
       Name for labeling curve. If `undefined`, the name of the estimator is used.
@@ -195,7 +195,7 @@ ctor_CalibrationDisplay = {k: v for k, v in ctor_CalibrationDisplay.items() if v
     ax?: any
 
     /**
-      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.0)").
      */
     kwargs?: any
   }): Promise<any> {
@@ -242,7 +242,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
 
     Calibration curve, also known as reliability diagram, uses inputs from a binary classifier and plots the average predicted probability for each bin against the fraction of positive classes, on the y-axis.
 
-    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.0)").
 
     Read more about calibration in the [User Guide](../calibration.html#calibration) and more about the scikit-learn visualization API in [Visualizations](../../visualizations.html#visualizations).
    */
@@ -274,7 +274,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
     /**
       The positive class when computing the calibration curve. By default, `estimators.classes\_\[1\]` is considered as the positive class.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
 
     /**
       Name for labeling curve.
@@ -294,7 +294,7 @@ pms_CalibrationDisplay_from_estimator = {k: v for k, v in pms_CalibrationDisplay
     ax?: any
 
     /**
-      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.0)").
      */
     kwargs?: any
   }): Promise<any> {
@@ -340,7 +340,7 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
   /**
     Plot visualization.
 
-    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+    Extra keyword arguments will be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.0)").
    */
   async plot(opts: {
     /**
@@ -361,7 +361,7 @@ pms_CalibrationDisplay_from_predictions = {k: v for k, v in pms_CalibrationDispl
     ref_line?: boolean
 
     /**
-      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.7.1)").
+      Keyword arguments to be passed to [`matplotlib.pyplot.plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot "(in Matplotlib v3.8.0)").
      */
     kwargs?: any
   }): Promise<any> {

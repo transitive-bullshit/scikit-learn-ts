@@ -36,6 +36,11 @@ export class GraphicalLasso {
     mode?: 'cd' | 'lars'
 
     /**
+      If covariance is “precomputed”, the input data in `fit` is assumed to be the covariance matrix. If `undefined`, the empirical covariance is estimated from the data `X`.
+     */
+    covariance?: 'precomputed'
+
+    /**
       The tolerance to declare convergence: if the dual gap goes below this value, iterations are stopped. Range is (0, inf\].
 
       @defaultValue `0.0001`
@@ -62,6 +67,11 @@ export class GraphicalLasso {
       @defaultValue `false`
      */
     verbose?: boolean
+
+    /**
+      The machine-precision regularization in the computation of the Cholesky diagonal factors. Increase this for very ill-conditioned systems. Default is `np.finfo(np.float64).eps`.
+     */
+    eps?: number
 
     /**
       If `true`, data are not centered before computation. Useful when working with data whose mean is almost, but not exactly zero. If `false`, data are centered before computation.
@@ -112,11 +122,13 @@ except NameError: bridgeGraphicalLasso = {}
     // set up constructor params
     await this._py.ex`ctor_GraphicalLasso = {'alpha': ${
       this.opts['alpha'] ?? undefined
-    }, 'mode': ${this.opts['mode'] ?? undefined}, 'tol': ${
-      this.opts['tol'] ?? undefined
-    }, 'enet_tol': ${this.opts['enet_tol'] ?? undefined}, 'max_iter': ${
-      this.opts['max_iter'] ?? undefined
-    }, 'verbose': ${this.opts['verbose'] ?? undefined}, 'assume_centered': ${
+    }, 'mode': ${this.opts['mode'] ?? undefined}, 'covariance': ${
+      this.opts['covariance'] ?? undefined
+    }, 'tol': ${this.opts['tol'] ?? undefined}, 'enet_tol': ${
+      this.opts['enet_tol'] ?? undefined
+    }, 'max_iter': ${this.opts['max_iter'] ?? undefined}, 'verbose': ${
+      this.opts['verbose'] ?? undefined
+    }, 'eps': ${this.opts['eps'] ?? undefined}, 'assume_centered': ${
       this.opts['assume_centered'] ?? undefined
     }}
 
@@ -244,6 +256,43 @@ pms_GraphicalLasso_fit = {k: v for k, v in pms_GraphicalLasso_fit.items() if v i
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This GraphicalLasso instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GraphicalLasso must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_GraphicalLasso_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_GraphicalLasso_get_metadata_routing = {k: v for k, v in pms_GraphicalLasso_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GraphicalLasso_get_metadata_routing = bridgeGraphicalLasso[${this.id}].get_metadata_routing(**pms_GraphicalLasso_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GraphicalLasso_get_metadata_routing.tolist() if hasattr(res_GraphicalLasso_get_metadata_routing, 'tolist') else res_GraphicalLasso_get_metadata_routing`
+  }
+
+  /**
     Getter for the precision matrix.
    */
   async get_precision(opts: {
@@ -353,6 +402,45 @@ pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if
   }
 
   /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `X\_test` parameter in `score`.
+     */
+    X_test?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This GraphicalLasso instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GraphicalLasso must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_GraphicalLasso_set_score_request = {'X_test': ${
+      opts['X_test'] ?? undefined
+    }}
+
+pms_GraphicalLasso_set_score_request = {k: v for k, v in pms_GraphicalLasso_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GraphicalLasso_set_score_request = bridgeGraphicalLasso[${this.id}].set_score_request(**pms_GraphicalLasso_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GraphicalLasso_set_score_request.tolist() if hasattr(res_GraphicalLasso_set_score_request, 'tolist') else res_GraphicalLasso_set_score_request`
+  }
+
+  /**
     Estimated location, i.e. the estimated mean.
    */
   get location_(): Promise<NDArray> {
@@ -449,6 +537,29 @@ pms_GraphicalLasso_score = {k: v for k, v in pms_GraphicalLasso_score.items() if
       // convert the result from python to node.js
       return this
         ._py`attr_GraphicalLasso_n_iter_.tolist() if hasattr(attr_GraphicalLasso_n_iter_, 'tolist') else attr_GraphicalLasso_n_iter_`
+    })()
+  }
+
+  /**
+    The list of values of the objective function and the dual gap at each iteration. Returned only if return\_costs is `true`.
+   */
+  get costs_(): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This GraphicalLasso instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('GraphicalLasso must call init() before accessing costs_')
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_GraphicalLasso_costs_ = bridgeGraphicalLasso[${this.id}].costs_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_GraphicalLasso_costs_.tolist() if hasattr(attr_GraphicalLasso_costs_, 'tolist') else attr_GraphicalLasso_costs_`
     })()
   }
 

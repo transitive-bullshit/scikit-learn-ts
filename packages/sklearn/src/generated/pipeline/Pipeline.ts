@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The purpose of the pipeline is to assemble several steps that can be cross-validated together while setting different parameters. For this, it enables setting parameters of the various steps using their names and the parameter name separated by a `'\_\_'`, as in the example below. A step’s estimator may be replaced entirely by setting the parameter with its name to another estimator, or a transformer removed by setting it to `'passthrough'` or `undefined`.
 
+  For an example use case of `Pipeline` combined with [`GridSearchCV`](sklearn.model_selection.GridSearchCV.html#sklearn.model_selection.GridSearchCV "sklearn.model_selection.GridSearchCV"), refer to [Selecting dimensionality reduction with Pipeline and GridSearchCV](../../auto_examples/compose/plot_compare_reduction.html#sphx-glr-auto-examples-compose-plot-compare-reduction-py). The example [Pipelining: chaining a PCA and a logistic regression](../../auto_examples/compose/plot_digits_pipe.html#sphx-glr-auto-examples-compose-plot-digits-pipe-py) shows how to grid search on a pipeline using `'\_\_'` as a separator in the parameter names.
+
   Read more in the [User Guide](../compose.html#pipeline).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
@@ -31,7 +33,7 @@ export class Pipeline {
     steps?: any
 
     /**
-      Used to cache the fitted transformers of the pipeline. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
+      Used to cache the fitted transformers of the pipeline. The last step will never be cached, even if it is a transformer. By default, no caching is performed. If a string is given, it is the path to the caching directory. Enabling caching triggers a clone of the transformers before fitting. Therefore, the transformer instance given to the pipeline cannot be inspected directly. Use the attribute `named\_steps` or `steps` to inspect estimators within the pipeline. Caching the transformers is advantageous when fitting is time consuming.
      */
     memory?: string
 
@@ -328,6 +330,41 @@ pms_Pipeline_get_feature_names_out = {k: v for k, v in pms_Pipeline_get_feature_
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This Pipeline instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('Pipeline must call init() before get_metadata_routing()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_Pipeline_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_Pipeline_get_metadata_routing = {k: v for k, v in pms_Pipeline_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_Pipeline_get_metadata_routing = bridgePipeline[${this.id}].get_metadata_routing(**pms_Pipeline_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_Pipeline_get_metadata_routing.tolist() if hasattr(res_Pipeline_get_metadata_routing, 'tolist') else res_Pipeline_get_metadata_routing`
+  }
+
+  /**
     Apply `inverse\_transform` for each step in a reverse order.
 
     All estimators in the pipeline must support `inverse\_transform`.
@@ -599,6 +636,43 @@ pms_Pipeline_set_output = {k: v for k, v in pms_Pipeline_set_output.items() if v
     // convert the result from python to node.js
     return this
       ._py`res_Pipeline_set_output.tolist() if hasattr(res_Pipeline_set_output, 'tolist') else res_Pipeline_set_output`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This Pipeline instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('Pipeline must call init() before set_score_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_Pipeline_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_Pipeline_set_score_request = {k: v for k, v in pms_Pipeline_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_Pipeline_set_score_request = bridgePipeline[${this.id}].set_score_request(**pms_Pipeline_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_Pipeline_set_score_request.tolist() if hasattr(res_Pipeline_set_score_request, 'tolist') else res_Pipeline_set_score_request`
   }
 
   /**

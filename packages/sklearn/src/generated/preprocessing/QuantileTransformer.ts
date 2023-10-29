@@ -12,6 +12,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   The transformation is applied on each feature independently. First an estimate of the cumulative distribution function of a feature is used to map the original values to a uniform distribution. The obtained values are then mapped to the desired output distribution using the associated quantile function. Features values of new/unseen data that fall below or above the fitted range will be mapped to the bounds of the output distribution. Note that this transform is non-linear. It may distort linear correlations between variables measured at the same scale but renders variables measured at different scales more directly comparable.
 
+  For example visualizations, refer to [Compare QuantileTransformer with other scalers](../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-quantile-transformer-section).
+
   Read more in the [User Guide](../preprocessing.html#preprocessing-transformer).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html)
@@ -275,6 +277,46 @@ pms_QuantileTransformer_get_feature_names_out = {k: v for k, v in pms_QuantileTr
     // convert the result from python to node.js
     return this
       ._py`res_QuantileTransformer_get_feature_names_out.tolist() if hasattr(res_QuantileTransformer_get_feature_names_out, 'tolist') else res_QuantileTransformer_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This QuantileTransformer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'QuantileTransformer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_QuantileTransformer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_QuantileTransformer_get_metadata_routing = {k: v for k, v in pms_QuantileTransformer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_QuantileTransformer_get_metadata_routing = bridgeQuantileTransformer[${this.id}].get_metadata_routing(**pms_QuantileTransformer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_QuantileTransformer_get_metadata_routing.tolist() if hasattr(res_QuantileTransformer_get_metadata_routing, 'tolist') else res_QuantileTransformer_get_metadata_routing`
   }
 
   /**

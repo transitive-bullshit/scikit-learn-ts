@@ -42,7 +42,7 @@ new ExtraTreeClassifier(opts?: object): ExtraTreeClassifier;
 
 [`ExtraTreeClassifier`](ExtraTreeClassifier.md)
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L27)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L27)
 
 ## Methods
 
@@ -68,7 +68,7 @@ apply(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L210)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L210)
 
 ### cost\_complexity\_pruning\_path()
 
@@ -95,7 +95,7 @@ cost_complexity_pruning_path(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L256)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L256)
 
 ### decision\_path()
 
@@ -119,7 +119,7 @@ decision_path(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L308)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:308](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L308)
 
 ### dispose()
 
@@ -137,7 +137,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L193)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L193)
 
 ### fit()
 
@@ -163,7 +163,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L354)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L354)
 
 ### get\_depth()
 
@@ -187,7 +187,32 @@ get_depth(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L414)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L414)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check User Guide on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L444)
 
 ### get\_n\_leaves()
 
@@ -209,7 +234,7 @@ get_n_leaves(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L442)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L482)
 
 ### init()
 
@@ -233,7 +258,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L131)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L131)
 
 ### predict()
 
@@ -259,7 +284,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:474](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L474)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L514)
 
 ### predict\_log\_proba()
 
@@ -282,7 +307,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L518)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L558)
 
 ### predict\_proba()
 
@@ -308,7 +333,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L558)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:598](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L598)
 
 ### score()
 
@@ -335,7 +360,116 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L606)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:646](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L646)
+
+### set\_fit\_request()
+
+Request metadata passed to the `fit` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_fit_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.check_input?` | `string` \| `boolean` | Metadata routing for `check\_input` parameter in `fit`. |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `fit`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L699)
+
+### set\_predict\_proba\_request()
+
+Request metadata passed to the `predict\_proba` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_predict_proba_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.check_input?` | `string` \| `boolean` | Metadata routing for `check\_input` parameter in `predict\_proba`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:746](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L746)
+
+### set\_predict\_request()
+
+Request metadata passed to the `predict` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_predict_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.check_input?` | `string` \| `boolean` | Metadata routing for `check\_input` parameter in `predict`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:788](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L788)
+
+### set\_score\_request()
+
+Request metadata passed to the `score` method.
+
+Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see User Guide on how the routing mechanism works.
+
+The options for each parameter are:
+
+#### Signature
+
+```ts
+set_score_request(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.sample_weight?` | `string` \| `boolean` | Metadata routing for `sample\_weight` parameter in `score`. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:830](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L830)
 
 ## Properties
 
@@ -343,31 +477,31 @@ Defined in:  [generated/tree/ExtraTreeClassifier.ts:606](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L25)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L24)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L23)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L20)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L21)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L21)
 
 ## Accessors
 
@@ -385,7 +519,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L655)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:868](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L868)
 
 ### feature\_names\_in\_
 
@@ -401,7 +535,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L763)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:976](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L976)
 
 ### max\_features\_
 
@@ -417,7 +551,7 @@ max_features_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L682)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:895](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L895)
 
 ### n\_classes\_
 
@@ -433,7 +567,7 @@ n_classes_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L709)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:922](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L922)
 
 ### n\_features\_in\_
 
@@ -449,7 +583,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L736)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:949](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L949)
 
 ### n\_outputs\_
 
@@ -465,7 +599,7 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L790)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:1003](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L1003)
 
 ### py
 
@@ -479,7 +613,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/tree/ExtraTreeClassifier.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L118)
+Defined in:  [generated/tree/ExtraTreeClassifier.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L118)
 
 #### Signature
 
@@ -497,7 +631,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L122)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L122)
 
 ### tree\_
 
@@ -513,4 +647,4 @@ tree_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/tree/ExtraTreeClassifier.ts:817](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L817)
+Defined in: [generated/tree/ExtraTreeClassifier.ts:1030](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/tree/ExtraTreeClassifier.ts#L1030)

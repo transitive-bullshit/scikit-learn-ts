@@ -10,7 +10,7 @@ This encoding is needed for feeding categorical data to many scikit-learn estima
 
 Note: a one-hot encoding of y labels should use a LabelBinarizer instead.
 
-Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features).
+Read more in the [User Guide](../preprocessing.html#preprocessing-categorical-features). For a comparison of different encoders, refer to: [Comparing Target Encoder with Other Encoders](../../auto_examples/preprocessing/plot_target_encoder.html#sphx-glr-auto-examples-preprocessing-plot-target-encoder-py).
 
 [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
 
@@ -32,6 +32,7 @@ new OneHotEncoder(opts?: object): OneHotEncoder;
 | `opts.categories?` | `"auto"` | Categories (unique values) per feature:  `Default Value`  `'auto'` |
 | `opts.drop?` | `any`[] \| `"first"` \| `"if_binary"` | Specifies a methodology to use to drop one of the categories per feature. This is useful in situations where perfectly collinear features cause problems, such as when feeding the resulting data into an unregularized linear regression model.  However, dropping one category breaks the symmetry of the original representation and can therefore induce a bias in downstream models, for instance for penalized linear classification or regression models. |
 | `opts.dtype?` | `any` | Desired dtype of output. |
+| `opts.feature_name_combiner?` | `"concat"` | Callable with signature `def callable(input\_feature, category)` that returns a string. This is used to create feature names to be returned by [`get\_feature\_names\_out`](#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").  `"concat"` concatenates encoded feature name and category with `feature + "\_" + str(category)`.E.g. feature X with values 1, 6, 7 create feature names `X\_1, X\_6, X\_7`.  `Default Value`  `'concat'` |
 | `opts.handle_unknown?` | `"ignore"` \| `"error"` \| `"infrequent_if_exist"` | Specifies the way unknown categories are handled during [`transform`](#sklearn.preprocessing.OneHotEncoder.transform "sklearn.preprocessing.OneHotEncoder.transform").  `Default Value`  `'error'` |
 | `opts.max_categories?` | `number` | Specifies an upper limit to the number of output features for each input feature when considering infrequent categories. If there are infrequent categories, `max\_categories` includes the category representing the infrequent categories along with the frequent categories. If `undefined`, there is no limit to the number of output features. |
 | `opts.min_frequency?` | `number` | Specifies the minimum frequency below which a category will be considered infrequent. |
@@ -42,7 +43,7 @@ new OneHotEncoder(opts?: object): OneHotEncoder;
 
 [`OneHotEncoder`](OneHotEncoder.md)
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L31)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L31)
 
 ## Methods
 
@@ -62,7 +63,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L149)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L162)
 
 ### fit()
 
@@ -86,7 +87,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L166)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L179)
 
 ### fit\_transform()
 
@@ -113,7 +114,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L206)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L219)
 
 ### get\_feature\_names\_out()
 
@@ -136,7 +137,32 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L253)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L266)
+
+### get\_metadata\_routing()
+
+Get metadata routing of this object.
+
+Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+#### Signature
+
+```ts
+get_metadata_routing(opts: object): Promise<any>;
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `object` | - |
+| `opts.routing?` | `any` | A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L304)
 
 ### init()
 
@@ -160,7 +186,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L99)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L108)
 
 ### inverse\_transform()
 
@@ -187,7 +213,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L293)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L343)
 
 ### set\_output()
 
@@ -212,7 +238,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:330](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L330)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L380)
 
 ### transform()
 
@@ -237,7 +263,7 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L365)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L415)
 
 ## Properties
 
@@ -245,31 +271,31 @@ Defined in:  [generated/preprocessing/OneHotEncoder.ts:365](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L29)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L29)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L28)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L28)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L27)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L27)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L24)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L24)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L25)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L25)
 
 ## Accessors
 
@@ -287,9 +313,9 @@ categories_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L398)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L448)
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L398)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L448)
 
 ### drop\_idx\_
 
@@ -305,9 +331,27 @@ drop_idx_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L423)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L473)
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L423)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L473)
+
+### feature\_name\_combiner
+
+Callable with signature `def callable(input\_feature, category)` that returns a string. This is used to create feature names to be returned by [`get\_feature\_names\_out`](#sklearn.preprocessing.OneHotEncoder.get_feature_names_out "sklearn.preprocessing.OneHotEncoder.get_feature_names_out").
+
+#### Signature
+
+```ts
+feature_name_combiner(): Promise<any>;
+```
+
+#### Returns
+
+`Promise`\<`any`\>
+
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L548)
+
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L548)
 
 ### feature\_names\_in\_
 
@@ -323,9 +367,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L473)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L523)
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L473)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:523](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L523)
 
 ### n\_features\_in\_
 
@@ -341,9 +385,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L448)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L498)
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L448)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L498)
 
 ### py
 
@@ -357,7 +401,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L86)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L95)
 
 #### Signature
 
@@ -375,6 +419,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L90)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L99)
 
-Defined in:  [generated/preprocessing/OneHotEncoder.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L86) [generated/preprocessing/OneHotEncoder.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L90)
+Defined in:  [generated/preprocessing/OneHotEncoder.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L95) [generated/preprocessing/OneHotEncoder.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/OneHotEncoder.ts#L99)

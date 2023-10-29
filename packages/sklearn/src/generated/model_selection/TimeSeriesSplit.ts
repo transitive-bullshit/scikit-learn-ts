@@ -16,6 +16,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#time-series-split).
 
+  For visualisation of cross-validation behaviour and comparison between common scikit-learn split methods refer to [Visualizing cross-validation behavior in scikit-learn](../../auto_examples/model_selection/plot_cv_indices.html#sphx-glr-auto-examples-model-selection-plot-cv-indices-py)
+
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
  */
 export class TimeSeriesSplit {
@@ -124,6 +126,43 @@ ctor_TimeSeriesSplit = {k: v for k, v in ctor_TimeSeriesSplit.items() if v is no
     await this._py.ex`del bridgeTimeSeriesSplit[${this.id}]`
 
     this._isDisposed = true
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This TimeSeriesSplit instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'TimeSeriesSplit must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_TimeSeriesSplit_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_TimeSeriesSplit_get_metadata_routing = {k: v for k, v in pms_TimeSeriesSplit_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_TimeSeriesSplit_get_metadata_routing = bridgeTimeSeriesSplit[${this.id}].get_metadata_routing(**pms_TimeSeriesSplit_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_TimeSeriesSplit_get_metadata_routing.tolist() if hasattr(res_TimeSeriesSplit_get_metadata_routing, 'tolist') else res_TimeSeriesSplit_get_metadata_routing`
   }
 
   /**

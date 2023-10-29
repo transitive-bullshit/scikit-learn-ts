@@ -46,7 +46,7 @@ export class RocCurveDisplay {
     /**
       The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
   }) {
     this.id = `RocCurveDisplay${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -164,7 +164,7 @@ ctor_RocCurveDisplay = {k: v for k, v in ctor_RocCurveDisplay.items() if v is no
     /**
       The class considered as the positive class when computing the roc auc metrics. By default, `estimators.classes\_\[1\]` is considered as the positive class.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
 
     /**
       Name of ROC Curve for labeling. If `undefined`, use the name of the estimator.
@@ -175,6 +175,18 @@ ctor_RocCurveDisplay = {k: v for k, v in ctor_RocCurveDisplay.items() if v is no
       Axes object to plot on. If `undefined`, a new figure and axes is created.
      */
     ax?: any
+
+    /**
+      Whether to plot the chance level.
+
+      @defaultValue `false`
+     */
+    plot_chance_level?: boolean
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
+     */
+    chance_level_kw?: any
 
     /**
       Keyword arguments to be passed to matplotlib’s `plot`.
@@ -208,7 +220,9 @@ ctor_RocCurveDisplay = {k: v for k, v in ctor_RocCurveDisplay.items() if v is no
       opts['response_method'] ?? undefined
     }, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${
       opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${
+    }, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${
+      opts['plot_chance_level'] ?? undefined
+    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
       opts['kwargs'] ?? undefined
     }}
 
@@ -254,7 +268,7 @@ pms_RocCurveDisplay_from_estimator = {k: v for k, v in pms_RocCurveDisplay_from_
     /**
       The label of the positive class. When `pos\_label=None`, if `y\_true` is in {-1, 1} or {0, 1}, `pos\_label` is set to 1, otherwise an error will be raised.
      */
-    pos_label?: string | number
+    pos_label?: number | boolean | string
 
     /**
       Name of ROC curve for labeling. If `undefined`, name will be set to `"Classifier"`.
@@ -265,6 +279,18 @@ pms_RocCurveDisplay_from_estimator = {k: v for k, v in pms_RocCurveDisplay_from_
       Axes object to plot on. If `undefined`, a new figure and axes is created.
      */
     ax?: any
+
+    /**
+      Whether to plot the chance level.
+
+      @defaultValue `false`
+     */
+    plot_chance_level?: boolean
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
+     */
+    chance_level_kw?: any
 
     /**
       Additional keywords arguments passed to matplotlib `plot` function.
@@ -297,7 +323,9 @@ pms_RocCurveDisplay_from_estimator = {k: v for k, v in pms_RocCurveDisplay_from_
       opts['drop_intermediate'] ?? undefined
     }, 'pos_label': ${opts['pos_label'] ?? undefined}, 'name': ${
       opts['name'] ?? undefined
-    }, 'ax': ${opts['ax'] ?? undefined}, 'kwargs': ${
+    }, 'ax': ${opts['ax'] ?? undefined}, 'plot_chance_level': ${
+      opts['plot_chance_level'] ?? undefined
+    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
       opts['kwargs'] ?? undefined
     }}
 
@@ -329,6 +357,18 @@ pms_RocCurveDisplay_from_predictions = {k: v for k, v in pms_RocCurveDisplay_fro
     name?: string
 
     /**
+      Whether to plot the chance level.
+
+      @defaultValue `false`
+     */
+    plot_chance_level?: boolean
+
+    /**
+      Keyword arguments to be passed to matplotlib’s `plot` for rendering the chance level line.
+     */
+    chance_level_kw?: any
+
+    /**
       Keyword arguments to be passed to matplotlib’s `plot`.
      */
     kwargs?: any
@@ -344,7 +384,9 @@ pms_RocCurveDisplay_from_predictions = {k: v for k, v in pms_RocCurveDisplay_fro
     // set up method params
     await this._py.ex`pms_RocCurveDisplay_plot = {'ax': ${
       opts['ax'] ?? undefined
-    }, 'name': ${opts['name'] ?? undefined}, 'kwargs': ${
+    }, 'name': ${opts['name'] ?? undefined}, 'plot_chance_level': ${
+      opts['plot_chance_level'] ?? undefined
+    }, 'chance_level_kw': ${opts['chance_level_kw'] ?? undefined}, 'kwargs': ${
       opts['kwargs'] ?? undefined
     }}
 
@@ -379,6 +421,31 @@ pms_RocCurveDisplay_plot = {k: v for k, v in pms_RocCurveDisplay_plot.items() if
       // convert the result from python to node.js
       return this
         ._py`attr_RocCurveDisplay_line_.tolist() if hasattr(attr_RocCurveDisplay_line_, 'tolist') else attr_RocCurveDisplay_line_`
+    })()
+  }
+
+  /**
+    The chance level line. It is `undefined` if the chance level is not plotted.
+   */
+  get chance_level_(): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This RocCurveDisplay instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RocCurveDisplay must call init() before accessing chance_level_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_RocCurveDisplay_chance_level_ = bridgeRocCurveDisplay[${this.id}].chance_level_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_RocCurveDisplay_chance_level_.tolist() if hasattr(attr_RocCurveDisplay_chance_level_, 'tolist') else attr_RocCurveDisplay_chance_level_`
     })()
   }
 

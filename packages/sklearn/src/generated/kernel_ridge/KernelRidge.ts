@@ -35,7 +35,7 @@ export class KernelRidge {
     alpha?: number | ArrayLike
 
     /**
-      Kernel mapping used internally. This parameter is directly passed to `pairwise\_kernel`. If `kernel` is a string, it must be one of the metrics in `pairwise.PAIRWISE\_KERNEL\_FUNCTIONS` or “precomputed”. If `kernel` is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if `kernel` is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two rows from X as input and return the corresponding kernel value as a single number. This means that callables from [`sklearn.metrics.pairwise`](../classes.html#module-sklearn.metrics.pairwise "sklearn.metrics.pairwise") are not allowed, as they operate on matrices, not single samples. Use the string identifying the kernel instead.
+      Kernel mapping used internally. This parameter is directly passed to [`pairwise\_kernels`](sklearn.metrics.pairwise.pairwise_kernels.html#sklearn.metrics.pairwise.pairwise_kernels "sklearn.metrics.pairwise.pairwise_kernels"). If `kernel` is a string, it must be one of the metrics in `pairwise.PAIRWISE\_KERNEL\_FUNCTIONS` or “precomputed”. If `kernel` is “precomputed”, X is assumed to be a kernel matrix. Alternatively, if `kernel` is a callable function, it is called on each pair of instances (rows) and the resulting value recorded. The callable should take two rows from X as input and return the corresponding kernel value as a single number. This means that callables from [`sklearn.metrics.pairwise`](../classes.html#module-sklearn.metrics.pairwise "sklearn.metrics.pairwise") are not allowed, as they operate on matrices, not single samples. Use the string identifying the kernel instead.
 
       @defaultValue `'linear'`
      */
@@ -190,6 +190,43 @@ pms_KernelRidge_fit = {k: v for k, v in pms_KernelRidge_fit.items() if v is not 
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This KernelRidge instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'KernelRidge must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_KernelRidge_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_KernelRidge_get_metadata_routing = {k: v for k, v in pms_KernelRidge_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_KernelRidge_get_metadata_routing = bridgeKernelRidge[${this.id}].get_metadata_routing(**pms_KernelRidge_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_KernelRidge_get_metadata_routing.tolist() if hasattr(res_KernelRidge_get_metadata_routing, 'tolist') else res_KernelRidge_get_metadata_routing`
+  }
+
+  /**
     Predict using the kernel ridge model.
    */
   async predict(opts: {
@@ -269,6 +306,80 @@ pms_KernelRidge_score = {k: v for k, v in pms_KernelRidge_score.items() if v is 
     // convert the result from python to node.js
     return this
       ._py`res_KernelRidge_score.tolist() if hasattr(res_KernelRidge_score, 'tolist') else res_KernelRidge_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This KernelRidge instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('KernelRidge must call init() before set_fit_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_KernelRidge_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_KernelRidge_set_fit_request = {k: v for k, v in pms_KernelRidge_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_KernelRidge_set_fit_request = bridgeKernelRidge[${this.id}].set_fit_request(**pms_KernelRidge_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_KernelRidge_set_fit_request.tolist() if hasattr(res_KernelRidge_set_fit_request, 'tolist') else res_KernelRidge_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This KernelRidge instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('KernelRidge must call init() before set_score_request()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_KernelRidge_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_KernelRidge_set_score_request = {k: v for k, v in pms_KernelRidge_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_KernelRidge_set_score_request = bridgeKernelRidge[${this.id}].set_score_request(**pms_KernelRidge_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_KernelRidge_set_score_request.tolist() if hasattr(res_KernelRidge_set_score_request, 'tolist') else res_KernelRidge_set_score_request`
   }
 
   /**

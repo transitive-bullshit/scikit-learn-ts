@@ -12,7 +12,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Centering and scaling happen independently on each feature by computing the relevant statistics on the samples in the training set. Median and interquartile range are then stored to be used on later data using the [`transform`](#sklearn.preprocessing.RobustScaler.transform "sklearn.preprocessing.RobustScaler.transform") method.
 
-  Standardization of a dataset is a common requirement for many machine learning estimators. Typically this is done by removing the mean and scaling to unit variance. However, outliers can often influence the sample mean / variance in a negative way. In such cases, the median and the interquartile range often give better results.
+  Standardization of a dataset is a common preprocessing for many machine learning estimators. Typically this is done by removing the mean and scaling to unit variance. However, outliers can often influence the sample mean / variance in a negative way. In such cases, using the median and the interquartile range often give better results. For an example visualization and comparison to other scalers, refer to [Compare RobustScaler with other scalers](../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-robust-scaler-section).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html)
  */
@@ -254,6 +254,43 @@ pms_RobustScaler_get_feature_names_out = {k: v for k, v in pms_RobustScaler_get_
     // convert the result from python to node.js
     return this
       ._py`res_RobustScaler_get_feature_names_out.tolist() if hasattr(res_RobustScaler_get_feature_names_out, 'tolist') else res_RobustScaler_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This RobustScaler instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'RobustScaler must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_RobustScaler_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_RobustScaler_get_metadata_routing = {k: v for k, v in pms_RobustScaler_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_RobustScaler_get_metadata_routing = bridgeRobustScaler[${this.id}].get_metadata_routing(**pms_RobustScaler_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_RobustScaler_get_metadata_routing.tolist() if hasattr(res_RobustScaler_get_metadata_routing, 'tolist') else res_RobustScaler_get_metadata_routing`
   }
 
   /**

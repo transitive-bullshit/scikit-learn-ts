@@ -240,6 +240,45 @@ pms_SelectPercentile_get_feature_names_out = {k: v for k, v in pms_SelectPercent
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This SelectPercentile instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SelectPercentile must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_SelectPercentile_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SelectPercentile_get_metadata_routing = {k: v for k, v in pms_SelectPercentile_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SelectPercentile_get_metadata_routing = bridgeSelectPercentile[${this.id}].get_metadata_routing(**pms_SelectPercentile_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SelectPercentile_get_metadata_routing.tolist() if hasattr(res_SelectPercentile_get_metadata_routing, 'tolist') else res_SelectPercentile_get_metadata_routing`
+  }
+
+  /**
     Get a mask, or integer index, of the features selected.
    */
   async get_support(opts: {

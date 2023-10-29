@@ -47,9 +47,9 @@ export class HashingVectorizer {
     decode_error?: 'strict' | 'ignore' | 'replace'
 
     /**
-      Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any character. `undefined` (default) does nothing.
+      Remove accents and perform other character normalization during the preprocessing step. ‘ascii’ is a fast method that only works on characters that have a direct ASCII mapping. ‘unicode’ is a slightly slower method that works on any character. `undefined` (default) means no character normalization is performed.
 
-      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.11)").
+      Both ‘ascii’ and ‘unicode’ use NFKD normalization from [`unicodedata.normalize`](https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize "(in Python v3.12)").
      */
     strip_accents?: 'ascii' | 'unicode'
 
@@ -429,6 +429,46 @@ pms_HashingVectorizer_fit_transform = {k: v for k, v in pms_HashingVectorizer_fi
     // convert the result from python to node.js
     return this
       ._py`res_HashingVectorizer_fit_transform.tolist() if hasattr(res_HashingVectorizer_fit_transform, 'tolist') else res_HashingVectorizer_fit_transform`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This HashingVectorizer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'HashingVectorizer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_HashingVectorizer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_HashingVectorizer_get_metadata_routing = {k: v for k, v in pms_HashingVectorizer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_HashingVectorizer_get_metadata_routing = bridgeHashingVectorizer[${this.id}].get_metadata_routing(**pms_HashingVectorizer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_HashingVectorizer_get_metadata_routing.tolist() if hasattr(res_HashingVectorizer_get_metadata_routing, 'tolist') else res_HashingVectorizer_get_metadata_routing`
   }
 
   /**

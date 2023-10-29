@@ -20,6 +20,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#group-shuffle-split).
 
+  For visualisation of cross-validation behaviour and comparison between common scikit-learn split methods refer to [Visualizing cross-validation behavior in scikit-learn](../../auto_examples/model_selection/plot_cv_indices.html#sphx-glr-auto-examples-model-selection-plot-cv-indices-py)
+
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html)
  */
 export class GroupShuffleSplit {
@@ -131,6 +133,46 @@ ctor_GroupShuffleSplit = {k: v for k, v in ctor_GroupShuffleSplit.items() if v i
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GroupShuffleSplit instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GroupShuffleSplit must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_GroupShuffleSplit_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_GroupShuffleSplit_get_metadata_routing = {k: v for k, v in pms_GroupShuffleSplit_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GroupShuffleSplit_get_metadata_routing = bridgeGroupShuffleSplit[${this.id}].get_metadata_routing(**pms_GroupShuffleSplit_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GroupShuffleSplit_get_metadata_routing.tolist() if hasattr(res_GroupShuffleSplit_get_metadata_routing, 'tolist') else res_GroupShuffleSplit_get_metadata_routing`
+  }
+
+  /**
     Returns the number of splitting iterations in the cross-validator
    */
   async get_n_splits(opts: {
@@ -175,6 +217,47 @@ pms_GroupShuffleSplit_get_n_splits = {k: v for k, v in pms_GroupShuffleSplit_get
     // convert the result from python to node.js
     return this
       ._py`res_GroupShuffleSplit_get_n_splits.tolist() if hasattr(res_GroupShuffleSplit_get_n_splits, 'tolist') else res_GroupShuffleSplit_get_n_splits`
+  }
+
+  /**
+    Request metadata passed to the `split` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_split_request(opts: {
+    /**
+      Metadata routing for `groups` parameter in `split`.
+     */
+    groups?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This GroupShuffleSplit instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'GroupShuffleSplit must call init() before set_split_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_GroupShuffleSplit_set_split_request = {'groups': ${
+      opts['groups'] ?? undefined
+    }}
+
+pms_GroupShuffleSplit_set_split_request = {k: v for k, v in pms_GroupShuffleSplit_set_split_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_GroupShuffleSplit_set_split_request = bridgeGroupShuffleSplit[${this.id}].set_split_request(**pms_GroupShuffleSplit_set_split_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_GroupShuffleSplit_set_split_request.tolist() if hasattr(res_GroupShuffleSplit_set_split_request, 'tolist') else res_GroupShuffleSplit_set_split_request`
   }
 
   /**

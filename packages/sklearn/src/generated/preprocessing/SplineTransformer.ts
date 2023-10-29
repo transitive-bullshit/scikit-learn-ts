@@ -45,25 +45,32 @@ export class SplineTransformer {
     knots?: 'uniform' | 'quantile' | ArrayLike[]
 
     /**
-      If ‘error’, values outside the min and max values of the training features raises a `ValueError`. If ‘constant’, the value of the splines at minimum and maximum value of the features is used as constant extrapolation. If ‘linear’, a linear extrapolation is used. If ‘continue’, the splines are extrapolated as is, i.e. option `extrapolate=True` in [`scipy.interpolate.BSpline`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.BSpline.html#scipy.interpolate.BSpline "(in SciPy v1.10.1)"). If ‘periodic’, periodic splines with a periodicity equal to the distance between the first and last knot are used. Periodic splines enforce equal function values and derivatives at the first and last knot. For example, this makes it possible to avoid introducing an arbitrary jump between Dec 31st and Jan 1st in spline features derived from a naturally periodic “day-of-year” input feature. In this case it is recommended to manually set the knot values to control the period.
+      If ‘error’, values outside the min and max values of the training features raises a `ValueError`. If ‘constant’, the value of the splines at minimum and maximum value of the features is used as constant extrapolation. If ‘linear’, a linear extrapolation is used. If ‘continue’, the splines are extrapolated as is, i.e. option `extrapolate=True` in [`scipy.interpolate.BSpline`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.BSpline.html#scipy.interpolate.BSpline "(in SciPy v1.11.3)"). If ‘periodic’, periodic splines with a periodicity equal to the distance between the first and last knot are used. Periodic splines enforce equal function values and derivatives at the first and last knot. For example, this makes it possible to avoid introducing an arbitrary jump between Dec 31st and Jan 1st in spline features derived from a naturally periodic “day-of-year” input feature. In this case it is recommended to manually set the knot values to control the period.
 
       @defaultValue `'constant'`
      */
     extrapolation?: 'error' | 'constant' | 'linear' | 'continue' | 'periodic'
 
     /**
-      If `true` (default), then the last spline element inside the data range of a feature is dropped. As B-splines sum to one over the spline basis functions for each data point, they implicitly include a bias term, i.e. a column of ones. It acts as an intercept term in a linear models.
+      If `false`, then the last spline element inside the data range of a feature is dropped. As B-splines sum to one over the spline basis functions for each data point, they implicitly include a bias term, i.e. a column of ones. It acts as an intercept term in a linear models.
 
       @defaultValue `true`
      */
     include_bias?: boolean
 
     /**
-      Order of output array. ‘F’ order is faster to compute, but may slow down subsequent estimators.
+      Order of output array in the dense case. `'F'` order is faster to compute, but may slow down subsequent estimators.
 
       @defaultValue `'C'`
      */
     order?: 'C' | 'F'
+
+    /**
+      Will return sparse CSR matrix if set `true` else will return an array. This option is only available with `scipy>=1.8`.
+
+      @defaultValue `false`
+     */
+    sparse_output?: boolean
   }) {
     this.id = `SplineTransformer${crypto.randomUUID().split('-')[0]}`
     this.opts = opts || {}
@@ -115,7 +122,7 @@ except NameError: bridgeSplineTransformer = {}
       this.opts['extrapolation'] ?? undefined
     }, 'include_bias': ${this.opts['include_bias'] ?? undefined}, 'order': ${
       this.opts['order'] ?? undefined
-    }}
+    }, 'sparse_output': ${this.opts['sparse_output'] ?? undefined}}
 
 ctor_SplineTransformer = {k: v for k, v in ctor_SplineTransformer.items() if v is not None}`
 
@@ -285,6 +292,88 @@ pms_SplineTransformer_get_feature_names_out = {k: v for k, v in pms_SplineTransf
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This SplineTransformer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SplineTransformer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_SplineTransformer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SplineTransformer_get_metadata_routing = {k: v for k, v in pms_SplineTransformer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SplineTransformer_get_metadata_routing = bridgeSplineTransformer[${this.id}].get_metadata_routing(**pms_SplineTransformer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SplineTransformer_get_metadata_routing.tolist() if hasattr(res_SplineTransformer_get_metadata_routing, 'tolist') else res_SplineTransformer_get_metadata_routing`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This SplineTransformer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SplineTransformer must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_SplineTransformer_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_SplineTransformer_set_fit_request = {k: v for k, v in pms_SplineTransformer_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SplineTransformer_set_fit_request = bridgeSplineTransformer[${this.id}].set_fit_request(**pms_SplineTransformer_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SplineTransformer_set_fit_request.tolist() if hasattr(res_SplineTransformer_set_fit_request, 'tolist') else res_SplineTransformer_set_fit_request`
+  }
+
+  /**
     Set output container.
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
@@ -329,7 +418,7 @@ pms_SplineTransformer_set_output = {k: v for k, v in pms_SplineTransformer_set_o
       The data to transform.
      */
     X?: ArrayLike[]
-  }): Promise<NDArray[]> {
+  }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error(
         'This SplineTransformer instance has already been disposed'

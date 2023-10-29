@@ -48,7 +48,9 @@ export class KBinsDiscretizer {
     dtype?: any
 
     /**
-      Maximum number of samples, used to fit the model, for computational efficiency. Used when `strategy="quantile"`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
+      Maximum number of samples, used to fit the model, for computational efficiency. Defaults to 200\_000 when `strategy='quantile'` and to `undefined` when `strategy='uniform'` or `strategy='kmeans'`. `subsample=None` means that all the training samples are used when computing the quantiles that determine the binning thresholds. Since quantile computation relies on sorting each column of `X` and that sorting has an `n log(n)` time complexity, it is recommended to use subsampling on datasets with a very large number of samples.
+
+      @defaultValue `'warn'`
      */
     subsample?: number
 
@@ -149,6 +151,11 @@ ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is 
       Ignored. This parameter exists only for compatibility with [`Pipeline`](sklearn.pipeline.Pipeline.html#sklearn.pipeline.Pipeline "sklearn.pipeline.Pipeline").
      */
     y?: any
+
+    /**
+      Contains weight values to be associated with each sample. Only possible when `strategy` is set to `"quantile"`.
+     */
+    sample_weight?: NDArray
   }): Promise<any> {
     if (this._isDisposed) {
       throw new Error(
@@ -163,7 +170,11 @@ ctor_KBinsDiscretizer = {k: v for k, v in ctor_KBinsDiscretizer.items() if v is 
     // set up method params
     await this._py.ex`pms_KBinsDiscretizer_fit = {'X': np.array(${
       opts['X'] ?? undefined
-    }) if ${opts['X'] !== undefined} else None, 'y': ${opts['y'] ?? undefined}}
+    }) if ${opts['X'] !== undefined} else None, 'y': ${
+      opts['y'] ?? undefined
+    }, 'sample_weight': np.array(${opts['sample_weight'] ?? undefined}) if ${
+      opts['sample_weight'] !== undefined
+    } else None}
 
 pms_KBinsDiscretizer_fit = {k: v for k, v in pms_KBinsDiscretizer_fit.items() if v is not None}`
 
@@ -268,6 +279,45 @@ pms_KBinsDiscretizer_get_feature_names_out = {k: v for k, v in pms_KBinsDiscreti
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This KBinsDiscretizer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'KBinsDiscretizer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_KBinsDiscretizer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_KBinsDiscretizer_get_metadata_routing = {k: v for k, v in pms_KBinsDiscretizer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_KBinsDiscretizer_get_metadata_routing = bridgeKBinsDiscretizer[${this.id}].get_metadata_routing(**pms_KBinsDiscretizer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_KBinsDiscretizer_get_metadata_routing.tolist() if hasattr(res_KBinsDiscretizer_get_metadata_routing, 'tolist') else res_KBinsDiscretizer_get_metadata_routing`
+  }
+
+  /**
     Transform discretized data back to original feature space.
 
     Note that this function does not regenerate the original data due to discretization rounding.
@@ -305,6 +355,48 @@ pms_KBinsDiscretizer_inverse_transform = {k: v for k, v in pms_KBinsDiscretizer_
     // convert the result from python to node.js
     return this
       ._py`res_KBinsDiscretizer_inverse_transform.tolist() if hasattr(res_KBinsDiscretizer_inverse_transform, 'tolist') else res_KBinsDiscretizer_inverse_transform`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This KBinsDiscretizer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'KBinsDiscretizer must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_KBinsDiscretizer_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_KBinsDiscretizer_set_fit_request = {k: v for k, v in pms_KBinsDiscretizer_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_KBinsDiscretizer_set_fit_request = bridgeKBinsDiscretizer[${this.id}].set_fit_request(**pms_KBinsDiscretizer_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_KBinsDiscretizer_set_fit_request.tolist() if hasattr(res_KBinsDiscretizer_set_fit_request, 'tolist') else res_KBinsDiscretizer_set_fit_request`
   }
 
   /**

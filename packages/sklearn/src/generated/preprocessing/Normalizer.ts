@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Scaling inputs to unit norms is a common operation for text classification or clustering for instance. For instance the dot product of two l2-normalized TF-IDF vectors is the cosine similarity of the vectors and is the base similarity metric for the Vector Space Model commonly used by the Information Retrieval community.
 
+  For an example visualization, refer to [Compare Normalizer with other scalers](../../auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-normalizer-section).
+
   Read more in the [User Guide](../preprocessing.html#preprocessing-normalization).
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html)
@@ -238,6 +240,43 @@ pms_Normalizer_get_feature_names_out = {k: v for k, v in pms_Normalizer_get_feat
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This Normalizer instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'Normalizer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_Normalizer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_Normalizer_get_metadata_routing = {k: v for k, v in pms_Normalizer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_Normalizer_get_metadata_routing = bridgeNormalizer[${this.id}].get_metadata_routing(**pms_Normalizer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_Normalizer_get_metadata_routing.tolist() if hasattr(res_Normalizer_get_metadata_routing, 'tolist') else res_Normalizer_get_metadata_routing`
+  }
+
+  /**
     Set output container.
 
     See [Introducing the set\_output API](../../auto_examples/miscellaneous/plot_set_output.html#sphx-glr-auto-examples-miscellaneous-plot-set-output-py) for an example on how to use the API.
@@ -270,6 +309,45 @@ pms_Normalizer_set_output = {k: v for k, v in pms_Normalizer_set_output.items() 
     // convert the result from python to node.js
     return this
       ._py`res_Normalizer_set_output.tolist() if hasattr(res_Normalizer_set_output, 'tolist') else res_Normalizer_set_output`
+  }
+
+  /**
+    Request metadata passed to the `transform` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_transform_request(opts: {
+    /**
+      Metadata routing for `copy` parameter in `transform`.
+     */
+    copy?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This Normalizer instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'Normalizer must call init() before set_transform_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_Normalizer_set_transform_request = {'copy': ${
+      opts['copy'] ?? undefined
+    }}
+
+pms_Normalizer_set_transform_request = {k: v for k, v in pms_Normalizer_set_transform_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_Normalizer_set_transform_request = bridgeNormalizer[${this.id}].set_transform_request(**pms_Normalizer_set_transform_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_Normalizer_set_transform_request.tolist() if hasattr(res_Normalizer_set_transform_request, 'tolist') else res_Normalizer_set_transform_request`
   }
 
   /**

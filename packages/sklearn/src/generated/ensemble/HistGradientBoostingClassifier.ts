@@ -36,11 +36,7 @@ export class HistGradientBoostingClassifier {
 
       @defaultValue `'log_loss'`
      */
-    loss?:
-      | 'log_loss'
-      | 'auto'
-      | 'binary_crossentropy'
-      | 'categorical_crossentropy'
+    loss?: 'log_loss'
 
     /**
       The learning rate, also known as *shrinkage*. This is used as a multiplicative factor for the leaves values. Use `1` for no shrinkage.
@@ -108,7 +104,7 @@ export class HistGradientBoostingClassifier {
 
       For instance, with 5 features in total, `interaction\_cst=\[{0, 1}\]` is equivalent to `interaction\_cst=\[{0, 1}, {2, 3, 4}\]`, and specifies that each branch of a tree will either only split on features 0 and 1 or only split on features 2, 3 and 4.
      */
-    interaction_cst?: 'pairwise' | 'no_interaction'
+    interaction_cst?: 'pairwise' | 'no_interactions'
 
     /**
       When set to `true`, reuse the solution of the previous call to fit and add more estimators to the ensemble. For results to be valid, the estimator should be re-trained on the same data only. See [the Glossary](../../glossary.html#term-warm_start).
@@ -372,6 +368,46 @@ pms_HistGradientBoostingClassifier_fit = {k: v for k, v in pms_HistGradientBoost
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This HistGradientBoostingClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'HistGradientBoostingClassifier must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_HistGradientBoostingClassifier_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_HistGradientBoostingClassifier_get_metadata_routing = {k: v for k, v in pms_HistGradientBoostingClassifier_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_HistGradientBoostingClassifier_get_metadata_routing = bridgeHistGradientBoostingClassifier[${this.id}].get_metadata_routing(**pms_HistGradientBoostingClassifier_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_HistGradientBoostingClassifier_get_metadata_routing.tolist() if hasattr(res_HistGradientBoostingClassifier_get_metadata_routing, 'tolist') else res_HistGradientBoostingClassifier_get_metadata_routing`
+  }
+
+  /**
     Predict classes for X.
    */
   async predict(opts: {
@@ -498,6 +534,90 @@ pms_HistGradientBoostingClassifier_score = {k: v for k, v in pms_HistGradientBoo
     // convert the result from python to node.js
     return this
       ._py`res_HistGradientBoostingClassifier_score.tolist() if hasattr(res_HistGradientBoostingClassifier_score, 'tolist') else res_HistGradientBoostingClassifier_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This HistGradientBoostingClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'HistGradientBoostingClassifier must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_HistGradientBoostingClassifier_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_HistGradientBoostingClassifier_set_fit_request = {k: v for k, v in pms_HistGradientBoostingClassifier_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_HistGradientBoostingClassifier_set_fit_request = bridgeHistGradientBoostingClassifier[${this.id}].set_fit_request(**pms_HistGradientBoostingClassifier_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_HistGradientBoostingClassifier_set_fit_request.tolist() if hasattr(res_HistGradientBoostingClassifier_set_fit_request, 'tolist') else res_HistGradientBoostingClassifier_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This HistGradientBoostingClassifier instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'HistGradientBoostingClassifier must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_HistGradientBoostingClassifier_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_HistGradientBoostingClassifier_set_score_request = {k: v for k, v in pms_HistGradientBoostingClassifier_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_HistGradientBoostingClassifier_set_score_request = bridgeHistGradientBoostingClassifier[${this.id}].set_score_request(**pms_HistGradientBoostingClassifier_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_HistGradientBoostingClassifier_set_score_request.tolist() if hasattr(res_HistGradientBoostingClassifier_set_score_request, 'tolist') else res_HistGradientBoostingClassifier_set_score_request`
   }
 
   /**

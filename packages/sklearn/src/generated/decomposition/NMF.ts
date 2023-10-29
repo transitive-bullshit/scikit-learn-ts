@@ -242,12 +242,12 @@ pms_NMF_fit = {k: v for k, v in pms_NMF_fit.items() if v is not None}`
     y?: any
 
     /**
-      If init=’custom’, it is used as initial guess for the solution.
+      If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`.
      */
     W?: ArrayLike[]
 
     /**
-      If init=’custom’, it is used as initial guess for the solution.
+      If `init='custom'`, it is used as initial guess for the solution. If `undefined`, uses the initialisation method specified in `init`.
      */
     H?: ArrayLike[]
   }): Promise<NDArray[]> {
@@ -288,7 +288,7 @@ pms_NMF_fit_transform = {k: v for k, v in pms_NMF_fit_transform.items() if v is 
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.NMF.fit "sklearn.decomposition.NMF.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -317,13 +317,53 @@ pms_NMF_get_feature_names_out = {k: v for k, v in pms_NMF_get_feature_names_out.
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This NMF instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('NMF must call init() before get_metadata_routing()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_NMF_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_NMF_get_metadata_routing = {k: v for k, v in pms_NMF_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_NMF_get_metadata_routing = bridgeNMF[${this.id}].get_metadata_routing(**pms_NMF_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_NMF_get_metadata_routing.tolist() if hasattr(res_NMF_get_metadata_routing, 'tolist') else res_NMF_get_metadata_routing`
+  }
+
+  /**
     Transform data back to its original space.
    */
   async inverse_transform(opts: {
     /**
       Transformed data matrix.
      */
-    W?: NDArray | SparseMatrix[]
+    Xt?: NDArray | SparseMatrix[]
+
+    /**
+      Use `Xt` instead.
+     */
+    W?: any
   }): Promise<NDArray | SparseMatrix[]> {
     if (this._isDisposed) {
       throw new Error('This NMF instance has already been disposed')
@@ -334,9 +374,9 @@ pms_NMF_get_feature_names_out = {k: v for k, v in pms_NMF_get_feature_names_out.
     }
 
     // set up method params
-    await this._py.ex`pms_NMF_inverse_transform = {'W': np.array(${
-      opts['W'] ?? undefined
-    }) if ${opts['W'] !== undefined} else None}
+    await this._py.ex`pms_NMF_inverse_transform = {'Xt': np.array(${
+      opts['Xt'] ?? undefined
+    }) if ${opts['Xt'] !== undefined} else None, 'W': ${opts['W'] ?? undefined}}
 
 pms_NMF_inverse_transform = {k: v for k, v in pms_NMF_inverse_transform.items() if v is not None}`
 

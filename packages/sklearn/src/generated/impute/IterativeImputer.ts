@@ -67,6 +67,11 @@ export class IterativeImputer {
     initial_strategy?: 'mean' | 'median' | 'most_frequent' | 'constant'
 
     /**
+      When `strategy="constant"`, `fill\_value` is used to replace all occurrences of missing\_values. For string or object data types, `fill\_value` must be a string. If `undefined`, `fill\_value` will be 0 when imputing numerical data and “missing\_value” for strings or object data types.
+     */
+    fill_value?: string
+
+    /**
       The order in which the features will be imputed. Possible values:
 
       @defaultValue `'ascending'`
@@ -175,6 +180,8 @@ except NameError: bridgeIterativeImputer = {}
       this.opts['n_nearest_features'] ?? undefined
     }, 'initial_strategy': ${
       this.opts['initial_strategy'] ?? undefined
+    }, 'fill_value': ${
+      this.opts['fill_value'] ?? undefined
     }, 'imputation_order': ${
       this.opts['imputation_order'] ?? undefined
     }, 'skip_complete': ${
@@ -336,6 +343,45 @@ pms_IterativeImputer_get_feature_names_out = {k: v for k, v in pms_IterativeImpu
     // convert the result from python to node.js
     return this
       ._py`res_IterativeImputer_get_feature_names_out.tolist() if hasattr(res_IterativeImputer_get_feature_names_out, 'tolist') else res_IterativeImputer_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This IterativeImputer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'IterativeImputer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_IterativeImputer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_IterativeImputer_get_metadata_routing = {k: v for k, v in pms_IterativeImputer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_IterativeImputer_get_metadata_routing = bridgeIterativeImputer[${this.id}].get_metadata_routing(**pms_IterativeImputer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_IterativeImputer_get_metadata_routing.tolist() if hasattr(res_IterativeImputer_get_metadata_routing, 'tolist') else res_IterativeImputer_get_metadata_routing`
   }
 
   /**

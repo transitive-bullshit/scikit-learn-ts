@@ -92,14 +92,14 @@ export class ExtraTreesRegressor {
     bootstrap?: boolean
 
     /**
-      Whether to use out-of-bag samples to estimate the generalization score. Only available if bootstrap=`true`.
+      Whether to use out-of-bag samples to estimate the generalization score. By default, [`r2\_score`](sklearn.metrics.r2_score.html#sklearn.metrics.r2_score "sklearn.metrics.r2_score") is used. Provide a callable with signature `metric(y\_true, y\_pred)` to use a custom metric. Only available if `bootstrap=True`.
 
       @defaultValue `false`
      */
     oob_score?: boolean
 
     /**
-      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesRegressor.fit "sklearn.ensemble.ExtraTreesRegressor.fit"), [`predict`](#sklearn.ensemble.ExtraTreesRegressor.predict "sklearn.ensemble.ExtraTreesRegressor.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesRegressor.decision_path "sklearn.ensemble.ExtraTreesRegressor.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesRegressor.apply "sklearn.ensemble.ExtraTreesRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to run in parallel. [`fit`](#sklearn.ensemble.ExtraTreesRegressor.fit "sklearn.ensemble.ExtraTreesRegressor.fit"), [`predict`](#sklearn.ensemble.ExtraTreesRegressor.predict "sklearn.ensemble.ExtraTreesRegressor.predict"), [`decision\_path`](#sklearn.ensemble.ExtraTreesRegressor.decision_path "sklearn.ensemble.ExtraTreesRegressor.decision_path") and [`apply`](#sklearn.ensemble.ExtraTreesRegressor.apply "sklearn.ensemble.ExtraTreesRegressor.apply") are all parallelized over the trees. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -353,6 +353,46 @@ pms_ExtraTreesRegressor_fit = {k: v for k, v in pms_ExtraTreesRegressor_fit.item
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This ExtraTreesRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ExtraTreesRegressor must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_ExtraTreesRegressor_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_ExtraTreesRegressor_get_metadata_routing = {k: v for k, v in pms_ExtraTreesRegressor_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ExtraTreesRegressor_get_metadata_routing = bridgeExtraTreesRegressor[${this.id}].get_metadata_routing(**pms_ExtraTreesRegressor_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ExtraTreesRegressor_get_metadata_routing.tolist() if hasattr(res_ExtraTreesRegressor_get_metadata_routing, 'tolist') else res_ExtraTreesRegressor_get_metadata_routing`
+  }
+
+  /**
     Predict regression target for X.
 
     The predicted regression target of an input sample is computed as the mean predicted regression targets of the trees in the forest.
@@ -438,6 +478,90 @@ pms_ExtraTreesRegressor_score = {k: v for k, v in pms_ExtraTreesRegressor_score.
     // convert the result from python to node.js
     return this
       ._py`res_ExtraTreesRegressor_score.tolist() if hasattr(res_ExtraTreesRegressor_score, 'tolist') else res_ExtraTreesRegressor_score`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This ExtraTreesRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ExtraTreesRegressor must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_ExtraTreesRegressor_set_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_ExtraTreesRegressor_set_fit_request = {k: v for k, v in pms_ExtraTreesRegressor_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ExtraTreesRegressor_set_fit_request = bridgeExtraTreesRegressor[${this.id}].set_fit_request(**pms_ExtraTreesRegressor_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ExtraTreesRegressor_set_fit_request.tolist() if hasattr(res_ExtraTreesRegressor_set_fit_request, 'tolist') else res_ExtraTreesRegressor_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This ExtraTreesRegressor instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ExtraTreesRegressor must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_ExtraTreesRegressor_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_ExtraTreesRegressor_set_score_request = {k: v for k, v in pms_ExtraTreesRegressor_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ExtraTreesRegressor_set_score_request = bridgeExtraTreesRegressor[${this.id}].set_score_request(**pms_ExtraTreesRegressor_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ExtraTreesRegressor_set_score_request.tolist() if hasattr(res_ExtraTreesRegressor_set_score_request, 'tolist') else res_ExtraTreesRegressor_set_score_request`
   }
 
   /**

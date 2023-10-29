@@ -355,6 +355,43 @@ pms_SGDOneClassSVM_fit_predict = {k: v for k, v in pms_SGDOneClassSVM_fit_predic
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SGDOneClassSVM instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SGDOneClassSVM must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_SGDOneClassSVM_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_SGDOneClassSVM_get_metadata_routing = {k: v for k, v in pms_SGDOneClassSVM_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SGDOneClassSVM_get_metadata_routing = bridgeSGDOneClassSVM[${this.id}].get_metadata_routing(**pms_SGDOneClassSVM_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SGDOneClassSVM_get_metadata_routing.tolist() if hasattr(res_SGDOneClassSVM_get_metadata_routing, 'tolist') else res_SGDOneClassSVM_get_metadata_routing`
+  }
+
+  /**
     Fit linear One-Class SVM with Stochastic Gradient Descent.
    */
   async partial_fit(opts: {
@@ -463,6 +500,97 @@ pms_SGDOneClassSVM_score_samples = {k: v for k, v in pms_SGDOneClassSVM_score_sa
     // convert the result from python to node.js
     return this
       ._py`res_SGDOneClassSVM_score_samples.tolist() if hasattr(res_SGDOneClassSVM_score_samples, 'tolist') else res_SGDOneClassSVM_score_samples`
+  }
+
+  /**
+    Request metadata passed to the `fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_fit_request(opts: {
+    /**
+      Metadata routing for `coef\_init` parameter in `fit`.
+     */
+    coef_init?: string | boolean
+
+    /**
+      Metadata routing for `offset\_init` parameter in `fit`.
+     */
+    offset_init?: string | boolean
+
+    /**
+      Metadata routing for `sample\_weight` parameter in `fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SGDOneClassSVM instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SGDOneClassSVM must call init() before set_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_SGDOneClassSVM_set_fit_request = {'coef_init': ${
+      opts['coef_init'] ?? undefined
+    }, 'offset_init': ${opts['offset_init'] ?? undefined}, 'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_SGDOneClassSVM_set_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SGDOneClassSVM_set_fit_request = bridgeSGDOneClassSVM[${this.id}].set_fit_request(**pms_SGDOneClassSVM_set_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SGDOneClassSVM_set_fit_request.tolist() if hasattr(res_SGDOneClassSVM_set_fit_request, 'tolist') else res_SGDOneClassSVM_set_fit_request`
+  }
+
+  /**
+    Request metadata passed to the `partial\_fit` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_partial_fit_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `partial\_fit`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This SGDOneClassSVM instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'SGDOneClassSVM must call init() before set_partial_fit_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_SGDOneClassSVM_set_partial_fit_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_SGDOneClassSVM_set_partial_fit_request = {k: v for k, v in pms_SGDOneClassSVM_set_partial_fit_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_SGDOneClassSVM_set_partial_fit_request = bridgeSGDOneClassSVM[${this.id}].set_partial_fit_request(**pms_SGDOneClassSVM_set_partial_fit_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_SGDOneClassSVM_set_partial_fit_request.tolist() if hasattr(res_SGDOneClassSVM_set_partial_fit_request, 'tolist') else res_SGDOneClassSVM_set_partial_fit_request`
   }
 
   /**

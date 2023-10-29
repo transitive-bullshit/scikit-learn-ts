@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Non-linear dimensionality reduction through the use of kernels (see [Pairwise metrics, Affinities and Kernels](../metrics.html#metrics)).
 
-  It uses the [`scipy.linalg.eigh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html#scipy.linalg.eigh "(in SciPy v1.10.1)") LAPACK implementation of the full SVD or the [`scipy.sparse.linalg.eigsh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html#scipy.sparse.linalg.eigsh "(in SciPy v1.10.1)") ARPACK implementation of the truncated SVD, depending on the shape of the input data and the number of components to extract. It can also use a randomized truncated SVD by the method proposed in [\[3\]](#r396fc7d924b8-3), see `eigen\_solver`.
+  It uses the [`scipy.linalg.eigh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html#scipy.linalg.eigh "(in SciPy v1.11.3)") LAPACK implementation of the full SVD or the [`scipy.sparse.linalg.eigsh`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html#scipy.sparse.linalg.eigsh "(in SciPy v1.11.3)") ARPACK implementation of the truncated SVD, depending on the shape of the input data and the number of components to extract. It can also use a randomized truncated SVD by the method proposed in [\[3\]](#r396fc7d924b8-3), see `eigen\_solver`.
 
   Read more in the [User Guide](../decomposition.html#kernel-pca).
 
@@ -121,7 +121,7 @@ export class KernelPCA {
     copy_X?: boolean
 
     /**
-      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of parallel jobs to run. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
   }) {
@@ -301,7 +301,7 @@ pms_KernelPCA_fit_transform = {k: v for k, v in pms_KernelPCA_fit_transform.item
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.KernelPCA.fit "sklearn.decomposition.KernelPCA.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -330,6 +330,43 @@ pms_KernelPCA_get_feature_names_out = {k: v for k, v in pms_KernelPCA_get_featur
     // convert the result from python to node.js
     return this
       ._py`res_KernelPCA_get_feature_names_out.tolist() if hasattr(res_KernelPCA_get_feature_names_out, 'tolist') else res_KernelPCA_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This KernelPCA instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'KernelPCA must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_KernelPCA_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_KernelPCA_get_metadata_routing = {k: v for k, v in pms_KernelPCA_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_KernelPCA_get_metadata_routing = bridgeKernelPCA[${this.id}].get_metadata_routing(**pms_KernelPCA_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_KernelPCA_get_metadata_routing.tolist() if hasattr(res_KernelPCA_get_metadata_routing, 'tolist') else res_KernelPCA_get_metadata_routing`
   }
 
   /**
@@ -603,6 +640,29 @@ pms_KernelPCA_transform = {k: v for k, v in pms_KernelPCA_transform.items() if v
       // convert the result from python to node.js
       return this
         ._py`attr_KernelPCA_feature_names_in_.tolist() if hasattr(attr_KernelPCA_feature_names_in_, 'tolist') else attr_KernelPCA_feature_names_in_`
+    })()
+  }
+
+  /**
+    Kernel coefficient for rbf, poly and sigmoid kernels. When `gamma` is explicitly provided, this is just the same as `gamma`. When `gamma` is `undefined`, this is the actual value of kernel coefficient.
+   */
+  get gamma_(): Promise<number> {
+    if (this._isDisposed) {
+      throw new Error('This KernelPCA instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('KernelPCA must call init() before accessing gamma_')
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_KernelPCA_gamma_ = bridgeKernelPCA[${this.id}].gamma_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_KernelPCA_gamma_.tolist() if hasattr(attr_KernelPCA_gamma_, 'tolist') else attr_KernelPCA_gamma_`
     })()
   }
 }

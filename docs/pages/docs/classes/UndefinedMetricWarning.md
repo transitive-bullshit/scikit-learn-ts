@@ -25,7 +25,7 @@ new UndefinedMetricWarning(opts?: object): UndefinedMetricWarning;
 
 [`UndefinedMetricWarning`](UndefinedMetricWarning.md)
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L21)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L21)
 
 ## Methods
 
@@ -45,7 +45,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L83)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L83)
 
 ### init()
 
@@ -69,7 +69,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L39)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:39](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L39)
 
 ### with\_traceback()
 
@@ -91,7 +91,7 @@ with_traceback(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L100)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L100)
 
 ## Properties
 
@@ -99,31 +99,31 @@ Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:100](https://github
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L19)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L18)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L17)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L14)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L15)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L15)
 
 ## Accessors
 
@@ -139,7 +139,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L26)
+Defined in:  [generated/exceptions/UndefinedMetricWarning.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L26)
 
 #### Signature
 
@@ -157,4 +157,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/exceptions/UndefinedMetricWarning.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/22af0e7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L30)
+Defined in: [generated/exceptions/UndefinedMetricWarning.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/UndefinedMetricWarning.ts#L30)

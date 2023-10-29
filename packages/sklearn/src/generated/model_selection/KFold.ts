@@ -14,6 +14,8 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   Read more in the [User Guide](../cross_validation.html#k-fold).
 
+  For visualisation of cross-validation behaviour and comparison between common scikit-learn split methods refer to [Visualizing cross-validation behavior in scikit-learn](../../auto_examples/model_selection/plot_cv_indices.html#sphx-glr-auto-examples-model-selection-plot-cv-indices-py)
+
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html)
  */
 export class KFold {
@@ -114,6 +116,41 @@ ctor_KFold = {k: v for k, v in ctor_KFold.items() if v is not None}`
     await this._py.ex`del bridgeKFold[${this.id}]`
 
     this._isDisposed = true
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This KFold instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error('KFold must call init() before get_metadata_routing()')
+    }
+
+    // set up method params
+    await this._py.ex`pms_KFold_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_KFold_get_metadata_routing = {k: v for k, v in pms_KFold_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_KFold_get_metadata_routing = bridgeKFold[${this.id}].get_metadata_routing(**pms_KFold_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_KFold_get_metadata_routing.tolist() if hasattr(res_KFold_get_metadata_routing, 'tolist') else res_KFold_get_metadata_routing`
   }
 
   /**

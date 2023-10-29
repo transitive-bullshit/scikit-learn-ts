@@ -111,7 +111,7 @@ export class LatentDirichletAllocation {
     max_doc_update_iter?: number
 
     /**
-      The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      The number of jobs to use in the E-step. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -327,7 +327,7 @@ pms_LatentDirichletAllocation_fit_transform = {k: v for k, v in pms_LatentDirich
    */
   async get_feature_names_out(opts: {
     /**
-      Only used to validate feature names with the names seen in [`fit`](#sklearn.decomposition.LatentDirichletAllocation.fit "sklearn.decomposition.LatentDirichletAllocation.fit").
+      Only used to validate feature names with the names seen in `fit`.
      */
     input_features?: any
   }): Promise<any> {
@@ -358,6 +358,46 @@ pms_LatentDirichletAllocation_get_feature_names_out = {k: v for k, v in pms_Late
     // convert the result from python to node.js
     return this
       ._py`res_LatentDirichletAllocation_get_feature_names_out.tolist() if hasattr(res_LatentDirichletAllocation_get_feature_names_out, 'tolist') else res_LatentDirichletAllocation_get_feature_names_out`
+  }
+
+  /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This LatentDirichletAllocation instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'LatentDirichletAllocation must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_LatentDirichletAllocation_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_LatentDirichletAllocation_get_metadata_routing = {k: v for k, v in pms_LatentDirichletAllocation_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_LatentDirichletAllocation_get_metadata_routing = bridgeLatentDirichletAllocation[${this.id}].get_metadata_routing(**pms_LatentDirichletAllocation_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_LatentDirichletAllocation_get_metadata_routing.tolist() if hasattr(res_LatentDirichletAllocation_get_metadata_routing, 'tolist') else res_LatentDirichletAllocation_get_metadata_routing`
   }
 
   /**

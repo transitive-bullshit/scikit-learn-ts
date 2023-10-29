@@ -10,7 +10,7 @@ import { PythonBridge, NDArray, ArrayLike, SparseMatrix } from '@/sklearn/types'
 
   It is recommended to use [`from\_estimator`](#sklearn.model_selection.LearningCurveDisplay.from_estimator "sklearn.model_selection.LearningCurveDisplay.from_estimator") to create a [`LearningCurveDisplay`](#sklearn.model_selection.LearningCurveDisplay "sklearn.model_selection.LearningCurveDisplay") instance. All parameters are stored as attributes.
 
-  Read more in the [User Guide](../../visualizations.html#visualizations).
+  Read more in the [User Guide](../../visualizations.html#visualizations) for general information about the visualization API and [detailed documentation](../learning_curve.html#learning-curve) regarding the learning curve visualization.
 
   [Python Reference](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LearningCurveDisplay.html)
  */
@@ -39,7 +39,7 @@ export class LearningCurveDisplay {
     test_scores?: NDArray[]
 
     /**
-      The name of the score used in `learning\_curve`. It will be used to decorate the y-axis. If `undefined`, the generic name `"Score"` will be used.
+      The name of the score used in `learning\_curve`. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate\_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `\_` by spaces and capitalize the first letter. We remove `neg\_` and replace it by `"Negative"` if `negate\_score` is `false` or just remove it otherwise.
      */
     score_name?: string
   }) {
@@ -130,6 +130,8 @@ ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() 
 
   /**
     Create a learning curve display from an estimator.
+
+    Read more in the [User Guide](../../visualizations.html#visualizations) for general information about the visualization API and [detailed documentation](../learning_curve.html#learning-curve) regarding the learning curve visualization.
    */
   async from_estimator(opts: {
     /**
@@ -175,7 +177,7 @@ ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() 
     exploit_incremental_learning?: boolean
 
     /**
-      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. Training the estimator and computing the score are parallelized over the different training and test sets. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -228,21 +230,21 @@ ctor_LearningCurveDisplay = {k: v for k, v in ctor_LearningCurveDisplay.items() 
     negate_score?: boolean
 
     /**
-      The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic `"Score"` name will be used.
+      The name of the score used to decorate the y-axis of the plot. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate\_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `\_` by spaces and capitalize the first letter. We remove `neg\_` and replace it by `"Negative"` if `negate\_score` is `false` or just remove it otherwise.
      */
     score_name?: string
 
     /**
       The type of score to plot. Can be one of `"test"`, `"train"`, or `"both"`.
 
-      @defaultValue `'test'`
+      @defaultValue `'both'`
      */
     score_type?: 'test' | 'train' | 'both'
 
     /**
       Whether or not to use a logarithmic scale for the x-axis.
 
-      @defaultValue `false`
+      @defaultValue `'deprecated'`
      */
     log_scale?: boolean
 
@@ -343,21 +345,21 @@ pms_LearningCurveDisplay_from_estimator = {k: v for k, v in pms_LearningCurveDis
     negate_score?: boolean
 
     /**
-      The name of the score used to decorate the y-axis of the plot. If `undefined`, the generic name “Score” will be used.
+      The name of the score used to decorate the y-axis of the plot. It will override the name inferred from the `scoring` parameter. If `score` is `undefined`, we use `"Score"` if `negate\_score` is `false` and `"Negative score"` otherwise. If `scoring` is a string or a callable, we infer the name. We replace `\_` by spaces and capitalize the first letter. We remove `neg\_` and replace it by `"Negative"` if `negate\_score` is `false` or just remove it otherwise.
      */
     score_name?: string
 
     /**
       The type of score to plot. Can be one of `"test"`, `"train"`, or `"both"`.
 
-      @defaultValue `'test'`
+      @defaultValue `'both'`
      */
     score_type?: 'test' | 'train' | 'both'
 
     /**
       Whether or not to use a logarithmic scale for the x-axis.
 
-      @defaultValue `false`
+      @defaultValue `'deprecated'`
      */
     log_scale?: boolean
 

@@ -149,6 +149,43 @@ pms_NearestCentroid_fit = {k: v for k, v in pms_NearestCentroid_fit.items() if v
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This NearestCentroid instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'NearestCentroid must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py.ex`pms_NearestCentroid_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_NearestCentroid_get_metadata_routing = {k: v for k, v in pms_NearestCentroid_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_NearestCentroid_get_metadata_routing = bridgeNearestCentroid[${this.id}].get_metadata_routing(**pms_NearestCentroid_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_NearestCentroid_get_metadata_routing.tolist() if hasattr(res_NearestCentroid_get_metadata_routing, 'tolist') else res_NearestCentroid_get_metadata_routing`
+  }
+
+  /**
     Perform classification on an array of test vectors `X`.
 
     The predicted class `C` for each sample in `X` is returned.
@@ -230,6 +267,46 @@ pms_NearestCentroid_score = {k: v for k, v in pms_NearestCentroid_score.items() 
     // convert the result from python to node.js
     return this
       ._py`res_NearestCentroid_score.tolist() if hasattr(res_NearestCentroid_score, 'tolist') else res_NearestCentroid_score`
+  }
+
+  /**
+    Request metadata passed to the `score` method.
+
+    Note that this method is only relevant if `enable\_metadata\_routing=True` (see [`sklearn.set\_config`](sklearn.set_config.html#sklearn.set_config "sklearn.set_config")). Please see [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+
+    The options for each parameter are:
+   */
+  async set_score_request(opts: {
+    /**
+      Metadata routing for `sample\_weight` parameter in `score`.
+     */
+    sample_weight?: string | boolean
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error('This NearestCentroid instance has already been disposed')
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'NearestCentroid must call init() before set_score_request()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_NearestCentroid_set_score_request = {'sample_weight': ${
+      opts['sample_weight'] ?? undefined
+    }}
+
+pms_NearestCentroid_set_score_request = {k: v for k, v in pms_NearestCentroid_set_score_request.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_NearestCentroid_set_score_request = bridgeNearestCentroid[${this.id}].set_score_request(**pms_NearestCentroid_set_score_request)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_NearestCentroid_set_score_request.tolist() if hasattr(res_NearestCentroid_set_score_request, 'tolist') else res_NearestCentroid_set_score_request`
   }
 
   /**

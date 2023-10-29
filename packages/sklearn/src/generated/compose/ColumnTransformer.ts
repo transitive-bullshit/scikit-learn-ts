@@ -43,7 +43,7 @@ export class ColumnTransformer {
     sparse_threshold?: number
 
     /**
-      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/parallel.html#joblib.parallel_backend "(in joblib v1.3.0.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
+      Number of jobs to run in parallel. `undefined` means 1 unless in a [`joblib.parallel\_backend`](https://joblib.readthedocs.io/en/latest/generated/joblib.parallel_backend.html#joblib.parallel_backend "(in joblib v1.4.dev0)") context. `\-1` means using all processors. See [Glossary](../../glossary.html#term-n_jobs) for more details.
      */
     n_jobs?: number
 
@@ -60,7 +60,7 @@ export class ColumnTransformer {
     verbose?: boolean
 
     /**
-      If `true`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
+      If `true`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will prefix all feature names with the name of the transformer that generated that feature. If `false`, [`ColumnTransformer.get\_feature\_names\_out`](#sklearn.compose.ColumnTransformer.get_feature_names_out "sklearn.compose.ColumnTransformer.get_feature_names_out") will not prefix any feature names and will error if feature names are not unique.
 
       @defaultValue `true`
      */
@@ -274,6 +274,46 @@ pms_ColumnTransformer_get_feature_names_out = {k: v for k, v in pms_ColumnTransf
   }
 
   /**
+    Get metadata routing of this object.
+
+    Please check [User Guide](../../metadata_routing.html#metadata-routing) on how the routing mechanism works.
+   */
+  async get_metadata_routing(opts: {
+    /**
+      A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklearn.utils.metadata_routing.MetadataRequest "sklearn.utils.metadata_routing.MetadataRequest") encapsulating routing information.
+     */
+    routing?: any
+  }): Promise<any> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This ColumnTransformer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ColumnTransformer must call init() before get_metadata_routing()'
+      )
+    }
+
+    // set up method params
+    await this._py
+      .ex`pms_ColumnTransformer_get_metadata_routing = {'routing': ${
+      opts['routing'] ?? undefined
+    }}
+
+pms_ColumnTransformer_get_metadata_routing = {k: v for k, v in pms_ColumnTransformer_get_metadata_routing.items() if v is not None}`
+
+    // invoke method
+    await this._py
+      .ex`res_ColumnTransformer_get_metadata_routing = bridgeColumnTransformer[${this.id}].get_metadata_routing(**pms_ColumnTransformer_get_metadata_routing)`
+
+    // convert the result from python to node.js
+    return this
+      ._py`res_ColumnTransformer_get_metadata_routing.tolist() if hasattr(res_ColumnTransformer_get_metadata_routing, 'tolist') else res_ColumnTransformer_get_metadata_routing`
+  }
+
+  /**
     Set the output container when `"transform"` and `"fit\_transform"` are called.
 
     Calling `set\_output` will set the output of all estimators in `transformers` and `transformers\_`.
@@ -450,6 +490,33 @@ pms_ColumnTransformer_transform = {k: v for k, v in pms_ColumnTransformer_transf
       // convert the result from python to node.js
       return this
         ._py`attr_ColumnTransformer_n_features_in_.tolist() if hasattr(attr_ColumnTransformer_n_features_in_, 'tolist') else attr_ColumnTransformer_n_features_in_`
+    })()
+  }
+
+  /**
+    Names of features seen during [fit](../../glossary.html#term-fit). Defined only when `X` has feature names that are all strings.
+   */
+  get feature_names_in_(): Promise<NDArray> {
+    if (this._isDisposed) {
+      throw new Error(
+        'This ColumnTransformer instance has already been disposed'
+      )
+    }
+
+    if (!this._isInitialized) {
+      throw new Error(
+        'ColumnTransformer must call init() before accessing feature_names_in_'
+      )
+    }
+
+    return (async () => {
+      // invoke accessor
+      await this._py
+        .ex`attr_ColumnTransformer_feature_names_in_ = bridgeColumnTransformer[${this.id}].feature_names_in_`
+
+      // convert the result from python to node.js
+      return this
+        ._py`attr_ColumnTransformer_feature_names_in_.tolist() if hasattr(attr_ColumnTransformer_feature_names_in_, 'tolist') else attr_ColumnTransformer_feature_names_in_`
     })()
   }
 }
