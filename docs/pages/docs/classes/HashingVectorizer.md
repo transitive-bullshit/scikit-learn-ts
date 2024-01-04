@@ -46,7 +46,7 @@ new HashingVectorizer(opts?: object): HashingVectorizer;
 
 [`HashingVectorizer`](HashingVectorizer.md)
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L27)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L27)
 
 ## Methods
 
@@ -72,7 +72,7 @@ build_analyzer(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L226)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L226)
 
 ### build\_preprocessor()
 
@@ -94,7 +94,7 @@ build_preprocessor(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L256)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L256)
 
 ### build\_tokenizer()
 
@@ -116,7 +116,7 @@ build_tokenizer(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L286)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L286)
 
 ### decode()
 
@@ -141,7 +141,7 @@ decode(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L318)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L318)
 
 ### dispose()
 
@@ -159,7 +159,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L207)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L207)
 
 ### fit()
 
@@ -185,7 +185,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L355)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L355)
 
 ### fit\_transform()
 
@@ -209,7 +209,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L395)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L395)
 
 ### get\_metadata\_routing()
 
@@ -234,7 +234,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L439)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L439)
 
 ### get\_stop\_words()
 
@@ -256,7 +256,7 @@ get_stop_words(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L477)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L477)
 
 ### init()
 
@@ -280,7 +280,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L149)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L149)
 
 ### partial\_fit()
 
@@ -306,7 +306,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L509)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L509)
 
 ### set\_output()
 
@@ -331,7 +331,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L551)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L551)
 
 ### transform()
 
@@ -354,7 +354,7 @@ transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L586)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L586)
 
 ## Properties
 
@@ -362,31 +362,31 @@ Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:586](https
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L25)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L24)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L23)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L20)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L21)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L21)
 
 ## Accessors
 
@@ -402,7 +402,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L136)
+Defined in:  [generated/feature\_extraction/text/HashingVectorizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L136)
 
 #### Signature
 
@@ -420,4 +420,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_extraction/text/HashingVectorizer.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L140)
+Defined in: [generated/feature\_extraction/text/HashingVectorizer.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L140)

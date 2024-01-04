@@ -34,7 +34,7 @@ new SimpleImputer(opts?: object): SimpleImputer;
 
 [`SimpleImputer`](SimpleImputer.md)
 
-Defined in:  [generated/impute/SimpleImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L25)
+Defined in:  [generated/impute/SimpleImputer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L25)
 
 ## Methods
 
@@ -54,7 +54,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L125)
+Defined in:  [generated/impute/SimpleImputer.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L125)
 
 ### fit()
 
@@ -78,7 +78,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L142)
+Defined in:  [generated/impute/SimpleImputer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L142)
 
 ### fit\_transform()
 
@@ -105,7 +105,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L182)
+Defined in:  [generated/impute/SimpleImputer.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L182)
 
 ### get\_feature\_names\_out()
 
@@ -128,7 +128,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L229)
+Defined in:  [generated/impute/SimpleImputer.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L229)
 
 ### get\_metadata\_routing()
 
@@ -153,7 +153,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L267)
+Defined in:  [generated/impute/SimpleImputer.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L267)
 
 ### init()
 
@@ -177,7 +177,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L81)
+Defined in:  [generated/impute/SimpleImputer.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L81)
 
 ### inverse\_transform()
 
@@ -204,7 +204,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L306)
+Defined in:  [generated/impute/SimpleImputer.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L306)
 
 ### set\_output()
 
@@ -229,7 +229,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L343)
+Defined in:  [generated/impute/SimpleImputer.ts:343](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L343)
 
 ### transform()
 
@@ -252,7 +252,7 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L376)
+Defined in:  [generated/impute/SimpleImputer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L376)
 
 ## Properties
 
@@ -260,31 +260,31 @@ Defined in:  [generated/impute/SimpleImputer.ts:376](https://github.com/transiti
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/SimpleImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L23)
+Defined in:  [generated/impute/SimpleImputer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/impute/SimpleImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L22)
+Defined in:  [generated/impute/SimpleImputer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/impute/SimpleImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L21)
+Defined in:  [generated/impute/SimpleImputer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/impute/SimpleImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L18)
+Defined in:  [generated/impute/SimpleImputer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/impute/SimpleImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L19)
+Defined in:  [generated/impute/SimpleImputer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L19)
 
 ## Accessors
 
@@ -302,9 +302,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L484)
+Defined in:  [generated/impute/SimpleImputer.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L484)
 
-Defined in:  [generated/impute/SimpleImputer.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L484)
+Defined in:  [generated/impute/SimpleImputer.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L484)
 
 ### indicator\_
 
@@ -320,9 +320,9 @@ indicator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L434)
+Defined in:  [generated/impute/SimpleImputer.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L434)
 
-Defined in:  [generated/impute/SimpleImputer.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L434)
+Defined in:  [generated/impute/SimpleImputer.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L434)
 
 ### n\_features\_in\_
 
@@ -338,9 +338,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L459)
+Defined in:  [generated/impute/SimpleImputer.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L459)
 
-Defined in:  [generated/impute/SimpleImputer.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L459)
+Defined in:  [generated/impute/SimpleImputer.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L459)
 
 ### py
 
@@ -354,7 +354,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/impute/SimpleImputer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L68)
+Defined in:  [generated/impute/SimpleImputer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L68)
 
 #### Signature
 
@@ -372,9 +372,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/impute/SimpleImputer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L72)
+Defined in:  [generated/impute/SimpleImputer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L72)
 
-Defined in:  [generated/impute/SimpleImputer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L68) [generated/impute/SimpleImputer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L72)
+Defined in:  [generated/impute/SimpleImputer.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L68) [generated/impute/SimpleImputer.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L72)
 
 ### statistics\_
 
@@ -390,6 +390,6 @@ statistics_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/impute/SimpleImputer.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L409)
+Defined in:  [generated/impute/SimpleImputer.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L409)
 
-Defined in:  [generated/impute/SimpleImputer.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/impute/SimpleImputer.ts#L409)
+Defined in:  [generated/impute/SimpleImputer.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/impute/SimpleImputer.ts#L409)

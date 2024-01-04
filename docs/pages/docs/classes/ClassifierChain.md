@@ -35,7 +35,7 @@ new ClassifierChain(opts?: object): ClassifierChain;
 
 [`ClassifierChain`](ClassifierChain.md)
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L27)
+Defined in:  [generated/multioutput/ClassifierChain.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L27)
 
 ## Methods
 
@@ -60,7 +60,7 @@ decision_function(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L133)
+Defined in:  [generated/multioutput/ClassifierChain.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L133)
 
 ### dispose()
 
@@ -78,7 +78,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L116)
+Defined in:  [generated/multioutput/ClassifierChain.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L116)
 
 ### fit()
 
@@ -103,7 +103,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L168)
+Defined in:  [generated/multioutput/ClassifierChain.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L168)
 
 ### get\_metadata\_routing()
 
@@ -128,7 +128,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L219)
+Defined in:  [generated/multioutput/ClassifierChain.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L219)
 
 ### init()
 
@@ -152,7 +152,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L72)
+Defined in:  [generated/multioutput/ClassifierChain.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L72)
 
 ### predict()
 
@@ -175,7 +175,7 @@ predict(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L254)
+Defined in:  [generated/multioutput/ClassifierChain.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L254)
 
 ### predict\_proba()
 
@@ -198,7 +198,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L287)
+Defined in:  [generated/multioutput/ClassifierChain.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L287)
 
 ### score()
 
@@ -225,7 +225,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L322)
+Defined in:  [generated/multioutput/ClassifierChain.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L322)
 
 ### set\_score\_request()
 
@@ -252,7 +252,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L373)
+Defined in:  [generated/multioutput/ClassifierChain.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L373)
 
 ## Properties
 
@@ -260,31 +260,31 @@ Defined in:  [generated/multioutput/ClassifierChain.ts:373](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L25)
+Defined in:  [generated/multioutput/ClassifierChain.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L24)
+Defined in:  [generated/multioutput/ClassifierChain.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L23)
+Defined in:  [generated/multioutput/ClassifierChain.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L20)
+Defined in:  [generated/multioutput/ClassifierChain.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L21)
+Defined in:  [generated/multioutput/ClassifierChain.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L21)
 
 ## Accessors
 
@@ -302,7 +302,7 @@ classes_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/multioutput/ClassifierChain.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L409)
+Defined in: [generated/multioutput/ClassifierChain.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L409)
 
 ### estimators\_
 
@@ -318,7 +318,7 @@ estimators_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/multioutput/ClassifierChain.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L434)
+Defined in: [generated/multioutput/ClassifierChain.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L434)
 
 ### feature\_names\_in\_
 
@@ -334,7 +334,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/multioutput/ClassifierChain.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L509)
+Defined in: [generated/multioutput/ClassifierChain.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L509)
 
 ### n\_features\_in\_
 
@@ -350,7 +350,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/multioutput/ClassifierChain.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L484)
+Defined in: [generated/multioutput/ClassifierChain.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L484)
 
 ### order\_
 
@@ -366,7 +366,7 @@ order_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/multioutput/ClassifierChain.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L459)
+Defined in: [generated/multioutput/ClassifierChain.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L459)
 
 ### py
 
@@ -380,7 +380,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/multioutput/ClassifierChain.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L59)
+Defined in:  [generated/multioutput/ClassifierChain.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L59)
 
 #### Signature
 
@@ -398,4 +398,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/multioutput/ClassifierChain.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L63)
+Defined in: [generated/multioutput/ClassifierChain.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/multioutput/ClassifierChain.ts#L63)

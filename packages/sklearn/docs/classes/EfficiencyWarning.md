@@ -27,7 +27,7 @@ new EfficiencyWarning(opts?: object): EfficiencyWarning;
 
 [`EfficiencyWarning`](EfficiencyWarning.md)
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L23)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L23)
 
 ## Methods
 
@@ -47,7 +47,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L83)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L83)
 
 ### init()
 
@@ -71,7 +71,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L41)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L41)
 
 ### with\_traceback()
 
@@ -93,7 +93,7 @@ with_traceback(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L100)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L100)
 
 ## Properties
 
@@ -101,31 +101,31 @@ Defined in:  [generated/exceptions/EfficiencyWarning.ts:100](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L21)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L20)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L19)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L16)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L17)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L17)
 
 ## Accessors
 
@@ -141,7 +141,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L28)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L28)
 
 #### Signature
 
@@ -159,6 +159,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L32)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L32)
 
-Defined in:  [generated/exceptions/EfficiencyWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L28) [generated/exceptions/EfficiencyWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L32)
+Defined in:  [generated/exceptions/EfficiencyWarning.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L28) [generated/exceptions/EfficiencyWarning.ts:32](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/EfficiencyWarning.ts#L32)

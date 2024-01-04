@@ -36,7 +36,7 @@ new BisectingKMeans(opts?: object): BisectingKMeans;
 
 [`BisectingKMeans`](BisectingKMeans.md)
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L23)
+Defined in:  [generated/cluster/BisectingKMeans.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L23)
 
 ## Methods
 
@@ -56,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L163)
+Defined in:  [generated/cluster/BisectingKMeans.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L163)
 
 ### fit()
 
@@ -81,7 +81,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L180)
+Defined in:  [generated/cluster/BisectingKMeans.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L180)
 
 ### fit\_predict()
 
@@ -108,7 +108,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L229)
+Defined in:  [generated/cluster/BisectingKMeans.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L229)
 
 ### fit\_transform()
 
@@ -135,7 +135,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L278)
+Defined in:  [generated/cluster/BisectingKMeans.ts:278](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L278)
 
 ### get\_feature\_names\_out()
 
@@ -160,7 +160,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L327)
+Defined in:  [generated/cluster/BisectingKMeans.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L327)
 
 ### get\_metadata\_routing()
 
@@ -185,7 +185,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L365)
+Defined in:  [generated/cluster/BisectingKMeans.ts:365](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L365)
 
 ### init()
 
@@ -209,7 +209,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L115)
+Defined in:  [generated/cluster/BisectingKMeans.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L115)
 
 ### predict()
 
@@ -236,7 +236,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L404)
+Defined in:  [generated/cluster/BisectingKMeans.ts:404](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L404)
 
 ### score()
 
@@ -261,7 +261,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L437)
+Defined in:  [generated/cluster/BisectingKMeans.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L437)
 
 ### set\_fit\_request()
 
@@ -288,7 +288,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L488)
+Defined in:  [generated/cluster/BisectingKMeans.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L488)
 
 ### set\_output()
 
@@ -313,7 +313,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L525)
+Defined in:  [generated/cluster/BisectingKMeans.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L525)
 
 ### set\_predict\_request()
 
@@ -340,7 +340,7 @@ set_predict_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L562)
+Defined in:  [generated/cluster/BisectingKMeans.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L562)
 
 ### set\_score\_request()
 
@@ -367,7 +367,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L602)
+Defined in:  [generated/cluster/BisectingKMeans.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L602)
 
 ### transform()
 
@@ -392,7 +392,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L640)
+Defined in:  [generated/cluster/BisectingKMeans.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L640)
 
 ## Properties
 
@@ -400,31 +400,31 @@ Defined in:  [generated/cluster/BisectingKMeans.ts:640](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L21)
+Defined in:  [generated/cluster/BisectingKMeans.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L20)
+Defined in:  [generated/cluster/BisectingKMeans.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L19)
+Defined in:  [generated/cluster/BisectingKMeans.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L16)
+Defined in:  [generated/cluster/BisectingKMeans.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L17)
+Defined in:  [generated/cluster/BisectingKMeans.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L17)
 
 ## Accessors
 
@@ -442,7 +442,7 @@ cluster_centers_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/cluster/BisectingKMeans.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L673)
+Defined in: [generated/cluster/BisectingKMeans.ts:673](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L673)
 
 ### feature\_names\_in\_
 
@@ -458,7 +458,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/BisectingKMeans.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L773)
+Defined in: [generated/cluster/BisectingKMeans.ts:773](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L773)
 
 ### inertia\_
 
@@ -474,7 +474,7 @@ inertia_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/BisectingKMeans.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L723)
+Defined in: [generated/cluster/BisectingKMeans.ts:723](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L723)
 
 ### labels\_
 
@@ -490,7 +490,7 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/BisectingKMeans.ts:698](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L698)
+Defined in: [generated/cluster/BisectingKMeans.ts:698](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L698)
 
 ### n\_features\_in\_
 
@@ -506,7 +506,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/BisectingKMeans.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L748)
+Defined in: [generated/cluster/BisectingKMeans.ts:748](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L748)
 
 ### py
 
@@ -520,7 +520,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/BisectingKMeans.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L102)
+Defined in:  [generated/cluster/BisectingKMeans.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L102)
 
 #### Signature
 
@@ -538,4 +538,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/cluster/BisectingKMeans.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L106)
+Defined in: [generated/cluster/BisectingKMeans.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/BisectingKMeans.ts#L106)

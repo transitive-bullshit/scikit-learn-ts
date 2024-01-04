@@ -42,7 +42,7 @@ new RandomTreesEmbedding(opts?: object): RandomTreesEmbedding;
 
 [`RandomTreesEmbedding`](RandomTreesEmbedding.md)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L27)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L27)
 
 ## Methods
 
@@ -67,7 +67,7 @@ apply(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L202)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L202)
 
 ### decision\_path()
 
@@ -90,7 +90,7 @@ decision_path(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L237)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L237)
 
 ### dispose()
 
@@ -108,7 +108,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L185)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L185)
 
 ### fit()
 
@@ -133,7 +133,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L274)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L274)
 
 ### fit\_transform()
 
@@ -158,7 +158,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L323)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L323)
 
 ### get\_feature\_names\_out()
 
@@ -181,7 +181,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L374)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L374)
 
 ### get\_metadata\_routing()
 
@@ -206,7 +206,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L414)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L414)
 
 ### init()
 
@@ -230,7 +230,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L125)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L125)
 
 ### set\_fit\_request()
 
@@ -257,7 +257,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L456)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L456)
 
 ### set\_output()
 
@@ -282,7 +282,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L496)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L496)
 
 ### transform()
 
@@ -305,7 +305,7 @@ transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L533)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L533)
 
 ## Properties
 
@@ -313,31 +313,31 @@ Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:533](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L25)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L24)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L23)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L20)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L21)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L21)
 
 ## Accessors
 
@@ -355,9 +355,9 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L570)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L570)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L570)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L570)
 
 ### estimators\_
 
@@ -373,9 +373,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L597)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L597)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L597)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L597)
 
 ### feature\_names\_in\_
 
@@ -391,9 +391,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L651)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L651)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L651)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L651)
 
 ### n\_features\_in\_
 
@@ -409,9 +409,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L624)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L624)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L624)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L624)
 
 ### n\_outputs\_
 
@@ -427,9 +427,9 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L678)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L678)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L678)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L678)
 
 ### one\_hot\_encoder\_
 
@@ -445,9 +445,9 @@ one_hot_encoder_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L705)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L705)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L705)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L705)
 
 ### py
 
@@ -461,7 +461,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L112)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L112)
 
 #### Signature
 
@@ -479,6 +479,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L116)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L116)
 
-Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L112) [generated/ensemble/RandomTreesEmbedding.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L116)
+Defined in:  [generated/ensemble/RandomTreesEmbedding.ts:112](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L112) [generated/ensemble/RandomTreesEmbedding.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomTreesEmbedding.ts#L116)

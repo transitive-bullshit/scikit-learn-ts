@@ -38,7 +38,7 @@ new IncrementalPCA(opts?: object): IncrementalPCA;
 
 [`IncrementalPCA`](IncrementalPCA.md)
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L31)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L31)
 
 ## Methods
 
@@ -58,7 +58,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L117)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L117)
 
 ### fit()
 
@@ -82,7 +82,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L134)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L134)
 
 ### fit\_transform()
 
@@ -109,7 +109,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L174)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L174)
 
 ### get\_covariance()
 
@@ -134,7 +134,7 @@ get_covariance(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L223)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:223](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L223)
 
 ### get\_feature\_names\_out()
 
@@ -159,7 +159,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L258)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L258)
 
 ### get\_metadata\_routing()
 
@@ -184,7 +184,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L296)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L296)
 
 ### get\_precision()
 
@@ -209,7 +209,7 @@ get_precision(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L333)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:333](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L333)
 
 ### init()
 
@@ -233,7 +233,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L75)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L75)
 
 ### inverse\_transform()
 
@@ -258,7 +258,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L368)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L368)
 
 ### partial\_fit()
 
@@ -283,7 +283,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L403)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L403)
 
 ### set\_output()
 
@@ -308,7 +308,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L452)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L452)
 
 ### set\_partial\_fit\_request()
 
@@ -335,7 +335,7 @@ set_partial_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L489)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L489)
 
 ### transform()
 
@@ -360,7 +360,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L527)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L527)
 
 ## Properties
 
@@ -368,31 +368,31 @@ Defined in:  [generated/decomposition/IncrementalPCA.ts:527](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L29)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L29)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L28)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L28)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L27)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L27)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L24)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L24)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L25)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L25)
 
 ## Accessors
 
@@ -410,7 +410,7 @@ batch_size_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L781)
+Defined in: [generated/decomposition/IncrementalPCA.ts:781](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L781)
 
 ### components\_
 
@@ -426,7 +426,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L560)
+Defined in: [generated/decomposition/IncrementalPCA.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L560)
 
 ### explained\_variance\_
 
@@ -442,7 +442,7 @@ explained_variance_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L585)
+Defined in: [generated/decomposition/IncrementalPCA.ts:585](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L585)
 
 ### explained\_variance\_ratio\_
 
@@ -458,7 +458,7 @@ explained_variance_ratio_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L610)
+Defined in: [generated/decomposition/IncrementalPCA.ts:610](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L610)
 
 ### feature\_names\_in\_
 
@@ -474,7 +474,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:831](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L831)
+Defined in: [generated/decomposition/IncrementalPCA.ts:831](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L831)
 
 ### mean\_
 
@@ -490,7 +490,7 @@ mean_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L660)
+Defined in: [generated/decomposition/IncrementalPCA.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L660)
 
 ### n\_components\_
 
@@ -506,7 +506,7 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L731)
+Defined in: [generated/decomposition/IncrementalPCA.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L731)
 
 ### n\_features\_in\_
 
@@ -522,7 +522,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:806](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L806)
+Defined in: [generated/decomposition/IncrementalPCA.ts:806](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L806)
 
 ### n\_samples\_seen\_
 
@@ -538,7 +538,7 @@ n_samples_seen_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L756)
+Defined in: [generated/decomposition/IncrementalPCA.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L756)
 
 ### noise\_variance\_
 
@@ -554,7 +554,7 @@ noise_variance_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L706)
+Defined in: [generated/decomposition/IncrementalPCA.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L706)
 
 ### py
 
@@ -568,7 +568,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/IncrementalPCA.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L62)
+Defined in:  [generated/decomposition/IncrementalPCA.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L62)
 
 #### Signature
 
@@ -586,7 +586,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L66)
+Defined in: [generated/decomposition/IncrementalPCA.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L66)
 
 ### singular\_values\_
 
@@ -602,7 +602,7 @@ singular_values_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L635)
+Defined in: [generated/decomposition/IncrementalPCA.ts:635](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L635)
 
 ### var\_
 
@@ -618,4 +618,4 @@ var_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/IncrementalPCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L683)
+Defined in: [generated/decomposition/IncrementalPCA.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L683)

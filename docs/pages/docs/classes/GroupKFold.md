@@ -33,7 +33,7 @@ new GroupKFold(opts?: object): GroupKFold;
 
 [`GroupKFold`](GroupKFold.md)
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L29)
+Defined in:  [generated/model\_selection/GroupKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L29)
 
 ## Methods
 
@@ -53,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L94)
+Defined in:  [generated/model\_selection/GroupKFold.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L94)
 
 ### get\_metadata\_routing()
 
@@ -78,7 +78,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L113)
+Defined in:  [generated/model\_selection/GroupKFold.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L113)
 
 ### get\_n\_splits()
 
@@ -103,7 +103,7 @@ get_n_splits(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L148)
+Defined in:  [generated/model\_selection/GroupKFold.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L148)
 
 ### init()
 
@@ -127,7 +127,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L54)
+Defined in:  [generated/model\_selection/GroupKFold.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L54)
 
 ### set\_split\_request()
 
@@ -154,7 +154,7 @@ set_split_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L195)
+Defined in:  [generated/model\_selection/GroupKFold.ts:195](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L195)
 
 ### split()
 
@@ -179,7 +179,7 @@ split(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L228)
+Defined in:  [generated/model\_selection/GroupKFold.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L228)
 
 ## Properties
 
@@ -187,31 +187,31 @@ Defined in:  [generated/model\_selection/GroupKFold.ts:228](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L27)
+Defined in:  [generated/model\_selection/GroupKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L26)
+Defined in:  [generated/model\_selection/GroupKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L25)
+Defined in:  [generated/model\_selection/GroupKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L22)
+Defined in:  [generated/model\_selection/GroupKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L23)
+Defined in:  [generated/model\_selection/GroupKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L23)
 
 ## Accessors
 
@@ -227,7 +227,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/GroupKFold.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L41)
+Defined in:  [generated/model\_selection/GroupKFold.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L41)
 
 #### Signature
 
@@ -245,4 +245,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/GroupKFold.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L45)
+Defined in: [generated/model\_selection/GroupKFold.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/GroupKFold.ts#L45)

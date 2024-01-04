@@ -34,7 +34,7 @@ new AdditiveChi2Sampler(opts?: object): AdditiveChi2Sampler;
 
 [`AdditiveChi2Sampler`](AdditiveChi2Sampler.md)
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L29)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L29)
 
 ## Methods
 
@@ -54,7 +54,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L103)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L103)
 
 ### fit()
 
@@ -80,7 +80,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L122)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L122)
 
 ### fit\_transform()
 
@@ -107,7 +107,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L164)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L164)
 
 ### get\_feature\_names\_out()
 
@@ -130,7 +130,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L215)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L215)
 
 ### get\_metadata\_routing()
 
@@ -155,7 +155,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L255)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L255)
 
 ### init()
 
@@ -179,7 +179,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L59)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L59)
 
 ### set\_output()
 
@@ -204,7 +204,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L295)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:295](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L295)
 
 ### transform()
 
@@ -227,7 +227,7 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L332)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L332)
 
 ## Properties
 
@@ -235,31 +235,31 @@ Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:332](https:
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L27)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L26)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L25)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L22)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L23)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L23)
 
 ## Accessors
 
@@ -277,9 +277,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L421)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L421)
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L421)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L421)
 
 ### n\_features\_in\_
 
@@ -295,9 +295,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L394)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L394)
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L394)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L394)
 
 ### py
 
@@ -311,7 +311,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L46)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L46)
 
 #### Signature
 
@@ -329,9 +329,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L50)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L50)
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L46) [generated/kernel\_approximation/AdditiveChi2Sampler.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L50)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:46](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L46) [generated/kernel\_approximation/AdditiveChi2Sampler.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L50)
 
 ### sample\_interval\_
 
@@ -347,6 +347,6 @@ sample_interval_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L367)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L367)
 
-Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L367)
+Defined in:  [generated/kernel\_approximation/AdditiveChi2Sampler.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/kernel_approximation/AdditiveChi2Sampler.ts#L367)

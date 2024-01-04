@@ -33,7 +33,7 @@ new BernoulliNB(opts?: object): BernoulliNB;
 
 [`BernoulliNB`](BernoulliNB.md)
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L25)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L25)
 
 ## Methods
 
@@ -53,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L122)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L122)
 
 ### fit()
 
@@ -78,7 +78,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L139)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L139)
 
 ### get\_metadata\_routing()
 
@@ -103,7 +103,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L188)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L188)
 
 ### init()
 
@@ -127,7 +127,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L76)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L76)
 
 ### partial\_fit()
 
@@ -159,7 +159,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L229)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L229)
 
 ### predict()
 
@@ -182,7 +182,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L287)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L287)
 
 ### predict\_joint\_log\_proba()
 
@@ -207,7 +207,7 @@ predict_joint_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L322)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L322)
 
 ### predict\_log\_proba()
 
@@ -230,7 +230,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L358)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L358)
 
 ### predict\_proba()
 
@@ -253,7 +253,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L391)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:391](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L391)
 
 ### score()
 
@@ -280,7 +280,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L426)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L426)
 
 ### set\_fit\_request()
 
@@ -307,7 +307,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L477)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L477)
 
 ### set\_partial\_fit\_request()
 
@@ -335,7 +335,7 @@ set_partial_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L514)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L514)
 
 ### set\_score\_request()
 
@@ -362,7 +362,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L558)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L558)
 
 ## Properties
 
@@ -370,31 +370,31 @@ Defined in:  [generated/naive\_bayes/BernoulliNB.ts:558](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L23)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L22)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L21)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L18)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L19)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L19)
 
 ## Accessors
 
@@ -412,7 +412,7 @@ class_count_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L591)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:591](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L591)
 
 ### class\_log\_prior\_
 
@@ -428,7 +428,7 @@ class_log_prior_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L616)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L616)
 
 ### classes\_
 
@@ -444,7 +444,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L641)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:641](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L641)
 
 ### feature\_count\_
 
@@ -460,7 +460,7 @@ feature_count_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L664)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L664)
 
 ### feature\_log\_prob\_
 
@@ -476,7 +476,7 @@ feature_log_prob_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L689)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:689](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L689)
 
 ### feature\_names\_in\_
 
@@ -492,7 +492,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L739)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L739)
 
 ### n\_features\_in\_
 
@@ -508,7 +508,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L714)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:714](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L714)
 
 ### py
 
@@ -522,7 +522,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/BernoulliNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L63)
+Defined in:  [generated/naive\_bayes/BernoulliNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L63)
 
 #### Signature
 
@@ -540,4 +540,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/naive\_bayes/BernoulliNB.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L67)
+Defined in: [generated/naive\_bayes/BernoulliNB.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/BernoulliNB.ts#L67)

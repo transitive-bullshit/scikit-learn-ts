@@ -34,7 +34,7 @@ new Binarizer(opts?: object): Binarizer;
 
 [`Binarizer`](Binarizer.md)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L29)
+Defined in:  [generated/preprocessing/Binarizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L29)
 
 ## Methods
 
@@ -54,7 +54,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L100)
+Defined in:  [generated/preprocessing/Binarizer.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L100)
 
 ### fit()
 
@@ -80,7 +80,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L119)
+Defined in:  [generated/preprocessing/Binarizer.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L119)
 
 ### fit\_transform()
 
@@ -107,7 +107,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L159)
+Defined in:  [generated/preprocessing/Binarizer.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L159)
 
 ### get\_feature\_names\_out()
 
@@ -130,7 +130,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L206)
+Defined in:  [generated/preprocessing/Binarizer.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L206)
 
 ### get\_metadata\_routing()
 
@@ -155,7 +155,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L244)
+Defined in:  [generated/preprocessing/Binarizer.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L244)
 
 ### init()
 
@@ -179,7 +179,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L61)
+Defined in:  [generated/preprocessing/Binarizer.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L61)
 
 ### set\_output()
 
@@ -204,7 +204,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L281)
+Defined in:  [generated/preprocessing/Binarizer.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L281)
 
 ### set\_transform\_request()
 
@@ -231,7 +231,7 @@ set_transform_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L318)
+Defined in:  [generated/preprocessing/Binarizer.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L318)
 
 ### transform()
 
@@ -255,7 +255,7 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L353)
+Defined in:  [generated/preprocessing/Binarizer.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L353)
 
 ## Properties
 
@@ -263,31 +263,31 @@ Defined in:  [generated/preprocessing/Binarizer.ts:353](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L27)
+Defined in:  [generated/preprocessing/Binarizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L26)
+Defined in:  [generated/preprocessing/Binarizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L25)
+Defined in:  [generated/preprocessing/Binarizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L22)
+Defined in:  [generated/preprocessing/Binarizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L23)
+Defined in:  [generated/preprocessing/Binarizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L23)
 
 ## Accessors
 
@@ -305,9 +305,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L418)
+Defined in:  [generated/preprocessing/Binarizer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L418)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L418)
+Defined in:  [generated/preprocessing/Binarizer.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L418)
 
 ### n\_features\_in\_
 
@@ -323,9 +323,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/preprocessing/Binarizer.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L393)
+Defined in:  [generated/preprocessing/Binarizer.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L393)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L393)
+Defined in:  [generated/preprocessing/Binarizer.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L393)
 
 ### py
 
@@ -339,7 +339,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L48)
+Defined in:  [generated/preprocessing/Binarizer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L48)
 
 #### Signature
 
@@ -357,6 +357,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/preprocessing/Binarizer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L52)
+Defined in:  [generated/preprocessing/Binarizer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L52)
 
-Defined in:  [generated/preprocessing/Binarizer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L48) [generated/preprocessing/Binarizer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L52)
+Defined in:  [generated/preprocessing/Binarizer.ts:48](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L48) [generated/preprocessing/Binarizer.ts:52](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Binarizer.ts#L52)

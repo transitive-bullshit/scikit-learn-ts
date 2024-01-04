@@ -32,7 +32,7 @@ new LearningCurveDisplay(opts?: object): LearningCurveDisplay;
 
 [`LearningCurveDisplay`](LearningCurveDisplay.md)
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L25)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L25)
 
 ## Methods
 
@@ -52,7 +52,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L117)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L117)
 
 ### from\_estimator()
 
@@ -100,7 +100,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L136)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L136)
 
 ### init()
 
@@ -124,7 +124,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L63)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L63)
 
 ### plot()
 
@@ -155,7 +155,7 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L334)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L334)
 
 ## Properties
 
@@ -163,31 +163,31 @@ Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:334](https://gi
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L23)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L22)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L21)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L18)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L19)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -205,7 +205,7 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/LearningCurveDisplay.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L425)
+Defined in: [generated/model\_selection/LearningCurveDisplay.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L425)
 
 ### errorbar\_
 
@@ -221,7 +221,7 @@ errorbar_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/LearningCurveDisplay.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L479)
+Defined in: [generated/model\_selection/LearningCurveDisplay.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L479)
 
 ### figure\_
 
@@ -237,7 +237,7 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/LearningCurveDisplay.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L452)
+Defined in: [generated/model\_selection/LearningCurveDisplay.ts:452](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L452)
 
 ### fill\_between\_
 
@@ -253,7 +253,7 @@ fill_between_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/LearningCurveDisplay.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L533)
+Defined in: [generated/model\_selection/LearningCurveDisplay.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L533)
 
 ### lines\_
 
@@ -269,7 +269,7 @@ lines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/model\_selection/LearningCurveDisplay.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L506)
+Defined in: [generated/model\_selection/LearningCurveDisplay.ts:506](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L506)
 
 ### py
 
@@ -283,7 +283,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50)
+Defined in:  [generated/model\_selection/LearningCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L50)
 
 #### Signature
 
@@ -301,4 +301,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/model\_selection/LearningCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L54)
+Defined in: [generated/model\_selection/LearningCurveDisplay.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/LearningCurveDisplay.ts#L54)

@@ -34,7 +34,7 @@ new AffinityPropagation(opts?: object): AffinityPropagation;
 
 [`AffinityPropagation`](AffinityPropagation.md)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L23)
+Defined in:  [generated/cluster/AffinityPropagation.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L23)
 
 ## Methods
 
@@ -54,7 +54,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L145)
+Defined in:  [generated/cluster/AffinityPropagation.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L145)
 
 ### fit()
 
@@ -78,7 +78,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L162)
+Defined in:  [generated/cluster/AffinityPropagation.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L162)
 
 ### fit\_predict()
 
@@ -102,7 +102,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L202)
+Defined in:  [generated/cluster/AffinityPropagation.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L202)
 
 ### get\_metadata\_routing()
 
@@ -127,7 +127,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L246)
+Defined in:  [generated/cluster/AffinityPropagation.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L246)
 
 ### init()
 
@@ -151,7 +151,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L93)
+Defined in:  [generated/cluster/AffinityPropagation.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L93)
 
 ### predict()
 
@@ -174,7 +174,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L284)
+Defined in:  [generated/cluster/AffinityPropagation.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L284)
 
 ## Properties
 
@@ -182,31 +182,31 @@ Defined in:  [generated/cluster/AffinityPropagation.ts:284](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L21)
+Defined in:  [generated/cluster/AffinityPropagation.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L20)
+Defined in:  [generated/cluster/AffinityPropagation.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L19)
+Defined in:  [generated/cluster/AffinityPropagation.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L16)
+Defined in:  [generated/cluster/AffinityPropagation.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L17)
+Defined in:  [generated/cluster/AffinityPropagation.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L17)
 
 ## Accessors
 
@@ -224,9 +224,9 @@ affinity_matrix_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L400)
+Defined in:  [generated/cluster/AffinityPropagation.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L400)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L400)
+Defined in:  [generated/cluster/AffinityPropagation.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L400)
 
 ### cluster\_centers\_
 
@@ -242,9 +242,9 @@ cluster_centers_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L346)
+Defined in:  [generated/cluster/AffinityPropagation.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L346)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L346)
+Defined in:  [generated/cluster/AffinityPropagation.ts:346](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L346)
 
 ### cluster\_centers\_indices\_
 
@@ -260,9 +260,9 @@ cluster_centers_indices_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L319)
+Defined in:  [generated/cluster/AffinityPropagation.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L319)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L319)
+Defined in:  [generated/cluster/AffinityPropagation.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L319)
 
 ### feature\_names\_in\_
 
@@ -278,9 +278,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L481)
+Defined in:  [generated/cluster/AffinityPropagation.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L481)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L481)
+Defined in:  [generated/cluster/AffinityPropagation.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L481)
 
 ### labels\_
 
@@ -296,9 +296,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L373)
+Defined in:  [generated/cluster/AffinityPropagation.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L373)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L373)
+Defined in:  [generated/cluster/AffinityPropagation.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L373)
 
 ### n\_features\_in\_
 
@@ -314,9 +314,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L454)
+Defined in:  [generated/cluster/AffinityPropagation.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L454)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L454)
+Defined in:  [generated/cluster/AffinityPropagation.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L454)
 
 ### n\_iter\_
 
@@ -332,9 +332,9 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L427)
+Defined in:  [generated/cluster/AffinityPropagation.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L427)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L427)
+Defined in:  [generated/cluster/AffinityPropagation.ts:427](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L427)
 
 ### py
 
@@ -348,7 +348,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L80)
+Defined in:  [generated/cluster/AffinityPropagation.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L80)
 
 #### Signature
 
@@ -366,6 +366,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L84)
+Defined in:  [generated/cluster/AffinityPropagation.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L84)
 
-Defined in:  [generated/cluster/AffinityPropagation.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L80) [generated/cluster/AffinityPropagation.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L84)
+Defined in:  [generated/cluster/AffinityPropagation.ts:80](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L80) [generated/cluster/AffinityPropagation.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/AffinityPropagation.ts#L84)

@@ -39,7 +39,7 @@ new PartialDependenceDisplay(opts?: object): PartialDependenceDisplay;
 
 [`PartialDependenceDisplay`](PartialDependenceDisplay.md)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L27)
 
 ## Methods
 
@@ -59,7 +59,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L148)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L148)
 
 ### from\_estimator()
 
@@ -108,7 +108,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L169)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L169)
 
 ### init()
 
@@ -132,7 +132,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L96)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:96](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L96)
 
 ### plot()
 
@@ -164,7 +164,7 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L367)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L367)
 
 ## Properties
 
@@ -172,31 +172,31 @@ Defined in:  [generated/inspection/PartialDependenceDisplay.ts:367](https://gith
 
 > `boolean`  = `false`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L21)
 
 ## Accessors
 
@@ -214,9 +214,9 @@ axes_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L486)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L486)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L486)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L486)
 
 ### bars\_
 
@@ -232,9 +232,9 @@ bars_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L621)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L621)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L621)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:621](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L621)
 
 ### bounding\_ax\_
 
@@ -250,9 +250,9 @@ bounding_ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L459)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L459)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L459)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L459)
 
 ### contours\_
 
@@ -268,9 +268,9 @@ contours_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L594)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L594)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L594)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L594)
 
 ### deciles\_hlines\_
 
@@ -286,9 +286,9 @@ deciles_hlines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L567)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L567)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L567)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L567)
 
 ### deciles\_vlines\_
 
@@ -304,9 +304,9 @@ deciles_vlines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L540)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L540)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L540)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L540)
 
 ### figure\_
 
@@ -322,9 +322,9 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L675)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L675)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L675)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:675](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L675)
 
 ### heatmaps\_
 
@@ -340,9 +340,9 @@ heatmaps_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L648)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L648)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L648)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:648](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L648)
 
 ### lines\_
 
@@ -358,9 +358,9 @@ lines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L513)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L513)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L513)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L513)
 
 ### py
 
@@ -374,7 +374,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83)
 
 #### Signature
 
@@ -392,6 +392,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L87)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L87)
 
-Defined in:  [generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83) [generated/inspection/PartialDependenceDisplay.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L87)
+Defined in:  [generated/inspection/PartialDependenceDisplay.ts:83](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L83) [generated/inspection/PartialDependenceDisplay.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/inspection/PartialDependenceDisplay.ts#L87)

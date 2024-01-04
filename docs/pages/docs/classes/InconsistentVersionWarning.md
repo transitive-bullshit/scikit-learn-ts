@@ -27,7 +27,7 @@ new InconsistentVersionWarning(opts?: object): InconsistentVersionWarning;
 
 [`InconsistentVersionWarning`](InconsistentVersionWarning.md)
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:21
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L21)
 
 ## Methods
 
@@ -47,7 +47,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:102
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L102)
 
 ### init()
 
@@ -71,7 +71,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:54
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L54)
 
 ### with\_traceback()
 
@@ -93,7 +93,7 @@ with_traceback(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:119
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L119)
 
 ## Properties
 
@@ -101,31 +101,31 @@ Defined in:  generated/exceptions/InconsistentVersionWarning.ts:119
 
 > `boolean`  = `false`
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:19
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:18
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:17
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:14
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:15
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L15)
 
 ## Accessors
 
@@ -141,7 +141,7 @@ args(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/exceptions/InconsistentVersionWarning.ts:146
+Defined in: [generated/exceptions/InconsistentVersionWarning.ts:146](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L146)
 
 ### py
 
@@ -155,7 +155,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  generated/exceptions/InconsistentVersionWarning.ts:41
+Defined in:  [generated/exceptions/InconsistentVersionWarning.ts:41](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L41)
 
 #### Signature
 
@@ -173,4 +173,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: generated/exceptions/InconsistentVersionWarning.ts:45
+Defined in: [generated/exceptions/InconsistentVersionWarning.ts:45](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/exceptions/InconsistentVersionWarning.ts#L45)

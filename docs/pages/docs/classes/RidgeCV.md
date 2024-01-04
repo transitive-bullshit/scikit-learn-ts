@@ -37,7 +37,7 @@ new RidgeCV(opts?: object): RidgeCV;
 
 [`RidgeCV`](RidgeCV.md)
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L27)
+Defined in:  [generated/linear\_model/RidgeCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L27)
 
 ## Methods
 
@@ -57,7 +57,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L133)
+Defined in:  [generated/linear\_model/RidgeCV.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L133)
 
 ### fit()
 
@@ -82,7 +82,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L150)
+Defined in:  [generated/linear\_model/RidgeCV.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L150)
 
 ### get\_metadata\_routing()
 
@@ -107,7 +107,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L199)
+Defined in:  [generated/linear\_model/RidgeCV.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L199)
 
 ### init()
 
@@ -131,7 +131,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L88)
+Defined in:  [generated/linear\_model/RidgeCV.ts:88](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L88)
 
 ### predict()
 
@@ -154,7 +154,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L232)
+Defined in:  [generated/linear\_model/RidgeCV.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L232)
 
 ### score()
 
@@ -181,7 +181,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L265)
+Defined in:  [generated/linear\_model/RidgeCV.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L265)
 
 ### set\_fit\_request()
 
@@ -208,7 +208,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L316)
+Defined in:  [generated/linear\_model/RidgeCV.ts:316](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L316)
 
 ### set\_score\_request()
 
@@ -235,7 +235,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L353)
+Defined in:  [generated/linear\_model/RidgeCV.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L353)
 
 ## Properties
 
@@ -243,31 +243,31 @@ Defined in:  [generated/linear\_model/RidgeCV.ts:353](https://github.com/transit
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L25)
+Defined in:  [generated/linear\_model/RidgeCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L24)
+Defined in:  [generated/linear\_model/RidgeCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L23)
+Defined in:  [generated/linear\_model/RidgeCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L20)
+Defined in:  [generated/linear\_model/RidgeCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L21)
+Defined in:  [generated/linear\_model/RidgeCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L21)
 
 ## Accessors
 
@@ -285,7 +285,7 @@ alpha_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeCV.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L454)
+Defined in: [generated/linear\_model/RidgeCV.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L454)
 
 ### best\_score\_
 
@@ -301,7 +301,7 @@ best_score_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeCV.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L476)
+Defined in: [generated/linear\_model/RidgeCV.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L476)
 
 ### coef\_
 
@@ -317,7 +317,7 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L409)
+Defined in: [generated/linear\_model/RidgeCV.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L409)
 
 ### cv\_values\_
 
@@ -333,7 +333,7 @@ cv_values_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/linear\_model/RidgeCV.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L386)
+Defined in: [generated/linear\_model/RidgeCV.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L386)
 
 ### feature\_names\_in\_
 
@@ -349,7 +349,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeCV.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L524)
+Defined in: [generated/linear\_model/RidgeCV.ts:524](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L524)
 
 ### intercept\_
 
@@ -365,7 +365,7 @@ intercept_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/RidgeCV.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L431)
+Defined in: [generated/linear\_model/RidgeCV.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L431)
 
 ### n\_features\_in\_
 
@@ -381,7 +381,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/RidgeCV.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L499)
+Defined in: [generated/linear\_model/RidgeCV.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L499)
 
 ### py
 
@@ -395,7 +395,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/RidgeCV.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L75)
+Defined in:  [generated/linear\_model/RidgeCV.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L75)
 
 #### Signature
 
@@ -413,4 +413,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/RidgeCV.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L79)
+Defined in: [generated/linear\_model/RidgeCV.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RidgeCV.ts#L79)

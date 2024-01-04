@@ -40,7 +40,7 @@ new MiniBatchNMF(opts?: object): MiniBatchNMF;
 
 [`MiniBatchNMF`](MiniBatchNMF.md)
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L21)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L21)
 
 ## Methods
 
@@ -60,7 +60,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L203)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L203)
 
 ### fit()
 
@@ -85,7 +85,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L220)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L220)
 
 ### fit\_transform()
 
@@ -113,7 +113,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L267)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L267)
 
 ### get\_feature\_names\_out()
 
@@ -138,7 +138,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L323)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:323](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L323)
 
 ### get\_metadata\_routing()
 
@@ -163,7 +163,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L361)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:361](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L361)
 
 ### init()
 
@@ -187,7 +187,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L143)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L143)
 
 ### inverse\_transform()
 
@@ -211,7 +211,7 @@ inverse_transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L396)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L396)
 
 ### partial\_fit()
 
@@ -241,7 +241,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L440)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L440)
 
 ### set\_output()
 
@@ -266,7 +266,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L496)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L496)
 
 ### set\_partial\_fit\_request()
 
@@ -294,7 +294,7 @@ set_partial_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L533)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L533)
 
 ### transform()
 
@@ -317,7 +317,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L573)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:573](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L573)
 
 ## Properties
 
@@ -325,31 +325,31 @@ Defined in:  [generated/decomposition/MiniBatchNMF.ts:573](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L19)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L19)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L18)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L18)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L17)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L17)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L14)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L14)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L15)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L15)
 
 ## Accessors
 
@@ -367,7 +367,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L606)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L606)
 
 ### feature\_names\_in\_
 
@@ -383,7 +383,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:752](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L752)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:752](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L752)
 
 ### n\_components\_
 
@@ -399,7 +399,7 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L631)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:631](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L631)
 
 ### n\_features\_in\_
 
@@ -415,7 +415,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L727)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:727](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L727)
 
 ### n\_iter\_
 
@@ -431,7 +431,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L681)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:681](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L681)
 
 ### n\_steps\_
 
@@ -447,7 +447,7 @@ n_steps_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L704)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L704)
 
 ### py
 
@@ -461,7 +461,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/MiniBatchNMF.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L130)
+Defined in:  [generated/decomposition/MiniBatchNMF.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L130)
 
 #### Signature
 
@@ -479,7 +479,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L134)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L134)
 
 ### reconstruction\_err\_
 
@@ -495,4 +495,4 @@ reconstruction_err_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/MiniBatchNMF.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L656)
+Defined in: [generated/decomposition/MiniBatchNMF.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L656)

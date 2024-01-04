@@ -16,4 +16,4 @@ createPythonBridge(opts: PythonBridgeOptions = {}): Promise<PythonBridge>;
 
 `Promise`\<`PythonBridge`\>
 
-Defined in:  [python.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/python.ts#L20)
+Defined in:  [python.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/python.ts#L20)

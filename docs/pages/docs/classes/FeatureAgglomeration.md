@@ -38,7 +38,7 @@ new FeatureAgglomeration(opts?: object): FeatureAgglomeration;
 
 [`FeatureAgglomeration`](FeatureAgglomeration.md)
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L25)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L25)
 
 ## Methods
 
@@ -58,7 +58,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L157)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:157](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L157)
 
 ### fit()
 
@@ -82,7 +82,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L174)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L174)
 
 ### fit\_transform()
 
@@ -109,7 +109,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L216)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L216)
 
 ### get\_feature\_names\_out()
 
@@ -134,7 +134,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L269)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L269)
 
 ### get\_metadata\_routing()
 
@@ -159,7 +159,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L309)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L309)
 
 ### init()
 
@@ -183,7 +183,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L103)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L103)
 
 ### inverse\_transform()
 
@@ -207,7 +207,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L347)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:347](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L347)
 
 ### set\_output()
 
@@ -232,7 +232,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L394)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L394)
 
 ### transform()
 
@@ -255,7 +255,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L431)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L431)
 
 ## Properties
 
@@ -263,31 +263,31 @@ Defined in:  [generated/cluster/FeatureAgglomeration.ts:431](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L23)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L22)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L21)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L18)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L19)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L19)
 
 ## Accessors
 
@@ -305,7 +305,7 @@ children_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:630](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L630)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:630](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L630)
 
 ### distances\_
 
@@ -321,7 +321,7 @@ distances_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L657)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:657](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L657)
 
 ### feature\_names\_in\_
 
@@ -337,7 +337,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L603)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L603)
 
 ### labels\_
 
@@ -353,7 +353,7 @@ labels_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L495)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:495](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L495)
 
 ### n\_clusters\_
 
@@ -369,7 +369,7 @@ n_clusters_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L468)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L468)
 
 ### n\_connected\_components\_
 
@@ -385,7 +385,7 @@ n_connected_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L549)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:549](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L549)
 
 ### n\_features\_in\_
 
@@ -401,7 +401,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L576)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L576)
 
 ### n\_leaves\_
 
@@ -417,7 +417,7 @@ n_leaves_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L522)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:522](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L522)
 
 ### py
 
@@ -431,7 +431,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/FeatureAgglomeration.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L90)
+Defined in:  [generated/cluster/FeatureAgglomeration.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L90)
 
 #### Signature
 
@@ -449,4 +449,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/cluster/FeatureAgglomeration.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L94)
+Defined in: [generated/cluster/FeatureAgglomeration.ts:94](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/FeatureAgglomeration.ts#L94)

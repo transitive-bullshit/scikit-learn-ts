@@ -36,7 +36,7 @@ new Normalizer(opts?: object): Normalizer;
 
 [`Normalizer`](Normalizer.md)
 
-Defined in:  [generated/preprocessing/Normalizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L31)
+Defined in:  [generated/preprocessing/Normalizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L31)
 
 ## Methods
 
@@ -56,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L103)
+Defined in:  [generated/preprocessing/Normalizer.ts:103](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L103)
 
 ### fit()
 
@@ -82,7 +82,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L122)
+Defined in:  [generated/preprocessing/Normalizer.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L122)
 
 ### fit\_transform()
 
@@ -109,7 +109,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L162)
+Defined in:  [generated/preprocessing/Normalizer.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L162)
 
 ### get\_feature\_names\_out()
 
@@ -132,7 +132,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L209)
+Defined in:  [generated/preprocessing/Normalizer.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L209)
 
 ### get\_metadata\_routing()
 
@@ -157,7 +157,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L247)
+Defined in:  [generated/preprocessing/Normalizer.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L247)
 
 ### init()
 
@@ -181,7 +181,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L63)
+Defined in:  [generated/preprocessing/Normalizer.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L63)
 
 ### set\_output()
 
@@ -206,7 +206,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L284)
+Defined in:  [generated/preprocessing/Normalizer.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L284)
 
 ### set\_transform\_request()
 
@@ -233,7 +233,7 @@ set_transform_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L321)
+Defined in:  [generated/preprocessing/Normalizer.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L321)
 
 ### transform()
 
@@ -257,7 +257,7 @@ transform(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/preprocessing/Normalizer.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L356)
+Defined in:  [generated/preprocessing/Normalizer.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L356)
 
 ## Properties
 
@@ -265,31 +265,31 @@ Defined in:  [generated/preprocessing/Normalizer.ts:356](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L29)
+Defined in:  [generated/preprocessing/Normalizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L29)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L28)
+Defined in:  [generated/preprocessing/Normalizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L28)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L27)
+Defined in:  [generated/preprocessing/Normalizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L27)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L24)
+Defined in:  [generated/preprocessing/Normalizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L24)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L25)
+Defined in:  [generated/preprocessing/Normalizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L25)
 
 ## Accessors
 
@@ -307,7 +307,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/preprocessing/Normalizer.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L421)
+Defined in: [generated/preprocessing/Normalizer.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L421)
 
 ### n\_features\_in\_
 
@@ -323,7 +323,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/preprocessing/Normalizer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L396)
+Defined in: [generated/preprocessing/Normalizer.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L396)
 
 ### py
 
@@ -337,7 +337,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/preprocessing/Normalizer.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L50)
+Defined in:  [generated/preprocessing/Normalizer.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L50)
 
 #### Signature
 
@@ -355,4 +355,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/preprocessing/Normalizer.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L54)
+Defined in: [generated/preprocessing/Normalizer.ts:54](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/Normalizer.ts#L54)

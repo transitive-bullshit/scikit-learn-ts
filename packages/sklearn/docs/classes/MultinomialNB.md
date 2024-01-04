@@ -32,7 +32,7 @@ new MultinomialNB(opts?: object): MultinomialNB;
 
 [`MultinomialNB`](MultinomialNB.md)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L25)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L25)
 
 ## Methods
 
@@ -52,7 +52,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L115)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L115)
 
 ### fit()
 
@@ -77,7 +77,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L132)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L132)
 
 ### get\_metadata\_routing()
 
@@ -102,7 +102,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L181)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L181)
 
 ### init()
 
@@ -126,7 +126,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L69)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L69)
 
 ### partial\_fit()
 
@@ -158,7 +158,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L222)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L222)
 
 ### predict()
 
@@ -181,7 +181,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L280)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L280)
 
 ### predict\_joint\_log\_proba()
 
@@ -206,7 +206,7 @@ predict_joint_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L315)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L315)
 
 ### predict\_log\_proba()
 
@@ -229,7 +229,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L351)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:351](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L351)
 
 ### predict\_proba()
 
@@ -252,7 +252,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L386)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:386](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L386)
 
 ### score()
 
@@ -279,7 +279,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L421)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L421)
 
 ### set\_fit\_request()
 
@@ -306,7 +306,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L472)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L472)
 
 ### set\_partial\_fit\_request()
 
@@ -334,7 +334,7 @@ set_partial_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L509)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L509)
 
 ### set\_score\_request()
 
@@ -361,7 +361,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L553)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L553)
 
 ## Properties
 
@@ -369,31 +369,31 @@ Defined in:  [generated/naive\_bayes/MultinomialNB.ts:553](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L23)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L22)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L21)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L18)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L19)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L19)
 
 ## Accessors
 
@@ -411,9 +411,9 @@ class_count_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L588)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L588)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L588)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L588)
 
 ### class\_log\_prior\_
 
@@ -429,9 +429,9 @@ class_log_prior_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L613)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L613)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L613)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:613](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L613)
 
 ### classes\_
 
@@ -447,9 +447,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L638)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L638)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L638)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:638](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L638)
 
 ### feature\_count\_
 
@@ -465,9 +465,9 @@ feature_count_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L663)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L663)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L663)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L663)
 
 ### feature\_log\_prob\_
 
@@ -483,9 +483,9 @@ feature_log_prob_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L688)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L688)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L688)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L688)
 
 ### feature\_names\_in\_
 
@@ -501,9 +501,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L738)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L738)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L738)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:738](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L738)
 
 ### n\_features\_in\_
 
@@ -519,9 +519,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L713)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L713)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L713)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:713](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L713)
 
 ### py
 
@@ -535,7 +535,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L56)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L56)
 
 #### Signature
 
@@ -553,6 +553,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L60)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L60)
 
-Defined in:  [generated/naive\_bayes/MultinomialNB.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L56) [generated/naive\_bayes/MultinomialNB.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L60)
+Defined in:  [generated/naive\_bayes/MultinomialNB.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L56) [generated/naive\_bayes/MultinomialNB.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L60)

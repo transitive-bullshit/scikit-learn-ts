@@ -37,7 +37,7 @@ new TweedieRegressor(opts?: object): TweedieRegressor;
 
 [`TweedieRegressor`](TweedieRegressor.md)
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L25)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L25)
 
 ## Methods
 
@@ -57,7 +57,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L156)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:156](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L156)
 
 ### fit()
 
@@ -82,7 +82,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L173)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:173](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L173)
 
 ### get\_metadata\_routing()
 
@@ -107,7 +107,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L224)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L224)
 
 ### init()
 
@@ -131,7 +131,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L106)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L106)
 
 ### predict()
 
@@ -154,7 +154,7 @@ predict(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L261)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L261)
 
 ### score()
 
@@ -183,7 +183,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L300)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L300)
 
 ### set\_fit\_request()
 
@@ -210,7 +210,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L353)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L353)
 
 ### set\_score\_request()
 
@@ -237,7 +237,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L395)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L395)
 
 ## Properties
 
@@ -245,31 +245,31 @@ Defined in:  [generated/linear\_model/TweedieRegressor.ts:395](https://github.co
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L23)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L22)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L21)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L18)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L19)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L19)
 
 ## Accessors
 
@@ -287,7 +287,7 @@ coef_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/linear\_model/TweedieRegressor.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L433)
+Defined in: [generated/linear\_model/TweedieRegressor.ts:433](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L433)
 
 ### feature\_names\_in\_
 
@@ -303,7 +303,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/TweedieRegressor.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L541)
+Defined in: [generated/linear\_model/TweedieRegressor.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L541)
 
 ### intercept\_
 
@@ -319,7 +319,7 @@ intercept_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/TweedieRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L460)
+Defined in: [generated/linear\_model/TweedieRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L460)
 
 ### n\_features\_in\_
 
@@ -335,7 +335,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/TweedieRegressor.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L514)
+Defined in: [generated/linear\_model/TweedieRegressor.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L514)
 
 ### n\_iter\_
 
@@ -351,7 +351,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/TweedieRegressor.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L487)
+Defined in: [generated/linear\_model/TweedieRegressor.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L487)
 
 ### py
 
@@ -365,7 +365,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/TweedieRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L93)
+Defined in:  [generated/linear\_model/TweedieRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L93)
 
 #### Signature
 
@@ -383,4 +383,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/TweedieRegressor.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L97)
+Defined in: [generated/linear\_model/TweedieRegressor.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L97)

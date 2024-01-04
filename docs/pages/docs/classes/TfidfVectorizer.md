@@ -53,7 +53,7 @@ new TfidfVectorizer(opts?: object): TfidfVectorizer;
 
 [`TfidfVectorizer`](TfidfVectorizer.md)
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L29)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L29)
 
 ## Methods
 
@@ -79,7 +79,7 @@ build_analyzer(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L269)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L269)
 
 ### build\_preprocessor()
 
@@ -101,7 +101,7 @@ build_preprocessor(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L297)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L297)
 
 ### build\_tokenizer()
 
@@ -123,7 +123,7 @@ build_tokenizer(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L325)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L325)
 
 ### decode()
 
@@ -148,7 +148,7 @@ decode(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L355)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L355)
 
 ### dispose()
 
@@ -166,7 +166,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L250)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L250)
 
 ### fit()
 
@@ -190,7 +190,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L388)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L388)
 
 ### fit\_transform()
 
@@ -216,7 +216,7 @@ fit_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L428)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L428)
 
 ### get\_feature\_names\_out()
 
@@ -239,7 +239,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L466)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L466)
 
 ### get\_metadata\_routing()
 
@@ -264,7 +264,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L504)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L504)
 
 ### get\_stop\_words()
 
@@ -286,7 +286,7 @@ get_stop_words(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L539)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L539)
 
 ### init()
 
@@ -310,7 +310,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L188)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L188)
 
 ### inverse\_transform()
 
@@ -333,7 +333,7 @@ inverse_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L567)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:567](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L567)
 
 ### set\_fit\_request()
 
@@ -360,7 +360,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L606)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L606)
 
 ### set\_transform\_request()
 
@@ -387,7 +387,7 @@ set_transform_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L645)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L645)
 
 ### transform()
 
@@ -412,7 +412,7 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L683)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L683)
 
 ## Properties
 
@@ -420,31 +420,31 @@ Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:683](https:/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L27)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L26)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L25)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L22)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L23)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L23)
 
 ## Accessors
 
@@ -462,7 +462,7 @@ fixed_vocabulary_(): Promise<boolean>;
 
 `Promise`\<`boolean`\>
 
-Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L741)
+Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:741](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L741)
 
 ### py
 
@@ -476,7 +476,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L175)
+Defined in:  [generated/feature\_extraction/text/TfidfVectorizer.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L175)
 
 #### Signature
 
@@ -494,7 +494,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L179)
+Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:179](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L179)
 
 ### stop\_words\_
 
@@ -510,7 +510,7 @@ stop_words_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L766)
+Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L766)
 
 ### vocabulary\_
 
@@ -526,4 +526,4 @@ vocabulary_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L716)
+Defined in: [generated/feature\_extraction/text/TfidfVectorizer.ts:716](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L716)

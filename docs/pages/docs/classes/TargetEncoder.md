@@ -36,7 +36,7 @@ new TargetEncoder(opts?: object): TargetEncoder;
 
 [`TargetEncoder`](TargetEncoder.md)
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:27
+Defined in:  [generated/preprocessing/TargetEncoder.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L27)
 
 ## Methods
 
@@ -56,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:131
+Defined in:  [generated/preprocessing/TargetEncoder.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L131)
 
 ### fit()
 
@@ -80,7 +80,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:148
+Defined in:  [generated/preprocessing/TargetEncoder.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L148)
 
 ### fit\_transform()
 
@@ -104,7 +104,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:188
+Defined in:  [generated/preprocessing/TargetEncoder.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L188)
 
 ### get\_feature\_names\_out()
 
@@ -127,7 +127,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:228
+Defined in:  [generated/preprocessing/TargetEncoder.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L228)
 
 ### get\_metadata\_routing()
 
@@ -152,7 +152,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:266
+Defined in:  [generated/preprocessing/TargetEncoder.ts:266](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L266)
 
 ### init()
 
@@ -176,7 +176,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:85
+Defined in:  [generated/preprocessing/TargetEncoder.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L85)
 
 ### set\_output()
 
@@ -201,7 +201,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:303
+Defined in:  [generated/preprocessing/TargetEncoder.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L303)
 
 ### transform()
 
@@ -224,7 +224,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:336
+Defined in:  [generated/preprocessing/TargetEncoder.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L336)
 
 ## Properties
 
@@ -232,31 +232,31 @@ Defined in:  generated/preprocessing/TargetEncoder.ts:336
 
 > `boolean`  = `false`
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:25
+Defined in:  [generated/preprocessing/TargetEncoder.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:24
+Defined in:  [generated/preprocessing/TargetEncoder.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:23
+Defined in:  [generated/preprocessing/TargetEncoder.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:20
+Defined in:  [generated/preprocessing/TargetEncoder.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:21
+Defined in:  [generated/preprocessing/TargetEncoder.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L21)
 
 ## Accessors
 
@@ -274,7 +274,7 @@ categories_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/preprocessing/TargetEncoder.ts:394
+Defined in: [generated/preprocessing/TargetEncoder.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L394)
 
 ### encodings\_
 
@@ -290,7 +290,7 @@ encodings_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/preprocessing/TargetEncoder.ts:369
+Defined in: [generated/preprocessing/TargetEncoder.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L369)
 
 ### feature\_names\_in\_
 
@@ -306,7 +306,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: generated/preprocessing/TargetEncoder.ts:494
+Defined in: [generated/preprocessing/TargetEncoder.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L494)
 
 ### n\_features\_in\_
 
@@ -322,7 +322,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: generated/preprocessing/TargetEncoder.ts:469
+Defined in: [generated/preprocessing/TargetEncoder.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L469)
 
 ### py
 
@@ -336,7 +336,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  generated/preprocessing/TargetEncoder.ts:72
+Defined in:  [generated/preprocessing/TargetEncoder.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L72)
 
 #### Signature
 
@@ -354,7 +354,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: generated/preprocessing/TargetEncoder.ts:76
+Defined in: [generated/preprocessing/TargetEncoder.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L76)
 
 ### target\_mean\_
 
@@ -370,7 +370,7 @@ target_mean_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: generated/preprocessing/TargetEncoder.ts:444
+Defined in: [generated/preprocessing/TargetEncoder.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L444)
 
 ### target\_type\_
 
@@ -386,4 +386,4 @@ target_type_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: generated/preprocessing/TargetEncoder.ts:419
+Defined in: [generated/preprocessing/TargetEncoder.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/preprocessing/TargetEncoder.ts#L419)

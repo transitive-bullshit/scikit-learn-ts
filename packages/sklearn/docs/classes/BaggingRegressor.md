@@ -42,7 +42,7 @@ new BaggingRegressor(opts?: object): BaggingRegressor;
 
 [`BaggingRegressor`](BaggingRegressor.md)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L27)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L27)
 
 ## Methods
 
@@ -62,7 +62,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L181)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L181)
 
 ### fit()
 
@@ -87,7 +87,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L198)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L198)
 
 ### get\_metadata\_routing()
 
@@ -112,7 +112,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L249)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:249](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L249)
 
 ### init()
 
@@ -136,7 +136,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L123)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L123)
 
 ### predict()
 
@@ -161,7 +161,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L288)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L288)
 
 ### score()
 
@@ -188,7 +188,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L325)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L325)
 
 ### set\_fit\_request()
 
@@ -215,7 +215,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L378)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:378](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L378)
 
 ### set\_score\_request()
 
@@ -242,7 +242,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L420)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L420)
 
 ## Properties
 
@@ -250,31 +250,31 @@ Defined in:  [generated/ensemble/BaggingRegressor.ts:420](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L25)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L24)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L23)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L20)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L21)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L21)
 
 ## Accessors
 
@@ -292,9 +292,9 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L458)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L458)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L458)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:458](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L458)
 
 ### estimators\_
 
@@ -310,9 +310,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L539)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L539)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L539)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L539)
 
 ### estimators\_features\_
 
@@ -328,9 +328,9 @@ estimators_features_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L566)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L566)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L566)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L566)
 
 ### feature\_names\_in\_
 
@@ -346,9 +346,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L512)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L512)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L512)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L512)
 
 ### n\_features\_in\_
 
@@ -364,9 +364,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L485)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L485)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L485)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L485)
 
 ### oob\_prediction\_
 
@@ -382,9 +382,9 @@ oob_prediction_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L620)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L620)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L620)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L620)
 
 ### oob\_score\_
 
@@ -400,9 +400,9 @@ oob_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L593)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L593)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L593)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L593)
 
 ### py
 
@@ -416,7 +416,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L110)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L110)
 
 #### Signature
 
@@ -434,6 +434,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L114)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L114)
 
-Defined in:  [generated/ensemble/BaggingRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L110) [generated/ensemble/BaggingRegressor.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L114)
+Defined in:  [generated/ensemble/BaggingRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L110) [generated/ensemble/BaggingRegressor.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/BaggingRegressor.ts#L114)

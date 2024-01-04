@@ -28,7 +28,7 @@ new SelectFwe(opts?: object): SelectFwe;
 
 [`SelectFwe`](SelectFwe.md)
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L23)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L23)
 
 ## Methods
 
@@ -48,7 +48,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L92)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L92)
 
 ### fit()
 
@@ -72,7 +72,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L109)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:109](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L109)
 
 ### fit\_transform()
 
@@ -99,7 +99,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L151)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:151](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L151)
 
 ### get\_feature\_names\_out()
 
@@ -122,7 +122,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L198)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L198)
 
 ### get\_metadata\_routing()
 
@@ -147,7 +147,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L236)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L236)
 
 ### get\_support()
 
@@ -170,7 +170,7 @@ get_support(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L271)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:271](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L271)
 
 ### init()
 
@@ -194,7 +194,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L53)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L53)
 
 ### inverse\_transform()
 
@@ -217,7 +217,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L306)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L306)
 
 ### set\_output()
 
@@ -242,7 +242,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L341)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L341)
 
 ### transform()
 
@@ -265,7 +265,7 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L374)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L374)
 
 ## Properties
 
@@ -273,31 +273,31 @@ Defined in:  [generated/feature\_selection/SelectFwe.ts:374](https://github.com/
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L21)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L20)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L19)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L16)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L17)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L17)
 
 ## Accessors
 
@@ -315,9 +315,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L478)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L478)
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L478)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L478)
 
 ### n\_features\_in\_
 
@@ -333,9 +333,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L453)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L453)
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L453)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L453)
 
 ### pvalues\_
 
@@ -351,9 +351,9 @@ pvalues_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L430)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L430)
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L430)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L430)
 
 ### py
 
@@ -367,7 +367,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L40)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L40)
 
 #### Signature
 
@@ -385,9 +385,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L44)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L44)
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L40) [generated/feature\_selection/SelectFwe.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L44)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:40](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L40) [generated/feature\_selection/SelectFwe.ts:44](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L44)
 
 ### scores\_
 
@@ -403,6 +403,6 @@ scores_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L407)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L407)
 
-Defined in:  [generated/feature\_selection/SelectFwe.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L407)
+Defined in:  [generated/feature\_selection/SelectFwe.ts:407](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/SelectFwe.ts#L407)

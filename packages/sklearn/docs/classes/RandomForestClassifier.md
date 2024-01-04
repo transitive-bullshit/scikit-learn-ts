@@ -48,7 +48,7 @@ new RandomForestClassifier(opts?: object): RandomForestClassifier;
 
 [`RandomForestClassifier`](RandomForestClassifier.md)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L27)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L27)
 
 ## Methods
 
@@ -73,7 +73,7 @@ apply(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L256)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:256](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L256)
 
 ### decision\_path()
 
@@ -96,7 +96,7 @@ decision_path(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L291)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L291)
 
 ### dispose()
 
@@ -114,7 +114,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L239)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L239)
 
 ### fit()
 
@@ -139,7 +139,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L329)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L329)
 
 ### get\_metadata\_routing()
 
@@ -164,7 +164,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L380)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:380](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L380)
 
 ### init()
 
@@ -188,7 +188,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L171)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L171)
 
 ### predict()
 
@@ -213,7 +213,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L420)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:420](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L420)
 
 ### predict\_log\_proba()
 
@@ -238,7 +238,7 @@ predict_log_proba(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L459)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:459](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L459)
 
 ### predict\_proba()
 
@@ -263,7 +263,7 @@ predict_proba(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L499)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:499](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L499)
 
 ### score()
 
@@ -290,7 +290,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L539)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L539)
 
 ### set\_fit\_request()
 
@@ -317,7 +317,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L592)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L592)
 
 ### set\_score\_request()
 
@@ -344,7 +344,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L634)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:634](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L634)
 
 ## Properties
 
@@ -352,31 +352,31 @@ Defined in:  [generated/ensemble/RandomForestClassifier.ts:634](https://github.c
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L25)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L24)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L23)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L20)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L21)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L21)
 
 ## Accessors
 
@@ -394,9 +394,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L726)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L726)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L726)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:726](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L726)
 
 ### estimator\_
 
@@ -412,9 +412,9 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L672)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L672)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L672)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L672)
 
 ### estimators\_
 
@@ -430,9 +430,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L699)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L699)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L699)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:699](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L699)
 
 ### feature\_names\_in\_
 
@@ -448,9 +448,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L807)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L807)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L807)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:807](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L807)
 
 ### n\_classes\_
 
@@ -466,9 +466,9 @@ n_classes_(): Promise<number | any[]>;
 
 `Promise`\<`number` \| `any`[]\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L753)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L753)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L753)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L753)
 
 ### n\_features\_in\_
 
@@ -484,9 +484,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L780)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L780)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L780)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:780](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L780)
 
 ### n\_outputs\_
 
@@ -502,9 +502,9 @@ n_outputs_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L834)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L834)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L834)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:834](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L834)
 
 ### oob\_decision\_function\_
 
@@ -520,9 +520,9 @@ oob_decision_function_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L888)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L888)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L888)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:888](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L888)
 
 ### oob\_score\_
 
@@ -538,9 +538,9 @@ oob_score_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L861)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L861)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L861)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:861](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L861)
 
 ### py
 
@@ -554,7 +554,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L158)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L158)
 
 #### Signature
 
@@ -572,6 +572,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L162)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L162)
 
-Defined in:  [generated/ensemble/RandomForestClassifier.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L158) [generated/ensemble/RandomForestClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L162)
+Defined in:  [generated/ensemble/RandomForestClassifier.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L158) [generated/ensemble/RandomForestClassifier.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L162)

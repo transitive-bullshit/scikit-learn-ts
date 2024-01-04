@@ -36,7 +36,7 @@ new StackingRegressor(opts?: object): StackingRegressor;
 
 [`StackingRegressor`](StackingRegressor.md)
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L27)
+Defined in:  [generated/ensemble/StackingRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L27)
 
 ## Methods
 
@@ -56,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L125)
+Defined in:  [generated/ensemble/StackingRegressor.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L125)
 
 ### fit()
 
@@ -81,7 +81,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L142)
+Defined in:  [generated/ensemble/StackingRegressor.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L142)
 
 ### fit\_transform()
 
@@ -106,7 +106,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L191)
+Defined in:  [generated/ensemble/StackingRegressor.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L191)
 
 ### get\_feature\_names\_out()
 
@@ -129,7 +129,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L242)
+Defined in:  [generated/ensemble/StackingRegressor.ts:242](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L242)
 
 ### get\_metadata\_routing()
 
@@ -154,7 +154,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L282)
+Defined in:  [generated/ensemble/StackingRegressor.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L282)
 
 ### init()
 
@@ -178,7 +178,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L79)
+Defined in:  [generated/ensemble/StackingRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L79)
 
 ### predict()
 
@@ -202,7 +202,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L320)
+Defined in:  [generated/ensemble/StackingRegressor.ts:320](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L320)
 
 ### score()
 
@@ -229,7 +229,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L364)
+Defined in:  [generated/ensemble/StackingRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L364)
 
 ### set\_fit\_request()
 
@@ -256,7 +256,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L417)
+Defined in:  [generated/ensemble/StackingRegressor.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L417)
 
 ### set\_output()
 
@@ -281,7 +281,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L457)
+Defined in:  [generated/ensemble/StackingRegressor.ts:457](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L457)
 
 ### set\_score\_request()
 
@@ -308,7 +308,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L496)
+Defined in:  [generated/ensemble/StackingRegressor.ts:496](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L496)
 
 ### transform()
 
@@ -331,7 +331,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L534)
+Defined in:  [generated/ensemble/StackingRegressor.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L534)
 
 ## Properties
 
@@ -339,31 +339,31 @@ Defined in:  [generated/ensemble/StackingRegressor.ts:534](https://github.com/tr
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L25)
+Defined in:  [generated/ensemble/StackingRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L24)
+Defined in:  [generated/ensemble/StackingRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L23)
+Defined in:  [generated/ensemble/StackingRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L20)
+Defined in:  [generated/ensemble/StackingRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L21)
+Defined in:  [generated/ensemble/StackingRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L21)
 
 ## Accessors
 
@@ -381,7 +381,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/StackingRegressor.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L569)
+Defined in: [generated/ensemble/StackingRegressor.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L569)
 
 ### feature\_names\_in\_
 
@@ -397,7 +397,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/StackingRegressor.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L623)
+Defined in: [generated/ensemble/StackingRegressor.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L623)
 
 ### final\_estimator\_
 
@@ -413,7 +413,7 @@ final_estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/StackingRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L650)
+Defined in: [generated/ensemble/StackingRegressor.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L650)
 
 ### named\_estimators\_
 
@@ -429,7 +429,7 @@ named_estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/StackingRegressor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L596)
+Defined in: [generated/ensemble/StackingRegressor.ts:596](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L596)
 
 ### py
 
@@ -443,7 +443,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/StackingRegressor.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L66)
+Defined in:  [generated/ensemble/StackingRegressor.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L66)
 
 #### Signature
 
@@ -461,7 +461,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/StackingRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L70)
+Defined in: [generated/ensemble/StackingRegressor.ts:70](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L70)
 
 ### stack\_method\_
 
@@ -477,4 +477,4 @@ stack_method_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/StackingRegressor.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L677)
+Defined in: [generated/ensemble/StackingRegressor.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/StackingRegressor.ts#L677)

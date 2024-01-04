@@ -39,7 +39,7 @@ new SparsePCA(opts?: object): SparsePCA;
 
 [`SparsePCA`](SparsePCA.md)
 
-Defined in:  [generated/decomposition/SparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L25)
+Defined in:  [generated/decomposition/SparsePCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L25)
 
 ## Methods
 
@@ -59,7 +59,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L161)
+Defined in:  [generated/decomposition/SparsePCA.ts:161](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L161)
 
 ### fit()
 
@@ -83,7 +83,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L178)
+Defined in:  [generated/decomposition/SparsePCA.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L178)
 
 ### fit\_transform()
 
@@ -110,7 +110,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L218)
+Defined in:  [generated/decomposition/SparsePCA.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L218)
 
 ### get\_feature\_names\_out()
 
@@ -135,7 +135,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L267)
+Defined in:  [generated/decomposition/SparsePCA.ts:267](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L267)
 
 ### get\_metadata\_routing()
 
@@ -160,7 +160,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L305)
+Defined in:  [generated/decomposition/SparsePCA.ts:305](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L305)
 
 ### init()
 
@@ -184,7 +184,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L110)
+Defined in:  [generated/decomposition/SparsePCA.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L110)
 
 ### inverse\_transform()
 
@@ -209,7 +209,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L342)
+Defined in:  [generated/decomposition/SparsePCA.ts:342](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L342)
 
 ### set\_output()
 
@@ -234,7 +234,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L377)
+Defined in:  [generated/decomposition/SparsePCA.ts:377](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L377)
 
 ### transform()
 
@@ -261,7 +261,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/SparsePCA.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L414)
+Defined in:  [generated/decomposition/SparsePCA.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L414)
 
 ## Properties
 
@@ -269,31 +269,31 @@ Defined in:  [generated/decomposition/SparsePCA.ts:414](https://github.com/trans
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L23)
+Defined in:  [generated/decomposition/SparsePCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L22)
+Defined in:  [generated/decomposition/SparsePCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L21)
+Defined in:  [generated/decomposition/SparsePCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L18)
+Defined in:  [generated/decomposition/SparsePCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L19)
+Defined in:  [generated/decomposition/SparsePCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L19)
 
 ## Accessors
 
@@ -311,7 +311,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/SparsePCA.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L447)
+Defined in: [generated/decomposition/SparsePCA.ts:447](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L447)
 
 ### error\_
 
@@ -327,7 +327,7 @@ error_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/SparsePCA.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L470)
+Defined in: [generated/decomposition/SparsePCA.ts:470](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L470)
 
 ### feature\_names\_in\_
 
@@ -343,7 +343,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/SparsePCA.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L589)
+Defined in: [generated/decomposition/SparsePCA.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L589)
 
 ### mean\_
 
@@ -359,7 +359,7 @@ mean_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/SparsePCA.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L541)
+Defined in: [generated/decomposition/SparsePCA.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L541)
 
 ### n\_components\_
 
@@ -375,7 +375,7 @@ n_components_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/SparsePCA.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L493)
+Defined in: [generated/decomposition/SparsePCA.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L493)
 
 ### n\_features\_in\_
 
@@ -391,7 +391,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/SparsePCA.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L564)
+Defined in: [generated/decomposition/SparsePCA.ts:564](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L564)
 
 ### n\_iter\_
 
@@ -407,7 +407,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/SparsePCA.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L518)
+Defined in: [generated/decomposition/SparsePCA.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L518)
 
 ### py
 
@@ -421,7 +421,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/SparsePCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L97)
+Defined in:  [generated/decomposition/SparsePCA.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L97)
 
 #### Signature
 
@@ -439,4 +439,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/SparsePCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L101)
+Defined in: [generated/decomposition/SparsePCA.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/SparsePCA.ts#L101)

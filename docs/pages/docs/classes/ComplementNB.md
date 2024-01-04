@@ -33,7 +33,7 @@ new ComplementNB(opts?: object): ComplementNB;
 
 [`ComplementNB`](ComplementNB.md)
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L25)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L25)
 
 ## Methods
 
@@ -53,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L122)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L122)
 
 ### fit()
 
@@ -78,7 +78,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L139)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:139](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L139)
 
 ### get\_metadata\_routing()
 
@@ -103,7 +103,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L188)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L188)
 
 ### init()
 
@@ -127,7 +127,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L76)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L76)
 
 ### partial\_fit()
 
@@ -159,7 +159,7 @@ partial_fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L229)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L229)
 
 ### predict()
 
@@ -182,7 +182,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L287)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:287](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L287)
 
 ### predict\_joint\_log\_proba()
 
@@ -207,7 +207,7 @@ predict_joint_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L322)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L322)
 
 ### predict\_log\_proba()
 
@@ -230,7 +230,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L358)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L358)
 
 ### predict\_proba()
 
@@ -253,7 +253,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L393)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L393)
 
 ### score()
 
@@ -280,7 +280,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L428)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L428)
 
 ### set\_fit\_request()
 
@@ -307,7 +307,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L479)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:479](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L479)
 
 ### set\_partial\_fit\_request()
 
@@ -335,7 +335,7 @@ set_partial_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L516)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L516)
 
 ### set\_score\_request()
 
@@ -362,7 +362,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L560)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:560](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L560)
 
 ## Properties
 
@@ -370,31 +370,31 @@ Defined in:  [generated/naive\_bayes/ComplementNB.ts:560](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L23)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L22)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L21)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L18)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L19)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L19)
 
 ## Accessors
 
@@ -412,7 +412,7 @@ class_count_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L595)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L595)
 
 ### class\_log\_prior\_
 
@@ -428,7 +428,7 @@ class_log_prior_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L620)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:620](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L620)
 
 ### classes\_
 
@@ -444,7 +444,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L645)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:645](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L645)
 
 ### feature\_all\_
 
@@ -460,7 +460,7 @@ feature_all_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L668)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:668](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L668)
 
 ### feature\_count\_
 
@@ -476,7 +476,7 @@ feature_count_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:693](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L693)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:693](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L693)
 
 ### feature\_log\_prob\_
 
@@ -492,7 +492,7 @@ feature_log_prob_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L718)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:718](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L718)
 
 ### feature\_names\_in\_
 
@@ -508,7 +508,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L768)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:768](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L768)
 
 ### n\_features\_in\_
 
@@ -524,7 +524,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:743](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L743)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:743](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L743)
 
 ### py
 
@@ -538,7 +538,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/naive\_bayes/ComplementNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L63)
+Defined in:  [generated/naive\_bayes/ComplementNB.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L63)
 
 #### Signature
 
@@ -556,4 +556,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/naive\_bayes/ComplementNB.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L67)
+Defined in: [generated/naive\_bayes/ComplementNB.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/naive_bayes/ComplementNB.ts#L67)

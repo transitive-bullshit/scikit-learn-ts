@@ -38,7 +38,7 @@ new DBSCAN(opts?: object): DBSCAN;
 
 [`DBSCAN`](DBSCAN.md)
 
-Defined in:  [generated/cluster/DBSCAN.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L27)
+Defined in:  [generated/cluster/DBSCAN.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L27)
 
 ## Methods
 
@@ -58,7 +58,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L142)
+Defined in:  [generated/cluster/DBSCAN.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L142)
 
 ### fit()
 
@@ -83,7 +83,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L159)
+Defined in:  [generated/cluster/DBSCAN.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L159)
 
 ### fit\_predict()
 
@@ -108,7 +108,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L206)
+Defined in:  [generated/cluster/DBSCAN.ts:206](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L206)
 
 ### get\_metadata\_routing()
 
@@ -133,7 +133,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L255)
+Defined in:  [generated/cluster/DBSCAN.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L255)
 
 ### init()
 
@@ -157,7 +157,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L95)
+Defined in:  [generated/cluster/DBSCAN.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L95)
 
 ### set\_fit\_request()
 
@@ -184,7 +184,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L292)
+Defined in:  [generated/cluster/DBSCAN.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L292)
 
 ## Properties
 
@@ -192,31 +192,31 @@ Defined in:  [generated/cluster/DBSCAN.ts:292](https://github.com/transitive-bul
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/DBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L25)
+Defined in:  [generated/cluster/DBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cluster/DBSCAN.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L24)
+Defined in:  [generated/cluster/DBSCAN.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cluster/DBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L23)
+Defined in:  [generated/cluster/DBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cluster/DBSCAN.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L20)
+Defined in:  [generated/cluster/DBSCAN.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cluster/DBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L21)
+Defined in:  [generated/cluster/DBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L21)
 
 ## Accessors
 
@@ -234,9 +234,9 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L350)
+Defined in:  [generated/cluster/DBSCAN.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L350)
 
-Defined in:  [generated/cluster/DBSCAN.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L350)
+Defined in:  [generated/cluster/DBSCAN.ts:350](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L350)
 
 ### core\_sample\_indices\_
 
@@ -252,9 +252,9 @@ core_sample_indices_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L325)
+Defined in:  [generated/cluster/DBSCAN.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L325)
 
-Defined in:  [generated/cluster/DBSCAN.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L325)
+Defined in:  [generated/cluster/DBSCAN.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L325)
 
 ### feature\_names\_in\_
 
@@ -270,9 +270,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L418)
+Defined in:  [generated/cluster/DBSCAN.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L418)
 
-Defined in:  [generated/cluster/DBSCAN.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L418)
+Defined in:  [generated/cluster/DBSCAN.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L418)
 
 ### labels\_
 
@@ -288,9 +288,9 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L373)
+Defined in:  [generated/cluster/DBSCAN.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L373)
 
-Defined in:  [generated/cluster/DBSCAN.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L373)
+Defined in:  [generated/cluster/DBSCAN.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L373)
 
 ### n\_features\_in\_
 
@@ -306,9 +306,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cluster/DBSCAN.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L395)
+Defined in:  [generated/cluster/DBSCAN.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L395)
 
-Defined in:  [generated/cluster/DBSCAN.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L395)
+Defined in:  [generated/cluster/DBSCAN.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L395)
 
 ### py
 
@@ -322,7 +322,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cluster/DBSCAN.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L82)
+Defined in:  [generated/cluster/DBSCAN.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L82)
 
 #### Signature
 
@@ -340,6 +340,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cluster/DBSCAN.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L86)
+Defined in:  [generated/cluster/DBSCAN.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L86)
 
-Defined in:  [generated/cluster/DBSCAN.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L82) [generated/cluster/DBSCAN.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cluster/DBSCAN.ts#L86)
+Defined in:  [generated/cluster/DBSCAN.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L82) [generated/cluster/DBSCAN.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/DBSCAN.ts#L86)

@@ -36,7 +36,7 @@ new AdaBoostClassifier(opts?: object): AdaBoostClassifier;
 
 [`AdaBoostClassifier`](AdaBoostClassifier.md)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L27)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L27)
 
 ## Methods
 
@@ -61,7 +61,7 @@ decision_function(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L148)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:148](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L148)
 
 ### dispose()
 
@@ -79,7 +79,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L131)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L131)
 
 ### fit()
 
@@ -104,7 +104,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L186)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:186](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L186)
 
 ### get\_metadata\_routing()
 
@@ -129,7 +129,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L237)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L237)
 
 ### init()
 
@@ -153,7 +153,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L81)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:81](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L81)
 
 ### predict()
 
@@ -178,7 +178,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L277)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:277](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L277)
 
 ### predict\_log\_proba()
 
@@ -203,7 +203,7 @@ predict_log_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L314)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:314](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L314)
 
 ### predict\_proba()
 
@@ -228,7 +228,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L354)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L354)
 
 ### score()
 
@@ -255,7 +255,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L393)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:393](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L393)
 
 ### set\_fit\_request()
 
@@ -282,7 +282,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L446)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L446)
 
 ### set\_score\_request()
 
@@ -309,7 +309,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L488)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L488)
 
 ### staged\_decision\_function()
 
@@ -334,7 +334,7 @@ staged_decision_function(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L528)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L528)
 
 ### staged\_predict()
 
@@ -361,7 +361,7 @@ staged_predict(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L570)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L570)
 
 ### staged\_predict\_proba()
 
@@ -388,7 +388,7 @@ staged_predict_proba(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L611)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L611)
 
 ### staged\_score()
 
@@ -415,7 +415,7 @@ staged_score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L651)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:651](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L651)
 
 ## Properties
 
@@ -423,31 +423,31 @@ Defined in:  [generated/ensemble/AdaBoostClassifier.ts:651](https://github.com/t
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L25)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L24)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L23)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L20)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L21)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L21)
 
 ## Accessors
 
@@ -465,9 +465,9 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L756)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L756)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L756)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:756](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L756)
 
 ### estimator\_
 
@@ -483,9 +483,9 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:702](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L702)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:702](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L702)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:702](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L702)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:702](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L702)
 
 ### estimator\_errors\_
 
@@ -501,9 +501,9 @@ estimator_errors_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L837)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L837)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L837)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:837](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L837)
 
 ### estimator\_weights\_
 
@@ -519,9 +519,9 @@ estimator_weights_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L810)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L810)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L810)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:810](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L810)
 
 ### estimators\_
 
@@ -537,9 +537,9 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:729](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L729)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:729](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L729)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:729](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L729)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:729](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L729)
 
 ### feature\_names\_in\_
 
@@ -555,9 +555,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L891)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L891)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L891)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:891](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L891)
 
 ### n\_classes\_
 
@@ -573,9 +573,9 @@ n_classes_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L783)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L783)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L783)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:783](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L783)
 
 ### n\_features\_in\_
 
@@ -591,9 +591,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L864)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L864)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L864)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:864](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L864)
 
 ### py
 
@@ -607,7 +607,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L68)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L68)
 
 #### Signature
 
@@ -625,6 +625,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L72)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L72)
 
-Defined in:  [generated/ensemble/AdaBoostClassifier.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L68) [generated/ensemble/AdaBoostClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L72)
+Defined in:  [generated/ensemble/AdaBoostClassifier.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L68) [generated/ensemble/AdaBoostClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/AdaBoostClassifier.ts#L72)

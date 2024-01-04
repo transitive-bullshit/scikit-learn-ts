@@ -32,7 +32,7 @@ new VotingClassifier(opts?: object): VotingClassifier;
 
 [`VotingClassifier`](VotingClassifier.md)
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L23)
+Defined in:  [generated/ensemble/VotingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L23)
 
 ## Methods
 
@@ -52,7 +52,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L125)
+Defined in:  [generated/ensemble/VotingClassifier.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L125)
 
 ### fit()
 
@@ -77,7 +77,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L142)
+Defined in:  [generated/ensemble/VotingClassifier.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L142)
 
 ### fit\_transform()
 
@@ -104,7 +104,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L193)
+Defined in:  [generated/ensemble/VotingClassifier.ts:193](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L193)
 
 ### get\_feature\_names\_out()
 
@@ -127,7 +127,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L244)
+Defined in:  [generated/ensemble/VotingClassifier.ts:244](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L244)
 
 ### get\_metadata\_routing()
 
@@ -152,7 +152,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L284)
+Defined in:  [generated/ensemble/VotingClassifier.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L284)
 
 ### init()
 
@@ -176,7 +176,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L77)
+Defined in:  [generated/ensemble/VotingClassifier.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L77)
 
 ### predict()
 
@@ -199,7 +199,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L321)
+Defined in:  [generated/ensemble/VotingClassifier.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L321)
 
 ### predict\_proba()
 
@@ -222,7 +222,7 @@ predict_proba(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L356)
+Defined in:  [generated/ensemble/VotingClassifier.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L356)
 
 ### score()
 
@@ -249,7 +249,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L395)
+Defined in:  [generated/ensemble/VotingClassifier.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L395)
 
 ### set\_fit\_request()
 
@@ -276,7 +276,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L448)
+Defined in:  [generated/ensemble/VotingClassifier.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L448)
 
 ### set\_output()
 
@@ -301,7 +301,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L488)
+Defined in:  [generated/ensemble/VotingClassifier.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L488)
 
 ### set\_score\_request()
 
@@ -328,7 +328,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L527)
+Defined in:  [generated/ensemble/VotingClassifier.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L527)
 
 ### transform()
 
@@ -351,7 +351,7 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L565)
+Defined in:  [generated/ensemble/VotingClassifier.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L565)
 
 ## Properties
 
@@ -359,31 +359,31 @@ Defined in:  [generated/ensemble/VotingClassifier.ts:565](https://github.com/tra
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L21)
+Defined in:  [generated/ensemble/VotingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L20)
+Defined in:  [generated/ensemble/VotingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L19)
+Defined in:  [generated/ensemble/VotingClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L16)
+Defined in:  [generated/ensemble/VotingClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L17)
+Defined in:  [generated/ensemble/VotingClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L17)
 
 ## Accessors
 
@@ -401,7 +401,7 @@ classes_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/VotingClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L679)
+Defined in: [generated/ensemble/VotingClassifier.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L679)
 
 ### estimators\_
 
@@ -417,7 +417,7 @@ estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/VotingClassifier.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L600)
+Defined in: [generated/ensemble/VotingClassifier.ts:600](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L600)
 
 ### feature\_names\_in\_
 
@@ -433,7 +433,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/ensemble/VotingClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L706)
+Defined in: [generated/ensemble/VotingClassifier.ts:706](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L706)
 
 ### le\_
 
@@ -449,7 +449,7 @@ le_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/VotingClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L654)
+Defined in: [generated/ensemble/VotingClassifier.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L654)
 
 ### named\_estimators\_
 
@@ -465,7 +465,7 @@ named_estimators_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/ensemble/VotingClassifier.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L627)
+Defined in: [generated/ensemble/VotingClassifier.ts:627](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L627)
 
 ### py
 
@@ -479,7 +479,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/ensemble/VotingClassifier.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L64)
+Defined in:  [generated/ensemble/VotingClassifier.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L64)
 
 #### Signature
 
@@ -497,4 +497,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/ensemble/VotingClassifier.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L68)
+Defined in: [generated/ensemble/VotingClassifier.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/ensemble/VotingClassifier.ts#L68)

@@ -40,7 +40,7 @@ new RANSACRegressor(opts?: object): RANSACRegressor;
 
 [`RANSACRegressor`](RANSACRegressor.md)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L25)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L25)
 
 ## Methods
 
@@ -60,7 +60,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L171)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L171)
 
 ### fit()
 
@@ -85,7 +85,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L188)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L188)
 
 ### get\_metadata\_routing()
 
@@ -110,7 +110,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L237)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L237)
 
 ### init()
 
@@ -134,7 +134,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L113)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L113)
 
 ### predict()
 
@@ -159,7 +159,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L274)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L274)
 
 ### score()
 
@@ -185,7 +185,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L309)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L309)
 
 ### set\_fit\_request()
 
@@ -212,7 +212,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L353)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L353)
 
 ## Properties
 
@@ -220,31 +220,31 @@ Defined in:  [generated/linear\_model/RANSACRegressor.ts:353](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L23)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L22)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L21)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L18)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L19)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L19)
 
 ## Accessors
 
@@ -262,9 +262,9 @@ estimator_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L388)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L388)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L388)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:388](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L388)
 
 ### feature\_names\_in\_
 
@@ -280,9 +280,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L563)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L563)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L563)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:563](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L563)
 
 ### inlier\_mask\_
 
@@ -298,9 +298,9 @@ inlier_mask_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L438)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L438)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L438)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:438](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L438)
 
 ### n\_features\_in\_
 
@@ -316,9 +316,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L538)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L538)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L538)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:538](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L538)
 
 ### n\_skips\_invalid\_data\_
 
@@ -334,9 +334,9 @@ n_skips_invalid_data_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L488)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L488)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L488)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L488)
 
 ### n\_skips\_invalid\_model\_
 
@@ -352,9 +352,9 @@ n_skips_invalid_model_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L513)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L513)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L513)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:513](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L513)
 
 ### n\_skips\_no\_inliers\_
 
@@ -370,9 +370,9 @@ n_skips_no_inliers_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L463)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L463)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L463)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L463)
 
 ### n\_trials\_
 
@@ -388,9 +388,9 @@ n_trials_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L413)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L413)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L413)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L413)
 
 ### py
 
@@ -404,7 +404,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L100)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L100)
 
 #### Signature
 
@@ -422,6 +422,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L104)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L104)
 
-Defined in:  [generated/linear\_model/RANSACRegressor.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L100) [generated/linear\_model/RANSACRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L104)
+Defined in:  [generated/linear\_model/RANSACRegressor.ts:100](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L100) [generated/linear\_model/RANSACRegressor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/RANSACRegressor.ts#L104)

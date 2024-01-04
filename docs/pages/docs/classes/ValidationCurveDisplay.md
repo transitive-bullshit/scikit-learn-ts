@@ -33,7 +33,7 @@ new ValidationCurveDisplay(opts?: object): ValidationCurveDisplay;
 
 [`ValidationCurveDisplay`](ValidationCurveDisplay.md)
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:25
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L25)
 
 ## Methods
 
@@ -53,7 +53,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:122
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L122)
 
 ### from\_estimator()
 
@@ -98,7 +98,7 @@ from_estimator(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:141
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:141](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L141)
 
 ### init()
 
@@ -122,7 +122,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:68
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L68)
 
 ### plot()
 
@@ -152,7 +152,7 @@ plot(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:313
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L313)
 
 ## Properties
 
@@ -160,31 +160,31 @@ Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:313
 
 > `boolean`  = `false`
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:23
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:22
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:21
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:18
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:19
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -202,7 +202,7 @@ ax_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/model\_selection/ValidationCurveDisplay.ts:395
+Defined in: [generated/model\_selection/ValidationCurveDisplay.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L395)
 
 ### errorbar\_
 
@@ -218,7 +218,7 @@ errorbar_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/model\_selection/ValidationCurveDisplay.ts:449
+Defined in: [generated/model\_selection/ValidationCurveDisplay.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L449)
 
 ### figure\_
 
@@ -234,7 +234,7 @@ figure_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/model\_selection/ValidationCurveDisplay.ts:422
+Defined in: [generated/model\_selection/ValidationCurveDisplay.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L422)
 
 ### fill\_between\_
 
@@ -250,7 +250,7 @@ fill_between_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/model\_selection/ValidationCurveDisplay.ts:503
+Defined in: [generated/model\_selection/ValidationCurveDisplay.ts:503](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L503)
 
 ### lines\_
 
@@ -266,7 +266,7 @@ lines_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: generated/model\_selection/ValidationCurveDisplay.ts:476
+Defined in: [generated/model\_selection/ValidationCurveDisplay.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L476)
 
 ### py
 
@@ -280,7 +280,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  generated/model\_selection/ValidationCurveDisplay.ts:55
+Defined in:  [generated/model\_selection/ValidationCurveDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L55)
 
 #### Signature
 
@@ -298,4 +298,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: generated/model\_selection/ValidationCurveDisplay.ts:59
+Defined in: [generated/model\_selection/ValidationCurveDisplay.ts:59](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/ValidationCurveDisplay.ts#L59)

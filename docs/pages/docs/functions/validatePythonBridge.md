@@ -16,4 +16,4 @@ validatePythonBridge(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [python.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/python.ts#L33)
+Defined in:  [python.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/python.ts#L33)

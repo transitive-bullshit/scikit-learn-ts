@@ -42,7 +42,7 @@ new HDBSCAN(opts?: object): HDBSCAN;
 
 [`HDBSCAN`](HDBSCAN.md)
 
-Defined in:  generated/cluster/HDBSCAN.ts:25
+Defined in:  [generated/cluster/HDBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L25)
 
 ## Methods
 
@@ -74,7 +74,7 @@ dbscan_clustering(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  generated/cluster/HDBSCAN.ts:213
+Defined in:  [generated/cluster/HDBSCAN.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L213)
 
 ### dispose()
 
@@ -92,7 +92,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/cluster/HDBSCAN.ts:190
+Defined in:  [generated/cluster/HDBSCAN.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L190)
 
 ### fit()
 
@@ -116,7 +116,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/cluster/HDBSCAN.ts:253
+Defined in:  [generated/cluster/HDBSCAN.ts:253](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L253)
 
 ### fit\_predict()
 
@@ -140,7 +140,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  generated/cluster/HDBSCAN.ts:291
+Defined in:  [generated/cluster/HDBSCAN.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L291)
 
 ### get\_metadata\_routing()
 
@@ -165,7 +165,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  generated/cluster/HDBSCAN.ts:331
+Defined in:  [generated/cluster/HDBSCAN.ts:331](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L331)
 
 ### init()
 
@@ -189,7 +189,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  generated/cluster/HDBSCAN.ts:133
+Defined in:  [generated/cluster/HDBSCAN.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L133)
 
 ## Properties
 
@@ -197,31 +197,31 @@ Defined in:  generated/cluster/HDBSCAN.ts:133
 
 > `boolean`  = `false`
 
-Defined in:  generated/cluster/HDBSCAN.ts:23
+Defined in:  [generated/cluster/HDBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  generated/cluster/HDBSCAN.ts:22
+Defined in:  [generated/cluster/HDBSCAN.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  generated/cluster/HDBSCAN.ts:21
+Defined in:  [generated/cluster/HDBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  generated/cluster/HDBSCAN.ts:18
+Defined in:  [generated/cluster/HDBSCAN.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  generated/cluster/HDBSCAN.ts:19
+Defined in:  [generated/cluster/HDBSCAN.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L19)
 
 ## Accessors
 
@@ -241,7 +241,7 @@ centroids_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: generated/cluster/HDBSCAN.ts:464
+Defined in: [generated/cluster/HDBSCAN.ts:464](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L464)
 
 ### feature\_names\_in\_
 
@@ -257,7 +257,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: generated/cluster/HDBSCAN.ts:437
+Defined in: [generated/cluster/HDBSCAN.ts:437](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L437)
 
 ### labels\_
 
@@ -273,7 +273,7 @@ labels_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: generated/cluster/HDBSCAN.ts:364
+Defined in: [generated/cluster/HDBSCAN.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L364)
 
 ### medoids\_
 
@@ -291,7 +291,7 @@ medoids_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: generated/cluster/HDBSCAN.ts:489
+Defined in: [generated/cluster/HDBSCAN.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L489)
 
 ### n\_features\_in\_
 
@@ -307,7 +307,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: generated/cluster/HDBSCAN.ts:412
+Defined in: [generated/cluster/HDBSCAN.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L412)
 
 ### probabilities\_
 
@@ -323,7 +323,7 @@ probabilities_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: generated/cluster/HDBSCAN.ts:387
+Defined in: [generated/cluster/HDBSCAN.ts:387](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L387)
 
 ### py
 
@@ -337,7 +337,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  generated/cluster/HDBSCAN.ts:120
+Defined in:  [generated/cluster/HDBSCAN.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L120)
 
 #### Signature
 
@@ -355,4 +355,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: generated/cluster/HDBSCAN.ts:124
+Defined in: [generated/cluster/HDBSCAN.ts:124](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L124)

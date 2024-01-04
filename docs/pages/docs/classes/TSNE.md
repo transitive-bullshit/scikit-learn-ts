@@ -45,7 +45,7 @@ new TSNE(opts?: object): TSNE;
 
 [`TSNE`](TSNE.md)
 
-Defined in:  [generated/manifold/TSNE.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L27)
+Defined in:  [generated/manifold/TSNE.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L27)
 
 ## Methods
 
@@ -65,7 +65,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/TSNE.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L203)
+Defined in:  [generated/manifold/TSNE.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L203)
 
 ### fit()
 
@@ -89,7 +89,7 @@ fit(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/manifold/TSNE.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L220)
+Defined in:  [generated/manifold/TSNE.ts:220](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L220)
 
 ### fit\_transform()
 
@@ -113,7 +113,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/manifold/TSNE.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L257)
+Defined in:  [generated/manifold/TSNE.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L257)
 
 ### get\_feature\_names\_out()
 
@@ -138,7 +138,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/TSNE.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L297)
+Defined in:  [generated/manifold/TSNE.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L297)
 
 ### get\_metadata\_routing()
 
@@ -163,7 +163,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/TSNE.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L332)
+Defined in:  [generated/manifold/TSNE.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L332)
 
 ### init()
 
@@ -187,7 +187,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/manifold/TSNE.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L144)
+Defined in:  [generated/manifold/TSNE.ts:144](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L144)
 
 ### set\_output()
 
@@ -212,7 +212,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/manifold/TSNE.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L367)
+Defined in:  [generated/manifold/TSNE.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L367)
 
 ## Properties
 
@@ -220,31 +220,31 @@ Defined in:  [generated/manifold/TSNE.ts:367](https://github.com/transitive-bull
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/TSNE.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L25)
+Defined in:  [generated/manifold/TSNE.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/manifold/TSNE.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L24)
+Defined in:  [generated/manifold/TSNE.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/manifold/TSNE.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L23)
+Defined in:  [generated/manifold/TSNE.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/manifold/TSNE.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L20)
+Defined in:  [generated/manifold/TSNE.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/manifold/TSNE.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L21)
+Defined in:  [generated/manifold/TSNE.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L21)
 
 ## Accessors
 
@@ -262,7 +262,7 @@ embedding_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/manifold/TSNE.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L400)
+Defined in: [generated/manifold/TSNE.ts:400](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L400)
 
 ### feature\_names\_in\_
 
@@ -278,7 +278,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/manifold/TSNE.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L469)
+Defined in: [generated/manifold/TSNE.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L469)
 
 ### kl\_divergence\_
 
@@ -294,7 +294,7 @@ kl_divergence_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/TSNE.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L423)
+Defined in: [generated/manifold/TSNE.ts:423](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L423)
 
 ### learning\_rate\_
 
@@ -310,7 +310,7 @@ learning_rate_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/TSNE.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L494)
+Defined in: [generated/manifold/TSNE.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L494)
 
 ### n\_features\_in\_
 
@@ -326,7 +326,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/TSNE.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L446)
+Defined in: [generated/manifold/TSNE.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L446)
 
 ### n\_iter\_
 
@@ -342,7 +342,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/manifold/TSNE.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L517)
+Defined in: [generated/manifold/TSNE.ts:517](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L517)
 
 ### py
 
@@ -356,7 +356,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/manifold/TSNE.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L131)
+Defined in:  [generated/manifold/TSNE.ts:131](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L131)
 
 #### Signature
 
@@ -374,4 +374,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/manifold/TSNE.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/manifold/TSNE.ts#L135)
+Defined in: [generated/manifold/TSNE.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/manifold/TSNE.ts#L135)

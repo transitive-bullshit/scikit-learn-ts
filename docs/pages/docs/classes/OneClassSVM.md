@@ -40,7 +40,7 @@ new OneClassSVM(opts?: object): OneClassSVM;
 
 [`OneClassSVM`](OneClassSVM.md)
 
-Defined in:  [generated/svm/OneClassSVM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L27)
+Defined in:  [generated/svm/OneClassSVM.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L27)
 
 ## Methods
 
@@ -67,7 +67,7 @@ decision_function(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L182)
+Defined in:  [generated/svm/OneClassSVM.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L182)
 
 ### dispose()
 
@@ -85,7 +85,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L163)
+Defined in:  [generated/svm/OneClassSVM.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L163)
 
 ### fit()
 
@@ -110,7 +110,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L215)
+Defined in:  [generated/svm/OneClassSVM.ts:215](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L215)
 
 ### fit\_predict()
 
@@ -136,7 +136,7 @@ fit_predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L264)
+Defined in:  [generated/svm/OneClassSVM.ts:264](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L264)
 
 ### get\_metadata\_routing()
 
@@ -161,7 +161,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L304)
+Defined in:  [generated/svm/OneClassSVM.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L304)
 
 ### init()
 
@@ -185,7 +185,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L115)
+Defined in:  [generated/svm/OneClassSVM.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L115)
 
 ### predict()
 
@@ -210,7 +210,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L341)
+Defined in:  [generated/svm/OneClassSVM.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L341)
 
 ### score\_samples()
 
@@ -233,7 +233,7 @@ score_samples(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L374)
+Defined in:  [generated/svm/OneClassSVM.ts:374](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L374)
 
 ### set\_fit\_request()
 
@@ -260,7 +260,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/svm/OneClassSVM.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L411)
+Defined in:  [generated/svm/OneClassSVM.ts:411](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L411)
 
 ## Properties
 
@@ -268,31 +268,31 @@ Defined in:  [generated/svm/OneClassSVM.ts:411](https://github.com/transitive-bu
 
 > `boolean`  = `false`
 
-Defined in:  [generated/svm/OneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L25)
+Defined in:  [generated/svm/OneClassSVM.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L25)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/svm/OneClassSVM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L24)
+Defined in:  [generated/svm/OneClassSVM.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L24)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/svm/OneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L23)
+Defined in:  [generated/svm/OneClassSVM.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L23)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/svm/OneClassSVM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L20)
+Defined in:  [generated/svm/OneClassSVM.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L20)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/svm/OneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L21)
+Defined in:  [generated/svm/OneClassSVM.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L21)
 
 ## Accessors
 
@@ -310,7 +310,7 @@ class_weight_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L444)
+Defined in: [generated/svm/OneClassSVM.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L444)
 
 ### dual\_coef\_
 
@@ -326,7 +326,7 @@ dual_coef_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/svm/OneClassSVM.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L469)
+Defined in: [generated/svm/OneClassSVM.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L469)
 
 ### feature\_names\_in\_
 
@@ -342,7 +342,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L569)
+Defined in: [generated/svm/OneClassSVM.ts:569](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L569)
 
 ### fit\_status\_
 
@@ -358,7 +358,7 @@ fit_status_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L494)
+Defined in: [generated/svm/OneClassSVM.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L494)
 
 ### intercept\_
 
@@ -374,7 +374,7 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L519)
+Defined in: [generated/svm/OneClassSVM.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L519)
 
 ### n\_features\_in\_
 
@@ -390,7 +390,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L544)
+Defined in: [generated/svm/OneClassSVM.ts:544](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L544)
 
 ### n\_iter\_
 
@@ -406,7 +406,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L594)
+Defined in: [generated/svm/OneClassSVM.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L594)
 
 ### offset\_
 
@@ -422,7 +422,7 @@ offset_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L617)
+Defined in: [generated/svm/OneClassSVM.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L617)
 
 ### py
 
@@ -436,7 +436,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/svm/OneClassSVM.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L102)
+Defined in:  [generated/svm/OneClassSVM.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L102)
 
 #### Signature
 
@@ -454,7 +454,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/svm/OneClassSVM.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L106)
+Defined in: [generated/svm/OneClassSVM.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L106)
 
 ### shape\_fit\_
 
@@ -470,7 +470,7 @@ shape_fit_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in: [generated/svm/OneClassSVM.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L640)
+Defined in: [generated/svm/OneClassSVM.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L640)
 
 ### support\_
 
@@ -486,7 +486,7 @@ support_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/svm/OneClassSVM.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L665)
+Defined in: [generated/svm/OneClassSVM.ts:665](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L665)
 
 ### support\_vectors\_
 
@@ -502,4 +502,4 @@ support_vectors_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/svm/OneClassSVM.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/svm/OneClassSVM.ts#L688)
+Defined in: [generated/svm/OneClassSVM.ts:688](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/svm/OneClassSVM.ts#L688)

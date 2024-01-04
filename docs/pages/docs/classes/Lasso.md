@@ -36,7 +36,7 @@ new Lasso(opts?: object): Lasso;
 
 [`Lasso`](Lasso.md)
 
-Defined in:  [generated/linear\_model/Lasso.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L23)
+Defined in:  [generated/linear\_model/Lasso.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L23)
 
 ## Methods
 
@@ -56,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L160)
+Defined in:  [generated/linear\_model/Lasso.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L160)
 
 ### fit()
 
@@ -82,7 +82,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L177)
+Defined in:  [generated/linear\_model/Lasso.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L177)
 
 ### get\_metadata\_routing()
 
@@ -107,7 +107,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L235)
+Defined in:  [generated/linear\_model/Lasso.ts:235](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L235)
 
 ### init()
 
@@ -131,7 +131,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L111)
+Defined in:  [generated/linear\_model/Lasso.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L111)
 
 ### path()
 
@@ -172,7 +172,7 @@ path(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L272)
+Defined in:  [generated/linear\_model/Lasso.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L272)
 
 ### predict()
 
@@ -195,7 +195,7 @@ predict(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L413)
+Defined in:  [generated/linear\_model/Lasso.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L413)
 
 ### score()
 
@@ -222,7 +222,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L446)
+Defined in:  [generated/linear\_model/Lasso.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L446)
 
 ### set\_fit\_request()
 
@@ -250,7 +250,7 @@ set_fit_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L497)
+Defined in:  [generated/linear\_model/Lasso.ts:497](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L497)
 
 ### set\_score\_request()
 
@@ -277,7 +277,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/linear\_model/Lasso.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L539)
+Defined in:  [generated/linear\_model/Lasso.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L539)
 
 ## Properties
 
@@ -285,31 +285,31 @@ Defined in:  [generated/linear\_model/Lasso.ts:539](https://github.com/transitiv
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/Lasso.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L21)
+Defined in:  [generated/linear\_model/Lasso.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/linear\_model/Lasso.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L20)
+Defined in:  [generated/linear\_model/Lasso.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/linear\_model/Lasso.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L19)
+Defined in:  [generated/linear\_model/Lasso.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/linear\_model/Lasso.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L16)
+Defined in:  [generated/linear\_model/Lasso.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/linear\_model/Lasso.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L17)
+Defined in:  [generated/linear\_model/Lasso.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L17)
 
 ## Accessors
 
@@ -327,7 +327,7 @@ coef_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/Lasso.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L572)
+Defined in: [generated/linear\_model/Lasso.ts:572](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L572)
 
 ### dual\_gap\_
 
@@ -343,7 +343,7 @@ dual_gap_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/Lasso.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L594)
+Defined in: [generated/linear\_model/Lasso.ts:594](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L594)
 
 ### feature\_names\_in\_
 
@@ -359,7 +359,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/linear\_model/Lasso.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L685)
+Defined in: [generated/linear\_model/Lasso.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L685)
 
 ### intercept\_
 
@@ -375,7 +375,7 @@ intercept_(): Promise<number | ArrayLike>;
 
 `Promise`\<`number` \| `ArrayLike`\>
 
-Defined in: [generated/linear\_model/Lasso.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L617)
+Defined in: [generated/linear\_model/Lasso.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L617)
 
 ### n\_features\_in\_
 
@@ -391,7 +391,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/Lasso.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L662)
+Defined in: [generated/linear\_model/Lasso.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L662)
 
 ### n\_iter\_
 
@@ -407,7 +407,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/linear\_model/Lasso.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L640)
+Defined in: [generated/linear\_model/Lasso.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L640)
 
 ### py
 
@@ -421,7 +421,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/linear\_model/Lasso.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L98)
+Defined in:  [generated/linear\_model/Lasso.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L98)
 
 #### Signature
 
@@ -439,4 +439,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/linear\_model/Lasso.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/linear_model/Lasso.ts#L102)
+Defined in: [generated/linear\_model/Lasso.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/linear_model/Lasso.ts#L102)

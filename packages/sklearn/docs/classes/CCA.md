@@ -31,7 +31,7 @@ new CCA(opts?: object): CCA;
 
 [`CCA`](CCA.md)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L23)
+Defined in:  [generated/cross\_decomposition/CCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L23)
 
 ## Methods
 
@@ -51,7 +51,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L119)
+Defined in:  [generated/cross\_decomposition/CCA.ts:119](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L119)
 
 ### fit()
 
@@ -75,7 +75,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L136)
+Defined in:  [generated/cross\_decomposition/CCA.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L136)
 
 ### fit\_transform()
 
@@ -99,7 +99,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L175)
+Defined in:  [generated/cross\_decomposition/CCA.ts:175](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L175)
 
 ### get\_feature\_names\_out()
 
@@ -124,7 +124,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L217)
+Defined in:  [generated/cross\_decomposition/CCA.ts:217](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L217)
 
 ### get\_metadata\_routing()
 
@@ -149,7 +149,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L252)
+Defined in:  [generated/cross\_decomposition/CCA.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L252)
 
 ### init()
 
@@ -173,7 +173,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L76)
+Defined in:  [generated/cross\_decomposition/CCA.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L76)
 
 ### inverse\_transform()
 
@@ -197,7 +197,7 @@ inverse_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L285)
+Defined in:  [generated/cross\_decomposition/CCA.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L285)
 
 ### predict()
 
@@ -221,7 +221,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L325)
+Defined in:  [generated/cross\_decomposition/CCA.ts:325](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L325)
 
 ### score()
 
@@ -248,7 +248,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L369)
+Defined in:  [generated/cross\_decomposition/CCA.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L369)
 
 ### set\_output()
 
@@ -273,7 +273,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L418)
+Defined in:  [generated/cross\_decomposition/CCA.ts:418](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L418)
 
 ### set\_predict\_request()
 
@@ -300,7 +300,7 @@ set_predict_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L455)
+Defined in:  [generated/cross\_decomposition/CCA.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L455)
 
 ### set\_score\_request()
 
@@ -327,7 +327,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L492)
+Defined in:  [generated/cross\_decomposition/CCA.ts:492](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L492)
 
 ### set\_transform\_request()
 
@@ -354,7 +354,7 @@ set_transform_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L529)
+Defined in:  [generated/cross\_decomposition/CCA.ts:529](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L529)
 
 ### transform()
 
@@ -379,7 +379,7 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L562)
+Defined in:  [generated/cross\_decomposition/CCA.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L562)
 
 ## Properties
 
@@ -387,31 +387,31 @@ Defined in:  [generated/cross\_decomposition/CCA.ts:562](https://github.com/tran
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L21)
+Defined in:  [generated/cross\_decomposition/CCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L20)
+Defined in:  [generated/cross\_decomposition/CCA.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L19)
+Defined in:  [generated/cross\_decomposition/CCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L16)
+Defined in:  [generated/cross\_decomposition/CCA.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L17)
+Defined in:  [generated/cross\_decomposition/CCA.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L17)
 
 ## Accessors
 
@@ -429,9 +429,9 @@ coef_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L747)
+Defined in:  [generated/cross\_decomposition/CCA.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L747)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L747)
+Defined in:  [generated/cross\_decomposition/CCA.ts:747](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L747)
 
 ### feature\_names\_in\_
 
@@ -447,9 +447,9 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:836](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L836)
+Defined in:  [generated/cross\_decomposition/CCA.ts:836](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L836)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:836](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L836)
+Defined in:  [generated/cross\_decomposition/CCA.ts:836](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L836)
 
 ### intercept\_
 
@@ -465,9 +465,9 @@ intercept_(): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L769)
+Defined in:  [generated/cross\_decomposition/CCA.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L769)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L769)
+Defined in:  [generated/cross\_decomposition/CCA.ts:769](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L769)
 
 ### n\_features\_in\_
 
@@ -483,9 +483,9 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:813](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L813)
+Defined in:  [generated/cross\_decomposition/CCA.ts:813](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L813)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:813](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L813)
+Defined in:  [generated/cross\_decomposition/CCA.ts:813](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L813)
 
 ### n\_iter\_
 
@@ -501,9 +501,9 @@ n_iter_(): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L791)
+Defined in:  [generated/cross\_decomposition/CCA.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L791)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L791)
+Defined in:  [generated/cross\_decomposition/CCA.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L791)
 
 ### py
 
@@ -517,7 +517,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L63)
+Defined in:  [generated/cross\_decomposition/CCA.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L63)
 
 #### Signature
 
@@ -535,9 +535,9 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L67)
+Defined in:  [generated/cross\_decomposition/CCA.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L67)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L63) [generated/cross\_decomposition/CCA.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L67)
+Defined in:  [generated/cross\_decomposition/CCA.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L63) [generated/cross\_decomposition/CCA.ts:67](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L67)
 
 ### x\_loadings\_
 
@@ -553,9 +553,9 @@ x_loadings_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L655)
+Defined in:  [generated/cross\_decomposition/CCA.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L655)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L655)
+Defined in:  [generated/cross\_decomposition/CCA.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L655)
 
 ### x\_rotations\_
 
@@ -571,9 +571,9 @@ x_rotations_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L701)
+Defined in:  [generated/cross\_decomposition/CCA.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L701)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L701)
+Defined in:  [generated/cross\_decomposition/CCA.ts:701](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L701)
 
 ### x\_weights\_
 
@@ -589,9 +589,9 @@ x_weights_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L611)
+Defined in:  [generated/cross\_decomposition/CCA.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L611)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L611)
+Defined in:  [generated/cross\_decomposition/CCA.ts:611](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L611)
 
 ### y\_loadings\_
 
@@ -607,9 +607,9 @@ y_loadings_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L678)
+Defined in:  [generated/cross\_decomposition/CCA.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L678)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L678)
+Defined in:  [generated/cross\_decomposition/CCA.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L678)
 
 ### y\_rotations\_
 
@@ -625,9 +625,9 @@ y_rotations_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L724)
+Defined in:  [generated/cross\_decomposition/CCA.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L724)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L724)
+Defined in:  [generated/cross\_decomposition/CCA.ts:724](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L724)
 
 ### y\_weights\_
 
@@ -643,6 +643,6 @@ y_weights_(): Promise<ArrayLike[]>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)[]\>
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L633)
+Defined in:  [generated/cross\_decomposition/CCA.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L633)
 
-Defined in:  [generated/cross\_decomposition/CCA.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L633)
+Defined in:  [generated/cross\_decomposition/CCA.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L633)

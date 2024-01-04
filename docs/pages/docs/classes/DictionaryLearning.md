@@ -46,7 +46,7 @@ new DictionaryLearning(opts?: object): DictionaryLearning;
 
 [`DictionaryLearning`](DictionaryLearning.md)
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L25)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L25)
 
 ## Methods
 
@@ -66,7 +66,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L228)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:228](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L228)
 
 ### fit()
 
@@ -90,7 +90,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L245)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L245)
 
 ### fit\_transform()
 
@@ -114,7 +114,7 @@ fit_transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L285)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:285](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L285)
 
 ### get\_feature\_names\_out()
 
@@ -139,7 +139,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L329)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L329)
 
 ### get\_metadata\_routing()
 
@@ -164,7 +164,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L369)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:369](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L369)
 
 ### init()
 
@@ -188,7 +188,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L158)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L158)
 
 ### set\_output()
 
@@ -213,7 +213,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L409)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:409](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L409)
 
 ### transform()
 
@@ -238,7 +238,7 @@ transform(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L446)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L446)
 
 ## Properties
 
@@ -246,31 +246,31 @@ Defined in:  [generated/decomposition/DictionaryLearning.ts:446](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L23)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L22)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L21)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L18)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L19)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L19)
 
 ## Accessors
 
@@ -288,7 +288,7 @@ components_(): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in: [generated/decomposition/DictionaryLearning.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L481)
+Defined in: [generated/decomposition/DictionaryLearning.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L481)
 
 ### error\_
 
@@ -304,7 +304,7 @@ error_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/decomposition/DictionaryLearning.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L508)
+Defined in: [generated/decomposition/DictionaryLearning.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L508)
 
 ### feature\_names\_in\_
 
@@ -320,7 +320,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/decomposition/DictionaryLearning.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L562)
+Defined in: [generated/decomposition/DictionaryLearning.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L562)
 
 ### n\_features\_in\_
 
@@ -336,7 +336,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/DictionaryLearning.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L535)
+Defined in: [generated/decomposition/DictionaryLearning.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L535)
 
 ### n\_iter\_
 
@@ -352,7 +352,7 @@ n_iter_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/decomposition/DictionaryLearning.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L589)
+Defined in: [generated/decomposition/DictionaryLearning.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L589)
 
 ### py
 
@@ -366,7 +366,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/decomposition/DictionaryLearning.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L145)
+Defined in:  [generated/decomposition/DictionaryLearning.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L145)
 
 #### Signature
 
@@ -384,4 +384,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/decomposition/DictionaryLearning.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L149)
+Defined in: [generated/decomposition/DictionaryLearning.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L149)

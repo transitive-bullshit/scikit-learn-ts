@@ -35,7 +35,7 @@ new StratifiedKFold(opts?: object): StratifiedKFold;
 
 [`StratifiedKFold`](StratifiedKFold.md)
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L29)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L29)
 
 ## Methods
 
@@ -55,7 +55,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L108)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L108)
 
 ### get\_metadata\_routing()
 
@@ -80,7 +80,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L127)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L127)
 
 ### get\_n\_splits()
 
@@ -105,7 +105,7 @@ get_n_splits(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L162)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L162)
 
 ### init()
 
@@ -129,7 +129,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L66)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L66)
 
 ### split()
 
@@ -154,7 +154,7 @@ split(opts: object): Promise<ArrayLike>;
 
 `Promise`\<[`ArrayLike`](../types/ArrayLike.md)\>
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L205)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:205](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L205)
 
 ## Properties
 
@@ -162,31 +162,31 @@ Defined in:  [generated/model\_selection/StratifiedKFold.ts:205](https://github.
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L27)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L27)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L26)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L26)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L25)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L25)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L22)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L22)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L23)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L23)
 
 ## Accessors
 
@@ -202,7 +202,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L53)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L53)
 
 #### Signature
 
@@ -220,6 +220,6 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L57)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L57)
 
-Defined in:  [generated/model\_selection/StratifiedKFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L53) [generated/model\_selection/StratifiedKFold.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L57)
+Defined in:  [generated/model\_selection/StratifiedKFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L53) [generated/model\_selection/StratifiedKFold.ts:57](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/model_selection/StratifiedKFold.ts#L57)

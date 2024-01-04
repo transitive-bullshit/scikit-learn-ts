@@ -36,7 +36,7 @@ new KNeighborsRegressor(opts?: object): KNeighborsRegressor;
 
 [`KNeighborsRegressor`](KNeighborsRegressor.md)
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L25)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L25)
 
 ## Methods
 
@@ -56,7 +56,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L149)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L149)
 
 ### fit()
 
@@ -80,7 +80,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L166)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L166)
 
 ### get\_metadata\_routing()
 
@@ -105,7 +105,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L210)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L210)
 
 ### init()
 
@@ -129,7 +129,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L99)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L99)
 
 ### kneighbors()
 
@@ -156,7 +156,7 @@ kneighbors(opts: object): Promise<ArrayLike[]>;
 
 `Promise`\<`ArrayLike`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L250)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L250)
 
 ### kneighbors\_graph()
 
@@ -181,7 +181,7 @@ kneighbors_graph(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L301)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L301)
 
 ### predict()
 
@@ -204,7 +204,7 @@ predict(opts: object): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L353)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L353)
 
 ### score()
 
@@ -231,7 +231,7 @@ score(opts: object): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L390)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L390)
 
 ### set\_score\_request()
 
@@ -258,7 +258,7 @@ set_score_request(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L443)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:443](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L443)
 
 ## Properties
 
@@ -266,31 +266,31 @@ Defined in:  [generated/neighbors/KNeighborsRegressor.ts:443](https://github.com
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L23)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L23)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L22)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L22)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L21)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L21)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L18)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L18)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L19)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L19)
 
 ## Accessors
 
@@ -308,7 +308,7 @@ effective_metric_(): Promise<string>;
 
 `Promise`\<`string`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L481)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:481](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L481)
 
 ### effective\_metric\_params\_
 
@@ -324,7 +324,7 @@ effective_metric_params_(): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L508)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L508)
 
 ### feature\_names\_in\_
 
@@ -340,7 +340,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L562)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L562)
 
 ### n\_features\_in\_
 
@@ -356,7 +356,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L535)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:535](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L535)
 
 ### n\_samples\_fit\_
 
@@ -372,7 +372,7 @@ n_samples_fit_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L589)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:589](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L589)
 
 ### py
 
@@ -386,7 +386,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/neighbors/KNeighborsRegressor.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L86)
+Defined in:  [generated/neighbors/KNeighborsRegressor.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L86)
 
 #### Signature
 
@@ -404,4 +404,4 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/neighbors/KNeighborsRegressor.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L90)
+Defined in: [generated/neighbors/KNeighborsRegressor.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/neighbors/KNeighborsRegressor.ts#L90)

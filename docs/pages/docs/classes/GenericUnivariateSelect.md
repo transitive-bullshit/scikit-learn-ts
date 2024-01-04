@@ -29,7 +29,7 @@ new GenericUnivariateSelect(opts?: object): GenericUnivariateSelect;
 
 [`GenericUnivariateSelect`](GenericUnivariateSelect.md)
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L23)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L23)
 
 ## Methods
 
@@ -49,7 +49,7 @@ dispose(): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L106)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L106)
 
 ### fit()
 
@@ -73,7 +73,7 @@ fit(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L123)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L123)
 
 ### fit\_transform()
 
@@ -100,7 +100,7 @@ fit_transform(opts: object): Promise<any[]>;
 
 `Promise`\<`any`[]\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L167)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L167)
 
 ### get\_feature\_names\_out()
 
@@ -123,7 +123,7 @@ get_feature_names_out(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L219)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L219)
 
 ### get\_metadata\_routing()
 
@@ -148,7 +148,7 @@ get_metadata_routing(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L259)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:259](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L259)
 
 ### get\_support()
 
@@ -171,7 +171,7 @@ get_support(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L297)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:297](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L297)
 
 ### init()
 
@@ -195,7 +195,7 @@ init(py: PythonBridge): Promise<void>;
 
 `Promise`\<`void`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L60)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:60](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L60)
 
 ### inverse\_transform()
 
@@ -218,7 +218,7 @@ inverse_transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L336)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L336)
 
 ### set\_output()
 
@@ -243,7 +243,7 @@ set_output(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L376)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L376)
 
 ### transform()
 
@@ -266,7 +266,7 @@ transform(opts: object): Promise<any>;
 
 `Promise`\<`any`\>
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L413)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:413](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L413)
 
 ## Properties
 
@@ -274,31 +274,31 @@ Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:413](https
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L21)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L21)
 
 ### \_isInitialized
 
 > `boolean`  = `false`
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L20)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L20)
 
 ### \_py
 
 > `PythonBridge`
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L19)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L19)
 
 ### id
 
 > `string`
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L16)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L16)
 
 ### opts
 
 > `any`
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L17)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L17)
 
 ## Accessors
 
@@ -316,7 +316,7 @@ feature_names_in_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L531)
+Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:531](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L531)
 
 ### n\_features\_in\_
 
@@ -332,7 +332,7 @@ n_features_in_(): Promise<number>;
 
 `Promise`\<`number`\>
 
-Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L504)
+Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L504)
 
 ### pvalues\_
 
@@ -348,7 +348,7 @@ pvalues_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L477)
+Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:477](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L477)
 
 ### py
 
@@ -362,7 +362,7 @@ py(): PythonBridge;
 
 `PythonBridge`
 
-Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L47)
+Defined in:  [generated/feature\_selection/GenericUnivariateSelect.ts:47](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L47)
 
 #### Signature
 
@@ -380,7 +380,7 @@ py(pythonBridge: PythonBridge): void;
 
 `void`
 
-Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L51)
+Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:51](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L51)
 
 ### scores\_
 
@@ -396,4 +396,4 @@ scores_(): Promise<ArrayLike>;
 
 `Promise`\<`ArrayLike`\>
 
-Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0466da7/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L450)
+Defined in: [generated/feature\_selection/GenericUnivariateSelect.ts:450](https://github.com/transitive-bullshit/scikit-learn-ts/blob/f3d7d2d/packages/sklearn/src/generated/feature_selection/GenericUnivariateSelect.ts#L450)
