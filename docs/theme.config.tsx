@@ -33,6 +33,7 @@ const config: DocsThemeConfig = {
   editLink: {
     content: 'Edit this page on GitHub'
   },
+  // TODO
   useNextSeoProps() {
     const { asPath } = useRouter()
     if (asPath === '/') {
