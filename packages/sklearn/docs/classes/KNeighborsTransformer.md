@@ -86,7 +86,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L25)
+[generated/neighbors/KNeighborsTransformer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L25)
 
 ## Properties
 
@@ -96,7 +96,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L23)
+[generated/neighbors/KNeighborsTransformer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L23)
 
 ***
 
@@ -106,7 +106,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L22)
+[generated/neighbors/KNeighborsTransformer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L22)
 
 ***
 
@@ -116,7 +116,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L21)
+[generated/neighbors/KNeighborsTransformer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L21)
 
 ***
 
@@ -126,7 +126,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L18)
+[generated/neighbors/KNeighborsTransformer.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L18)
 
 ***
 
@@ -136,7 +136,7 @@ Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise\_dista
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L19)
+[generated/neighbors/KNeighborsTransformer.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L19)
 
 ## Accessors
 
@@ -154,7 +154,7 @@ The distance metric used. It will be same as the `metric` parameter or a synonym
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L489)
+[generated/neighbors/KNeighborsTransformer.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L489)
 
 ***
 
@@ -172,7 +172,7 @@ Additional keyword arguments for the metric function. For most metrics will be s
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L516)
+[generated/neighbors/KNeighborsTransformer.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L516)
 
 ***
 
@@ -190,7 +190,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L570)
+[generated/neighbors/KNeighborsTransformer.ts:570](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L570)
 
 ***
 
@@ -208,7 +208,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L543)
+[generated/neighbors/KNeighborsTransformer.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L543)
 
 ***
 
@@ -226,7 +226,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L597)
+[generated/neighbors/KNeighborsTransformer.ts:597](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L597)
 
 ***
 
@@ -254,7 +254,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L86)
+[generated/neighbors/KNeighborsTransformer.ts:86](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L86)
 
 ## Methods
 
@@ -272,7 +272,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L142)
+[generated/neighbors/KNeighborsTransformer.ts:142](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L142)
 
 ***
 
@@ -300,7 +300,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L159)
+[generated/neighbors/KNeighborsTransformer.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L159)
 
 ***
 
@@ -330,7 +330,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L200)
+[generated/neighbors/KNeighborsTransformer.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L200)
 
 ***
 
@@ -356,7 +356,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L243)
+[generated/neighbors/KNeighborsTransformer.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L243)
 
 ***
 
@@ -382,7 +382,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L281)
+[generated/neighbors/KNeighborsTransformer.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L281)
 
 ***
 
@@ -404,7 +404,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L99)
+[generated/neighbors/KNeighborsTransformer.ts:99](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L99)
 
 ***
 
@@ -442,7 +442,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L319)
+[generated/neighbors/KNeighborsTransformer.ts:319](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L319)
 
 ***
 
@@ -478,7 +478,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L367)
+[generated/neighbors/KNeighborsTransformer.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L367)
 
 ***
 
@@ -504,7 +504,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L417)
+[generated/neighbors/KNeighborsTransformer.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L417)
 
 ***
 
@@ -528,4 +528,4 @@ Sample data.
 
 #### Defined in
 
-[generated/neighbors/KNeighborsTransformer.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L453)
+[generated/neighbors/KNeighborsTransformer.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/KNeighborsTransformer.ts#L453)

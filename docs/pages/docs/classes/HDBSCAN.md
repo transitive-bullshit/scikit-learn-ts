@@ -120,7 +120,7 @@ Which, if any, cluster centers to compute and store. The options are:
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L25)
+[generated/cluster/HDBSCAN.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L25)
 
 ## Properties
 
@@ -130,7 +130,7 @@ Which, if any, cluster centers to compute and store. The options are:
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L23)
+[generated/cluster/HDBSCAN.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L23)
 
 ***
 
@@ -140,7 +140,7 @@ Which, if any, cluster centers to compute and store. The options are:
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L22)
+[generated/cluster/HDBSCAN.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L22)
 
 ***
 
@@ -150,7 +150,7 @@ Which, if any, cluster centers to compute and store. The options are:
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L21)
+[generated/cluster/HDBSCAN.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L21)
 
 ***
 
@@ -160,7 +160,7 @@ Which, if any, cluster centers to compute and store. The options are:
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L18)
+[generated/cluster/HDBSCAN.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L18)
 
 ***
 
@@ -170,7 +170,7 @@ Which, if any, cluster centers to compute and store. The options are:
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L19)
+[generated/cluster/HDBSCAN.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L19)
 
 ## Accessors
 
@@ -190,7 +190,7 @@ Note that `n\_clusters` only counts non-outlier clusters. That is to say, the `\
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L441)
+[generated/cluster/HDBSCAN.ts:441](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L441)
 
 ***
 
@@ -208,7 +208,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L414)
+[generated/cluster/HDBSCAN.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L414)
 
 ***
 
@@ -226,7 +226,7 @@ Cluster labels for each point in the dataset given to fit. Outliers are labeled 
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L341)
+[generated/cluster/HDBSCAN.ts:341](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L341)
 
 ***
 
@@ -246,7 +246,7 @@ Note that `n\_clusters` only counts non-outlier clusters. That is to say, the `\
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L466)
+[generated/cluster/HDBSCAN.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L466)
 
 ***
 
@@ -264,7 +264,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L389)
+[generated/cluster/HDBSCAN.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L389)
 
 ***
 
@@ -282,7 +282,7 @@ The strength with which each sample is a member of its assigned cluster.
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L364)
+[generated/cluster/HDBSCAN.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L364)
 
 ***
 
@@ -310,7 +310,7 @@ The strength with which each sample is a member of its assigned cluster.
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L120)
+[generated/cluster/HDBSCAN.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L120)
 
 ## Methods
 
@@ -348,7 +348,7 @@ Clusters smaller than this value with be called ‘noise’ and remain uncluster
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L194)
+[generated/cluster/HDBSCAN.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L194)
 
 ***
 
@@ -366,7 +366,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L171)
+[generated/cluster/HDBSCAN.ts:171](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L171)
 
 ***
 
@@ -394,7 +394,7 @@ Ignored.
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L233)
+[generated/cluster/HDBSCAN.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L233)
 
 ***
 
@@ -422,7 +422,7 @@ Ignored.
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L270)
+[generated/cluster/HDBSCAN.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L270)
 
 ***
 
@@ -448,7 +448,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L309)
+[generated/cluster/HDBSCAN.ts:309](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L309)
 
 ***
 
@@ -470,4 +470,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/HDBSCAN.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L133)
+[generated/cluster/HDBSCAN.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/HDBSCAN.ts#L133)

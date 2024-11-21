@@ -60,7 +60,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L33)
+[generated/decomposition/IncrementalPCA.ts:33](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L33)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L31)
+[generated/decomposition/IncrementalPCA.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L31)
 
 ***
 
@@ -80,7 +80,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L30)
+[generated/decomposition/IncrementalPCA.ts:30](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L30)
 
 ***
 
@@ -90,7 +90,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L29)
+[generated/decomposition/IncrementalPCA.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L29)
 
 ***
 
@@ -100,7 +100,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L26)
+[generated/decomposition/IncrementalPCA.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L26)
 
 ***
 
@@ -110,7 +110,7 @@ Whitening will remove some information from the transformed signal (the relative
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L27)
+[generated/decomposition/IncrementalPCA.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L27)
 
 ## Accessors
 
@@ -128,7 +128,7 @@ Inferred batch size from `batch\_size`.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L761)
+[generated/decomposition/IncrementalPCA.ts:761](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L761)
 
 ***
 
@@ -146,7 +146,7 @@ Principal axes in feature space, representing the directions of maximum variance
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L540)
+[generated/decomposition/IncrementalPCA.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L540)
 
 ***
 
@@ -164,7 +164,7 @@ Variance explained by each of the selected components.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L565)
+[generated/decomposition/IncrementalPCA.ts:565](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L565)
 
 ***
 
@@ -182,7 +182,7 @@ Percentage of variance explained by each of the selected components. If all comp
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L590)
+[generated/decomposition/IncrementalPCA.ts:590](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L590)
 
 ***
 
@@ -200,7 +200,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:811](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L811)
+[generated/decomposition/IncrementalPCA.ts:811](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L811)
 
 ***
 
@@ -218,7 +218,7 @@ Per-feature empirical mean, aggregate over calls to `partial\_fit`.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L640)
+[generated/decomposition/IncrementalPCA.ts:640](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L640)
 
 ***
 
@@ -236,7 +236,7 @@ The estimated number of components. Relevant when `n\_components=None`.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L711)
+[generated/decomposition/IncrementalPCA.ts:711](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L711)
 
 ***
 
@@ -254,7 +254,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L786)
+[generated/decomposition/IncrementalPCA.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L786)
 
 ***
 
@@ -272,7 +272,7 @@ The number of samples processed by the estimator. Will be reset on new calls to 
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L736)
+[generated/decomposition/IncrementalPCA.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L736)
 
 ***
 
@@ -290,7 +290,7 @@ The estimated noise covariance following the Probabilistic PCA model from Tippin
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L686)
+[generated/decomposition/IncrementalPCA.ts:686](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L686)
 
 ***
 
@@ -318,7 +318,7 @@ The estimated noise covariance following the Probabilistic PCA model from Tippin
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L64)
+[generated/decomposition/IncrementalPCA.ts:64](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L64)
 
 ***
 
@@ -336,7 +336,7 @@ The singular values corresponding to each of the selected components. The singul
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L615)
+[generated/decomposition/IncrementalPCA.ts:615](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L615)
 
 ***
 
@@ -354,7 +354,7 @@ Per-feature empirical variance, aggregate over calls to `partial\_fit`.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L663)
+[generated/decomposition/IncrementalPCA.ts:663](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L663)
 
 ## Methods
 
@@ -372,7 +372,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L116)
+[generated/decomposition/IncrementalPCA.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L116)
 
 ***
 
@@ -400,7 +400,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L133)
+[generated/decomposition/IncrementalPCA.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L133)
 
 ***
 
@@ -434,7 +434,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L172)
+[generated/decomposition/IncrementalPCA.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L172)
 
 ***
 
@@ -460,7 +460,7 @@ Estimated covariance of data.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L216)
+[generated/decomposition/IncrementalPCA.ts:216](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L216)
 
 ***
 
@@ -486,7 +486,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L250)
+[generated/decomposition/IncrementalPCA.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L250)
 
 ***
 
@@ -512,7 +512,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L286)
+[generated/decomposition/IncrementalPCA.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L286)
 
 ***
 
@@ -538,7 +538,7 @@ Estimated precision of data.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L322)
+[generated/decomposition/IncrementalPCA.ts:322](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L322)
 
 ***
 
@@ -560,7 +560,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L77)
+[generated/decomposition/IncrementalPCA.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L77)
 
 ***
 
@@ -586,7 +586,7 @@ New data, where `n\_samples` is the number of samples and `n\_components` is the
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L356)
+[generated/decomposition/IncrementalPCA.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L356)
 
 ***
 
@@ -622,7 +622,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L390)
+[generated/decomposition/IncrementalPCA.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L390)
 
 ***
 
@@ -648,7 +648,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L436)
+[generated/decomposition/IncrementalPCA.ts:436](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L436)
 
 ***
 
@@ -676,7 +676,7 @@ Metadata routing for `check\_input` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L472)
+[generated/decomposition/IncrementalPCA.ts:472](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L472)
 
 ***
 
@@ -702,4 +702,4 @@ New data, where `n\_samples` is the number of samples and `n\_features` is the n
 
 #### Defined in
 
-[generated/decomposition/IncrementalPCA.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L508)
+[generated/decomposition/IncrementalPCA.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/IncrementalPCA.ts#L508)

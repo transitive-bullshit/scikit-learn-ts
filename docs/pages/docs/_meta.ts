@@ -1,10 +1,6 @@
 export default {
-  "classes": "Classes",
-  "functions": "Functions",
-  "interfaces": {
-    "title": "Interfaces",
-    "display": "hidden"
-  },
-  "types": "Types",
-  "variables": "Constants"
+  classes: 'Classes',
+  functions: 'Functions',
+  'type-aliases': 'Types',
+  variables: 'Constants'
 }

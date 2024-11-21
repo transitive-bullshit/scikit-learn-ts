@@ -46,7 +46,7 @@ Default label to place on y axis.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
+[generated/inspection/DecisionBoundaryDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L25)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Default label to place on y axis.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
+[generated/inspection/DecisionBoundaryDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L23)
 
 ***
 
@@ -66,7 +66,7 @@ Default label to place on y axis.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
+[generated/inspection/DecisionBoundaryDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L22)
 
 ***
 
@@ -76,7 +76,7 @@ Default label to place on y axis.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
+[generated/inspection/DecisionBoundaryDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L21)
 
 ***
 
@@ -86,7 +86,7 @@ Default label to place on y axis.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
+[generated/inspection/DecisionBoundaryDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L18)
 
 ***
 
@@ -96,7 +96,7 @@ Default label to place on y axis.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
+[generated/inspection/DecisionBoundaryDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L19)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ Axes with decision boundary.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L307)
+[generated/inspection/DecisionBoundaryDisplay.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L307)
 
 ***
 
@@ -132,7 +132,7 @@ Figure containing the decision boundary.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L334)
+[generated/inspection/DecisionBoundaryDisplay.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L334)
 
 ***
 
@@ -160,7 +160,7 @@ Figure containing the decision boundary.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55)
+[generated/inspection/DecisionBoundaryDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L55)
 
 ***
 
@@ -178,7 +178,7 @@ If `plot\_method` is ‘contour’ or ‘contourf’, `surface\_` is a [`QuadCon
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L280)
+[generated/inspection/DecisionBoundaryDisplay.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L280)
 
 ## Methods
 
@@ -196,7 +196,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L111)
+[generated/inspection/DecisionBoundaryDisplay.ts:111](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L111)
 
 ***
 
@@ -278,7 +278,7 @@ The label used for the y-axis. If `undefined`, an attempt is made to extract a l
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L130)
+[generated/inspection/DecisionBoundaryDisplay.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L130)
 
 ***
 
@@ -300,7 +300,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L68)
+[generated/inspection/DecisionBoundaryDisplay.ts:68](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L68)
 
 ***
 
@@ -344,4 +344,4 @@ Overwrite the y-axis label.
 
 #### Defined in
 
-[generated/inspection/DecisionBoundaryDisplay.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L224)
+[generated/inspection/DecisionBoundaryDisplay.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/inspection/DecisionBoundaryDisplay.ts#L224)

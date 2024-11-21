@@ -92,7 +92,7 @@ Parameter for the Minkowski metric from [`sklearn.metrics.pairwise\_distances`](
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L23)
+[generated/neighbors/LocalOutlierFactor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L23)
 
 ## Properties
 
@@ -102,7 +102,7 @@ Parameter for the Minkowski metric from [`sklearn.metrics.pairwise\_distances`](
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L21)
+[generated/neighbors/LocalOutlierFactor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L21)
 
 ***
 
@@ -112,7 +112,7 @@ Parameter for the Minkowski metric from [`sklearn.metrics.pairwise\_distances`](
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L20)
+[generated/neighbors/LocalOutlierFactor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L20)
 
 ***
 
@@ -122,7 +122,7 @@ Parameter for the Minkowski metric from [`sklearn.metrics.pairwise\_distances`](
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L19)
+[generated/neighbors/LocalOutlierFactor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L19)
 
 ***
 
@@ -132,7 +132,7 @@ Parameter for the Minkowski metric from [`sklearn.metrics.pairwise\_distances`](
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L16)
+[generated/neighbors/LocalOutlierFactor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L16)
 
 ***
 
@@ -142,7 +142,7 @@ Parameter for the Minkowski metric from [`sklearn.metrics.pairwise\_distances`](
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L17)
+[generated/neighbors/LocalOutlierFactor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L17)
 
 ## Accessors
 
@@ -160,7 +160,7 @@ The effective metric used for the distance computation.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L579)
+[generated/neighbors/LocalOutlierFactor.ts:579](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L579)
 
 ***
 
@@ -178,7 +178,7 @@ The effective additional keyword arguments for the metric function.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L606)
+[generated/neighbors/LocalOutlierFactor.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L606)
 
 ***
 
@@ -196,7 +196,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L660)
+[generated/neighbors/LocalOutlierFactor.ts:660](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L660)
 
 ***
 
@@ -214,7 +214,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L633)
+[generated/neighbors/LocalOutlierFactor.ts:633](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L633)
 
 ***
 
@@ -232,7 +232,7 @@ The actual number of neighbors used for [`kneighbors`](#sklearn.neighbors.LocalO
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L525)
+[generated/neighbors/LocalOutlierFactor.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L525)
 
 ***
 
@@ -250,7 +250,7 @@ It is the number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L687)
+[generated/neighbors/LocalOutlierFactor.ts:687](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L687)
 
 ***
 
@@ -270,7 +270,7 @@ The local outlier factor (LOF) of a sample captures its supposed ‘degree of ab
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L498)
+[generated/neighbors/LocalOutlierFactor.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L498)
 
 ***
 
@@ -288,7 +288,7 @@ Offset used to obtain binary labels from the raw scores. Observations having a n
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L552)
+[generated/neighbors/LocalOutlierFactor.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L552)
 
 ***
 
@@ -316,7 +316,7 @@ Offset used to obtain binary labels from the raw scores. Observations having a n
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91)
+[generated/neighbors/LocalOutlierFactor.ts:91](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L91)
 
 ## Methods
 
@@ -344,7 +344,7 @@ The query sample or samples to compute the Local Outlier Factor w.r.t. the train
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L168)
+[generated/neighbors/LocalOutlierFactor.ts:168](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L168)
 
 ***
 
@@ -362,7 +362,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L147)
+[generated/neighbors/LocalOutlierFactor.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L147)
 
 ***
 
@@ -390,7 +390,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L204)
+[generated/neighbors/LocalOutlierFactor.ts:204](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L204)
 
 ***
 
@@ -420,7 +420,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L245)
+[generated/neighbors/LocalOutlierFactor.ts:245](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L245)
 
 ***
 
@@ -446,7 +446,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L288)
+[generated/neighbors/LocalOutlierFactor.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L288)
 
 ***
 
@@ -468,7 +468,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L104)
+[generated/neighbors/LocalOutlierFactor.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L104)
 
 ***
 
@@ -506,7 +506,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L326)
+[generated/neighbors/LocalOutlierFactor.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L326)
 
 ***
 
@@ -542,7 +542,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L372)
+[generated/neighbors/LocalOutlierFactor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L372)
 
 ***
 
@@ -568,7 +568,7 @@ The query sample or samples to compute the Local Outlier Factor w.r.t. the train
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L422)
+[generated/neighbors/LocalOutlierFactor.ts:422](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L422)
 
 ***
 
@@ -596,4 +596,4 @@ The query sample or samples to compute the Local Outlier Factor w.r.t. the train
 
 #### Defined in
 
-[generated/neighbors/LocalOutlierFactor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L460)
+[generated/neighbors/LocalOutlierFactor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/LocalOutlierFactor.ts#L460)

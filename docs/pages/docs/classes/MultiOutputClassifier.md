@@ -36,7 +36,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L23)
+[generated/multioutput/MultiOutputClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L21)
+[generated/multioutput/MultiOutputClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L20)
+[generated/multioutput/MultiOutputClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L19)
+[generated/multioutput/MultiOutputClassifier.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L16)
+[generated/multioutput/MultiOutputClassifier.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L17)
+[generated/multioutput/MultiOutputClassifier.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L17)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ Class labels.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L456)
+[generated/multioutput/MultiOutputClassifier.ts:456](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L456)
 
 ***
 
@@ -122,7 +122,7 @@ Estimators used for predictions.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L483)
+[generated/multioutput/MultiOutputClassifier.ts:483](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L483)
 
 ***
 
@@ -140,7 +140,7 @@ Names of features seen during fit. Only defined if the underlying estimators exp
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L537)
+[generated/multioutput/MultiOutputClassifier.ts:537](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L537)
 
 ***
 
@@ -158,7 +158,7 @@ Number of features seen during fit. Only defined if the underlying `estimator` e
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L510)
+[generated/multioutput/MultiOutputClassifier.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L510)
 
 ***
 
@@ -186,7 +186,7 @@ Number of features seen during fit. Only defined if the underlying `estimator` e
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L42)
+[generated/multioutput/MultiOutputClassifier.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L42)
 
 ## Methods
 
@@ -204,7 +204,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L98)
+[generated/multioutput/MultiOutputClassifier.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L98)
 
 ***
 
@@ -240,7 +240,7 @@ The target values.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L115)
+[generated/multioutput/MultiOutputClassifier.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L115)
 
 ***
 
@@ -266,7 +266,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L166)
+[generated/multioutput/MultiOutputClassifier.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L166)
 
 ***
 
@@ -288,7 +288,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L55)
+[generated/multioutput/MultiOutputClassifier.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L55)
 
 ***
 
@@ -330,7 +330,7 @@ Multi-output targets.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L202)
+[generated/multioutput/MultiOutputClassifier.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L202)
 
 ***
 
@@ -354,7 +354,7 @@ The input data.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L260)
+[generated/multioutput/MultiOutputClassifier.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L260)
 
 ***
 
@@ -380,7 +380,7 @@ The input data.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L296)
+[generated/multioutput/MultiOutputClassifier.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L296)
 
 ***
 
@@ -408,7 +408,7 @@ True values for X.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L332)
+[generated/multioutput/MultiOutputClassifier.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L332)
 
 ***
 
@@ -436,7 +436,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L375)
+[generated/multioutput/MultiOutputClassifier.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L375)
 
 ***
 
@@ -468,4 +468,4 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputClassifier.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L415)
+[generated/multioutput/MultiOutputClassifier.ts:415](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputClassifier.ts#L415)

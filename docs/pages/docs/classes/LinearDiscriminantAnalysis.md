@@ -72,7 +72,7 @@ Absolute threshold for a singular value of X to be considered significant, used 
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L27)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L27)
 
 ## Properties
 
@@ -82,7 +82,7 @@ Absolute threshold for a singular value of X to be considered significant, used 
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L25)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L25)
 
 ***
 
@@ -92,7 +92,7 @@ Absolute threshold for a singular value of X to be considered significant, used 
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L24)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L24)
 
 ***
 
@@ -102,7 +102,7 @@ Absolute threshold for a singular value of X to be considered significant, used 
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L23)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L23)
 
 ***
 
@@ -112,7 +112,7 @@ Absolute threshold for a singular value of X to be considered significant, used 
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L20)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L20)
 
 ***
 
@@ -122,7 +122,7 @@ Absolute threshold for a singular value of X to be considered significant, used 
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L21)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L21)
 
 ## Accessors
 
@@ -140,7 +140,7 @@ Unique class labels.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:839](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L839)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:839](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L839)
 
 ***
 
@@ -158,7 +158,7 @@ Weight vector(s).
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L623)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:623](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L623)
 
 ***
 
@@ -176,7 +176,7 @@ Weighted within-class covariance matrix. It corresponds to `sum\_k prior\_k \* C
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L677)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:677](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L677)
 
 ***
 
@@ -194,7 +194,7 @@ Percentage of variance explained by each of the selected components. If `n\_comp
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L704)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:704](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L704)
 
 ***
 
@@ -212,7 +212,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:893](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L893)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:893](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L893)
 
 ***
 
@@ -230,7 +230,7 @@ Intercept term.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L650)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L650)
 
 ***
 
@@ -248,7 +248,7 @@ Class-wise means.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L731)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L731)
 
 ***
 
@@ -266,7 +266,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:866](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L866)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:866](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L866)
 
 ***
 
@@ -284,7 +284,7 @@ Class priors (sum to 1).
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:758](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L758)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:758](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L758)
 
 ***
 
@@ -312,7 +312,7 @@ Class priors (sum to 1).
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L77)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:77](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L77)
 
 ***
 
@@ -330,7 +330,7 @@ Scaling of the features in the space spanned by the class centroids. Only availa
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L785)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:785](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L785)
 
 ***
 
@@ -348,7 +348,7 @@ Overall mean. Only present if solver is ‘svd’.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:812](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L812)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:812](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L812)
 
 ## Methods
 
@@ -374,7 +374,7 @@ Array of samples (test vectors).
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L152)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:152](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L152)
 
 ***
 
@@ -392,7 +392,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L133)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L133)
 
 ***
 
@@ -420,7 +420,7 @@ Target values.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L188)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L188)
 
 ***
 
@@ -454,7 +454,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L231)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:231](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L231)
 
 ***
 
@@ -480,7 +480,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L279)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L279)
 
 ***
 
@@ -506,7 +506,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L317)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:317](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L317)
 
 ***
 
@@ -528,7 +528,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L90)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:90](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L90)
 
 ***
 
@@ -552,7 +552,7 @@ The data matrix for which we want to get the predictions.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L353)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:353](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L353)
 
 ***
 
@@ -576,7 +576,7 @@ Input data.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L389)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L389)
 
 ***
 
@@ -600,7 +600,7 @@ Input data.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L425)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L425)
 
 ***
 
@@ -634,7 +634,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L463)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L463)
 
 ***
 
@@ -660,7 +660,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L511)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L511)
 
 ***
 
@@ -688,7 +688,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L551)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L551)
 
 ***
 
@@ -712,4 +712,4 @@ Input data.
 
 #### Defined in
 
-[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L587)
+[generated/discriminant\_analysis/LinearDiscriminantAnalysis.ts:587](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/discriminant_analysis/LinearDiscriminantAnalysis.ts#L587)

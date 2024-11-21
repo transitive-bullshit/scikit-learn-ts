@@ -76,7 +76,7 @@ This is useful if the stored attributes of a previously used model has to be reu
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L27)
+[generated/linear\_model/HuberRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L27)
 
 ## Properties
 
@@ -86,7 +86,7 @@ This is useful if the stored attributes of a previously used model has to be reu
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L25)
+[generated/linear\_model/HuberRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L25)
 
 ***
 
@@ -96,7 +96,7 @@ This is useful if the stored attributes of a previously used model has to be reu
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L24)
+[generated/linear\_model/HuberRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L24)
 
 ***
 
@@ -106,7 +106,7 @@ This is useful if the stored attributes of a previously used model has to be reu
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L23)
+[generated/linear\_model/HuberRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L23)
 
 ***
 
@@ -116,7 +116,7 @@ This is useful if the stored attributes of a previously used model has to be reu
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L20)
+[generated/linear\_model/HuberRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L20)
 
 ***
 
@@ -126,7 +126,7 @@ This is useful if the stored attributes of a previously used model has to be reu
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L21)
+[generated/linear\_model/HuberRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L21)
 
 ## Accessors
 
@@ -144,7 +144,7 @@ Features got by optimizing the L2-regularized Huber loss.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L373)
+[generated/linear\_model/HuberRegressor.ts:373](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L373)
 
 ***
 
@@ -162,7 +162,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L469)
+[generated/linear\_model/HuberRegressor.ts:469](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L469)
 
 ***
 
@@ -180,7 +180,7 @@ Bias.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L396)
+[generated/linear\_model/HuberRegressor.ts:396](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L396)
 
 ***
 
@@ -198,7 +198,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L444)
+[generated/linear\_model/HuberRegressor.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L444)
 
 ***
 
@@ -216,7 +216,7 @@ Number of iterations that `scipy.optimize.minimize(method="L-BFGS-B")` has run f
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L494)
+[generated/linear\_model/HuberRegressor.ts:494](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L494)
 
 ***
 
@@ -234,7 +234,7 @@ A boolean mask which is set to `true` where the samples are identified as outlie
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L519)
+[generated/linear\_model/HuberRegressor.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L519)
 
 ***
 
@@ -262,7 +262,7 @@ A boolean mask which is set to `true` where the samples are identified as outlie
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L74)
+[generated/linear\_model/HuberRegressor.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L74)
 
 ***
 
@@ -280,7 +280,7 @@ The value by which `|y \- Xw \- c|` is scaled down.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L421)
+[generated/linear\_model/HuberRegressor.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L421)
 
 ## Methods
 
@@ -298,7 +298,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L126)
+[generated/linear\_model/HuberRegressor.ts:126](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L126)
 
 ***
 
@@ -330,7 +330,7 @@ Target vector relative to X.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L143)
+[generated/linear\_model/HuberRegressor.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L143)
 
 ***
 
@@ -356,7 +356,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L187)
+[generated/linear\_model/HuberRegressor.ts:187](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L187)
 
 ***
 
@@ -378,7 +378,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L87)
+[generated/linear\_model/HuberRegressor.ts:87](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L87)
 
 ***
 
@@ -402,7 +402,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L221)
+[generated/linear\_model/HuberRegressor.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L221)
 
 ***
 
@@ -436,7 +436,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L255)
+[generated/linear\_model/HuberRegressor.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L255)
 
 ***
 
@@ -464,7 +464,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L301)
+[generated/linear\_model/HuberRegressor.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L301)
 
 ***
 
@@ -492,4 +492,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/HuberRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L339)
+[generated/linear\_model/HuberRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/HuberRegressor.ts#L339)

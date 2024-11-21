@@ -132,7 +132,7 @@ Override the string tokenization step while preserving the preprocessing and n-g
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L27)
+[generated/feature\_extraction/text/HashingVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L27)
 
 ## Properties
 
@@ -142,7 +142,7 @@ Override the string tokenization step while preserving the preprocessing and n-g
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L25)
+[generated/feature\_extraction/text/HashingVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L25)
 
 ***
 
@@ -152,7 +152,7 @@ Override the string tokenization step while preserving the preprocessing and n-g
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L24)
+[generated/feature\_extraction/text/HashingVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L24)
 
 ***
 
@@ -162,7 +162,7 @@ Override the string tokenization step while preserving the preprocessing and n-g
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L23)
+[generated/feature\_extraction/text/HashingVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L23)
 
 ***
 
@@ -172,7 +172,7 @@ Override the string tokenization step while preserving the preprocessing and n-g
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L20)
+[generated/feature\_extraction/text/HashingVectorizer.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L20)
 
 ***
 
@@ -182,7 +182,7 @@ Override the string tokenization step while preserving the preprocessing and n-g
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L21)
+[generated/feature\_extraction/text/HashingVectorizer.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L21)
 
 ## Accessors
 
@@ -210,7 +210,7 @@ Override the string tokenization step while preserving the preprocessing and n-g
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L136)
+[generated/feature\_extraction/text/HashingVectorizer.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L136)
 
 ## Methods
 
@@ -232,7 +232,7 @@ The callable handles preprocessing, tokenization, and n-grams generation.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L209)
+[generated/feature\_extraction/text/HashingVectorizer.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L209)
 
 ***
 
@@ -252,7 +252,7 @@ Return a function to preprocess the text before tokenization.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L239)
+[generated/feature\_extraction/text/HashingVectorizer.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L239)
 
 ***
 
@@ -272,7 +272,7 @@ Return a function that splits a string into a sequence of tokens.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L269)
+[generated/feature\_extraction/text/HashingVectorizer.ts:269](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L269)
 
 ***
 
@@ -298,7 +298,7 @@ The string to decode.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L301)
+[generated/feature\_extraction/text/HashingVectorizer.ts:301](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L301)
 
 ***
 
@@ -316,7 +316,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L190)
+[generated/feature\_extraction/text/HashingVectorizer.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L190)
 
 ***
 
@@ -346,7 +346,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L337)
+[generated/feature\_extraction/text/HashingVectorizer.ts:337](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L337)
 
 ***
 
@@ -374,7 +374,7 @@ Ignored. This parameter exists only for compatibility with sklearn.pipeline.Pipe
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L376)
+[generated/feature\_extraction/text/HashingVectorizer.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L376)
 
 ***
 
@@ -400,7 +400,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L419)
+[generated/feature\_extraction/text/HashingVectorizer.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L419)
 
 ***
 
@@ -420,7 +420,7 @@ Build or fetch the effective stop words list.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L455)
+[generated/feature\_extraction/text/HashingVectorizer.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L455)
 
 ***
 
@@ -442,7 +442,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L149)
+[generated/feature\_extraction/text/HashingVectorizer.ts:149](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L149)
 
 ***
 
@@ -472,7 +472,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L487)
+[generated/feature\_extraction/text/HashingVectorizer.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L487)
 
 ***
 
@@ -498,7 +498,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L528)
+[generated/feature\_extraction/text/HashingVectorizer.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L528)
 
 ***
 
@@ -522,4 +522,4 @@ Samples. Each sample must be a text document (either bytes or unicode strings, f
 
 #### Defined in
 
-[generated/feature\_extraction/text/HashingVectorizer.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L562)
+[generated/feature\_extraction/text/HashingVectorizer.ts:562](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/HashingVectorizer.ts#L562)

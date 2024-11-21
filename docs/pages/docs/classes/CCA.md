@@ -66,7 +66,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L25)
+[generated/cross\_decomposition/CCA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L25)
 
 ## Properties
 
@@ -76,7 +76,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L23)
+[generated/cross\_decomposition/CCA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L23)
 
 ***
 
@@ -86,7 +86,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L22)
+[generated/cross\_decomposition/CCA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L22)
 
 ***
 
@@ -96,7 +96,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L21)
+[generated/cross\_decomposition/CCA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L21)
 
 ***
 
@@ -106,7 +106,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L18)
+[generated/cross\_decomposition/CCA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L18)
 
 ***
 
@@ -116,7 +116,7 @@ The tolerance used as convergence criteria in the power method: the algorithm st
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L19)
+[generated/cross\_decomposition/CCA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L19)
 
 ## Accessors
 
@@ -134,7 +134,7 @@ The coefficients of the linear model such that `Y` is approximated as `Y \= X @ 
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L731)
+[generated/cross\_decomposition/CCA.ts:731](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L731)
 
 ***
 
@@ -152,7 +152,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L820)
+[generated/cross\_decomposition/CCA.ts:820](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L820)
 
 ***
 
@@ -170,7 +170,7 @@ The intercepts of the linear model such that `Y` is approximated as `Y \= X @ co
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L753)
+[generated/cross\_decomposition/CCA.ts:753](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L753)
 
 ***
 
@@ -188,7 +188,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L797)
+[generated/cross\_decomposition/CCA.ts:797](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L797)
 
 ***
 
@@ -206,7 +206,7 @@ Number of iterations of the power method, for each component.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:775](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L775)
+[generated/cross\_decomposition/CCA.ts:775](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L775)
 
 ***
 
@@ -234,7 +234,7 @@ Number of iterations of the power method, for each component.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L65)
+[generated/cross\_decomposition/CCA.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L65)
 
 ***
 
@@ -252,7 +252,7 @@ The loadings of `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L639)
+[generated/cross\_decomposition/CCA.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L639)
 
 ***
 
@@ -270,7 +270,7 @@ The projection matrix used to transform `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L685)
+[generated/cross\_decomposition/CCA.ts:685](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L685)
 
 ***
 
@@ -288,7 +288,7 @@ The left singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L595)
+[generated/cross\_decomposition/CCA.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L595)
 
 ***
 
@@ -306,7 +306,7 @@ The loadings of `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L662)
+[generated/cross\_decomposition/CCA.ts:662](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L662)
 
 ***
 
@@ -324,7 +324,7 @@ The projection matrix used to transform `Y`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L708)
+[generated/cross\_decomposition/CCA.ts:708](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L708)
 
 ***
 
@@ -342,7 +342,7 @@ The right singular vectors of the cross-covariance matrices of each iteration.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L617)
+[generated/cross\_decomposition/CCA.ts:617](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L617)
 
 ## Methods
 
@@ -360,7 +360,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L116)
+[generated/cross\_decomposition/CCA.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L116)
 
 ***
 
@@ -392,7 +392,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L133)
+[generated/cross\_decomposition/CCA.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L133)
 
 ***
 
@@ -420,7 +420,7 @@ Target vectors, where `n\_samples` is the number of samples and `n\_targets` is 
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L174)
+[generated/cross\_decomposition/CCA.ts:174](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L174)
 
 ***
 
@@ -446,7 +446,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L213)
+[generated/cross\_decomposition/CCA.ts:213](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L213)
 
 ***
 
@@ -472,7 +472,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L247)
+[generated/cross\_decomposition/CCA.ts:247](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L247)
 
 ***
 
@@ -494,7 +494,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L78)
+[generated/cross\_decomposition/CCA.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L78)
 
 ***
 
@@ -526,7 +526,7 @@ New target, where `n\_samples` is the number of samples and `n\_components` is t
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L279)
+[generated/cross\_decomposition/CCA.ts:279](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L279)
 
 ***
 
@@ -558,7 +558,7 @@ Samples.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L321)
+[generated/cross\_decomposition/CCA.ts:321](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L321)
 
 ***
 
@@ -592,7 +592,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L362)
+[generated/cross\_decomposition/CCA.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L362)
 
 ***
 
@@ -618,7 +618,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L406)
+[generated/cross\_decomposition/CCA.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L406)
 
 ***
 
@@ -646,7 +646,7 @@ Metadata routing for `copy` parameter in `predict`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L442)
+[generated/cross\_decomposition/CCA.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L442)
 
 ***
 
@@ -674,7 +674,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L478)
+[generated/cross\_decomposition/CCA.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L478)
 
 ***
 
@@ -702,7 +702,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L514)
+[generated/cross\_decomposition/CCA.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L514)
 
 ***
 
@@ -742,4 +742,4 @@ Target vectors.
 
 #### Defined in
 
-[generated/cross\_decomposition/CCA.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L546)
+[generated/cross\_decomposition/CCA.ts:546](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cross_decomposition/CCA.ts#L546)

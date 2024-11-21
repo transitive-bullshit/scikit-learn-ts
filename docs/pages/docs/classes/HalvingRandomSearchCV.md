@@ -130,7 +130,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L27)
+[generated/model\_selection/HalvingRandomSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L27)
 
 ## Properties
 
@@ -140,7 +140,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L25)
+[generated/model\_selection/HalvingRandomSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L25)
 
 ***
 
@@ -150,7 +150,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L24)
+[generated/model\_selection/HalvingRandomSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L24)
 
 ***
 
@@ -160,7 +160,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L23)
+[generated/model\_selection/HalvingRandomSearchCV.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L23)
 
 ***
 
@@ -170,7 +170,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L20)
+[generated/model\_selection/HalvingRandomSearchCV.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L20)
 
 ***
 
@@ -180,7 +180,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L21)
+[generated/model\_selection/HalvingRandomSearchCV.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L21)
 
 ## Accessors
 
@@ -198,7 +198,7 @@ Estimator that was chosen by the search, i.e. estimator which gave highest score
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:845](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L845)
+[generated/model\_selection/HalvingRandomSearchCV.ts:845](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L845)
 
 ***
 
@@ -218,7 +218,7 @@ The dict at `search.cv\_results\_\['params'\]\[search.best\_index\_\]` gives the
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L928)
+[generated/model\_selection/HalvingRandomSearchCV.ts:928](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L928)
 
 ***
 
@@ -236,7 +236,7 @@ Parameter setting that gave the best results on the hold out data.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:899](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L899)
+[generated/model\_selection/HalvingRandomSearchCV.ts:899](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L899)
 
 ***
 
@@ -254,7 +254,7 @@ Mean cross-validated score of the best\_estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L872)
+[generated/model\_selection/HalvingRandomSearchCV.ts:872](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L872)
 
 ***
 
@@ -272,7 +272,7 @@ A dict with keys as column headers and values as columns, that can be imported i
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L818)
+[generated/model\_selection/HalvingRandomSearchCV.ts:818](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L818)
 
 ***
 
@@ -290,7 +290,7 @@ Names of features seen during fit. Only defined if `best\_estimator\_` is define
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:1065](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1065)
+[generated/model\_selection/HalvingRandomSearchCV.ts:1065](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1065)
 
 ***
 
@@ -308,7 +308,7 @@ The maximum number of resources that any candidate is allowed to use for a given
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L683)
+[generated/model\_selection/HalvingRandomSearchCV.ts:683](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L683)
 
 ***
 
@@ -326,7 +326,7 @@ The amount of resources that are allocated for each candidate at the first itera
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L710)
+[generated/model\_selection/HalvingRandomSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L710)
 
 ***
 
@@ -344,7 +344,7 @@ Whether or not the scorers compute several metrics.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:1038](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1038)
+[generated/model\_selection/HalvingRandomSearchCV.ts:1038](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1038)
 
 ***
 
@@ -362,7 +362,7 @@ The number of candidate parameters that were evaluated at each iteration.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L629)
+[generated/model\_selection/HalvingRandomSearchCV.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L629)
 
 ***
 
@@ -380,7 +380,7 @@ The actual number of iterations that were run. This is equal to `n\_required\_it
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L737)
+[generated/model\_selection/HalvingRandomSearchCV.ts:737](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L737)
 
 ***
 
@@ -398,7 +398,7 @@ The number of iterations that are possible starting with `min\_resources\_` reso
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L764)
+[generated/model\_selection/HalvingRandomSearchCV.ts:764](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L764)
 
 ***
 
@@ -416,7 +416,7 @@ The number of candidate parameters that are left after the last iteration. It co
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L656)
+[generated/model\_selection/HalvingRandomSearchCV.ts:656](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L656)
 
 ***
 
@@ -434,7 +434,7 @@ The number of iterations that are required to end up with less than `factor` can
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L791)
+[generated/model\_selection/HalvingRandomSearchCV.ts:791](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L791)
 
 ***
 
@@ -452,7 +452,7 @@ The amount of resources used at each iteration.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L602)
+[generated/model\_selection/HalvingRandomSearchCV.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L602)
 
 ***
 
@@ -470,7 +470,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:982](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L982)
+[generated/model\_selection/HalvingRandomSearchCV.ts:982](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L982)
 
 ***
 
@@ -498,7 +498,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L132)
+[generated/model\_selection/HalvingRandomSearchCV.ts:132](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L132)
 
 ***
 
@@ -518,7 +518,7 @@ This is present only if `refit` is not `false`.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:1011](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1011)
+[generated/model\_selection/HalvingRandomSearchCV.ts:1011](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L1011)
 
 ***
 
@@ -536,7 +536,7 @@ Scorer function used on the held out data to choose the best parameters for the 
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L955)
+[generated/model\_selection/HalvingRandomSearchCV.ts:955](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L955)
 
 ## Methods
 
@@ -562,7 +562,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L207)
+[generated/model\_selection/HalvingRandomSearchCV.ts:207](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L207)
 
 ***
 
@@ -580,7 +580,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L188)
+[generated/model\_selection/HalvingRandomSearchCV.ts:188](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L188)
 
 ***
 
@@ -612,7 +612,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L243)
+[generated/model\_selection/HalvingRandomSearchCV.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L243)
 
 ***
 
@@ -638,7 +638,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L289)
+[generated/model\_selection/HalvingRandomSearchCV.ts:289](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L289)
 
 ***
 
@@ -660,7 +660,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L145)
+[generated/model\_selection/HalvingRandomSearchCV.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L145)
 
 ***
 
@@ -690,7 +690,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L327)
+[generated/model\_selection/HalvingRandomSearchCV.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L327)
 
 ***
 
@@ -716,7 +716,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L370)
+[generated/model\_selection/HalvingRandomSearchCV.ts:370](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L370)
 
 ***
 
@@ -742,7 +742,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L406)
+[generated/model\_selection/HalvingRandomSearchCV.ts:406](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L406)
 
 ***
 
@@ -768,7 +768,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L444)
+[generated/model\_selection/HalvingRandomSearchCV.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L444)
 
 ***
 
@@ -802,7 +802,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L482)
+[generated/model\_selection/HalvingRandomSearchCV.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L482)
 
 ***
 
@@ -828,7 +828,7 @@ Data to predict on. Must fulfill input requirements of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L528)
+[generated/model\_selection/HalvingRandomSearchCV.ts:528](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L528)
 
 ***
 
@@ -854,4 +854,4 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/HalvingRandomSearchCV.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L566)
+[generated/model\_selection/HalvingRandomSearchCV.ts:566](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/HalvingRandomSearchCV.ts#L566)

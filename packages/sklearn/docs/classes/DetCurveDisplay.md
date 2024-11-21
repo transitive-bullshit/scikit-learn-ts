@@ -42,7 +42,7 @@ The label of the positive class.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L25)
+[generated/metrics/DetCurveDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L25)
 
 ## Properties
 
@@ -52,7 +52,7 @@ The label of the positive class.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L23)
+[generated/metrics/DetCurveDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L23)
 
 ***
 
@@ -62,7 +62,7 @@ The label of the positive class.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L22)
+[generated/metrics/DetCurveDisplay.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L22)
 
 ***
 
@@ -72,7 +72,7 @@ The label of the positive class.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L21)
+[generated/metrics/DetCurveDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L21)
 
 ***
 
@@ -82,7 +82,7 @@ The label of the positive class.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L18)
+[generated/metrics/DetCurveDisplay.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L18)
 
 ***
 
@@ -92,7 +92,7 @@ The label of the positive class.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L19)
+[generated/metrics/DetCurveDisplay.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L19)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ Axes with DET Curve.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L326)
+[generated/metrics/DetCurveDisplay.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L326)
 
 ***
 
@@ -128,7 +128,7 @@ Figure containing the curve.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L349)
+[generated/metrics/DetCurveDisplay.ts:349](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L349)
 
 ***
 
@@ -146,7 +146,7 @@ DET Curve.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L303)
+[generated/metrics/DetCurveDisplay.ts:303](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L303)
 
 ***
 
@@ -174,7 +174,7 @@ DET Curve.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L50)
+[generated/metrics/DetCurveDisplay.ts:50](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L50)
 
 ## Methods
 
@@ -192,7 +192,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L102)
+[generated/metrics/DetCurveDisplay.ts:102](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L102)
 
 ***
 
@@ -250,7 +250,7 @@ Target values.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L121)
+[generated/metrics/DetCurveDisplay.ts:121](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L121)
 
 ***
 
@@ -300,7 +300,7 @@ True labels.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L197)
+[generated/metrics/DetCurveDisplay.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L197)
 
 ***
 
@@ -322,7 +322,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L63)
+[generated/metrics/DetCurveDisplay.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L63)
 
 ***
 
@@ -354,4 +354,4 @@ Name of DET curve for labeling. If `undefined`, use `estimator\_name` if it is n
 
 #### Defined in
 
-[generated/metrics/DetCurveDisplay.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L261)
+[generated/metrics/DetCurveDisplay.ts:261](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DetCurveDisplay.ts#L261)

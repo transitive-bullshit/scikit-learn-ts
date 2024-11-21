@@ -110,7 +110,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L27)
+[generated/tree/ExtraTreeRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L27)
 
 ## Properties
 
@@ -120,7 +120,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L25)
+[generated/tree/ExtraTreeRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L25)
 
 ***
 
@@ -130,7 +130,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L24)
+[generated/tree/ExtraTreeRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L24)
 
 ***
 
@@ -140,7 +140,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L23)
+[generated/tree/ExtraTreeRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L23)
 
 ***
 
@@ -150,7 +150,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L20)
+[generated/tree/ExtraTreeRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L20)
 
 ***
 
@@ -160,7 +160,7 @@ The strategy used to choose the split at each node. Supported strategies are “
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L21)
+[generated/tree/ExtraTreeRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L21)
 
 ## Accessors
 
@@ -178,7 +178,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L732)
+[generated/tree/ExtraTreeRegressor.ts:732](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L732)
 
 ***
 
@@ -196,7 +196,7 @@ The inferred value of max\_features.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L678)
+[generated/tree/ExtraTreeRegressor.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L678)
 
 ***
 
@@ -214,7 +214,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L705)
+[generated/tree/ExtraTreeRegressor.ts:705](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L705)
 
 ***
 
@@ -232,7 +232,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:759](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L759)
+[generated/tree/ExtraTreeRegressor.ts:759](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L759)
 
 ***
 
@@ -260,7 +260,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L110)
+[generated/tree/ExtraTreeRegressor.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L110)
 
 ***
 
@@ -278,7 +278,7 @@ The underlying Tree object. Please refer to `help(sklearn.tree.\_tree.Tree)` for
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L786)
+[generated/tree/ExtraTreeRegressor.ts:786](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L786)
 
 ## Methods
 
@@ -310,7 +310,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L183)
+[generated/tree/ExtraTreeRegressor.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L183)
 
 ***
 
@@ -344,7 +344,7 @@ The target values (class labels) as integers or strings.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L226)
+[generated/tree/ExtraTreeRegressor.ts:226](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L226)
 
 ***
 
@@ -376,7 +376,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L272)
+[generated/tree/ExtraTreeRegressor.ts:272](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L272)
 
 ***
 
@@ -394,7 +394,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L166)
+[generated/tree/ExtraTreeRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L166)
 
 ***
 
@@ -434,7 +434,7 @@ The target values (real numbers). Use `dtype=np.float64` and `order='C'` for max
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L315)
+[generated/tree/ExtraTreeRegressor.ts:315](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L315)
 
 ***
 
@@ -456,7 +456,7 @@ The depth of a tree is the maximum distance between the root and any leaf.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L368)
+[generated/tree/ExtraTreeRegressor.ts:368](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L368)
 
 ***
 
@@ -482,7 +482,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L398)
+[generated/tree/ExtraTreeRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L398)
 
 ***
 
@@ -502,7 +502,7 @@ Return the number of leaves of the decision tree.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L434)
+[generated/tree/ExtraTreeRegressor.ts:434](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L434)
 
 ***
 
@@ -524,7 +524,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L123)
+[generated/tree/ExtraTreeRegressor.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L123)
 
 ***
 
@@ -558,7 +558,7 @@ The input samples. Internally, it will be converted to `dtype=np.float32` and if
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L466)
+[generated/tree/ExtraTreeRegressor.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L466)
 
 ***
 
@@ -592,7 +592,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L509)
+[generated/tree/ExtraTreeRegressor.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L509)
 
 ***
 
@@ -624,7 +624,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L557)
+[generated/tree/ExtraTreeRegressor.ts:557](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L557)
 
 ***
 
@@ -652,7 +652,7 @@ Metadata routing for `check\_input` parameter in `predict`.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L602)
+[generated/tree/ExtraTreeRegressor.ts:602](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L602)
 
 ***
 
@@ -680,4 +680,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/tree/ExtraTreeRegressor.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L642)
+[generated/tree/ExtraTreeRegressor.ts:642](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/tree/ExtraTreeRegressor.ts#L642)

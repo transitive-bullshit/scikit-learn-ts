@@ -42,7 +42,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L29)
+[generated/metrics/DistanceMetric.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L29)
 
 ## Properties
 
@@ -52,7 +52,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L27)
+[generated/metrics/DistanceMetric.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L27)
 
 ***
 
@@ -62,7 +62,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L26)
+[generated/metrics/DistanceMetric.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L26)
 
 ***
 
@@ -72,7 +72,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
+[generated/metrics/DistanceMetric.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L25)
 
 ***
 
@@ -82,7 +82,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
+[generated/metrics/DistanceMetric.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L22)
 
 ***
 
@@ -92,7 +92,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
+[generated/metrics/DistanceMetric.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L23)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ An instance of the requested distance metric class.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L162)
+[generated/metrics/DistanceMetric.ts:162](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L162)
 
 ***
 
@@ -138,7 +138,7 @@ An instance of the requested distance metric class.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49)
+[generated/metrics/DistanceMetric.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L49)
 
 ## Methods
 
@@ -156,7 +156,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L101)
+[generated/metrics/DistanceMetric.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L101)
 
 ***
 
@@ -190,7 +190,7 @@ The string identifier or class name of the desired distance metric. See the docu
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L120)
+[generated/metrics/DistanceMetric.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L120)
 
 ***
 
@@ -212,4 +212,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/DistanceMetric.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L62)
+[generated/metrics/DistanceMetric.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/DistanceMetric.ts#L62)

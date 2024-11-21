@@ -36,7 +36,7 @@ Determines the random number generator used for random sampling when `max\_patch
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L23)
+[generated/feature\_extraction/image/PatchExtractor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ Determines the random number generator used for random sampling when `max\_patch
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L21)
+[generated/feature\_extraction/image/PatchExtractor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ Determines the random number generator used for random sampling when `max\_patch
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L20)
+[generated/feature\_extraction/image/PatchExtractor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ Determines the random number generator used for random sampling when `max\_patch
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L19)
+[generated/feature\_extraction/image/PatchExtractor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ Determines the random number generator used for random sampling when `max\_patch
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L16)
+[generated/feature\_extraction/image/PatchExtractor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ Determines the random number generator used for random sampling when `max\_patch
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L17)
+[generated/feature\_extraction/image/PatchExtractor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L17)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ Determines the random number generator used for random sampling when `max\_patch
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L43)
+[generated/feature\_extraction/image/PatchExtractor.ts:43](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L43)
 
 ## Methods
 
@@ -132,7 +132,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L95)
+[generated/feature\_extraction/image/PatchExtractor.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L95)
 
 ***
 
@@ -162,7 +162,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L114)
+[generated/feature\_extraction/image/PatchExtractor.ts:114](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L114)
 
 ***
 
@@ -196,7 +196,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L153)
+[generated/feature\_extraction/image/PatchExtractor.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L153)
 
 ***
 
@@ -222,7 +222,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L197)
+[generated/feature\_extraction/image/PatchExtractor.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L197)
 
 ***
 
@@ -244,7 +244,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L56)
+[generated/feature\_extraction/image/PatchExtractor.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L56)
 
 ***
 
@@ -270,7 +270,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L233)
+[generated/feature\_extraction/image/PatchExtractor.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L233)
 
 ***
 
@@ -294,4 +294,4 @@ Array of images from which to extract patches. For color images, the last dimens
 
 #### Defined in
 
-[generated/feature\_extraction/image/PatchExtractor.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L265)
+[generated/feature\_extraction/image/PatchExtractor.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/image/PatchExtractor.ts#L265)

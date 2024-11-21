@@ -116,7 +116,7 @@ Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == â
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L25)
+[generated/manifold/Isomap.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L25)
 
 ## Properties
 
@@ -126,7 +126,7 @@ Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == â
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L23)
+[generated/manifold/Isomap.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L23)
 
 ***
 
@@ -136,7 +136,7 @@ Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == â
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L22)
+[generated/manifold/Isomap.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L22)
 
 ***
 
@@ -146,7 +146,7 @@ Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == â
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L21)
+[generated/manifold/Isomap.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L21)
 
 ***
 
@@ -156,7 +156,7 @@ Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == â
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L18)
+[generated/manifold/Isomap.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L18)
 
 ***
 
@@ -166,7 +166,7 @@ Convergence tolerance passed to arpack or lobpcg. not used if eigen\_solver == â
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L19)
+[generated/manifold/Isomap.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L19)
 
 ## Accessors
 
@@ -184,7 +184,7 @@ Stores the geodesic distance matrix of training data.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L493)
+[generated/manifold/Isomap.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L493)
 
 ***
 
@@ -202,7 +202,7 @@ Stores the embedding vectors.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L425)
+[generated/manifold/Isomap.ts:425](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L425)
 
 ***
 
@@ -220,7 +220,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L539)
+[generated/manifold/Isomap.ts:539](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L539)
 
 ***
 
@@ -238,7 +238,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L448)
+[generated/manifold/Isomap.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L448)
 
 ***
 
@@ -256,7 +256,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L516)
+[generated/manifold/Isomap.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L516)
 
 ***
 
@@ -274,7 +274,7 @@ Stores nearest neighbors instance, including BallTree or KDtree if applicable.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L471)
+[generated/manifold/Isomap.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L471)
 
 ***
 
@@ -302,7 +302,7 @@ Stores nearest neighbors instance, including BallTree or KDtree if applicable.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L116)
+[generated/manifold/Isomap.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L116)
 
 ## Methods
 
@@ -320,7 +320,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L167)
+[generated/manifold/Isomap.ts:167](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L167)
 
 ***
 
@@ -348,7 +348,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L184)
+[generated/manifold/Isomap.ts:184](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L184)
 
 ***
 
@@ -376,7 +376,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L221)
+[generated/manifold/Isomap.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L221)
 
 ***
 
@@ -402,7 +402,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L260)
+[generated/manifold/Isomap.ts:260](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L260)
 
 ***
 
@@ -428,7 +428,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L294)
+[generated/manifold/Isomap.ts:294](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L294)
 
 ***
 
@@ -450,7 +450,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L129)
+[generated/manifold/Isomap.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L129)
 
 ***
 
@@ -474,7 +474,7 @@ Reconstruction error.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L326)
+[generated/manifold/Isomap.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L326)
 
 ***
 
@@ -500,7 +500,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L360)
+[generated/manifold/Isomap.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L360)
 
 ***
 
@@ -526,4 +526,4 @@ If neighbors\_algorithm=â€™precomputedâ€™, X is assumed to be a distance matrix 
 
 #### Defined in
 
-[generated/manifold/Isomap.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/Isomap.ts#L394)
+[generated/manifold/Isomap.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/Isomap.ts#L394)

@@ -128,7 +128,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L27)
+[generated/cluster/SpectralClustering.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L27)
 
 ## Properties
 
@@ -138,7 +138,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L25)
+[generated/cluster/SpectralClustering.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L25)
 
 ***
 
@@ -148,7 +148,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L24)
+[generated/cluster/SpectralClustering.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L24)
 
 ***
 
@@ -158,7 +158,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L23)
+[generated/cluster/SpectralClustering.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L23)
 
 ***
 
@@ -168,7 +168,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L20)
+[generated/cluster/SpectralClustering.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L20)
 
 ***
 
@@ -178,7 +178,7 @@ Verbosity mode.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L21)
+[generated/cluster/SpectralClustering.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L21)
 
 ## Accessors
 
@@ -196,7 +196,7 @@ Affinity matrix used for clustering. Available only after calling `fit`.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L318)
+[generated/cluster/SpectralClustering.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L318)
 
 ***
 
@@ -214,7 +214,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L399)
+[generated/cluster/SpectralClustering.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L399)
 
 ***
 
@@ -232,7 +232,7 @@ Labels of each point
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L345)
+[generated/cluster/SpectralClustering.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L345)
 
 ***
 
@@ -250,7 +250,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L372)
+[generated/cluster/SpectralClustering.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L372)
 
 ***
 
@@ -278,7 +278,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L127)
+[generated/cluster/SpectralClustering.ts:127](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L127)
 
 ## Methods
 
@@ -296,7 +296,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L183)
+[generated/cluster/SpectralClustering.ts:183](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L183)
 
 ***
 
@@ -324,7 +324,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L200)
+[generated/cluster/SpectralClustering.ts:200](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L200)
 
 ***
 
@@ -352,7 +352,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L239)
+[generated/cluster/SpectralClustering.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L239)
 
 ***
 
@@ -378,7 +378,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L282)
+[generated/cluster/SpectralClustering.ts:282](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L282)
 
 ***
 
@@ -400,4 +400,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/SpectralClustering.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L140)
+[generated/cluster/SpectralClustering.ts:140](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/SpectralClustering.ts#L140)

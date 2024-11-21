@@ -176,7 +176,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L31)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L31)
 
 ## Properties
 
@@ -186,7 +186,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L29)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L29)
 
 ***
 
@@ -196,7 +196,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L28)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L28)
 
 ***
 
@@ -206,7 +206,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L27)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L27)
 
 ***
 
@@ -216,7 +216,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L24)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L24)
 
 ***
 
@@ -226,7 +226,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L25)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L25)
 
 ## Accessors
 
@@ -244,7 +244,7 @@ True if a fixed vocabulary of term to indices mapping is provided by the user.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L709)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L709)
 
 ***
 
@@ -272,7 +272,7 @@ True if a fixed vocabulary of term to indices mapping is provided by the user.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L177)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:177](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L177)
 
 ***
 
@@ -290,7 +290,7 @@ A mapping of terms to feature indices.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L684)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:684](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L684)
 
 ## Methods
 
@@ -312,7 +312,7 @@ The callable handles preprocessing, tokenization, and n-grams generation.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L248)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L248)
 
 ***
 
@@ -332,7 +332,7 @@ Return a function to preprocess the text before tokenization.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L276)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L276)
 
 ***
 
@@ -352,7 +352,7 @@ Return a function that splits a string into a sequence of tokens.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L304)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L304)
 
 ***
 
@@ -378,7 +378,7 @@ The string to decode.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L334)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:334](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L334)
 
 ***
 
@@ -396,7 +396,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L229)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:229](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L229)
 
 ***
 
@@ -424,7 +424,7 @@ This parameter is not needed to compute tfidf.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L366)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:366](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L366)
 
 ***
 
@@ -454,7 +454,7 @@ This parameter is ignored.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L405)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L405)
 
 ***
 
@@ -478,7 +478,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L442)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:442](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L442)
 
 ***
 
@@ -504,7 +504,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L478)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L478)
 
 ***
 
@@ -524,7 +524,7 @@ Build or fetch the effective stop words list.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L512)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:512](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L512)
 
 ***
 
@@ -546,7 +546,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L190)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:190](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L190)
 
 ***
 
@@ -570,7 +570,7 @@ Document-term matrix.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L540)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:540](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L540)
 
 ***
 
@@ -598,7 +598,7 @@ Metadata routing for `raw\_documents` parameter in `fit`.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L578)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L578)
 
 ***
 
@@ -626,7 +626,7 @@ Metadata routing for `raw\_documents` parameter in `transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L616)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L616)
 
 ***
 
@@ -652,4 +652,4 @@ An iterable which generates either str, unicode or file objects.
 
 #### Defined in
 
-[generated/feature\_extraction/text/TfidfVectorizer.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L652)
+[generated/feature\_extraction/text/TfidfVectorizer.ts:652](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/TfidfVectorizer.ts#L652)

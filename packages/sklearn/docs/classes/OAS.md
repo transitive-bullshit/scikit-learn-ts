@@ -40,7 +40,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L23)
+[generated/covariance/OAS.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L23)
 
 ## Properties
 
@@ -50,7 +50,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L21)
+[generated/covariance/OAS.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L21)
 
 ***
 
@@ -60,7 +60,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L20)
+[generated/covariance/OAS.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L20)
 
 ***
 
@@ -70,7 +70,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L19)
+[generated/covariance/OAS.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L19)
 
 ***
 
@@ -80,7 +80,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L16)
+[generated/covariance/OAS.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L16)
 
 ***
 
@@ -90,7 +90,7 @@ Specify if the estimated precision is stored.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L17)
+[generated/covariance/OAS.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L17)
 
 ## Accessors
 
@@ -108,7 +108,7 @@ Estimated covariance matrix.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L372)
+[generated/covariance/OAS.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L372)
 
 ***
 
@@ -126,7 +126,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/covariance/OAS.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L484)
+[generated/covariance/OAS.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L484)
 
 ***
 
@@ -144,7 +144,7 @@ Estimated location, i.e. the estimated mean.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L395)
+[generated/covariance/OAS.ts:395](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L395)
 
 ***
 
@@ -162,7 +162,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/covariance/OAS.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L461)
+[generated/covariance/OAS.ts:461](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L461)
 
 ***
 
@@ -180,7 +180,7 @@ Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/OAS.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L417)
+[generated/covariance/OAS.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L417)
 
 ***
 
@@ -208,7 +208,7 @@ Estimated pseudo inverse matrix. (stored only if store\_precision is `true`)
 
 #### Defined in
 
-[generated/covariance/OAS.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L42)
+[generated/covariance/OAS.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L42)
 
 ***
 
@@ -226,7 +226,7 @@ coefficient in the convex combination used for the computation of the shrunk est
 
 #### Defined in
 
-[generated/covariance/OAS.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L439)
+[generated/covariance/OAS.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L439)
 
 ## Methods
 
@@ -244,7 +244,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L93)
+[generated/covariance/OAS.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L93)
 
 ***
 
@@ -292,7 +292,7 @@ Whether to compute the squared error norm or the error norm. If `true` (default)
 
 #### Defined in
 
-[generated/covariance/OAS.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L110)
+[generated/covariance/OAS.ts:110](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L110)
 
 ***
 
@@ -320,7 +320,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L163)
+[generated/covariance/OAS.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L163)
 
 ***
 
@@ -346,7 +346,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/covariance/OAS.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L201)
+[generated/covariance/OAS.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L201)
 
 ***
 
@@ -370,7 +370,7 @@ The precision matrix associated to the current covariance object.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L233)
+[generated/covariance/OAS.ts:233](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L233)
 
 ***
 
@@ -392,7 +392,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L55)
+[generated/covariance/OAS.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L55)
 
 ***
 
@@ -416,7 +416,7 @@ The observations, the Mahalanobis distances of the which we compute. Observation
 
 #### Defined in
 
-[generated/covariance/OAS.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L265)
+[generated/covariance/OAS.ts:265](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L265)
 
 ***
 
@@ -446,7 +446,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L299)
+[generated/covariance/OAS.ts:299](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L299)
 
 ***
 
@@ -474,4 +474,4 @@ Metadata routing for `X\_test` parameter in `score`.
 
 #### Defined in
 
-[generated/covariance/OAS.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/covariance/OAS.ts#L340)
+[generated/covariance/OAS.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/covariance/OAS.ts#L340)

@@ -36,7 +36,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L23)
+[generated/multioutput/MultiOutputRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L23)
 
 ## Properties
 
@@ -46,7 +46,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L21)
+[generated/multioutput/MultiOutputRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L21)
 
 ***
 
@@ -56,7 +56,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L20)
+[generated/multioutput/MultiOutputRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L20)
 
 ***
 
@@ -66,7 +66,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L19)
+[generated/multioutput/MultiOutputRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L19)
 
 ***
 
@@ -76,7 +76,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L16)
+[generated/multioutput/MultiOutputRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L16)
 
 ***
 
@@ -86,7 +86,7 @@ When individual estimators are fast to train or predict, using `n\_jobs > 1` can
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L17)
+[generated/multioutput/MultiOutputRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L17)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ Estimators used for predictions.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L455)
+[generated/multioutput/MultiOutputRegressor.ts:455](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L455)
 
 ***
 
@@ -122,7 +122,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Only defined 
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L509)
+[generated/multioutput/MultiOutputRegressor.ts:509](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L509)
 
 ***
 
@@ -140,7 +140,7 @@ Number of features seen during [fit](../../glossary.html#term-fit). Only defined
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L482)
+[generated/multioutput/MultiOutputRegressor.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L482)
 
 ***
 
@@ -168,7 +168,7 @@ Number of features seen during [fit](../../glossary.html#term-fit). Only defined
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L42)
+[generated/multioutput/MultiOutputRegressor.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L42)
 
 ## Methods
 
@@ -186,7 +186,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L98)
+[generated/multioutput/MultiOutputRegressor.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L98)
 
 ***
 
@@ -222,7 +222,7 @@ Multi-output targets. An indicator matrix turns on multilabel estimation.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L115)
+[generated/multioutput/MultiOutputRegressor.ts:115](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L115)
 
 ***
 
@@ -248,7 +248,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L166)
+[generated/multioutput/MultiOutputRegressor.ts:166](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L166)
 
 ***
 
@@ -270,7 +270,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L55)
+[generated/multioutput/MultiOutputRegressor.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L55)
 
 ***
 
@@ -308,7 +308,7 @@ Multi-output targets.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L202)
+[generated/multioutput/MultiOutputRegressor.ts:202](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L202)
 
 ***
 
@@ -332,7 +332,7 @@ The input data.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L255)
+[generated/multioutput/MultiOutputRegressor.ts:255](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L255)
 
 ***
 
@@ -366,7 +366,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L291)
+[generated/multioutput/MultiOutputRegressor.ts:291](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L291)
 
 ***
 
@@ -394,7 +394,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L339)
+[generated/multioutput/MultiOutputRegressor.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L339)
 
 ***
 
@@ -422,7 +422,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L379)
+[generated/multioutput/MultiOutputRegressor.ts:379](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L379)
 
 ***
 
@@ -450,4 +450,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/multioutput/MultiOutputRegressor.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L419)
+[generated/multioutput/MultiOutputRegressor.ts:419](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/multioutput/MultiOutputRegressor.ts#L419)

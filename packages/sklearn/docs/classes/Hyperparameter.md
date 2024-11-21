@@ -46,7 +46,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L21)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L21)
 
 ## Properties
 
@@ -56,7 +56,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L19)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L19)
 
 ***
 
@@ -66,7 +66,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L18)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L18)
 
 ***
 
@@ -76,7 +76,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L17)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L17)
 
 ***
 
@@ -86,7 +86,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L14)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L14)
 
 ***
 
@@ -96,7 +96,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L15)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L15)
 
 ## Accessors
 
@@ -124,7 +124,7 @@ The type of the hyperparameter. Currently, only “numeric” hyperparameters ar
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L53)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L53)
 
 ## Methods
 
@@ -144,7 +144,7 @@ Return number of occurrences of value.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L122)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:122](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L122)
 
 ***
 
@@ -162,7 +162,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L105)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L105)
 
 ***
 
@@ -184,7 +184,7 @@ Raises ValueError if the value is not present.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L150)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L150)
 
 ***
 
@@ -206,4 +206,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/gaussian\_process/kernels/Hyperparameter.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L66)
+[generated/gaussian\_process/kernels/Hyperparameter.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/gaussian_process/kernels/Hyperparameter.ts#L66)

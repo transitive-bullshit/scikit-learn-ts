@@ -138,7 +138,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L25)
+[generated/decomposition/DictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L25)
 
 ## Properties
 
@@ -148,7 +148,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L23)
+[generated/decomposition/DictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L23)
 
 ***
 
@@ -158,7 +158,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L22)
+[generated/decomposition/DictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L22)
 
 ***
 
@@ -168,7 +168,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L21)
+[generated/decomposition/DictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L21)
 
 ***
 
@@ -178,7 +178,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L18)
+[generated/decomposition/DictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L18)
 
 ***
 
@@ -188,7 +188,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L19)
+[generated/decomposition/DictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L19)
 
 ## Accessors
 
@@ -206,7 +206,7 @@ dictionary atoms extracted from the data
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L446)
+[generated/decomposition/DictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L446)
 
 ***
 
@@ -224,7 +224,7 @@ vector of errors at each iteration
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L473)
+[generated/decomposition/DictionaryLearning.ts:473](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L473)
 
 ***
 
@@ -242,7 +242,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L527)
+[generated/decomposition/DictionaryLearning.ts:527](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L527)
 
 ***
 
@@ -260,7 +260,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L500)
+[generated/decomposition/DictionaryLearning.ts:500](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L500)
 
 ***
 
@@ -278,7 +278,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L554)
+[generated/decomposition/DictionaryLearning.ts:554](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L554)
 
 ***
 
@@ -306,7 +306,7 @@ Number of iterations run.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L145)
+[generated/decomposition/DictionaryLearning.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L145)
 
 ## Methods
 
@@ -324,7 +324,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L201)
+[generated/decomposition/DictionaryLearning.ts:201](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L201)
 
 ***
 
@@ -352,7 +352,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L218)
+[generated/decomposition/DictionaryLearning.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L218)
 
 ***
 
@@ -380,7 +380,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L257)
+[generated/decomposition/DictionaryLearning.ts:257](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L257)
 
 ***
 
@@ -406,7 +406,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L300)
+[generated/decomposition/DictionaryLearning.ts:300](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L300)
 
 ***
 
@@ -432,7 +432,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L338)
+[generated/decomposition/DictionaryLearning.ts:338](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L338)
 
 ***
 
@@ -454,7 +454,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L158)
+[generated/decomposition/DictionaryLearning.ts:158](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L158)
 
 ***
 
@@ -480,7 +480,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L376)
+[generated/decomposition/DictionaryLearning.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L376)
 
 ***
 
@@ -506,4 +506,4 @@ Test data to be transformed, must have the same number of features as the data u
 
 #### Defined in
 
-[generated/decomposition/DictionaryLearning.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L412)
+[generated/decomposition/DictionaryLearning.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/DictionaryLearning.ts#L412)

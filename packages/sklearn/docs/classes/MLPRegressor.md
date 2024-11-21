@@ -200,7 +200,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L23)
+[generated/neural\_network/MLPRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L23)
 
 ## Properties
 
@@ -210,7 +210,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L21)
+[generated/neural\_network/MLPRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L21)
 
 ***
 
@@ -220,7 +220,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L20)
+[generated/neural\_network/MLPRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L20)
 
 ***
 
@@ -230,7 +230,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L19)
+[generated/neural\_network/MLPRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L19)
 
 ***
 
@@ -240,7 +240,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L16)
+[generated/neural\_network/MLPRegressor.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L16)
 
 ***
 
@@ -250,7 +250,7 @@ When set to `true`, reuse the solution of the previous call to fit as initializa
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L17)
+[generated/neural\_network/MLPRegressor.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L17)
 
 ## Accessors
 
@@ -268,7 +268,7 @@ The minimum loss reached by the solver throughout fitting. If `early\_stopping=T
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L501)
+[generated/neural\_network/MLPRegressor.ts:501](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L501)
 
 ***
 
@@ -286,7 +286,7 @@ The best validation score (i.e. R2 score) that triggered the early stopping. Onl
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L576)
+[generated/neural\_network/MLPRegressor.ts:576](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L576)
 
 ***
 
@@ -304,7 +304,7 @@ The ith element in the list represents the weight matrix corresponding to layer 
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L624)
+[generated/neural\_network/MLPRegressor.ts:624](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L624)
 
 ***
 
@@ -322,7 +322,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L697)
+[generated/neural\_network/MLPRegressor.ts:697](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L697)
 
 ***
 
@@ -340,7 +340,7 @@ The ith element in the list represents the bias vector corresponding to layer i 
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L647)
+[generated/neural\_network/MLPRegressor.ts:647](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L647)
 
 ***
 
@@ -358,7 +358,7 @@ The current loss computed with the loss function.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L478)
+[generated/neural\_network/MLPRegressor.ts:478](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L478)
 
 ***
 
@@ -376,7 +376,7 @@ Loss value evaluated at the end of each training step. The ith element in the li
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L526)
+[generated/neural\_network/MLPRegressor.ts:526](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L526)
 
 ***
 
@@ -394,7 +394,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L672)
+[generated/neural\_network/MLPRegressor.ts:672](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L672)
 
 ***
 
@@ -412,7 +412,7 @@ The number of iterations the solver has run.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L722)
+[generated/neural\_network/MLPRegressor.ts:722](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L722)
 
 ***
 
@@ -430,7 +430,7 @@ Number of layers.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L745)
+[generated/neural\_network/MLPRegressor.ts:745](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L745)
 
 ***
 
@@ -448,7 +448,7 @@ Number of outputs.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:770](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L770)
+[generated/neural\_network/MLPRegressor.ts:770](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L770)
 
 ***
 
@@ -466,7 +466,7 @@ Name of the output activation function.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L795)
+[generated/neural\_network/MLPRegressor.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L795)
 
 ***
 
@@ -494,7 +494,7 @@ Name of the output activation function.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185)
+[generated/neural\_network/MLPRegressor.ts:185](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L185)
 
 ***
 
@@ -512,7 +512,7 @@ The number of training samples seen by the solver during fitting. Mathematically
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L601)
+[generated/neural\_network/MLPRegressor.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L601)
 
 ***
 
@@ -530,7 +530,7 @@ The score at each iteration on a held-out validation set. The score reported is 
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L551)
+[generated/neural\_network/MLPRegressor.ts:551](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L551)
 
 ## Methods
 
@@ -548,7 +548,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L237)
+[generated/neural\_network/MLPRegressor.ts:237](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L237)
 
 ***
 
@@ -576,7 +576,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L254)
+[generated/neural\_network/MLPRegressor.ts:254](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L254)
 
 ***
 
@@ -602,7 +602,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L293)
+[generated/neural\_network/MLPRegressor.ts:293](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L293)
 
 ***
 
@@ -624,7 +624,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L198)
+[generated/neural\_network/MLPRegressor.ts:198](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L198)
 
 ***
 
@@ -652,7 +652,7 @@ The target values.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L327)
+[generated/neural\_network/MLPRegressor.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L327)
 
 ***
 
@@ -676,7 +676,7 @@ The input data.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L364)
+[generated/neural\_network/MLPRegressor.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L364)
 
 ***
 
@@ -710,7 +710,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L398)
+[generated/neural\_network/MLPRegressor.ts:398](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L398)
 
 ***
 
@@ -738,4 +738,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/neural\_network/MLPRegressor.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L444)
+[generated/neural\_network/MLPRegressor.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neural_network/MLPRegressor.ts#L444)

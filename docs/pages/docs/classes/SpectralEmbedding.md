@@ -72,7 +72,7 @@ A pseudo random number generator used for the initialization of the lobpcg eigen
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L27)
+[generated/manifold/SpectralEmbedding.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L27)
 
 ## Properties
 
@@ -82,7 +82,7 @@ A pseudo random number generator used for the initialization of the lobpcg eigen
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L25)
+[generated/manifold/SpectralEmbedding.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L25)
 
 ***
 
@@ -92,7 +92,7 @@ A pseudo random number generator used for the initialization of the lobpcg eigen
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L24)
+[generated/manifold/SpectralEmbedding.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L24)
 
 ***
 
@@ -102,7 +102,7 @@ A pseudo random number generator used for the initialization of the lobpcg eigen
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L23)
+[generated/manifold/SpectralEmbedding.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L23)
 
 ***
 
@@ -112,7 +112,7 @@ A pseudo random number generator used for the initialization of the lobpcg eigen
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L20)
+[generated/manifold/SpectralEmbedding.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L20)
 
 ***
 
@@ -122,7 +122,7 @@ A pseudo random number generator used for the initialization of the lobpcg eigen
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L21)
+[generated/manifold/SpectralEmbedding.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L21)
 
 ## Accessors
 
@@ -140,7 +140,7 @@ Affinity\_matrix constructed from samples or precomputed.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L302)
+[generated/manifold/SpectralEmbedding.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L302)
 
 ***
 
@@ -158,7 +158,7 @@ Spectral embedding of the training matrix.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L275)
+[generated/manifold/SpectralEmbedding.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L275)
 
 ***
 
@@ -176,7 +176,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L356)
+[generated/manifold/SpectralEmbedding.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L356)
 
 ***
 
@@ -194,7 +194,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L329)
+[generated/manifold/SpectralEmbedding.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L329)
 
 ***
 
@@ -212,7 +212,7 @@ Number of nearest neighbors effectively used.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L383)
+[generated/manifold/SpectralEmbedding.ts:383](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L383)
 
 ***
 
@@ -240,7 +240,7 @@ Number of nearest neighbors effectively used.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L82)
+[generated/manifold/SpectralEmbedding.ts:82](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L82)
 
 ## Methods
 
@@ -258,7 +258,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L136)
+[generated/manifold/SpectralEmbedding.ts:136](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L136)
 
 ***
 
@@ -288,7 +288,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L153)
+[generated/manifold/SpectralEmbedding.ts:153](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L153)
 
 ***
 
@@ -318,7 +318,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L194)
+[generated/manifold/SpectralEmbedding.ts:194](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L194)
 
 ***
 
@@ -344,7 +344,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L239)
+[generated/manifold/SpectralEmbedding.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L239)
 
 ***
 
@@ -366,4 +366,4 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/manifold/SpectralEmbedding.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L95)
+[generated/manifold/SpectralEmbedding.ts:95](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/manifold/SpectralEmbedding.ts#L95)

@@ -134,7 +134,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L21)
+[generated/decomposition/MiniBatchNMF.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L21)
 
 ## Properties
 
@@ -144,7 +144,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L19)
+[generated/decomposition/MiniBatchNMF.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L19)
 
 ***
 
@@ -154,7 +154,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L18)
+[generated/decomposition/MiniBatchNMF.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L18)
 
 ***
 
@@ -164,7 +164,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L17)
+[generated/decomposition/MiniBatchNMF.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L17)
 
 ***
 
@@ -174,7 +174,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L14)
+[generated/decomposition/MiniBatchNMF.ts:14](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L14)
 
 ***
 
@@ -184,7 +184,7 @@ Whether to be verbose.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L15)
+[generated/decomposition/MiniBatchNMF.ts:15](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L15)
 
 ## Accessors
 
@@ -202,7 +202,7 @@ Factorization matrix, sometimes called ‘dictionary’.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L518)
+[generated/decomposition/MiniBatchNMF.ts:518](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L518)
 
 ***
 
@@ -220,7 +220,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L664)
+[generated/decomposition/MiniBatchNMF.ts:664](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L664)
 
 ***
 
@@ -238,7 +238,7 @@ The number of components. It is same as the `n\_components` parameter if it was 
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L543)
+[generated/decomposition/MiniBatchNMF.ts:543](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L543)
 
 ***
 
@@ -256,7 +256,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L639)
+[generated/decomposition/MiniBatchNMF.ts:639](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L639)
 
 ***
 
@@ -274,7 +274,7 @@ Actual number of started iterations over the whole dataset.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L593)
+[generated/decomposition/MiniBatchNMF.ts:593](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L593)
 
 ***
 
@@ -292,7 +292,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L616)
+[generated/decomposition/MiniBatchNMF.ts:616](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L616)
 
 ***
 
@@ -320,7 +320,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L130)
+[generated/decomposition/MiniBatchNMF.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L130)
 
 ***
 
@@ -338,7 +338,7 @@ Frobenius norm of the matrix difference, or beta-divergence, between the trainin
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L568)
+[generated/decomposition/MiniBatchNMF.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L568)
 
 ## Methods
 
@@ -356,7 +356,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L182)
+[generated/decomposition/MiniBatchNMF.ts:182](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L182)
 
 ***
 
@@ -388,7 +388,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L199)
+[generated/decomposition/MiniBatchNMF.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L199)
 
 ***
 
@@ -426,7 +426,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L243)
+[generated/decomposition/MiniBatchNMF.ts:243](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L243)
 
 ***
 
@@ -452,7 +452,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L292)
+[generated/decomposition/MiniBatchNMF.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L292)
 
 ***
 
@@ -478,7 +478,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L328)
+[generated/decomposition/MiniBatchNMF.ts:328](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L328)
 
 ***
 
@@ -500,7 +500,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L143)
+[generated/decomposition/MiniBatchNMF.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L143)
 
 ***
 
@@ -528,7 +528,7 @@ Transformed data matrix.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L362)
+[generated/decomposition/MiniBatchNMF.ts:362](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L362)
 
 ***
 
@@ -568,7 +568,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L405)
+[generated/decomposition/MiniBatchNMF.ts:405](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L405)
 
 ***
 
@@ -594,7 +594,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L454)
+[generated/decomposition/MiniBatchNMF.ts:454](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L454)
 
 ***
 
@@ -618,4 +618,4 @@ Data matrix to be transformed by the model.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchNMF.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L486)
+[generated/decomposition/MiniBatchNMF.ts:486](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchNMF.ts#L486)

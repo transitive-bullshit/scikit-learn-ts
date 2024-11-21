@@ -162,7 +162,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L25)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L25)
 
 ## Properties
 
@@ -172,7 +172,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L23)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L23)
 
 ***
 
@@ -182,7 +182,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L22)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L22)
 
 ***
 
@@ -192,7 +192,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L21)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L21)
 
 ***
 
@@ -202,7 +202,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L18)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L18)
 
 ***
 
@@ -212,7 +212,7 @@ To control the verbosity of the procedure.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L19)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L19)
 
 ## Accessors
 
@@ -230,7 +230,7 @@ Components extracted from the data.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L520)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L520)
 
 ***
 
@@ -248,7 +248,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L574)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:574](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L574)
 
 ***
 
@@ -266,7 +266,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L547)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:547](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L547)
 
 ***
 
@@ -284,7 +284,7 @@ Number of iterations over the full dataset.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L601)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:601](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L601)
 
 ***
 
@@ -302,7 +302,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L628)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L628)
 
 ***
 
@@ -330,7 +330,7 @@ Number of mini-batches processed.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L165)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:165](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L165)
 
 ## Methods
 
@@ -348,7 +348,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L221)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:221](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L221)
 
 ***
 
@@ -376,7 +376,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L238)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:238](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L238)
 
 ***
 
@@ -410,7 +410,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L281)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:281](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L281)
 
 ***
 
@@ -436,7 +436,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L329)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:329](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L329)
 
 ***
 
@@ -462,7 +462,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L367)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:367](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L367)
 
 ***
 
@@ -484,7 +484,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L178)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:178](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L178)
 
 ***
 
@@ -512,7 +512,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L403)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:403](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L403)
 
 ***
 
@@ -538,7 +538,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L446)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:446](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L446)
 
 ***
 
@@ -564,4 +564,4 @@ Test data to be transformed, must have the same number of features as the data u
 
 #### Defined in
 
-[generated/decomposition/MiniBatchDictionaryLearning.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L484)
+[generated/decomposition/MiniBatchDictionaryLearning.ts:484](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/MiniBatchDictionaryLearning.ts#L484)

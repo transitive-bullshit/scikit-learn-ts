@@ -54,7 +54,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L25)
+[generated/naive\_bayes/MultinomialNB.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L25)
 
 ## Properties
 
@@ -64,7 +64,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L23)
+[generated/naive\_bayes/MultinomialNB.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L23)
 
 ***
 
@@ -74,7 +74,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L22)
+[generated/naive\_bayes/MultinomialNB.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L22)
 
 ***
 
@@ -84,7 +84,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L21)
+[generated/naive\_bayes/MultinomialNB.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L21)
 
 ***
 
@@ -94,7 +94,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L18)
+[generated/naive\_bayes/MultinomialNB.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L18)
 
 ***
 
@@ -104,7 +104,7 @@ If `false` and alpha is less than 1e-10, it will set alpha to 1e-10. If `true`, 
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L19)
+[generated/naive\_bayes/MultinomialNB.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L19)
 
 ## Accessors
 
@@ -122,7 +122,7 @@ Number of samples encountered for each class during fitting. This value is weigh
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L553)
+[generated/naive\_bayes/MultinomialNB.ts:553](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L553)
 
 ***
 
@@ -140,7 +140,7 @@ Smoothed empirical log probability for each class.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L578)
+[generated/naive\_bayes/MultinomialNB.ts:578](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L578)
 
 ***
 
@@ -158,7 +158,7 @@ Class labels known to the classifier
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L603)
+[generated/naive\_bayes/MultinomialNB.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L603)
 
 ***
 
@@ -176,7 +176,7 @@ Number of samples encountered for each (class, feature) during fitting. This val
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L628)
+[generated/naive\_bayes/MultinomialNB.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L628)
 
 ***
 
@@ -194,7 +194,7 @@ Empirical log probability of features given a class, `P(x\_i|y)`.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L653)
+[generated/naive\_bayes/MultinomialNB.ts:653](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L653)
 
 ***
 
@@ -212,7 +212,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L703)
+[generated/naive\_bayes/MultinomialNB.ts:703](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L703)
 
 ***
 
@@ -230,7 +230,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L678)
+[generated/naive\_bayes/MultinomialNB.ts:678](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L678)
 
 ***
 
@@ -258,7 +258,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L56)
+[generated/naive\_bayes/MultinomialNB.ts:56](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L56)
 
 ## Methods
 
@@ -276,7 +276,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L108)
+[generated/naive\_bayes/MultinomialNB.ts:108](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L108)
 
 ***
 
@@ -308,7 +308,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L125)
+[generated/naive\_bayes/MultinomialNB.ts:125](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L125)
 
 ***
 
@@ -334,7 +334,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L169)
+[generated/naive\_bayes/MultinomialNB.ts:169](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L169)
 
 ***
 
@@ -356,7 +356,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L69)
+[generated/naive\_bayes/MultinomialNB.ts:69](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L69)
 
 ***
 
@@ -400,7 +400,7 @@ Target values.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L209)
+[generated/naive\_bayes/MultinomialNB.ts:209](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L209)
 
 ***
 
@@ -424,7 +424,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L258)
+[generated/naive\_bayes/MultinomialNB.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L258)
 
 ***
 
@@ -450,7 +450,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L292)
+[generated/naive\_bayes/MultinomialNB.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L292)
 
 ***
 
@@ -474,7 +474,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L326)
+[generated/naive\_bayes/MultinomialNB.ts:326](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L326)
 
 ***
 
@@ -498,7 +498,7 @@ The input samples.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L360)
+[generated/naive\_bayes/MultinomialNB.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L360)
 
 ***
 
@@ -532,7 +532,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L394)
+[generated/naive\_bayes/MultinomialNB.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L394)
 
 ***
 
@@ -560,7 +560,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L440)
+[generated/naive\_bayes/MultinomialNB.ts:440](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L440)
 
 ***
 
@@ -592,7 +592,7 @@ Metadata routing for `sample\_weight` parameter in `partial\_fit`.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L476)
+[generated/naive\_bayes/MultinomialNB.ts:476](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L476)
 
 ***
 
@@ -620,4 +620,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/naive\_bayes/MultinomialNB.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L519)
+[generated/naive\_bayes/MultinomialNB.ts:519](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/naive_bayes/MultinomialNB.ts#L519)

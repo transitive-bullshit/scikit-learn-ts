@@ -46,7 +46,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L25)
+[generated/kernel\_approximation/RBFSampler.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L25)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L23)
+[generated/kernel\_approximation/RBFSampler.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L23)
 
 ***
 
@@ -66,7 +66,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L22)
+[generated/kernel\_approximation/RBFSampler.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L22)
 
 ***
 
@@ -76,7 +76,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L21)
+[generated/kernel\_approximation/RBFSampler.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L21)
 
 ***
 
@@ -86,7 +86,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L18)
+[generated/kernel\_approximation/RBFSampler.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L18)
 
 ***
 
@@ -96,7 +96,7 @@ Pseudo-random number generator to control the generation of the random weights a
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L19)
+[generated/kernel\_approximation/RBFSampler.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L19)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L414)
+[generated/kernel\_approximation/RBFSampler.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L414)
 
 ***
 
@@ -132,7 +132,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L389)
+[generated/kernel\_approximation/RBFSampler.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L389)
 
 ***
 
@@ -160,7 +160,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L49)
+[generated/kernel\_approximation/RBFSampler.ts:49](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L49)
 
 ***
 
@@ -178,7 +178,7 @@ Random offset used to compute the projection in the `n\_components` dimensions o
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L339)
+[generated/kernel\_approximation/RBFSampler.ts:339](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L339)
 
 ***
 
@@ -196,7 +196,7 @@ Random projection directions drawn from the Fourier transform of the RBF kernel.
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L364)
+[generated/kernel\_approximation/RBFSampler.ts:364](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L364)
 
 ## Methods
 
@@ -214,7 +214,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L101)
+[generated/kernel\_approximation/RBFSampler.ts:101](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L101)
 
 ***
 
@@ -244,7 +244,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L120)
+[generated/kernel\_approximation/RBFSampler.ts:120](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L120)
 
 ***
 
@@ -278,7 +278,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L159)
+[generated/kernel\_approximation/RBFSampler.ts:159](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L159)
 
 ***
 
@@ -304,7 +304,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L203)
+[generated/kernel\_approximation/RBFSampler.ts:203](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L203)
 
 ***
 
@@ -330,7 +330,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L239)
+[generated/kernel\_approximation/RBFSampler.ts:239](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L239)
 
 ***
 
@@ -352,7 +352,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L62)
+[generated/kernel\_approximation/RBFSampler.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L62)
 
 ***
 
@@ -378,7 +378,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L275)
+[generated/kernel\_approximation/RBFSampler.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L275)
 
 ***
 
@@ -402,4 +402,4 @@ New data, where `n\_samples` is the number of samples and `n\_features` is the n
 
 #### Defined in
 
-[generated/kernel\_approximation/RBFSampler.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L307)
+[generated/kernel\_approximation/RBFSampler.ts:307](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/kernel_approximation/RBFSampler.ts#L307)

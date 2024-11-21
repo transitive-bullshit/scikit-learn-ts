@@ -108,7 +108,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L31)
+[generated/model\_selection/RandomizedSearchCV.ts:31](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L31)
 
 ## Properties
 
@@ -118,7 +118,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L29)
+[generated/model\_selection/RandomizedSearchCV.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L29)
 
 ***
 
@@ -128,7 +128,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L28)
+[generated/model\_selection/RandomizedSearchCV.ts:28](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L28)
 
 ***
 
@@ -138,7 +138,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L27)
+[generated/model\_selection/RandomizedSearchCV.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L27)
 
 ***
 
@@ -148,7 +148,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L24)
+[generated/model\_selection/RandomizedSearchCV.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L24)
 
 ***
 
@@ -158,7 +158,7 @@ Controls the verbosity: the higher, the more messages.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L25)
+[generated/model\_selection/RandomizedSearchCV.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L25)
 
 ## Accessors
 
@@ -180,7 +180,7 @@ See `refit` parameter for more information on allowed values.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L619)
+[generated/model\_selection/RandomizedSearchCV.ts:619](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L619)
 
 ***
 
@@ -202,7 +202,7 @@ For multi-metric evaluation, this is not available if `refit` is `false`. See `r
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L710)
+[generated/model\_selection/RandomizedSearchCV.ts:710](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L710)
 
 ***
 
@@ -222,7 +222,7 @@ For multi-metric evaluation, this is not available if `refit` is `false`. See `r
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L679)
+[generated/model\_selection/RandomizedSearchCV.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L679)
 
 ***
 
@@ -244,7 +244,7 @@ This attribute is not available if `refit` is a function.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L650)
+[generated/model\_selection/RandomizedSearchCV.ts:650](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L650)
 
 ***
 
@@ -264,7 +264,7 @@ For instance the below given table
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L588)
+[generated/model\_selection/RandomizedSearchCV.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L588)
 
 ***
 
@@ -282,7 +282,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Only defined 
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L849)
+[generated/model\_selection/RandomizedSearchCV.ts:849](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L849)
 
 ***
 
@@ -300,7 +300,7 @@ Whether or not the scorers compute several metrics.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:822](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L822)
+[generated/model\_selection/RandomizedSearchCV.ts:822](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L822)
 
 ***
 
@@ -318,7 +318,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L766)
+[generated/model\_selection/RandomizedSearchCV.ts:766](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L766)
 
 ***
 
@@ -346,7 +346,7 @@ The number of cross-validation splits (folds/iterations).
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L116)
+[generated/model\_selection/RandomizedSearchCV.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L116)
 
 ***
 
@@ -366,7 +366,7 @@ This is present only if `refit` is not `false`.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L795)
+[generated/model\_selection/RandomizedSearchCV.ts:795](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L795)
 
 ***
 
@@ -386,7 +386,7 @@ For multi-metric evaluation, this attribute holds the validated `scoring` dict w
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L739)
+[generated/model\_selection/RandomizedSearchCV.ts:739](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L739)
 
 ## Methods
 
@@ -412,7 +412,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L191)
+[generated/model\_selection/RandomizedSearchCV.ts:191](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L191)
 
 ***
 
@@ -430,7 +430,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L172)
+[generated/model\_selection/RandomizedSearchCV.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L172)
 
 ***
 
@@ -464,7 +464,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L227)
+[generated/model\_selection/RandomizedSearchCV.ts:227](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L227)
 
 ***
 
@@ -490,7 +490,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L275)
+[generated/model\_selection/RandomizedSearchCV.ts:275](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L275)
 
 ***
 
@@ -512,7 +512,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L129)
+[generated/model\_selection/RandomizedSearchCV.ts:129](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L129)
 
 ***
 
@@ -542,7 +542,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L313)
+[generated/model\_selection/RandomizedSearchCV.ts:313](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L313)
 
 ***
 
@@ -568,7 +568,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L356)
+[generated/model\_selection/RandomizedSearchCV.ts:356](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L356)
 
 ***
 
@@ -594,7 +594,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L392)
+[generated/model\_selection/RandomizedSearchCV.ts:392](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L392)
 
 ***
 
@@ -620,7 +620,7 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L430)
+[generated/model\_selection/RandomizedSearchCV.ts:430](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L430)
 
 ***
 
@@ -654,7 +654,7 @@ Target relative to X for classification or regression; `undefined` for unsupervi
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L468)
+[generated/model\_selection/RandomizedSearchCV.ts:468](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L468)
 
 ***
 
@@ -680,7 +680,7 @@ Data to predict on. Must fulfill input requirements of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L514)
+[generated/model\_selection/RandomizedSearchCV.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L514)
 
 ***
 
@@ -706,4 +706,4 @@ Must fulfill the input assumptions of the underlying estimator.
 
 #### Defined in
 
-[generated/model\_selection/RandomizedSearchCV.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L552)
+[generated/model\_selection/RandomizedSearchCV.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/RandomizedSearchCV.ts#L552)

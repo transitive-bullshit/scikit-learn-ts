@@ -142,7 +142,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L29)
+[generated/feature\_extraction/text/CountVectorizer.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L29)
 
 ## Properties
 
@@ -152,7 +152,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L27)
+[generated/feature\_extraction/text/CountVectorizer.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L27)
 
 ***
 
@@ -162,7 +162,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L26)
+[generated/feature\_extraction/text/CountVectorizer.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L26)
 
 ***
 
@@ -172,7 +172,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L25)
+[generated/feature\_extraction/text/CountVectorizer.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L25)
 
 ***
 
@@ -182,7 +182,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L22)
+[generated/feature\_extraction/text/CountVectorizer.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L22)
 
 ***
 
@@ -192,7 +192,7 @@ Either a Mapping (e.g., a dict) where keys are terms and values are indices in t
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L23)
+[generated/feature\_extraction/text/CountVectorizer.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L23)
 
 ## Accessors
 
@@ -210,7 +210,7 @@ True if a fixed vocabulary of term to indices mapping is provided by the user.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L679)
+[generated/feature\_extraction/text/CountVectorizer.ts:679](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L679)
 
 ***
 
@@ -238,7 +238,7 @@ True if a fixed vocabulary of term to indices mapping is provided by the user.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L147)
+[generated/feature\_extraction/text/CountVectorizer.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L147)
 
 ***
 
@@ -256,7 +256,7 @@ A mapping of terms to feature indices.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L654)
+[generated/feature\_extraction/text/CountVectorizer.ts:654](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L654)
 
 ## Methods
 
@@ -278,7 +278,7 @@ The callable handles preprocessing, tokenization, and n-grams generation.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L218)
+[generated/feature\_extraction/text/CountVectorizer.ts:218](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L218)
 
 ***
 
@@ -298,7 +298,7 @@ Return a function to preprocess the text before tokenization.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L246)
+[generated/feature\_extraction/text/CountVectorizer.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L246)
 
 ***
 
@@ -318,7 +318,7 @@ Return a function that splits a string into a sequence of tokens.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L274)
+[generated/feature\_extraction/text/CountVectorizer.ts:274](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L274)
 
 ***
 
@@ -344,7 +344,7 @@ The string to decode.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L304)
+[generated/feature\_extraction/text/CountVectorizer.ts:304](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L304)
 
 ***
 
@@ -362,7 +362,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L199)
+[generated/feature\_extraction/text/CountVectorizer.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L199)
 
 ***
 
@@ -390,7 +390,7 @@ This parameter is ignored.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L336)
+[generated/feature\_extraction/text/CountVectorizer.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L336)
 
 ***
 
@@ -420,7 +420,7 @@ This parameter is ignored.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L375)
+[generated/feature\_extraction/text/CountVectorizer.ts:375](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L375)
 
 ***
 
@@ -444,7 +444,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L412)
+[generated/feature\_extraction/text/CountVectorizer.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L412)
 
 ***
 
@@ -470,7 +470,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L448)
+[generated/feature\_extraction/text/CountVectorizer.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L448)
 
 ***
 
@@ -490,7 +490,7 @@ Build or fetch the effective stop words list.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L482)
+[generated/feature\_extraction/text/CountVectorizer.ts:482](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L482)
 
 ***
 
@@ -512,7 +512,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L160)
+[generated/feature\_extraction/text/CountVectorizer.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L160)
 
 ***
 
@@ -536,7 +536,7 @@ Document-term matrix.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L510)
+[generated/feature\_extraction/text/CountVectorizer.ts:510](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L510)
 
 ***
 
@@ -564,7 +564,7 @@ Metadata routing for `raw\_documents` parameter in `fit`.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L548)
+[generated/feature\_extraction/text/CountVectorizer.ts:548](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L548)
 
 ***
 
@@ -592,7 +592,7 @@ Metadata routing for `raw\_documents` parameter in `transform`.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L586)
+[generated/feature\_extraction/text/CountVectorizer.ts:586](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L586)
 
 ***
 
@@ -618,4 +618,4 @@ An iterable which generates either str, unicode or file objects.
 
 #### Defined in
 
-[generated/feature\_extraction/text/CountVectorizer.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L622)
+[generated/feature\_extraction/text/CountVectorizer.ts:622](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/feature_extraction/text/CountVectorizer.ts#L622)

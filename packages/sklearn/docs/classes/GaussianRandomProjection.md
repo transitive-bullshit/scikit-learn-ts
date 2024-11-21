@@ -60,7 +60,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L25)
+[generated/random\_projection/GaussianRandomProjection.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L25)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L23)
+[generated/random\_projection/GaussianRandomProjection.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L23)
 
 ***
 
@@ -80,7 +80,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L22)
+[generated/random\_projection/GaussianRandomProjection.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L22)
 
 ***
 
@@ -90,7 +90,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L21)
+[generated/random\_projection/GaussianRandomProjection.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L21)
 
 ***
 
@@ -100,7 +100,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L18)
+[generated/random\_projection/GaussianRandomProjection.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L18)
 
 ***
 
@@ -110,7 +110,7 @@ Controls the pseudo random number generator used to generate the projection matr
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L19)
+[generated/random\_projection/GaussianRandomProjection.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L19)
 
 ## Accessors
 
@@ -128,7 +128,7 @@ Random matrix used for the projection.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L439)
+[generated/random\_projection/GaussianRandomProjection.ts:439](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L439)
 
 ***
 
@@ -146,7 +146,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L520)
+[generated/random\_projection/GaussianRandomProjection.ts:520](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L520)
 
 ***
 
@@ -164,7 +164,7 @@ Pseudo-inverse of the components, only computed if `compute\_inverse\_components
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L466)
+[generated/random\_projection/GaussianRandomProjection.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L466)
 
 ***
 
@@ -182,7 +182,7 @@ Concrete number of components computed when n\_components=”auto”.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L412)
+[generated/random\_projection/GaussianRandomProjection.ts:412](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L412)
 
 ***
 
@@ -200,7 +200,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L493)
+[generated/random\_projection/GaussianRandomProjection.ts:493](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L493)
 
 ***
 
@@ -228,7 +228,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L62)
+[generated/random\_projection/GaussianRandomProjection.ts:62](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L62)
 
 ## Methods
 
@@ -246,7 +246,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L118)
+[generated/random\_projection/GaussianRandomProjection.ts:118](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L118)
 
 ***
 
@@ -274,7 +274,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L135)
+[generated/random\_projection/GaussianRandomProjection.ts:135](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L135)
 
 ***
 
@@ -308,7 +308,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L176)
+[generated/random\_projection/GaussianRandomProjection.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L176)
 
 ***
 
@@ -334,7 +334,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L224)
+[generated/random\_projection/GaussianRandomProjection.ts:224](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L224)
 
 ***
 
@@ -360,7 +360,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L262)
+[generated/random\_projection/GaussianRandomProjection.ts:262](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L262)
 
 ***
 
@@ -382,7 +382,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L75)
+[generated/random\_projection/GaussianRandomProjection.ts:75](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L75)
 
 ***
 
@@ -410,7 +410,7 @@ Data to be transformed back.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L302)
+[generated/random\_projection/GaussianRandomProjection.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L302)
 
 ***
 
@@ -436,7 +436,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L340)
+[generated/random\_projection/GaussianRandomProjection.ts:340](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L340)
 
 ***
 
@@ -460,4 +460,4 @@ The input data to project into a smaller dimensional space.
 
 #### Defined in
 
-[generated/random\_projection/GaussianRandomProjection.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L376)
+[generated/random\_projection/GaussianRandomProjection.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/random_projection/GaussianRandomProjection.ts#L376)

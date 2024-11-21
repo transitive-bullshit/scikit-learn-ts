@@ -36,7 +36,7 @@ True values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L27)
+[generated/metrics/PredictionErrorDisplay.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L27)
 
 ## Properties
 
@@ -46,7 +46,7 @@ True values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L25)
+[generated/metrics/PredictionErrorDisplay.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L25)
 
 ***
 
@@ -56,7 +56,7 @@ True values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L24)
+[generated/metrics/PredictionErrorDisplay.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L24)
 
 ***
 
@@ -66,7 +66,7 @@ True values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L23)
+[generated/metrics/PredictionErrorDisplay.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L23)
 
 ***
 
@@ -76,7 +76,7 @@ True values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L20)
+[generated/metrics/PredictionErrorDisplay.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L20)
 
 ***
 
@@ -86,7 +86,7 @@ True values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L21)
+[generated/metrics/PredictionErrorDisplay.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L21)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ Axes with the different matplotlib axis.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L408)
+[generated/metrics/PredictionErrorDisplay.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L408)
 
 ***
 
@@ -122,7 +122,7 @@ Residual lines. If `with\_errors=False`, then it is set to `undefined`.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L354)
+[generated/metrics/PredictionErrorDisplay.ts:354](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L354)
 
 ***
 
@@ -140,7 +140,7 @@ Figure containing the scatter and lines.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L435)
+[generated/metrics/PredictionErrorDisplay.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L435)
 
 ***
 
@@ -158,7 +158,7 @@ Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal lin
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L327)
+[generated/metrics/PredictionErrorDisplay.ts:327](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L327)
 
 ***
 
@@ -186,7 +186,7 @@ Optimal line representing `y\_true \== y\_pred`. Therefore, it is a diagonal lin
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42)
+[generated/metrics/PredictionErrorDisplay.ts:42](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L42)
 
 ***
 
@@ -204,7 +204,7 @@ Scatter data points.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L381)
+[generated/metrics/PredictionErrorDisplay.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L381)
 
 ## Methods
 
@@ -222,7 +222,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L98)
+[generated/metrics/PredictionErrorDisplay.ts:98](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L98)
 
 ***
 
@@ -288,7 +288,7 @@ Target values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L117)
+[generated/metrics/PredictionErrorDisplay.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L117)
 
 ***
 
@@ -350,7 +350,7 @@ True target values.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L199)
+[generated/metrics/PredictionErrorDisplay.ts:199](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L199)
 
 ***
 
@@ -372,7 +372,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L55)
+[generated/metrics/PredictionErrorDisplay.ts:55](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L55)
 
 ***
 
@@ -414,4 +414,4 @@ Dictionary with keywords passed to the `matplotlib.pyplot.scatter` call.
 
 #### Defined in
 
-[generated/metrics/PredictionErrorDisplay.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L276)
+[generated/metrics/PredictionErrorDisplay.ts:276](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/metrics/PredictionErrorDisplay.ts#L276)

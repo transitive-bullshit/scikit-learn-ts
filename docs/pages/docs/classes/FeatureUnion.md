@@ -56,7 +56,7 @@ If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_featu
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L27)
+[generated/pipeline/FeatureUnion.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L27)
 
 ## Properties
 
@@ -66,7 +66,7 @@ If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_featu
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L25)
+[generated/pipeline/FeatureUnion.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L25)
 
 ***
 
@@ -76,7 +76,7 @@ If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_featu
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L24)
+[generated/pipeline/FeatureUnion.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L24)
 
 ***
 
@@ -86,7 +86,7 @@ If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_featu
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L23)
+[generated/pipeline/FeatureUnion.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L23)
 
 ***
 
@@ -96,7 +96,7 @@ If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_featu
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L20)
+[generated/pipeline/FeatureUnion.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L20)
 
 ***
 
@@ -106,7 +106,7 @@ If `true`, [`get\_feature\_names\_out`](#sklearn.pipeline.FeatureUnion.get_featu
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L21)
+[generated/pipeline/FeatureUnion.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L21)
 
 ## Accessors
 
@@ -124,7 +124,7 @@ Dictionary-like object, with the following attributes. Read-only attribute to ac
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L355)
+[generated/pipeline/FeatureUnion.ts:355](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L355)
 
 ***
 
@@ -152,7 +152,7 @@ Dictionary-like object, with the following attributes. Read-only attribute to ac
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L61)
+[generated/pipeline/FeatureUnion.ts:61](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L61)
 
 ## Methods
 
@@ -170,7 +170,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L113)
+[generated/pipeline/FeatureUnion.ts:113](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L113)
 
 ***
 
@@ -202,7 +202,7 @@ Targets for supervised learning.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L130)
+[generated/pipeline/FeatureUnion.ts:130](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L130)
 
 ***
 
@@ -234,7 +234,7 @@ Targets for supervised learning.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L172)
+[generated/pipeline/FeatureUnion.ts:172](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L172)
 
 ***
 
@@ -258,7 +258,7 @@ Input features.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L214)
+[generated/pipeline/FeatureUnion.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L214)
 
 ***
 
@@ -284,7 +284,7 @@ A [`MetadataRouter`](sklearn.utils.metadata_routing.MetadataRouter.html#sklearn.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L250)
+[generated/pipeline/FeatureUnion.ts:250](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L250)
 
 ***
 
@@ -306,7 +306,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L74)
+[generated/pipeline/FeatureUnion.ts:74](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L74)
 
 ***
 
@@ -332,7 +332,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L286)
+[generated/pipeline/FeatureUnion.ts:286](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L286)
 
 ***
 
@@ -360,4 +360,4 @@ Input data to be transformed.
 
 #### Defined in
 
-[generated/pipeline/FeatureUnion.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L318)
+[generated/pipeline/FeatureUnion.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/pipeline/FeatureUnion.ts#L318)

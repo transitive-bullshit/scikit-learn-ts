@@ -84,7 +84,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L23)
+[generated/neighbors/NearestNeighbors.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L23)
 
 ## Properties
 
@@ -94,7 +94,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L21)
+[generated/neighbors/NearestNeighbors.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L21)
 
 ***
 
@@ -104,7 +104,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L20)
+[generated/neighbors/NearestNeighbors.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L20)
 
 ***
 
@@ -114,7 +114,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L19)
+[generated/neighbors/NearestNeighbors.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L19)
 
 ***
 
@@ -124,7 +124,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L16)
+[generated/neighbors/NearestNeighbors.ts:16](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L16)
 
 ***
 
@@ -134,7 +134,7 @@ Range of parameter space to use by default for [`radius\_neighbors`](#sklearn.ne
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L17)
+[generated/neighbors/NearestNeighbors.ts:17](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L17)
 
 ## Accessors
 
@@ -152,7 +152,7 @@ Metric used to compute distances to neighbors.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L444)
+[generated/neighbors/NearestNeighbors.ts:444](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L444)
 
 ***
 
@@ -170,7 +170,7 @@ Parameters for the metric used to compute distances to neighbors.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L471)
+[generated/neighbors/NearestNeighbors.ts:471](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L471)
 
 ***
 
@@ -188,7 +188,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L525)
+[generated/neighbors/NearestNeighbors.ts:525](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L525)
 
 ***
 
@@ -206,7 +206,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L498)
+[generated/neighbors/NearestNeighbors.ts:498](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L498)
 
 ***
 
@@ -224,7 +224,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L552)
+[generated/neighbors/NearestNeighbors.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L552)
 
 ***
 
@@ -252,7 +252,7 @@ Number of samples in the fitted data.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L84)
+[generated/neighbors/NearestNeighbors.ts:84](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L84)
 
 ## Methods
 
@@ -270,7 +270,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L138)
+[generated/neighbors/NearestNeighbors.ts:138](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L138)
 
 ***
 
@@ -298,7 +298,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L155)
+[generated/neighbors/NearestNeighbors.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L155)
 
 ***
 
@@ -324,7 +324,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L196)
+[generated/neighbors/NearestNeighbors.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L196)
 
 ***
 
@@ -346,7 +346,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L97)
+[generated/neighbors/NearestNeighbors.ts:97](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L97)
 
 ***
 
@@ -384,7 +384,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L234)
+[generated/neighbors/NearestNeighbors.ts:234](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L234)
 
 ***
 
@@ -420,7 +420,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L280)
+[generated/neighbors/NearestNeighbors.ts:280](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L280)
 
 ***
 
@@ -468,7 +468,7 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L332)
+[generated/neighbors/NearestNeighbors.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L332)
 
 ***
 
@@ -514,4 +514,4 @@ The query point or points. If not provided, neighbors of each indexed point are 
 
 #### Defined in
 
-[generated/neighbors/NearestNeighbors.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L389)
+[generated/neighbors/NearestNeighbors.ts:389](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/neighbors/NearestNeighbors.ts#L389)

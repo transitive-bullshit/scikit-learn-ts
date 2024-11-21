@@ -90,7 +90,7 @@ The solver to use for whitening.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L25)
+[generated/decomposition/FastICA.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L25)
 
 ## Properties
 
@@ -100,7 +100,7 @@ The solver to use for whitening.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L23)
+[generated/decomposition/FastICA.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L23)
 
 ***
 
@@ -110,7 +110,7 @@ The solver to use for whitening.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L22)
+[generated/decomposition/FastICA.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L22)
 
 ***
 
@@ -120,7 +120,7 @@ The solver to use for whitening.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L21)
+[generated/decomposition/FastICA.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L21)
 
 ***
 
@@ -130,7 +130,7 @@ The solver to use for whitening.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L18)
+[generated/decomposition/FastICA.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L18)
 
 ***
 
@@ -140,7 +140,7 @@ The solver to use for whitening.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L19)
+[generated/decomposition/FastICA.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L19)
 
 ## Accessors
 
@@ -158,7 +158,7 @@ The linear operator to apply to the data to get the independent sources. This is
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L488)
+[generated/decomposition/FastICA.ts:488](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L488)
 
 ***
 
@@ -176,7 +176,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L581)
+[generated/decomposition/FastICA.ts:581](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L581)
 
 ***
 
@@ -194,7 +194,7 @@ The mean over features. Only set if `self.whiten` is `true`.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L534)
+[generated/decomposition/FastICA.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L534)
 
 ***
 
@@ -212,7 +212,7 @@ The pseudo-inverse of `components\_`. It is the linear operator that maps indepe
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L511)
+[generated/decomposition/FastICA.ts:511](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L511)
 
 ***
 
@@ -230,7 +230,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L556)
+[generated/decomposition/FastICA.ts:556](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L556)
 
 ***
 
@@ -248,7 +248,7 @@ If the algorithm is “deflation”, n\_iter is the maximum number of iterations
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L606)
+[generated/decomposition/FastICA.ts:606](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L606)
 
 ***
 
@@ -276,7 +276,7 @@ If the algorithm is “deflation”, n\_iter is the maximum number of iterations
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L92)
+[generated/decomposition/FastICA.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L92)
 
 ***
 
@@ -294,7 +294,7 @@ Only set if whiten is ‘`true`’. This is the pre-whitening matrix that projec
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L629)
+[generated/decomposition/FastICA.ts:629](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L629)
 
 ## Methods
 
@@ -312,7 +312,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L143)
+[generated/decomposition/FastICA.ts:143](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L143)
 
 ***
 
@@ -340,7 +340,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L160)
+[generated/decomposition/FastICA.ts:160](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L160)
 
 ***
 
@@ -368,7 +368,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L197)
+[generated/decomposition/FastICA.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L197)
 
 ***
 
@@ -394,7 +394,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L236)
+[generated/decomposition/FastICA.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L236)
 
 ***
 
@@ -420,7 +420,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L270)
+[generated/decomposition/FastICA.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L270)
 
 ***
 
@@ -442,7 +442,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L105)
+[generated/decomposition/FastICA.ts:105](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L105)
 
 ***
 
@@ -474,7 +474,7 @@ Sources, where `n\_samples` is the number of samples and `n\_components` is the 
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L302)
+[generated/decomposition/FastICA.ts:302](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L302)
 
 ***
 
@@ -502,7 +502,7 @@ Metadata routing for `copy` parameter in `inverse\_transform`.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L345)
+[generated/decomposition/FastICA.ts:345](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L345)
 
 ***
 
@@ -528,7 +528,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L381)
+[generated/decomposition/FastICA.ts:381](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L381)
 
 ***
 
@@ -556,7 +556,7 @@ Metadata routing for `copy` parameter in `transform`.
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L417)
+[generated/decomposition/FastICA.ts:417](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L417)
 
 ***
 
@@ -588,4 +588,4 @@ Data to transform, where `n\_samples` is the number of samples and `n\_features`
 
 #### Defined in
 
-[generated/decomposition/FastICA.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/decomposition/FastICA.ts#L449)
+[generated/decomposition/FastICA.ts:449](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/decomposition/FastICA.ts#L449)

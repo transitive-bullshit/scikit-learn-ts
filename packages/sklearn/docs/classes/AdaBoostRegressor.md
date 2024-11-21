@@ -60,7 +60,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L27)
+[generated/ensemble/AdaBoostRegressor.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L27)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L25)
+[generated/ensemble/AdaBoostRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L25)
 
 ***
 
@@ -80,7 +80,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L24)
+[generated/ensemble/AdaBoostRegressor.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L24)
 
 ***
 
@@ -90,7 +90,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L23)
+[generated/ensemble/AdaBoostRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L23)
 
 ***
 
@@ -100,7 +100,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L20)
+[generated/ensemble/AdaBoostRegressor.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L20)
 
 ***
 
@@ -110,7 +110,7 @@ Controls the random seed given at each `estimator` at each boosting iteration. T
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L21)
+[generated/ensemble/AdaBoostRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L21)
 
 ## Accessors
 
@@ -128,7 +128,7 @@ The base estimator from which the ensemble is grown.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L460)
+[generated/ensemble/AdaBoostRegressor.ts:460](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L460)
 
 ***
 
@@ -146,7 +146,7 @@ Regression error for each estimator in the boosted ensemble.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L541)
+[generated/ensemble/AdaBoostRegressor.ts:541](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L541)
 
 ***
 
@@ -164,7 +164,7 @@ Weights for each estimator in the boosted ensemble.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L514)
+[generated/ensemble/AdaBoostRegressor.ts:514](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L514)
 
 ***
 
@@ -182,7 +182,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L487)
+[generated/ensemble/AdaBoostRegressor.ts:487](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L487)
 
 ***
 
@@ -200,7 +200,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L595)
+[generated/ensemble/AdaBoostRegressor.ts:595](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L595)
 
 ***
 
@@ -218,7 +218,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L568)
+[generated/ensemble/AdaBoostRegressor.ts:568](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L568)
 
 ***
 
@@ -246,7 +246,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L63)
+[generated/ensemble/AdaBoostRegressor.ts:63](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L63)
 
 ## Methods
 
@@ -264,7 +264,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L117)
+[generated/ensemble/AdaBoostRegressor.ts:117](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L117)
 
 ***
 
@@ -296,7 +296,7 @@ The target values.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L134)
+[generated/ensemble/AdaBoostRegressor.ts:134](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L134)
 
 ***
 
@@ -318,7 +318,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L180)
+[generated/ensemble/AdaBoostRegressor.ts:180](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L180)
 
 ***
 
@@ -340,7 +340,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L76)
+[generated/ensemble/AdaBoostRegressor.ts:76](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L76)
 
 ***
 
@@ -366,7 +366,7 @@ The training input samples. Sparse matrix can be CSC, CSR, COO, DOK, or LIL. COO
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L212)
+[generated/ensemble/AdaBoostRegressor.ts:212](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L212)
 
 ***
 
@@ -400,7 +400,7 @@ True values for `X`.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L248)
+[generated/ensemble/AdaBoostRegressor.ts:248](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L248)
 
 ***
 
@@ -428,7 +428,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L296)
+[generated/ensemble/AdaBoostRegressor.ts:296](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L296)
 
 ***
 
@@ -456,7 +456,7 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L336)
+[generated/ensemble/AdaBoostRegressor.ts:336](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L336)
 
 ***
 
@@ -484,7 +484,7 @@ The training input samples.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L376)
+[generated/ensemble/AdaBoostRegressor.ts:376](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L376)
 
 ***
 
@@ -518,4 +518,4 @@ Labels for X.
 
 #### Defined in
 
-[generated/ensemble/AdaBoostRegressor.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L414)
+[generated/ensemble/AdaBoostRegressor.ts:414](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/AdaBoostRegressor.ts#L414)

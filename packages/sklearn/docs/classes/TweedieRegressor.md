@@ -98,7 +98,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L25)
+[generated/linear\_model/TweedieRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L25)
 
 ## Properties
 
@@ -108,7 +108,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L23)
+[generated/linear\_model/TweedieRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L23)
 
 ***
 
@@ -118,7 +118,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L22)
+[generated/linear\_model/TweedieRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L22)
 
 ***
 
@@ -128,7 +128,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L21)
+[generated/linear\_model/TweedieRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L21)
 
 ***
 
@@ -138,7 +138,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L18)
+[generated/linear\_model/TweedieRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L18)
 
 ***
 
@@ -148,7 +148,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L19)
+[generated/linear\_model/TweedieRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L19)
 
 ## Accessors
 
@@ -166,7 +166,7 @@ Estimated coefficients for the linear predictor (`X @ coef\_ + intercept\_`) in 
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L408)
+[generated/linear\_model/TweedieRegressor.ts:408](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L408)
 
 ***
 
@@ -184,7 +184,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L516)
+[generated/linear\_model/TweedieRegressor.ts:516](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L516)
 
 ***
 
@@ -202,7 +202,7 @@ Intercept (a.k.a. bias) added to linear predictor.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L435)
+[generated/linear\_model/TweedieRegressor.ts:435](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L435)
 
 ***
 
@@ -220,7 +220,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L489)
+[generated/linear\_model/TweedieRegressor.ts:489](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L489)
 
 ***
 
@@ -238,7 +238,7 @@ Actual number of iterations used in the solver.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L462)
+[generated/linear\_model/TweedieRegressor.ts:462](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L462)
 
 ***
 
@@ -266,7 +266,7 @@ Actual number of iterations used in the solver.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L93)
+[generated/linear\_model/TweedieRegressor.ts:93](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L93)
 
 ## Methods
 
@@ -284,7 +284,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L147)
+[generated/linear\_model/TweedieRegressor.ts:147](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L147)
 
 ***
 
@@ -316,7 +316,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L164)
+[generated/linear\_model/TweedieRegressor.ts:164](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L164)
 
 ***
 
@@ -342,7 +342,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L210)
+[generated/linear\_model/TweedieRegressor.ts:210](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L210)
 
 ***
 
@@ -364,7 +364,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L106)
+[generated/linear\_model/TweedieRegressor.ts:106](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L106)
 
 ***
 
@@ -388,7 +388,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L246)
+[generated/linear\_model/TweedieRegressor.ts:246](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L246)
 
 ***
 
@@ -424,7 +424,7 @@ True values of target.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L284)
+[generated/linear\_model/TweedieRegressor.ts:284](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L284)
 
 ***
 
@@ -452,7 +452,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L332)
+[generated/linear\_model/TweedieRegressor.ts:332](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L332)
 
 ***
 
@@ -480,4 +480,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/TweedieRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L372)
+[generated/linear\_model/TweedieRegressor.ts:372](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/TweedieRegressor.ts#L372)

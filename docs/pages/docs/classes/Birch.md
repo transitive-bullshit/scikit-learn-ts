@@ -66,7 +66,7 @@ The radius of the subcluster obtained by merging a new sample and the closest su
 
 #### Defined in
 
-[generated/cluster/Birch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L25)
+[generated/cluster/Birch.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L25)
 
 ## Properties
 
@@ -76,7 +76,7 @@ The radius of the subcluster obtained by merging a new sample and the closest su
 
 #### Defined in
 
-[generated/cluster/Birch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L23)
+[generated/cluster/Birch.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L23)
 
 ***
 
@@ -86,7 +86,7 @@ The radius of the subcluster obtained by merging a new sample and the closest su
 
 #### Defined in
 
-[generated/cluster/Birch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L22)
+[generated/cluster/Birch.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L22)
 
 ***
 
@@ -96,7 +96,7 @@ The radius of the subcluster obtained by merging a new sample and the closest su
 
 #### Defined in
 
-[generated/cluster/Birch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L21)
+[generated/cluster/Birch.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L21)
 
 ***
 
@@ -106,7 +106,7 @@ The radius of the subcluster obtained by merging a new sample and the closest su
 
 #### Defined in
 
-[generated/cluster/Birch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L18)
+[generated/cluster/Birch.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L18)
 
 ***
 
@@ -116,7 +116,7 @@ The radius of the subcluster obtained by merging a new sample and the closest su
 
 #### Defined in
 
-[generated/cluster/Birch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L19)
+[generated/cluster/Birch.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L19)
 
 ## Accessors
 
@@ -134,7 +134,7 @@ Start pointer to all the leaves.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L485)
+[generated/cluster/Birch.ts:485](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L485)
 
 ***
 
@@ -152,7 +152,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/cluster/Birch.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L603)
+[generated/cluster/Birch.ts:603](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L603)
 
 ***
 
@@ -170,7 +170,7 @@ Array of labels assigned to the input data. if partial\_fit is used instead of f
 
 #### Defined in
 
-[generated/cluster/Birch.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L558)
+[generated/cluster/Birch.ts:558](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L558)
 
 ***
 
@@ -188,7 +188,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L580)
+[generated/cluster/Birch.ts:580](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L580)
 
 ***
 
@@ -216,7 +216,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L65)
+[generated/cluster/Birch.ts:65](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L65)
 
 ***
 
@@ -234,7 +234,7 @@ Root of the CFTree.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L463)
+[generated/cluster/Birch.ts:463](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L463)
 
 ***
 
@@ -252,7 +252,7 @@ Centroids of all subclusters read directly from the leaves.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L508)
+[generated/cluster/Birch.ts:508](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L508)
 
 ***
 
@@ -270,7 +270,7 @@ Labels assigned to the centroids of the subclusters after they are clustered glo
 
 #### Defined in
 
-[generated/cluster/Birch.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L533)
+[generated/cluster/Birch.ts:533](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L533)
 
 ## Methods
 
@@ -288,7 +288,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L116)
+[generated/cluster/Birch.ts:116](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L116)
 
 ***
 
@@ -316,7 +316,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L133)
+[generated/cluster/Birch.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L133)
 
 ***
 
@@ -348,7 +348,7 @@ Not used, present for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L170)
+[generated/cluster/Birch.ts:170](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L170)
 
 ***
 
@@ -382,7 +382,7 @@ Target values (`undefined` for unsupervised transformations).
 
 #### Defined in
 
-[generated/cluster/Birch.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L214)
+[generated/cluster/Birch.ts:214](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L214)
 
 ***
 
@@ -408,7 +408,7 @@ Only used to validate feature names with the names seen in `fit`.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L258)
+[generated/cluster/Birch.ts:258](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L258)
 
 ***
 
@@ -434,7 +434,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/cluster/Birch.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L292)
+[generated/cluster/Birch.ts:292](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L292)
 
 ***
 
@@ -456,7 +456,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L78)
+[generated/cluster/Birch.ts:78](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L78)
 
 ***
 
@@ -484,7 +484,7 @@ Not used, present here for API consistency by convention.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L324)
+[generated/cluster/Birch.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L324)
 
 ***
 
@@ -510,7 +510,7 @@ Input data.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L363)
+[generated/cluster/Birch.ts:363](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L363)
 
 ***
 
@@ -536,7 +536,7 @@ Configure output of `transform` and `fit\_transform`.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L397)
+[generated/cluster/Birch.ts:397](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L397)
 
 ***
 
@@ -562,4 +562,4 @@ Input data.
 
 #### Defined in
 
-[generated/cluster/Birch.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/cluster/Birch.ts#L431)
+[generated/cluster/Birch.ts:431](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/cluster/Birch.ts#L431)

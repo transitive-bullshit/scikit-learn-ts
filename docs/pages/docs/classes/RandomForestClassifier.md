@@ -164,7 +164,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L27)
+[generated/ensemble/RandomForestClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L27)
 
 ## Properties
 
@@ -174,7 +174,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L25)
+[generated/ensemble/RandomForestClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L25)
 
 ***
 
@@ -184,7 +184,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L24)
+[generated/ensemble/RandomForestClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L24)
 
 ***
 
@@ -194,7 +194,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L23)
+[generated/ensemble/RandomForestClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L23)
 
 ***
 
@@ -204,7 +204,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L20)
+[generated/ensemble/RandomForestClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L20)
 
 ***
 
@@ -214,7 +214,7 @@ When set to `true`, reuse the solution of the previous call to fit and add more 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L21)
+[generated/ensemble/RandomForestClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L21)
 
 ## Accessors
 
@@ -232,7 +232,7 @@ The classes labels (single output problem), or a list of arrays of class labels 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L682)
+[generated/ensemble/RandomForestClassifier.ts:682](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L682)
 
 ***
 
@@ -250,7 +250,7 @@ The child estimator template used to create the collection of fitted sub-estimat
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L628)
+[generated/ensemble/RandomForestClassifier.ts:628](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L628)
 
 ***
 
@@ -268,7 +268,7 @@ The collection of fitted sub-estimators.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L655)
+[generated/ensemble/RandomForestClassifier.ts:655](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L655)
 
 ***
 
@@ -286,7 +286,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L763)
+[generated/ensemble/RandomForestClassifier.ts:763](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L763)
 
 ***
 
@@ -304,7 +304,7 @@ The number of classes (single output problem), or a list containing the number o
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L709)
+[generated/ensemble/RandomForestClassifier.ts:709](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L709)
 
 ***
 
@@ -322,7 +322,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L736)
+[generated/ensemble/RandomForestClassifier.ts:736](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L736)
 
 ***
 
@@ -340,7 +340,7 @@ The number of outputs when `fit` is performed.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L790)
+[generated/ensemble/RandomForestClassifier.ts:790](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L790)
 
 ***
 
@@ -358,7 +358,7 @@ Decision function computed with out-of-bag estimate on the training set. If n\_e
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:844](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L844)
+[generated/ensemble/RandomForestClassifier.ts:844](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L844)
 
 ***
 
@@ -376,7 +376,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:817](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L817)
+[generated/ensemble/RandomForestClassifier.ts:817](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L817)
 
 ***
 
@@ -404,7 +404,7 @@ Score of the training dataset obtained using an out-of-bag estimate. This attrib
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L163)
+[generated/ensemble/RandomForestClassifier.ts:163](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L163)
 
 ## Methods
 
@@ -428,7 +428,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L236)
+[generated/ensemble/RandomForestClassifier.ts:236](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L236)
 
 ***
 
@@ -452,7 +452,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L270)
+[generated/ensemble/RandomForestClassifier.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L270)
 
 ***
 
@@ -470,7 +470,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L219)
+[generated/ensemble/RandomForestClassifier.ts:219](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L219)
 
 ***
 
@@ -502,7 +502,7 @@ The target values (class labels in classification, real numbers in regression).
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L306)
+[generated/ensemble/RandomForestClassifier.ts:306](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L306)
 
 ***
 
@@ -528,7 +528,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L352)
+[generated/ensemble/RandomForestClassifier.ts:352](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L352)
 
 ***
 
@@ -550,7 +550,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L176)
+[generated/ensemble/RandomForestClassifier.ts:176](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L176)
 
 ***
 
@@ -576,7 +576,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L390)
+[generated/ensemble/RandomForestClassifier.ts:390](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L390)
 
 ***
 
@@ -602,7 +602,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L428)
+[generated/ensemble/RandomForestClassifier.ts:428](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L428)
 
 ***
 
@@ -628,7 +628,7 @@ The input samples. Internally, its dtype will be converted to `dtype=np.float32`
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L466)
+[generated/ensemble/RandomForestClassifier.ts:466](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L466)
 
 ***
 
@@ -662,7 +662,7 @@ True labels for `X`.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L504)
+[generated/ensemble/RandomForestClassifier.ts:504](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L504)
 
 ***
 
@@ -690,7 +690,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L552)
+[generated/ensemble/RandomForestClassifier.ts:552](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L552)
 
 ***
 
@@ -718,4 +718,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/ensemble/RandomForestClassifier.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L592)
+[generated/ensemble/RandomForestClassifier.ts:592](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/ensemble/RandomForestClassifier.ts#L592)

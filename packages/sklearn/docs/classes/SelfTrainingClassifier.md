@@ -72,7 +72,7 @@ Enable verbose output.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L27)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L27)
 
 ## Properties
 
@@ -82,7 +82,7 @@ Enable verbose output.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L25)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L25)
 
 ***
 
@@ -92,7 +92,7 @@ Enable verbose output.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L24)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:24](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L24)
 
 ***
 
@@ -102,7 +102,7 @@ Enable verbose output.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L23)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L23)
 
 ***
 
@@ -112,7 +112,7 @@ Enable verbose output.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L20)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:20](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L20)
 
 ***
 
@@ -122,7 +122,7 @@ Enable verbose output.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L21)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L21)
 
 ## Accessors
 
@@ -140,7 +140,7 @@ The fitted estimator.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L399)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:399](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L399)
 
 ***
 
@@ -158,7 +158,7 @@ Class labels for each output. (Taken from the trained `base\_estimator\_`).
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L426)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:426](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L426)
 
 ***
 
@@ -176,7 +176,7 @@ Names of features seen during [fit](../../glossary.html#term-fit). Defined only 
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L534)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:534](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L534)
 
 ***
 
@@ -194,7 +194,7 @@ The iteration in which each sample was labeled. When a sample has iteration 0, t
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L480)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:480](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L480)
 
 ***
 
@@ -212,7 +212,7 @@ Number of features seen during [fit](../../glossary.html#term-fit).
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L507)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:507](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L507)
 
 ***
 
@@ -230,7 +230,7 @@ The number of rounds of self-training, that is the number of times the base esti
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L561)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:561](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L561)
 
 ***
 
@@ -258,7 +258,7 @@ The number of rounds of self-training, that is the number of times the base esti
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L72)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:72](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L72)
 
 ***
 
@@ -276,7 +276,7 @@ The reason that fitting was stopped.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L588)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:588](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L588)
 
 ***
 
@@ -294,7 +294,7 @@ The labels used for the final fit of the classifier, including pseudo-labels add
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L453)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:453](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L453)
 
 ## Methods
 
@@ -318,7 +318,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L145)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:145](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L145)
 
 ***
 
@@ -336,7 +336,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L128)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:128](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L128)
 
 ***
 
@@ -364,7 +364,7 @@ Array representing the labels. Unlabeled samples should have the label -1.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L181)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:181](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L181)
 
 ***
 
@@ -386,7 +386,7 @@ This estimator does not support metadata routing yet.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L222)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:222](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L222)
 
 ***
 
@@ -408,7 +408,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L85)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:85](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L85)
 
 ***
 
@@ -432,7 +432,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L252)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:252](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L252)
 
 ***
 
@@ -456,7 +456,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L288)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:288](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L288)
 
 ***
 
@@ -480,7 +480,7 @@ Array representing the data.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L324)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:324](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L324)
 
 ***
 
@@ -508,4 +508,4 @@ Array representing the labels.
 
 #### Defined in
 
-[generated/semi\_supervised/SelfTrainingClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L360)
+[generated/semi\_supervised/SelfTrainingClassifier.ts:360](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/semi_supervised/SelfTrainingClassifier.ts#L360)

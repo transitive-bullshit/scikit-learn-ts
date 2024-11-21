@@ -50,7 +50,7 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L29)
+[generated/model\_selection/KFold.ts:29](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L29)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
+[generated/model\_selection/KFold.ts:27](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L27)
 
 ***
 
@@ -70,7 +70,7 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L26)
+[generated/model\_selection/KFold.ts:26](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L26)
 
 ***
 
@@ -80,7 +80,7 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
+[generated/model\_selection/KFold.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L25)
 
 ***
 
@@ -90,7 +90,7 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L22)
+[generated/model\_selection/KFold.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L22)
 
 ***
 
@@ -100,7 +100,7 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
+[generated/model\_selection/KFold.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L23)
 
 ## Accessors
 
@@ -128,7 +128,7 @@ Whether to shuffle the data before splitting into batches. Note that the samples
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L53)
+[generated/model\_selection/KFold.ts:53](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L53)
 
 ## Methods
 
@@ -146,7 +146,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L104)
+[generated/model\_selection/KFold.ts:104](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L104)
 
 ***
 
@@ -172,7 +172,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L123)
+[generated/model\_selection/KFold.ts:123](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L123)
 
 ***
 
@@ -204,7 +204,7 @@ Always ignored, exists for compatibility.
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L155)
+[generated/model\_selection/KFold.ts:155](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L155)
 
 ***
 
@@ -226,7 +226,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L66)
+[generated/model\_selection/KFold.ts:66](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L66)
 
 ***
 
@@ -258,4 +258,4 @@ The target variable for supervised learning problems.
 
 #### Defined in
 
-[generated/model\_selection/KFold.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/model_selection/KFold.ts#L197)
+[generated/model\_selection/KFold.ts:197](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/model_selection/KFold.ts#L197)

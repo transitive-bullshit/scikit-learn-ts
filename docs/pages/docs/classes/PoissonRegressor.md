@@ -82,7 +82,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L25)
+[generated/linear\_model/PoissonRegressor.ts:25](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L25)
 
 ## Properties
 
@@ -92,7 +92,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L23)
+[generated/linear\_model/PoissonRegressor.ts:23](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L23)
 
 ***
 
@@ -102,7 +102,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L22)
+[generated/linear\_model/PoissonRegressor.ts:22](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L22)
 
 ***
 
@@ -112,7 +112,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L21)
+[generated/linear\_model/PoissonRegressor.ts:21](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L21)
 
 ***
 
@@ -122,7 +122,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L18)
+[generated/linear\_model/PoissonRegressor.ts:18](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L18)
 
 ***
 
@@ -132,7 +132,7 @@ If set to `true`, reuse the solution of the previous call to `fit` as initializa
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L19)
+[generated/linear\_model/PoissonRegressor.ts:19](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L19)
 
 ## Accessors
 
@@ -150,7 +150,7 @@ Estimated coefficients for the linear predictor (`X @ coef\_ + intercept\_`) in 
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L394)
+[generated/linear\_model/PoissonRegressor.ts:394](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L394)
 
 ***
 
@@ -168,7 +168,7 @@ Names of features seen during fit. Defined only when `X` has feature names that 
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L475)
+[generated/linear\_model/PoissonRegressor.ts:475](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L475)
 
 ***
 
@@ -186,7 +186,7 @@ Intercept (a.k.a. bias) added to linear predictor.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L421)
+[generated/linear\_model/PoissonRegressor.ts:421](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L421)
 
 ***
 
@@ -204,7 +204,7 @@ Number of features seen during fit.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L448)
+[generated/linear\_model/PoissonRegressor.ts:448](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L448)
 
 ***
 
@@ -222,7 +222,7 @@ Actual number of iterations used in the solver.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L502)
+[generated/linear\_model/PoissonRegressor.ts:502](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L502)
 
 ***
 
@@ -250,7 +250,7 @@ Actual number of iterations used in the solver.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L79)
+[generated/linear\_model/PoissonRegressor.ts:79](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L79)
 
 ## Methods
 
@@ -268,7 +268,7 @@ Once `dispose()` is called, the instance is no longer usable.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L133)
+[generated/linear\_model/PoissonRegressor.ts:133](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L133)
 
 ***
 
@@ -300,7 +300,7 @@ Target values.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L150)
+[generated/linear\_model/PoissonRegressor.ts:150](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L150)
 
 ***
 
@@ -326,7 +326,7 @@ A [`MetadataRequest`](sklearn.utils.metadata_routing.MetadataRequest.html#sklear
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L196)
+[generated/linear\_model/PoissonRegressor.ts:196](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L196)
 
 ***
 
@@ -348,7 +348,7 @@ This instance is not usable until the `Promise` returned by `init()` resolves.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L92)
+[generated/linear\_model/PoissonRegressor.ts:92](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L92)
 
 ***
 
@@ -372,7 +372,7 @@ Samples.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L232)
+[generated/linear\_model/PoissonRegressor.ts:232](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L232)
 
 ***
 
@@ -408,7 +408,7 @@ True values of target.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L270)
+[generated/linear\_model/PoissonRegressor.ts:270](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L270)
 
 ***
 
@@ -436,7 +436,7 @@ Metadata routing for `sample\_weight` parameter in `fit`.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L318)
+[generated/linear\_model/PoissonRegressor.ts:318](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L318)
 
 ***
 
@@ -464,4 +464,4 @@ Metadata routing for `sample\_weight` parameter in `score`.
 
 #### Defined in
 
-[generated/linear\_model/PoissonRegressor.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/d6e32320dee888f62905b3bbdd6dc360aa066c30/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L358)
+[generated/linear\_model/PoissonRegressor.ts:358](https://github.com/transitive-bullshit/scikit-learn-ts/blob/0c1bb72d9c175bd83cea17bef83f84e3230eb739/packages/sklearn/src/generated/linear_model/PoissonRegressor.ts#L358)
